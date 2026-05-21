@@ -21,6 +21,11 @@ public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.Particl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleLocationSphereSection.
+    /// </summary>
+    public static RParticleModuleLocationSphereSection DefaultObject => (RParticleModuleLocationSphereSection)StaticClass().DefaultObject;
+
     internal RParticleModuleLocationSphereSection() { }
 
     /// <summary>
@@ -33,59 +38,81 @@ public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.Particl
     /// </summary>
     protected RParticleModuleLocationSphereSection(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleLocationSphereSection>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: RadiusMin
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RadiusMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat RadiusMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: RadiusMax
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat RadiusMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat RadiusMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 132);
 
     /// <summary>
     /// StructProperty: ThetaMin
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ThetaMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat ThetaMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: ThetaMax
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ThetaMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat ThetaMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: PhiMin
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat PhiMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat PhiMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: PhiMax
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat PhiMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat PhiMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 276);
 
     /// <summary>
     /// BoolProperty: Velocity
@@ -99,9 +126,6 @@ public partial class RParticleModuleLocationSphereSection : BmSDK.Engine.Particl
     /// <summary>
     /// StructProperty: VelocityScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat VelocityScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat VelocityScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 316);
 }

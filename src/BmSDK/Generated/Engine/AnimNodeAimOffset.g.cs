@@ -21,6 +21,11 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeAimOffset.
+    /// </summary>
+    public static AnimNodeAimOffset DefaultObject => (AnimNodeAimOffset)StaticClass().DefaultObject;
+
     internal AnimNodeAimOffset() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AnimNodeAimOffset(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeAimOffset>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetActiveProfileByIndex
@@ -198,20 +243,14 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// StructProperty: Aim
     /// </summary>
-    public unsafe System.Numerics.Vector2 Aim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
+    public unsafe ref System.Numerics.Vector2 Aim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 304);
 
     /// <summary>
     /// StructProperty: AngleOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 AngleOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref System.Numerics.Vector2 AngleOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 312);
 
     /// <summary>
     /// BoolProperty: bForceAimDir
@@ -315,7 +354,7 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// Enum: EAimID
     /// </summary>
-    public enum EAimID
+    public enum EAimID : byte
     {
         EAID_LeftUp = 0,
         EAID_LeftDown = 1,
@@ -340,7 +379,7 @@ public partial class AnimNodeAimOffset : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// Enum: EAnimAimDir
     /// </summary>
-    public enum EAnimAimDir
+    public enum EAnimAimDir : byte
     {
         ANIMAIM_LEFTUP = 0,
         ANIMAIM_CENTERUP = 1,

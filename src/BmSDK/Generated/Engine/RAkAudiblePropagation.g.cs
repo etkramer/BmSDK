@@ -21,6 +21,11 @@ public partial class RAkAudiblePropagation : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAkAudiblePropagation.
+    /// </summary>
+    public static RAkAudiblePropagation DefaultObject => (RAkAudiblePropagation)StaticClass().DefaultObject;
+
     internal RAkAudiblePropagation() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class RAkAudiblePropagation : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     protected RAkAudiblePropagation(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudiblePropagation>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: PropagationDesc
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkPropagationDesc PropagationDesc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkPropagationDesc>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkPropagationDesc PropagationDesc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkPropagationDesc>(Ptr + 84);
 
     /// <summary>
     /// FloatProperty: UpdateTimeFast
@@ -81,7 +123,7 @@ public partial class RAkAudiblePropagation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkPropagationRayPriority
     /// </summary>
-    public enum EAkPropagationRayPriority
+    public enum EAkPropagationRayPriority : byte
     {
         AK_PROP_RAY_PRIORITY_AUTO = 0,
         AK_PROP_RAY_PRIORITY_LOW = 1,

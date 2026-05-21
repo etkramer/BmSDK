@@ -21,6 +21,11 @@ public partial class RAnimNotify_SpawnParticleFX : BmSDK.Engine.AnimNotify, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_SpawnParticleFX.
+    /// </summary>
+    public static RAnimNotify_SpawnParticleFX DefaultObject => (RAnimNotify_SpawnParticleFX)StaticClass().DefaultObject;
+
     internal RAnimNotify_SpawnParticleFX() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNotify_SpawnParticleFX : BmSDK.Engine.AnimNotify, BmSD
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_SpawnParticleFX(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_SpawnParticleFX>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: BoneOrSocket
@@ -135,7 +180,7 @@ public partial class RAnimNotify_SpawnParticleFX : BmSDK.Engine.AnimNotify, BmSD
     /// <summary>
     /// Enum: BoneOrSocketSource
     /// </summary>
-    public enum BoneOrSocketSource
+    public enum BoneOrSocketSource : byte
     {
         BOSS_Bone = 0,
         BOSS_Socket = 1,

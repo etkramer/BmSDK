@@ -21,6 +21,11 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Canvas.
+    /// </summary>
+    public static Canvas DefaultObject => (Canvas)StaticClass().DefaultObject;
+
     internal Canvas() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Canvas(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Canvas>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Canvas>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DrawDebugGraph
@@ -1101,11 +1146,8 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DrawColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DrawColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 132);
 
     /// <summary>
     /// BoolProperty: bCenter
@@ -1164,11 +1206,8 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ColorModulate
     /// </summary>
-    public unsafe BmSDK.GameObject.FPlane ColorModulate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.GameObject.FPlane ColorModulate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FPlane>(Ptr + 176);
 
     /// <summary>
     /// Struct: FCanvasUVTri
@@ -1399,7 +1438,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECanvasBlendMode
     /// </summary>
-    public enum ECanvasBlendMode
+    public enum ECanvasBlendMode : byte
     {
         BLEND_CANVAS_Opaque = 0,
         BLEND_CANVAS_Masked = 1,
@@ -1469,7 +1508,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: FlashText_Align
     /// </summary>
-    public enum FlashText_Align
+    public enum FlashText_Align : byte
     {
         FlashText_Align_Left = 0,
         FlashText_Align_Right = 1,

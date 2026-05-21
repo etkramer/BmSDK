@@ -21,6 +21,11 @@ public partial class ParticleModulePhysicsVolumes : BmSDK.Engine.ParticleModuleW
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModulePhysicsVolumes.
+    /// </summary>
+    public static ParticleModulePhysicsVolumes DefaultObject => (ParticleModulePhysicsVolumes)StaticClass().DefaultObject;
+
     internal ParticleModulePhysicsVolumes() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ParticleModulePhysicsVolumes : BmSDK.Engine.ParticleModuleW
     /// </summary>
     protected ParticleModulePhysicsVolumes(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModulePhysicsVolumes>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EParticleLevelInfluenceType
     /// </summary>
-    public enum EParticleLevelInfluenceType
+    public enum EParticleLevelInfluenceType : byte
     {
         LIT_Never = 0,
         LIT_OutsidePhysicsVolumes = 1,
@@ -47,11 +92,8 @@ public partial class ParticleModulePhysicsVolumes : BmSDK.Engine.ParticleModuleW
     /// <summary>
     /// StructProperty: GlobalInfluence
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat GlobalInfluence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat GlobalInfluence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 96);
 
     /// <summary>
     /// ByteProperty: LevelInfluenceType

@@ -21,6 +21,11 @@ public partial class RSeqEvent_CrimeSceneEvidenceScanning : BmSDK.Engine.Sequenc
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_CrimeSceneEvidenceScanning.
+    /// </summary>
+    public static RSeqEvent_CrimeSceneEvidenceScanning DefaultObject => (RSeqEvent_CrimeSceneEvidenceScanning)StaticClass().DefaultObject;
+
     internal RSeqEvent_CrimeSceneEvidenceScanning() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqEvent_CrimeSceneEvidenceScanning : BmSDK.Engine.Sequenc
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqEvent_CrimeSceneEvidenceScanning(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_CrimeSceneEvidenceScanning>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -47,7 +92,7 @@ public partial class RSeqEvent_CrimeSceneEvidenceScanning : BmSDK.Engine.Sequenc
     /// <summary>
     /// Enum: CrimeSceneEvidenceEvent
     /// </summary>
-    public enum CrimeSceneEvidenceEvent
+    public enum CrimeSceneEvidenceEvent : byte
     {
         CSEE_ScanningBegins = 0,
         CSEE_ScanningAborted = 1,

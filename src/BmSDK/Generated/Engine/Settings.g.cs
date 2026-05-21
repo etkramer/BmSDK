@@ -21,12 +21,57 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Settings.
+    /// </summary>
+    public static Settings DefaultObject => (Settings)StaticClass().DefaultObject;
+
     internal Settings() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Settings(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Settings>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Settings>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpdateFromURL
@@ -1203,7 +1248,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPropertyValueMappingType
     /// </summary>
-    public enum EPropertyValueMappingType
+    public enum EPropertyValueMappingType : byte
     {
         PVMT_RawValue = 0,
         PVMT_PredefinedValues = 1,
@@ -1385,7 +1430,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESettingsDataType
     /// </summary>
-    public enum ESettingsDataType
+    public enum ESettingsDataType : byte
     {
         SDT_Empty = 0,
         SDT_Int32 = 1,
@@ -1435,7 +1480,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineDataAdvertisementType
     /// </summary>
-    public enum EOnlineDataAdvertisementType
+    public enum EOnlineDataAdvertisementType : byte
     {
         ODAT_DontAdvertise = 0,
         ODAT_OnlineService = 1,

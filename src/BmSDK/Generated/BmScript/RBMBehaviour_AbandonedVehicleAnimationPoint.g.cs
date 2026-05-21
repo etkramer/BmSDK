@@ -21,6 +21,11 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_AbandonedVehicleAnimationPoint.
+    /// </summary>
+    public static RBMBehaviour_AbandonedVehicleAnimationPoint DefaultObject => (RBMBehaviour_AbandonedVehicleAnimationPoint)StaticClass().DefaultObject;
+
     internal RBMBehaviour_AbandonedVehicleAnimationPoint() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_AbandonedVehicleAnimationPoint(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AbandonedVehicleAnimationPoint>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -410,27 +455,18 @@ public partial class RBMBehaviour_AbandonedVehicleAnimationPoint : BmSDK.BmScrip
     /// <summary>
     /// StructProperty: WaitingTransId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId WaitingTransId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId WaitingTransId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 960);
 
     /// <summary>
     /// StructProperty: CarAnimDetail
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FCarAnimationDetails CarAnimDetail
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FCarAnimationDetails>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
+    public unsafe ref BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FCarAnimationDetails CarAnimDetail
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FCarAnimationDetails>(Ptr + 964);
 
     /// <summary>
     /// StructProperty: CarMultiStageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FMultiStageAnim CarMultiStageInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FMultiStageAnim>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FMultiStageAnim CarMultiStageInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase.FMultiStageAnim>(Ptr + 1024);
 }

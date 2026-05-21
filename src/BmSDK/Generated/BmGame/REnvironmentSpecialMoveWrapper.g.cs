@@ -21,6 +21,11 @@ public partial class REnvironmentSpecialMoveWrapper : BmSDK.GameObject, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REnvironmentSpecialMoveWrapper.
+    /// </summary>
+    public static REnvironmentSpecialMoveWrapper DefaultObject => (REnvironmentSpecialMoveWrapper)StaticClass().DefaultObject;
+
     internal REnvironmentSpecialMoveWrapper() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class REnvironmentSpecialMoveWrapper : BmSDK.GameObject, BmSDK.IG
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected REnvironmentSpecialMoveWrapper(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapper>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ObjectProperty: SpecialMove
@@ -54,11 +99,8 @@ public partial class REnvironmentSpecialMoveWrapper : BmSDK.GameObject, BmSDK.IG
     /// <summary>
     /// StructProperty: NewEnvironmentTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer NewEnvironmentTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer NewEnvironmentTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer>(Ptr + 100);
 
     /// <summary>
     /// FloatProperty: MaxAngleToNormal

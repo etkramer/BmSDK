@@ -21,6 +21,11 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleScanLaser.
+    /// </summary>
+    public static RVehicleScanLaser DefaultObject => (RVehicleScanLaser)StaticClass().DefaultObject;
+
     internal RVehicleScanLaser() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleScanLaser(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleScanLaser>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetSizzleEnabled
@@ -258,38 +303,26 @@ public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LaserOriginWorld
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaserOriginWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaserOriginWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: LaserRotationWorld
     /// </summary>
-    public unsafe BmSDK.Rotator LaserRotationWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Rotator LaserRotationWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 188);
 
     /// <summary>
     /// StructProperty: TipLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TipLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref System.Numerics.Vector3 TipLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 200);
 
     /// <summary>
     /// StructProperty: PreviousSocketRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PreviousSocketRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.Rotator PreviousSocketRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 212);
 
     /// <summary>
     /// FloatProperty: current_length

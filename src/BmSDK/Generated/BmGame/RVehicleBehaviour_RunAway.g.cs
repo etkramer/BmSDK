@@ -21,6 +21,11 @@ public partial class RVehicleBehaviour_RunAway : BmSDK.BmGame.RVehicleBehaviour,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleBehaviour_RunAway.
+    /// </summary>
+    public static RVehicleBehaviour_RunAway DefaultObject => (RVehicleBehaviour_RunAway)StaticClass().DefaultObject;
+
     internal RVehicleBehaviour_RunAway() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleBehaviour_RunAway : BmSDK.BmGame.RVehicleBehaviour,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleBehaviour_RunAway(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_RunAway>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: NotifyShotByBatmobile
@@ -421,7 +466,7 @@ public partial class RVehicleBehaviour_RunAway : BmSDK.BmGame.RVehicleBehaviour,
     /// <summary>
     /// Enum: EBehaviourWhenEscortsGone
     /// </summary>
-    public enum EBehaviourWhenEscortsGone
+    public enum EBehaviourWhenEscortsGone : byte
     {
         EBEG_None = 0,
         EBEG_DisableMainRoadsOnly = 1,
@@ -449,62 +494,46 @@ public partial class RVehicleBehaviour_RunAway : BmSDK.BmGame.RVehicleBehaviour,
     }
 
     /// <summary>
-    /// StructProperty: CheatVsDistCurveNoEscorts
+    /// InlineArray{StructProperty}: CheatVsDistCurveNoEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public InlineArray<BmSDK.GameObject.FInterpCurveFloat> CheatVsDistCurveNoEscorts => new(6, Ptr + 616);
+
     /// <summary>
     /// StructProperty: CheatVsDistCurveNoEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 616);
     /// <summary>
     /// StructProperty: CheatVsDistCurveNoEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 636);
     /// <summary>
     /// StructProperty: CheatVsDistCurveNoEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 656);
     /// <summary>
     /// StructProperty: CheatVsDistCurveNoEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 676);
     /// <summary>
     /// StructProperty: CheatVsDistCurveNoEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 696);
+    /// <summary>
+    /// StructProperty: CheatVsDistCurveNoEscorts
+    /// </summary>
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveNoEscorts_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 716);
 
     /// <summary>
     /// StructProperty: CheatVsDistCurveWithEscorts
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveWithEscorts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveWithEscorts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 736);
 
     /// <summary>
     /// ArrayProperty: PreferDirections
@@ -1031,11 +1060,8 @@ public partial class RVehicleBehaviour_RunAway : BmSDK.BmGame.RVehicleBehaviour,
     /// <summary>
     /// StructProperty: InJunctionExitDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 InJunctionExitDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
-    }
+    public unsafe ref System.Numerics.Vector3 InJunctionExitDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 912);
 
     /// <summary>
     /// ArrayProperty: PrimeRoute

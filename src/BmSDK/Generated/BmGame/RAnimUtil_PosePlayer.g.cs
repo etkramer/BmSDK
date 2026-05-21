@@ -21,12 +21,57 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_PosePlayer.
+    /// </summary>
+    public static RAnimUtil_PosePlayer DefaultObject => (RAnimUtil_PosePlayer)StaticClass().DefaultObject;
+
     internal RAnimUtil_PosePlayer() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimUtil_PosePlayer(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PosePlayer>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// DelegateProperty: __DummyOnPlayedQueuedTransition__Delegate
@@ -584,7 +629,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERandomOverlayState
     /// </summary>
-    public enum ERandomOverlayState
+    public enum ERandomOverlayState : byte
     {
         RANDOMOVERLAYSTATE_Inactive = 0,
         RANDOMOVERLAYSTATE_CountingDown = 1,
@@ -1193,7 +1238,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EResolvedMovementAnimDirectionCombination
     /// </summary>
-    public enum EResolvedMovementAnimDirectionCombination
+    public enum EResolvedMovementAnimDirectionCombination : byte
     {
         RMADC_Forward = 0,
         RMADC_Back = 1,
@@ -1424,7 +1469,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMoveToThreshold
     /// </summary>
-    public enum EMoveToThreshold
+    public enum EMoveToThreshold : byte
     {
         MOVETOTHRESHOLD_Legacy = 0,
         MOVETOTHRESHOLD_Automatic = 1,
@@ -1691,7 +1736,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDirectionInterpolation
     /// </summary>
-    public enum EDirectionInterpolation
+    public enum EDirectionInterpolation : byte
     {
         DIRINTERP_Yaw = 0,
         DIRINTERP_Direction = 1,
@@ -1744,7 +1789,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMoveToRequestFacing
     /// </summary>
-    public enum EMoveToRequestFacing
+    public enum EMoveToRequestFacing : byte
     {
         MTRF_Auto = 0,
         MTRF_Forward = 1,
@@ -2094,7 +2139,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAllowTurningToAim
     /// </summary>
-    public enum EAllowTurningToAim
+    public enum EAllowTurningToAim : byte
     {
         ALLOWTURNINGTOAIM_FromPoseConfig = 0,
         ALLOWTURNINGTOAIM_Yes = 1,
@@ -2390,7 +2435,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESlavedTransitionTimeSync
     /// </summary>
-    public enum ESlavedTransitionTimeSync
+    public enum ESlavedTransitionTimeSync : byte
     {
         STTS_None = 0,
         STTS_SyncToStart = 1,
@@ -2917,7 +2962,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERandomOverlayBlockType
     /// </summary>
-    public enum ERandomOverlayBlockType
+    public enum ERandomOverlayBlockType : byte
     {
         ROBT_None = 0,
         ROBT_AdditivesBlocked = 1,
@@ -2929,7 +2974,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETurnInstigator
     /// </summary>
-    public enum ETurnInstigator
+    public enum ETurnInstigator : byte
     {
         TI_AimAt = 0,
         TI_FaceAt = 1,
@@ -2940,7 +2985,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimIdleType
     /// </summary>
-    public enum EAnimIdleType
+    public enum EAnimIdleType : byte
     {
         IDLE_Normal = 0,
         IDLE_Relative = 1,
@@ -2951,7 +2996,7 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimTransitionType
     /// </summary>
-    public enum EAnimTransitionType
+    public enum EAnimTransitionType : byte
     {
         TRANSITION_Normal = 0,
         TRANSITION_Absolute = 1,

@@ -21,6 +21,11 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTurretBase.
+    /// </summary>
+    public static RTurretBase DefaultObject => (RTurretBase)StaticClass().DefaultObject;
+
     internal RTurretBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// </summary>
     protected RTurretBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTurretBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurretBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTurretBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurretBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurretBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTurretBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTurretBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurretBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: EnableTurretLights
@@ -575,6 +585,11 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: XrayMats
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> XrayMats => new(3, Ptr + 1052);
+
+    /// <summary>
     /// ObjectProperty: XrayMats
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface XrayMats_0
@@ -627,6 +642,11 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: ImpactFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 1100);
+
+    /// <summary>
     /// ComponentProperty: ImpactFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent ImpactFX_0
@@ -652,6 +672,11 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: BulletTrailFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 1124);
+
+    /// <summary>
     /// ComponentProperty: BulletTrailFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX_0
@@ -675,6 +700,11 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: MuzzleFlashFx
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 1148);
 
     /// <summary>
     /// ComponentProperty: MuzzleFlashFx
@@ -875,11 +905,8 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// StructProperty: InitialRot
     /// </summary>
-    public unsafe BmSDK.Rotator InitialRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1216); }
-    }
+    public unsafe ref BmSDK.Rotator InitialRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1216);
 
     /// <summary>
     /// FloatProperty: jammedSpeed
@@ -938,11 +965,8 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// StructProperty: jerkRot
     /// </summary>
-    public unsafe BmSDK.Rotator jerkRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
-    }
+    public unsafe ref BmSDK.Rotator jerkRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1252);
 
     /// <summary>
     /// FloatProperty: speedMultiplier
@@ -965,47 +989,32 @@ public partial class RTurretBase : BmSDK.BmGame.RTrackingSecurityCameraBase, BmS
     /// <summary>
     /// StructProperty: trackingOriginLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 trackingOriginLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
-    }
+    public unsafe ref System.Numerics.Vector3 trackingOriginLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1272);
 
     /// <summary>
     /// StructProperty: MuzzleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 MuzzleLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
-    }
+    public unsafe ref System.Numerics.Vector3 MuzzleLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1284);
 
     /// <summary>
     /// StructProperty: MuzzleRot
     /// </summary>
-    public unsafe BmSDK.Rotator MuzzleRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
-    }
+    public unsafe ref BmSDK.Rotator MuzzleRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1296);
 
     /// <summary>
     /// StructProperty: LightSocketLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightSocketLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightSocketLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1308);
 
     /// <summary>
     /// StructProperty: LightSocketRot
     /// </summary>
-    public unsafe BmSDK.Rotator LightSocketRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
-    }
+    public unsafe ref BmSDK.Rotator LightSocketRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1320);
 
     /// <summary>
     /// FloatProperty: shootCriteriaMetSince

@@ -21,6 +21,11 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameStateObject.
+    /// </summary>
+    public static GameStateObject DefaultObject => (GameStateObject)StaticClass().DefaultObject;
+
     internal GameStateObject() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected GameStateObject(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStateObject>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Reset
@@ -115,20 +160,14 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// StructProperty: TeamStates
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror TeamStates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.GameObject.FArray_Mirror TeamStates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FArray_Mirror>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: PlayerStates
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror PlayerStates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.GameObject.FArray_Mirror PlayerStates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FArray_Mirror>(Ptr + 140);
 
     /// <summary>
     /// ByteProperty: SessionType
@@ -203,7 +242,7 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// Enum: GameSessionType
     /// </summary>
-    public enum GameSessionType
+    public enum GameSessionType : byte
     {
         GT_SessionInvalid = 0,
         GT_SinglePlayer = 1,

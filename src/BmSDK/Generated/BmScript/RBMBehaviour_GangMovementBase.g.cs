@@ -21,12 +21,57 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_GangMovementBase.
+    /// </summary>
+    public static RBMBehaviour_GangMovementBase DefaultObject => (RBMBehaviour_GangMovementBase)StaticClass().DefaultObject;
+
     internal RBMBehaviour_GangMovementBase() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_GangMovementBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_GangMovementBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -786,20 +831,14 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// StructProperty: SavedTransInPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedTransInPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedTransInPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 836);
 
     /// <summary>
     /// StructProperty: SavedTransInRotation
     /// </summary>
-    public unsafe BmSDK.Rotator SavedTransInRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
-    }
+    public unsafe ref BmSDK.Rotator SavedTransInRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 848);
 
     /// <summary>
     /// BoolProperty: bDetattchedFromCar
@@ -876,11 +915,8 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// StructProperty: FleeReactionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FleeReactionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FleeReactionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 872);
 
     /// <summary>
     /// ArrayProperty: FleeReactionFront

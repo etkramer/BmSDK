@@ -21,6 +21,11 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2Component.
+    /// </summary>
+    public static RRope2Component DefaultObject => (RRope2Component)StaticClass().DefaultObject;
+
     internal RRope2Component() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRope2Component(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2Component>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetThoughts
@@ -956,21 +1001,20 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     }
 
     /// <summary>
-    /// StructProperty: RopeEndAttachDatas
+    /// InlineArray{StructProperty}: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public InlineArray<BmSDK.BmGame.RRope2Component.FRopeEndAttachData> RopeEndAttachDatas => new(2, Ptr + 540);
+
     /// <summary>
     /// StructProperty: RopeEndAttachDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 540);
+    /// <summary>
+    /// StructProperty: RopeEndAttachDatas
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RRope2Component.FRopeEndAttachData RopeEndAttachDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2Component.FRopeEndAttachData>(Ptr + 572);
 
     /// <summary>
     /// FloatProperty: RopeLength
@@ -1372,7 +1416,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Enum: ERope2LengthChangeEndType
     /// </summary>
-    public enum ERope2LengthChangeEndType
+    public enum ERope2LengthChangeEndType : byte
     {
         ROPE2LENGTHCHANGEEND_ChangeFromEnd1 = 0,
         ROPE2LENGTHCHANGEEND_ChangeFromEnd2 = 1,
@@ -1383,7 +1427,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Enum: ERope2EndType
     /// </summary>
-    public enum ERope2EndType
+    public enum ERope2EndType : byte
     {
         ROPE2END_End1 = 0,
         ROPE2END_End2 = 1,

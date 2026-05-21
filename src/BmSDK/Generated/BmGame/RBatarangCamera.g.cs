@@ -21,52 +21,62 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangCamera.
+    /// </summary>
+    public static RBatarangCamera DefaultObject => (RBatarangCamera)StaticClass().DefaultObject;
+
     internal RBatarangCamera() { }
 
     /// <summary>
     /// Constructs a new RBatarangCamera
     /// </summary>
-    public RBatarangCamera(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatarangCamera Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBatarangCamera(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBatarangCamera(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangCamera>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetExtraDistance
@@ -325,7 +335,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Enum: BatarangCameraRollingDirection
     /// </summary>
-    public enum BatarangCameraRollingDirection
+    public enum BatarangCameraRollingDirection : byte
     {
         BCRD_NotRolling = 0,
         BCRD_RollingLeft = 1,
@@ -381,29 +391,20 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: InitialRotation
     /// </summary>
-    public unsafe BmSDK.Rotator InitialRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
-    }
+    public unsafe ref BmSDK.Rotator InitialRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1288);
 
     /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1300);
 
     /// <summary>
     /// StructProperty: CameraRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator CameraRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
-    }
+    public unsafe ref BmSDK.Rotator CameraRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1312);
 
     /// <summary>
     /// BoolProperty: bIgnorePitch
@@ -570,20 +571,14 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ScreenShakeSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ScreenShakeSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ScreenShakeSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1372);
 
     /// <summary>
     /// StructProperty: CameraDOFSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FDofStruct CameraDOFSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FDofStruct>(Ptr + 1528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1528); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FDofStruct CameraDOFSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FDofStruct>(Ptr + 1528);
 
     /// <summary>
     /// FloatProperty: BatarangCameraLag
@@ -687,11 +682,8 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: OriginalCameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalCameraOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1592); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalCameraOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1592);
 
     /// <summary>
     /// FloatProperty: OriginalFOVAngle
@@ -732,36 +724,24 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: FlipOldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlipOldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1624); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlipOldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1624);
 
     /// <summary>
     /// StructProperty: FlipOldRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FlipOldRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
-    }
+    public unsafe ref BmSDK.Rotator FlipOldRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1636);
 
     /// <summary>
     /// StructProperty: InitialFlipAnimTransform
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialFlipAnimTransform
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1648); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialFlipAnimTransform
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1648);
 
     /// <summary>
     /// StructProperty: InvInitialFlipAnimRotation
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix InvInitialFlipAnimRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 1664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix InvInitialFlipAnimRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 1664);
 }

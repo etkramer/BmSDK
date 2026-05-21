@@ -21,6 +21,11 @@ public partial class RAnimNotify_BeginRagdoll : BmSDK.Engine.AnimNotify, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_BeginRagdoll.
+    /// </summary>
+    public static RAnimNotify_BeginRagdoll DefaultObject => (RAnimNotify_BeginRagdoll)StaticClass().DefaultObject;
+
     internal RAnimNotify_BeginRagdoll() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNotify_BeginRagdoll : BmSDK.Engine.AnimNotify, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_BeginRagdoll(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_BeginRagdoll>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// FloatProperty: BlendInDuration
@@ -54,20 +99,14 @@ public partial class RAnimNotify_BeginRagdoll : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: FixedParts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts FixedParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts FixedParts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: UnfixedParts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts UnfixedParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts UnfixedParts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 96);
 
     /// <summary>
     /// BoolProperty: MotorAll
@@ -81,11 +120,8 @@ public partial class RAnimNotify_BeginRagdoll : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: MotorParts
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FRagdollParts MotorParts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FRagdollParts MotorParts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FRagdollParts>(Ptr + 104);
 
     /// <summary>
     /// FloatProperty: MotorSpringScale

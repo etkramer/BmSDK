@@ -21,6 +21,11 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieBackScreen_Normal.
+    /// </summary>
+    public static RGFxMovieBackScreen_Normal DefaultObject => (RGFxMovieBackScreen_Normal)StaticClass().DefaultObject;
+
     internal RGFxMovieBackScreen_Normal() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieBackScreen_Normal(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen_Normal>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: XI_GetSideOverlay
@@ -2090,11 +2135,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: StickLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StickLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1984); }
-    }
+    public unsafe ref System.Numerics.Vector3 StickLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1984);
 
     /// <summary>
     /// FloatProperty: StickRotation
@@ -2126,20 +2168,14 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: TweenSourceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TweenSourceLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2008); }
-    }
+    public unsafe ref System.Numerics.Vector3 TweenSourceLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2008);
 
     /// <summary>
     /// StructProperty: TweenSourceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TweenSourceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2020); }
-    }
+    public unsafe ref BmSDK.Rotator TweenSourceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2020);
 
     /// <summary>
     /// FloatProperty: TweenSourceFOV
@@ -2153,20 +2189,14 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: TweenTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TweenTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2036); }
-    }
+    public unsafe ref System.Numerics.Vector3 TweenTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2036);
 
     /// <summary>
     /// StructProperty: TweenTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TweenTargetRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2048); }
-    }
+    public unsafe ref BmSDK.Rotator TweenTargetRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2048);
 
     /// <summary>
     /// FloatProperty: TweenTargetFOV
@@ -2180,11 +2210,8 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: CityOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CityOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2064); }
-    }
+    public unsafe ref System.Numerics.Vector3 CityOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2064);
 
     /// <summary>
     /// ArrayProperty: PanToIcons
@@ -2198,29 +2225,20 @@ public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScre
     /// <summary>
     /// StructProperty: PanReturnToLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PanReturnToLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
-    }
+    public unsafe ref System.Numerics.Vector3 PanReturnToLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2092);
 
     /// <summary>
     /// StructProperty: PanDelta
     /// </summary>
-    public unsafe System.Numerics.Vector3 PanDelta
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
-    }
+    public unsafe ref System.Numerics.Vector3 PanDelta
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2104);
 
     /// <summary>
     /// StructProperty: PanXYZTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 PanXYZTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
-    }
+    public unsafe ref System.Numerics.Vector3 PanXYZTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2116);
 
     /// <summary>
     /// IntProperty: PanStep

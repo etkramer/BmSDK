@@ -21,6 +21,11 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleBehaviour_SuicideDroneAttack.
+    /// </summary>
+    public static RVehicleBehaviour_SuicideDroneAttack DefaultObject => (RVehicleBehaviour_SuicideDroneAttack)StaticClass().DefaultObject;
+
     internal RVehicleBehaviour_SuicideDroneAttack() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleBehaviour_SuicideDroneAttack(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_SuicideDroneAttack>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetHUDProportion
@@ -201,7 +246,7 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// <summary>
     /// Enum: ESuicideMode
     /// </summary>
-    public enum ESuicideMode
+    public enum ESuicideMode : byte
     {
         ESDAM_None = 0,
         ESDAM_Find = 1,
@@ -339,11 +384,8 @@ public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicl
     /// <summary>
     /// StructProperty: LastBatmobileVisibleLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastBatmobileVisibleLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastBatmobileVisibleLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 664);
 
     /// <summary>
     /// FloatProperty: TimeSinceLineOfSight

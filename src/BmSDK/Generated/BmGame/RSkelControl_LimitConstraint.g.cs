@@ -21,6 +21,11 @@ public partial class RSkelControl_LimitConstraint : BmSDK.Engine.SkelControlBase
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControl_LimitConstraint.
+    /// </summary>
+    public static RSkelControl_LimitConstraint DefaultObject => (RSkelControl_LimitConstraint)StaticClass().DefaultObject;
+
     internal RSkelControl_LimitConstraint() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class RSkelControl_LimitConstraint : BmSDK.Engine.SkelControlBase
     /// </summary>
     protected RSkelControl_LimitConstraint(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_LimitConstraint>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: ELimitSpace
     /// </summary>
-    public enum ELimitSpace
+    public enum ELimitSpace : byte
     {
         LIMITSPACE_Parentspace = 0,
         LIMITSPACE_Referencespace = 1,
@@ -271,18 +316,12 @@ public partial class RSkelControl_LimitConstraint : BmSDK.Engine.SkelControlBase
     /// <summary>
     /// StructProperty: PreTransform
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom PreTransform
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom PreTransform
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 304);
 
     /// <summary>
     /// StructProperty: PostTransform
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom PostTransform
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom PostTransform
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 336);
 }

@@ -21,6 +21,11 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleBeamNoise.
+    /// </summary>
+    public static ParticleModuleBeamNoise DefaultObject => (ParticleModuleBeamNoise)StaticClass().DefaultObject;
+
     internal ParticleModuleBeamNoise() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleBeamNoise(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamNoise>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// BoolProperty: bLowFreq_Enabled
@@ -126,29 +171,20 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// <summary>
     /// StructProperty: NoiseRange
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector NoiseRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector NoiseRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: NoiseRangeScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat NoiseRangeScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat NoiseRangeScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 172);
 
     /// <summary>
     /// StructProperty: NoiseSpeed
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector NoiseSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector NoiseSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 208);
 
     /// <summary>
     /// FloatProperty: NoiseLockRadius
@@ -180,11 +216,8 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// <summary>
     /// StructProperty: NoiseTangentStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat NoiseTangentStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat NoiseTangentStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 284);
 
     /// <summary>
     /// IntProperty: NoiseTessellation
@@ -207,9 +240,6 @@ public partial class ParticleModuleBeamNoise : BmSDK.Engine.ParticleModuleBeamBa
     /// <summary>
     /// StructProperty: NoiseScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat NoiseScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat NoiseScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 328);
 }

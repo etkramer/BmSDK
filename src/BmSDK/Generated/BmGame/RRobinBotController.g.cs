@@ -21,52 +21,62 @@ public partial class RRobinBotController : BmSDK.BmGame.RBotController, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRobinBotController.
+    /// </summary>
+    public static RRobinBotController DefaultObject => (RRobinBotController)StaticClass().DefaultObject;
+
     internal RRobinBotController() { }
 
     /// <summary>
     /// Constructs a new RRobinBotController
     /// </summary>
-    public RRobinBotController(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRobinBotController Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RRobinBotController(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRobinBotController(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRobinBotController>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRobinBotController>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetAssistTarget
@@ -807,7 +817,7 @@ public partial class RRobinBotController : BmSDK.BmGame.RBotController, BmSDK.IG
     /// <summary>
     /// Enum: BotCombatMoveType
     /// </summary>
-    public enum BotCombatMoveType
+    public enum BotCombatMoveType : byte
     {
         BCMT_None = 0,
         BCMT_Strike = 1,
@@ -1235,11 +1245,8 @@ public partial class RRobinBotController : BmSDK.BmGame.RBotController, BmSDK.IG
     /// <summary>
     /// StructProperty: LastMovePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastMovePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1292); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastMovePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1292);
 
     /// <summary>
     /// FloatProperty: CloseToGoalDist
@@ -1352,20 +1359,14 @@ public partial class RRobinBotController : BmSDK.BmGame.RBotController, BmSDK.IG
     /// <summary>
     /// StructProperty: KismetGoal
     /// </summary>
-    public unsafe System.Numerics.Vector3 KismetGoal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
-    }
+    public unsafe ref System.Numerics.Vector3 KismetGoal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1352);
 
     /// <summary>
     /// StructProperty: KismetGoalDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 KismetGoalDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
-    }
+    public unsafe ref System.Numerics.Vector3 KismetGoalDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1364);
 
     /// <summary>
     /// NameProperty: KismetStandName
@@ -1460,29 +1461,20 @@ public partial class RRobinBotController : BmSDK.BmGame.RBotController, BmSDK.IG
     /// <summary>
     /// StructProperty: SavedJumpPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedJumpPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1428); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedJumpPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1428);
 
     /// <summary>
     /// StructProperty: SavedJumpDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedJumpDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1440); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedJumpDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1440);
 
     /// <summary>
     /// StructProperty: LastPawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1452); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1452);
 
     /// <summary>
     /// FloatProperty: PossessTime

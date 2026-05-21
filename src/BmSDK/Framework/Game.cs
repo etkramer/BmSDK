@@ -118,6 +118,99 @@ public static partial class Game
         where T : GameObject, IGameObject => GameObject.FindObject(pathName, T.StaticClass()) as T;
 
     /// <summary>
+    /// Returns an enumerable containing all objects of the given type.
+    /// </summary>
+    /// <remarks>
+    /// Can be slow, in cases where many objects of the given type exist.
+    /// Be careful when using this with common types like <see cref="GameObject"/>  or <see cref="Actor"/>.
+    /// </remarks>
+    public static IEnumerable<T> FindObjects<T>()
+        where T : GameObject => FindObjectsCache.FindObjects<T>();
+
+    /// <summary>
+    /// Spawns a new actor of the given type.
+    /// </summary>
+    public static unsafe Actor SpawnActor(
+        Class Class,
+        FName Name = default,
+        Vector3 Location = default,
+        Rotator Rotation = default,
+        Actor? Template = null,
+        GameObject? Owner = null,
+        GameObject? Instigator = null,
+        Level? Level = null
+    )
+    {
+        var resPtr = SpawnActorInternal(Class, Name, Location, Rotation, Template, Owner, Instigator, Level);
+        return MarshalUtil.ToManaged<Actor>(&resPtr);
+    }
+
+    /// <inheritdoc cref="SpawnActor"/>
+    [Obsolete("Use `new Actor()` instead")]
+    public static T? SpawnActor<T>(
+        FName Name = default,
+        Vector3 Location = default,
+        Rotator Rotation = default,
+        Actor? Template = null,
+        GameObject? Owner = null,
+        GameObject? Instigator = null,
+        Level? Level = null
+    )
+        where T : Actor, IGameObject =>
+        SpawnActor(T.StaticClass(), Name, Location, Rotation, Template, Owner, Instigator, Level) as T;
+
+    /// <summary>
+    /// Spawns a new actor of the given pawn and character types.
+    /// </summary>
+    [Obsolete("Use `RBMPawnAI.InitCharacter()` instead")]
+    public static TPawn? SpawnCharacter<TPawn, TCharacter>(Vector3 Position, Rotator Rotation)
+        where TPawn : RBMPawnAI, IGameObject
+        where TCharacter : RCharacter, IGameObject
+    {
+        return (TPawn)
+            RCharacter.StaticCreatePawn(
+                Position,
+                Rotation,
+                null,
+                TPawn.StaticClass(),
+                TCharacter.StaticClass(),
+                true,
+                FName.None,
+                FName.None
+            );
+    }
+
+    internal static unsafe IntPtr SpawnActorInternal(
+        Class Class,
+        FName Name,
+        Vector3 Location,
+        Rotator Rotation,
+        Actor? Template,
+        GameObject? Owner,
+        GameObject? Instigator,
+        Level? Level
+    )
+    {
+        var world = Level is null ? (World)GetWorldInfo().Outer.Outer : (World)Level.Outer;
+        var resPtr = GameFunctions.SpawnActor(
+            world.Ptr,
+            Class.Ptr,
+            Name,
+            (IntPtr)(&Location),
+            (IntPtr)(&Rotation),
+            Template?.Ptr ?? 0,
+            1,
+            0,
+            Owner?.Ptr ?? 0,
+            Instigator?.Ptr ?? 0,
+            1
+        );
+
+        Guard.Require(resPtr != 0, "SpawnActor() returned null");
+        return resPtr;
+    }
+
+    /// <summary>
     /// Loads a package into memory given its .upk file name.
     /// </summary>
     public static unsafe Package? LoadPackage(string filename)

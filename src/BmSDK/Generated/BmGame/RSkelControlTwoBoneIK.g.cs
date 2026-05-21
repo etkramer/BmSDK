@@ -21,6 +21,11 @@ public partial class RSkelControlTwoBoneIK : BmSDK.Engine.SkelControlBase, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControlTwoBoneIK.
+    /// </summary>
+    public static RSkelControlTwoBoneIK DefaultObject => (RSkelControlTwoBoneIK)StaticClass().DefaultObject;
+
     internal RSkelControlTwoBoneIK() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class RSkelControlTwoBoneIK : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     protected RSkelControlTwoBoneIK(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlTwoBoneIK>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: WidgetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WidgetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector3 WidgetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 248);
 
     /// <summary>
     /// BoolProperty: EnableMaxFootZ
@@ -81,9 +123,6 @@ public partial class RSkelControlTwoBoneIK : BmSDK.Engine.SkelControlBase, BmSDK
     /// <summary>
     /// StructProperty: WidgetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator WidgetRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref BmSDK.Rotator WidgetRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 264);
 }

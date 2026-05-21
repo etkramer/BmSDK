@@ -21,6 +21,11 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_FloorCorrection.
+    /// </summary>
+    public static RAnimUtil_FloorCorrection DefaultObject => (RAnimUtil_FloorCorrection)StaticClass().DefaultObject;
+
     internal RAnimUtil_FloorCorrection() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimUtil_FloorCorrection(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrection>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FFloorCorrectionTempDisable
@@ -61,11 +106,8 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: ResolvedAABB
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB ResolvedAABB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB ResolvedAABB
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FResolvedAABB>(Ptr + 84);
 
     /// <summary>
     /// ObjectProperty: Grid
@@ -79,11 +121,8 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: BoneIndices
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices BoneIndices
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices BoneIndices
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionBoneIndices>(Ptr + 100);
 
     /// <summary>
     /// ArrayProperty: Transitions
@@ -97,20 +136,14 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: StepUp
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState StepUp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState StepUp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FStepUpState>(Ptr + 144);
 
     /// <summary>
     /// StructProperty: Result
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult Result
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult Result
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResult>(Ptr + 160);
 
     /// <summary>
     /// BoolProperty: EnableRailings
@@ -133,29 +166,20 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: TempDisableLegIk
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable TempDisableLegIk
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable TempDisableLegIk
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable>(Ptr + 208);
 
     /// <summary>
     /// StructProperty: TempDisableCollisionCorrection
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable TempDisableCollisionCorrection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable TempDisableCollisionCorrection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionTempDisable>(Ptr + 216);
 
     /// <summary>
     /// StructProperty: ResolvedConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig ResolvedConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig ResolvedConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrection.FFloorCorrectionResolvedConfig>(Ptr + 224);
 
     /// <summary>
     /// Struct: FFloorCorrectionResolvedConfig
@@ -438,7 +462,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Enum: EFloorCorrectionInput
     /// </summary>
-    public enum EFloorCorrectionInput
+    public enum EFloorCorrectionInput : byte
     {
         FCI_NotWalking = 0,
         FCI_PawnFloor = 1,

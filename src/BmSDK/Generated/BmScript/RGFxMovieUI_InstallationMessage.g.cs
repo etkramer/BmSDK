@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_InstallationMessage : BmSDK.BmGame.RGFxMovieUI,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_InstallationMessage.
+    /// </summary>
+    public static RGFxMovieUI_InstallationMessage DefaultObject => (RGFxMovieUI_InstallationMessage)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_InstallationMessage() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieUI_InstallationMessage : BmSDK.BmGame.RGFxMovieUI,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieUI_InstallationMessage(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_InstallationMessage>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ConstructExitMsg
@@ -221,7 +266,7 @@ public partial class RGFxMovieUI_InstallationMessage : BmSDK.BmGame.RGFxMovieUI,
     /// <summary>
     /// Enum: PopUpTypes
     /// </summary>
-    public enum PopUpTypes
+    public enum PopUpTypes : byte
     {
         PT_None = 0,
         PT_Error = 1,

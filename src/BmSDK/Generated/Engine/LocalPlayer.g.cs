@@ -21,6 +21,11 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LocalPlayer.
+    /// </summary>
+    public static LocalPlayer DefaultObject => (LocalPlayer)StaticClass().DefaultObject;
+
     internal LocalPlayer() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected LocalPlayer(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LocalPlayer>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Cleanup
@@ -890,20 +935,14 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Origin
     /// </summary>
-    public unsafe System.Numerics.Vector2 Origin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref System.Numerics.Vector2 Origin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: Size
     /// </summary>
-    public unsafe System.Numerics.Vector2 Size
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.Numerics.Vector2 Size
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 176);
 
     /// <summary>
     /// ArrayProperty: PlayerPostProcessChains
@@ -935,38 +974,26 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ActorVisibilityHistory
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory ActorVisibilityHistory
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory ActorVisibilityHistory
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LocalPlayer.FSynchronizedActorVisibilityHistory>(Ptr + 216);
 
     /// <summary>
     /// StructProperty: LastViewLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastViewLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastViewLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 232);
 
     /// <summary>
     /// StructProperty: CurrentPPInfo
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo CurrentPPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo CurrentPPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 244);
 
     /// <summary>
     /// StructProperty: LevelPPInfo
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo LevelPPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
-    }
+    public unsafe ref BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo LevelPPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LocalPlayer.FCurrentPostProcessVolumeInfo>(Ptr + 784);
 
     /// <summary>
     /// ArrayProperty: ActivePPOverrides
@@ -1043,9 +1070,6 @@ public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ServerAuthUID
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerAuthUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 1392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1392); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerAuthUID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 1392);
 }

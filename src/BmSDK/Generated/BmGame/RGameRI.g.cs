@@ -21,52 +21,62 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameRI.
+    /// </summary>
+    public static RGameRI DefaultObject => (RGameRI)StaticClass().DefaultObject;
+
     internal RGameRI() { }
 
     /// <summary>
     /// Constructs a new RGameRI
     /// </summary>
-    public RGameRI(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RGameRI Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RGameRI(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGameRI(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGameRI>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameRI>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGameRI>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameRI>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameRI>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGameRI>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGameRI>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameRI>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UnregisterDMThroughWallsSuppressable
@@ -2355,7 +2365,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStasisMode
     /// </summary>
-    public enum EStasisMode
+    public enum EStasisMode : byte
     {
         STASISMODE_Default = 0,
         STASISMODE_Batmobile = 1,
@@ -2366,7 +2376,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EPhysWalkingType
     /// </summary>
-    public enum EPhysWalkingType
+    public enum EPhysWalkingType : byte
     {
         PHYSWALK_None = 0,
         PHYSWALK_GeoOnly = 1,
@@ -2381,7 +2391,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: WeaponSwitchCallbackResult
     /// </summary>
-    public enum WeaponSwitchCallbackResult
+    public enum WeaponSwitchCallbackResult : byte
     {
         WSCR_None = 0,
         WSCR_Handled = 1,
@@ -2480,7 +2490,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EBatmobileTauntPosition
     /// </summary>
-    public enum EBatmobileTauntPosition
+    public enum EBatmobileTauntPosition : byte
     {
         BMBLTAUNT_None = 0,
         BMBLTAUNT_Front = 1,
@@ -2664,7 +2674,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: ETauntPairedDirection
     /// </summary>
-    public enum ETauntPairedDirection
+    public enum ETauntPairedDirection : byte
     {
         TAUNTPAIR_None = 0,
         TAUNTPAIR_Left = 1,
@@ -2677,7 +2687,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: ETauntMovementDirectionHint
     /// </summary>
-    public enum ETauntMovementDirectionHint
+    public enum ETauntMovementDirectionHint : byte
     {
         TAUNTMOVE_None = 0,
         TAUNTMOVE_Left = 1,
@@ -2690,7 +2700,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: ETauntNotifyType
     /// </summary>
-    public enum ETauntNotifyType
+    public enum ETauntNotifyType : byte
     {
         TAUNT_None = 0,
         TAUNT_HeadAimStart = 1,
@@ -2702,7 +2712,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EMultiPlayerGameType
     /// </summary>
-    public enum EMultiPlayerGameType
+    public enum EMultiPlayerGameType : byte
     {
         MPGT_SinglePlayer = 0,
         MPGT_NetworkMultiPlayer = 1,
@@ -2714,7 +2724,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EPredAttackState
     /// </summary>
-    public enum EPredAttackState
+    public enum EPredAttackState : byte
     {
         PAS_None = 0,
         PAS_Chase = 1,
@@ -2935,7 +2945,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EDebugSaveGameplayType
     /// </summary>
-    public enum EDebugSaveGameplayType
+    public enum EDebugSaveGameplayType : byte
     {
         GameplayType_None = 0,
         GameplayType_Story = 1,
@@ -3367,7 +3377,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EChallengeFlow
     /// </summary>
-    public enum EChallengeFlow
+    public enum EChallengeFlow : byte
     {
         ChallengeFlow_NotSet = 0,
         ChallengeFlow_Entry = 1,
@@ -3402,6 +3412,11 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameModes>(Ptr + 794); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 794); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: ActiveModifiers
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RGameInfo.EChallengeModifierType> ActiveModifiers => new(8, Ptr + 795);
 
     /// <summary>
     /// ByteProperty: ActiveModifiers
@@ -3966,20 +3981,14 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: GlobalPMap
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FStreamingPMapInfo GlobalPMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FStreamingPMapInfo>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FStreamingPMapInfo GlobalPMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FStreamingPMapInfo>(Ptr + 1132);
 
     /// <summary>
     /// StructProperty: StreamingLOD2s
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FStreamingLOD2Info StreamingLOD2s
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FStreamingLOD2Info>(Ptr + 1212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FStreamingLOD2Info StreamingLOD2s
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FStreamingLOD2Info>(Ptr + 1212);
 
     /// <summary>
     /// NameProperty: RequestedNearbyLOD1
@@ -4146,11 +4155,8 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastStreamingLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastStreamingLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastStreamingLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1476);
 
     /// <summary>
     /// StrProperty: BatmanInCombatFlagName
@@ -4351,69 +4357,50 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// StructProperty: PlayerCharacters
+    /// InlineArray{StructProperty}: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
-    }
+    public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter> PlayerCharacters => new(8, Ptr + 1736);
+
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1820); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1736);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1904); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1820);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1988); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1904);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2072); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1988);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2156); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2072);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2240); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2156);
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2324); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2240);
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 2324);
 
     /// <summary>
     /// ArrayProperty: PIECharacters
@@ -4425,69 +4412,50 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// StructProperty: PlayerBatmobiles
+    /// InlineArray{StructProperty}: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
-    }
+    public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile> PlayerBatmobiles => new(8, Ptr + 2424);
+
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2524); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2424);
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2624); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2524);
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2724); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2624);
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2824); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2824); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2724);
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2924); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2824);
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 3024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3024); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 2924);
     /// <summary>
     /// StructProperty: PlayerBatmobiles
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 3124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3124); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 3024);
+    /// <summary>
+    /// StructProperty: PlayerBatmobiles
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile PlayerBatmobiles_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile>(Ptr + 3124);
 
     /// <summary>
     /// ArrayProperty: detectiveModeThroughWallsSuppressableObjects
@@ -4519,7 +4487,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EGameStatus
     /// </summary>
-    public enum EGameStatus
+    public enum EGameStatus : byte
     {
         GameStatus_None = 0,
         GameStatus_CharacterSelect = 1,
@@ -4537,7 +4505,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticString
     /// </summary>
-    public enum EStaticString
+    public enum EStaticString : byte
     {
         StaticString_Placeholder1 = 0,
         StaticString_MAX = 1,
@@ -4546,7 +4514,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticFloat
     /// </summary>
-    public enum EStaticFloat
+    public enum EStaticFloat : byte
     {
         StaticFloat_Placeholder1 = 0,
         StaticFloat_MAX = 1,
@@ -4555,7 +4523,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticInt
     /// </summary>
-    public enum EStaticInt
+    public enum EStaticInt : byte
     {
         StaticInt_TempMapIndex = 0,
         StaticInt_MAX = 1,
@@ -4564,7 +4532,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// Enum: EStaticBool
     /// </summary>
-    public enum EStaticBool
+    public enum EStaticBool : byte
     {
         StaticBool_CatwomanDLCChecked = 0,
         StaticBool_MAX = 1,

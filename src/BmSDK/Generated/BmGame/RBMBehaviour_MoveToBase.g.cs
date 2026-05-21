@@ -21,12 +21,57 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_MoveToBase.
+    /// </summary>
+    public static RBMBehaviour_MoveToBase DefaultObject => (RBMBehaviour_MoveToBase)StaticClass().DefaultObject;
+
     internal RBMBehaviour_MoveToBase() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_MoveToBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_MoveToBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -122,7 +167,7 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Enum: MoveToSpeed
     /// </summary>
-    public enum MoveToSpeed
+    public enum MoveToSpeed : byte
     {
         MOVETOSPEED_Walk = 0,
         MOVETOSPEED_Run = 1,
@@ -244,11 +289,8 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// StructProperty: StartleSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions StartleSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_MoveToBase.FStartleOptions>(Ptr + 596);
 
     /// <summary>
     /// ByteProperty: Speed

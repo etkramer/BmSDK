@@ -21,52 +21,62 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDestructibleProp.
+    /// </summary>
+    public static RDestructibleProp DefaultObject => (RDestructibleProp)StaticClass().DefaultObject;
+
     internal RDestructibleProp() { }
 
     /// <summary>
     /// Constructs a new RDestructibleProp
     /// </summary>
-    public RDestructibleProp(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDestructibleProp Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RDestructibleProp(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RDestructibleProp(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDestructibleProp>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Attach
@@ -987,7 +997,7 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// Enum: EDamageSuppressed
     /// </summary>
-    public enum EDamageSuppressed
+    public enum EDamageSuppressed : byte
     {
         DamageSuppressed_True = 0,
         DamageSuppressed_False = 1,
@@ -997,7 +1007,7 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// Enum: EDebugDestructiblesTickReason
     /// </summary>
-    public enum EDebugDestructiblesTickReason
+    public enum EDebugDestructiblesTickReason : byte
     {
         DebugDestructiblesTickReason_WaitingForInStasisCall = 0,
         DebugDestructiblesTickReason_NotTicking = 1,
@@ -1099,7 +1109,7 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// Enum: EDebugDestructibleArchetype
     /// </summary>
-    public enum EDebugDestructibleArchetype
+    public enum EDebugDestructibleArchetype : byte
     {
         EDebugDestructibleArchetype_Invalid = 0,
         EDebugDestructibleArchetype_City = 1,
@@ -1547,11 +1557,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: InitialAppearance
     /// </summary>
-    public unsafe BmSDK.BmGame.RDestructibleProp.FDestructibleAppearance InitialAppearance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp.FDestructibleAppearance>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref BmSDK.BmGame.RDestructibleProp.FDestructibleAppearance InitialAppearance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDestructibleProp.FDestructibleAppearance>(Ptr + 788);
 
     /// <summary>
     /// ObjectProperty: StaticMeshForClimbableInfo
@@ -1772,11 +1779,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: InitalAppearancePivotOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitalAppearancePivotOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitalAppearancePivotOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1104);
 
     /// <summary>
     /// NameProperty: InitialParticleSystemSocket
@@ -2465,11 +2469,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: ImpactVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1192); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1192);
 
     /// <summary>
     /// FloatProperty: ParticleVelocityInitialScale
@@ -2492,20 +2493,14 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: WhooshStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 WhooshStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
-    }
+    public unsafe ref System.Numerics.Vector3 WhooshStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1212);
 
     /// <summary>
     /// StructProperty: WhooshStopOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 WhooshStopOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
-    }
+    public unsafe ref System.Numerics.Vector3 WhooshStopOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1224);
 
     /// <summary>
     /// ArrayProperty: WhooshBys
@@ -2546,11 +2541,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: PreviousObstacleLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousObstacleLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousObstacleLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1288);
 
     /// <summary>
     /// FloatProperty: ApproxMassForImpactEffects
@@ -2627,20 +2619,14 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: ClimbEdgeStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClimbEdgeStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClimbEdgeStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1312);
 
     /// <summary>
     /// StructProperty: ClimbEdgeEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClimbEdgeEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClimbEdgeEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1324);
 
     /// <summary>
     /// FloatProperty: ClimbEdgeHeight
@@ -2771,11 +2757,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1488); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1488);
 
     /// <summary>
     /// FloatProperty: MinimumAmountOfSupportToRemainStanding
@@ -2798,11 +2781,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: NavMeshObstacleSizeMultiplier3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 NavMeshObstacleSizeMultiplier3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1500); }
-    }
+    public unsafe ref System.Numerics.Vector3 NavMeshObstacleSizeMultiplier3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1500);
 
     /// <summary>
     /// FloatProperty: NavMeshObstacleMaxHeight
@@ -2879,11 +2859,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: PropGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid PropGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 1544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1544); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid PropGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 1544);
 
     /// <summary>
     /// NameProperty: DecorationSocketName
@@ -2924,11 +2901,8 @@ public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmS
     /// <summary>
     /// StructProperty: LastImpactDamage
     /// </summary>
-    public unsafe BmSDK.BmGame.RDestructibleProp.FDestructiblePropDamage LastImpactDamage
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDestructibleProp.FDestructiblePropDamage>(Ptr + 1592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1592); }
-    }
+    public unsafe ref BmSDK.BmGame.RDestructibleProp.FDestructiblePropDamage LastImpactDamage
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RDestructibleProp.FDestructiblePropDamage>(Ptr + 1592);
 
     /// <summary>
     /// StrProperty: GlobalFlagNameToDisableActor

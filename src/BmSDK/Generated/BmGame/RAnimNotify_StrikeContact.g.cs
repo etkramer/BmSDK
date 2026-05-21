@@ -21,6 +21,11 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_StrikeContact.
+    /// </summary>
+    public static RAnimNotify_StrikeContact DefaultObject => (RAnimNotify_StrikeContact)StaticClass().DefaultObject;
+
     internal RAnimNotify_StrikeContact() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_StrikeContact(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_StrikeContact>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FNotifyCapeInfo
@@ -325,47 +370,32 @@ public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.
     /// <summary>
     /// StructProperty: StrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo StrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo StrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeInfo>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: CameraInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo CameraInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo CameraInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCameraInfo>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: DamageInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo DamageInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo DamageInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyDamageInfo>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: StrikeFlags
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags StrikeFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags StrikeFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyStrikeFlags>(Ptr + 172);
 
     /// <summary>
     /// StructProperty: CapeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo CapeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo CapeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_StrikeContact.FNotifyCapeInfo>(Ptr + 176);
 
     /// <summary>
     /// IntProperty: UnlockChapter

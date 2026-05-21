@@ -21,6 +21,11 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkDialogueTape.
+    /// </summary>
+    public static AkDialogueTape DefaultObject => (AkDialogueTape)StaticClass().DefaultObject;
+
     internal AkDialogueTape() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkDialogueTape(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogueTape>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Stop
@@ -102,20 +147,14 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EventHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle EventHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle EventHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 112);
 
     /// <summary>
     /// StructProperty: SpeechOpts
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.FAkSpeechOptions SpeechOpts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Engine.AkDialogue.FAkSpeechOptions SpeechOpts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 128);
 
     /// <summary>
     /// ByteProperty: TapeState
@@ -147,7 +186,7 @@ public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkDialogueTapeState
     /// </summary>
-    public enum EAkDialogueTapeState
+    public enum EAkDialogueTapeState : byte
     {
         AK_TAPE_Initialised = 0,
         AK_TAPE_Loading = 1,

@@ -2,10 +2,10 @@ using System.Collections.Generic;
 
 namespace BmSDK.Framework;
 
-static partial class StaticInit
+internal static partial class StaticInit
 {
-    static Dictionary<string, Type> _classPathToManagedTypeMap = [];
-    static Dictionary<Type, string> _managedTypeToClassPathMap = [];
+    private static Dictionary<string, Type> _classPathToManagedTypeMap = [];
+    private static Dictionary<Type, string> _managedTypeToClassPathMap = [];
 
     public static void StaticInitClasses()
     {
@@ -9897,10 +9897,10 @@ static partial class StaticInit
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RHidePointWire_RopeComponent)] = "BmScript.RHidePointWire_RopeComponent";
         _classPathToManagedTypeMap["BmScript.RHidePoint_Wire"] = typeof(BmSDK.BmScript.RHidePoint_Wire);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RHidePoint_Wire)] = "BmScript.RHidePoint_Wire";
-        _classPathToManagedTypeMap["BmScript.RLadder"] = typeof(BmSDK.BmScript.RLadder);
-        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder)] = "BmScript.RLadder";
-        _classPathToManagedTypeMap["BmScript.RLadder"] = typeof(BmSDK.BmScript.RLadder);
-        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder)] = "BmScript.RLadder";
+        _classPathToManagedTypeMap["BmScript.RLadder_384"] = typeof(BmSDK.BmScript.RLadder_384);
+        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder_384)] = "BmScript.RLadder_384";
+        _classPathToManagedTypeMap["BmScript.RLadder_512"] = typeof(BmSDK.BmScript.RLadder_512);
+        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLadder_512)] = "BmScript.RLadder_512";
         _classPathToManagedTypeMap["BmScript.RLevelTransitionDoorBunkerBase"] = typeof(BmSDK.BmScript.RLevelTransitionDoorBunkerBase);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLevelTransitionDoorBunkerBase)] = "BmScript.RLevelTransitionDoorBunkerBase";
         _classPathToManagedTypeMap["BmScript.RLevelTransitionDoubleDoors"] = typeof(BmSDK.BmScript.RLevelTransitionDoubleDoors);

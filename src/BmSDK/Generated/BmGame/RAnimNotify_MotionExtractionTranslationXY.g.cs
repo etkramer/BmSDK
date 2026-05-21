@@ -21,6 +21,11 @@ public partial class RAnimNotify_MotionExtractionTranslationXY : BmSDK.BmGame.RA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_MotionExtractionTranslationXY.
+    /// </summary>
+    public static RAnimNotify_MotionExtractionTranslationXY DefaultObject => (RAnimNotify_MotionExtractionTranslationXY)StaticClass().DefaultObject;
+
     internal RAnimNotify_MotionExtractionTranslationXY() { }
 
     /// <summary>
@@ -32,5 +37,45 @@ public partial class RAnimNotify_MotionExtractionTranslationXY : BmSDK.BmGame.RA
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_MotionExtractionTranslationXY(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MotionExtractionTranslationXY>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
 }

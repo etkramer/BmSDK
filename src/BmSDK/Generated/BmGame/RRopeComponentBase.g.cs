@@ -21,6 +21,11 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRopeComponentBase.
+    /// </summary>
+    public static RRopeComponentBase DefaultObject => (RRopeComponentBase)StaticClass().DefaultObject;
+
     internal RRopeComponentBase() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRopeComponentBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponentBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CallQueueReattach
@@ -757,20 +802,14 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: ConstraintActor1AttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintActor1AttachPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintActor1AttachPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 
     /// <summary>
     /// StructProperty: ConstraintActor2AttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintActor2AttachPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintActor2AttachPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
 
     /// <summary>
     /// FloatProperty: RopeEnd1AttachMaxDistance
@@ -946,7 +985,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ERopeLengthControlType
     /// </summary>
-    public enum ERopeLengthControlType
+    public enum ERopeLengthControlType : byte
     {
         ROPELENGTHCONTROLTYPE_None = 0,
         ROPELENGTHCONTROLTYPE_GradualLengthChange = 1,
@@ -958,7 +997,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ERopeLengthChangeType
     /// </summary>
-    public enum ERopeLengthChangeType
+    public enum ERopeLengthChangeType : byte
     {
         ROPELENGTHCHANGE_ChangeFromEnd1 = 0,
         ROPELENGTHCHANGE_ChangeFromEnd2 = 1,
@@ -972,7 +1011,7 @@ public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// Enum: ERopeEndType
     /// </summary>
-    public enum ERopeEndType
+    public enum ERopeEndType : byte
     {
         ROPEEND_End1 = 0,
         ROPEEND_End2 = 1,

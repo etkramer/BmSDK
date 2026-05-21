@@ -21,6 +21,11 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2BasePhysicsUpdater.
+    /// </summary>
+    public static RRope2BasePhysicsUpdater DefaultObject => (RRope2BasePhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2BasePhysicsUpdater() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRope2BasePhysicsUpdater(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2BasePhysicsUpdater>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FEndInitData
@@ -158,19 +203,18 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
     }
 
     /// <summary>
-    /// StructProperty: EndInitDatas
+    /// InlineArray{StructProperty}: EndInitDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public InlineArray<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData> EndInitDatas => new(2, Ptr + 136);
+
     /// <summary>
     /// StructProperty: EndInitDatas
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 136);
+    /// <summary>
+    /// StructProperty: EndInitDatas
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData EndInitDatas_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData>(Ptr + 188);
 }

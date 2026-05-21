@@ -21,6 +21,11 @@ public partial class RSeqEvent_SpecialCaseVoiceSynthDisable : BmSDK.Engine.Seque
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_SpecialCaseVoiceSynthDisable.
+    /// </summary>
+    public static RSeqEvent_SpecialCaseVoiceSynthDisable DefaultObject => (RSeqEvent_SpecialCaseVoiceSynthDisable)StaticClass().DefaultObject;
+
     internal RSeqEvent_SpecialCaseVoiceSynthDisable() { }
 
     /// <summary>
@@ -32,5 +37,45 @@ public partial class RSeqEvent_SpecialCaseVoiceSynthDisable : BmSDK.Engine.Seque
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqEvent_SpecialCaseVoiceSynthDisable(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_SpecialCaseVoiceSynthDisable>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
 }

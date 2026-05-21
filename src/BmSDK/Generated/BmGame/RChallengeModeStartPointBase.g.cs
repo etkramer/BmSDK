@@ -21,52 +21,62 @@ public partial class RChallengeModeStartPointBase : BmSDK.BmGame.RPlayerStartInL
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RChallengeModeStartPointBase.
+    /// </summary>
+    public static RChallengeModeStartPointBase DefaultObject => (RChallengeModeStartPointBase)StaticClass().DefaultObject;
+
     internal RChallengeModeStartPointBase() { }
 
     /// <summary>
     /// Constructs a new RChallengeModeStartPointBase
     /// </summary>
-    public RChallengeModeStartPointBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RChallengeModeStartPointBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RChallengeModeStartPointBase(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RChallengeModeStartPointBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RChallengeModeStartPointBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TriggerEvent
@@ -318,11 +328,8 @@ public partial class RChallengeModeStartPointBase : BmSDK.BmGame.RPlayerStartInL
     /// <summary>
     /// StructProperty: BaseChallengeSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FChallengeDesc BaseChallengeSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FChallengeDesc>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FChallengeDesc BaseChallengeSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FChallengeDesc>(Ptr + 1100);
 
     /// <summary>
     /// BoolProperty: bPreventLookInDebrief
@@ -642,11 +649,8 @@ public partial class RChallengeModeStartPointBase : BmSDK.BmGame.RPlayerStartInL
     /// <summary>
     /// StructProperty: BeaconFXSpring
     /// </summary>
-    public unsafe System.Numerics.Vector3 BeaconFXSpring
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
-    }
+    public unsafe ref System.Numerics.Vector3 BeaconFXSpring
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1364);
 
     /// <summary>
     /// FloatProperty: ActivationRange
@@ -705,38 +709,26 @@ public partial class RChallengeModeStartPointBase : BmSDK.BmGame.RPlayerStartInL
     /// <summary>
     /// StructProperty: StoredPlayerPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredPlayerPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredPlayerPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1400);
 
     /// <summary>
     /// StructProperty: StoredPlayerRot
     /// </summary>
-    public unsafe BmSDK.Rotator StoredPlayerRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1412); }
-    }
+    public unsafe ref BmSDK.Rotator StoredPlayerRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1412);
 
     /// <summary>
     /// StructProperty: StoredBatmobilePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredBatmobilePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredBatmobilePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1424);
 
     /// <summary>
     /// StructProperty: StoredBatmobileRot
     /// </summary>
-    public unsafe BmSDK.Rotator StoredBatmobileRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1436); }
-    }
+    public unsafe ref BmSDK.Rotator StoredBatmobileRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1436);
 
     /// <summary>
     /// StrProperty: PlayerDataPkgName

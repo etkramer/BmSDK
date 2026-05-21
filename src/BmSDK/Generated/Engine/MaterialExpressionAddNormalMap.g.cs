@@ -21,6 +21,11 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionAddNormalMap.
+    /// </summary>
+    public static MaterialExpressionAddNormalMap DefaultObject => (MaterialExpressionAddNormalMap)StaticClass().DefaultObject;
+
     internal MaterialExpressionAddNormalMap() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MaterialExpressionAddNormalMap(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionAddNormalMap>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ObjectProperty: Texture
@@ -99,18 +144,12 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Scale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Scale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: Base
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Base
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Base
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 256);
 }

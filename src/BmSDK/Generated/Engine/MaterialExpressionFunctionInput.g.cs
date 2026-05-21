@@ -21,6 +21,11 @@ public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionFunctionInput.
+    /// </summary>
+    public static MaterialExpressionFunctionInput DefaultObject => (MaterialExpressionFunctionInput)StaticClass().DefaultObject;
+
     internal MaterialExpressionFunctionInput() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpr
     /// </summary>
     protected MaterialExpressionFunctionInput(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionFunctionInput>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EFunctionInputType
     /// </summary>
-    public enum EFunctionInputType
+    public enum EFunctionInputType : byte
     {
         FunctionInput_Scalar = 0,
         FunctionInput_Vector2 = 1,
@@ -51,11 +96,8 @@ public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: Preview
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Preview
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Preview
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172);
 
     /// <summary>
     /// StrProperty: InputName
@@ -78,11 +120,8 @@ public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: Id
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid Id
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid Id
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 256);
 
     /// <summary>
     /// ByteProperty: InputType
@@ -96,11 +135,8 @@ public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: PreviewValue
     /// </summary>
-    public unsafe System.Numerics.Vector4 PreviewValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref System.Numerics.Vector4 PreviewValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 288);
 
     /// <summary>
     /// BoolProperty: bUsePreviewValueAsDefault

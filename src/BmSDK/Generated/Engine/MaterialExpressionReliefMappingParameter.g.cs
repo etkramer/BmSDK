@@ -21,6 +21,11 @@ public partial class MaterialExpressionReliefMappingParameter : BmSDK.Engine.Mat
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionReliefMappingParameter.
+    /// </summary>
+    public static MaterialExpressionReliefMappingParameter DefaultObject => (MaterialExpressionReliefMappingParameter)StaticClass().DefaultObject;
+
     internal MaterialExpressionReliefMappingParameter() { }
 
     /// <summary>
@@ -33,23 +38,57 @@ public partial class MaterialExpressionReliefMappingParameter : BmSDK.Engine.Mat
     /// </summary>
     protected MaterialExpressionReliefMappingParameter(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionReliefMappingParameter>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: HeightMapUV
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput HeightMapUV
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput HeightMapUV
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 316);
 
     /// <summary>
     /// StructProperty: HeightMul
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput HeightMul
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput HeightMul
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 368);
 
     /// <summary>
     /// ByteProperty: HeightTextureChannel

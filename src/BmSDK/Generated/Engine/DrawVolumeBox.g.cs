@@ -21,6 +21,11 @@ public partial class DrawVolumeBox : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DrawVolumeBox.
+    /// </summary>
+    public static DrawVolumeBox DefaultObject => (DrawVolumeBox)StaticClass().DefaultObject;
+
     internal DrawVolumeBox() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class DrawVolumeBox : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected DrawVolumeBox(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DrawVolumeBox>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// BoolProperty: AllowTranslucentSelection
@@ -45,11 +90,8 @@ public partial class DrawVolumeBox : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// StructProperty: BackColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor BackColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor BackColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 544);
 
     /// <summary>
     /// ByteProperty: VolumeType
@@ -63,7 +105,7 @@ public partial class DrawVolumeBox : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Enum: EDrawVolumeBoxType
     /// </summary>
-    public enum EDrawVolumeBoxType
+    public enum EDrawVolumeBoxType : byte
     {
         DVBT_Decal = 0,
         DVBT_Reflection = 1,

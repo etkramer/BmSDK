@@ -21,6 +21,11 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SoundNodeWave.
+    /// </summary>
+    public static SoundNodeWave DefaultObject => (SoundNodeWave)StaticClass().DefaultObject;
+
     internal SoundNodeWave() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SoundNodeWave(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SoundNodeWave>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GeneratePCMData
@@ -292,11 +337,8 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RawData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror RawData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror RawData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: VorbisDecompressor
@@ -328,56 +370,38 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CompressedPCData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPCData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPCData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 288);
 
     /// <summary>
     /// StructProperty: CompressedXbox360Data
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedXbox360Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedXbox360Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 352);
 
     /// <summary>
     /// StructProperty: CompressedPS3Data
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPS3Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedPS3Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: CompressedWiiUData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedWiiUData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedWiiUData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 480);
 
     /// <summary>
     /// StructProperty: CompressedIPhoneData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedIPhoneData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedIPhoneData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 544);
 
     /// <summary>
     /// StructProperty: CompressedFlashData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CompressedFlashData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CompressedFlashData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 608);
 
     /// <summary>
     /// IntProperty: ResourceID
@@ -481,7 +505,7 @@ public partial class SoundNodeWave : BmSDK.Engine.SoundNode, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDecompressionType
     /// </summary>
-    public enum EDecompressionType
+    public enum EDecompressionType : byte
     {
         DTYPE_Setup = 0,
         DTYPE_Invalid = 1,

@@ -21,12 +21,57 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineSubsystem.
+    /// </summary>
+    public static OnlineSubsystem DefaultObject => (OnlineSubsystem)StaticClass().DefaultObject;
+
     internal OnlineSubsystem() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected OnlineSubsystem(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineSubsystem>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ETWEvent
@@ -510,7 +555,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECustomContentAccessMode
     /// </summary>
-    public enum ECustomContentAccessMode
+    public enum ECustomContentAccessMode : byte
     {
         ECCAM_Offline = 0,
         ECCAM_Hydra = 1,
@@ -523,7 +568,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECustomContentType
     /// </summary>
-    public enum ECustomContentType
+    public enum ECustomContentType : byte
     {
         ECCT_DLCStore = 0,
         ECCT_MOTD = 1,
@@ -820,7 +865,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineNewsType
     /// </summary>
-    public enum EOnlineNewsType
+    public enum EOnlineNewsType : byte
     {
         ONT_Unknown = 0,
         ONT_GameNews = 1,
@@ -1440,7 +1485,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineAccountCreateStatus
     /// </summary>
-    public enum EOnlineAccountCreateStatus
+    public enum EOnlineAccountCreateStatus : byte
     {
         OACS_CreateSuccessful = 0,
         OACS_UnknownError = 1,
@@ -1489,7 +1534,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELanBeaconState
     /// </summary>
-    public enum ELanBeaconState
+    public enum ELanBeaconState : byte
     {
         LANB_NotUsingLanBeacon = 0,
         LANB_Hosting = 1,
@@ -1534,7 +1579,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStatEventType
     /// </summary>
-    public enum EStatEventType
+    public enum EStatEventType : byte
     {
         StatEvent_Private_Register = 0,
         StatEvent_Private_Unregister = 1,
@@ -1560,7 +1605,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGTCCommand
     /// </summary>
-    public enum EGTCCommand
+    public enum EGTCCommand : byte
     {
         GTCCommand_Play = 0,
         GTCCommand_Pause = 1,
@@ -1614,7 +1659,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENATType
     /// </summary>
-    public enum ENATType
+    public enum ENATType : byte
     {
         NAT_Unknown = 0,
         NAT_Open = 1,
@@ -1626,7 +1671,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineServerConnectionStatus
     /// </summary>
-    public enum EOnlineServerConnectionStatus
+    public enum EOnlineServerConnectionStatus : byte
     {
         OSCS_NotConnected = 0,
         OSCS_Connected = 1,
@@ -1819,7 +1864,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineContentState
     /// </summary>
-    public enum EOnlineContentState
+    public enum EOnlineContentState : byte
     {
         OCS_Owned_NoData = 0,
         OCS_Owned_NotDownloaded = 1,
@@ -1956,7 +2001,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineContentType
     /// </summary>
-    public enum EOnlineContentType
+    public enum EOnlineContentType : byte
     {
         OCT_Downloaded = 0,
         OCT_SaveGame = 1,
@@ -2081,7 +2126,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineFriendState
     /// </summary>
-    public enum EOnlineFriendState
+    public enum EOnlineFriendState : byte
     {
         OFS_Offline = 0,
         OFS_Online = 1,
@@ -2093,7 +2138,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineEnumerationReadState
     /// </summary>
-    public enum EOnlineEnumerationReadState
+    public enum EOnlineEnumerationReadState : byte
     {
         OERS_NotStarted = 0,
         OERS_InProgress = 1,
@@ -2105,7 +2150,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameState
     /// </summary>
-    public enum EOnlineGameState
+    public enum EOnlineGameState : byte
     {
         OGS_NoSession = 0,
         OGS_Pending = 1,
@@ -2119,7 +2164,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENetworkNotificationPosition
     /// </summary>
-    public enum ENetworkNotificationPosition
+    public enum ENetworkNotificationPosition : byte
     {
         NNP_TopLeft = 0,
         NNP_TopCenter = 1,
@@ -2161,7 +2206,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFeaturePrivilegeLevel
     /// </summary>
-    public enum EFeaturePrivilegeLevel
+    public enum EFeaturePrivilegeLevel : byte
     {
         FPL_Disabled = 0,
         FPL_EnabledFriendsOnly = 1,
@@ -2172,7 +2217,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELoginStatus
     /// </summary>
-    public enum ELoginStatus
+    public enum ELoginStatus : byte
     {
         LS_NotLoggedIn = 0,
         LS_UsingLocalProfile = 1,

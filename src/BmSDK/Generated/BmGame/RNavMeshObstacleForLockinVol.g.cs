@@ -21,52 +21,62 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavMeshObstacleForLockinVol.
+    /// </summary>
+    public static RNavMeshObstacleForLockinVol DefaultObject => (RNavMeshObstacleForLockinVol)StaticClass().DefaultObject;
+
     internal RNavMeshObstacleForLockinVol() { }
 
     /// <summary>
     /// Constructs a new RNavMeshObstacleForLockinVol
     /// </summary>
-    public RNavMeshObstacleForLockinVol(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RNavMeshObstacleForLockinVol Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RNavMeshObstacleForLockinVol(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RNavMeshObstacleForLockinVol(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RNavMeshObstacleForLockinVol>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetupEncompassCheck
@@ -133,70 +143,56 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     }
 
     /// <summary>
-    /// StructProperty: planeOrigins
+    /// InlineArray{StructProperty}: planeOrigins
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeOrigins_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
-    }
+    public InlineArray<System.Numerics.Vector3> planeOrigins => new(4, Ptr + 716);
+
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeOrigins_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeOrigins_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 716);
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeOrigins_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeOrigins_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 728);
     /// <summary>
     /// StructProperty: planeOrigins
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeOrigins_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeOrigins_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 740);
+    /// <summary>
+    /// StructProperty: planeOrigins
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 planeOrigins_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 752);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: planeNormals
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> planeNormals => new(4, Ptr + 764);
 
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeNormals_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeNormals_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 764);
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeNormals_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeNormals_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 776);
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeNormals_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeNormals_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 788);
     /// <summary>
     /// StructProperty: planeNormals
     /// </summary>
-    public unsafe System.Numerics.Vector3 planeNormals_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref System.Numerics.Vector3 planeNormals_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 800);
 
     /// <summary>
     /// FloatProperty: expanded2DExtentSq
@@ -210,18 +206,12 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// StructProperty: longSideNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 longSideNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
-    }
+    public unsafe ref System.Numerics.Vector3 longSideNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 816);
 
     /// <summary>
     /// StructProperty: ImpulseDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpulseDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpulseDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 828);
 }

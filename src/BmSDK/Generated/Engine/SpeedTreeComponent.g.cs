@@ -21,6 +21,11 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpeedTreeComponent.
+    /// </summary>
+    public static SpeedTreeComponent DefaultObject => (SpeedTreeComponent)StaticClass().DefaultObject;
+
     internal SpeedTreeComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SpeedTreeComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeedTreeComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetMaterial
@@ -307,61 +352,43 @@ public partial class SpeedTreeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: BranchLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef BranchLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef BranchLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 644);
 
     /// <summary>
     /// StructProperty: FrondLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef FrondLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef FrondLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 652);
 
     /// <summary>
     /// StructProperty: LeafMeshLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LeafMeshLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LeafMeshLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: LeafCardLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LeafCardLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LeafCardLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 668);
 
     /// <summary>
     /// StructProperty: BillboardLightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef BillboardLightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef BillboardLightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: RotationOnlyMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix RotationOnlyMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix RotationOnlyMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 688);
 
     /// <summary>
     /// Enum: ESpeedTreeMeshType
     /// </summary>
-    public enum ESpeedTreeMeshType
+    public enum ESpeedTreeMeshType : byte
     {
         STMT_MinMinusOne = 0,
         STMT_Branches1 = 1,

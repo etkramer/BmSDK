@@ -21,6 +21,11 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DynamicLightEnvironmentComponent.
+    /// </summary>
+    public static DynamicLightEnvironmentComponent DefaultObject => (DynamicLightEnvironmentComponent)StaticClass().DefaultObject;
+
     internal DynamicLightEnvironmentComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected DynamicLightEnvironmentComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DynamicLightEnvironmentComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetOwnerBounds
@@ -72,7 +117,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// Enum: EDynamicLightEnvironmentBoundsMethod
     /// </summary>
-    public enum EDynamicLightEnvironmentBoundsMethod
+    public enum EDynamicLightEnvironmentBoundsMethod : byte
     {
         DLEB_OwnerComponents = 0,
         DLEB_ManualOverride = 1,
@@ -146,29 +191,20 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: AmbientShadowColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor AmbientShadowColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor AmbientShadowColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 188);
 
     /// <summary>
     /// StructProperty: AmbientShadowSourceDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AmbientShadowSourceDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 AmbientShadowSourceDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: AmbientGlow
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor AmbientGlow
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor AmbientGlow
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 216);
 
     /// <summary>
     /// FloatProperty: LightDistance
@@ -362,11 +398,8 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: MaxModulatedShadowColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor MaxModulatedShadowColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor MaxModulatedShadowColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 252);
 
     /// <summary>
     /// FloatProperty: DominantShadowTransitionStartDistance
@@ -416,20 +449,14 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// StructProperty: OverriddenBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds OverriddenBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds OverriddenBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 288);
 
     /// <summary>
     /// StructProperty: OverriddenLightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer OverriddenLightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer OverriddenLightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 316);
 
     /// <summary>
     /// ArrayProperty: OverriddenLightComponents
@@ -452,7 +479,7 @@ public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnviro
     /// <summary>
     /// Enum: DLEC_Mode
     /// </summary>
-    public enum DLEC_Mode
+    public enum DLEC_Mode : byte
     {
         DLEC_Unmolested = 0,
         DLEC_APlus3D = 1,

@@ -21,52 +21,62 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCombatMove_BatmanCounter.
+    /// </summary>
+    public static RCombatMove_BatmanCounter DefaultObject => (RCombatMove_BatmanCounter)StaticClass().DefaultObject;
+
     internal RCombatMove_BatmanCounter() { }
 
     /// <summary>
     /// Constructs a new RCombatMove_BatmanCounter
     /// </summary>
-    public RCombatMove_BatmanCounter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_BatmanCounter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCombatMove_BatmanCounter(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCombatMove_BatmanCounter(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCombatMove_BatmanCounter>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanBeOverridenByQuickGadget
@@ -670,29 +680,20 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 868);
 
     /// <summary>
     /// StructProperty: CounterAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CounterAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CounterAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1024);
 
     /// <summary>
     /// StructProperty: TargetCounteredAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetCounteredAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TargetCounteredAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1028);
 
     /// <summary>
     /// ClassProperty: CounterDmgType
@@ -706,20 +707,14 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: CounterDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 CounterDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref System.Numerics.Vector3 CounterDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1040);
 
     /// <summary>
     /// StructProperty: CounterRot
     /// </summary>
-    public unsafe BmSDK.Rotator CounterRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref BmSDK.Rotator CounterRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1052);
 
     /// <summary>
     /// NameProperty: AnimName
@@ -967,11 +962,8 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: CounterInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo CounterInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo CounterInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FCounterInfo>(Ptr + 1116);
 
     /// <summary>
     /// NameProperty: LastHitBone
@@ -1039,11 +1031,8 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: AnimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1244);
 
     /// <summary>
     /// ByteProperty: CounterWallDir
@@ -1075,20 +1064,14 @@ public partial class RCombatMove_BatmanCounter : BmSDK.BmGame.RCombatMove_Batman
     /// <summary>
     /// StructProperty: EnvCounterLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvCounterLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvCounterLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1260);
 
     /// <summary>
     /// StructProperty: EnvCounterNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EnvCounterNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
-    }
+    public unsafe ref System.Numerics.Vector3 EnvCounterNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1272);
 
     /// <summary>
     /// IntProperty: OverrideComboInc

@@ -21,6 +21,11 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTurret_WatchtowerBase.
+    /// </summary>
+    public static RTurret_WatchtowerBase DefaultObject => (RTurret_WatchtowerBase)StaticClass().DefaultObject;
+
     internal RTurret_WatchtowerBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
     /// </summary>
     protected RTurret_WatchtowerBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTurret_WatchtowerBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnToggleHidden
@@ -836,11 +846,8 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
     /// <summary>
     /// StructProperty: lastLightRangeUpdateRot
     /// </summary>
-    public unsafe BmSDK.Rotator lastLightRangeUpdateRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
-    }
+    public unsafe ref BmSDK.Rotator lastLightRangeUpdateRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1584);
 
     /// <summary>
     /// FloatProperty: lightRange
@@ -872,11 +879,8 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
     /// <summary>
     /// StructProperty: dbgForceLightConeScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 dbgForceLightConeScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1608); }
-    }
+    public unsafe ref System.Numerics.Vector3 dbgForceLightConeScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1608);
 
     /// <summary>
     /// FloatProperty: pulsePeriod
@@ -908,11 +912,8 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
     /// <summary>
     /// StructProperty: coneColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor coneColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 1632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1632); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor coneColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 1632);
 
     /// <summary>
     /// FloatProperty: initialRangeP
@@ -998,11 +999,8 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
     /// <summary>
     /// StructProperty: lastKnownPlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 lastKnownPlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
-    }
+    public unsafe ref System.Numerics.Vector3 lastKnownPlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1672);
 
     /// <summary>
     /// FloatProperty: PPSpeed

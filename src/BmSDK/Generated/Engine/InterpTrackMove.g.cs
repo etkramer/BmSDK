@@ -21,6 +21,11 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackMove.
+    /// </summary>
+    public static InterpTrackMove DefaultObject => (InterpTrackMove)StaticClass().DefaultObject;
+
     internal InterpTrackMove() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected InterpTrackMove(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMove>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FRandomGeneratorMove
@@ -445,7 +490,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInterpTrackMoveRotMode
     /// </summary>
-    public enum EInterpTrackMoveRotMode
+    public enum EInterpTrackMoveRotMode : byte
     {
         IMR_Keyframed = 0,
         IMR_LookAtGroup = 1,
@@ -456,7 +501,7 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInterpTrackMoveFrame
     /// </summary>
-    public enum EInterpTrackMoveFrame
+    public enum EInterpTrackMoveFrame : byte
     {
         IMF_World = 0,
         IMF_RelativeToInitial = 1,
@@ -508,29 +553,20 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PosTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector PosTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector PosTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: EulerTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector EulerTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveVector EulerTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveVector>(Ptr + 200);
 
     /// <summary>
     /// StructProperty: LookupTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 220);
 
     /// <summary>
     /// NameProperty: LookAtGroupName
@@ -562,11 +598,8 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LevelOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LevelOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref System.Numerics.Vector3 LevelOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 252);
 
     /// <summary>
     /// BoolProperty: bUseQuatInterpolation
@@ -643,9 +676,6 @@ public partial class InterpTrackMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Randomiser
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove Randomiser
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove Randomiser
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackMove.FRandomGeneratorMove>(Ptr + 272);
 }

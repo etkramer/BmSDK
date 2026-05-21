@@ -21,6 +21,11 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as _OnlineSubsystemSteamworks.
+    /// </summary>
+    public static _OnlineSubsystemSteamworks DefaultObject => (_OnlineSubsystemSteamworks)StaticClass().DefaultObject;
+
     internal _OnlineSubsystemSteamworks() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected _OnlineSubsystemSteamworks(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_OnlineSubsystemSteamworks>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CancelFetchSteamDLC
@@ -6230,7 +6275,7 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// Enum: EMuteType
     /// </summary>
-    public enum EMuteType
+    public enum EMuteType : byte
     {
         MUTE_None = 0,
         MUTE_AllButFriends = 1,
@@ -6553,7 +6598,7 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// Enum: ELeaderboardUpdateType
     /// </summary>
-    public enum ELeaderboardUpdateType
+    public enum ELeaderboardUpdateType : byte
     {
         LUT_KeepBest = 0,
         LUT_Force = 1,
@@ -6563,7 +6608,7 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// Enum: ELeaderboardFormat
     /// </summary>
-    public enum ELeaderboardFormat
+    public enum ELeaderboardFormat : byte
     {
         LF_Number = 0,
         LF_Seconds = 1,
@@ -6574,7 +6619,7 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// Enum: ELeaderboardSortType
     /// </summary>
-    public enum ELeaderboardSortType
+    public enum ELeaderboardSortType : byte
     {
         LST_Ascending = 0,
         LST_Descending = 1,
@@ -6584,7 +6629,7 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// Enum: ELeaderboardRequestType
     /// </summary>
-    public enum ELeaderboardRequestType
+    public enum ELeaderboardRequestType : byte
     {
         LBRT_Global = 0,
         LBRT_Player = 1,
@@ -7151,11 +7196,8 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// StructProperty: LoggedInPlayerId
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId LoggedInPlayerId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId LoggedInPlayerId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 784);
 
     /// <summary>
     /// IntProperty: LoggedInPlayerNum
@@ -7214,11 +7256,8 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// StructProperty: ProfileCache
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FProfileSettingsCache ProfileCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FProfileSettingsCache>(Ptr + 876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FProfileSettingsCache ProfileCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FProfileSettingsCache>(Ptr + 876);
 
     /// <summary>
     /// StrProperty: CachedFriendMessage
@@ -7527,37 +7566,30 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     }
 
     /// <summary>
-    /// StructProperty: ControllerStates
+    /// InlineArray{StructProperty}: ControllerStates
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
-    }
+    public InlineArray<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState> ControllerStates => new(4, Ptr + 1256);
+
     /// <summary>
     /// StructProperty: ControllerStates
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1256);
     /// <summary>
     /// StructProperty: ControllerStates
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1264);
     /// <summary>
     /// StructProperty: ControllerStates
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1280); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1272);
+    /// <summary>
+    /// StructProperty: ControllerStates
+    /// </summary>
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState ControllerStates_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState>(Ptr + 1280);
 
     /// <summary>
     /// FloatProperty: ConnectionPresenceTimeInterval
@@ -7652,11 +7684,8 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// StructProperty: DeviceCache
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FDeviceIdCache DeviceCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FDeviceIdCache>(Ptr + 1424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FDeviceIdCache DeviceCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FDeviceIdCache>(Ptr + 1424);
 
     /// <summary>
     /// ArrayProperty: QueuedAvatarRequests
@@ -7760,11 +7789,8 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// StructProperty: ContentCache
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FContentListCache ContentCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FContentListCache>(Ptr + 1624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1624); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FContentListCache ContentCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FContentListCache>(Ptr + 1624);
 
     /// <summary>
     /// StrProperty: DLCRootDir
@@ -7823,11 +7849,8 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// StructProperty: CurrentLocalTalker
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FLocalTalkerSteam CurrentLocalTalker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FLocalTalkerSteam>(Ptr + 1828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1828); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FLocalTalkerSteam CurrentLocalTalker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FLocalTalkerSteam>(Ptr + 1828);
 
     /// <summary>
     /// ArrayProperty: RemoteTalkers

@@ -21,52 +21,62 @@ public partial class RInGameCinematicCam : BmSDK.BmGame.RCameraActor, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInGameCinematicCam.
+    /// </summary>
+    public static RInGameCinematicCam DefaultObject => (RInGameCinematicCam)StaticClass().DefaultObject;
+
     internal RInGameCinematicCam() { }
 
     /// <summary>
     /// Constructs a new RInGameCinematicCam
     /// </summary>
-    public RInGameCinematicCam(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RInGameCinematicCam Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RInGameCinematicCam(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RInGameCinematicCam(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInGameCinematicCam>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ClearCinematicCameraCollisionTarget
@@ -537,20 +547,14 @@ public partial class RInGameCinematicCam : BmSDK.BmGame.RCameraActor, BmSDK.IGam
     /// <summary>
     /// StructProperty: RootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1316);
 
     /// <summary>
     /// StructProperty: RootRotation
     /// </summary>
-    public unsafe BmSDK.Rotator RootRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
-    }
+    public unsafe ref BmSDK.Rotator RootRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1328);
 
     /// <summary>
     /// NameProperty: BoneName
@@ -591,38 +595,26 @@ public partial class RInGameCinematicCam : BmSDK.BmGame.RCameraActor, BmSDK.IGam
     /// <summary>
     /// StructProperty: CollisionFallBackTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CollisionFallBackTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
-    }
+    public unsafe ref System.Numerics.Vector3 CollisionFallBackTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1360);
 
     /// <summary>
     /// StructProperty: Smoother
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 1372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
-    }
+    public unsafe ref BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother Smoother
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.R3rdPersonCamera.FCameraSmoother>(Ptr + 1372);
 
     /// <summary>
     /// StructProperty: OldLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1408); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1408);
 
     /// <summary>
     /// StructProperty: OldRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OldRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1420); }
-    }
+    public unsafe ref BmSDK.Rotator OldRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1420);
 
     /// <summary>
     /// FloatProperty: BlendTime
@@ -645,38 +637,26 @@ public partial class RInGameCinematicCam : BmSDK.BmGame.RCameraActor, BmSDK.IGam
     /// <summary>
     /// StructProperty: BlendLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BlendLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1440); }
-    }
+    public unsafe ref System.Numerics.Vector3 BlendLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1440);
 
     /// <summary>
     /// StructProperty: BlendRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BlendRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1452); }
-    }
+    public unsafe ref BmSDK.Rotator BlendRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1452);
 
     /// <summary>
     /// StructProperty: ExtraCameraRot
     /// </summary>
-    public unsafe BmSDK.Rotator ExtraCameraRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1464); }
-    }
+    public unsafe ref BmSDK.Rotator ExtraCameraRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1464);
 
     /// <summary>
     /// StructProperty: SavedRotBeforeLook
     /// </summary>
-    public unsafe BmSDK.Rotator SavedRotBeforeLook
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
-    }
+    public unsafe ref BmSDK.Rotator SavedRotBeforeLook
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1476);
 
     /// <summary>
     /// FloatProperty: DesiredFOVAngle

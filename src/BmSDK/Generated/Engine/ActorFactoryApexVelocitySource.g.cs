@@ -21,6 +21,11 @@ public partial class ActorFactoryApexVelocitySource : BmSDK.Engine.ActorFactory,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryApexVelocitySource.
+    /// </summary>
+    public static ActorFactoryApexVelocitySource DefaultObject => (ActorFactoryApexVelocitySource)StaticClass().DefaultObject;
+
     internal ActorFactoryApexVelocitySource() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ActorFactoryApexVelocitySource : BmSDK.Engine.ActorFactory,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ActorFactoryApexVelocitySource(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexVelocitySource>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// FloatProperty: AverageVelocity
@@ -81,11 +126,8 @@ public partial class ActorFactoryApexVelocitySource : BmSDK.Engine.ActorFactory,
     /// <summary>
     /// StructProperty: Extents
     /// </summary>
-    public unsafe System.Numerics.Vector3 Extents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref System.Numerics.Vector3 Extents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 160);
 
     /// <summary>
     /// BoolProperty: bEnabled
@@ -99,9 +141,6 @@ public partial class ActorFactoryApexVelocitySource : BmSDK.Engine.ActorFactory,
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 176);
 }

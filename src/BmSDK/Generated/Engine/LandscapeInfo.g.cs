@@ -21,6 +21,11 @@ public partial class LandscapeInfo : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LandscapeInfo.
+    /// </summary>
+    public static LandscapeInfo DefaultObject => (LandscapeInfo)StaticClass().DefaultObject;
+
     internal LandscapeInfo() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class LandscapeInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected LandscapeInfo(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeInfo>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FLandscapeAddCollision
@@ -76,11 +121,8 @@ public partial class LandscapeInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LandscapeGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LandscapeGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LandscapeGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 84);
 
     /// <summary>
     /// MapProperty: LayerInfoMap
@@ -139,38 +181,26 @@ public partial class LandscapeInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Proxies
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror Proxies
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror Proxies
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 404);
 
     /// <summary>
     /// StructProperty: SelectedComponents
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror SelectedComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror SelectedComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: SelectedCollisionComponents
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror SelectedCollisionComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror SelectedCollisionComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 548);
 
     /// <summary>
     /// StructProperty: SelectedRegionComponents
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror SelectedRegionComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror SelectedRegionComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 620);
 
     /// <summary>
     /// MapProperty: SelectedRegion

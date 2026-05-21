@@ -21,6 +21,11 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMExitCondition_MatineeEnded.
+    /// </summary>
+    public static RBMExitCondition_MatineeEnded DefaultObject => (RBMExitCondition_MatineeEnded)StaticClass().DefaultObject;
+
     internal RBMExitCondition_MatineeEnded() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMExitCondition_MatineeEnded(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMExitCondition_MatineeEnded>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: MatineeBlendOutStarted
@@ -67,7 +112,7 @@ public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitConditi
     /// <summary>
     /// Enum: EMatineeEndedType
     /// </summary>
-    public enum EMatineeEndedType
+    public enum EMatineeEndedType : byte
     {
         EMATINEE_BlendStartedOrMatineeFinished = 0,
         EMATINEE_BlendStarted = 1,

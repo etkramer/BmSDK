@@ -21,6 +21,11 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Actor.
+    /// </summary>
+    public static Actor DefaultObject => (Actor)StaticClass().DefaultObject;
+
     internal Actor() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// </summary>
     protected Actor(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Actor>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Actor>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Actor>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Actor>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Actor>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Actor>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Actor>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Actor>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: IsStaticForFloorCorrection
@@ -2504,13 +2514,13 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocalString
     /// </summary>
-    public unsafe static BmSDK.FString GetLocalString(int Switch = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1 = default)
+    public unsafe static BmSDK.FString GetLocalString(int Switch = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1 = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_2 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Actor.GetLocalString", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Switch, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_1, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_1, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_2, paramsPtr + 12);
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 20);
     }
@@ -5523,7 +5533,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDoubleClickDir
     /// </summary>
-    public enum EDoubleClickDir
+    public enum EDoubleClickDir : byte
     {
         DCLICK_None = 0,
         DCLICK_Left = 1,
@@ -5538,7 +5548,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETravelType
     /// </summary>
-    public enum ETravelType
+    public enum ETravelType : byte
     {
         TRAVEL_Absolute = 0,
         TRAVEL_Partial = 1,
@@ -5903,7 +5913,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECollisionType
     /// </summary>
-    public enum ECollisionType
+    public enum ECollisionType : byte
     {
         COLLIDE_CustomDefault = 0,
         COLLIDE_NoCollision = 1,
@@ -6144,7 +6154,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENetRole
     /// </summary>
-    public enum ENetRole
+    public enum ENetRole : byte
     {
         ROLE_None = 0,
         ROLE_SimulatedProxy = 1,
@@ -6235,7 +6245,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EApexClothTeleportMode
     /// </summary>
-    public enum EApexClothTeleportMode
+    public enum EApexClothTeleportMode : byte
     {
         ApexClothTeleportMode_Continuous = 0,
         ApexClothTeleportMode_Teleport = 1,
@@ -6246,7 +6256,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWeaponDamageResult
     /// </summary>
-    public enum EWeaponDamageResult
+    public enum EWeaponDamageResult : byte
     {
         EWDR_NoReaction = 0,
         EWDR_Armoured = 1,
@@ -6257,7 +6267,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EActorMetricsType
     /// </summary>
-    public enum EActorMetricsType
+    public enum EActorMetricsType : byte
     {
         METRICS_VERTS = 0,
         METRICS_TRIS = 1,
@@ -6268,7 +6278,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMoveDir
     /// </summary>
-    public enum EMoveDir
+    public enum EMoveDir : byte
     {
         MD_Stationary = 0,
         MD_Forward = 1,
@@ -6283,7 +6293,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPhysics
     /// </summary>
-    public enum EPhysics
+    public enum EPhysics : byte
     {
         PHYS_None = 0,
         PHYS_Walking = 1,
@@ -6310,7 +6320,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EHideRule
     /// </summary>
-    public enum EHideRule
+    public enum EHideRule : byte
     {
         EHideRule_Never = 0,
         EHideRule_AfterCh0 = 1,
@@ -6340,7 +6350,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESideStory
     /// </summary>
-    public enum ESideStory
+    public enum ESideStory : byte
     {
         ESideStory_None = 0,
         ESideStory_Azrael = 1,
@@ -6500,20 +6510,14 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 208);
 
     /// <summary>
     /// FloatProperty: DrawScale
@@ -6527,29 +6531,20 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrawScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 DrawScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref System.Numerics.Vector3 DrawScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 224);
 
     /// <summary>
     /// StructProperty: PrePivot
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrePivot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrePivot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: EditorIconColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor EditorIconColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor EditorIconColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 248);
 
     /// <summary>
     /// FloatProperty: EditorIconDrawScale
@@ -7967,11 +7962,8 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DetachFence
     /// </summary>
-    public unsafe BmSDK.GameObject.FRenderCommandFence DetachFence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRenderCommandFence>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref BmSDK.GameObject.FRenderCommandFence DetachFence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRenderCommandFence>(Ptr + 292);
 
     /// <summary>
     /// ArrayProperty: Timers
@@ -8039,11 +8031,8 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CanTraceActorBlockedTypes
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FBlockingVolumeTypesContainer CanTraceActorBlockedTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBlockingVolumeTypesContainer>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FBlockingVolumeTypesContainer CanTraceActorBlockedTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBlockingVolumeTypesContainer>(Ptr + 352);
 
     /// <summary>
     /// FloatProperty: LastRenderTime
@@ -8129,29 +8118,20 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Velocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 Velocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 Velocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: Acceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 Acceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref System.Numerics.Vector3 Acceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 456);
 
     /// <summary>
     /// StructProperty: AngularVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 AngularVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 AngularVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// NameProperty: BaseBoneName
@@ -8174,20 +8154,14 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 RelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
 
     /// <summary>
     /// StructProperty: RelativeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator RelativeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref BmSDK.Rotator RelativeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 516);
 
     /// <summary>
     /// IntProperty: OverlapTag
@@ -8201,11 +8175,8 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RotationRate
     /// </summary>
-    public unsafe BmSDK.Rotator RotationRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.Rotator RotationRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 532);
 
     /// <summary>
     /// ArrayProperty: SupportedEvents
@@ -8291,11 +8262,8 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: InvestigateOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InvestigateOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.Numerics.Vector3 InvestigateOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 640);
 
     /// <summary>
     /// ArrayProperty: PendingASyncLoads
@@ -8582,7 +8550,7 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EThoughtGroup
     /// </summary>
-    public enum EThoughtGroup
+    public enum EThoughtGroup : byte
     {
         THOUGHTGROUP_Player = 0,
         THOUGHTGROUP_AI = 1,

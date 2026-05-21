@@ -21,6 +21,11 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeCollisionShapeConfig.
+    /// </summary>
+    public static RCapeCollisionShapeConfig DefaultObject => (RCapeCollisionShapeConfig)StaticClass().DefaultObject;
+
     internal RCapeCollisionShapeConfig() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCapeCollisionShapeConfig(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeCollisionShapeConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// NameProperty: AttachBoneName
@@ -99,38 +144,26 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: Position1
     /// </summary>
-    public unsafe System.Numerics.Vector3 Position1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref System.Numerics.Vector3 Position1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 116);
 
     /// <summary>
     /// StructProperty: Position2
     /// </summary>
-    public unsafe System.Numerics.Vector3 Position2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref System.Numerics.Vector3 Position2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: Position3
     /// </summary>
-    public unsafe System.Numerics.Vector3 Position3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 Position3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: Lengths1
     /// </summary>
-    public unsafe System.Numerics.Vector3 Lengths1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 Lengths1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 
     /// <summary>
     /// FloatProperty: Length1
@@ -144,25 +177,19 @@ public partial class RCapeCollisionShapeConfig : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: ForwardsVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForwardsVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForwardsVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 180);
 
     /// <summary>
     /// Enum: ECollisionShape
     /// </summary>
-    public enum ECollisionShape
+    public enum ECollisionShape : byte
     {
         ECollisionShape_Sphere = 0,
         ECollisionShape_ConvexHull = 1,

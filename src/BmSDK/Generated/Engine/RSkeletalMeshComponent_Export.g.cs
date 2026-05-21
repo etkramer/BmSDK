@@ -21,6 +21,11 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkeletalMeshComponent_Export.
+    /// </summary>
+    public static RSkeletalMeshComponent_Export DefaultObject => (RSkeletalMeshComponent_Export)StaticClass().DefaultObject;
+
     internal RSkeletalMeshComponent_Export() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSkeletalMeshComponent_Export(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkeletalMeshComponent_Export>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FPersistentSoundData
@@ -684,7 +729,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: SkeletalMeshOptimizationNormalMode
     /// </summary>
-    public enum SkeletalMeshOptimizationNormalMode
+    public enum SkeletalMeshOptimizationNormalMode : byte
     {
         SMONM_PreserveSmoothingGroups = 0,
         SMONM_RecalculateNormals = 1,
@@ -696,7 +741,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: SkeletalMeshOptimizationImportance
     /// </summary>
-    public enum SkeletalMeshOptimizationImportance
+    public enum SkeletalMeshOptimizationImportance : byte
     {
         SMOI_Normal = 0,
         SMOI_High = 1,
@@ -815,7 +860,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EStretchHeadMode
     /// </summary>
-    public enum EStretchHeadMode
+    public enum EStretchHeadMode : byte
     {
         STRETCHHEADMODE_None = 0,
         STRETCHHEADMODE_Big = 1,
@@ -826,7 +871,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EStretchPhase
     /// </summary>
-    public enum EStretchPhase
+    public enum EStretchPhase : byte
     {
         STRETCHPHASE_PostAnimBlend = 0,
         STRETCHPHASE_PreRender = 1,
@@ -836,7 +881,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EParentAnimComponentMode
     /// </summary>
-    public enum EParentAnimComponentMode
+    public enum EParentAnimComponentMode : byte
     {
         PACM_Original = 0,
         PACM_Replace = 1,
@@ -850,7 +895,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: ESkeletalMeshComponentBoundsType
     /// </summary>
-    public enum ESkeletalMeshComponentBoundsType
+    public enum ESkeletalMeshComponentBoundsType : byte
     {
         SMCBT_Automatic = 0,
         SMCBT_Safe = 1,
@@ -953,7 +998,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EFaceFXBaseExpression
     /// </summary>
-    public enum EFaceFXBaseExpression
+    public enum EFaceFXBaseExpression : byte
     {
         FXBE_Default = 0,
         FXBE_None = 1,
@@ -1113,7 +1158,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: EFaceFXRegisterOwner
     /// </summary>
-    public enum EFaceFXRegisterOwner
+    public enum EFaceFXRegisterOwner : byte
     {
         FXREGISTEROWNER_Code = 0,
         FXREGISTEROWNER_CodeBlink = 1,
@@ -1394,7 +1439,7 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Enum: ERootMotionMode
     /// </summary>
-    public enum ERootMotionMode
+    public enum ERootMotionMode : byte
     {
         RMM_Translate = 0,
         RMM_Velocity = 1,

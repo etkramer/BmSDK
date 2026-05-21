@@ -21,6 +21,11 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MWBIDEmailFormScreenMessage.
+    /// </summary>
+    public static MWBIDEmailFormScreenMessage DefaultObject => (MWBIDEmailFormScreenMessage)StaticClass().DefaultObject;
+
     internal MWBIDEmailFormScreenMessage() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MWBIDEmailFormScreenMessage(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDEmailFormScreenMessage>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Flush
@@ -58,16 +103,13 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     /// <summary>
     /// StructProperty: WBIDAccountInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.MWBIDEmailFormScreenMessage.FUserData WBIDAccountInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDEmailFormScreenMessage.FUserData>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.BmGame.MWBIDEmailFormScreenMessage.FUserData WBIDAccountInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.MWBIDEmailFormScreenMessage.FUserData>(Ptr + 92);
 
     /// <summary>
     /// Enum: ButtonGroup_EmailForm
     /// </summary>
-    public enum ButtonGroup_EmailForm
+    public enum ButtonGroup_EmailForm : byte
     {
         BGEF_Entry1 = 0,
         BGEF_Entry2 = 1,

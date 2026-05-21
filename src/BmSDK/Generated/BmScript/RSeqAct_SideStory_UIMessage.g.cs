@@ -21,6 +21,11 @@ public partial class RSeqAct_SideStory_UIMessage : BmSDK.Engine.SequenceAction, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SideStory_UIMessage.
+    /// </summary>
+    public static RSeqAct_SideStory_UIMessage DefaultObject => (RSeqAct_SideStory_UIMessage)StaticClass().DefaultObject;
+
     internal RSeqAct_SideStory_UIMessage() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_SideStory_UIMessage : BmSDK.Engine.SequenceAction, 
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_SideStory_UIMessage(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_UIMessage>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -157,7 +202,7 @@ public partial class RSeqAct_SideStory_UIMessage : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Enum: StoryUI
     /// </summary>
-    public enum StoryUI
+    public enum StoryUI : byte
     {
         SUI_Open = 0,
         SUI_Update = 1,

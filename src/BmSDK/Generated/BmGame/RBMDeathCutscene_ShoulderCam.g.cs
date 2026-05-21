@@ -21,6 +21,11 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDeathCutscene_ShoulderCam.
+    /// </summary>
+    public static RBMDeathCutscene_ShoulderCam DefaultObject => (RBMDeathCutscene_ShoulderCam)StaticClass().DefaultObject;
+
     internal RBMDeathCutscene_ShoulderCam() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMDeathCutscene_ShoulderCam(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_ShoulderCam>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnDeactivate
@@ -316,11 +361,8 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: FocusPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FocusPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref System.Numerics.Vector3 FocusPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 264);
 
     /// <summary>
     /// BoolProperty: bImpact
@@ -469,11 +511,8 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: ImpactCameraHeight
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactCameraHeight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactCameraHeight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 348);
 
     /// <summary>
     /// FloatProperty: PlayerFocusAmount
@@ -487,18 +526,12 @@ public partial class RBMDeathCutscene_ShoulderCam : BmSDK.BmGame.RBMDeathCutscen
     /// <summary>
     /// StructProperty: ViewDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ViewDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref System.Numerics.Vector3 ViewDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 364);
 
     /// <summary>
     /// StructProperty: PreviousBaseLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousBaseLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousBaseLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 376);
 }

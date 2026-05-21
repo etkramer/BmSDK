@@ -21,6 +21,11 @@ public partial class ParticleModuleSizeMultiplyVelocity : BmSDK.Engine.ParticleM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleSizeMultiplyVelocity.
+    /// </summary>
+    public static ParticleModuleSizeMultiplyVelocity DefaultObject => (ParticleModuleSizeMultiplyVelocity)StaticClass().DefaultObject;
+
     internal ParticleModuleSizeMultiplyVelocity() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class ParticleModuleSizeMultiplyVelocity : BmSDK.Engine.ParticleM
     /// </summary>
     protected ParticleModuleSizeMultiplyVelocity(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleSizeMultiplyVelocity>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: VelocityMultiplier
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector VelocityMultiplier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector VelocityMultiplier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 96);
 
     /// <summary>
     /// BoolProperty: MultiplyX
@@ -72,18 +114,12 @@ public partial class ParticleModuleSizeMultiplyVelocity : BmSDK.Engine.ParticleM
     /// <summary>
     /// StructProperty: CapMaxSize
     /// </summary>
-    public unsafe System.Numerics.Vector3 CapMaxSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref System.Numerics.Vector3 CapMaxSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 164);
 
     /// <summary>
     /// StructProperty: CapMinSize
     /// </summary>
-    public unsafe System.Numerics.Vector3 CapMinSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.Numerics.Vector3 CapMinSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 176);
 }

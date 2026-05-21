@@ -21,6 +21,11 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ConstraintInstance.
+    /// </summary>
+    public static RB_ConstraintInstance DefaultObject => (RB_ConstraintInstance)StaticClass().DefaultObject;
+
     internal RB_ConstraintInstance() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RB_ConstraintInstance(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintInstance>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpdateFramesToCurrent
@@ -676,20 +721,14 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinearPositionTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LinearPositionTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref System.Numerics.Vector3 LinearPositionTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: LinearVelocityTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LinearVelocityTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 LinearVelocityTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// FloatProperty: LinearDriveSpring
@@ -721,20 +760,14 @@ public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AngularPositionTarget
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat AngularPositionTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat AngularPositionTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: AngularVelocityTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 AngularVelocityTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref System.Numerics.Vector3 AngularVelocityTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 192);
 
     /// <summary>
     /// FloatProperty: AngularDriveSpring

@@ -21,6 +21,11 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCharacterDefine.
+    /// </summary>
+    public static RCharacterDefine DefaultObject => (RCharacterDefine)StaticClass().DefaultObject;
+
     internal RCharacterDefine() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCharacterDefine(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCharacterDefine>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FBoneTrackingCharDefine
@@ -106,7 +151,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: ThugMakerTypeEnum
     /// </summary>
-    public enum ThugMakerTypeEnum
+    public enum ThugMakerTypeEnum : byte
     {
         HeadWithFixedBody = 0,
         FullMesh = 1,
@@ -117,7 +162,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: SkinTypeEnum
     /// </summary>
-    public enum SkinTypeEnum
+    public enum SkinTypeEnum : byte
     {
         SkinType_White = 0,
         SkinType_Black = 1,
@@ -128,7 +173,7 @@ public partial class RCharacterDefine : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Enum: GangTypeDefineEnum
     /// </summary>
-    public enum GangTypeDefineEnum
+    public enum GangTypeDefineEnum : byte
     {
         GangTypeD_None = 0,
         GangTypeD_Joker = 1,

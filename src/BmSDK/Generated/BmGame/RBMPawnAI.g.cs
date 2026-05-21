@@ -21,6 +21,11 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMPawnAI.
+    /// </summary>
+    public static RBMPawnAI DefaultObject => (RBMPawnAI)StaticClass().DefaultObject;
+
     internal RBMPawnAI() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// </summary>
     protected RBMPawnAI(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMPawnAI>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetLastStartledByPlayerTime
@@ -3669,7 +3679,7 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// Enum: GunTargetBoneState
     /// </summary>
-    public enum GunTargetBoneState
+    public enum GunTargetBoneState : byte
     {
         GTBS_Untested = 0,
         GTBS_Obscured = 1,
@@ -4396,7 +4406,7 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDirtType
     /// </summary>
-    public enum EDirtType
+    public enum EDirtType : byte
     {
         EDIRTTYPE_Wet = 0,
         EDIRTTYPE_Mud = 1,
@@ -4408,7 +4418,7 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDirtLocation
     /// </summary>
-    public enum EDirtLocation
+    public enum EDirtLocation : byte
     {
         EDIRTLOC_Front = 0,
         EDIRTLOC_Back = 1,
@@ -4425,37 +4435,30 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: BodyDirtStates
+    /// InlineArray{StructProperty}: BodyDirtStates
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3348); }
-    }
+    public InlineArray<BmSDK.BmGame.RBMPawnAI.FBodyDirtState> BodyDirtStates => new(4, Ptr + 3348);
+
     /// <summary>
     /// StructProperty: BodyDirtStates
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3376); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3348);
     /// <summary>
     /// StructProperty: BodyDirtStates
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3404); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3376);
     /// <summary>
     /// StructProperty: BodyDirtStates
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3432); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3404);
+    /// <summary>
+    /// StructProperty: BodyDirtStates
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RBMPawnAI.FBodyDirtState BodyDirtStates_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMPawnAI.FBodyDirtState>(Ptr + 3432);
 
     /// <summary>
     /// IntProperty: FacialDirtLevel
@@ -5837,20 +5840,14 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SearchExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 SearchExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3852); }
-    }
+    public unsafe ref System.Numerics.Vector3 SearchExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3852);
 
     /// <summary>
     /// StructProperty: TerrifiedSearchExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 TerrifiedSearchExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3864); }
-    }
+    public unsafe ref System.Numerics.Vector3 TerrifiedSearchExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3864);
 
     /// <summary>
     /// ArrayProperty: NavHandleList
@@ -5882,11 +5879,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SoftPawnCollisionVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 SoftPawnCollisionVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3904); }
-    }
+    public unsafe ref System.Numerics.Vector3 SoftPawnCollisionVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3904);
 
     /// <summary>
     /// ArrayProperty: SoftPawnCollisionInfluencers
@@ -5990,11 +5984,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PrevFloorNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevFloorNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4000); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevFloorNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4000);
 
     /// <summary>
     /// StrProperty: ForceDeathTip
@@ -6008,11 +5999,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HitReactionWeaponSwitchThrowImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitReactionWeaponSwitchThrowImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4028); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitReactionWeaponSwitchThrowImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4028);
 
     /// <summary>
     /// StrProperty: RiotWeaponName
@@ -6062,11 +6050,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedCylinderExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedCylinderExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4084); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedCylinderExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4084);
 
     /// <summary>
     /// FloatProperty: MaxBumpedTimer
@@ -6125,11 +6110,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PropLightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer PropLightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 4144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4144); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer PropLightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 4144);
 
     /// <summary>
     /// IntProperty: OverrideKOXP
@@ -6233,11 +6215,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GunMomentumDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 GunMomentumDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4236); }
-    }
+    public unsafe ref System.Numerics.Vector3 GunMomentumDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4236);
 
     /// <summary>
     /// ArrayProperty: GunTargetBones
@@ -6323,65 +6302,44 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MoveToTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveToTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4332); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveToTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4332);
 
     /// <summary>
     /// StructProperty: LastValidNavMeshPoly
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI.FValidNavMeshPoly LastValidNavMeshPoly
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI.FValidNavMeshPoly>(Ptr + 4344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4344); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMPawnAI.FValidNavMeshPoly LastValidNavMeshPoly
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMPawnAI.FValidNavMeshPoly>(Ptr + 4344);
 
     /// <summary>
     /// StructProperty: RouterBlockedPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 RouterBlockedPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4368); }
-    }
+    public unsafe ref System.Numerics.Vector3 RouterBlockedPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4368);
 
     /// <summary>
     /// StructProperty: RouterBlockedNewPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 RouterBlockedNewPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4380); }
-    }
+    public unsafe ref System.Numerics.Vector3 RouterBlockedNewPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4380);
 
     /// <summary>
     /// StructProperty: RouterBlockedDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 RouterBlockedDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4392); }
-    }
+    public unsafe ref System.Numerics.Vector3 RouterBlockedDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4392);
 
     /// <summary>
     /// StructProperty: RouterBlockedSnappedDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 RouterBlockedSnappedDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4404); }
-    }
+    public unsafe ref System.Numerics.Vector3 RouterBlockedSnappedDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4404);
 
     /// <summary>
     /// StructProperty: RouterBlockedExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 RouterBlockedExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4416); }
-    }
+    public unsafe ref System.Numerics.Vector3 RouterBlockedExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4416);
 
     /// <summary>
     /// ArrayProperty: AlwaysOnPS
@@ -6593,11 +6551,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ForwardWallHitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForwardWallHitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4580); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForwardWallHitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4580);
 
     /// <summary>
     /// IntProperty: CurrentWallCheck
@@ -6629,11 +6584,8 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedInvestigateLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedInvestigateLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4616); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedInvestigateLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4616);
 
     /// <summary>
     /// IntProperty: RoadObstacleIndex

@@ -21,6 +21,11 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkeletalMesh.
+    /// </summary>
+    public static SkeletalMesh DefaultObject => (SkeletalMesh)StaticClass().DefaultObject;
+
     internal SkeletalMesh() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SkeletalMesh(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMesh>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FSoftBodySpecialBoneInfo
@@ -70,7 +115,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SoftBodyBoneType
     /// </summary>
-    public enum SoftBodyBoneType
+    public enum SoftBodyBoneType : byte
     {
         SOFTBODYBONE_Fixed = 0,
         SOFTBODYBONE_BreakableAttachment = 1,
@@ -140,7 +185,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ClothBoneType
     /// </summary>
-    public enum ClothBoneType
+    public enum ClothBoneType : byte
     {
         CLOTHBONE_Fixed = 0,
         CLOTHBONE_BreakableAttachment = 1,
@@ -433,7 +478,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: TriangleSortAxis
     /// </summary>
-    public enum TriangleSortAxis
+    public enum TriangleSortAxis : byte
     {
         TSA_X_Axis = 0,
         TSA_Y_Axis = 1,
@@ -444,7 +489,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ClothMovementScaleGen
     /// </summary>
-    public enum ClothMovementScaleGen
+    public enum ClothMovementScaleGen : byte
     {
         ECMDM_DistToFixedVert = 0,
         ECMDM_VertexBoneWeight = 1,
@@ -455,7 +500,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: TriangleSortOption
     /// </summary>
-    public enum TriangleSortOption
+    public enum TriangleSortOption : byte
     {
         TRISORT_None = 0,
         TRISORT_CenterRadialDistance = 1,
@@ -469,7 +514,7 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: BoneBreakOption
     /// </summary>
-    public enum BoneBreakOption
+    public enum BoneBreakOption : byte
     {
         BONEBREAK_SoftPreferred = 0,
         BONEBREAK_AutoDetect = 1,
@@ -605,11 +650,8 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Bounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds Bounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds Bounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 84);
 
     /// <summary>
     /// FloatProperty: ConservativeBounds
@@ -668,20 +710,14 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Origin
     /// </summary>
-    public unsafe System.Numerics.Vector3 Origin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref System.Numerics.Vector3 Origin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: RotOrigin
     /// </summary>
-    public unsafe BmSDK.Rotator RotOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Rotator RotOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 208);
 
     /// <summary>
     /// ArrayProperty: RefSkeleton
@@ -713,11 +749,8 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LODModels
     /// </summary>
-    public unsafe BmSDK.GameObject.FIndirectArray_Mirror LODModels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref BmSDK.GameObject.FIndirectArray_Mirror LODModels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 312);
 
     /// <summary>
     /// StructProperty: SourceData
@@ -794,11 +827,8 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: NormalizedBoneMasses
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FNormalizedBoneMasses NormalizedBoneMasses
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FNormalizedBoneMasses>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FNormalizedBoneMasses NormalizedBoneMasses
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FNormalizedBoneMasses>(Ptr + 420);
 
     /// <summary>
     /// IntProperty: InvestigateLocationBoneIndex
@@ -1604,29 +1634,20 @@ public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ValidBoundsMin
     /// </summary>
-    public unsafe System.Numerics.Vector3 ValidBoundsMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref System.Numerics.Vector3 ValidBoundsMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 960);
 
     /// <summary>
     /// StructProperty: ValidBoundsMax
     /// </summary>
-    public unsafe System.Numerics.Vector3 ValidBoundsMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
-    }
+    public unsafe ref System.Numerics.Vector3 ValidBoundsMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 972);
 
     /// <summary>
     /// StructProperty: ClothTornTriMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror ClothTornTriMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror ClothTornTriMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 984);
 
     /// <summary>
     /// StrProperty: SourceAuthor

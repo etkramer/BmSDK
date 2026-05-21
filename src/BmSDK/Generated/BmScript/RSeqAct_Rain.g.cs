@@ -21,6 +21,11 @@ public partial class RSeqAct_Rain : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_Rain.
+    /// </summary>
+    public static RSeqAct_Rain DefaultObject => (RSeqAct_Rain)StaticClass().DefaultObject;
+
     internal RSeqAct_Rain() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_Rain : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_Rain(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_Rain>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -146,18 +191,12 @@ public partial class RSeqAct_Rain : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: RainSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RRainComponent.FRockRainSettings RainSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RRainComponent.FRockRainSettings>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.Engine.RRainComponent.FRockRainSettings RainSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RRainComponent.FRockRainSettings>(Ptr + 352);
 
     /// <summary>
     /// StructProperty: RainMap
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_Rain.FRockRainMapSettings RainMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_Rain.FRockRainMapSettings>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.BmScript.RSeqAct_Rain.FRockRainMapSettings RainMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSeqAct_Rain.FRockRainMapSettings>(Ptr + 416);
 }

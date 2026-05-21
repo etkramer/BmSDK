@@ -21,6 +21,11 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REnvironmentCheckTicker.
+    /// </summary>
+    public static REnvironmentCheckTicker DefaultObject => (REnvironmentCheckTicker)StaticClass().DefaultObject;
+
     internal REnvironmentCheckTicker() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected REnvironmentCheckTicker(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentCheckTicker>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ClearEnvironmentFeatures
@@ -258,128 +303,86 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// StructProperty: FrontBarrier
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator FrontBarrier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator FrontBarrier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: UnderBarrier
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator UnderBarrier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator UnderBarrier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 268);
 
     /// <summary>
     /// StructProperty: UpperBarrier
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator UpperBarrier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator UpperBarrier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 400);
 
     /// <summary>
     /// StructProperty: ClimbDownLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator ClimbDownLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator ClimbDownLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 532);
 
     /// <summary>
     /// StructProperty: CoverLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator CoverLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator CoverLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: LeftFeature
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator LeftFeature
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator LeftFeature
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 796);
 
     /// <summary>
     /// StructProperty: RightFeature
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator RightFeature
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator RightFeature
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 928);
 
     /// <summary>
     /// StructProperty: UnderEdgeColl
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl UnderEdgeColl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl UnderEdgeColl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1060);
 
     /// <summary>
     /// StructProperty: SecondaryUnderEdgeColl
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl SecondaryUnderEdgeColl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl SecondaryUnderEdgeColl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1080);
 
     /// <summary>
     /// StructProperty: ShimmyEdgeColl
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl ShimmyEdgeColl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl ShimmyEdgeColl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1100);
 
     /// <summary>
     /// StructProperty: LeftShimmyEdgeColl
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl LeftShimmyEdgeColl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl LeftShimmyEdgeColl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1120);
 
     /// <summary>
     /// StructProperty: RightShimmyEdgeColl
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl RightShimmyEdgeColl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl RightShimmyEdgeColl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FPlayerEdgeColl>(Ptr + 1140);
 
     /// <summary>
     /// StructProperty: EnvironmentEdgeTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer EnvironmentEdgeTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer>(Ptr + 1160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1160); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer EnvironmentEdgeTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveTypesContainer>(Ptr + 1160);
 
     /// <summary>
     /// StructProperty: CoverDescription
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FCoverDescriptor CoverDescription
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FCoverDescriptor>(Ptr + 1168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FCoverDescriptor CoverDescription
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FCoverDescriptor>(Ptr + 1168);
 
     /// <summary>
     /// ByteProperty: FeelerState
@@ -601,7 +604,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Enum: EnvironmentAnimationDirection
     /// </summary>
-    public enum EnvironmentAnimationDirection
+    public enum EnvironmentAnimationDirection : byte
     {
         EAD_DoesntMatter = 0,
         EAD_Left = 1,
@@ -612,7 +615,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Enum: EnvironmentFeelerState
     /// </summary>
-    public enum EnvironmentFeelerState
+    public enum EnvironmentFeelerState : byte
     {
         EFS_Walking = 0,
         EFS_InCover = 1,
@@ -1063,7 +1066,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Enum: BatmanCoverCorners
     /// </summary>
-    public enum BatmanCoverCorners
+    public enum BatmanCoverCorners : byte
     {
         BCC_LeftCorner = 0,
         BCC_RightCorner = 1,
@@ -1075,7 +1078,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Enum: EHangLedgeType
     /// </summary>
-    public enum EHangLedgeType
+    public enum EHangLedgeType : byte
     {
         HLT_Braced = 0,
         HLT_Dangle = 1,
@@ -1086,7 +1089,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Enum: EnvironmentSpecialMoveTypes
     /// </summary>
-    public enum EnvironmentSpecialMoveTypes
+    public enum EnvironmentSpecialMoveTypes : byte
     {
         ESMT_None = 0,
         ESMT_LowBarrier = 1,

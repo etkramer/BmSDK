@@ -21,6 +21,11 @@ public partial class ParticleModuleLocationStaticVertSurface : BmSDK.Engine.Part
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleLocationStaticVertSurface.
+    /// </summary>
+    public static ParticleModuleLocationStaticVertSurface DefaultObject => (ParticleModuleLocationStaticVertSurface)StaticClass().DefaultObject;
+
     internal ParticleModuleLocationStaticVertSurface() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleLocationStaticVertSurface : BmSDK.Engine.Part
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleLocationStaticVertSurface(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleLocationStaticVertSurface>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: SourceType
@@ -45,11 +90,8 @@ public partial class ParticleModuleLocationStaticVertSurface : BmSDK.Engine.Part
     /// <summary>
     /// StructProperty: UniversalOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 UniversalOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.Numerics.Vector3 UniversalOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 100);
 
     /// <summary>
     /// BoolProperty: bUpdatePositionEachFrame
@@ -99,11 +141,8 @@ public partial class ParticleModuleLocationStaticVertSurface : BmSDK.Engine.Part
     /// <summary>
     /// StructProperty: NormalToCompare
     /// </summary>
-    public unsafe System.Numerics.Vector3 NormalToCompare
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref System.Numerics.Vector3 NormalToCompare
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 132);
 
     /// <summary>
     /// FloatProperty: NormalCheckToleranceDegrees
@@ -135,7 +174,7 @@ public partial class ParticleModuleLocationStaticVertSurface : BmSDK.Engine.Part
     /// <summary>
     /// Enum: ELocationStaticVertSurfaceSource
     /// </summary>
-    public enum ELocationStaticVertSurfaceSource
+    public enum ELocationStaticVertSurfaceSource : byte
     {
         VERTSTATICSURFACESOURCE_Vert = 0,
         VERTSTATICSURFACESOURCE_Surface = 1,

@@ -21,6 +21,11 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPersistentOptions.
+    /// </summary>
+    public static RPersistentOptions DefaultObject => (RPersistentOptions)StaticClass().DefaultObject;
+
     internal RPersistentOptions() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPersistentOptions(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentOptions>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TestAndGrantWBPlayConsoleUnlocks
@@ -2335,7 +2380,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlsOptionsKeyboard_Battle
     /// </summary>
-    public enum EControlsOptionsKeyboard_Battle
+    public enum EControlsOptionsKeyboard_Battle : byte
     {
         EControlsOptionsKeyboard_Battle_Forward = 0,
         EControlsOptionsKeyboard_Battle_Back = 1,
@@ -2359,7 +2404,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlsOptionsKeyboard_Pursuit
     /// </summary>
-    public enum EControlsOptionsKeyboard_Pursuit
+    public enum EControlsOptionsKeyboard_Pursuit : byte
     {
         EControlsOptionsKeyboard_Pursuit_Accelerate = 0,
         EControlsOptionsKeyboard_Pursuit_Reverse = 1,
@@ -2381,7 +2426,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlsOptionsKeyboard
     /// </summary>
-    public enum EControlsOptionsKeyboard
+    public enum EControlsOptionsKeyboard : byte
     {
         EControlsOptionsKeyboard_Batman_Forward = 0,
         EControlsOptionsKeyboard_Batman_Back = 1,
@@ -2431,7 +2476,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlsOptionsKeyboard_Harley
     /// </summary>
-    public enum EControlsOptionsKeyboard_Harley
+    public enum EControlsOptionsKeyboard_Harley : byte
     {
         EControlsOptionsKeyboard_Harley_Forward = 0,
         EControlsOptionsKeyboard_Harley_Back = 1,
@@ -2465,7 +2510,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlsOptionsKeyboard_RedHood
     /// </summary>
-    public enum EControlsOptionsKeyboard_RedHood
+    public enum EControlsOptionsKeyboard_RedHood : byte
     {
         EControlsOptionsKeyboard_RedHood_Forward = 0,
         EControlsOptionsKeyboard_RedHood_Back = 1,
@@ -2499,7 +2544,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlsOptionsKeyboard_Batgirl
     /// </summary>
-    public enum EControlsOptionsKeyboard_Batgirl
+    public enum EControlsOptionsKeyboard_Batgirl : byte
     {
         EControlsOptionsKeyboard_Batgirl_Forward = 0,
         EControlsOptionsKeyboard_Batgirl_Back = 1,
@@ -2699,11 +2744,8 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TimeStamp
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId TimeStamp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId TimeStamp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 264);
 
     /// <summary>
     /// IntProperty: Day
@@ -3057,2496 +3099,1626 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: BatmanKeyBinds
+    /// InlineArray{StructProperty}: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BatmanKeyBinds => new(41, Ptr + 520);
+
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 520);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 560);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 600);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 640);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 680);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 720);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 760);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 800);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 840);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 880);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 920);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 960);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1000);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1040);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1080);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1120);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1160);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1200);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1240);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1280);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1320);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1360);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1400);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1440);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1480);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1520);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1560);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1600);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_29
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1640);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_30
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_29
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1680);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_31
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_30
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1720);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_32
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_31
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1760);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_33
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_32
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1800);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_34
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_33
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1840);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_35
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_34
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1880);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_36
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_35
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1920);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_37
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_36
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 1960);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_38
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_37
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2000);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_39
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_38
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2040);
     /// <summary>
     /// StructProperty: BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_40
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_39
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2080);
+    /// <summary>
+    /// StructProperty: BatmanKeyBinds
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatmanKeyBinds_40
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2120);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: PursuitKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> PursuitKeyBinds => new(13, Ptr + 2160);
 
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2160);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2200);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2240);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2280);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2320);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2360);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2400);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2440);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2480);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2520);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2560);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2600);
     /// <summary>
     /// StructProperty: PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap PursuitKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2640);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: BattleKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BattleKeyBinds => new(15, Ptr + 2680);
 
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2680);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2720);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2760);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2800);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2840);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2880);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2920);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 2960);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3000);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3040);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3080);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3120);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3160);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3200);
     /// <summary>
     /// StructProperty: BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BattleKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3240);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: BatgirlKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BatgirlKeyBinds => new(29, Ptr + 3280);
 
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3280);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3320);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3360);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3400);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3440);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3480);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3520);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3560);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3600);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3640);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3680);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3720);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3760);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3800);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3840);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3880);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3920);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 3960);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4000);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4040);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4080);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4120);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4160);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4200);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4240);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4280);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4320);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4360);
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap BatgirlKeyBinds_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4400);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: RedHoodKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> RedHoodKeyBinds => new(29, Ptr + 4440);
 
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4440);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4480);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4520);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4560);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4600);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4640);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4680);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4720);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4760);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4800);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4840);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4880);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4920);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 4960);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5000);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5040);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5080);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5120);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5160);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5200);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5240);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5280);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5320);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5360);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5400);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5440);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5480);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5520);
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap RedHoodKeyBinds_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5560);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: HarleyKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> HarleyKeyBinds => new(28, Ptr + 5600);
 
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5600);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5640);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5680);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5720);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5760);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5800);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5840);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5880);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5920);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 5960);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6000);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6040);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6080);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6120);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6160);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6200);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6240);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6280);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6320);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6360);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6400);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6440);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6480);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6520);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6560);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6600);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6640);
     /// <summary>
     /// StructProperty: HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap HarleyKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6680);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Tmp_BatmanKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BatmanKeyBinds => new(41, Ptr + 6720);
 
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6720);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6760);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6800);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6840);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6880);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6920);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 6960);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7000);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7040);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7080);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7120);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7160);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7200);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7240);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7280);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7320);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7360);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7400);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7440);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7480);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7520);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7560);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7600);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7640);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7680);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7720);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7760);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7800);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7840);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_29
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_29
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7880);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_30
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_30
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7920);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_31
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_31
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 7960);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_32
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_32
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8000);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_33
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_33
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8040);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_34
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_34
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8080);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_35
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_35
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8120);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_36
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_36
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8160);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_37
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_37
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8200);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_38
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_38
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8240);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_39
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_39
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8280);
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_40
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatmanKeyBinds_40
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8320);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Tmp_PursuitKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_PursuitKeyBinds => new(13, Ptr + 8360);
 
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8360);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8400);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8440);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8480);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8520);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8560);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8600);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8640);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8680);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8720);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8760);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8800);
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_PursuitKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8840);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Tmp_BattleKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BattleKeyBinds => new(15, Ptr + 8880);
 
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8880);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8920);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 8960);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9000);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9040);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9080);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9120);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9160);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9200);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9240);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9280);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9320);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9360);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9400);
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BattleKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9440);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Tmp_BatgirlKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BatgirlKeyBinds => new(29, Ptr + 9480);
 
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9480);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9520);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9560);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9600);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9640);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9680);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9720);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9760);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9800);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9840);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9880);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9920);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 9960);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10000);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10040);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10080);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10120);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10160);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10200);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10240);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10280);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10320);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10360);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10400);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10440);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10480);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10520);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10560);
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_BatgirlKeyBinds_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10600);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Tmp_RedHoodKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_RedHoodKeyBinds => new(29, Ptr + 10640);
 
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10640);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10680);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10720);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10760);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10800);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10840);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10880);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10920);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 10960);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11000);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11040);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11080);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11120);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11160);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11200);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11240);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11280);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11320);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11360);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11400);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11440);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11480);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11520);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11560);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11600);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11640);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11680);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11720);
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_RedHoodKeyBinds_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11760);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: Tmp_HarleyKeyBinds
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_HarleyKeyBinds => new(28, Ptr + 11800);
 
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11800);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11840);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11880);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11920);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 11960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 11960);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12000);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12040); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12040);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12080); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12080);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12120); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12120);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12160); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12160);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12200); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12200);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12240); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12240);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12280); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12280);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12320); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12320);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12360); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12360);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12400); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12400);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12440); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12440);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12480); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12480);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12520); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12520);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12560); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12560);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12600); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12600);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12640); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12640);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12680); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12680);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12720);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12760); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12760);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12800); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12800);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12840); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12840);
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12880); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentOptions.FStoredKeyMap Tmp_HarleyKeyBinds_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap>(Ptr + 12880);
 
     /// <summary>
     /// IntProperty: BatgirlCount
@@ -5637,6 +4809,11 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12956); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: BluntTraumaTakedownsPerformed
+    /// </summary>
+    public InlineArray<byte> BluntTraumaTakedownsPerformed => new(15, Ptr + 12960);
 
     /// <summary>
     /// ByteProperty: BluntTraumaTakedownsPerformed
@@ -5922,7 +5099,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ActivePlayerSkin_Version
     /// </summary>
-    public enum ActivePlayerSkin_Version
+    public enum ActivePlayerSkin_Version : byte
     {
         ActivePlayerSkin_Version_Initial = 0,
         ActivePlayerSkin_Version_MAX = 1,
@@ -5931,7 +5108,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: MobileUnlocks
     /// </summary>
-    public enum MobileUnlocks
+    public enum MobileUnlocks : byte
     {
         MobileUnlocks_Scarecrow = 0,
         MobileUnlocks_Catwoman = 1,
@@ -6020,7 +5197,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ChallengePerCharacter_Version
     /// </summary>
-    public enum ChallengePerCharacter_Version
+    public enum ChallengePerCharacter_Version : byte
     {
         ChallengePerCharacter_Version_Initial = 0,
         ChallengePerCharacter_Version_Requirements = 1,
@@ -6120,7 +5297,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ChallengePerCharacter_Data_Version
     /// </summary>
-    public enum ChallengePerCharacter_Data_Version
+    public enum ChallengePerCharacter_Data_Version : byte
     {
         ChallengePerCharacter_Data_Version_Initial = 0,
         ChallengePerCharacter_Data_Version_MAX = 1,
@@ -6129,7 +5306,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPlayerOptions
     /// </summary>
-    public enum EPlayerOptions
+    public enum EPlayerOptions : byte
     {
         EPlayerOption_InvertMouse = 0,
         EPlayerOption_InvertRotation = 1,
@@ -6149,7 +5326,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGeneralOptions
     /// </summary>
-    public enum EGeneralOptions
+    public enum EGeneralOptions : byte
     {
         ECommonOption_Difficulty = 0,
         ECommonOption_PCControlsPage = 1,
@@ -6208,7 +5385,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DeathMovieRecord_Version
     /// </summary>
-    public enum DeathMovieRecord_Version
+    public enum DeathMovieRecord_Version : byte
     {
         DeathMovieRecord_Version_Initial = 0,
         DeathMovieRecord_Version_FirstTest = 1,
@@ -6218,7 +5395,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: HelpTextLevel
     /// </summary>
-    public enum HelpTextLevel
+    public enum HelpTextLevel : byte
     {
         HelpText_None = 0,
         HelpText_Some = 1,
@@ -6229,7 +5406,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DifficultyLevels
     /// </summary>
-    public enum DifficultyLevels
+    public enum DifficultyLevels : byte
     {
         Difficulty_Easy = 0,
         Difficulty_Normal = 1,
@@ -6241,7 +5418,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DDAIntType
     /// </summary>
-    public enum DDAIntType
+    public enum DDAIntType : byte
     {
         DDAI_DeathsInRoom = 0,
         DDAI_MAX = 1,
@@ -6250,7 +5427,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: POVersion
     /// </summary>
-    public enum POVersion
+    public enum POVersion : byte
     {
         POVer_Initial = 0,
         POVer_ChallengeData = 1,

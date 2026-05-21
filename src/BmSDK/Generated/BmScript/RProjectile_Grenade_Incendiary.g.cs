@@ -21,52 +21,62 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProjectile_Grenade_Incendiary.
+    /// </summary>
+    public static RProjectile_Grenade_Incendiary DefaultObject => (RProjectile_Grenade_Incendiary)StaticClass().DefaultObject;
+
     internal RProjectile_Grenade_Incendiary() { }
 
     /// <summary>
     /// Constructs a new RProjectile_Grenade_Incendiary
     /// </summary>
-    public RProjectile_Grenade_Incendiary(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RProjectile_Grenade_Incendiary Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RProjectile_Grenade_Incendiary(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RProjectile_Grenade_Incendiary(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectile_Grenade_Incendiary>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Destroyed
@@ -344,517 +354,330 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     }
 
     /// <summary>
-    /// StructProperty: chargeInfoList
+    /// InlineArray{StructProperty}: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
-    }
+    public InlineArray<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo> chargeInfoList => new(64, Ptr + 1060);
+
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1060);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1156);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1252);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1444); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1348);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1540); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1444);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1540);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1636);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1828); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1732);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1924); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1828);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2020); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 1924);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2020);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2212); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2116);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2308); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2212);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2308);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2500); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2404);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2596); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2500);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2692); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2596);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2788); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2692);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2884); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2788);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2980); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2884);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3076); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 2980);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3172); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3076);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3268); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3172);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3364); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3268);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3460); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3364);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3556); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3460);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3652); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3556);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_28
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3748); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3652);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_29
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3844); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_28
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3748);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_30
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3940); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_29
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3844);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_31
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4036); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_30
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 3940);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_32
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4132); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_31
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4036);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_33
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4228); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_32
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4132);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_34
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4324); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_33
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4228);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_35
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4420); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_34
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4324);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_36
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4516); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_35
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4420);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_37
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4612); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_36
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4516);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_38
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4708); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_37
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4612);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_39
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4804); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_38
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4708);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_40
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4900); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_39
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4804);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_41
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4996); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_40
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4900);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_42
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5092); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_41
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 4996);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_43
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5188); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_42
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5092);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_44
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5284); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_43
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5188);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_45
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5380); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_44
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5284);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_46
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5476); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_45
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5380);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_47
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5572); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_46
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5476);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_48
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5668); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_47
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5572);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_49
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5764); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_48
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5668);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_50
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5860); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5860); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_49
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5764);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_51
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5956); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_50
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5860);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_52
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6052); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_51
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 5956);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_53
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6148); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_52
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6052);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_54
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6244); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_53
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6148);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_55
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6340); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_54
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6244);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_56
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6436); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_55
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6340);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_57
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6532); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_56
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6436);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_58
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6628); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_57
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6532);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_59
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6724); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_58
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6628);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_60
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6820); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_59
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6724);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_61
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6916); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_60
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6820);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_62
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 7012); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7012); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_61
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 6916);
     /// <summary>
     /// StructProperty: chargeInfoList
     /// </summary>
-    public unsafe BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_63
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 7108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7108); }
-    }
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_62
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 7012);
+    /// <summary>
+    /// StructProperty: chargeInfoList
+    /// </summary>
+    public unsafe ref BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo chargeInfoList_63
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo>(Ptr + 7108);
 
     /// <summary>
     /// IntProperty: numChargesSpawned

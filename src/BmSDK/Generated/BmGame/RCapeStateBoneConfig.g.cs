@@ -21,6 +21,11 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeStateBoneConfig.
+    /// </summary>
+    public static RCapeStateBoneConfig DefaultObject => (RCapeStateBoneConfig)StaticClass().DefaultObject;
+
     internal RCapeStateBoneConfig() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCapeStateBoneConfig(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateBoneConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ObjectProperty: ParentBoneConfig
@@ -266,7 +311,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeBoneSkinningType
     /// </summary>
-    public enum ECapeBoneSkinningType
+    public enum ECapeBoneSkinningType : byte
     {
         CAPEBONESKINNINGTYPE_Full = 0,
         CAPEBONESKINNINGTYPE_TranslationOnly = 1,
@@ -278,7 +323,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStateEffectType
     /// </summary>
-    public enum EStateEffectType
+    public enum EStateEffectType : byte
     {
         STATEEFFECT_SingleBone = 0,
         STATEEFFECT_ChainParents = 1,
@@ -290,7 +335,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeBoneState
     /// </summary>
-    public enum ECapeBoneState
+    public enum ECapeBoneState : byte
     {
         ECAPEBONESTATE_Animated = 0,
         ECAPEBONESTATE_AnimationDriven = 1,

@@ -21,6 +21,11 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSearchRoutingWrapper.
+    /// </summary>
+    public static RSearchRoutingWrapper DefaultObject => (RSearchRoutingWrapper)StaticClass().DefaultObject;
+
     internal RSearchRoutingWrapper() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSearchRoutingWrapper(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSearchRoutingWrapper>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RefinePullbackPoint
@@ -439,7 +484,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: CPProcessResult
     /// </summary>
-    public enum CPProcessResult
+    public enum CPProcessResult : byte
     {
         CPPR_Fail = 0,
         CPPR_NeedRestart = 1,
@@ -475,7 +520,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SearchResultType
     /// </summary>
-    public enum SearchResultType
+    public enum SearchResultType : byte
     {
         SRT_Normal = 0,
         SRT_UDest = 1,
@@ -724,29 +769,20 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 212);
 
     /// <summary>
     /// StructProperty: TargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 224);
 
     /// <summary>
     /// StructProperty: LastArriveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastArriveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastArriveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 236);
 
     /// <summary>
     /// FloatProperty: TreeSearchDist
@@ -760,20 +796,14 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ResultLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 ResultLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref System.Numerics.Vector3 ResultLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 252);
 
     /// <summary>
     /// StructProperty: ResultFaceAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 ResultFaceAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
+    public unsafe ref System.Numerics.Vector3 ResultFaceAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 264);
 
     /// <summary>
     /// ArrayProperty: SideBranches
@@ -796,47 +826,32 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StandAtGrateEndPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandAtGrateEndPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandAtGrateEndPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 308);
 
     /// <summary>
     /// StructProperty: LedgeLookStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 LedgeLookStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref System.Numerics.Vector3 LedgeLookStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 320);
 
     /// <summary>
     /// StructProperty: LedgeLookEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 LedgeLookEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref System.Numerics.Vector3 LedgeLookEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 332);
 
     /// <summary>
     /// StructProperty: WallStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 344);
 
     /// <summary>
     /// StructProperty: SideSearchPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SideSearchPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
+    public unsafe ref System.Numerics.Vector3 SideSearchPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 356);
 
     /// <summary>
     /// ArrayProperty: RejectedLedgeList
@@ -893,7 +908,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SearchRoutingWorkState
     /// </summary>
-    public enum SearchRoutingWorkState
+    public enum SearchRoutingWorkState : byte
     {
         SRWS_None = 0,
         SRWS_WaitForInitialPathFind = 1,

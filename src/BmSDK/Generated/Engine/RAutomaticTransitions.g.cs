@@ -21,6 +21,11 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAutomaticTransitions.
+    /// </summary>
+    public static RAutomaticTransitions DefaultObject => (RAutomaticTransitions)StaticClass().DefaultObject;
+
     internal RAutomaticTransitions() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAutomaticTransitions(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAutomaticTransitions>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ArrayProperty: Layer1
@@ -262,7 +307,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFootSyncPoint
     /// </summary>
-    public enum EFootSyncPoint
+    public enum EFootSyncPoint : byte
     {
         FSP_LeftDown = 0,
         FSP_RightPassing = 1,
@@ -274,7 +319,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAutomaticTransitionTurnDirection
     /// </summary>
-    public enum EAutomaticTransitionTurnDirection
+    public enum EAutomaticTransitionTurnDirection : byte
     {
         ATTD_Left = 0,
         ATTD_Right = 1,
@@ -284,18 +329,18 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAutomaticTransitionTurnAngle
     /// </summary>
-    public enum EAutomaticTransitionTurnAngle
+    public enum EAutomaticTransitionTurnAngle : byte
     {
-        ATTA = 0,
-        ATTA_2 = 1,
-        ATTA_3 = 2,
+        ATTA_0 = 0,
+        ATTA_90 = 1,
+        ATTA_180 = 2,
         ATTA_MAX = 3,
     }
 
     /// <summary>
     /// Enum: EDirectionBlendGroup
     /// </summary>
-    public enum EDirectionBlendGroup
+    public enum EDirectionBlendGroup : byte
     {
         DBG_Forward = 0,
         DBG_Back = 1,
@@ -307,7 +352,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMovementSpeed
     /// </summary>
-    public enum EMovementSpeed
+    public enum EMovementSpeed : byte
     {
         MS_WalkSlow = 0,
         MS_Walk = 1,

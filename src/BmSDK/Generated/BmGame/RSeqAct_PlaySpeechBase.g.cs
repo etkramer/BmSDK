@@ -21,12 +21,57 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_PlaySpeechBase.
+    /// </summary>
+    public static RSeqAct_PlaySpeechBase DefaultObject => (RSeqAct_PlaySpeechBase)StaticClass().DefaultObject;
+
     internal RSeqAct_PlaySpeechBase() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_PlaySpeechBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_PlaySpeechBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -711,7 +756,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: eSpeechCleanupReason
     /// </summary>
-    public enum eSpeechCleanupReason
+    public enum eSpeechCleanupReason : byte
     {
         eSpeechCleanupReason_NoSpeechAsset = 0,
         eSpeechCleanupReason_FailedOncenessCheck = 1,
@@ -725,7 +770,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: EDialogueType
     /// </summary>
-    public enum EDialogueType
+    public enum EDialogueType : byte
     {
         DT_Normal = 0,
         DT_Cutscene = 1,
@@ -740,7 +785,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Enum: EPlaySpeechState
     /// </summary>
-    public enum EPlaySpeechState
+    public enum EPlaySpeechState : byte
     {
         EPlaySpeechState_Idle = 0,
         EPlaySpeechState_WaitingForAudio = 1,
@@ -756,6 +801,11 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 376); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
+
+    /// <summary>
+    /// InlineArray{StrProperty}: SpeechCleanupReasonStrings
+    /// </summary>
+    public InlineArray<BmSDK.FString> SpeechCleanupReasonStrings => new(6, Ptr + 384);
 
     /// <summary>
     /// StrProperty: SpeechCleanupReasonStrings
@@ -1070,11 +1120,8 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// StructProperty: Options
     /// </summary>
-    public unsafe BmSDK.Engine.AkDialogue.FAkSpeechOptions Options
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref BmSDK.Engine.AkDialogue.FAkSpeechOptions Options
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkDialogue.FAkSpeechOptions>(Ptr + 552);
 
     /// <summary>
     /// ArrayProperty: Speakers

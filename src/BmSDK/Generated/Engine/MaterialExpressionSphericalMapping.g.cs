@@ -21,6 +21,11 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionSphericalMapping.
+    /// </summary>
+    public static MaterialExpressionSphericalMapping DefaultObject => (MaterialExpressionSphericalMapping)StaticClass().DefaultObject;
+
     internal MaterialExpressionSphericalMapping() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MaterialExpressionSphericalMapping(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionSphericalMapping>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: SphericalMappingType
@@ -45,7 +90,7 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
     /// <summary>
     /// Enum: ESphericalMappingType
     /// </summary>
-    public enum ESphericalMappingType
+    public enum ESphericalMappingType : byte
     {
         SPHERICALMAPPING_Correct = 0,
         SPHERICALMAPPING_CheapAlternative = 1,

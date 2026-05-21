@@ -21,6 +21,11 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_CombatAI.
+    /// </summary>
+    public static RBMBehaviour_CombatAI DefaultObject => (RBMBehaviour_CombatAI)StaticClass().DefaultObject;
+
     internal RBMBehaviour_CombatAI() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_CombatAI(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_CombatAI>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RepelledAttacker
@@ -1032,7 +1077,7 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// Enum: NoMoveReason
     /// </summary>
-    public enum NoMoveReason
+    public enum NoMoveReason : byte
     {
         NMR_None = 0,
         NMR_NoFloor = 1,
@@ -1269,20 +1314,14 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: TauntID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TauntID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TauntID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 740);
 
     /// <summary>
     /// StructProperty: LastValidTauntAimAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastValidTauntAimAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastValidTauntAimAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 744);
 
     /// <summary>
     /// FloatProperty: TimeUntilTaunt
@@ -1296,11 +1335,8 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: StepTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StepTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId StepTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 760);
 
     /// <summary>
     /// FloatProperty: TimeUntilIdleOverlay
@@ -1314,11 +1350,8 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: LastMoveToDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastMoveToDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastMoveToDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 768);
 
     /// <summary>
     /// ObjectProperty: GuardPoint
@@ -1386,20 +1419,14 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: MoveWhileWaitingLargeForceDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveWhileWaitingLargeForceDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref System.Numerics.Vector3 MoveWhileWaitingLargeForceDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 836);
 
     /// <summary>
     /// StructProperty: RoamAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId RoamAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId RoamAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 848);
 
     /// <summary>
     /// FloatProperty: RoamTimer
@@ -1431,11 +1458,8 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: RailingMoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 RailingMoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref System.Numerics.Vector3 RailingMoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 864);
 
     /// <summary>
     /// FloatProperty: NotInBatmobileTime
@@ -1503,11 +1527,8 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: NMRPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NMRPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
-    }
+    public unsafe ref System.Numerics.Vector3 NMRPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 916);
 
     /// <summary>
     /// FloatProperty: NMRHitTime
@@ -1521,11 +1542,8 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: NMRPrevDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 NMRPrevDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
-    }
+    public unsafe ref System.Numerics.Vector3 NMRPrevDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 932);
 
     /// <summary>
     /// NameProperty: PostStasisState
@@ -1539,20 +1557,14 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: RunToCombatOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RunToCombatOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
-    }
+    public unsafe ref System.Numerics.Vector3 RunToCombatOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 952);
 
     /// <summary>
     /// StructProperty: LastPlayerMoveToLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPlayerMoveToLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPlayerMoveToLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 964);
 
     /// <summary>
     /// FloatProperty: LastLockDoorStateTime
@@ -1629,9 +1641,6 @@ public partial class RBMBehaviour_CombatAI : BmSDK.BmGame.RBMBehaviour_Combat, B
     /// <summary>
     /// StructProperty: GuardBatmobilePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GuardBatmobilePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref System.Numerics.Vector3 GuardBatmobilePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1008);
 }

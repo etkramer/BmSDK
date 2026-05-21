@@ -21,52 +21,62 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGameInfo.
+    /// </summary>
+    public static RGameInfo DefaultObject => (RGameInfo)StaticClass().DefaultObject;
+
     internal RGameInfo() { }
 
     /// <summary>
     /// Constructs a new RGameInfo
     /// </summary>
-    public RGameInfo(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RGameInfo Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RGameInfo(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGameInfo(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGameInfo>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameInfo>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGameInfo>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameInfo>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameInfo>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGameInfo>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGameInfo>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGameInfo>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TriggerAllEventsOfClass
@@ -4207,7 +4217,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: BoneNameList
     /// </summary>
-    public enum BoneNameList
+    public enum BoneNameList : byte
     {
         BONE_None = 0,
         BONE_Head = 1,
@@ -4228,7 +4238,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CounterLimb
     /// </summary>
-    public enum CounterLimb
+    public enum CounterLimb : byte
     {
         ECL_None = 0,
         ECL_LeftArm = 1,
@@ -5184,7 +5194,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStasisLevel
     /// </summary>
-    public enum EStasisLevel
+    public enum EStasisLevel : byte
     {
         STASISLEVEL_Normal = 0,
         STASISLEVEL_Cheap = 1,
@@ -5308,7 +5318,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: DynamicPopulation_VehicleScenario_Version
     /// </summary>
-    public enum DynamicPopulation_VehicleScenario_Version
+    public enum DynamicPopulation_VehicleScenario_Version : byte
     {
         DynamicPopulation_VehicleScenario_Initial = 0,
         DynamicPopulation_VehicleScenario_HasBeenSeen = 1,
@@ -5320,7 +5330,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: VehicleScenarioType
     /// </summary>
-    public enum VehicleScenarioType
+    public enum VehicleScenarioType : byte
     {
         VehicleScenario_None = 0,
         VehicleScenario_Drone = 1,
@@ -5727,7 +5737,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVehicleOrientation
     /// </summary>
-    public enum EVehicleOrientation
+    public enum EVehicleOrientation : byte
     {
         VEHICLE_Upright = 0,
         VEHICLE_OnRoof = 1,
@@ -6104,7 +6114,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: eSideStoryCooldownTimer
     /// </summary>
-    public enum eSideStoryCooldownTimer
+    public enum eSideStoryCooldownTimer : byte
     {
         eSSCT_Firefly = 0,
         eSSCT_Penguin = 1,
@@ -6115,7 +6125,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: FenceJumpEdgeType
     /// </summary>
-    public enum FenceJumpEdgeType
+    public enum FenceJumpEdgeType : byte
     {
         FENCEEDGE_None = 0,
         FENCEEDGE_Drop = 1,
@@ -6123,27 +6133,27 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         FENCEEDGE_Level = 3,
         FENCEEDGE_Level256 = 4,
         FENCEEDGE_Level384 = 5,
-        FENCEEDGE_MinigunClimb = 6,
+        FENCEEDGE_MinigunClimb_384 = 6,
         FENCEEDGE_MinigunClimb_384_Gap = 7,
-        FENCEEDGE_MinigunClimb_2 = 8,
-        FENCEEDGE_MinigunDrop = 9,
-        FENCEEDGE_MinigunDrop_2 = 10,
+        FENCEEDGE_MinigunClimb_512 = 8,
+        FENCEEDGE_MinigunDrop_384 = 9,
+        FENCEEDGE_MinigunDrop_512 = 10,
         FENCEEDGE_CarBonnetJump = 11,
         FENCEEDGE_CarRoofJump = 12,
         STEPEDGE_Drop = 13,
         STEPEDGE_Climb = 14,
-        STEPEDGE_MinigunDrop = 15,
-        STEPEDGE_MinigunDrop_2 = 16,
-        STEPEDGE_MinigunClimb = 17,
+        STEPEDGE_MinigunDrop_384 = 15,
+        STEPEDGE_MinigunDrop_512 = 16,
+        STEPEDGE_MinigunClimb_384 = 17,
         STEPEDGE_MinigunClimb_384_Gap = 18,
-        STEPEDGE_MinigunClimb_2 = 19,
+        STEPEDGE_MinigunClimb_512 = 19,
         FenceJumpEdgeType_MAX = 20,
     }
 
     /// <summary>
     /// Enum: EClimbEdgeFailReason
     /// </summary>
-    public enum EClimbEdgeFailReason
+    public enum EClimbEdgeFailReason : byte
     {
         ECLIMBFAIL_None = 0,
         ECLIMBFAIL_FlagNotSet = 1,
@@ -6166,7 +6176,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StrikeRange
     /// </summary>
-    public enum StrikeRange
+    public enum StrikeRange : byte
     {
         SR_None = 0,
         SR_Close = 1,
@@ -6178,7 +6188,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StrikeDirection
     /// </summary>
-    public enum StrikeDirection
+    public enum StrikeDirection : byte
     {
         SD_None = 0,
         SD_Front = 1,
@@ -6191,7 +6201,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StrikeStrength
     /// </summary>
-    public enum StrikeStrength
+    public enum StrikeStrength : byte
     {
         SS_None = 0,
         SS_WeakAndStrong = 1,
@@ -6220,7 +6230,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EStealthTakeDownStages
     /// </summary>
-    public enum EStealthTakeDownStages
+    public enum EStealthTakeDownStages : byte
     {
         ESTDS_CornerGrab = 0,
         ESTDS_FallingTakeDown = 1,
@@ -6297,7 +6307,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: GameCombatCameraType
     /// </summary>
-    public enum GameCombatCameraType
+    public enum GameCombatCameraType : byte
     {
         GCCT_BrawlComatCamera = 0,
         GCCT_CorridorCombatCamera = 1,
@@ -6325,7 +6335,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CameraLookAtSpeed
     /// </summary>
-    public enum CameraLookAtSpeed
+    public enum CameraLookAtSpeed : byte
     {
         CLASP_Slow = 0,
         CLASP_Fast = 1,
@@ -6340,7 +6350,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CameraLookAtStrength
     /// </summary>
-    public enum CameraLookAtStrength
+    public enum CameraLookAtStrength : byte
     {
         CLAS_ForceCamera = 0,
         CLAS_ForceUntilLookAtNeutral = 1,
@@ -6352,7 +6362,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: CameraLookAtType
     /// </summary>
-    public enum CameraLookAtType
+    public enum CameraLookAtType : byte
     {
         CLAT_NoLookAt = 0,
         CLAT_LookAtRotation = 1,
@@ -6364,7 +6374,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECombatLockType
     /// </summary>
-    public enum ECombatLockType
+    public enum ECombatLockType : byte
     {
         ECLT_None = 0,
         ECLT_Thugs = 1,
@@ -6375,7 +6385,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeModifiers
     /// </summary>
-    public enum EChallengeModifiers
+    public enum EChallengeModifiers : byte
     {
         CMod_None = 0,
         CMod_Neg_ExtremeEnemies = 1,
@@ -6396,7 +6406,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeModifierType
     /// </summary>
-    public enum EChallengeModifierType
+    public enum EChallengeModifierType : byte
     {
         EChallengeModifier_None = 0,
         EChallengeModifier_Example1 = 1,
@@ -6407,7 +6417,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAchievementID
     /// </summary>
-    public enum EAchievementID
+    public enum EAchievementID : byte
     {
         EACID_None = 0,
         EACID_MP_A_Battle_Within = 1,
@@ -6546,7 +6556,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: SContexts
     /// </summary>
-    public enum SContexts
+    public enum SContexts : byte
     {
         SContexts_OVERWORLD = 0,
         SContexts_COURT = 1,
@@ -6569,7 +6579,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EContexts
     /// </summary>
-    public enum EContexts
+    public enum EContexts : byte
     {
         EContexts_CHALLENGE = 0,
         EContexts_Nothing = 1,
@@ -6583,7 +6593,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPresenceID
     /// </summary>
-    public enum EPresenceID
+    public enum EPresenceID : byte
     {
         EPresence_Idle = 0,
         EPresence_Frontend = 1,
@@ -6597,7 +6607,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBioCharacter
     /// </summary>
-    public enum EBioCharacter
+    public enum EBioCharacter : byte
     {
         BioCharacter_Aaron_Cash = 0,
         BioCharacter_Albert_King = 1,
@@ -6643,7 +6653,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EComboMoveType
     /// </summary>
-    public enum EComboMoveType
+    public enum EComboMoveType : byte
     {
         ECMT_Strike = 0,
         ECMT_CriticalStrike = 1,
@@ -6722,7 +6732,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: RagdollStunType
     /// </summary>
-    public enum RagdollStunType
+    public enum RagdollStunType : byte
     {
         RAGSTUN_Generic = 0,
         RAGSTUN_Batarang = 1,
@@ -6784,7 +6794,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameAction
     /// </summary>
-    public enum EGameAction
+    public enum EGameAction : byte
     {
         GA_None = 0,
         GA_Takedown_CombatTakedown = 1,
@@ -7203,7 +7213,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EContentBeaconDisplayMode
     /// </summary>
-    public enum EContentBeaconDisplayMode
+    public enum EContentBeaconDisplayMode : byte
     {
         CBDM_None = 0,
         CBDM_Mini = 1,
@@ -7214,7 +7224,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EContentBeaconState
     /// </summary>
-    public enum EContentBeaconState
+    public enum EContentBeaconState : byte
     {
         CBS_Invisible = 0,
         CBS_Disabled = 1,
@@ -7398,7 +7408,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERiddlerLocationName
     /// </summary>
-    public enum ERiddlerLocationName
+    public enum ERiddlerLocationName : byte
     {
         RiddlerLoc_CityX = 0,
         RiddlerLoc_CityY = 1,
@@ -7412,7 +7422,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERiddlerState
     /// </summary>
-    public enum ERiddlerState
+    public enum ERiddlerState : byte
     {
         RiddlerState_Unknown = 0,
         RiddlerState_Locked = 1,
@@ -7426,7 +7436,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERiddlerPiece
     /// </summary>
-    public enum ERiddlerPiece
+    public enum ERiddlerPiece : byte
     {
         RiddlerPiece_None = 0,
         RiddlerPiece_Trophy = 1,
@@ -7446,7 +7456,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERiddlerCollection
     /// </summary>
-    public enum ERiddlerCollection
+    public enum ERiddlerCollection : byte
     {
         RiddlerCollection_None = 0,
         RiddlerCollection_Pickups = 1,
@@ -7463,7 +7473,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERiddlerCategory
     /// </summary>
-    public enum ERiddlerCategory
+    public enum ERiddlerCategory : byte
     {
         RiddlerCategory_Unknown = 0,
         RiddlerCategory_CityX = 1,
@@ -7479,7 +7489,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETapeCharacter
     /// </summary>
-    public enum ETapeCharacter
+    public enum ETapeCharacter : byte
     {
         Tape_None = 0,
         Tape_Simon_Stagg = 1,
@@ -7743,7 +7753,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: UpgradeBoostAction
     /// </summary>
-    public enum UpgradeBoostAction
+    public enum UpgradeBoostAction : byte
     {
         UBA_Nothing = 0,
         UBA_PointsAwarded = 1,
@@ -8428,7 +8438,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EHudWeaponType
     /// </summary>
-    public enum EHudWeaponType
+    public enum EHudWeaponType : byte
     {
         HWT_None = 0,
         HWT_Knives = 1,
@@ -8465,7 +8475,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: AAITakedownType
     /// </summary>
-    public enum AAITakedownType
+    public enum AAITakedownType : byte
     {
         eAAITakeDownType_Grate = 0,
         eAAITakeDownType_Silent = 1,
@@ -8485,7 +8495,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: RPMAPCSpawnResultWheel
     /// </summary>
-    public enum RPMAPCSpawnResultWheel
+    public enum RPMAPCSpawnResultWheel : byte
     {
         RPMAPC_RESULT_APCOnIslandX = 0,
         RPMAPC_RESULT_APCOnIslandY = 1,
@@ -8497,7 +8507,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: RPMAPCSpawnStatusWheel
     /// </summary>
-    public enum RPMAPCSpawnStatusWheel
+    public enum RPMAPCSpawnStatusWheel : byte
     {
         RPMAPC_NoAPCNotUnlocked = 0,
         RPMAPC_NoAPCTimeLimitKilled = 1,
@@ -8511,7 +8521,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELive_LiveError
     /// </summary>
-    public enum ELive_LiveError
+    public enum ELive_LiveError : byte
     {
         EL_None = 0,
         EL_LoginLost = 1,
@@ -8534,7 +8544,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGS_Reason
     /// </summary>
-    public enum EGS_Reason
+    public enum EGS_Reason : byte
     {
         EGS_None = 0,
         EGS_StoryExit = 1,
@@ -8547,7 +8557,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECheatCode
     /// </summary>
-    public enum ECheatCode
+    public enum ECheatCode : byte
     {
         ECheatCode_Menu = 0,
         ECheatCode_GodMode = 1,
@@ -8559,7 +8569,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDistrict
     /// </summary>
-    public enum EDistrict
+    public enum EDistrict : byte
     {
         EDISTRICT_None = 0,
         EDISTRICT_CityX = 1,
@@ -8571,7 +8581,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeRankMode
     /// </summary>
-    public enum EChallengeRankMode
+    public enum EChallengeRankMode : byte
     {
         ECRM_HighScore = 0,
         ECRM_LowScore = 1,
@@ -8583,7 +8593,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeBeaconStyle
     /// </summary>
-    public enum EChallengeBeaconStyle
+    public enum EChallengeBeaconStyle : byte
     {
         ECBeaconStyle_Default = 0,
         ECBeaconStyle_Batman = 1,
@@ -8599,7 +8609,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeFrontendState
     /// </summary>
-    public enum EChallengeFrontendState
+    public enum EChallengeFrontendState : byte
     {
         ECFrontendState_Default = 0,
         ECFrontendState_Revealed = 1,
@@ -8612,7 +8622,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChallengeFrontendGroup
     /// </summary>
-    public enum EChallengeFrontendGroup
+    public enum EChallengeFrontendGroup : byte
     {
         ECFrontendGroup_Tutorial = 0,
         ECFrontendGroup_Combat = 1,
@@ -8630,7 +8640,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EInstallChunk
     /// </summary>
-    public enum EInstallChunk
+    public enum EInstallChunk : byte
     {
         InstallChunk_Base = 0,
         InstallChunk_SelectNewGame = 1,
@@ -8646,7 +8656,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameModes
     /// </summary>
-    public enum EGameModes
+    public enum EGameModes : byte
     {
         EGM_Frontend = 0,
         EGM_Story = 1,
@@ -8657,7 +8667,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELeaderboardColumns
     /// </summary>
-    public enum ELeaderboardColumns
+    public enum ELeaderboardColumns : byte
     {
         ELBC_RatingScore = 0,
         ELBC_Score = 1,
@@ -8669,7 +8679,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: EEvadeVehicleType
     /// </summary>
-    public enum EEvadeVehicleType
+    public enum EEvadeVehicleType : byte
     {
         EEVADEVEHICLE_None = 0,
         EEVADEVEHICLE_Stumble = 1,
@@ -8681,7 +8691,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StreamedCombatWeaponTypes
     /// </summary>
-    public enum StreamedCombatWeaponTypes
+    public enum StreamedCombatWeaponTypes : byte
     {
         COMBATWEAPON_None = 0,
         COMBATWEAPON_Rifle = 1,
@@ -8697,7 +8707,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: StreamedPredWeaponTypes
     /// </summary>
-    public enum StreamedPredWeaponTypes
+    public enum StreamedPredWeaponTypes : byte
     {
         PREDWEAPON_Rifle = 0,
         PREDWEAPON_Shotgun = 1,
@@ -8709,7 +8719,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: VocalPriority
     /// </summary>
-    public enum VocalPriority
+    public enum VocalPriority : byte
     {
         EVP_Default = 0,
         EVP_Low = 1,
@@ -8723,7 +8733,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: VocalType
     /// </summary>
-    public enum VocalType
+    public enum VocalType : byte
     {
         EVT_Emote = 0,
         EVT_Bark = 1,
@@ -8759,7 +8769,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// Enum: HelicopterPointOfInterestTypes
     /// </summary>
-    public enum HelicopterPointOfInterestTypes
+    public enum HelicopterPointOfInterestTypes : byte
     {
         HPOI_None = 0,
         HPOI_Riot = 1,
@@ -9555,6 +9565,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StrProperty}: acquiredBMBLUpgradeFlagNames
+    /// </summary>
+    public InlineArray<BmSDK.FString> acquiredBMBLUpgradeFlagNames => new(4, Ptr + 2592);
+
+    /// <summary>
     /// StrProperty: acquiredBMBLUpgradeFlagNames
     /// </summary>
     public unsafe BmSDK.FString acquiredBMBLUpgradeFlagNames_0
@@ -9588,6 +9603,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{StrProperty}: unavailableBMBLUpgradeFlagNames
+    /// </summary>
+    public InlineArray<BmSDK.FString> unavailableBMBLUpgradeFlagNames => new(4, Ptr + 2656);
+
+    /// <summary>
     /// StrProperty: unavailableBMBLUpgradeFlagNames
     /// </summary>
     public unsafe BmSDK.FString unavailableBMBLUpgradeFlagNames_0
@@ -9619,6 +9639,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 2704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
     }
+
+    /// <summary>
+    /// InlineArray{StrProperty}: nextBMBLUpgradeFlagNames
+    /// </summary>
+    public InlineArray<BmSDK.FString> nextBMBLUpgradeFlagNames => new(4, Ptr + 2720);
 
     /// <summary>
     /// StrProperty: nextBMBLUpgradeFlagNames
@@ -10295,20 +10320,14 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PositionBeaconCachedPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionBeaconCachedPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3020); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionBeaconCachedPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3020);
 
     /// <summary>
     /// StructProperty: PositionBeaconCachedDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionBeaconCachedDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3032); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionBeaconCachedDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3032);
 
     /// <summary>
     /// StrProperty: PositionBeaconBestType
@@ -10322,11 +10341,8 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PositionBeaconBestPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionBeaconBestPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3060); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionBeaconBestPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3060);
 
     /// <summary>
     /// IntProperty: PositionBeaconBestId
@@ -10408,6 +10424,11 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGameInfo.FGameActionToAAITakedownMapping>>(Ptr + 3132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3132); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: sideStoryCooldownTimers
+    /// </summary>
+    public InlineArray<float> sideStoryCooldownTimers => new(3, Ptr + 3148);
 
     /// <summary>
     /// FloatProperty: sideStoryCooldownTimers
@@ -10536,20 +10557,14 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentWindState
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRWindState CurrentWindState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRWindState>(Ptr + 3228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3228); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRWindState CurrentWindState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRWindState>(Ptr + 3228);
 
     /// <summary>
     /// StructProperty: CurrentWindConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FRWindConfig CurrentWindConfig
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FRWindConfig>(Ptr + 3296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3296); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FRWindConfig CurrentWindConfig
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FRWindConfig>(Ptr + 3296);
 
     /// <summary>
     /// FloatProperty: CurrentRainIntensity
@@ -10968,20 +10983,14 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ParticlePushBMPos1Mult
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParticlePushBMPos1Mult
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3780); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParticlePushBMPos1Mult
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3780);
 
     /// <summary>
     /// StructProperty: ParticlePushBMPos2Mult
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParticlePushBMPos2Mult
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3792); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParticlePushBMPos2Mult
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3792);
 
     /// <summary>
     /// FloatProperty: ParticlePushBMMaxSpeed
@@ -11013,20 +11022,14 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ParticlePushBMBLPos1Mult
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParticlePushBMBLPos1Mult
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3816); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParticlePushBMBLPos1Mult
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3816);
 
     /// <summary>
     /// StructProperty: ParticlePushBMBLPos2Mult
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParticlePushBMBLPos2Mult
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3828); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParticlePushBMBLPos2Mult
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3828);
 
     /// <summary>
     /// FloatProperty: ParticlePushBMBLMaxSpeed
@@ -11283,11 +11286,8 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: dialoguePlayTimes
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror dialoguePlayTimes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 4156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4156); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror dialoguePlayTimes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 4156);
 
     /// <summary>
     /// ArrayProperty: AllGrates

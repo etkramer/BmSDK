@@ -21,52 +21,62 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Terrain.
+    /// </summary>
+    public static Terrain DefaultObject => (Terrain)StaticClass().DefaultObject;
+
     internal Terrain() { }
 
     /// <summary>
     /// Constructs a new Terrain
     /// </summary>
-    public Terrain(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Terrain Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public Terrain(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Terrain(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Terrain>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Terrain>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Terrain>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Terrain>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Terrain>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Terrain>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Terrain>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Terrain>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PostBeginPlay
@@ -292,21 +302,20 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: CachedTerrainMaterials
+    /// InlineArray{StructProperty}: CachedTerrainMaterials
     /// </summary>
-    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public InlineArray<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray> CachedTerrainMaterials => new(2, Ptr + 828);
+
     /// <summary>
     /// StructProperty: CachedTerrainMaterials
     /// </summary>
-    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 828);
+    /// <summary>
+    /// StructProperty: CachedTerrainMaterials
+    /// </summary>
+    public unsafe ref BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 844);
 
     /// <summary>
     /// IntProperty: NumVerticesX
@@ -518,20 +527,14 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 896);
 
     /// <summary>
     /// StructProperty: LightmassSettings
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings LightmassSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightmassPrimitiveSettings>(Ptr + 900);
 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
@@ -563,20 +566,14 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 956);
 
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 960);
 
     /// <summary>
     /// Struct: FTerrainMaterialResource

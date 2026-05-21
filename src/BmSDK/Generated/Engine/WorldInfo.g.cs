@@ -21,52 +21,62 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as WorldInfo.
+    /// </summary>
+    public static WorldInfo DefaultObject => (WorldInfo)StaticClass().DefaultObject;
+
     internal WorldInfo() { }
 
     /// <summary>
     /// Constructs a new WorldInfo
     /// </summary>
-    public WorldInfo(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, WorldInfo Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public WorldInfo(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected WorldInfo(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<WorldInfo>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<WorldInfo>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<WorldInfo>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<WorldInfo>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<WorldInfo>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<WorldInfo>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<WorldInfo>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<WorldInfo>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DebugDrawDestructibleArchetypesHUD
@@ -1109,7 +1119,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDebugDrawDestructiblesMode
     /// </summary>
-    public enum EDebugDrawDestructiblesMode
+    public enum EDebugDrawDestructiblesMode : byte
     {
         DebugDrawDestructibles_Off = 0,
         DebugDrawDestructibles_CityArchetypes = 1,
@@ -1184,7 +1194,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EHostMigrationProgress
     /// </summary>
-    public enum EHostMigrationProgress
+    public enum EHostMigrationProgress : byte
     {
         HostMigration_None = 0,
         HostMigration_FindingNewHost = 1,
@@ -1579,7 +1589,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPreferredLightmapType
     /// </summary>
-    public enum EPreferredLightmapType
+    public enum EPreferredLightmapType : byte
     {
         EPLT_Default = 0,
         EPLT_Directional = 1,
@@ -1590,7 +1600,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVisibilityAggressiveness
     /// </summary>
-    public enum EVisibilityAggressiveness
+    public enum EVisibilityAggressiveness : byte
     {
         VIS_LeastAggressive = 0,
         VIS_ModeratelyAggressive = 1,
@@ -1680,7 +1690,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EConsoleType
     /// </summary>
-    public enum EConsoleType
+    public enum EConsoleType : byte
     {
         CONSOLE_Any = 0,
         CONSOLE_Xbox360 = 1,
@@ -1974,18 +1984,18 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPIEPreset
     /// </summary>
-    public enum EPIEPreset
+    public enum EPIEPreset : byte
     {
         PIEPreset_Custom = 0,
-        PIEPreset = 1,
-        PIEPreset_2 = 2,
-        PIEPreset_3 = 3,
-        PIEPreset_4 = 4,
-        PIEPreset_5 = 5,
-        PIEPreset_6 = 6,
-        PIEPreset_7 = 7,
-        PIEPreset_8 = 8,
-        PIEPreset_9 = 9,
+        PIEPreset_0 = 1,
+        PIEPreset_1 = 2,
+        PIEPreset_2 = 3,
+        PIEPreset_3 = 4,
+        PIEPreset_4 = 5,
+        PIEPreset_5 = 6,
+        PIEPreset_6 = 7,
+        PIEPreset_7 = 8,
+        PIEPreset_8 = 9,
         PIEPreset_MAX = 10,
     }
 
@@ -2078,7 +2088,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Enum: ENetMode
     /// </summary>
-    public enum ENetMode
+    public enum ENetMode : byte
     {
         NM_Standalone = 0,
         NM_DedicatedServer = 1,
@@ -2090,11 +2100,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultPostProcessSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings DefaultPostProcessSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings DefaultPostProcessSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 688);
 
     /// <summary>
     /// ObjectProperty: WorldPostProcessChain
@@ -2122,6 +2129,11 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume>(Ptr + 1228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1228); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: BookMarks
+    /// </summary>
+    public InlineArray<BmSDK.Engine.BookMark> BookMarks => new(10, Ptr + 1236);
 
     /// <summary>
     /// ObjectProperty: BookMarks
@@ -2203,6 +2215,11 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 1308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: KismetBookMarks
+    /// </summary>
+    public InlineArray<BmSDK.Engine.KismetBookMark> KismetBookMarks => new(10, Ptr + 1316);
 
     /// <summary>
     /// ObjectProperty: KismetBookMarks
@@ -3296,11 +3313,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 DefaultColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1912); }
-    }
+    public unsafe ref System.Numerics.Vector3 DefaultColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1912);
 
     /// <summary>
     /// ArrayProperty: GameTypesSupportedOnThisMap
@@ -3485,11 +3499,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PhysicsProperties
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FPhysXSceneProperties PhysicsProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FPhysXSceneProperties>(Ptr + 2196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2196); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FPhysXSceneProperties PhysicsProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FPhysXSceneProperties>(Ptr + 2196);
 
     /// <summary>
     /// ArrayProperty: CompartmentRunFrames
@@ -3539,20 +3550,14 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DestructibleSettings
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings DestructibleSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings>(Ptr + 2308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2308); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings DestructibleSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FApexModuleDestructibleSettings>(Ptr + 2308);
 
     /// <summary>
     /// StructProperty: VerticalProperties
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FPhysXVerticalProperties VerticalProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FPhysXVerticalProperties>(Ptr + 2328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2328); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FPhysXVerticalProperties VerticalProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FPhysXVerticalProperties>(Ptr + 2328);
 
     /// <summary>
     /// ArrayProperty: WorldAttractors
@@ -3728,11 +3733,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ImageReflectionEnvironmentColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ImageReflectionEnvironmentColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2440); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor ImageReflectionEnvironmentColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2440);
 
     /// <summary>
     /// FloatProperty: ImageReflectionEnvironmentRotation
@@ -3746,11 +3748,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScreenMessages
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror ScreenMessages
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 2460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2460); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror ScreenMessages
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 2460);
 
     /// <summary>
     /// ArrayProperty: PriorityScreenMessages
@@ -3773,11 +3772,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2552); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2552);
 
     /// <summary>
     /// MapProperty: LandscapeInfoMap
@@ -3791,11 +3787,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightmassSettings
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings LightmassSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings>(Ptr + 2636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2636); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings LightmassSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FLightmassWorldInfoSettings>(Ptr + 2636);
 
     /// <summary>
     /// MapProperty: NavMeshPathConstraintCache
@@ -3818,11 +3811,8 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PeerHostMigration
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FHostMigrationState PeerHostMigration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.WorldInfo.FHostMigrationState>(Ptr + 2868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2868); }
-    }
+    public unsafe ref BmSDK.Engine.WorldInfo.FHostMigrationState PeerHostMigration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.WorldInfo.FHostMigrationState>(Ptr + 2868);
 
     /// <summary>
     /// FloatProperty: HostMigrationTimeout

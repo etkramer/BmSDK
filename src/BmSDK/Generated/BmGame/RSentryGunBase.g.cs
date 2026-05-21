@@ -21,6 +21,11 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSentryGunBase.
+    /// </summary>
+    public static RSentryGunBase DefaultObject => (RSentryGunBase)StaticClass().DefaultObject;
+
     internal RSentryGunBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// </summary>
     protected RSentryGunBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSentryGunBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SeenByThug
@@ -1718,7 +1728,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// Enum: ESentryGunSearchType
     /// </summary>
-    public enum ESentryGunSearchType
+    public enum ESentryGunSearchType : byte
     {
         eSGST_Static = 0,
         eSGST_ConstantRotation = 1,
@@ -1998,6 +2008,11 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: BMBLImpactFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BMBLImpactFX => new(3, Ptr + 988);
+
+    /// <summary>
     /// ComponentProperty: BMBLImpactFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent BMBLImpactFX_0
@@ -2021,6 +2036,11 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1004); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: ImpactFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 1012);
 
     /// <summary>
     /// ComponentProperty: ImpactFX
@@ -2048,6 +2068,11 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: BulletTrailFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 1036);
+
+    /// <summary>
     /// ComponentProperty: BulletTrailFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX_0
@@ -2071,6 +2096,11 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 1052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: MuzzleFlashFx
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 1060);
 
     /// <summary>
     /// ComponentProperty: MuzzleFlashFx
@@ -2388,20 +2418,14 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// StructProperty: Settings
     /// </summary>
-    public unsafe BmSDK.BmGame.RSentryGunBase.FSentryGunSettings Settings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSentryGunBase.FSentryGunSettings>(Ptr + 1112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
-    }
+    public unsafe ref BmSDK.BmGame.RSentryGunBase.FSentryGunSettings Settings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSentryGunBase.FSentryGunSettings>(Ptr + 1112);
 
     /// <summary>
     /// StructProperty: BMBLHitVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 BMBLHitVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
-    }
+    public unsafe ref System.Numerics.Vector3 BMBLHitVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1252);
 
     /// <summary>
     /// FloatProperty: bodyPhysVelMin
@@ -2451,11 +2475,8 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// StructProperty: RBPostDestroyCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBPostDestroyCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBPostDestroyCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1284);
 
     /// <summary>
     /// IntProperty: currentAimTargetIndex
@@ -2478,56 +2499,38 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// StructProperty: currentAimOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 currentAimOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
-    }
+    public unsafe ref System.Numerics.Vector3 currentAimOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1296);
 
     /// <summary>
     /// StructProperty: currentAimOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator currentAimOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
-    }
+    public unsafe ref BmSDK.Rotator currentAimOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1308);
 
     /// <summary>
     /// StructProperty: targetAimOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator targetAimOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
-    }
+    public unsafe ref BmSDK.Rotator targetAimOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1320);
 
     /// <summary>
     /// StructProperty: targetRotationRate
     /// </summary>
-    public unsafe BmSDK.Rotator targetRotationRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
-    }
+    public unsafe ref BmSDK.Rotator targetRotationRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1332);
 
     /// <summary>
     /// StructProperty: currentRotationRate
     /// </summary>
-    public unsafe BmSDK.Rotator currentRotationRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
-    }
+    public unsafe ref BmSDK.Rotator currentRotationRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1344);
 
     /// <summary>
     /// StructProperty: lastKnownPlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 lastKnownPlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
-    }
+    public unsafe ref System.Numerics.Vector3 lastKnownPlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1356);
 
     /// <summary>
     /// FloatProperty: lastNotSeenPlayerTime
@@ -2550,11 +2553,8 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// StructProperty: hardCodedAimDirection
     /// </summary>
-    public unsafe BmSDK.Rotator hardCodedAimDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1376); }
-    }
+    public unsafe ref BmSDK.Rotator hardCodedAimDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1376);
 
     /// <summary>
     /// NameProperty: controlBoneName
@@ -2694,20 +2694,14 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// StructProperty: CustomShotLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 CustomShotLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1464); }
-    }
+    public unsafe ref System.Numerics.Vector3 CustomShotLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1464);
 
     /// <summary>
     /// StructProperty: lastLightRangeUpdateRot
     /// </summary>
-    public unsafe BmSDK.Rotator lastLightRangeUpdateRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
-    }
+    public unsafe ref BmSDK.Rotator lastLightRangeUpdateRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1476);
 
     /// <summary>
     /// ArrayProperty: activeRobotsInView

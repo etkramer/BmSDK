@@ -21,6 +21,11 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineGameSearch.
+    /// </summary>
+    public static OnlineGameSearch DefaultObject => (OnlineGameSearch)StaticClass().DefaultObject;
+
     internal OnlineGameSearch() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected OnlineGameSearch(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameSearch>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SortSearchResults
@@ -151,7 +196,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameSearchSortType
     /// </summary>
-    public enum EOnlineGameSearchSortType
+    public enum EOnlineGameSearchSortType : byte
     {
         OGSSO_Ascending = 0,
         OGSSO_Descending = 1,
@@ -204,7 +249,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameSearchComparisonType
     /// </summary>
-    public enum EOnlineGameSearchComparisonType
+    public enum EOnlineGameSearchComparisonType : byte
     {
         OGSCT_Equals = 0,
         OGSCT_NotEquals = 1,
@@ -218,7 +263,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Enum: EOnlineGameSearchEntryType
     /// </summary>
-    public enum EOnlineGameSearchEntryType
+    public enum EOnlineGameSearchEntryType : byte
     {
         OGSET_Property = 0,
         OGSET_LocalizedSetting = 1,
@@ -331,11 +376,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Query
     /// </summary>
-    public unsafe BmSDK.Engine.Settings.FLocalizedStringSetting Query
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.Engine.Settings.FLocalizedStringSetting Query
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Settings.FLocalizedStringSetting>(Ptr + 152);
 
     /// <summary>
     /// BoolProperty: bIsLanQuery
@@ -385,11 +427,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ManualSkillOverride
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineGameSearch.FOverrideSkill ManualSkillOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineGameSearch.FOverrideSkill>(Ptr + 192);
 
     /// <summary>
     /// ArrayProperty: NamedProperties
@@ -403,11 +442,8 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FilterQuery
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery FilterQuery
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchQuery>(Ptr + 260);
 
     /// <summary>
     /// StrProperty: AdditionalSearchCriteria

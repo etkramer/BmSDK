@@ -21,6 +21,11 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDepthBiasedBlend.
+    /// </summary>
+    public static MaterialExpressionDepthBiasedBlend DefaultObject => (MaterialExpressionDepthBiasedBlend)StaticClass().DefaultObject;
+
     internal MaterialExpressionDepthBiasedBlend() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MaterialExpressionDepthBiasedBlend(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDepthBiasedBlend>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// BoolProperty: bNormalize
@@ -54,27 +99,18 @@ public partial class MaterialExpressionDepthBiasedBlend : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: RGB
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput RGB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput RGB
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: Alpha
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Alpha
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Alpha
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232);
 
     /// <summary>
     /// StructProperty: Bias
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Bias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Bias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 284);
 }

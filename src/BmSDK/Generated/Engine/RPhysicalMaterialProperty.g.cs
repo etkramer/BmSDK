@@ -21,6 +21,11 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysicalMaterialProperty.
+    /// </summary>
+    public static RPhysicalMaterialProperty DefaultObject => (RPhysicalMaterialProperty)StaticClass().DefaultObject;
+
     internal RPhysicalMaterialProperty() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPhysicalMaterialProperty(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysicalMaterialProperty>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SpawnActualHitEffect
@@ -478,7 +523,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Enum: EPhysMaterialImpactTypes
     /// </summary>
-    public enum EPhysMaterialImpactTypes
+    public enum EPhysMaterialImpactTypes : byte
     {
         EPMIT_Batarang = 0,
         EPMIT_ThugFirearm = 1,
@@ -564,11 +609,8 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// StructProperty: FootstepInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FMaterialFootstepInfo FootstepInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FMaterialFootstepInfo>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FMaterialFootstepInfo FootstepInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FMaterialFootstepInfo>(Ptr + 84);
 
     /// <summary>
     /// ObjectProperty: GelExplosionSound
@@ -580,70 +622,51 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     }
 
     /// <summary>
-    /// StructProperty: ImpactInfo
+    /// InlineArray{StructProperty}: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public InlineArray<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo> ImpactInfo => new(7, Ptr + 152);
+
     /// <summary>
     /// StructProperty: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 152);
     /// <summary>
     /// StructProperty: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 196);
     /// <summary>
     /// StructProperty: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 240);
     /// <summary>
     /// StructProperty: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 284);
     /// <summary>
     /// StructProperty: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 328);
     /// <summary>
     /// StructProperty: ImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 372);
+    /// <summary>
+    /// StructProperty: ImpactInfo
+    /// </summary>
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo ImpactInfo_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: AdvancedImpactInfo
     /// </summary>
-    public unsafe BmSDK.Engine.RPhysicalMaterialProperty.FAdvancedImpactEffectInfo AdvancedImpactInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPhysicalMaterialProperty.FAdvancedImpactEffectInfo>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref BmSDK.Engine.RPhysicalMaterialProperty.FAdvancedImpactEffectInfo AdvancedImpactInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPhysicalMaterialProperty.FAdvancedImpactEffectInfo>(Ptr + 460);
 
     /// <summary>
     /// Struct: FMaterialFootstepInfo

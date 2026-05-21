@@ -21,6 +21,11 @@ public partial class RHudModuleHealthBar : BmSDK.BmGame.RHudModule, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudModuleHealthBar.
+    /// </summary>
+    public static RHudModuleHealthBar DefaultObject => (RHudModuleHealthBar)StaticClass().DefaultObject;
+
     internal RHudModuleHealthBar() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RHudModuleHealthBar : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RHudModuleHealthBar(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleHealthBar>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ToggleMayhemMeter
@@ -48,12 +93,12 @@ public partial class RHudModuleHealthBar : BmSDK.BmGame.RHudModule, BmSDK.IGameO
     /// <summary>
     /// Function: SetDualPlayComboPrivate
     /// </summary>
-    public unsafe virtual void SetDualPlayComboPrivate(int ability_level, int value_out_of)
+    public unsafe virtual void SetDualPlayComboPrivate(int ability_level, int value_out_of_75)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudModuleHealthBar.SetDualPlayComboPrivate", true);
         byte* paramsPtr = stackalloc byte[8];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ability_level, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(value_out_of, paramsPtr + 4);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(value_out_of_75, paramsPtr + 4);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }

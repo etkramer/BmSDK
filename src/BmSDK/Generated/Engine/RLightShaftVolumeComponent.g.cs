@@ -21,6 +21,11 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RLightShaftVolumeComponent.
+    /// </summary>
+    public static RLightShaftVolumeComponent DefaultObject => (RLightShaftVolumeComponent)StaticClass().DefaultObject;
+
     internal RLightShaftVolumeComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RLightShaftVolumeComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RLightShaftVolumeComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetEnabled
@@ -139,11 +184,8 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor LightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 560);
 
     /// <summary>
     /// FloatProperty: Brightness
@@ -157,11 +199,8 @@ public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// StructProperty: ClippingPlane
     /// </summary>
-    public unsafe BmSDK.GameObject.FPlane ClippingPlane
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.GameObject.FPlane ClippingPlane
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FPlane>(Ptr + 576);
 
     /// <summary>
     /// BoolProperty: Enabled

@@ -21,52 +21,62 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPresurePad.
+    /// </summary>
+    public static RPresurePad DefaultObject => (RPresurePad)StaticClass().DefaultObject;
+
     internal RPresurePad() { }
 
     /// <summary>
     /// Constructs a new RPresurePad
     /// </summary>
-    public RPresurePad(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPresurePad Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPresurePad(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPresurePad(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPresurePad>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPresurePad>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPresurePad>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPresurePad>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPresurePad>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPresurePad>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPresurePad>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPresurePad>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnTogglePressurePad
@@ -335,75 +345,53 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     }
 
     /// <summary>
-    /// StructProperty: MICList
+    /// InlineArray{StructProperty}: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public InlineArray<BmSDK.BmScript.RPresurePad.FPressurePadMICList> MICList => new(9, Ptr + 840);
+
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 840);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 856);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 872);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 888);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 904);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 920);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 936);
     /// <summary>
     /// StructProperty: MICList
     /// </summary>
-    public unsafe BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 952);
+    /// <summary>
+    /// StructProperty: MICList
+    /// </summary>
+    public unsafe ref BmSDK.BmScript.RPresurePad.FPressurePadMICList MICList_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RPresurePad.FPressurePadMICList>(Ptr + 968);
 }

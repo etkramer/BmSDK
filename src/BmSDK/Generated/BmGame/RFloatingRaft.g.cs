@@ -21,52 +21,62 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFloatingRaft.
+    /// </summary>
+    public static RFloatingRaft DefaultObject => (RFloatingRaft)StaticClass().DefaultObject;
+
     internal RFloatingRaft() { }
 
     /// <summary>
     /// Constructs a new RFloatingRaft
     /// </summary>
-    public RFloatingRaft(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFloatingRaft Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RFloatingRaft(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RFloatingRaft(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFloatingRaft>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetMass
@@ -419,6 +429,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: WakeEmitters
+    /// </summary>
+    public InlineArray<BmSDK.Engine.Emitter> WakeEmitters => new(4, Ptr + 980);
+
+    /// <summary>
     /// ObjectProperty: WakeEmitters
     /// </summary>
     public unsafe BmSDK.Engine.Emitter WakeEmitters_0
@@ -517,11 +532,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: RaftTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RaftTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref System.Numerics.Vector3 RaftTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1064);
 
     /// <summary>
     /// FloatProperty: fMaximumOceanChoppicityThatRaftCanSpawnIn
@@ -553,11 +565,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1100);
 
     /// <summary>
     /// BoolProperty: InitiallyFrozen
@@ -607,11 +616,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastGrinderHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastGrinderHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastGrinderHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1116);
 
     /// <summary>
     /// FloatProperty: LastGrinderHitTime
@@ -697,11 +703,8 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Shaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1176); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct Shaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1176);
 
     /// <summary>
     /// FloatProperty: DockingForce
@@ -715,44 +718,39 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: DockingPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 DockingPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1336); }
-    }
+    public unsafe ref System.Numerics.Vector3 DockingPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1336);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: WakeOffsets
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> WakeOffsets => new(4, Ptr + 1348);
 
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1348);
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1360);
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1372);
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1384); }
-    }
+    public unsafe ref System.Numerics.Vector3 WakeOffsets_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1384);
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: WakeScales
+    /// </summary>
+    public InlineArray<float> WakeScales => new(4, Ptr + 1396);
 
     /// <summary>
     /// FloatProperty: WakeScales
@@ -786,6 +784,11 @@ public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObje
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1408); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1408); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: WakeEmitterTypes
+    /// </summary>
+    public InlineArray<int> WakeEmitterTypes => new(4, Ptr + 1412);
 
     /// <summary>
     /// IntProperty: WakeEmitterTypes

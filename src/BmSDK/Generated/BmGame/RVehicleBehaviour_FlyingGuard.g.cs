@@ -21,6 +21,11 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleBehaviour_FlyingGuard.
+    /// </summary>
+    public static RVehicleBehaviour_FlyingGuard DefaultObject => (RVehicleBehaviour_FlyingGuard)StaticClass().DefaultObject;
+
     internal RVehicleBehaviour_FlyingGuard() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleBehaviour_FlyingGuard(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingGuard>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnHostVehicleDied
@@ -114,9 +159,6 @@ public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehavi
     /// <summary>
     /// StructProperty: FlyerOriginalTargetPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlyerOriginalTargetPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlyerOriginalTargetPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
 }

@@ -30,7 +30,7 @@ public partial class Struct
 
     public IEnumerable<Field> EnumerateFields()
     {
-        for (Field fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
+        for (var fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
         {
             yield return fieldLink;
         }
@@ -41,11 +41,9 @@ public partial class Struct
     /// </summary>
     public IEnumerable<Struct> EnumerateSupersAndSelf()
     {
-        var super = this;
-        while (super is not null)
+        for (var super = this; super != null; super = super.SuperStruct)
         {
             yield return super;
-            super = super.SuperStruct;
         }
     }
 }

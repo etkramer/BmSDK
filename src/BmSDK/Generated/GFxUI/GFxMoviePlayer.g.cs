@@ -21,6 +21,11 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GFxMoviePlayer.
+    /// </summary>
+    public static GFxMoviePlayer DefaultObject => (GFxMoviePlayer)StaticClass().DefaultObject;
+
     internal GFxMoviePlayer() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected GFxMoviePlayer(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GFxMoviePlayer>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetFilename
@@ -1532,7 +1577,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxAlign
     /// </summary>
-    public enum GFxAlign
+    public enum GFxAlign : byte
     {
         Align_Center = 0,
         Align_TopCenter = 1,
@@ -1549,7 +1594,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxScaleMode
     /// </summary>
-    public enum GFxScaleMode
+    public enum GFxScaleMode : byte
     {
         SM_NoScale = 0,
         SM_ShowAll = 1,
@@ -1613,7 +1658,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ASType
     /// </summary>
-    public enum ASType
+    public enum ASType : byte
     {
         AS_Undefined = 0,
         AS_Null = 1,
@@ -1652,7 +1697,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxRenderTextureMode
     /// </summary>
-    public enum GFxRenderTextureMode
+    public enum GFxRenderTextureMode : byte
     {
         RTM_Opaque = 0,
         RTM_Alpha = 1,
@@ -1663,7 +1708,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxTimingMode
     /// </summary>
-    public enum GFxTimingMode
+    public enum GFxTimingMode : byte
     {
         TM_Game = 0,
         TM_Real = 1,
@@ -1673,7 +1718,7 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: GFxDPGBias
     /// </summary>
-    public enum GFxDPGBias
+    public enum GFxDPGBias : byte
     {
         DPGB_BackMost = 0,
         DPGB_UnderHUD = 1,
@@ -2200,11 +2245,8 @@ public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ViewMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ViewMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix ViewMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 320);
 
     /// <summary>
     /// ArrayProperty: CaptureKeys

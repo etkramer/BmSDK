@@ -21,6 +21,11 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBM2Behaviour_IdleConfig.
+    /// </summary>
+    public static RBM2Behaviour_IdleConfig DefaultObject => (RBM2Behaviour_IdleConfig)StaticClass().DefaultObject;
+
     internal RBM2Behaviour_IdleConfig() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBM2Behaviour_IdleConfig(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBM2Behaviour_IdleConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanRepel
@@ -1986,7 +2031,7 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// Enum: TransitionInInteruptSetting
     /// </summary>
-    public enum TransitionInInteruptSetting
+    public enum TransitionInInteruptSetting : byte
     {
         TRANSININTSET_None = 0,
         TRANSININTSET_Replay = 1,
@@ -1998,7 +2043,7 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// Enum: EStasisType
     /// </summary>
-    public enum EStasisType
+    public enum EStasisType : byte
     {
         STASIS_AllowStasisWhenNotTransitioning = 0,
         STASIS_AlwaysAllowStasis = 1,
@@ -2486,20 +2531,14 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// StructProperty: MoveOptions
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2Behaviour_IdleConfig.FMoveToData MoveOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2Behaviour_IdleConfig.FMoveToData>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2Behaviour_IdleConfig.FMoveToData MoveOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2Behaviour_IdleConfig.FMoveToData>(Ptr + 752);
 
     /// <summary>
     /// StructProperty: CSOptions
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2Behaviour_IdleConfig.FCombatAndSpOptions CSOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2Behaviour_IdleConfig.FCombatAndSpOptions>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2Behaviour_IdleConfig.FCombatAndSpOptions CSOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2Behaviour_IdleConfig.FCombatAndSpOptions>(Ptr + 820);
 
     /// <summary>
     /// FloatProperty: PredBarkFudgeFactor
@@ -2513,11 +2552,8 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// StructProperty: ProximityAndSightOptions
     /// </summary>
-    public unsafe BmSDK.BmGame.RBM2Behaviour_IdleConfig.FProximityAndSight ProximityAndSightOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBM2Behaviour_IdleConfig.FProximityAndSight>(Ptr + 832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
-    }
+    public unsafe ref BmSDK.BmGame.RBM2Behaviour_IdleConfig.FProximityAndSight ProximityAndSightOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBM2Behaviour_IdleConfig.FProximityAndSight>(Ptr + 832);
 
     /// <summary>
     /// NameProperty: ConfigName
@@ -2549,11 +2585,8 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// StructProperty: TransInId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransInId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransInId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 900);
 
     /// <summary>
     /// ArrayProperty: EventNotifyLinks
@@ -2585,11 +2618,8 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// StructProperty: PlayingOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayingOverlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayingOverlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 952);
 
     /// <summary>
     /// IntProperty: LastRandomIndex
@@ -2639,11 +2669,8 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// StructProperty: DialogueLookStartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 DialogueLookStartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 DialogueLookStartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// FloatProperty: DialogueLookStartYaw
@@ -2657,20 +2684,14 @@ public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveTo
     /// <summary>
     /// StructProperty: TraceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TraceLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref System.Numerics.Vector3 TraceLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 996);
 
     /// <summary>
     /// StructProperty: TraceNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 TraceNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref System.Numerics.Vector3 TraceNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1008);
 
     /// <summary>
     /// IntProperty: SpawnFix

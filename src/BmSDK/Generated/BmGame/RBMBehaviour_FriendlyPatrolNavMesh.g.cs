@@ -21,6 +21,11 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FriendlyPatrolNavMesh.
+    /// </summary>
+    public static RBMBehaviour_FriendlyPatrolNavMesh DefaultObject => (RBMBehaviour_FriendlyPatrolNavMesh)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FriendlyPatrolNavMesh() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_FriendlyPatrolNavMesh(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FriendlyPatrolNavMesh>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -402,11 +447,8 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// StructProperty: StoredTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 720);
 
     /// <summary>
     /// BoolProperty: bStartFromCurrentPosition
@@ -501,11 +543,8 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// StructProperty: ProximityAndSightOptions
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol ProximityAndSightOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol ProximityAndSightOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_FriendlyPatrolNavMesh.FProximityAndSightPatrol>(Ptr + 772);
 
     /// <summary>
     /// ArrayProperty: WaitAtPointOverlays
@@ -537,9 +576,6 @@ public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// StructProperty: DirectionOfFocus
     /// </summary>
-    public unsafe System.Numerics.Vector3 DirectionOfFocus
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
-    }
+    public unsafe ref System.Numerics.Vector3 DirectionOfFocus
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 820);
 }

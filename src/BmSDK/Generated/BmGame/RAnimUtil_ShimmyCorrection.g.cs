@@ -21,6 +21,11 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_ShimmyCorrection.
+    /// </summary>
+    public static RAnimUtil_ShimmyCorrection DefaultObject => (RAnimUtil_ShimmyCorrection)StaticClass().DefaultObject;
+
     internal RAnimUtil_ShimmyCorrection() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimUtil_ShimmyCorrection(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_ShimmyCorrection>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FShimmyDebug
@@ -218,30 +263,26 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     }
 
     /// <summary>
-    /// StructProperty: Arms
+    /// InlineArray{StructProperty}: Arms
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm Arms_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
+    public InlineArray<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm> Arms => new(2, Ptr + 88);
+
     /// <summary>
     /// StructProperty: Arms
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm Arms_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm Arms_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm>(Ptr + 88);
+    /// <summary>
+    /// StructProperty: Arms
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm Arms_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: Debug
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyDebug Debug
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyDebug>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyDebug Debug
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyDebug>(Ptr + 128);
 
     /// <summary>
     /// BoolProperty: Active
@@ -255,38 +296,26 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// StructProperty: WorldspaceLedgeLeftTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldspaceLedgeLeftTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref System.Numerics.Vector3 WorldspaceLedgeLeftTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: WorldspaceLedgeRightTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldspaceLedgeRightTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref System.Numerics.Vector3 WorldspaceLedgeRightTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 496);
 
     /// <summary>
     /// StructProperty: LeftHandOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LeftHandOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref System.Numerics.Vector3 LeftHandOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: RightHandOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RightHandOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref System.Numerics.Vector3 RightHandOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 520);
 
     /// <summary>
     /// Struct: FShimmyArm

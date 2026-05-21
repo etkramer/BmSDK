@@ -21,52 +21,62 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RForensicsDevice.
+    /// </summary>
+    public static RForensicsDevice DefaultObject => (RForensicsDevice)StaticClass().DefaultObject;
+
     internal RForensicsDevice() { }
 
     /// <summary>
     /// Constructs a new RForensicsDevice
     /// </summary>
-    public RForensicsDevice(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RForensicsDevice Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RForensicsDevice(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RForensicsDevice(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RForensicsDevice>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ResetAudioStates
@@ -1455,7 +1465,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: VisualHudMode
     /// </summary>
-    public enum VisualHudMode
+    public enum VisualHudMode : byte
     {
         VHM_NormalView = 0,
         VHM_DetectiveMode = 1,
@@ -1466,7 +1476,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: SpecialTrackingMode
     /// </summary>
-    public enum SpecialTrackingMode
+    public enum SpecialTrackingMode : byte
     {
         SPM_None = 0,
         SPM_RadioReceiver = 1,
@@ -1480,7 +1490,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: FlashStates
     /// </summary>
-    public enum FlashStates
+    public enum FlashStates : byte
     {
         FlS_Up = 0,
         FlS_Hold = 1,
@@ -1493,7 +1503,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EvidenceVisibleState
     /// </summary>
-    public enum EvidenceVisibleState
+    public enum EvidenceVisibleState : byte
     {
         EVS_Hidden = 0,
         EVS_Visible_Physical = 1,
@@ -1505,7 +1515,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EvidenceDisplayState
     /// </summary>
-    public enum EvidenceDisplayState
+    public enum EvidenceDisplayState : byte
     {
         EDS_ScannerNonScan = 0,
         EDS_Scanner = 1,
@@ -1516,7 +1526,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: DevicePostProcessEffects
     /// </summary>
-    public enum DevicePostProcessEffects
+    public enum DevicePostProcessEffects : byte
     {
         DPPE_Xray = 0,
         DPPE_Distortion = 1,
@@ -2554,20 +2564,14 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: vVirtualDisruptorTowerLocationStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 vVirtualDisruptorTowerLocationStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
-    }
+    public unsafe ref System.Numerics.Vector3 vVirtualDisruptorTowerLocationStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1152);
 
     /// <summary>
     /// StructProperty: vVirtualDisruptorTowerLocationEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 vVirtualDisruptorTowerLocationEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1164); }
-    }
+    public unsafe ref System.Numerics.Vector3 vVirtualDisruptorTowerLocationEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1164);
 
     /// <summary>
     /// FloatProperty: fVirtualDisruptorTowerTimer
@@ -2635,11 +2639,8 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PostProcessOverride
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings PostProcessOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1204); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings PostProcessOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1204);
 
     /// <summary>
     /// FloatProperty: VehicleTrackerLastRealLOSTime
@@ -2797,11 +2798,8 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SatNavDestinationLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SatNavDestinationLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1808); }
-    }
+    public unsafe ref System.Numerics.Vector3 SatNavDestinationLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1808);
 
     /// <summary>
     /// IntProperty: SatNavEndLinkRaw
@@ -2986,38 +2984,26 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SatNavFirstArrowDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SatNavFirstArrowDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1964); }
-    }
+    public unsafe ref System.Numerics.Vector3 SatNavFirstArrowDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1964);
 
     /// <summary>
     /// StructProperty: SatNavFirstLinkDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SatNavFirstLinkDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1976); }
-    }
+    public unsafe ref System.Numerics.Vector3 SatNavFirstLinkDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1976);
 
     /// <summary>
     /// StructProperty: SatNavEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SatNavEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1988); }
-    }
+    public unsafe ref System.Numerics.Vector3 SatNavEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1988);
 
     /// <summary>
     /// StructProperty: SatNavBatmobileDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SatNavBatmobileDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2000); }
-    }
+    public unsafe ref System.Numerics.Vector3 SatNavBatmobileDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2000);
 
     /// <summary>
     /// FloatProperty: BatmobileStationaryTime

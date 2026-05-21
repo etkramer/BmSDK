@@ -1,23 +1,22 @@
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
+using System.Text;
 using BmSDK.Framework.Redirection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
+using Microsoft.CodeAnalysis.Text;
 using ReferenceAssemblies = Basic.Reference.Assemblies;
 
 namespace BmSDK.Framework;
 
 /// <summary>
-/// Provides the plugin loading system--compilation and instantiation of user scripts.
+/// Provides the plugin loading system--compilation and instantiation of user scripts,
+/// organized as individual mods with per-mod hot reload.
 /// </summary>
-/// <remarks>The ScriptManager class is responsible for discovering user script files, compiling them into an
-/// in-memory assembly, and managing their lifecycle through dynamic loading and unloading. It maintains a collection of
-/// loaded scripts and exposes options and configuration relevant to script compilation. This class is intended for
-/// internal use and is not thread-safe. Scripts are loaded into a collectible AssemblyLoadContext, allowing for
-/// complete unloading and reloading of scripts without restarting the application.</remarks>
 internal static class ScriptManager
 {
     public const LanguageVersion LangVer = LanguageVersion.CSharp14;
@@ -32,6 +31,8 @@ internal static class ScriptManager
         MetadataReference.CreateFromFile(typeof(MoreLinq.MoreEnumerable).Assembly.Location),
         // BmSDK.dll
         MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
+        // Tomlyn.dll
+        MetadataReference.CreateFromFile(typeof(Tomlyn.TomlSerializer).Assembly.Location),
     ];
     public const string GlobalUsings = """
         global using global::System;
@@ -43,10 +44,11 @@ internal static class ScriptManager
         global using global::System.Threading.Tasks;
 
         global using global::BmSDK.Framework;
+        global using global::Tomlyn.Model;
         """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
     public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(
-        GlobalUsings,
+        SourceText.From(GlobalUsings, Encoding.UTF8),
         ParseOptions,
         GlobalUsingsPath
     );
@@ -55,29 +57,24 @@ internal static class ScriptManager
         platform: Platform.X64,
         allowUnsafe: true
     );
-    public const string TargetName = "Scripts.dll";
 
-    private static readonly FileSystemWatcher s_watcher = new(FileUtils.GetScriptsPath())
-    {
-        Filter = "*.cs",
-        IncludeSubdirectories = true,
-        NotifyFilter =
-            NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
-    };
-    private const int DebounceMillis = 500;
-    private static readonly Timer s_debounceTimer = new(ApplyScriptChangesCallback);
+    private record LoadedMod(Mod Mod, AssemblyLoadContext Alc, List<Script> Scripts);
+
+    private static readonly Dictionary<string, LoadedMod> s_loadedMods = [];
+    private static readonly Dictionary<string, Timer> s_debounceTimers = [];
     private static readonly Lock s_lockObj = new();
 
-    private static AssemblyLoadContext? s_scriptsAlc;
-    private static readonly List<Script> s_scripts = [];
-    public static IEnumerable<Script> Scripts => s_scripts;
+    private const int DebounceMillis = 500;
+
+    public static IEnumerable<Script> Scripts => s_loadedMods.Values.SelectMany(m => m.Scripts);
+
+    public static IEnumerable<Mod> Mods => s_loadedMods.Values.Select(m => m.Mod);
 
     private static bool s_isInitialized = false;
 
     /// <summary>
     /// Initializes the script system and begins monitoring for script changes.
     /// </summary>
-    /// <remarks>This method is only be called once during application startup.</remarks>
     public static void Init()
     {
         if (s_isInitialized)
@@ -86,15 +83,13 @@ internal static class ScriptManager
         }
 
         PrepareCompilation();
-        LoadScripts();
-        WatchForScriptChanges();
+        LoadAllMods();
+        WatchForChanges();
         s_isInitialized = true;
     }
 
     private static void PrepareCompilation()
     {
-        // Set custom AssemblyResolve so we don't try to load things we already have loaded.
-        // TODO: Move to custom AssemblyDependencyResolver for s_scriptsAlc
         AppDomain.CurrentDomain.AssemblyResolve += (sender, e) =>
             AppDomain
                 .CurrentDomain.GetAssemblies()
@@ -102,40 +97,88 @@ internal static class ScriptManager
                 .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
     }
 
-    /// <summary>
-    /// Loads and initializes all available script assemblies for the current context.
-    /// </summary>
-    /// <remarks>This method compiles user scripts, loads them into a new assembly load context, and instantiates
-    /// script types. Previously loaded scripts are removed before new scripts are loaded. If script compilation fails,
-    /// no scripts are loaded and the method returns false.</remarks>
-    /// <returns>true if the scripts were successfully compiled and loaded; otherwise, false.</returns>
-    private static bool LoadScripts()
+    private static void LoadAllMods()
     {
-        // Compile new scripts
-        var emitStream = CompileScripts();
-        if (emitStream == null)
+        var modsDir = FileUtils.GetModsPath();
+        var scriptsDir = FileUtils.GetScriptsPath();
+
+        // Load implicit "Scripts" mod from BmGame/Scripts/
+        if (Directory.Exists(scriptsDir))
+        {
+            try
+            {
+                var defaultMod = Mod.CreateDefault(scriptsDir);
+                LoadMod(defaultMod, scriptsDir);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Failed to load loose scripts: {e.Message}");
+            }
+        }
+
+        // Load explicit mods from BmGame/Mods/*/
+        if (Directory.Exists(modsDir))
+        {
+            foreach (var modDir in Directory.EnumerateDirectories(modsDir))
+            {
+                var tomlPath = Path.Combine(modDir, "mod.toml");
+                if (!File.Exists(tomlPath))
+                {
+                    continue;
+                }
+
+                try
+                {
+                    var mod = Mod.FromDirectory(modDir);
+                    var modScriptsDir = Path.Combine(modDir, "scripts");
+                    LoadMod(mod, modScriptsDir);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(
+                        $"Failed to load mod at {Path.GetFileName(modDir)}: {e.Message}"
+                    );
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Compiles and loads a single mod.
+    /// </summary>
+    private static bool LoadMod(Mod mod, string scriptsDir)
+    {
+        var (peStream, pdbStream) = CompileMod(mod, scriptsDir);
+        if (peStream == null)
         {
             return false;
         }
 
-        // Load in new mods and instantiate script types
-        var scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
-        var asm = scriptsAlc.LoadFromStream(emitStream);
+        var targetName = $"{mod.Name}.dll";
+        var modAlc = new AssemblyLoadContext(targetName, isCollectible: true);
+        var asm = modAlc.LoadFromStream(peStream, pdbStream);
 
-        // Register scripts on main thread
         EngineSynchronizationContext.Instance.Post(
             _ =>
             {
-                RemoveOldScripts();
-                s_scriptsAlc = scriptsAlc;
+                // If reloading, unload old version first
+                if (s_loadedMods.TryGetValue(mod.DirectoryPath, out var oldMod))
+                {
+                    UnloadMod(oldMod);
+                }
+
+                var scripts = CreateScriptInstances(asm, mod);
+                var loaded = new LoadedMod(mod, modAlc, scripts);
+                s_loadedMods[mod.DirectoryPath] = loaded;
+
                 RedirectManager.Global.RegisterRedirectors(asm);
                 ScriptComponentManager.RegisterTypes(asm);
-                s_scripts.AddRange(CreateScriptInstances(asm));
+
                 if (s_isInitialized)
                 {
                     RedirectManager.ConfigureAllRedirectedFunctions();
-                    ScriptComponentManager.AutoAttachTypesToExistingActors();
-                    s_scripts.ForEach(script => script.OnLoad());
+                    ScriptComponentManager.AutoAttachTypesToExistingObjs();
+                    scripts.ForEach(script => script.OnLoad());
                 }
             },
             state: null
@@ -145,144 +188,169 @@ internal static class ScriptManager
     }
 
     /// <summary>
-    /// Unloads the current script assembly context and clears all registered script components and mods.
+    /// Unloads a single mod, removing its scripts, components, and redirectors.
     /// </summary>
-    /// <remarks>This method should be called when scripts need to be fully unloaded and detached from in-game
-    /// actors, such as during a reload operation. After execution, the script assembly context is released
-    /// and cannot be reused until reinitialized using <see cref="LoadScripts"/>.</remarks>
-    private static void RemoveOldScripts()
+    private static void UnloadMod(LoadedMod loaded)
     {
-        if (s_scriptsAlc == null)
+        var asm = loaded.Alc.Assemblies.FirstOrDefault();
+
+        // Call OnUnload on this mod's scripts
+        loaded.Scripts.ForEach(script => script.OnUnload());
+
+        if (asm != null)
         {
-            return;
+            // Detach components and clear registrations for this mod's assembly
+            ScriptComponentManager.UnregisterTypes(asm);
+            RedirectManager.Global.UnregisterRedirectors(asm);
+            RedirectManager.Local.ClearCacheForAssembly(asm);
         }
 
-        // TODO: Kill threads by mods when async support is added
-
-        // Clear scripts attached to in-game actors
-        ScriptComponentManager.UnregisterAll();
-
-        // Clear mods
-        UnloadScripts();
-
-        // Clear function redirects of scripts
-        RedirectManager.UnregisterAll();
-
-        // Initiaite closure of AssemblyLoadContext
-        s_scriptsAlc.Unload();
-        s_scriptsAlc = null;
+        // Unload the assembly context
+        loaded.Alc.Unload();
+        s_loadedMods.Remove(loaded.Mod.DirectoryPath);
         GC.Collect();
         GC.WaitForPendingFinalizers();
     }
 
-    private static void UnloadScripts()
+    /// <summary>
+    /// Reloads a single mod by its directory path.
+    /// </summary>
+    private static void ReloadMod(string modDirPath)
     {
-        s_scripts.ForEach(script => script.OnUnload());
-        s_scripts.Clear();
+        lock (s_lockObj)
+        {
+            ErrorOverlay.Clear();
+
+            try
+            {
+                var scriptsDir = FileUtils.GetScriptsPath();
+
+                if (modDirPath == scriptsDir)
+                {
+                    // Reload implicit Scripts mod
+                    var mod = Mod.CreateDefault(scriptsDir);
+                    LoadMod(mod, scriptsDir);
+                }
+                else
+                {
+                    // Reload explicit mod
+                    var tomlPath = Path.Combine(modDirPath, "mod.toml");
+                    if (!File.Exists(tomlPath))
+                    {
+                        // mod.toml was deleted — unload if loaded
+                        if (s_loadedMods.TryGetValue(modDirPath, out var oldMod))
+                        {
+                            EngineSynchronizationContext.Instance.Post(
+                                _ => UnloadMod(oldMod),
+                                state: null
+                            );
+                        }
+
+                        return;
+                    }
+
+                    var mod = Mod.FromDirectory(modDirPath);
+                    var modScriptsDir = Path.Combine(modDirPath, "scripts");
+                    LoadMod(mod, modScriptsDir);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Failed to reload mod: {e.Message}");
+            }
+        }
     }
 
     /// <summary>
-    /// Compiles all C# script files found in the scripts directory into an in-memory assembly stream.
+    /// Compiles all C# script files for a single mod into an in-memory assembly.
     /// </summary>
-    /// <remarks>The returned stream is positioned at the beginning and contains the compiled assembly in
-    /// memory. The method logs warnings if no scripts are found and outputs compilation errors to the log if
-    /// compilation fails. This method is intended for internal use and does not perform compilation on a separate
-    /// thread (yet).</remarks>
-    /// <returns>A <see cref="MemoryStream"/> containing the compiled assembly if compilation succeeds; otherwise, <see
-    /// langword="null"/> if no scripts are found or compilation fails.</returns>
-    private static MemoryStream? CompileScripts()
+    private static (MemoryStream?, MemoryStream?) CompileMod(Mod mod, string scriptsDir)
     {
-        // Find directories (note we're relative to the host asi)
         var baseDir = FileUtils.GetBasePath();
-        var scriptDir = FileUtils.GetScriptsPath();
 
-        // Read C# source files from disk
+        if (!Directory.Exists(scriptsDir))
+        {
+            return (null, null);
+        }
+
         var sourceFilePaths = Directory
-            .EnumerateFiles(scriptDir, "*.cs", SearchOption.AllDirectories)
+            .EnumerateFiles(scriptsDir, "*.cs", SearchOption.AllDirectories)
             .Where(filePath => !filePath.Replace("\\", "/").Contains("/obj/"))
             .ToList();
 
-        // If no scripts found, return false
         if (sourceFilePaths.Count == 0)
         {
             Debug.LogWarning(
-                $"No script files found in .\\{Path.GetRelativePath(baseDir, scriptDir)}"
+                $"[{mod.Name}] No script files found in .\\{Path.GetRelativePath(baseDir, scriptsDir)}"
             );
-            return null;
+            return (null, null);
         }
 
-        // Parse C# sources with Roslyn
         var syntaxTrees = sourceFilePaths
             .Select(filePath =>
-                CSharpSyntaxTree.ParseText(File.ReadAllText(filePath), ParseOptions, filePath)
-            )
+            {
+                using var stream = File.OpenRead(filePath);
+                return CSharpSyntaxTree.ParseText(
+                    SourceText.From(stream, Encoding.UTF8),
+                    ParseOptions,
+                    filePath
+                );
+            })
             .ToList();
 
-        // Parse generated sources (for global usings, etc.)
         syntaxTrees.Insert(index: 0, GlobalUsingsTree);
 
         Debug.Log(
-            $"Compiling {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")}"
+            $"[{mod.Name}] Compiling {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")}"
         );
         Debug.Log("(...)");
 
         var watch = Stopwatch.StartNew();
 
-        // Create compilation from parsed source.
+        var targetName = $"{mod.Name}.dll";
         var compilation = CSharpCompilation
-            .Create(TargetName)
+            .Create(targetName)
             .WithOptions(CompilerOptions)
             .AddReferences(MetadataReferences)
             .AddSyntaxTrees(syntaxTrees);
 
-        // Emit assembly in-memory.
-        var emitStream = new MemoryStream();
-        var emitResult = compilation.Emit(emitStream);
+        var peStream = new MemoryStream();
+        var pdbStream = new MemoryStream();
+        var emitResult = compilation.Emit(peStream, pdbStream);
 
-        // Did we succeed?
         if (!emitResult.Success)
         {
-            PrintErrors(emitResult, scriptDir);
-            return null;
+            PrintErrors(emitResult, scriptsDir, mod.Name);
+            return (null, null);
         }
 
-        // Report compilation duration.
         watch.Stop();
         Debug.Log(
-            $"Success! {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")} compiled in {watch.Elapsed.FormatDuration()}"
+            $"[{mod.Name}] Success! {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")} compiled in {watch.Elapsed.FormatDuration()}"
         );
 
-        emitStream.Position = 0;
-        return emitStream;
+        peStream.Position = 0;
+        pdbStream.Position = 0;
+        return (peStream, pdbStream);
     }
 
-    /// <summary>
-    /// Prints compilation errors grouped by source file to the debug log.
-    /// </summary>
-    /// <remarks>Each error is displayed with its file location, error code, and message. Errors are grouped
-    /// by file, and file paths are shown relative to the specified scripts directory to improve readability.</remarks>
-    /// <param name="emitResult">The result of the compilation process containing diagnostics to be reported.</param>
-    /// <param name="scriptsDir">The root directory used to display relative file paths for error reporting.</param>
-    private static void PrintErrors(EmitResult emitResult, string scriptsDir)
+    private static void PrintErrors(EmitResult emitResult, string scriptsDir, string modName)
     {
-        // Retrieve errors from the emit result.
         var errors = GetErrors(emitResult);
         var errorsByFilePath = errors
             .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
             .ToDictionary(group => group.Key, group => group.ToArray());
 
-        // Print compilation errors by file.
         foreach (var filePath in errorsByFilePath.Keys)
         {
             var shortPath = Path.GetRelativePath(scriptsDir, filePath);
             Debug.LogError(
-                $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
+                $"[{modName}] {shortPath}: {errorsByFilePath[filePath].Length} errors:",
                 skipSender: true
             );
 
             foreach (var error in errorsByFilePath[filePath])
             {
-                // Grab error location for printing.
                 var lineSpan = error.Location.GetLineSpan();
                 var mappedLineSpan = error.Location.GetMappedLineSpan();
                 if (mappedLineSpan.HasMappedPath)
@@ -290,7 +358,6 @@ internal static class ScriptManager
                     lineSpan = mappedLineSpan;
                 }
 
-                // Print error location.
                 var locationText = "";
                 if (lineSpan.IsValid)
                 {
@@ -298,7 +365,6 @@ internal static class ScriptManager
                     locationText = $"({pos.Line + 1}) ";
                 }
 
-                // Print error.
                 Debug.LogError(
                     $"  {locationText}{error.Id}: {error.GetMessage()}",
                     skipSender: true
@@ -306,13 +372,9 @@ internal static class ScriptManager
             }
         }
 
-        // Print failed message.
-        Debug.LogError($"Compilation failed!");
+        Debug.LogError($"[{modName}] Compilation failed!");
     }
 
-    /// <summary>
-    /// Retrieves all diagnostics from the specified emit result that represent errors or warnings treated as errors.
-    /// </summary>
     private static Diagnostic[] GetErrors(EmitResult emitResult)
     {
         var diags = emitResult.Diagnostics;
@@ -321,16 +383,8 @@ internal static class ScriptManager
             .ToArray();
     }
 
-    /// <summary>
-    /// Instantiates all Scripts in the specified assembly.
-    /// </summary>
-    /// <param name="asm">The assembly to search for script types. Only types that inherit from Script and are decorated with
-    /// ScriptAttribute are considered.</param>
-    /// <returns>A list of Script instances created from the eligible types found in the assembly. The list will be empty if no
-    /// matching types are found.</returns>
-    private static List<Script> CreateScriptInstances(Assembly asm)
+    private static List<Script> CreateScriptInstances(Assembly asm, Mod mod)
     {
-        // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
             .Where(t => !t.IsAbstract)
             .Where(t => t.GetCustomAttribute<ScriptAttribute>() != null)
@@ -344,14 +398,21 @@ internal static class ScriptManager
 
             try
             {
-                var script = (Script)Guard.NotNull(Activator.CreateInstance(scriptType));
+                // Create script instance without running constructor
+                var script = (Script)
+                    Guard.NotNull(RuntimeHelpers.GetUninitializedObject(scriptType));
+                // Set fields so they become available during initialization
                 script.Name = scriptName;
+                script.Mod = mod;
+                // Initialize object
+                scriptType.GetConstructor(Type.EmptyTypes)?.Invoke(script, null);
+
                 scripts.Add(script);
             }
             catch (Exception e)
             {
                 Debug.LogError(
-                    $"Failed to create instance of script {scriptName}: {e.Message}",
+                    $"[{mod.Name}] Failed to create instance of script {scriptName}: {e.Message}",
                     skipSender: true
                 );
 
@@ -362,24 +423,89 @@ internal static class ScriptManager
         return scripts;
     }
 
-    private static void WatchForScriptChanges()
-    {
-        s_watcher.Changed += OnScriptChangedDebounced;
-        s_watcher.Created += OnScriptChangedDebounced;
-        s_watcher.Deleted += OnScriptChangedDebounced;
-        s_watcher.Renamed += OnScriptChangedDebounced;
+    // --- File watching ---
 
-        s_watcher.EnableRaisingEvents = true;
+    private static FileSystemWatcher? s_modsWatcher;
+    private static FileSystemWatcher? s_scriptsWatcher;
+
+    private static void WatchForChanges()
+    {
+        var modsDir = FileUtils.GetModsPath();
+        var scriptsDir = FileUtils.GetScriptsPath();
+
+        if (Directory.Exists(modsDir))
+        {
+            s_modsWatcher = new FileSystemWatcher(modsDir)
+            {
+                Filter = "*.cs",
+                IncludeSubdirectories = true,
+                NotifyFilter =
+                    NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
+            };
+
+            s_modsWatcher.Changed += OnModsFileChanged;
+            s_modsWatcher.Created += OnModsFileChanged;
+            s_modsWatcher.Deleted += OnModsFileChanged;
+            s_modsWatcher.Renamed += OnModsFileChanged;
+            s_modsWatcher.EnableRaisingEvents = true;
+        }
+
+        if (Directory.Exists(scriptsDir))
+        {
+            s_scriptsWatcher = new FileSystemWatcher(scriptsDir)
+            {
+                Filter = "*.cs",
+                IncludeSubdirectories = true,
+                NotifyFilter =
+                    NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
+            };
+
+            s_scriptsWatcher.Changed += OnScriptsFileChanged;
+            s_scriptsWatcher.Created += OnScriptsFileChanged;
+            s_scriptsWatcher.Deleted += OnScriptsFileChanged;
+            s_scriptsWatcher.Renamed += OnScriptsFileChanged;
+            s_scriptsWatcher.EnableRaisingEvents = true;
+        }
     }
 
-    private static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e) =>
-        s_debounceTimer.Change(DebounceMillis, Timeout.Infinite);
-
-    private static void ApplyScriptChangesCallback(object? state)
+    private static void OnModsFileChanged(object sender, FileSystemEventArgs e)
     {
-        lock (s_lockObj)
+        var modDir = ResolveModDirectory(e.FullPath);
+        if (modDir == null)
         {
-            LoadScripts();
+            return;
         }
+
+        ScheduleReload(modDir);
+    }
+
+    private static void OnScriptsFileChanged(object sender, FileSystemEventArgs e)
+    {
+        ScheduleReload(FileUtils.GetScriptsPath());
+    }
+
+    private static string? ResolveModDirectory(string changedFilePath)
+    {
+        var modsDir = FileUtils.GetModsPath();
+        var relative = Path.GetRelativePath(modsDir, changedFilePath);
+        var parts = relative.Split(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+
+        if (parts.Length < 2)
+        {
+            return null;
+        }
+
+        return Path.Combine(modsDir, parts[0]);
+    }
+
+    private static void ScheduleReload(string modDirPath)
+    {
+        if (!s_debounceTimers.TryGetValue(modDirPath, out var timer))
+        {
+            timer = new Timer(_ => ReloadMod(modDirPath));
+            s_debounceTimers[modDirPath] = timer;
+        }
+
+        timer.Change(DebounceMillis, Timeout.Infinite);
     }
 }

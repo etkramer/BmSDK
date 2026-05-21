@@ -21,6 +21,11 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleSimBatmobile.
+    /// </summary>
+    public static RVehicleSimBatmobile DefaultObject => (RVehicleSimBatmobile)StaticClass().DefaultObject;
+
     internal RVehicleSimBatmobile() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleSimBatmobile(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimBatmobile>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RestoreStopThreshold
@@ -398,7 +443,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Enum: ESkidToPositionDir
     /// </summary>
-    public enum ESkidToPositionDir
+    public enum ESkidToPositionDir : byte
     {
         ESPD_DontCare = 0,
         ESPD_Left = 1,
@@ -410,7 +455,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// Enum: EBatmobileDriveMode
     /// </summary>
-    public enum EBatmobileDriveMode
+    public enum EBatmobileDriveMode : byte
     {
         BMDM_Drive = 0,
         BMDM_TurnOnSpot = 1,
@@ -466,83 +511,56 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: BoostTorqueVSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat BoostTorqueVSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat BoostTorqueVSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 476);
 
     /// <summary>
     /// StructProperty: StandardTorqueVSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat StandardTorqueVSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat StandardTorqueVSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 496);
 
     /// <summary>
     /// StructProperty: SlipstreamTorqueVSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SlipstreamTorqueVSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SlipstreamTorqueVSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 516);
 
     /// <summary>
     /// StructProperty: BattleModeVSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat BattleModeVSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat BattleModeVSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 536);
 
     /// <summary>
     /// StructProperty: BoostSteeringSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat BoostSteeringSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat BoostSteeringSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 556);
 
     /// <summary>
     /// StructProperty: StandardSteeringSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat StandardSteeringSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat StandardSteeringSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 576);
 
     /// <summary>
     /// StructProperty: HandbrakeSteeringSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat HandbrakeSteeringSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat HandbrakeSteeringSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 596);
 
     /// <summary>
     /// StructProperty: TurnOnSpotSteeringSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat TurnOnSpotSteeringSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat TurnOnSpotSteeringSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 616);
 
     /// <summary>
     /// StructProperty: SelfDriveSteeringSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SelfDriveSteeringSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SelfDriveSteeringSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 636);
 
     /// <summary>
     /// FloatProperty: HoldingBrakeTime
@@ -696,6 +714,11 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: BoostCooldown
+    /// </summary>
+    public InlineArray<float> BoostCooldown => new(3, Ptr + 668);
 
     /// <summary>
     /// FloatProperty: BoostCooldown
@@ -1175,20 +1198,14 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: AbsoluteMoveDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AbsoluteMoveDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
-    }
+    public unsafe ref System.Numerics.Vector3 AbsoluteMoveDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 888);
 
     /// <summary>
     /// StructProperty: TransformationRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TransformationRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
+    public unsafe ref BmSDK.Rotator TransformationRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 900);
 
     /// <summary>
     /// FloatProperty: TransformationTurnTorqueFactor
@@ -1364,11 +1381,8 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: SkidToStopInitialVel
     /// </summary>
-    public unsafe System.Numerics.Vector3 SkidToStopInitialVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 SkidToStopInitialVel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// FloatProperty: SkidToStopTurnSpeedScale
@@ -1382,11 +1396,8 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: SkidToStopEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SkidToStopEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref System.Numerics.Vector3 SkidToStopEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 996);
 
     /// <summary>
     /// FloatProperty: SkidToPositionFactor
@@ -1418,11 +1429,8 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: FlyingOnASplineTargetPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlyingOnASplineTargetPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlyingOnASplineTargetPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1020);
 
     /// <summary>
     /// FloatProperty: BatmobileMassRatio
@@ -1490,11 +1498,8 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: TransmissionModel
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleSimBatmobile.FVehicleTransmission TransmissionModel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleSimBatmobile.FVehicleTransmission>(Ptr + 1060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleSimBatmobile.FVehicleTransmission TransmissionModel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleSimBatmobile.FVehicleTransmission>(Ptr + 1060);
 
     /// <summary>
     /// FloatProperty: ScaleTopSpeed
@@ -1517,11 +1522,8 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// StructProperty: PreventBattleModeMovementInAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreventBattleModeMovementInAxis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreventBattleModeMovementInAxis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1180);
 
     /// <summary>
     /// FloatProperty: AirControlYawTorqueFactorMax

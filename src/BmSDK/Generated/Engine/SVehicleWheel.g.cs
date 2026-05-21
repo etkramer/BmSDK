@@ -21,6 +21,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SVehicleWheel.
+    /// </summary>
+    public static SVehicleWheel DefaultObject => (SVehicleWheel)StaticClass().DefaultObject;
+
     internal SVehicleWheel() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SVehicleWheel(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SVehicleWheel>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FVehicleRaycastHitData
@@ -79,7 +124,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETyreType
     /// </summary>
-    public enum ETyreType
+    public enum ETyreType : byte
     {
         ETyreType_ZeroFriction = 0,
         ETyreType_Batmobile = 1,
@@ -104,7 +149,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDrivableSurfaceMaterialType
     /// </summary>
-    public enum EDrivableSurfaceMaterialType
+    public enum EDrivableSurfaceMaterialType : byte
     {
         DSMT_Default = 0,
         DSMT_Mud = 1,
@@ -242,6 +287,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: WheelParticleSystem
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystem> WheelParticleSystem => new(6, Ptr + 140);
+
+    /// <summary>
     /// ObjectProperty: WheelParticleSystem
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystem WheelParticleSystem_0
@@ -291,6 +341,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: WheelSpinParticleSystem
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystem> WheelSpinParticleSystem => new(6, Ptr + 188);
+
+    /// <summary>
     /// ObjectProperty: WheelSpinParticleSystem
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystem WheelSpinParticleSystem_0
@@ -338,6 +393,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 228); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: WheelSkidMarkSystem
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystem> WheelSkidMarkSystem => new(6, Ptr + 236);
 
     /// <summary>
     /// ObjectProperty: WheelSkidMarkSystem
@@ -407,6 +467,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: WetnessParticleSystem
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystem> WetnessParticleSystem => new(6, Ptr + 300);
+
+    /// <summary>
     /// ObjectProperty: WetnessParticleSystem
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystem WetnessParticleSystem_0
@@ -454,6 +519,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: WetnessParticleComp
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WetnessParticleComp => new(6, Ptr + 348);
 
     /// <summary>
     /// ComponentProperty: WetnessParticleComp
@@ -505,6 +575,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: WheelSkidMarkComp
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelSkidMarkComp => new(6, Ptr + 396);
+
+    /// <summary>
     /// ComponentProperty: WheelSkidMarkComp
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent WheelSkidMarkComp_0
@@ -554,6 +629,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: WheelSpinParticleComp
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelSpinParticleComp => new(6, Ptr + 444);
+
+    /// <summary>
     /// ComponentProperty: WheelSpinParticleComp
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent WheelSpinParticleComp_0
@@ -601,6 +681,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
     }
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: WheelParticleComp
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelParticleComp => new(6, Ptr + 492);
 
     /// <summary>
     /// ComponentProperty: WheelParticleComp
@@ -672,11 +757,8 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BoneOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BoneOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
-    }
+    public unsafe ref System.Numerics.Vector3 BoneOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 556);
 
     /// <summary>
     /// FloatProperty: WheelRadius
@@ -803,6 +885,11 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SVehicleWheel.ETyreType>(Ptr + 599); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 599); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: WetnessParticleBattleModeOnly
+    /// </summary>
+    public InlineArray<byte> WetnessParticleBattleModeOnly => new(6, Ptr + 600);
 
     /// <summary>
     /// ByteProperty: WetnessParticleBattleModeOnly
@@ -946,11 +1033,8 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WheelPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 WheelPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.Numerics.Vector3 WheelPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 648);
 
     /// <summary>
     /// FloatProperty: SpinVel
@@ -982,38 +1066,26 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ContactNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 ContactNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 ContactNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// StructProperty: ContactPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ContactPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
+    public unsafe ref System.Numerics.Vector3 ContactPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 684);
 
     /// <summary>
     /// StructProperty: LongDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 LongDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 LongDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// StructProperty: LatDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 LatDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref System.Numerics.Vector3 LatDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 708);
 
     /// <summary>
     /// FloatProperty: ContactForce
@@ -1171,11 +1243,8 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WheelVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 WheelVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref System.Numerics.Vector3 WheelVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 808);
 
     /// <summary>
     /// FloatProperty: SlipSpeed
@@ -1189,16 +1258,13 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastRaycastData
     /// </summary>
-    public unsafe BmSDK.Engine.SVehicleWheel.FVehicleRaycastHitData LastRaycastData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SVehicleWheel.FVehicleRaycastHitData>(Ptr + 832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
-    }
+    public unsafe ref BmSDK.Engine.SVehicleWheel.FVehicleRaycastHitData LastRaycastData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SVehicleWheel.FVehicleRaycastHitData>(Ptr + 832);
 
     /// <summary>
     /// Enum: EWheelPos
     /// </summary>
-    public enum EWheelPos
+    public enum EWheelPos : byte
     {
         WP_None = 0,
         WP_FrontWheel = 1,
@@ -1209,7 +1275,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWheelSide
     /// </summary>
-    public enum EWheelSide
+    public enum EWheelSide : byte
     {
         SIDE_None = 0,
         SIDE_Left = 1,

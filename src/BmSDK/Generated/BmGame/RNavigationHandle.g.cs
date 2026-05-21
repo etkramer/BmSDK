@@ -21,6 +21,11 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RNavigationHandle.
+    /// </summary>
+    public static RNavigationHandle DefaultObject => (RNavigationHandle)StaticClass().DefaultObject;
+
     internal RNavigationHandle() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RNavigationHandle(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RNavigationHandle>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CacheStartStateForDebug
@@ -1706,7 +1751,7 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// Enum: PathStatus
     /// </summary>
-    public enum PathStatus
+    public enum PathStatus : byte
     {
         PATH_None = 0,
         PATH_Waiting = 1,
@@ -2036,11 +2081,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: PathToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 PathToPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
-    }
+    public unsafe ref System.Numerics.Vector3 PathToPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 536);
 
     /// <summary>
     /// IntProperty: ForcedShortenAttempts
@@ -2054,20 +2096,14 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: TempMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TempMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 TempMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
 
     /// <summary>
     /// StructProperty: LastSafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
 
     /// <summary>
     /// IntProperty: LastSafeAnchorID
@@ -2090,11 +2126,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: LastMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastMoveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastMoveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 584);
 
     /// <summary>
     /// FloatProperty: LastMoveLocationUpdateTime
@@ -2117,11 +2150,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StuckTestLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StuckTestLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref System.Numerics.Vector3 StuckTestLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 604);
 
     /// <summary>
     /// FloatProperty: StuckTestTime
@@ -2171,11 +2201,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: PreviousPathLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousPathLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousPathLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 684);
 
     /// <summary>
     /// ArrayProperty: AvoidPathObjects
@@ -2198,11 +2225,8 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// StructProperty: StartStateDebug
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo StartStateDebug
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo StartStateDebug
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RNavigationHandle.FStartStateDebugInfo>(Ptr + 728);
 
     /// <summary>
     /// ArrayProperty: NavHandleHistory

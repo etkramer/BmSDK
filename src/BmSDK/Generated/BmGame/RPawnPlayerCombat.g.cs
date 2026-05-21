@@ -21,6 +21,11 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerCombat.
+    /// </summary>
+    public static RPawnPlayerCombat DefaultObject => (RPawnPlayerCombat)StaticClass().DefaultObject;
+
     internal RPawnPlayerCombat() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// </summary>
     protected RPawnPlayerCombat(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCombat>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RiddlerSwapExtendCombo
@@ -3744,7 +3754,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: EWeaponDestroyType
     /// </summary>
-    public enum EWeaponDestroyType
+    public enum EWeaponDestroyType : byte
     {
         WDL_None = 0,
         WDL_Unarmed = 1,
@@ -3948,7 +3958,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownEnvironmentDir
     /// </summary>
-    public enum ETakedownEnvironmentDir
+    public enum ETakedownEnvironmentDir : byte
     {
         TDED_None = 0,
         TDED_Front = 1,
@@ -3961,7 +3971,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownMovement
     /// </summary>
-    public enum ETakedownMovement
+    public enum ETakedownMovement : byte
     {
         TDM_None = 0,
         TDM_Forwards = 1,
@@ -3972,7 +3982,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownType
     /// </summary>
-    public enum ETakedownType
+    public enum ETakedownType : byte
     {
         TDT_None = 0,
         TDT_Unarmed = 1,
@@ -4012,7 +4022,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETakedownSpeed
     /// </summary>
-    public enum ETakedownSpeed
+    public enum ETakedownSpeed : byte
     {
         TS_Slow = 0,
         TS_Fast = 1,
@@ -4477,7 +4487,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: ETryCounterResult
     /// </summary>
-    public enum ETryCounterResult
+    public enum ETryCounterResult : byte
     {
         ETCR_Nothing = 0,
         ETCR_FailCounter = 1,
@@ -4489,7 +4499,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterSlopeDirection
     /// </summary>
-    public enum CounterSlopeDirection
+    public enum CounterSlopeDirection : byte
     {
         ECSD_None = 0,
         ECSD_BatmanHigh = 1,
@@ -4500,7 +4510,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterWeaponGrabbed
     /// </summary>
-    public enum CounterWeaponGrabbed
+    public enum CounterWeaponGrabbed : byte
     {
         ECWG_None = 0,
         ECWG_WeaponPipe = 1,
@@ -4510,7 +4520,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterStartHeight
     /// </summary>
-    public enum CounterStartHeight
+    public enum CounterStartHeight : byte
     {
         ECSH_Normal = 0,
         ECSH_Low = 1,
@@ -4520,7 +4530,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterStrength
     /// </summary>
-    public enum CounterStrength
+    public enum CounterStrength : byte
     {
         ECS_Weak = 0,
         ECS_Strong = 1,
@@ -4533,7 +4543,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterEnvironmentDir
     /// </summary>
-    public enum CounterEnvironmentDir
+    public enum CounterEnvironmentDir : byte
     {
         ECED_None = 0,
         ECED_Front = 1,
@@ -4546,7 +4556,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CounterMoveDir
     /// </summary>
-    public enum CounterMoveDir
+    public enum CounterMoveDir : byte
     {
         ECD_Front = 0,
         ECD_Back = 1,
@@ -5121,7 +5131,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeEnvironmentDir
     /// </summary>
-    public enum StrikeEnvironmentDir
+    public enum StrikeEnvironmentDir : byte
     {
         SED_None = 0,
         SED_Left = 1,
@@ -5134,7 +5144,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: PickupWeaponType
     /// </summary>
-    public enum PickupWeaponType
+    public enum PickupWeaponType : byte
     {
         PWT_None = 0,
         PWT_WeaponPipe = 1,
@@ -5147,7 +5157,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeWeaponGrabbed
     /// </summary>
-    public enum StrikeWeaponGrabbed
+    public enum StrikeWeaponGrabbed : byte
     {
         SWG_None = 0,
         SWG_WeaponPipe = 1,
@@ -5158,7 +5168,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeStartHeight
     /// </summary>
-    public enum StrikeStartHeight
+    public enum StrikeStartHeight : byte
     {
         STH_Normal = 0,
         STH_Low = 1,
@@ -5168,7 +5178,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeTargetType
     /// </summary>
-    public enum StrikeTargetType
+    public enum StrikeTargetType : byte
     {
         STT_Unarmed = 0,
         STT_Pipe = 1,
@@ -5185,7 +5195,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeTurnMotion
     /// </summary>
-    public enum StrikeTurnMotion
+    public enum StrikeTurnMotion : byte
     {
         STM_None = 0,
         STM_Clockwise = 1,
@@ -5196,7 +5206,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeDamageDirection
     /// </summary>
-    public enum StrikeDamageDirection
+    public enum StrikeDamageDirection : byte
     {
         SDD_None = 0,
         SDD_HorizontalAcrossBody = 1,
@@ -5209,7 +5219,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: CameraDirection
     /// </summary>
-    public enum CameraDirection
+    public enum CameraDirection : byte
     {
         CAM_None = 0,
         CAM_Left = 1,
@@ -5220,7 +5230,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: StrikeHand
     /// </summary>
-    public enum StrikeHand
+    public enum StrikeHand : byte
     {
         SH_None = 0,
         SH_Left = 1,
@@ -5231,7 +5241,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: HitStrength
     /// </summary>
-    public enum HitStrength
+    public enum HitStrength : byte
     {
         HIT_Strong = 0,
         HIT_Weak = 1,
@@ -5244,7 +5254,7 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// Enum: EPlayerVariableType
     /// </summary>
-    public enum EPlayerVariableType
+    public enum EPlayerVariableType : byte
     {
         EPVT_Batman = 0,
         EPVT_Batmobile = 1,
@@ -5263,11 +5273,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: CombatAnimRecord
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId CombatAnimRecord
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 3052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3052); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId CombatAnimRecord
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 3052);
 
     /// <summary>
     /// ComponentProperty: ChargeFX
@@ -6406,11 +6413,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: LastPylonCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPylonCheckLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3896); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPylonCheckLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3896);
 
     /// <summary>
     /// ArrayProperty: BoneNameListConversion
@@ -6469,11 +6473,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: PrevStrikeInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo PrevStrikeInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 3960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3960); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo PrevStrikeInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo>(Ptr + 3960);
 
     /// <summary>
     /// ArrayProperty: PrevStrikeTargets
@@ -6568,11 +6569,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: LastDmgImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastDmgImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4260); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastDmgImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4260);
 
     /// <summary>
     /// NameProperty: LastDmgBoneName
@@ -6604,11 +6602,8 @@ public partial class RPawnPlayerCombat : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGa
     /// <summary>
     /// StructProperty: CheckCameraTargetOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CheckCameraTargetOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4312); }
-    }
+    public unsafe ref System.Numerics.Vector3 CheckCameraTargetOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4312);
 
     /// <summary>
     /// FloatProperty: CurrFOV

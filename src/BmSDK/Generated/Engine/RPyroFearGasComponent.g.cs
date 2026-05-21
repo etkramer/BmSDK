@@ -21,6 +21,11 @@ public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPyroFearGasComponent.
+    /// </summary>
+    public static RPyroFearGasComponent DefaultObject => (RPyroFearGasComponent)StaticClass().DefaultObject;
+
     internal RPyroFearGasComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPyroFearGasComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPyroFearGasComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FRockPyroFearGasSettings
@@ -266,20 +311,14 @@ public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: refBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds refBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds refBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 568);
 
     /// <summary>
     /// StructProperty: refLevelOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 refLevelOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 refLevelOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// ArrayProperty: cachedPoissonDisc
@@ -293,20 +332,14 @@ public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, Bm
     /// <summary>
     /// StructProperty: AsyncResults
     /// </summary>
-    public unsafe BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasAsyncResults AsyncResults
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasAsyncResults>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasAsyncResults AsyncResults
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasAsyncResults>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: PyroFearGasSettings
     /// </summary>
-    public unsafe BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasSettings PyroFearGasSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasSettings>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasSettings PyroFearGasSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RPyroFearGasComponent.FRockPyroFearGasSettings>(Ptr + 668);
 
     /// <summary>
     /// StructProperty: WaveHeightTexRef

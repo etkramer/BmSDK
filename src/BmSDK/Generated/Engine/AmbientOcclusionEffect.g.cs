@@ -21,6 +21,11 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AmbientOcclusionEffect.
+    /// </summary>
+    public static AmbientOcclusionEffect DefaultObject => (AmbientOcclusionEffect)StaticClass().DefaultObject;
+
     internal AmbientOcclusionEffect() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// </summary>
     protected AmbientOcclusionEffect(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientOcclusionEffect>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EAmbientOcclusionQuality
     /// </summary>
-    public enum EAmbientOcclusionQuality
+    public enum EAmbientOcclusionQuality : byte
     {
         AO_High = 0,
         AO_Medium = 1,
@@ -101,11 +146,8 @@ public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, Bm
     /// <summary>
     /// StructProperty: OcclusionColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor OcclusionColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor OcclusionColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 148);
 
     /// <summary>
     /// FloatProperty: OcclusionPower

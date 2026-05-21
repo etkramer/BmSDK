@@ -21,6 +21,11 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_FaceFXOutput.
+    /// </summary>
+    public static RAnimUtil_FaceFXOutput DefaultObject => (RAnimUtil_FaceFXOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_FaceFXOutput() { }
 
     /// <summary>
@@ -33,32 +38,63 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// </summary>
     protected RAnimUtil_FaceFXOutput(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FaceFXOutput>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: CurrentBlinkState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState CurrentBlinkState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState CurrentBlinkState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FaceFXOutput.FBlinkState>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: CurrentLeftEyeRotation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FYawPitch CurrentLeftEyeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FYawPitch CurrentLeftEyeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: CurrentRightEyeRotation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FYawPitch CurrentRightEyeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FYawPitch CurrentRightEyeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FYawPitch>(Ptr + 104);
 
     /// <summary>
     /// BoolProperty: ReduceBlinksAndEyeMovements
@@ -106,7 +142,7 @@ public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EBlinkSequenceState
     /// </summary>
-    public enum EBlinkSequenceState
+    public enum EBlinkSequenceState : byte
     {
         BSS_Init = 0,
         BSS_Disabled = 1,

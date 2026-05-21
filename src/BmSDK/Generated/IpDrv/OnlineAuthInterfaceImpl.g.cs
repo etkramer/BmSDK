@@ -21,6 +21,11 @@ public partial class OnlineAuthInterfaceImpl : BmSDK.GameObject, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineAuthInterfaceImpl.
+    /// </summary>
+    public static OnlineAuthInterfaceImpl DefaultObject => (OnlineAuthInterfaceImpl)StaticClass().DefaultObject;
+
     internal OnlineAuthInterfaceImpl() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class OnlineAuthInterfaceImpl : BmSDK.GameObject, BmSDK.IGameObje
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected OnlineAuthInterfaceImpl(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineAuthInterfaceImpl>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetServerAddr
@@ -908,56 +953,38 @@ public partial class OnlineAuthInterfaceImpl : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: ClientAuthSessions
     /// </summary>
-    public unsafe BmSDK.GameObject.FSparseArray_Mirror ClientAuthSessions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.GameObject.FSparseArray_Mirror ClientAuthSessions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: ServerAuthSessions
     /// </summary>
-    public unsafe BmSDK.GameObject.FSparseArray_Mirror ServerAuthSessions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref BmSDK.GameObject.FSparseArray_Mirror ServerAuthSessions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 160);
 
     /// <summary>
     /// StructProperty: PeerAuthSessions
     /// </summary>
-    public unsafe BmSDK.GameObject.FSparseArray_Mirror PeerAuthSessions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.GameObject.FSparseArray_Mirror PeerAuthSessions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 216);
 
     /// <summary>
     /// StructProperty: LocalClientAuthSessions
     /// </summary>
-    public unsafe BmSDK.GameObject.FSparseArray_Mirror LocalClientAuthSessions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref BmSDK.GameObject.FSparseArray_Mirror LocalClientAuthSessions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 272);
 
     /// <summary>
     /// StructProperty: LocalServerAuthSessions
     /// </summary>
-    public unsafe BmSDK.GameObject.FSparseArray_Mirror LocalServerAuthSessions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref BmSDK.GameObject.FSparseArray_Mirror LocalServerAuthSessions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 328);
 
     /// <summary>
     /// StructProperty: LocalPeerAuthSessions
     /// </summary>
-    public unsafe BmSDK.GameObject.FSparseArray_Mirror LocalPeerAuthSessions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref BmSDK.GameObject.FSparseArray_Mirror LocalPeerAuthSessions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSparseArray_Mirror>(Ptr + 384);
 
     /// <summary>
     /// ArrayProperty: AuthReadyDelegates

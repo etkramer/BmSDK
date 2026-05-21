@@ -21,52 +21,62 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAbandonedVehicle.
+    /// </summary>
+    public static RAbandonedVehicle DefaultObject => (RAbandonedVehicle)StaticClass().DefaultObject;
+
     internal RAbandonedVehicle() { }
 
     /// <summary>
     /// Constructs a new RAbandonedVehicle
     /// </summary>
-    public RAbandonedVehicle(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAbandonedVehicle Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAbandonedVehicle(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAbandonedVehicle(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAbandonedVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CleanupRainSound
@@ -1535,149 +1545,100 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     }
 
     /// <summary>
-    /// StructProperty: VehicleLights
+    /// InlineArray{StructProperty}: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1048); }
-    }
+    public InlineArray<BmSDK.BmGame.RVehicle.FVehicleLight> VehicleLights => new(18, Ptr + 1048);
+
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1096); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1048);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1096);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1192); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1144);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1240); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1192);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1240);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1336); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1288);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1384); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1336);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1432); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1384);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1480); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1432);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1528); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1480);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1576); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1528);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1624); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1576);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1672); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1624);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1720); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1672);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1768); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1720);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1816); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1768);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1864); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1816);
+    /// <summary>
+    /// StructProperty: VehicleLights
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 1864);
 
     /// <summary>
     /// BoolProperty: HideBonesOnSmashed
@@ -2159,11 +2120,8 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: ExplosionScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ExplosionScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1936); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ExplosionScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 1936);
 
     /// <summary>
     /// ArrayProperty: DeathExplosionSoundArray
@@ -2195,20 +2153,14 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: CachedLightMat1234
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor CachedLightMat1234
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor CachedLightMat1234
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2116);
 
     /// <summary>
     /// StructProperty: CachedLightMat5678
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor CachedLightMat5678
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2132); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor CachedLightMat5678
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2132);
 
     /// <summary>
     /// ByteProperty: CachedTankLightsOn
@@ -2321,11 +2273,8 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: PreviousObstacleLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousObstacleLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousObstacleLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2208);
 
     /// <summary>
     /// ArrayProperty: LightsMaterialInst
@@ -2339,11 +2288,8 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: WinchAttachLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 WinchAttachLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
-    }
+    public unsafe ref System.Numerics.Vector3 WinchAttachLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2236);
 
     /// <summary>
     /// IntProperty: ObstacleIndex
@@ -2357,20 +2303,14 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: RoadObstacleExtraBounds
     /// </summary>
-    public unsafe System.Numerics.Vector3 RoadObstacleExtraBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2252); }
-    }
+    public unsafe ref System.Numerics.Vector3 RoadObstacleExtraBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2252);
 
     /// <summary>
     /// StructProperty: COMOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 COMOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2264); }
-    }
+    public unsafe ref System.Numerics.Vector3 COMOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2264);
 
     /// <summary>
     /// FloatProperty: MassScale
@@ -2555,11 +2495,8 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: InitialLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2416); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2416);
 
     /// <summary>
     /// IntProperty: Health
@@ -2582,11 +2519,8 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: DeathHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 DeathHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
-    }
+    public unsafe ref System.Numerics.Vector3 DeathHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2436);
 
     /// <summary>
     /// FloatProperty: DamageTimeEMP
@@ -2627,20 +2561,14 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// StructProperty: CrushPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrushPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrushPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2464);
 
     /// <summary>
     /// StructProperty: CrushNeg
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrushNeg
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2476); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrushNeg
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2476);
 
     /// <summary>
     /// IntProperty: PylonReferences

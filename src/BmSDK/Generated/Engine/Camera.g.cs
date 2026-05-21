@@ -21,52 +21,62 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Camera.
+    /// </summary>
+    public static Camera DefaultObject => (Camera)StaticClass().DefaultObject;
+
     internal Camera() { }
 
     /// <summary>
     /// Constructs a new Camera
     /// </summary>
-    public Camera(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Camera Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public Camera(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Camera(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Camera>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Camera>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Camera>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Camera>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Camera>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Camera>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Camera>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Camera>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: StopCameraAnim
@@ -562,7 +572,7 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECameraAnimPlaySpace
     /// </summary>
-    public enum ECameraAnimPlaySpace
+    public enum ECameraAnimPlaySpace : byte
     {
         CAPS_CameraLocal = 0,
         CAPS_World = 1,
@@ -643,7 +653,7 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EViewTargetBlendFunction
     /// </summary>
-    public enum EViewTargetBlendFunction
+    public enum EViewTargetBlendFunction : byte
     {
         VTBlend_Linear = 0,
         VTBlend_Cubic = 1,
@@ -747,6 +757,11 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraModifier_CameraShake>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: AnimInstPool
+    /// </summary>
+    public InlineArray<BmSDK.Engine.CameraAnimInst> AnimInstPool => new(8, Ptr + 684);
 
     /// <summary>
     /// ObjectProperty: AnimInstPool
@@ -996,11 +1011,8 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FadeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor FadeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor FadeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 800);
 
     /// <summary>
     /// FloatProperty: FadeAmount
@@ -1023,47 +1035,32 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CamPostProcessSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings CamPostProcessSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings CamPostProcessSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 812);
 
     /// <summary>
     /// StructProperty: RenderingOverrides
     /// </summary>
-    public unsafe BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides RenderingOverrides
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides>(Ptr + 1336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1336); }
-    }
+    public unsafe ref BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides RenderingOverrides
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides>(Ptr + 1336);
 
     /// <summary>
     /// StructProperty: ColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 ColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
-    }
+    public unsafe ref System.Numerics.Vector3 ColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1340);
 
     /// <summary>
     /// StructProperty: DesiredColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 DesiredColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
-    }
+    public unsafe ref System.Numerics.Vector3 DesiredColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1352);
 
     /// <summary>
     /// StructProperty: OriginalColorScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalColorScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalColorScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1364);
 
     /// <summary>
     /// FloatProperty: ColorScaleInterpDuration
@@ -1104,38 +1101,26 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraCache
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTCameraCache CameraCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 1392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1392); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTCameraCache CameraCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 1392);
 
     /// <summary>
     /// StructProperty: LastFrameCameraCache
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTCameraCache LastFrameCameraCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 1424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTCameraCache LastFrameCameraCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTCameraCache>(Ptr + 1424);
 
     /// <summary>
     /// StructProperty: ViewTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTViewTarget ViewTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1456); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTViewTarget ViewTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1456);
 
     /// <summary>
     /// StructProperty: PendingViewTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FTViewTarget PendingViewTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1512); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FTViewTarget PendingViewTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FTViewTarget>(Ptr + 1512);
 
     /// <summary>
     /// FloatProperty: BlendTimeToGo
@@ -1149,11 +1134,8 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BlendParams
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.FViewTargetTransitionParams BlendParams
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.FViewTargetTransitionParams>(Ptr + 1572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1572); }
-    }
+    public unsafe ref BmSDK.Engine.Camera.FViewTargetTransitionParams BlendParams
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Camera.FViewTargetTransitionParams>(Ptr + 1572);
 
     /// <summary>
     /// ArrayProperty: ModifierList
@@ -1176,20 +1158,14 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FreeCamOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FreeCamOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1608); }
-    }
+    public unsafe ref System.Numerics.Vector3 FreeCamOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1608);
 
     /// <summary>
     /// StructProperty: FadeAlpha
     /// </summary>
-    public unsafe System.Numerics.Vector2 FadeAlpha
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 1620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1620); }
-    }
+    public unsafe ref System.Numerics.Vector2 FadeAlpha
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 1620);
 
     /// <summary>
     /// FloatProperty: fadeTime

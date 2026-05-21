@@ -21,12 +21,57 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhysUtil.
+    /// </summary>
+    public static RPhysUtil DefaultObject => (RPhysUtil)StaticClass().DefaultObject;
+
     internal RPhysUtil() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPhysUtil(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhysUtil>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FCapeChangeData
@@ -243,7 +288,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeMirroredType
     /// </summary>
-    public enum ECapeMirroredType
+    public enum ECapeMirroredType : byte
     {
         ECAPEMIRROREDTYPE_Unmirrored = 0,
         ECAPEMIRROREDTYPE_Mirrored = 1,
@@ -253,7 +298,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeHiddenType
     /// </summary>
-    public enum ECapeHiddenType
+    public enum ECapeHiddenType : byte
     {
         CAPEHIDDENTYPE_Leave = 0,
         CAPEHIDDENTYPE_Hide = 1,
@@ -265,7 +310,7 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeEnabledType
     /// </summary>
-    public enum ECapeEnabledType
+    public enum ECapeEnabledType : byte
     {
         CAPEENABLEDTYPE_Leave = 0,
         CAPEENABLEDTYPE_Disable = 1,

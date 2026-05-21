@@ -1,6 +1,5 @@
 global using System.Runtime.InteropServices;
 using System.Diagnostics.CodeAnalysis;
-using BmSDK.Engine;
 using BmSDK.Framework.Redirection;
 using MoreLinq;
 
@@ -19,6 +18,7 @@ internal static class Loader
 
     private static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     private static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
+    private static GameFunctions.AddObjectDelegate? _AddObjectDelegateDetourBase = null;
     private static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
     private static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
@@ -43,17 +43,23 @@ internal static class Loader
         // Find/load scripts
         ScriptManager.Init();
 
-        Debug.Log("Hello from BmSDK");
+        // Register BmSDK's internal redirectors.
+        RedirectManager.Global.RegisterRedirectors(typeof(Loader).Assembly);
 
         // Create function detours
+        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+            GameInfo.FuncOffsets.EngineTick,
+            EngineTickDetour
+        );
+
         _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
             GameInfo.FuncOffsets.ProcessInternal,
             ProcessInternalDetour
         );
 
-        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
-            GameInfo.FuncOffsets.EngineTick,
-            EngineTickDetour
+        _AddObjectDelegateDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
+            GameInfo.FuncOffsets.AddObject,
+            AddObjectDetour
         );
 
         _ConditionalPostLoadDetourBase =
@@ -96,7 +102,10 @@ internal static class Loader
                 // Kick off DLC scanning early
                 var dlcManager = Game.GetEngine().DLCManager;
                 dlcManager.RefreshDLC();
-                
+
+                // Preload packages and root keep-alive objects before any world loads
+                PreloadManager.Run();
+
                 ScriptManager.Scripts.ForEach(script =>
                     Debug.RunWithSender(script.Name, script.Main)
                 );
@@ -120,15 +129,6 @@ internal static class Loader
                 );
             }
 
-            // Auto-attach script components to newly spawned actors
-            if (ScriptComponentManager.HasAutoAttachTypes())
-            {
-                if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
-                {
-                    ScriptComponentManager.TryAutoAttachComponents(actor);
-                }
-            }
-
             // Notify scripts of game tick
             if (funcName == TickFuncName)
             {
@@ -142,9 +142,9 @@ internal static class Loader
                 );
 
                 // Call OnTick() for script components
-                if (Actor.AllScriptComponents.Count > 0)
+                if (GameObject.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    foreach (var scriptComponent in GameObject.AllScriptComponents.ToArray())
                     {
                         Debug.RunWithSender(scriptComponent.GetType().Name, scriptComponent.OnTick);
                     }
@@ -159,6 +159,24 @@ internal static class Loader
 
             // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
             _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+        });
+    }
+
+    // Detour for UObject::AddObject()
+    private static void AddObjectDetour(IntPtr self, int InIndex)
+    {
+        // Call base impl to instantiate UObject
+        _AddObjectDelegateDetourBase!.Invoke(self, InIndex);
+
+        RunGuarded(() =>
+        {
+            var obj = MarshalUtil.GetOrCreateWrapper(self);
+
+            // Auto-attach script components to non-serialized objs
+            if (!obj.IsClassDefaultObject && ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
+            }
         });
     }
 
@@ -178,12 +196,16 @@ internal static class Loader
         RunGuarded(() =>
         {
             var obj = MarshalUtil.GetOrCreateWrapper(self);
-            if (obj is not Function func)
+            if (obj is Function func)
             {
-                return;
+                RedirectManager.TryConfigureFunction(func);
             }
 
-            RedirectManager.TryConfigureFunction(func);
+            // Auto-attach script components to serialized objs
+            if (!obj.IsClassDefaultObject && ScriptComponentManager.HasAutoAttachTypes())
+            {
+                ScriptComponentManager.TryAutoAttachComponents(obj, objNotLoaded: true);
+            }
         });
     }
 

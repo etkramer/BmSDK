@@ -21,6 +21,11 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlapsAssetInstance.
+    /// </summary>
+    public static RFlapsAssetInstance DefaultObject => (RFlapsAssetInstance)StaticClass().DefaultObject;
+
     internal RFlapsAssetInstance() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RFlapsAssetInstance(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlapsAssetInstance>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: WakeUp
@@ -73,7 +118,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERFlapsTickGroup
     /// </summary>
-    public enum ERFlapsTickGroup
+    public enum ERFlapsTickGroup : byte
     {
         RFlapsTickGroup_PreAsync = 0,
         RFlapsTickGroup_Async = 1,
@@ -228,11 +273,8 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OwnerPreviousPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 OwnerPreviousPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref System.Numerics.Vector3 OwnerPreviousPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 192);
 
     /// <summary>
     /// FloatProperty: OverrideBlendWeightStartWeight
@@ -719,7 +761,7 @@ public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERFlapsPoseExtractMode
     /// </summary>
-    public enum ERFlapsPoseExtractMode
+    public enum ERFlapsPoseExtractMode : byte
     {
         RFPEM_Full = 0,
         RFPEM_ConnectedRFlapChainsOnlyOrChildrenOrRFlaps = 1,

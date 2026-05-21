@@ -21,52 +21,62 @@ public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhotoCameraController.
+    /// </summary>
+    public static RPhotoCameraController DefaultObject => (RPhotoCameraController)StaticClass().DefaultObject;
+
     internal RPhotoCameraController() { }
 
     /// <summary>
     /// Constructs a new RPhotoCameraController
     /// </summary>
-    public RPhotoCameraController(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPhotoCameraController Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPhotoCameraController(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPhotoCameraController(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoCameraController>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: InitInputSystem
@@ -421,7 +431,7 @@ public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Enum: EPhotoMenuSettings
     /// </summary>
-    public enum EPhotoMenuSettings
+    public enum EPhotoMenuSettings : byte
     {
         PMS_CameraZoom = 0,
         PMS_CameraDistance = 1,
@@ -476,6 +486,11 @@ public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 1936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1936); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: Filter
+    /// </summary>
+    public InlineArray<BmSDK.Engine.Texture2D> Filter => new(11, Ptr + 1944);
 
     /// <summary>
     /// ObjectProperty: Filter
@@ -569,38 +584,26 @@ public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// StructProperty: DOFSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings DOFSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 2032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2032); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings DOFSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 2032);
 
     /// <summary>
     /// StructProperty: OrbitOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 OrbitOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2556); }
-    }
+    public unsafe ref System.Numerics.Vector3 OrbitOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2556);
 
     /// <summary>
     /// StructProperty: OrbitRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OrbitRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2568); }
-    }
+    public unsafe ref BmSDK.Rotator OrbitRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2568);
 
     /// <summary>
     /// StructProperty: OrbitRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator OrbitRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2580); }
-    }
+    public unsafe ref BmSDK.Rotator OrbitRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2580);
 
     /// <summary>
     /// FloatProperty: DesiredZoomSpeed
@@ -767,9 +770,6 @@ public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// StructProperty: TrackingOffset
     /// </summary>
-    public unsafe BmSDK.Rotator TrackingOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2660); }
-    }
+    public unsafe ref BmSDK.Rotator TrackingOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2660);
 }

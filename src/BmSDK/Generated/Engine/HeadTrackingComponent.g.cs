@@ -21,6 +21,11 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as HeadTrackingComponent.
+    /// </summary>
+    public static HeadTrackingComponent DefaultObject => (HeadTrackingComponent)StaticClass().DefaultObject;
+
     internal HeadTrackingComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected HeadTrackingComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<HeadTrackingComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FActorToLookAt
@@ -196,18 +241,12 @@ public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// StructProperty: RootMeshLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMeshLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMeshLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 288);
 
     /// <summary>
     /// StructProperty: RootMeshRotation
     /// </summary>
-    public unsafe BmSDK.Rotator RootMeshRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
-    }
+    public unsafe ref BmSDK.Rotator RootMeshRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 300);
 }

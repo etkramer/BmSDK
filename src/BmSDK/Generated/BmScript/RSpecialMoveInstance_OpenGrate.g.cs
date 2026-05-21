@@ -21,52 +21,62 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_OpenGrate.
+    /// </summary>
+    public static RSpecialMoveInstance_OpenGrate DefaultObject => (RSpecialMoveInstance_OpenGrate)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_OpenGrate() { }
 
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_OpenGrate
     /// </summary>
-    public RSpecialMoveInstance_OpenGrate(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_OpenGrate Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_OpenGrate(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSpecialMoveInstance_OpenGrate(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_OpenGrate>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: AllowKismetHelpText
@@ -358,11 +368,8 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// StructProperty: EndPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 928);
 
     /// <summary>
     /// IntProperty: EndYaw
@@ -439,38 +446,26 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// StructProperty: TransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 972);
 
     /// <summary>
     /// StructProperty: CameraLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 976);
 
     /// <summary>
     /// StructProperty: CameraRotation
     /// </summary>
-    public unsafe BmSDK.Rotator CameraRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
-    }
+    public unsafe ref BmSDK.Rotator CameraRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 988);
 
     /// <summary>
     /// StructProperty: ChosenSequence
     /// </summary>
-    public unsafe BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence ChosenSequence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
+    public unsafe ref BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence ChosenSequence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RSpecialMoveConfig_OpenGrate.FStruggleSequence>(Ptr + 1000);
 
     /// <summary>
     /// ObjectProperty: CurrentWaveForm
@@ -520,18 +515,12 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// StructProperty: GrateTensionSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GrateTensionSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GrateTensionSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1084);
 
     /// <summary>
     /// StructProperty: RopeTensionSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RopeTensionSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1100);
 }

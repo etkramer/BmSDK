@@ -21,6 +21,11 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BMBLUpgradeConversation.
+    /// </summary>
+    public static RSeqAct_BMBLUpgradeConversation DefaultObject => (RSeqAct_BMBLUpgradeConversation)StaticClass().DefaultObject;
+
     internal RSeqAct_BMBLUpgradeConversation() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_BMBLUpgradeConversation(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BMBLUpgradeConversation>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -151,7 +196,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// Enum: eBMBLUpgradeConvState
     /// </summary>
-    public enum eBMBLUpgradeConvState
+    public enum eBMBLUpgradeConvState : byte
     {
         eBUCS_Intro = 0,
         eBUCS_Interactive = 1,
@@ -167,6 +212,11 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkDialogueSpeech>(Ptr + 1020); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: outroConversations
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AkDialogueSpeech> outroConversations => new(4, Ptr + 1028);
 
     /// <summary>
     /// ObjectProperty: outroConversations

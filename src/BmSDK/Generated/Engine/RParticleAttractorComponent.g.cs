@@ -21,6 +21,11 @@ public partial class RParticleAttractorComponent : BmSDK.Engine.ActorComponent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleAttractorComponent.
+    /// </summary>
+    public static RParticleAttractorComponent DefaultObject => (RParticleAttractorComponent)StaticClass().DefaultObject;
+
     internal RParticleAttractorComponent() { }
 
     /// <summary>
@@ -33,32 +38,63 @@ public partial class RParticleAttractorComponent : BmSDK.Engine.ActorComponent, 
     /// </summary>
     protected RParticleAttractorComponent(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleAttractorComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: AttractorChannel
     /// </summary>
-    public unsafe BmSDK.GameObject.FRChannel8 AttractorChannel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRChannel8>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.GameObject.FRChannel8 AttractorChannel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRChannel8>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat Range
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FMatineeRawDistributionFloat Range
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FMatineeRawDistributionFloat Strength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FMatineeRawDistributionFloat Strength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FMatineeRawDistributionFloat>(Ptr + 172);
 
     /// <summary>
     /// BoolProperty: StrengthByDistance

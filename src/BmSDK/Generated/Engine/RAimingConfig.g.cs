@@ -21,6 +21,11 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAimingConfig.
+    /// </summary>
+    public static RAimingConfig DefaultObject => (RAimingConfig)StaticClass().DefaultObject;
+
     internal RAimingConfig() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     protected RAimingConfig(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EAimingReference
     /// </summary>
-    public enum EAimingReference
+    public enum EAimingReference : byte
     {
         AR_Forward = 0,
         AR_Head = 1,
@@ -48,47 +93,32 @@ public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Spine
     /// </summary>
-    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig Spine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.Engine.RAimingConfig.FAimingPartConfig Spine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: Head
     /// </summary>
-    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig Head
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.RAimingConfig.FAimingPartConfig Head
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 96);
 
     /// <summary>
     /// StructProperty: LeftArm
     /// </summary>
-    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig LeftArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.Engine.RAimingConfig.FAimingPartConfig LeftArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: RightArm
     /// </summary>
-    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig RightArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.Engine.RAimingConfig.FAimingPartConfig RightArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 120);
 
     /// <summary>
     /// StructProperty: LookAt
     /// </summary>
-    public unsafe BmSDK.Engine.RAimingConfig.FAimingPartConfig LookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.RAimingConfig.FAimingPartConfig LookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RAimingConfig.FAimingPartConfig>(Ptr + 132);
 
     /// <summary>
     /// ByteProperty: Reference

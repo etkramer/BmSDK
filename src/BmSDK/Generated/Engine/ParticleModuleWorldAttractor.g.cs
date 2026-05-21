@@ -21,6 +21,11 @@ public partial class ParticleModuleWorldAttractor : BmSDK.Engine.ParticleModuleW
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleWorldAttractor.
+    /// </summary>
+    public static ParticleModuleWorldAttractor DefaultObject => (ParticleModuleWorldAttractor)StaticClass().DefaultObject;
+
     internal ParticleModuleWorldAttractor() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleWorldAttractor : BmSDK.Engine.ParticleModuleW
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleWorldAttractor(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleWorldAttractor>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// BoolProperty: bParticleLifeRelative
@@ -45,9 +90,6 @@ public partial class ParticleModuleWorldAttractor : BmSDK.Engine.ParticleModuleW
     /// <summary>
     /// StructProperty: AttractorInfluence
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AttractorInfluence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat AttractorInfluence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100);
 }

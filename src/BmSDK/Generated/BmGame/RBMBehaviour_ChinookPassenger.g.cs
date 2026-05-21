@@ -21,6 +21,11 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_ChinookPassenger.
+    /// </summary>
+    public static RBMBehaviour_ChinookPassenger DefaultObject => (RBMBehaviour_ChinookPassenger)StaticClass().DefaultObject;
+
     internal RBMBehaviour_ChinookPassenger() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_ChinookPassenger(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_ChinookPassenger>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnEndInterrupt
@@ -143,11 +188,8 @@ public partial class RBMBehaviour_ChinookPassenger : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// StructProperty: PassengerInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RHelicopterBase.FHelicopterPassengerInfo PassengerInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHelicopterBase.FHelicopterPassengerInfo>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref BmSDK.BmGame.RHelicopterBase.FHelicopterPassengerInfo PassengerInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHelicopterBase.FHelicopterPassengerInfo>(Ptr + 600);
 
     /// <summary>
     /// BoolProperty: bPlayerClose

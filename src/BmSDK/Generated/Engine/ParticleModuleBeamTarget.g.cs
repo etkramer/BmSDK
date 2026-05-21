@@ -21,6 +21,11 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleBeamTarget.
+    /// </summary>
+    public static ParticleModuleBeamTarget DefaultObject => (ParticleModuleBeamTarget)StaticClass().DefaultObject;
+
     internal ParticleModuleBeamTarget() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleBeamTarget(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamTarget>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: TargetMethod
@@ -63,11 +108,8 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// <summary>
     /// StructProperty: Target
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Target
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Target
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 108);
 
     /// <summary>
     /// BoolProperty: bTargetAbsolute
@@ -108,20 +150,14 @@ public partial class ParticleModuleBeamTarget : BmSDK.Engine.ParticleModuleBeamB
     /// <summary>
     /// StructProperty: TargetTangent
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector TargetTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector TargetTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: TargetStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240);
 
     /// <summary>
     /// FloatProperty: LockRadius

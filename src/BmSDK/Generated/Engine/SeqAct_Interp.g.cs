@@ -21,6 +21,11 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Interp.
+    /// </summary>
+    public static SeqAct_Interp DefaultObject => (SeqAct_Interp)StaticClass().DefaultObject;
+
     internal SeqAct_Interp() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SeqAct_Interp(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Interp>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -152,7 +197,7 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Enum: EMatineeSkipPosition
     /// </summary>
-    public enum EMatineeSkipPosition
+    public enum EMatineeSkipPosition : byte
     {
         MATINEESKIPPOSITION_EndOfMatinee = 0,
         MATINEESKIPPOSITION_CameraBlendOut = 1,
@@ -1031,11 +1076,8 @@ public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: RenderingOverrides
     /// </summary>
-    public unsafe BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides RenderingOverrides
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides RenderingOverrides
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineBaseTypes.FRenderingPerformanceOverrides>(Ptr + 808);
 
     /// <summary>
     /// FloatProperty: ConstantCameraAnimRate

@@ -21,6 +21,11 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleBehaviour_FlyingStrafe.
+    /// </summary>
+    public static RVehicleBehaviour_FlyingStrafe DefaultObject => (RVehicleBehaviour_FlyingStrafe)StaticClass().DefaultObject;
+
     internal RVehicleBehaviour_FlyingStrafe() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleBehaviour_FlyingStrafe(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_FlyingStrafe>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetBehaviourThoughts
@@ -217,7 +262,7 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// Enum: EFlyingStrafeBehaviourPhase
     /// </summary>
-    public enum EFlyingStrafeBehaviourPhase
+    public enum EFlyingStrafeBehaviourPhase : byte
     {
         FSBP_None = 0,
         FSBP_LostBatman = 1,
@@ -347,11 +392,8 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// StructProperty: AttackLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttackLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttackLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// FloatProperty: TimeCanSeeTarget
@@ -365,11 +407,8 @@ public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehav
     /// <summary>
     /// StructProperty: SectorPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SectorPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref System.Numerics.Vector3 SectorPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 676);
 
     /// <summary>
     /// IntProperty: LastChaseLink

@@ -21,6 +21,11 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatarangProjectile.
+    /// </summary>
+    public static RBatarangProjectile DefaultObject => (RBatarangProjectile)StaticClass().DefaultObject;
+
     internal RBatarangProjectile() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// </summary>
     protected RBatarangProjectile(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatarangProjectile>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetDebugFlag
@@ -949,11 +959,8 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: LaunchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1104);
 
     /// <summary>
     /// BoolProperty: bLaunchedFromGarg
@@ -1165,29 +1172,20 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: LaunchTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1120);
 
     /// <summary>
     /// StructProperty: ImpactTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 ImpactTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref System.Numerics.Vector3 ImpactTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1132);
 
     /// <summary>
     /// StructProperty: CurrentImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1144);
 
     /// <summary>
     /// FloatProperty: OneOverFlightTime
@@ -1219,20 +1217,14 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: NewTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 NewTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
-    }
+    public unsafe ref System.Numerics.Vector3 NewTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1168);
 
     /// <summary>
     /// StructProperty: PreviousLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1180);
 
     /// <summary>
     /// FloatProperty: DefaultDamage
@@ -1255,20 +1247,14 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: MeshYaw
     /// </summary>
-    public unsafe BmSDK.Rotator MeshYaw
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
-    }
+    public unsafe ref BmSDK.Rotator MeshYaw
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1200);
 
     /// <summary>
     /// StructProperty: MeshPitch
     /// </summary>
-    public unsafe BmSDK.Rotator MeshPitch
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
-    }
+    public unsafe ref BmSDK.Rotator MeshPitch
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1212);
 
     /// <summary>
     /// IntProperty: DamageGiven
@@ -1300,9 +1286,6 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// StructProperty: m_DbgOldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_DbgOldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_DbgOldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1248);
 }

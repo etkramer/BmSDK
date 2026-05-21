@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_ChallengeSymbol.
+    /// </summary>
+    public static RGFxMovieUI_ChallengeSymbol DefaultObject => (RGFxMovieUI_ChallengeSymbol)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_ChallengeSymbol() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieUI_ChallengeSymbol(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_ChallengeSymbol>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: XI_ShowGamerCard
@@ -485,7 +530,7 @@ public partial class RGFxMovieUI_ChallengeSymbol : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Enum: LBMode
     /// </summary>
-    public enum LBMode
+    public enum LBMode : byte
     {
         LBMode_Friends = 0,
         LBMode_Ranked = 1,

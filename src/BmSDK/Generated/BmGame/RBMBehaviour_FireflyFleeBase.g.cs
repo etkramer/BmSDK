@@ -21,12 +21,57 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_FireflyFleeBase.
+    /// </summary>
+    public static RBMBehaviour_FireflyFleeBase DefaultObject => (RBMBehaviour_FireflyFleeBase)StaticClass().DefaultObject;
+
     internal RBMBehaviour_FireflyFleeBase() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_FireflyFleeBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_FireflyFleeBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TriggerSecondChaseOutroGauntlet
@@ -234,11 +279,8 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// StructProperty: CurrentVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
 
     /// <summary>
     /// FloatProperty: minDistFromPlayer_initial
@@ -257,6 +299,11 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: ffCruisingSpeedSettings
+    /// </summary>
+    public InlineArray<float> ffCruisingSpeedSettings => new(3, Ptr + 672);
 
     /// <summary>
     /// FloatProperty: ffCruisingSpeedSettings
@@ -327,6 +374,11 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: allowSideRoadsChanceSettings
+    /// </summary>
+    public InlineArray<float> allowSideRoadsChanceSettings => new(3, Ptr + 704);
 
     /// <summary>
     /// FloatProperty: allowSideRoadsChanceSettings

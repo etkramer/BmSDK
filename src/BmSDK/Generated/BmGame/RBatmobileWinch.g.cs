@@ -21,52 +21,62 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatmobileWinch.
+    /// </summary>
+    public static RBatmobileWinch DefaultObject => (RBatmobileWinch)StaticClass().DefaultObject;
+
     internal RBatmobileWinch() { }
 
     /// <summary>
     /// Constructs a new RBatmobileWinch
     /// </summary>
-    public RBatmobileWinch(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatmobileWinch Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBatmobileWinch(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBatmobileWinch(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileWinch>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanBasePawn
@@ -843,7 +853,7 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// Enum: EWinchPullType
     /// </summary>
-    public enum EWinchPullType
+    public enum EWinchPullType : byte
     {
         EWPT_None = 0,
         EWPT_PullObject = 1,
@@ -1108,11 +1118,8 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// StructProperty: WinchTargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 WinchTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
-    }
+    public unsafe ref System.Numerics.Vector3 WinchTargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2428);
 
     /// <summary>
     /// ObjectProperty: WinchTarget
@@ -1342,20 +1349,14 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// StructProperty: BatmobileLockedToPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmobileLockedToPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2640); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmobileLockedToPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2640);
 
     /// <summary>
     /// StructProperty: BatmobileLockedToRot
     /// </summary>
-    public unsafe BmSDK.Rotator BatmobileLockedToRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2652); }
-    }
+    public unsafe ref BmSDK.Rotator BatmobileLockedToRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2652);
 
     /// <summary>
     /// ByteProperty: WheelsOnGroundFilter
@@ -1387,11 +1388,8 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// StructProperty: FireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2684); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct FireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2684);
 
     /// <summary>
     /// FloatProperty: RopeInitialLength
@@ -1513,20 +1511,14 @@ public partial class RBatmobileWinch : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameO
     /// <summary>
     /// StructProperty: CurTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2892); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2892);
 
     /// <summary>
     /// StructProperty: AbseilTutorialDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AbseilTutorialDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2904); }
-    }
+    public unsafe ref System.Numerics.Vector3 AbseilTutorialDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2904);
 
     /// <summary>
     /// FloatProperty: TutorialRopeMinLength

@@ -21,6 +21,11 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAddContentBatmobileMesh.
+    /// </summary>
+    public static RAddContentBatmobileMesh DefaultObject => (RAddContentBatmobileMesh)StaticClass().DefaultObject;
+
     internal RAddContentBatmobileMesh() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAddContentBatmobileMesh(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentBatmobileMesh>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ArrayProperty: MaterialOverrides
@@ -45,11 +90,8 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
     /// <summary>
     /// StructProperty: DamageChapter
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor DamageChapter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor DamageChapter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 104);
 
     /// <summary>
     /// FloatProperty: DamageScratchesAllOver
@@ -72,11 +114,8 @@ public partial class RAddContentBatmobileMesh : BmSDK.BmGame.RAdditionalContent,
     /// <summary>
     /// StructProperty: DamageColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor DamageColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor DamageColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 128);
 
     /// <summary>
     /// NameProperty: DamageChapterName

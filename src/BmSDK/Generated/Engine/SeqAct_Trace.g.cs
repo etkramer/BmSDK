@@ -21,6 +21,11 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_Trace.
+    /// </summary>
+    public static SeqAct_Trace DefaultObject => (SeqAct_Trace)StaticClass().DefaultObject;
+
     internal SeqAct_Trace() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SeqAct_Trace(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_Trace>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -65,29 +110,20 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: TraceExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 TraceExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
+    public unsafe ref System.Numerics.Vector3 TraceExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 356);
 
     /// <summary>
     /// StructProperty: StartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 368);
 
     /// <summary>
     /// StructProperty: EndOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 EndOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
-    }
+    public unsafe ref System.Numerics.Vector3 EndOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 380);
 
     /// <summary>
     /// ObjectProperty: HitObject
@@ -110,9 +146,6 @@ public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: HitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 404);
 }

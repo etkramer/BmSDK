@@ -21,6 +21,11 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeStateController.
+    /// </summary>
+    public static RCapeStateController DefaultObject => (RCapeStateController)StaticClass().DefaultObject;
+
     internal RCapeStateController() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCapeStateController(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateController>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetCapeToBoneDataReferencePose
@@ -442,11 +487,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedSkinningLocalToWorlds
     /// </summary>
-    public unsafe BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds CachedSkinningLocalToWorlds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds CachedSkinningLocalToWorlds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCapeStateController.FSkinningLocalToWorlds>(Ptr + 176);
 
     /// <summary>
     /// IntProperty: CachedCapeStateDataIndex
@@ -469,11 +511,8 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastUpdateCapeLocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LastUpdateCapeLocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LastUpdateCapeLocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 416);
 
     /// <summary>
     /// FloatProperty: TimeSinceMovedBackwards
@@ -930,7 +969,7 @@ public partial class RCapeStateController : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECapeBoneVisibility
     /// </summary>
-    public enum ECapeBoneVisibility
+    public enum ECapeBoneVisibility : byte
     {
         CAPEBONEVISIBILITY_Visible = 0,
         CAPEBONEVISIBILITY_Invisible = 1,

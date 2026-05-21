@@ -21,52 +21,62 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_PairedCorner.
+    /// </summary>
+    public static RBMAIAction_PairedCorner DefaultObject => (RBMAIAction_PairedCorner)StaticClass().DefaultObject;
+
     internal RBMAIAction_PairedCorner() { }
 
     /// <summary>
     /// Constructs a new RBMAIAction_PairedCorner
     /// </summary>
-    public RBMAIAction_PairedCorner(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_PairedCorner Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_PairedCorner(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMAIAction_PairedCorner(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_PairedCorner>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ActionTick
@@ -202,7 +212,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Enum: ePairedCornerAnimType
     /// </summary>
-    public enum ePairedCornerAnimType
+    public enum ePairedCornerAnimType : byte
     {
         ePCAT_Standard = 0,
         ePCAT_Silly = 1,
@@ -254,7 +264,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Enum: eCornerAnimStage
     /// </summary>
-    public enum eCornerAnimStage
+    public enum eCornerAnimStage : byte
     {
         eCAS_MoveToStart = 0,
         eCAS_In = 1,
@@ -266,11 +276,8 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: CornerPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CornerPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref System.Numerics.Vector3 CornerPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 864);
 
     /// <summary>
     /// FloatProperty: CornerYaw
@@ -284,11 +291,8 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: transID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId transID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId transID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880);
 
     /// <summary>
     /// NameProperty: InName
@@ -356,11 +360,8 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// StructProperty: idealInAnimStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 idealInAnimStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref System.Numerics.Vector3 idealInAnimStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 924);
 
     /// <summary>
     /// FloatProperty: idealDistFromCornerForInAnim
@@ -372,104 +373,93 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     }
 
     /// <summary>
-    /// StructProperty: InNamesSideOn
+    /// InlineArray{StructProperty}: InNamesSideOn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesSideOn_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
-    }
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> InNamesSideOn => new(3, Ptr + 940);
+
     /// <summary>
     /// StructProperty: InNamesSideOn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesSideOn_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesSideOn_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 940);
     /// <summary>
     /// StructProperty: InNamesSideOn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesSideOn_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesSideOn_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 972);
+    /// <summary>
+    /// StructProperty: InNamesSideOn
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesSideOn_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1004);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: InNamesHeadOn
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> InNamesHeadOn => new(3, Ptr + 1036);
 
     /// <summary>
     /// StructProperty: InNamesHeadOn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesHeadOn_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesHeadOn_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1036);
     /// <summary>
     /// StructProperty: InNamesHeadOn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesHeadOn_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesHeadOn_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1068);
     /// <summary>
     /// StructProperty: InNamesHeadOn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesHeadOn_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames InNamesHeadOn_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1100);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: IdleNames
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> IdleNames => new(3, Ptr + 1132);
 
     /// <summary>
     /// StructProperty: IdleNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames IdleNames_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames IdleNames_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1132);
     /// <summary>
     /// StructProperty: IdleNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames IdleNames_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1164); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames IdleNames_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1164);
     /// <summary>
     /// StructProperty: IdleNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames IdleNames_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1196); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames IdleNames_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1196);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: OutNames
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> OutNames => new(3, Ptr + 1228);
 
     /// <summary>
     /// StructProperty: OutNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames OutNames_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1228); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames OutNames_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1228);
     /// <summary>
     /// StructProperty: OutNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames OutNames_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames OutNames_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1260);
     /// <summary>
     /// StructProperty: OutNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames OutNames_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1292); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames OutNames_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames>(Ptr + 1292);
+
+    /// <summary>
+    /// InlineArray{IntProperty}: variantSwapsRoles
+    /// </summary>
+    public InlineArray<int> variantSwapsRoles => new(3, Ptr + 1324);
 
     /// <summary>
     /// IntProperty: variantSwapsRoles

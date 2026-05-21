@@ -21,6 +21,11 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHarpoonGun.
+    /// </summary>
+    public static RHarpoonGun DefaultObject => (RHarpoonGun)StaticClass().DefaultObject;
+
     internal RHarpoonGun() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     protected RHarpoonGun(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHarpoonGun>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetRobinBatclawMaterial
@@ -551,7 +561,7 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: EBatclawFireDirections
     /// </summary>
-    public enum EBatclawFireDirections
+    public enum EBatclawFireDirections : byte
     {
         EBFD_Forward = 0,
         EBFD_Left = 1,
@@ -563,7 +573,7 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: HarpoonAttackType
     /// </summary>
-    public enum HarpoonAttackType
+    public enum HarpoonAttackType : byte
     {
         HAT_Legs = 0,
         HAT_Torso = 1,
@@ -859,29 +869,25 @@ public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     }
 
     /// <summary>
-    /// StructProperty: HarpoonTargetPos
+    /// InlineArray{StructProperty}: HarpoonTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 HarpoonTargetPos_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2268); }
-    }
+    public InlineArray<System.Numerics.Vector3> HarpoonTargetPos => new(3, Ptr + 2268);
+
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 HarpoonTargetPos_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2280); }
-    }
+    public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2268);
     /// <summary>
     /// StructProperty: HarpoonTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 HarpoonTargetPos_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2292); }
-    }
+    public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2280);
+    /// <summary>
+    /// StructProperty: HarpoonTargetPos
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 HarpoonTargetPos_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2292);
 
     /// <summary>
     /// FloatProperty: HarpoonYankRadius

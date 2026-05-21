@@ -21,6 +21,11 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_SideStory_Query.
+    /// </summary>
+    public static RSeqAct_SideStory_Query DefaultObject => (RSeqAct_SideStory_Query)StaticClass().DefaultObject;
+
     internal RSeqAct_SideStory_Query() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_SideStory_Query(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_SideStory_Query>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -106,7 +151,7 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Enum: SS_Query_Action
     /// </summary>
-    public enum SS_Query_Action
+    public enum SS_Query_Action : byte
     {
         SS_Query_Action_None = 0,
         SS_Query_Action_SideStory_Exists = 1,
@@ -122,7 +167,7 @@ public partial class RSeqAct_SideStory_Query : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Enum: SS_LinkIDs
     /// </summary>
-    public enum SS_LinkIDs
+    public enum SS_LinkIDs : byte
     {
         SS_LinkID_LT = 0,
         SS_LinkID_LTEQ = 1,

@@ -21,6 +21,11 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControl_FeedConstraint.
+    /// </summary>
+    public static RSkelControl_FeedConstraint DefaultObject => (RSkelControl_FeedConstraint)StaticClass().DefaultObject;
+
     internal RSkelControl_FeedConstraint() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSkelControl_FeedConstraint(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_FeedConstraint>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// NameProperty: SourceBoneName
@@ -81,20 +126,14 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// StructProperty: SourceRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintSourceRange SourceRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintSourceRange>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintSourceRange SourceRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintSourceRange>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: DestinationRange
     /// </summary>
-    public unsafe BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintDestinationRange DestinationRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintDestinationRange>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintDestinationRange DestinationRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControl_FeedConstraint.FFeedConstraintDestinationRange>(Ptr + 272);
 
     /// <summary>
     /// IntProperty: SourceBoneIndex
@@ -108,11 +147,8 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// StructProperty: SourceBoneInverseReferencePose
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom SourceBoneInverseReferencePose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom SourceBoneInverseReferencePose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 288);
 
     /// <summary>
     /// FloatProperty: SourceToDestinationScale
@@ -212,7 +248,7 @@ public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase,
     /// <summary>
     /// Enum: ERotationOrTranslation
     /// </summary>
-    public enum ERotationOrTranslation
+    public enum ERotationOrTranslation : byte
     {
         ROT_Rotation = 0,
         ROT_Translation = 1,

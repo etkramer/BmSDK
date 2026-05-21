@@ -21,6 +21,11 @@ public partial class RSeqEvent_HelicopterAggroStateChanged : BmSDK.Engine.Sequen
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_HelicopterAggroStateChanged.
+    /// </summary>
+    public static RSeqEvent_HelicopterAggroStateChanged DefaultObject => (RSeqEvent_HelicopterAggroStateChanged)StaticClass().DefaultObject;
+
     internal RSeqEvent_HelicopterAggroStateChanged() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqEvent_HelicopterAggroStateChanged : BmSDK.Engine.Sequen
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqEvent_HelicopterAggroStateChanged(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_HelicopterAggroStateChanged>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -47,7 +92,7 @@ public partial class RSeqEvent_HelicopterAggroStateChanged : BmSDK.Engine.Sequen
     /// <summary>
     /// Enum: HeliAggroState
     /// </summary>
-    public enum HeliAggroState
+    public enum HeliAggroState : byte
     {
         HD_HelicopterAggroed = 0,
         HD_SafeFromHelicopters = 1,

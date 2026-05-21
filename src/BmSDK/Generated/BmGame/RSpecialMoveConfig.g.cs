@@ -21,12 +21,57 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig.
+    /// </summary>
+    public static RSpecialMoveConfig DefaultObject => (RSpecialMoveConfig)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSpecialMoveConfig(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetPredictedEndLocation
@@ -105,7 +150,7 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// Enum: AISpecialMoveCommentType
     /// </summary>
-    public enum AISpecialMoveCommentType
+    public enum AISpecialMoveCommentType : byte
     {
         SMCT_NoComment = 0,
         SMCT_JumpRailing = 1,
@@ -116,7 +161,7 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// Enum: ESpecialMoveAnimSetType
     /// </summary>
-    public enum ESpecialMoveAnimSetType
+    public enum ESpecialMoveAnimSetType : byte
     {
         SMAT_LadderAnims = 0,
         SMAT_GrateRipAnims = 1,
@@ -133,7 +178,7 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// Enum: ESpecialMoveSupportedOverrideButtons
     /// </summary>
-    public enum ESpecialMoveSupportedOverrideButtons
+    public enum ESpecialMoveSupportedOverrideButtons : byte
     {
         SMSOB_AButton = 0,
         SMSOB_BButton = 1,
@@ -747,11 +792,8 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CameraAlignOffset
     /// </summary>
-    public unsafe BmSDK.Rotator CameraAlignOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref BmSDK.Rotator CameraAlignOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 200);
 
     /// <summary>
     /// ByteProperty: CameraAlignSpeed
@@ -819,20 +861,14 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: CapeStateChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeStateChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeStateChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 224);
 
     /// <summary>
     /// StructProperty: CapeFinishStateChangeData
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeFinishStateChangeData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
-    }
+    public unsafe ref BmSDK.BmGame.RPhysUtil.FCapeStateChangeData CapeFinishStateChangeData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPhysUtil.FCapeStateChangeData>(Ptr + 300);
 
     /// <summary>
     /// FloatProperty: ReferenceOffset
@@ -855,11 +891,8 @@ public partial class RSpecialMoveConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: AnimatedCameraCollisionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimatedCameraCollisionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimatedCameraCollisionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 384);
 
     /// <summary>
     /// FloatProperty: OverrideTime

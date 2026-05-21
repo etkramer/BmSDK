@@ -21,6 +21,11 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleSystem.
+    /// </summary>
+    public static ParticleSystem DefaultObject => (ParticleSystem)StaticClass().DefaultObject;
+
     internal ParticleSystem() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleSystem(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleSystem>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetMaxLifespan
@@ -167,7 +212,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSystemOveridePhysXLevel
     /// </summary>
-    public enum EParticleSystemOveridePhysXLevel
+    public enum EParticleSystemOveridePhysXLevel : byte
     {
         EPSOP_NoOverride = 0,
         EPSOP_Turbulence = 1,
@@ -195,7 +240,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSystemOcclusionBoundsMethod
     /// </summary>
-    public enum EParticleSystemOcclusionBoundsMethod
+    public enum EParticleSystemOcclusionBoundsMethod : byte
     {
         EPSOBM_None = 0,
         EPSOBM_ParticleBounds = 1,
@@ -222,7 +267,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ParticleSystemLODMethod
     /// </summary>
-    public enum ParticleSystemLODMethod
+    public enum ParticleSystemLODMethod : byte
     {
         PARTICLESYSTEMLODMETHOD_Automatic = 0,
         PARTICLESYSTEMLODMETHOD_DirectSet = 1,
@@ -323,11 +368,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ThumbnailAngle
     /// </summary>
-    public unsafe BmSDK.Rotator ThumbnailAngle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.Rotator ThumbnailAngle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 128);
 
     /// <summary>
     /// FloatProperty: ThumbnailDistance
@@ -557,11 +599,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FixedRelativeBoundingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox FixedRelativeBoundingBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox FixedRelativeBoundingBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 224);
 
     /// <summary>
     /// FloatProperty: SecondsBeforeInactive
@@ -584,20 +623,14 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FloorPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 272);
 
     /// <summary>
     /// StructProperty: FloorRotation
     /// </summary>
-    public unsafe BmSDK.Rotator FloorRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.Rotator FloorRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 284);
 
     /// <summary>
     /// FloatProperty: FloorScale
@@ -611,20 +644,14 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FloorScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorScale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorScale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 300);
 
     /// <summary>
     /// StructProperty: BackgroundColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BackgroundColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BackgroundColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 312);
 
     /// <summary>
     /// FloatProperty: Delay
@@ -647,11 +674,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MacroUVPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 MacroUVPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
+    public unsafe ref System.Numerics.Vector3 MacroUVPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 324);
 
     /// <summary>
     /// FloatProperty: MacroUVRadius
@@ -665,11 +689,8 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CustomOcclusionBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox CustomOcclusionBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox CustomOcclusionBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 340);
 
     /// <summary>
     /// ArrayProperty: SoloTracking
@@ -683,7 +704,7 @@ public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EParticleSystemUpdateMode
     /// </summary>
-    public enum EParticleSystemUpdateMode
+    public enum EParticleSystemUpdateMode : byte
     {
         EPSUM_RealTime = 0,
         EPSUM_FixedTime = 1,

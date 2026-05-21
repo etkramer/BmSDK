@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataMesh.
+    /// </summary>
+    public static ParticleModuleTypeDataMesh DefaultObject => (ParticleModuleTypeDataMesh)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataMesh() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     protected ParticleModuleTypeDataMesh(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataMesh>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EMeshCameraFacingOptions
     /// </summary>
-    public enum EMeshCameraFacingOptions
+    public enum EMeshCameraFacingOptions : byte
     {
         XAxisFacing_NoUp = 0,
         XAxisFacing_ZUp = 1,
@@ -57,7 +102,7 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EMeshCameraFacingUpAxis
     /// </summary>
-    public enum EMeshCameraFacingUpAxis
+    public enum EMeshCameraFacingUpAxis : byte
     {
         CameraFacing_NoneUP = 0,
         CameraFacing_ZUp = 1,
@@ -70,7 +115,7 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EMeshScreenAlignment
     /// </summary>
-    public enum EMeshScreenAlignment
+    public enum EMeshScreenAlignment : byte
     {
         PSMA_MeshFaceCameraWithRoll = 0,
         PSMA_MeshFaceCameraWithSpin = 1,

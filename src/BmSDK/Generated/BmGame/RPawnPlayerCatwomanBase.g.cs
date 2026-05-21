@@ -21,6 +21,11 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayerCatwomanBase.
+    /// </summary>
+    public static RPawnPlayerCatwomanBase DefaultObject => (RPawnPlayerCatwomanBase)StaticClass().DefaultObject;
+
     internal RPawnPlayerCatwomanBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     protected RPawnPlayerCatwomanBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayerCatwomanBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetCornerCoverIdleOverlayAnimset
@@ -640,7 +650,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Enum: ESwingDirection
     /// </summary>
-    public enum ESwingDirection
+    public enum ESwingDirection : byte
     {
         SWD_Default = 0,
         SWD_Left = 1,
@@ -653,7 +663,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// Enum: EAutoSwingState
     /// </summary>
-    public enum EAutoSwingState
+    public enum EAutoSwingState : byte
     {
         ASS_None = 0,
         ASS_InitialJump = 1,
@@ -718,11 +728,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: vOldWallClimbPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 vOldWallClimbPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10032); }
-    }
+    public unsafe ref System.Numerics.Vector3 vOldWallClimbPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10032);
 
     /// <summary>
     /// ObjectProperty: WallClimbingCrawlLeftMoves
@@ -862,11 +869,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: OldCeilingTracePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldCeilingTracePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10164); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldCeilingTracePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10164);
 
     /// <summary>
     /// BoolProperty: bPhysUseCeilingConstraints
@@ -1069,11 +1073,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: LastSwingSoundLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSwingSoundLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10228); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSwingSoundLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10228);
 
     /// <summary>
     /// FloatProperty: FallSoundStartSpeed
@@ -1105,11 +1106,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: BolasShift
     /// </summary>
-    public unsafe System.Numerics.Vector3 BolasShift
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10252); }
-    }
+    public unsafe ref System.Numerics.Vector3 BolasShift
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10252);
 
     /// <summary>
     /// FloatProperty: BolasRBSpeedFactor
@@ -1132,11 +1130,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: BolasAngularSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 BolasAngularSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10272); }
-    }
+    public unsafe ref System.Numerics.Vector3 BolasAngularSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10272);
 
     /// <summary>
     /// FloatProperty: LastFlushPersistentLinesFrame
@@ -1150,11 +1145,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: CeilingNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10288); }
-    }
+    public unsafe ref System.Numerics.Vector3 CeilingNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10288);
 
     /// <summary>
     /// FloatProperty: GrateClimbUpStartCheckDistance
@@ -1213,11 +1205,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// <summary>
     /// StructProperty: PullFromCatwalkEdgeCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 PullFromCatwalkEdgeCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 10324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10324); }
-    }
+    public unsafe ref System.Numerics.Vector3 PullFromCatwalkEdgeCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 10324);
 
     /// <summary>
     /// FloatProperty: PullFromCatwalkEdgeCheckShift

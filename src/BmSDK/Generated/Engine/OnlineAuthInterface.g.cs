@@ -382,7 +382,7 @@ public partial interface OnlineAuthInterface : BmSDK.Interface
     /// <summary>
     /// Enum: EAuthStatus
     /// </summary>
-    public enum EAuthStatus
+    public enum EAuthStatus : byte
     {
         AUS_NotStarted = 0,
         AUS_Pending = 1,

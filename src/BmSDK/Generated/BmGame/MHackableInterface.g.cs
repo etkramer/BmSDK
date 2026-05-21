@@ -218,7 +218,7 @@ public partial interface MHackableInterface : BmSDK.Interface
     /// <summary>
     /// Enum: EHackSubroutineIcon
     /// </summary>
-    public enum EHackSubroutineIcon
+    public enum EHackSubroutineIcon : byte
     {
         HACKICON_None = 0,
         HACKICON_Generic_Attract = 1,
@@ -235,7 +235,7 @@ public partial interface MHackableInterface : BmSDK.Interface
     /// <summary>
     /// Enum: EHackableObjectState
     /// </summary>
-    public enum EHackableObjectState
+    public enum EHackableObjectState : byte
     {
         HOS_Unavailable = 0,
         HOS_Running = 1,
@@ -246,7 +246,7 @@ public partial interface MHackableInterface : BmSDK.Interface
     /// <summary>
     /// Enum: EHackSubroutineType
     /// </summary>
-    public enum EHackSubroutineType
+    public enum EHackSubroutineType : byte
     {
         HACKTYPE_None = 0,
         HACKTYPE_Toggle = 1,

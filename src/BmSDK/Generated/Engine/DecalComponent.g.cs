@@ -21,6 +21,11 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DecalComponent.
+    /// </summary>
+    public static DecalComponent DefaultObject => (DecalComponent)StaticClass().DefaultObject;
+
     internal DecalComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected DecalComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DecalComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: IsWaitingForResetToDefaultsToComplete
@@ -109,7 +154,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Enum: EFilterMode
     /// </summary>
-    public enum EFilterMode
+    public enum EFilterMode : byte
     {
         FM_None = 0,
         FM_Ignore = 1,
@@ -120,7 +165,7 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// Enum: EDecalTransform
     /// </summary>
-    public enum EDecalTransform
+    public enum EDecalTransform : byte
     {
         DecalTransform_OwnerAbsolute = 0,
         DecalTransform_OwnerRelative = 1,
@@ -264,56 +309,38 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 Location
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref System.Numerics.Vector3 Location
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 596);
 
     /// <summary>
     /// StructProperty: Orientation
     /// </summary>
-    public unsafe BmSDK.Rotator Orientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.Rotator Orientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 608);
 
     /// <summary>
     /// StructProperty: HitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 620);
 
     /// <summary>
     /// StructProperty: HitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 632);
 
     /// <summary>
     /// StructProperty: HitTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitTangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitTangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 644);
 
     /// <summary>
     /// StructProperty: HitBinormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 HitBinormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref System.Numerics.Vector3 HitBinormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 656);
 
     /// <summary>
     /// BoolProperty: bNoClip
@@ -543,11 +570,8 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: BlendRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 BlendRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
+    public unsafe ref System.Numerics.Vector2 BlendRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 780);
 
     /// <summary>
     /// FloatProperty: StreamingDistanceMultiplier
@@ -597,27 +621,18 @@ public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: ParentRelativeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ParentRelativeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref System.Numerics.Vector3 ParentRelativeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 828);
 
     /// <summary>
     /// StructProperty: ParentRelativeOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator ParentRelativeOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref BmSDK.Rotator ParentRelativeOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 840);
 
     /// <summary>
     /// StructProperty: ParentRelLocRotMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ParentRelLocRotMatrix
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix ParentRelLocRotMatrix
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 864);
 }

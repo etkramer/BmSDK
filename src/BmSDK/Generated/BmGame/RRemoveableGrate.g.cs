@@ -21,52 +21,62 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRemoveableGrate.
+    /// </summary>
+    public static RRemoveableGrate DefaultObject => (RRemoveableGrate)StaticClass().DefaultObject;
+
     internal RRemoveableGrate() { }
 
     /// <summary>
     /// Constructs a new RRemoveableGrate
     /// </summary>
-    public RRemoveableGrate(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRemoveableGrate Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RRemoveableGrate(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRemoveableGrate(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRemoveableGrate>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SuperEasy
@@ -654,7 +664,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Enum: EGrateBoltPosition
     /// </summary>
-    public enum EGrateBoltPosition
+    public enum EGrateBoltPosition : byte
     {
         GBP_TopLeft = 0,
         GBP_TopRight = 1,
@@ -666,7 +676,7 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// Enum: EGrateRemoveType
     /// </summary>
-    public enum EGrateRemoveType
+    public enum EGrateRemoveType : byte
     {
         GRATEREMOVE_Loud = 0,
         GRATEREMOVE_Silent = 1,
@@ -911,11 +921,8 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: LastPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 732);
 
     /// <summary>
     /// ObjectProperty: BendSound
@@ -1035,6 +1042,11 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: Bolts
+    /// </summary>
+    public InlineArray<BmSDK.Engine.StaticMeshComponent> Bolts => new(4, Ptr + 848);
+
+    /// <summary>
     /// ComponentProperty: Bolts
     /// </summary>
     public unsafe BmSDK.Engine.StaticMeshComponent Bolts_0
@@ -1113,6 +1125,11 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: BoltSockets
+    /// </summary>
+    public InlineArray<BmSDK.FName> BoltSockets => new(4, Ptr + 912);
+
+    /// <summary>
     /// NameProperty: BoltSockets
     /// </summary>
     public unsafe BmSDK.FName BoltSockets_0
@@ -1166,11 +1183,8 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: GrateRemoveLoudImpulsePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrateRemoveLoudImpulsePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrateRemoveLoudImpulsePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 952);
 
     /// <summary>
     /// FloatProperty: GrateRemoveSilentImpulseMultiplier
@@ -1184,47 +1198,32 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: GrateRemoveSilentImpulsePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrateRemoveSilentImpulsePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrateRemoveSilentImpulsePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 968);
 
     /// <summary>
     /// StructProperty: ConstraintLocalSpaceAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintLocalSpaceAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintLocalSpaceAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
 
     /// <summary>
     /// StructProperty: ConstraintLocalSpaceSwingAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintLocalSpaceSwingAxis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintLocalSpaceSwingAxis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 992);
 
     /// <summary>
     /// StructProperty: ConstraintLocalSpaceFixedAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintLocalSpaceFixedAxis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintLocalSpaceFixedAxis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1004);
 
     /// <summary>
     /// StructProperty: ConstraintLocalSpacePositionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ConstraintLocalSpacePositionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
+    public unsafe ref System.Numerics.Vector3 ConstraintLocalSpacePositionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1016);
 
     /// <summary>
     /// FloatProperty: RemovalForce
@@ -1247,11 +1246,8 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: GoPhysicsImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoPhysicsImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoPhysicsImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 
     /// <summary>
     /// FloatProperty: GoPhysicsDuration
@@ -1265,9 +1261,6 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: GoPhysicsLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoPhysicsLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoPhysicsLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1052);
 }

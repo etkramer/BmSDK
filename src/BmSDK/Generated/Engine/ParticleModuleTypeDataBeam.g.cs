@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataBeam.
+    /// </summary>
+    public static ParticleModuleTypeDataBeam DefaultObject => (ParticleModuleTypeDataBeam)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataBeam() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     protected ParticleModuleTypeDataBeam(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EBeamEndPointMethod
     /// </summary>
-    public enum EBeamEndPointMethod
+    public enum EBeamEndPointMethod : byte
     {
         PEBEPM_Calculated = 0,
         PEBEPM_Distribution = 1,
@@ -65,20 +110,14 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: Distance
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Distance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Distance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: EndPoint
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector EndPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector EndPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 136);
 
     /// <summary>
     /// IntProperty: TessellationFactor
@@ -92,29 +131,20 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: EmitterStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat EmitterStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat EmitterStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: TargetStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TargetStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: EndPointDirection
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector EndPointDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector EndPointDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 276);
 
     /// <summary>
     /// IntProperty: TextureTile
@@ -164,7 +194,7 @@ public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// Enum: EBeamMethod
     /// </summary>
-    public enum EBeamMethod
+    public enum EBeamMethod : byte
     {
         PEBM_Distance = 0,
         PEBM_EndPoints = 1,

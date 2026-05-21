@@ -21,52 +21,62 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage_GlassWallAttack.
+    /// </summary>
+    public static RStealthTakeDownStage_GlassWallAttack DefaultObject => (RStealthTakeDownStage_GlassWallAttack)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage_GlassWallAttack() { }
 
     /// <summary>
     /// Constructs a new RStealthTakeDownStage_GlassWallAttack
     /// </summary>
-    public RStealthTakeDownStage_GlassWallAttack(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStealthTakeDownStage_GlassWallAttack Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RStealthTakeDownStage_GlassWallAttack(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RStealthTakeDownStage_GlassWallAttack(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage_GlassWallAttack>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: FinishAttackVictim
@@ -293,7 +303,7 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// Enum: CameraCollisionOption
     /// </summary>
-    public enum CameraCollisionOption
+    public enum CameraCollisionOption : byte
     {
         CCO_None = 0,
         CCO_Player = 1,
@@ -304,11 +314,8 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: StartLoc
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator StartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1664); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator StartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1664);
 
     /// <summary>
     /// ObjectProperty: Player
@@ -385,29 +392,20 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: StartPlayerPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPlayerPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1832); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPlayerPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1832);
 
     /// <summary>
     /// StructProperty: StartVictimPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartVictimPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1844); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartVictimPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1844);
 
     /// <summary>
     /// StructProperty: CameraRootLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraRootLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1856); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraRootLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1856);
 
     /// <summary>
     /// IntProperty: CameraPhase
@@ -430,9 +428,6 @@ public partial class RStealthTakeDownStage_GlassWallAttack : BmSDK.BmGame.RSteal
     /// <summary>
     /// StructProperty: WallAttackStage
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo WallAttackStage
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo>(Ptr + 1888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1888); }
-    }
+    public unsafe ref BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo WallAttackStage
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RStealthTakeDownStage_GlassWallAttack.FWallAttackStageInfo>(Ptr + 1888);
 }

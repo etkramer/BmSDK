@@ -21,6 +21,11 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleBehaviour_CarChase.
+    /// </summary>
+    public static RVehicleBehaviour_CarChase DefaultObject => (RVehicleBehaviour_CarChase)StaticClass().DefaultObject;
+
     internal RVehicleBehaviour_CarChase() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleBehaviour_CarChase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_CarChase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -47,7 +92,7 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
     /// <summary>
     /// Enum: CarChaseState
     /// </summary>
-    public enum CarChaseState
+    public enum CarChaseState : byte
     {
         CarChaseState_None = 0,
         CarChaseState_ChaseBatman = 1,
@@ -113,20 +158,14 @@ public partial class RVehicleBehaviour_CarChase : BmSDK.BmGame.RVehicleBehaviour
     /// <summary>
     /// StructProperty: CheatVsDistCurveChase
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveChase
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveChase
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 632);
 
     /// <summary>
     /// StructProperty: CheatVsDistCurveJoinFormation
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveJoinFormation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat CheatVsDistCurveJoinFormation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 652);
 
     /// <summary>
     /// FloatProperty: FollowOffsetBase

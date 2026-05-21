@@ -21,52 +21,62 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerBossBatmanBotController.
+    /// </summary>
+    public static RJokerBossBatmanBotController DefaultObject => (RJokerBossBatmanBotController)StaticClass().DefaultObject;
+
     internal RJokerBossBatmanBotController() { }
 
     /// <summary>
     /// Constructs a new RJokerBossBatmanBotController
     /// </summary>
-    public RJokerBossBatmanBotController(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RJokerBossBatmanBotController Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RJokerBossBatmanBotController(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RJokerBossBatmanBotController(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerBossBatmanBotController>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanDoSteamVent
@@ -397,7 +407,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Enum: JokerBossTakedownTypes
     /// </summary>
-    public enum JokerBossTakedownTypes
+    public enum JokerBossTakedownTypes : byte
     {
         JBTT_NoTakedown = 0,
         JBTT_Grate = 1,
@@ -410,7 +420,7 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// Enum: JokerBossCameraLookAtStage
     /// </summary>
-    public enum JokerBossCameraLookAtStage
+    public enum JokerBossCameraLookAtStage : byte
     {
         JBCLAS_NotInLookAt = 0,
         JBCLAS_ForceCamera = 1,
@@ -539,20 +549,14 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// StructProperty: WalkDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 WalkDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1240); }
-    }
+    public unsafe ref System.Numerics.Vector3 WalkDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1240);
 
     /// <summary>
     /// StructProperty: TeleportDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 TeleportDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
-    }
+    public unsafe ref System.Numerics.Vector3 TeleportDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1252);
 
     /// <summary>
     /// ArrayProperty: CornerPoints
@@ -719,11 +723,8 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// StructProperty: SafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1304); }
-    }
+    public unsafe ref System.Numerics.Vector3 SafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1304);
 
     /// <summary>
     /// NameProperty: PickedTakedownName
@@ -737,11 +738,8 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// StructProperty: CurrentTransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CurrentTransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CurrentTransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1324);
 
     /// <summary>
     /// ArrayProperty: Railings
@@ -872,11 +870,8 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// StructProperty: SavedLookAtPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedLookAtPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1472); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedLookAtPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1472);
 
     /// <summary>
     /// FloatProperty: TimeInCameraLookAt
@@ -908,20 +903,14 @@ public partial class RJokerBossBatmanBotController : BmSDK.BmGame.RBotController
     /// <summary>
     /// StructProperty: SavedRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedRefPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1496); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedRefPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1496);
 
     /// <summary>
     /// StructProperty: SavedRotPoint
     /// </summary>
-    public unsafe BmSDK.Rotator SavedRotPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1508); }
-    }
+    public unsafe ref BmSDK.Rotator SavedRotPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1508);
 
     /// <summary>
     /// FloatProperty: timeInState

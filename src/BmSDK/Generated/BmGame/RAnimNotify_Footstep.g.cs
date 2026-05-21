@@ -21,6 +21,11 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_Footstep.
+    /// </summary>
+    public static RAnimNotify_Footstep DefaultObject => (RAnimNotify_Footstep)StaticClass().DefaultObject;
+
     internal RAnimNotify_Footstep() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_Footstep(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_Footstep>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: Foot
@@ -63,7 +108,7 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EFootstepSurfaceFinder
     /// </summary>
-    public enum EFootstepSurfaceFinder
+    public enum EFootstepSurfaceFinder : byte
     {
         FSF_Auto = 0,
         FSF_Floor = 1,
@@ -76,7 +121,7 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EContactType
     /// </summary>
-    public enum EContactType
+    public enum EContactType : byte
     {
         Contact_Normal = 0,
         Contact_Land = 1,
@@ -108,7 +153,7 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// Enum: EFoot
     /// </summary>
-    public enum EFoot
+    public enum EFoot : byte
     {
         Foot_Left = 0,
         Foot_Right = 1,

@@ -21,6 +21,11 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_BodySetup.
+    /// </summary>
+    public static RFlaps_BodySetup DefaultObject => (RFlaps_BodySetup)StaticClass().DefaultObject;
+
     internal RFlaps_BodySetup() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RFlaps_BodySetup(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_BodySetup>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: FindPhysAssetBody
@@ -222,29 +267,25 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: PoseControlParticles
+    /// InlineArray{StructProperty}: PoseControlParticles
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference> PoseControlParticles => new(3, Ptr + 120);
+
     /// <summary>
     /// StructProperty: PoseControlParticles
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 120);
     /// <summary>
     /// StructProperty: PoseControlParticles
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 136);
+    /// <summary>
+    /// StructProperty: PoseControlParticles
+    /// </summary>
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference PoseControlParticles_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 152);
 
     /// <summary>
     /// ByteProperty: PoseControlType
@@ -276,7 +317,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERFlapsPoseControlType
     /// </summary>
-    public enum ERFlapsPoseControlType
+    public enum ERFlapsPoseControlType : byte
     {
         RFPCT_RotationOnly = 0,
         RFPCT_PositionOnly = 1,

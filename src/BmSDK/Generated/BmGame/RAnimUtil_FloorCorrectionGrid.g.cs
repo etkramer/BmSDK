@@ -21,6 +21,11 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_FloorCorrectionGrid.
+    /// </summary>
+    public static RAnimUtil_FloorCorrectionGrid DefaultObject => (RAnimUtil_FloorCorrectionGrid)StaticClass().DefaultObject;
+
     internal RAnimUtil_FloorCorrectionGrid() { }
 
     /// <summary>
@@ -33,50 +38,75 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// </summary>
     protected RAnimUtil_FloorCorrectionGrid(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_FloorCorrectionGrid>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: Parameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters Parameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters Parameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridParameters>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: Constants
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants Constants
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants Constants
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridConstants>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: State
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState State
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState State
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridState>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: PreviousLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 276);
 
     /// <summary>
     /// StructProperty: PreviousGridLocation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector PreviousGridLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector PreviousGridLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_FloorCorrectionGrid.FGridVector>(Ptr + 288);
 
     /// <summary>
     /// FloatProperty: RelativeZ
@@ -90,11 +120,8 @@ public partial class RAnimUtil_FloorCorrectionGrid : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe System.Numerics.Vector3 Normal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
+    public unsafe ref System.Numerics.Vector3 Normal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 304);
 
     /// <summary>
     /// BoolProperty: PendingReset

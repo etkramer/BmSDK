@@ -21,6 +21,11 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROnlineCustomContentCacheManager.
+    /// </summary>
+    public static ROnlineCustomContentCacheManager DefaultObject => (ROnlineCustomContentCacheManager)StaticClass().DefaultObject;
+
     internal ROnlineCustomContentCacheManager() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ROnlineCustomContentCacheManager(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROnlineCustomContentCacheManager>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CheckStateChange
@@ -594,7 +639,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Enum: CacheActivityType
     /// </summary>
-    public enum CacheActivityType
+    public enum CacheActivityType : byte
     {
         ActivityRead = 0,
         ActivityWrite = 1,
@@ -605,7 +650,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Enum: CacheActivityStatus
     /// </summary>
-    public enum CacheActivityStatus
+    public enum CacheActivityStatus : byte
     {
         ActivitySuccessful = 0,
         ActivityFailed = 1,
@@ -615,7 +660,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Enum: CacheFileStatus
     /// </summary>
-    public enum CacheFileStatus
+    public enum CacheFileStatus : byte
     {
         FileOK = 0,
         FileObsolete = 1,
@@ -626,7 +671,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Enum: QueuePriorityState
     /// </summary>
-    public enum QueuePriorityState
+    public enum QueuePriorityState : byte
     {
         StandbyState = 0,
         ReadState = 1,

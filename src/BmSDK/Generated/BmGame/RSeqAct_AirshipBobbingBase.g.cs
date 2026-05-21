@@ -21,6 +21,11 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_AirshipBobbingBase.
+    /// </summary>
+    public static RSeqAct_AirshipBobbingBase DefaultObject => (RSeqAct_AirshipBobbingBase)StaticClass().DefaultObject;
+
     internal RSeqAct_AirshipBobbingBase() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_AirshipBobbingBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_AirshipBobbingBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PlayerFinishedTilt
@@ -215,7 +260,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Enum: SAAB_OUT_Links
     /// </summary>
-    public enum SAAB_OUT_Links
+    public enum SAAB_OUT_Links : byte
     {
         SAAB_OUT_Finished = 0,
         SAAB_OUT_Aborted = 1,
@@ -232,7 +277,7 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Enum: SAAB_IN_Links
     /// </summary>
-    public enum SAAB_IN_Links
+    public enum SAAB_IN_Links : byte
     {
         SAAB_IN_Start = 0,
         SAAB_IN_Stop = 1,
@@ -345,11 +390,8 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// StructProperty: InitialVistaRotation
     /// </summary>
-    public unsafe BmSDK.Rotator InitialVistaRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref BmSDK.Rotator InitialVistaRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 464);
 
     /// <summary>
     /// ArrayProperty: ForceFieldVolume
@@ -435,29 +477,20 @@ public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// StructProperty: XAxisBob
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings XAxisBob
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings XAxisBob
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings>(Ptr + 508);
 
     /// <summary>
     /// StructProperty: YAxisBob
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings YAxisBob
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings YAxisBob
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings>(Ptr + 528);
 
     /// <summary>
     /// StructProperty: ZAxisBob
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings ZAxisBob
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings ZAxisBob
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_AirshipBobbingBase.FAxisBobSettings>(Ptr + 548);
 
     /// <summary>
     /// FloatProperty: TiltAccel

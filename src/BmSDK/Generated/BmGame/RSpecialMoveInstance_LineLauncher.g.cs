@@ -21,52 +21,62 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_LineLauncher.
+    /// </summary>
+    public static RSpecialMoveInstance_LineLauncher DefaultObject => (RSpecialMoveInstance_LineLauncher)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_LineLauncher() { }
 
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_LineLauncher
     /// </summary>
-    public RSpecialMoveInstance_LineLauncher(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_LineLauncher Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_LineLauncher(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSpecialMoveInstance_LineLauncher(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_LineLauncher>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpdateZipLineControlPoint
@@ -618,7 +628,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherTakedownFinish
     /// </summary>
-    public enum LineLauncherTakedownFinish
+    public enum LineLauncherTakedownFinish : byte
     {
         LLFM_Drop = 0,
         LLFM_WallSlam = 1,
@@ -629,7 +639,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherGrabType
     /// </summary>
-    public enum LineLauncherGrabType
+    public enum LineLauncherGrabType : byte
     {
         LLGT_GrabLeft = 0,
         LLGT_GrabRight = 1,
@@ -639,7 +649,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherDismountType
     /// </summary>
-    public enum LineLauncherDismountType
+    public enum LineLauncherDismountType : byte
     {
         LLDT_None = 0,
         LLDT_Land = 1,
@@ -652,7 +662,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherMovementResult
     /// </summary>
-    public enum LineLauncherMovementResult
+    public enum LineLauncherMovementResult : byte
     {
         LLMR_AllFine = 0,
         LLMR_HitObstacle = 1,
@@ -664,7 +674,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Enum: LineLauncherKickDirection
     /// </summary>
-    public enum LineLauncherKickDirection
+    public enum LineLauncherKickDirection : byte
     {
         LLKD_ForwardKick = 0,
         LLKD_LeftKick = 1,
@@ -675,20 +685,14 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: Transition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 876);
 
     /// <summary>
     /// StructProperty: GrabTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GrabTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GrabTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 880);
 
     /// <summary>
     /// IntProperty: StationaryCount
@@ -720,11 +724,8 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: OldPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 896);
 
     /// <summary>
     /// ObjectProperty: KickTarget
@@ -862,6 +863,11 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: FakeRopeComp
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RSimpleRopeComponent> FakeRopeComp => new(2, Ptr + 1028);
+
+    /// <summary>
     /// ComponentProperty: FakeRopeComp
     /// </summary>
     public unsafe BmSDK.BmGame.RSimpleRopeComponent FakeRopeComp_0
@@ -881,11 +887,8 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: KickOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId KickOverlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId KickOverlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 1044);
 
     /// <summary>
     /// BoolProperty: bGrabHostageMode
@@ -1061,11 +1064,8 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: GrabVillainOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId GrabVillainOverlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 1060); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1060); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId GrabVillainOverlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 1060);
 
     /// <summary>
     /// FloatProperty: CurrentZSpeed
@@ -1106,20 +1106,14 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// StructProperty: VictimLeftOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 VictimLeftOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
-    }
+    public unsafe ref System.Numerics.Vector3 VictimLeftOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1108);
 
     /// <summary>
     /// StructProperty: VictimRightOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 VictimRightOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
-    }
+    public unsafe ref System.Numerics.Vector3 VictimRightOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1120);
 
     /// <summary>
     /// FloatProperty: TakedownWallLookAhead

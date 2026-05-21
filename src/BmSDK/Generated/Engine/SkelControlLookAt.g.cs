@@ -21,6 +21,11 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControlLookAt.
+    /// </summary>
+    public static SkelControlLookAt DefaultObject => (SkelControlLookAt)StaticClass().DefaultObject;
+
     internal SkelControlLookAt() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SkelControlLookAt(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControlLookAt>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanLookAtPoint
@@ -116,11 +161,8 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 248);
 
     /// <summary>
     /// ByteProperty: TargetLocationSpace
@@ -278,20 +320,14 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: DesiredTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 DesiredTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref System.Numerics.Vector3 DesiredTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 280);
 
     /// <summary>
     /// StructProperty: ActorSpaceLookAtTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActorSpaceLookAtTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActorSpaceLookAtTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 292);
 
     /// <summary>
     /// FloatProperty: MaxAngle
@@ -323,29 +359,20 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: RotationAngleRangeX
     /// </summary>
-    public unsafe System.Numerics.Vector2 RotationAngleRangeX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public unsafe ref System.Numerics.Vector2 RotationAngleRangeX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 316);
 
     /// <summary>
     /// StructProperty: RotationAngleRangeY
     /// </summary>
-    public unsafe System.Numerics.Vector2 RotationAngleRangeY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
+    public unsafe ref System.Numerics.Vector2 RotationAngleRangeY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 324);
 
     /// <summary>
     /// StructProperty: RotationAngleRangeZ
     /// </summary>
-    public unsafe System.Numerics.Vector2 RotationAngleRangeZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref System.Numerics.Vector2 RotationAngleRangeZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 332);
 
     /// <summary>
     /// NameProperty: AllowRotationOtherBoneName
@@ -386,29 +413,20 @@ public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: LimitLookDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LimitLookDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref System.Numerics.Vector3 LimitLookDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 360);
 
     /// <summary>
     /// StructProperty: BaseLookDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseLookDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseLookDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 372);
 
     /// <summary>
     /// StructProperty: BaseBonePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseBonePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseBonePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 384);
 
     /// <summary>
     /// FloatProperty: LastCalcTime

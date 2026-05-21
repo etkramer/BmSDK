@@ -21,6 +21,11 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SVehicle.
+    /// </summary>
+    public static SVehicle DefaultObject => (SVehicle)StaticClass().DefaultObject;
+
     internal SVehicle() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// </summary>
     protected SVehicle(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<SVehicle>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<SVehicle>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<SVehicle>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<SVehicle>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<SVehicle>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SVehicle>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<SVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<SVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetHidden
@@ -1263,20 +1273,14 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: COMOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 COMOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1724); }
-    }
+    public unsafe ref System.Numerics.Vector3 COMOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1724);
 
     /// <summary>
     /// StructProperty: InertiaTensorMultiplier
     /// </summary>
-    public unsafe System.Numerics.Vector3 InertiaTensorMultiplier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
-    }
+    public unsafe ref System.Numerics.Vector3 InertiaTensorMultiplier
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1736);
 
     /// <summary>
     /// FloatProperty: StayUprightRollResistAngle
@@ -1605,11 +1609,8 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BaseOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1912); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1912);
 
     /// <summary>
     /// FloatProperty: CamDist
@@ -1641,11 +1642,8 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VState
     /// </summary>
-    public unsafe BmSDK.Engine.SVehicle.FVehicleState VState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SVehicle.FVehicleState>(Ptr + 1936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1936); }
-    }
+    public unsafe ref BmSDK.Engine.SVehicle.FVehicleState VState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SVehicle.FVehicleState>(Ptr + 1936);
 
     /// <summary>
     /// FloatProperty: AngErrorAccumulator
@@ -1704,11 +1702,8 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FakeRoadCollisionPlane
     /// </summary>
-    public unsafe BmSDK.GameObject.FPlane FakeRoadCollisionPlane
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 2048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2048); }
-    }
+    public unsafe ref BmSDK.GameObject.FPlane FakeRoadCollisionPlane
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FPlane>(Ptr + 2048);
 
     /// <summary>
     /// FloatProperty: DefaultTyreUpdates

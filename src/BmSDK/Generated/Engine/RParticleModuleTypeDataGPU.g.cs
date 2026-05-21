@@ -21,6 +21,11 @@ public partial class RParticleModuleTypeDataGPU : BmSDK.Engine.ParticleModuleTyp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleTypeDataGPU.
+    /// </summary>
+    public static RParticleModuleTypeDataGPU DefaultObject => (RParticleModuleTypeDataGPU)StaticClass().DefaultObject;
+
     internal RParticleModuleTypeDataGPU() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RParticleModuleTypeDataGPU : BmSDK.Engine.ParticleModuleTyp
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RParticleModuleTypeDataGPU(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataGPU>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// IntProperty: MaxParticlesOverride
@@ -45,11 +90,8 @@ public partial class RParticleModuleTypeDataGPU : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: EmitterConstantAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 EmitterConstantAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref System.Numerics.Vector3 EmitterConstantAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 100);
 
     /// <summary>
     /// FloatProperty: NumBounces
@@ -81,11 +123,8 @@ public partial class RParticleModuleTypeDataGPU : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// StructProperty: CoefficientOfRestitutionD
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat CoefficientOfRestitutionD
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat CoefficientOfRestitutionD
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 124);
 
     /// <summary>
     /// BoolProperty: DieOnLastBounce

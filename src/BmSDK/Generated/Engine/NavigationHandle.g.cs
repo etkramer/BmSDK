@@ -21,6 +21,11 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NavigationHandle.
+    /// </summary>
+    public static NavigationHandle DefaultObject => (NavigationHandle)StaticClass().DefaultObject;
+
     internal NavigationHandle() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected NavigationHandle(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<NavigationHandle>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DrawBreadCrumbs
@@ -1159,20 +1204,14 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PathCache
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore PathCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore PathCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: StoredPathCache
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FPathStore StoredPathCache
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FPathStore StoredPathCache
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FPathStore>(Ptr + 156);
 
     /// <summary>
     /// StructProperty: BestUnfinishedPathPoint
@@ -1204,11 +1243,8 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FinalDestination
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FBasedPosition FinalDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FBasedPosition FinalDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FBasedPosition>(Ptr + 196);
 
     /// <summary>
     /// BoolProperty: bSkipRouteCacheUpdates
@@ -1276,11 +1312,8 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedPathParams
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationHandle.FNavMeshPathParams CachedPathParams
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationHandle.FNavMeshPathParams>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.Engine.NavigationHandle.FNavMeshPathParams CachedPathParams
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.NavigationHandle.FNavMeshPathParams>(Ptr + 256);
 
     /// <summary>
     /// ByteProperty: LastPathError
@@ -1301,85 +1334,60 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: Breadcrumbs
+    /// InlineArray{StructProperty}: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
-    }
+    public InlineArray<System.Numerics.Vector3> Breadcrumbs => new(10, Ptr + 316);
+
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 316);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 328);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 340);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 352);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 364);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 376);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 388);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 400);
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
-    }
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 412);
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 Breadcrumbs_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 424);
 
     /// <summary>
     /// IntProperty: BreadCrumbMostRecentIdx

@@ -21,6 +21,11 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHelicopterBase.
+    /// </summary>
+    public static RHelicopterBase DefaultObject => (RHelicopterBase)StaticClass().DefaultObject;
+
     internal RHelicopterBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// </summary>
     protected RHelicopterBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHelicopterBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PlayDeathBarks
@@ -1899,7 +1909,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Enum: HeliTimeSliceFeature
     /// </summary>
-    public enum HeliTimeSliceFeature
+    public enum HeliTimeSliceFeature : byte
     {
         HTS_DustFX = 0,
         HTS_SearchLight = 1,
@@ -2386,29 +2396,20 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PrevPointLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevPointLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1544); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevPointLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1544);
 
     /// <summary>
     /// StructProperty: ActualVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActualVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1556); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActualVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1556);
 
     /// <summary>
     /// StructProperty: ActualAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActualAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1568); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActualAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1568);
 
     /// <summary>
     /// FloatProperty: ActualRotationalVelocity
@@ -2422,20 +2423,14 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VirtualLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 VirtualLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
-    }
+    public unsafe ref System.Numerics.Vector3 VirtualLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1584);
 
     /// <summary>
     /// StructProperty: VirtualRotation
     /// </summary>
-    public unsafe BmSDK.Rotator VirtualRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1596); }
-    }
+    public unsafe ref BmSDK.Rotator VirtualRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1596);
 
     /// <summary>
     /// FloatProperty: PitchAndRollMultiplier
@@ -2683,20 +2678,14 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GustNormalStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 GustNormalStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1788); }
-    }
+    public unsafe ref System.Numerics.Vector3 GustNormalStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1788);
 
     /// <summary>
     /// StructProperty: GustNormalFinish
     /// </summary>
-    public unsafe System.Numerics.Vector3 GustNormalFinish
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1800); }
-    }
+    public unsafe ref System.Numerics.Vector3 GustNormalFinish
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1800);
 
     /// <summary>
     /// FloatProperty: GustMagnitude
@@ -2737,11 +2726,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrentGustVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentGustVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1828); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentGustVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1828);
 
     /// <summary>
     /// FloatProperty: RotationBankingMagnitude
@@ -2791,11 +2777,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WobbleVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 WobbleVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1860); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1860); }
-    }
+    public unsafe ref System.Numerics.Vector3 WobbleVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1860);
 
     /// <summary>
     /// FloatProperty: GustStrengthBase
@@ -2953,11 +2936,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: lightTargetOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator lightTargetOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1940); }
-    }
+    public unsafe ref BmSDK.Rotator lightTargetOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1940);
 
     /// <summary>
     /// FloatProperty: fOverrideSpeed
@@ -2971,20 +2951,14 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightFloorPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightFloorPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1956); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightFloorPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1956);
 
     /// <summary>
     /// StructProperty: lightPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 lightPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1968); }
-    }
+    public unsafe ref System.Numerics.Vector3 lightPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1968);
 
     /// <summary>
     /// FloatProperty: HoldPositionDistance
@@ -3016,11 +2990,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: lightOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator lightOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1992); }
-    }
+    public unsafe ref BmSDK.Rotator lightOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1992);
 
     /// <summary>
     /// ArrayProperty: RemoveMaterialsFromDisruptorMeshList
@@ -3160,11 +3131,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BMLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 BMLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2128); }
-    }
+    public unsafe ref System.Numerics.Vector3 BMLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2128);
 
     /// <summary>
     /// FloatProperty: LastSpottedTime
@@ -3214,38 +3182,26 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FixedCamLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FixedCamLocationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2196); }
-    }
+    public unsafe ref System.Numerics.Vector3 FixedCamLocationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2196);
 
     /// <summary>
     /// StructProperty: FixedCamLocationRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 FixedCamLocationRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }
-    }
+    public unsafe ref System.Numerics.Vector3 FixedCamLocationRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2208);
 
     /// <summary>
     /// StructProperty: FixedCamRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator FixedCamRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
-    }
+    public unsafe ref BmSDK.Rotator FixedCamRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2220);
 
     /// <summary>
     /// StructProperty: FixedCamRotationRange
     /// </summary>
-    public unsafe BmSDK.Rotator FixedCamRotationRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2232); }
-    }
+    public unsafe ref BmSDK.Rotator FixedCamRotationRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2232);
 
     /// <summary>
     /// FloatProperty: FixedCamFOV
@@ -3394,11 +3350,8 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: QueuedFinalRotation
     /// </summary>
-    public unsafe BmSDK.Rotator QueuedFinalRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2328); }
-    }
+    public unsafe ref BmSDK.Rotator QueuedFinalRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2328);
 
     /// <summary>
     /// FloatProperty: PPSpeed

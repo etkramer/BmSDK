@@ -21,6 +21,11 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInventoryGadget.
+    /// </summary>
+    public static RInventoryGadget DefaultObject => (RInventoryGadget)StaticClass().DefaultObject;
+
     internal RInventoryGadget() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// </summary>
     protected RInventoryGadget(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RInventoryGadget>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SpecialMoveCancelled
@@ -1909,7 +1919,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EHighlightedTargetType
     /// </summary>
-    public enum EHighlightedTargetType
+    public enum EHighlightedTargetType : byte
     {
         HTT_None = 0,
         HTT_Firearm = 1,
@@ -1925,7 +1935,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// Enum: FGadgetIDs
     /// </summary>
-    public enum FGadgetIDs
+    public enum FGadgetIDs : byte
     {
         FGID_None = 0,
         FGID_Batarang = 1,
@@ -2135,6 +2145,11 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: ThrowEquipBoneNameOverride
+    /// </summary>
+    public InlineArray<BmSDK.FName> ThrowEquipBoneNameOverride => new(13, Ptr + 904);
+
+    /// <summary>
     /// NameProperty: ThrowEquipBoneNameOverride
     /// </summary>
     public unsafe BmSDK.FName ThrowEquipBoneNameOverride_0
@@ -2238,6 +2253,11 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1000); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: ThrowEquipBoneName2Override
+    /// </summary>
+    public InlineArray<BmSDK.FName> ThrowEquipBoneName2Override => new(13, Ptr + 1008);
 
     /// <summary>
     /// NameProperty: ThrowEquipBoneName2Override
@@ -2878,11 +2898,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: AutoTargetExtCamRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator AutoTargetExtCamRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1176); }
-    }
+    public unsafe ref BmSDK.Rotator AutoTargetExtCamRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1176);
 
     /// <summary>
     /// IntProperty: MaxCornerViewAngle
@@ -2914,11 +2931,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: ThrowTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ThrowTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1200);
 
     /// <summary>
     /// NameProperty: TargetClass
@@ -2941,11 +2955,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: EmergencyThrowDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 EmergencyThrowDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1220); }
-    }
+    public unsafe ref System.Numerics.Vector3 EmergencyThrowDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1220);
 
     /// <summary>
     /// FloatProperty: AutoTargetPlaneOffset
@@ -3049,11 +3060,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: GetOutSoundSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GetOutSoundSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GetOutSoundSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1312);
 
     /// <summary>
     /// NameProperty: WireLeftTurn
@@ -3112,11 +3120,8 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: MirrorRelativeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator MirrorRelativeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1384); }
-    }
+    public unsafe ref BmSDK.Rotator MirrorRelativeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1384);
 
     /// <summary>
     /// ArrayProperty: CurrentHighlightTargets
@@ -3247,20 +3252,14 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: WorldPPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1516); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1516);
 
     /// <summary>
     /// StructProperty: vAdditiveArmAvoidanceTraceExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 vAdditiveArmAvoidanceTraceExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2040); }
-    }
+    public unsafe ref System.Numerics.Vector3 vAdditiveArmAvoidanceTraceExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2040);
 
     /// <summary>
     /// FloatProperty: fAdditiveArmAvoidanceRightBias
@@ -3335,7 +3334,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// Enum: CoverCornerType
     /// </summary>
-    public enum CoverCornerType
+    public enum CoverCornerType : byte
     {
         CCT_NoCorner = 0,
         CCT_LeftCorner = 1,
@@ -3346,7 +3345,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// Enum: BatarangThrowType
     /// </summary>
-    public enum BatarangThrowType
+    public enum BatarangThrowType : byte
     {
         BTT_NullThrow = 0,
         BTT_StandingThrow = 1,
@@ -3368,7 +3367,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// Enum: PlayerWantsToCrouch
     /// </summary>
-    public enum PlayerWantsToCrouch
+    public enum PlayerWantsToCrouch : byte
     {
         PWC_Crouch = 0,
         PWC_StandUp = 1,
@@ -3378,7 +3377,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// Enum: GadgetEquipState
     /// </summary>
-    public enum GadgetEquipState
+    public enum GadgetEquipState : byte
     {
         GS_AttachedToBelt = 0,
         GS_AttachetToHand = 1,

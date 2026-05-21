@@ -21,52 +21,62 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMAIAction_ReviveCasualty.
+    /// </summary>
+    public static RBMAIAction_ReviveCasualty DefaultObject => (RBMAIAction_ReviveCasualty)StaticClass().DefaultObject;
+
     internal RBMAIAction_ReviveCasualty() { }
 
     /// <summary>
     /// Constructs a new RBMAIAction_ReviveCasualty
     /// </summary>
-    public RBMAIAction_ReviveCasualty(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_ReviveCasualty Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBMAIAction_ReviveCasualty(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMAIAction_ReviveCasualty(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_ReviveCasualty>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: HasAtLeastOneThugNearby
@@ -161,7 +171,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Enum: eReviveCasDialogueState
     /// </summary>
-    public enum eReviveCasDialogueState
+    public enum eReviveCasDialogueState : byte
     {
         eRCDS_Start = 0,
         eRCDS_Examine = 1,
@@ -176,7 +186,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Enum: eThugInWayAnimType
     /// </summary>
-    public enum eThugInWayAnimType
+    public enum eThugInWayAnimType : byte
     {
         ePUSH_Front1 = 0,
         ePUSH_Front2 = 1,
@@ -191,7 +201,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Enum: eReviveAnimType
     /// </summary>
-    public enum eReviveAnimType
+    public enum eReviveAnimType : byte
     {
         eREVIVE_In = 0,
         eREVIVE_In_RightTurn = 1,
@@ -475,74 +485,55 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// StructProperty: InAnimNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 956);
 
     /// <summary>
     /// StructProperty: InAnimNames_RightTurn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames_RightTurn
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames_RightTurn
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 988);
 
     /// <summary>
     /// StructProperty: InAnimNames_LeftTurn
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames_LeftTurn
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames InAnimNames_LeftTurn
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1020);
 
     /// <summary>
     /// StructProperty: JabAnimNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames JabAnimNames
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames JabAnimNames
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1052);
 
     /// <summary>
     /// StructProperty: IdleAnimNames
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames IdleAnimNames
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames IdleAnimNames
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1084);
 
     /// <summary>
     /// StructProperty: OutAnimNames_Medic
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Medic
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Medic
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1116);
 
     /// <summary>
     /// StructProperty: OutAnimNames_Cas
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Cas
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Cas
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1148);
 
     /// <summary>
     /// StructProperty: OutAnimNames_Cas_Unarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Cas_Unarmed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames OutAnimNames_Cas_Unarmed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMAIAction_ReviveCasualty.FreviveAnimNames>(Ptr + 1180);
+
+    /// <summary>
+    /// InlineArray{NameProperty}: ThugInWayAnims_Medic
+    /// </summary>
+    public InlineArray<BmSDK.FName> ThugInWayAnims_Medic => new(7, Ptr + 1212);
 
     /// <summary>
     /// NameProperty: ThugInWayAnims_Medic
@@ -600,6 +591,11 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1260); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: ThugInWayAnims_Thug
+    /// </summary>
+    public InlineArray<BmSDK.FName> ThugInWayAnims_Thug => new(7, Ptr + 1268);
 
     /// <summary>
     /// NameProperty: ThugInWayAnims_Thug
@@ -661,47 +657,32 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// StructProperty: medicTransID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId medicTransID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId medicTransID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1324);
 
     /// <summary>
     /// StructProperty: thugInWayTransID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId thugInWayTransID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId thugInWayTransID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1328);
 
     /// <summary>
     /// StructProperty: transitionStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 transitionStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
-    }
+    public unsafe ref System.Numerics.Vector3 transitionStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1332);
 
     /// <summary>
     /// StructProperty: crouchLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 crouchLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
-    }
+    public unsafe ref System.Numerics.Vector3 crouchLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1344);
 
     /// <summary>
     /// StructProperty: crouchRotation
     /// </summary>
-    public unsafe BmSDK.Rotator crouchRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
-    }
+    public unsafe ref BmSDK.Rotator crouchRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1356);
 
     /// <summary>
     /// FloatProperty: transTravel

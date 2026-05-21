@@ -21,6 +21,11 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTypeDataBeam2.
+    /// </summary>
+    public static ParticleModuleTypeDataBeam2 DefaultObject => (ParticleModuleTypeDataBeam2)StaticClass().DefaultObject;
+
     internal ParticleModuleTypeDataBeam2() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// </summary>
     protected ParticleModuleTypeDataBeam2(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTypeDataBeam2>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EBeamTaperMethod
     /// </summary>
-    public enum EBeamTaperMethod
+    public enum EBeamTaperMethod : byte
     {
         PEBTM_None = 0,
         PEBTM_Full = 1,
@@ -207,29 +252,20 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// StructProperty: Distance
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Distance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Distance
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: TaperFactor
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TaperFactor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TaperFactor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: TaperScale
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TaperScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat TaperScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 212);
 
     /// <summary>
     /// ArrayProperty: BonePairs
@@ -243,7 +279,7 @@ public partial class ParticleModuleTypeDataBeam2 : BmSDK.Engine.ParticleModuleTy
     /// <summary>
     /// Enum: EBeam2Method
     /// </summary>
-    public enum EBeam2Method
+    public enum EBeam2Method : byte
     {
         PEB2M_Distance = 0,
         PEB2M_Target = 1,

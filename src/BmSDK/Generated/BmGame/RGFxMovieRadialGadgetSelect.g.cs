@@ -21,6 +21,11 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieRadialGadgetSelect.
+    /// </summary>
+    public static RGFxMovieRadialGadgetSelect DefaultObject => (RGFxMovieRadialGadgetSelect)StaticClass().DefaultObject;
+
     internal RGFxMovieRadialGadgetSelect() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieRadialGadgetSelect(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieRadialGadgetSelect>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: XI_GetScreenSize
@@ -734,11 +779,8 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// StructProperty: WorldPPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 704);
 
     /// <summary>
     /// IntProperty: SelectedGadgetIndex
@@ -802,6 +844,11 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1252); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: CurrentlyLoadedGadgets
+    /// </summary>
+    public InlineArray<BmSDK.FName> CurrentlyLoadedGadgets => new(12, Ptr + 1256);
 
     /// <summary>
     /// NameProperty: CurrentlyLoadedGadgets
@@ -1007,6 +1054,11 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1424); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: CycleGadgetsIndexOrder
+    /// </summary>
+    public InlineArray<int> CycleGadgetsIndexOrder => new(12, Ptr + 1440);
 
     /// <summary>
     /// IntProperty: CycleGadgetsIndexOrder

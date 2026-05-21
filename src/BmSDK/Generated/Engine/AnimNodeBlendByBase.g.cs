@@ -21,6 +21,11 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeBlendByBase.
+    /// </summary>
+    public static AnimNodeBlendByBase DefaultObject => (AnimNodeBlendByBase)StaticClass().DefaultObject;
+
     internal AnimNodeBlendByBase() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AnimNodeBlendByBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeBlendByBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: Type
@@ -81,7 +126,7 @@ public partial class AnimNodeBlendByBase : BmSDK.Engine.AnimNodeBlendList, BmSDK
     /// <summary>
     /// Enum: EBaseBlendType
     /// </summary>
-    public enum EBaseBlendType
+    public enum EBaseBlendType : byte
     {
         BBT_ByActorTag = 0,
         BBT_ByActorClass = 1,

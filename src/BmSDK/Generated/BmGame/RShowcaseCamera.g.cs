@@ -21,52 +21,62 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RShowcaseCamera.
+    /// </summary>
+    public static RShowcaseCamera DefaultObject => (RShowcaseCamera)StaticClass().DefaultObject;
+
     internal RShowcaseCamera() { }
 
     /// <summary>
     /// Constructs a new RShowcaseCamera
     /// </summary>
-    public RShowcaseCamera(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RShowcaseCamera Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RShowcaseCamera(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RShowcaseCamera(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RShowcaseCamera>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpdateLightRigs
@@ -192,20 +202,14 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: m_vVantagePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vVantagePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vVantagePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1256);
 
     /// <summary>
     /// StructProperty: m_vVantageLookAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vVantageLookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1268); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vVantageLookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1268);
 
     /// <summary>
     /// FloatProperty: m_fVantageFOV
@@ -219,29 +223,20 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: m_vInspectHeights
     /// </summary>
-    public unsafe System.Numerics.Vector4 m_vInspectHeights
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 1296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
-    }
+    public unsafe ref System.Numerics.Vector4 m_vInspectHeights
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 1296);
 
     /// <summary>
     /// StructProperty: m_vInspectAngles
     /// </summary>
-    public unsafe System.Numerics.Vector4 m_vInspectAngles
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
-    }
+    public unsafe ref System.Numerics.Vector4 m_vInspectAngles
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 1312);
 
     /// <summary>
     /// StructProperty: m_vInspectFOVs
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vInspectFOVs
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vInspectFOVs
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1328);
 
     /// <summary>
     /// FloatProperty: m_fInspectDistance
@@ -300,38 +295,26 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: m_vSourceLookAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vSourceLookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1364); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vSourceLookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1364);
 
     /// <summary>
     /// StructProperty: m_vTargetLookAt
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vTargetLookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1376); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vTargetLookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1376);
 
     /// <summary>
     /// StructProperty: m_rSourceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator m_rSourceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1388); }
-    }
+    public unsafe ref BmSDK.Rotator m_rSourceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1388);
 
     /// <summary>
     /// StructProperty: m_rTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator m_rTargetRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
-    }
+    public unsafe ref BmSDK.Rotator m_rTargetRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1400);
 
     /// <summary>
     /// FloatProperty: m_fSourceFOV
@@ -390,7 +373,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Enum: ShowcaseCameraVantageRequirement
     /// </summary>
-    public enum ShowcaseCameraVantageRequirement
+    public enum ShowcaseCameraVantageRequirement : byte
     {
         SCVR_NONE = 0,
         SCVR_TRANSITION_OUT = 1,
@@ -401,7 +384,7 @@ public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Enum: ShowcaseCameraMode
     /// </summary>
-    public enum ShowcaseCameraMode
+    public enum ShowcaseCameraMode : byte
     {
         SCM_UNKNOWN = 0,
         SCM_VANTAGE = 1,

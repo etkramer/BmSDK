@@ -21,52 +21,62 @@ public partial class RJokerGunGadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RJokerGunGadget.
+    /// </summary>
+    public static RJokerGunGadget DefaultObject => (RJokerGunGadget)StaticClass().DefaultObject;
+
     internal RJokerGunGadget() { }
 
     /// <summary>
     /// Constructs a new RJokerGunGadget
     /// </summary>
-    public RJokerGunGadget(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RJokerGunGadget Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RJokerGunGadget(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RJokerGunGadget(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RJokerGunGadget>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpdateWalkingVelocity
@@ -504,20 +514,14 @@ public partial class RJokerGunGadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSDK.I
     /// <summary>
     /// StructProperty: CurrTransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CurrTransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2088); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId CurrTransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2088);
 
     /// <summary>
     /// StructProperty: CurrOverlayId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId CurrOverlayId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 2092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId CurrOverlayId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 2092);
 
     /// <summary>
     /// FloatProperty: DefaultHitDamage
@@ -673,47 +677,37 @@ public partial class RJokerGunGadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSDK.I
     }
 
     /// <summary>
-    /// StructProperty: AutoAimFireDirections
+    /// InlineArray{StructProperty}: AutoAimFireDirections
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection AutoAimFireDirections_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection>(Ptr + 2204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
-    }
+    public InlineArray<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection> AutoAimFireDirections => new(3, Ptr + 2204);
+
     /// <summary>
     /// StructProperty: AutoAimFireDirections
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection AutoAimFireDirections_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection>(Ptr + 2248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2248); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection AutoAimFireDirections_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection>(Ptr + 2204);
     /// <summary>
     /// StructProperty: AutoAimFireDirections
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection AutoAimFireDirections_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection>(Ptr + 2292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2292); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection AutoAimFireDirections_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection>(Ptr + 2248);
+    /// <summary>
+    /// StructProperty: AutoAimFireDirections
+    /// </summary>
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection AutoAimFireDirections_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection>(Ptr + 2292);
 
     /// <summary>
     /// StructProperty: LastFireRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastFireRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2336); }
-    }
+    public unsafe ref BmSDK.Rotator LastFireRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2336);
 
     /// <summary>
     /// StructProperty: LastFirePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastFirePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2348); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastFirePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2348);
 
     /// <summary>
     /// IntProperty: BlunderbusShots
@@ -862,11 +856,8 @@ public partial class RJokerGunGadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSDK.I
     /// <summary>
     /// StructProperty: WalkingPawnVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 WalkingPawnVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
-    }
+    public unsafe ref System.Numerics.Vector3 WalkingPawnVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2404);
 
     /// <summary>
     /// FloatProperty: WalkingPawnAccel

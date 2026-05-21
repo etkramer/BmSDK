@@ -21,12 +21,57 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkDialogue.
+    /// </summary>
+    public static AkDialogue DefaultObject => (AkDialogue)StaticClass().DefaultObject;
+
     internal AkDialogue() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkDialogue(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkDialogue>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetDialogueSubtitle
@@ -2000,7 +2045,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AkDialogueVoiceEthnicity
     /// </summary>
-    public enum AkDialogueVoiceEthnicity
+    public enum AkDialogueVoiceEthnicity : byte
     {
         AK_VOICE_ETHNICITY_NONE = 0,
         AK_VOICE_ETHNICITY_MAX = 1,
@@ -2009,7 +2054,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AkDialogueVoiceGender
     /// </summary>
-    public enum AkDialogueVoiceGender
+    public enum AkDialogueVoiceGender : byte
     {
         AK_VOICE_GENDER_NONE = 0,
         AK_VOICE_GENDER_MALE = 1,
@@ -2020,7 +2065,7 @@ public partial class AkDialogue : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AkDialogueCallbackResult
     /// </summary>
-    public enum AkDialogueCallbackResult
+    public enum AkDialogueCallbackResult : byte
     {
         AK_SPEECH_OKAY = 0,
         AK_SPEECH_SKIP = 1,

@@ -21,6 +21,11 @@ public partial class RSpecialMoveConfig_RunningRelativeAnimMove : BmSDK.BmGame.R
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveConfig_RunningRelativeAnimMove.
+    /// </summary>
+    public static RSpecialMoveConfig_RunningRelativeAnimMove DefaultObject => (RSpecialMoveConfig_RunningRelativeAnimMove)StaticClass().DefaultObject;
+
     internal RSpecialMoveConfig_RunningRelativeAnimMove() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSpecialMoveConfig_RunningRelativeAnimMove : BmSDK.BmGame.R
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSpecialMoveConfig_RunningRelativeAnimMove(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveConfig_RunningRelativeAnimMove>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: AnimationLaunchFoot
@@ -144,7 +189,7 @@ public partial class RSpecialMoveConfig_RunningRelativeAnimMove : BmSDK.BmGame.R
     /// <summary>
     /// Enum: RelativeAnimLaunchFoot
     /// </summary>
-    public enum RelativeAnimLaunchFoot
+    public enum RelativeAnimLaunchFoot : byte
     {
         RALF_LeftFoot = 0,
         RALF_RightFoot = 1,

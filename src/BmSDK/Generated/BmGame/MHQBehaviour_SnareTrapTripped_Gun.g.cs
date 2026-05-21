@@ -21,6 +21,11 @@ public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehavio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MHQBehaviour_SnareTrapTripped_Gun.
+    /// </summary>
+    public static MHQBehaviour_SnareTrapTripped_Gun DefaultObject => (MHQBehaviour_SnareTrapTripped_Gun)StaticClass().DefaultObject;
+
     internal MHQBehaviour_SnareTrapTripped_Gun() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehavio
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MHQBehaviour_SnareTrapTripped_Gun(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MHQBehaviour_SnareTrapTripped_Gun>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: AwareOfPlayer

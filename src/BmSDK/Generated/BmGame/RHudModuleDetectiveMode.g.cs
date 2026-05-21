@@ -21,6 +21,11 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudModuleDetectiveMode.
+    /// </summary>
+    public static RHudModuleDetectiveMode DefaultObject => (RHudModuleDetectiveMode)StaticClass().DefaultObject;
+
     internal RHudModuleDetectiveMode() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RHudModuleDetectiveMode(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleDetectiveMode>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: HideScannerDetail
@@ -330,7 +375,7 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     /// <summary>
     /// Enum: ENpcExtraInfo
     /// </summary>
-    public enum ENpcExtraInfo
+    public enum ENpcExtraInfo : byte
     {
         ENpcExtraInfo_None = 0,
         ENpcExtraInfo_Friendly = 1,
@@ -352,7 +397,7 @@ public partial class RHudModuleDetectiveMode : BmSDK.BmGame.RHudModule, BmSDK.IG
     /// <summary>
     /// Enum: DetailDisplayType
     /// </summary>
-    public enum DetailDisplayType
+    public enum DetailDisplayType : byte
     {
         DDT_None = 0,
         DDT_Smoke = 1,

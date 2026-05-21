@@ -21,52 +21,62 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwBullwhip.
+    /// </summary>
+    public static RCwBullwhip DefaultObject => (RCwBullwhip)StaticClass().DefaultObject;
+
     internal RCwBullwhip() { }
 
     /// <summary>
     /// Constructs a new RCwBullwhip
     /// </summary>
-    public RCwBullwhip(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCwBullwhip Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCwBullwhip(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCwBullwhip(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwBullwhip>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TriggerNoiseEvent
@@ -753,20 +763,14 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AimLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2104);
 
     /// <summary>
     /// StructProperty: AimDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2116); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2116);
 
     /// <summary>
     /// ByteProperty: LastMirrorChoice
@@ -789,11 +793,8 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2132); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2132);
 
     /// <summary>
     /// NameProperty: TargetBoneName
@@ -807,11 +808,8 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DummyTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 DummyTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2152); }
-    }
+    public unsafe ref System.Numerics.Vector3 DummyTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2152);
 
     /// <summary>
     /// FloatProperty: WhipRange
@@ -861,125 +859,85 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TripThugTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TripThugTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2196); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TripThugTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2196);
 
     /// <summary>
     /// StructProperty: DisarmThugTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DisarmThugTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId DisarmThugTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2200);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: ThrowDirectionTypes
+    /// </summary>
+    public InlineArray<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2204);
 
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2204);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2220);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2236);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2252); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2252);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2268); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2268);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2284); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2284);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2300); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2300);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2316); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2316);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2332); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2332);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2348); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2348);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2364); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2364);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2380); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2380);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
-    }
+    public unsafe ref BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 2396);
 
     /// <summary>
     /// FloatProperty: MinTripDistance

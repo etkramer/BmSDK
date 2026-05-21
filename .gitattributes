@@ -3,3 +3,6 @@
 
 # Ignore changes to generated files during merge
 **/*.g.cs merge=ours
+
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf

@@ -70,7 +70,11 @@ class FName
 	FIELD(INT, Number)
 
 public:
-	string ToString() const { return GetNameEntry()->ToString(); }
+	string ToString() const
+	{
+		auto str = GetNameEntry()->ToString();
+		return Number == 0 ? str : std::format("{}_{}", str, Number - 1);
+	}
 
 	const FNameEntry* GetNameEntry() const { return Runtime::GNames->ElementAt(Index); }
 };

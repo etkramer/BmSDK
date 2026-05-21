@@ -21,6 +21,11 @@ public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.Partic
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleApexEmitterExplicitGeom.
+    /// </summary>
+    public static ParticleModuleApexEmitterExplicitGeom DefaultObject => (ParticleModuleApexEmitterExplicitGeom)StaticClass().DefaultObject;
+
     internal ParticleModuleApexEmitterExplicitGeom() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.Partic
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleApexEmitterExplicitGeom(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleApexEmitterExplicitGeom>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ArrayProperty: ExplicitGeomMaps
@@ -72,29 +117,20 @@ public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.Partic
     /// <summary>
     /// StructProperty: Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref System.Numerics.Vector3 Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe System.Numerics.Vector3 Scale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref System.Numerics.Vector3 Scale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 148);
 
     /// <summary>
     /// Struct: FExplicitGeomMap
@@ -151,7 +187,7 @@ public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.Partic
     /// <summary>
     /// Enum: SamplingMultiple
     /// </summary>
-    public enum SamplingMultiple
+    public enum SamplingMultiple : byte
     {
         Multiple_4X = 0,
         Multiple_8X = 1,

@@ -21,6 +21,11 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UIInteraction.
+    /// </summary>
+    public static UIInteraction DefaultObject => (UIInteraction)StaticClass().DefaultObject;
+
     internal UIInteraction() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected UIInteraction(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UIInteraction>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: NotifyGameSessionEnded
@@ -449,11 +494,8 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MouseButtonRepeatInfo
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIKeyRepeatData MouseButtonRepeatInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIKeyRepeatData>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIKeyRepeatData MouseButtonRepeatInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIKeyRepeatData>(Ptr + 280);
 
     /// <summary>
     /// ArrayProperty: ConfiguredAxisEmulationDefinitions
@@ -474,35 +516,28 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: AxisInputEmulation
+    /// InlineArray{StructProperty}: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public InlineArray<BmSDK.Engine.UIInteraction.FUIAxisEmulationData> AxisInputEmulation => new(4, Ptr + 384);
+
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 384);
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 404);
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 424);
+    /// <summary>
+    /// StructProperty: AxisInputEmulation
+    /// </summary>
+    public unsafe ref BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 444);
 }

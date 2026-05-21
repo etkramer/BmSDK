@@ -21,6 +21,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnPlayer.
+    /// </summary>
+    public static RPawnPlayer DefaultObject => (RPawnPlayer)StaticClass().DefaultObject;
+
     internal RPawnPlayer() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// </summary>
     protected RPawnPlayer(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnPlayer>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanUseGrateChutes
@@ -5160,7 +5170,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EWallRunType
     /// </summary>
-    public enum EWallRunType
+    public enum EWallRunType : byte
     {
         EWRT_None = 0,
         EWRT_WallRun = 1,
@@ -5171,7 +5181,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EDualPlayPredatorLines
     /// </summary>
-    public enum EDualPlayPredatorLines
+    public enum EDualPlayPredatorLines : byte
     {
         DPPL_Injured = 0,
         DPPL_Unavailable = 1,
@@ -5188,7 +5198,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EShimmtMoveResult
     /// </summary>
-    public enum EShimmtMoveResult
+    public enum EShimmtMoveResult : byte
     {
         ESMR_OK = 0,
         ESMR_BlockedLeft = 1,
@@ -5200,7 +5210,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EQuickGadgetType
     /// </summary>
-    public enum EQuickGadgetType
+    public enum EQuickGadgetType : byte
     {
         QGT_GadgetLT = 0,
         QGT_GadgetRT = 1,
@@ -5426,7 +5436,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: ETakedownFeature_Type
     /// </summary>
-    public enum ETakedownFeature_Type
+    public enum ETakedownFeature_Type : byte
     {
         TFT_Railing = 0,
         TFT_OnTopOfRailing = 1,
@@ -5438,7 +5448,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EPlayerTakedownType
     /// </summary>
-    public enum EPlayerTakedownType
+    public enum EPlayerTakedownType : byte
     {
         TKD_Generic = 0,
         TKD_AboveInFront = 1,
@@ -5450,7 +5460,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: PerchDirection
     /// </summary>
-    public enum PerchDirection
+    public enum PerchDirection : byte
     {
         PD_Forward = 0,
         PD_Backward = 1,
@@ -5460,7 +5470,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: OverheadRopeControlPointType
     /// </summary>
-    public enum OverheadRopeControlPointType
+    public enum OverheadRopeControlPointType : byte
     {
         ORCT_LeftHand = 0,
         ORCT_RightHand = 1,
@@ -5498,7 +5508,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EBatmanPoseType
     /// </summary>
-    public enum EBatmanPoseType
+    public enum EBatmanPoseType : byte
     {
         EBPT_Standard = 0,
         EBPT_Combat = 1,
@@ -5553,7 +5563,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EArmourType
     /// </summary>
-    public enum EArmourType
+    public enum EArmourType : byte
     {
         EA_ArmourMelee = 0,
         EA_ArmourBallistic = 1,
@@ -5579,7 +5589,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EPlayerLandMoves
     /// </summary>
-    public enum EPlayerLandMoves
+    public enum EPlayerLandMoves : byte
     {
         PLM_StraightLand = 0,
         PLM_JumpLandToRun = 1,
@@ -5594,7 +5604,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// Enum: EBatmanGadgetList
     /// </summary>
-    public enum EBatmanGadgetList
+    public enum EBatmanGadgetList : byte
     {
         BGL_Batarang = 0,
         BGL_RCBatarang = 1,
@@ -6127,6 +6137,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: LandMoves
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RSpecialMoveConfig> LandMoves => new(6, Ptr + 4668);
+
+    /// <summary>
     /// ObjectProperty: LandMoves
     /// </summary>
     public unsafe BmSDK.BmGame.RSpecialMoveConfig LandMoves_0
@@ -6383,6 +6398,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: SpawnedProjectiles
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RProjectile> SpawnedProjectiles => new(6, Ptr + 4900);
+
+    /// <summary>
     /// ObjectProperty: SpawnedProjectiles
     /// </summary>
     public unsafe BmSDK.BmGame.RProjectile SpawnedProjectiles_0
@@ -6466,6 +6486,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 4972); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4972); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: OverheadRopeControlPoint
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RRope2SimplePhysicsControlPoint> OverheadRopeControlPoint => new(5, Ptr + 4980);
 
     /// <summary>
     /// ObjectProperty: OverheadRopeControlPoint
@@ -6552,6 +6577,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RTunnelGrateCWFlipBase>(Ptr + 5052); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5052); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: GadgetList
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RInventoryGadget> GadgetList => new(32, Ptr + 5060);
 
     /// <summary>
     /// ObjectProperty: GadgetList
@@ -7558,6 +7588,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: DualPlayPredatorLine
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AkDialogueLine> DualPlayPredatorLine => new(9, Ptr + 5980);
+
+    /// <summary>
     /// ObjectProperty: DualPlayPredatorLine
     /// </summary>
     public unsafe BmSDK.Engine.AkDialogueLine DualPlayPredatorLine_0
@@ -7746,6 +7781,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent>(Ptr + 6148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6148); }
     }
+
+    /// <summary>
+    /// InlineArray{ClassProperty}: FearTakedowns
+    /// </summary>
+    public InlineArray<BmSDK.Class> FearTakedowns => new(68, Ptr + 6156);
 
     /// <summary>
     /// ClassProperty: FearTakedowns
@@ -8291,6 +8331,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 6692); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6692); }
     }
+
+    /// <summary>
+    /// InlineArray{ClassProperty}: TakeDowns
+    /// </summary>
+    public InlineArray<BmSDK.Class> TakeDowns => new(68, Ptr + 6700);
 
     /// <summary>
     /// ClassProperty: TakeDowns
@@ -8903,11 +8948,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastKnownState
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FAIAwarenessState LastKnownState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FAIAwarenessState>(Ptr + 7300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7300); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FAIAwarenessState LastKnownState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FAIAwarenessState>(Ptr + 7300);
 
     /// <summary>
     /// BoolProperty: bCheatTrackBMInVent
@@ -9812,20 +9854,14 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: HairAndCowl
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FHairAndCowlState HairAndCowl
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FHairAndCowlState>(Ptr + 7448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7448); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FHairAndCowlState HairAndCowl
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FHairAndCowlState>(Ptr + 7448);
 
     /// <summary>
     /// StructProperty: GrappleLoopSoundHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle GrappleLoopSoundHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 7464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7464); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle GrappleLoopSoundHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 7464);
 
     /// <summary>
     /// FloatProperty: NoSpeakTimer
@@ -10064,20 +10100,14 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CurrentRailing
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FRailingInfo CurrentRailing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FRailingInfo>(Ptr + 7656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7656); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FRailingInfo CurrentRailing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FRailingInfo>(Ptr + 7656);
 
     /// <summary>
     /// StructProperty: SecondRailing
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FRailingInfo SecondRailing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FRailingInfo>(Ptr + 7684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7684); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FRailingInfo SecondRailing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FRailingInfo>(Ptr + 7684);
 
     /// <summary>
     /// ArrayProperty: NearRailings
@@ -10145,11 +10175,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CriticalFallImpactLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CriticalFallImpactLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7752); }
-    }
+    public unsafe ref System.Numerics.Vector3 CriticalFallImpactLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7752);
 
     /// <summary>
     /// FloatProperty: MaxTurnDegreesPerSecond
@@ -10204,6 +10231,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.EBatmanPoseType>(Ptr + 7781); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7781); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: UpAllowSubClasses
+    /// </summary>
+    public InlineArray<byte> UpAllowSubClasses => new(8, Ptr + 7782);
 
     /// <summary>
     /// ByteProperty: UpAllowSubClasses
@@ -10269,6 +10301,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 7789); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7789); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: DownAllowSubClasses
+    /// </summary>
+    public InlineArray<byte> DownAllowSubClasses => new(5, Ptr + 7790);
 
     /// <summary>
     /// ByteProperty: DownAllowSubClasses
@@ -10341,20 +10378,14 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: PreCorrectionVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreCorrectionVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7800); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreCorrectionVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7800);
 
     /// <summary>
     /// StructProperty: GadgetTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GadgetTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 7812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7812); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GadgetTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 7812);
 
     /// <summary>
     /// FloatProperty: LastDeltaTime
@@ -10368,11 +10399,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: DeferedVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 DeferedVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7820); }
-    }
+    public unsafe ref System.Numerics.Vector3 DeferedVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7820);
 
     /// <summary>
     /// ArrayProperty: LOSCapeChecks
@@ -10447,85 +10475,60 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// StructProperty: ControllerHistory
+    /// InlineArray{StructProperty}: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7936); }
-    }
+    public InlineArray<BmSDK.BmGame.RGameInfo.FMovementControllerHistory> ControllerHistory => new(10, Ptr + 7936);
+
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7956); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7936);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7976); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7956);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7996); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7976);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8016); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 7996);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8036); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8016);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8056); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8056); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8036);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8076); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8056);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8096); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8096); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8076);
     /// <summary>
     /// StructProperty: ControllerHistory
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8116); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8096);
+    /// <summary>
+    /// StructProperty: ControllerHistory
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RGameInfo.FMovementControllerHistory ControllerHistory_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FMovementControllerHistory>(Ptr + 8116);
 
     /// <summary>
     /// IntProperty: ControllerHistoryPosition
@@ -10647,11 +10650,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: DamageOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId DamageOverlay
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 8248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8248); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId DamageOverlay
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 8248);
 
     /// <summary>
     /// FloatProperty: DesiredMovementScale
@@ -10710,11 +10710,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: NetworkMoveVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 NetworkMoveVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8280); }
-    }
+    public unsafe ref System.Numerics.Vector3 NetworkMoveVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8280);
 
     /// <summary>
     /// ArrayProperty: PoseIdleStances
@@ -10773,11 +10770,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: vLastPylonForTakedownCheckCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vLastPylonForTakedownCheckCheckLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8336); }
-    }
+    public unsafe ref System.Numerics.Vector3 vLastPylonForTakedownCheckCheckLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8336);
 
     /// <summary>
     /// FloatProperty: LastStaggerTime
@@ -10845,11 +10839,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: FallingTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 FallingTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8380); }
-    }
+    public unsafe ref System.Numerics.Vector3 FallingTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8380);
 
     /// <summary>
     /// FloatProperty: BoostSpeed
@@ -10877,6 +10868,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8400); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: UpGadgets
+    /// </summary>
+    public InlineArray<BmSDK.FName> UpGadgets => new(8, Ptr + 8404);
 
     /// <summary>
     /// NameProperty: UpGadgets
@@ -10944,6 +10940,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: DoubleUpGadgets
+    /// </summary>
+    public InlineArray<BmSDK.FName> DoubleUpGadgets => new(8, Ptr + 8468);
+
+    /// <summary>
     /// NameProperty: DoubleUpGadgets
     /// </summary>
     public unsafe BmSDK.FName DoubleUpGadgets_0
@@ -11009,6 +11010,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: DownGadgets
+    /// </summary>
+    public InlineArray<BmSDK.FName> DownGadgets => new(5, Ptr + 8532);
+
+    /// <summary>
     /// NameProperty: DownGadgets
     /// </summary>
     public unsafe BmSDK.FName DownGadgets_0
@@ -11050,29 +11056,25 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// StructProperty: ExtraCollision
+    /// InlineArray{StructProperty}: ExtraCollision
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FFakeWall ExtraCollision_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FFakeWall>(Ptr + 8572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8572); }
-    }
+    public InlineArray<BmSDK.BmGame.RPawnPlayer.FFakeWall> ExtraCollision => new(3, Ptr + 8572);
+
     /// <summary>
     /// StructProperty: ExtraCollision
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FFakeWall ExtraCollision_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FFakeWall>(Ptr + 8588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8588); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FFakeWall ExtraCollision_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FFakeWall>(Ptr + 8572);
     /// <summary>
     /// StructProperty: ExtraCollision
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FFakeWall ExtraCollision_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FFakeWall>(Ptr + 8604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8604); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FFakeWall ExtraCollision_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FFakeWall>(Ptr + 8588);
+    /// <summary>
+    /// StructProperty: ExtraCollision
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FFakeWall ExtraCollision_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FFakeWall>(Ptr + 8604);
 
     /// <summary>
     /// ArrayProperty: connectedChaseGrates
@@ -11082,6 +11084,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RTunnelGrateBase>>(Ptr + 8620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8620); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: OverheadRopeControlPointRopePosition
+    /// </summary>
+    public InlineArray<float> OverheadRopeControlPointRopePosition => new(5, Ptr + 8636);
 
     /// <summary>
     /// FloatProperty: OverheadRopeControlPointRopePosition
@@ -11123,6 +11130,11 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8652); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8652); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: OverheadRopeControlPointSocketNames
+    /// </summary>
+    public InlineArray<BmSDK.FName> OverheadRopeControlPointSocketNames => new(5, Ptr + 8656);
 
     /// <summary>
     /// NameProperty: OverheadRopeControlPointSocketNames
@@ -11168,47 +11180,32 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastSafeWalkingPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeWalkingPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8696); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeWalkingPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8696);
 
     /// <summary>
     /// StructProperty: LastWalkingPostition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastWalkingPostition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8708); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastWalkingPostition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8708);
 
     /// <summary>
     /// StructProperty: ClimbToCeilingClimbPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint ClimbToCeilingClimbPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint>(Ptr + 8720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8720); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint ClimbToCeilingClimbPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint>(Ptr + 8720);
 
     /// <summary>
     /// StructProperty: ClimbToCatwalkClimbPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint ClimbToCatwalkClimbPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint>(Ptr + 8852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8852); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint ClimbToCatwalkClimbPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint>(Ptr + 8852);
 
     /// <summary>
     /// StructProperty: LastJumpVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastJumpVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8984); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastJumpVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 8984);
 
     /// <summary>
     /// IntProperty: ClimbIndex
@@ -11222,29 +11219,20 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: WireBouncer
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.FWireBounceUpdater WireBouncer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FWireBounceUpdater>(Ptr + 9000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9000); }
-    }
+    public unsafe ref BmSDK.BmGame.RPawnPlayer.FWireBounceUpdater WireBouncer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPawnPlayer.FWireBounceUpdater>(Ptr + 9000);
 
     /// <summary>
     /// StructProperty: CurrentCollisionSmoothingForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentCollisionSmoothingForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9068); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentCollisionSmoothingForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9068);
 
     /// <summary>
     /// StructProperty: DesiredCollisionSmoothingForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 DesiredCollisionSmoothingForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9080); }
-    }
+    public unsafe ref System.Numerics.Vector3 DesiredCollisionSmoothingForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9080);
 
     /// <summary>
     /// FloatProperty: CollisionSmoothingStrength
@@ -11303,11 +11291,13 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CriticalLandScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct CriticalLandScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 9116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9116); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct CriticalLandScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 9116);
+
+    /// <summary>
+    /// InlineArray{IntProperty}: QuickGadgets
+    /// </summary>
+    public InlineArray<int> QuickGadgets => new(5, Ptr + 9272);
 
     /// <summary>
     /// IntProperty: QuickGadgets
@@ -11416,47 +11406,32 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CantRunInDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 CantRunInDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9320); }
-    }
+    public unsafe ref System.Numerics.Vector3 CantRunInDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9320);
 
     /// <summary>
     /// StructProperty: QuickFireFailedTransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QuickFireFailedTransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 9332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9332); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId QuickFireFailedTransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 9332);
 
     /// <summary>
     /// StructProperty: ShotOnVantageShaker
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ShotOnVantageShaker
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 9336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9336); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ShotOnVantageShaker
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 9336);
 
     /// <summary>
     /// StructProperty: UnderWaterVolumeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 UnderWaterVolumeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9492); }
-    }
+    public unsafe ref System.Numerics.Vector3 UnderWaterVolumeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9492);
 
     /// <summary>
     /// StructProperty: vUnderFearGasEffectLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vUnderFearGasEffectLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9504); }
-    }
+    public unsafe ref System.Numerics.Vector3 vUnderFearGasEffectLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9504);
 
     /// <summary>
     /// FloatProperty: JumpStrength
@@ -11497,11 +11472,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastRootMotionVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastRootMotionVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9532); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastRootMotionVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9532);
 
     /// <summary>
     /// FloatProperty: MaxCoverEscapeRange
@@ -11515,20 +11487,14 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: DamageProxyLastActivePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 DamageProxyLastActivePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9548); }
-    }
+    public unsafe ref System.Numerics.Vector3 DamageProxyLastActivePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9548);
 
     /// <summary>
     /// StructProperty: InterrogWallSpaceCheckExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 InterrogWallSpaceCheckExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9560); }
-    }
+    public unsafe ref System.Numerics.Vector3 InterrogWallSpaceCheckExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9560);
 
     /// <summary>
     /// FloatProperty: InterrogWallSpaceCheckHeight
@@ -11542,20 +11508,14 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CollisionSpringVel
     /// </summary>
-    public unsafe System.Numerics.Vector3 CollisionSpringVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9576); }
-    }
+    public unsafe ref System.Numerics.Vector3 CollisionSpringVel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9576);
 
     /// <summary>
     /// StructProperty: FootStepNotifyStruct
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNotify.FNotifierInfo FootStepNotifyStruct
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify.FNotifierInfo>(Ptr + 9588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9588); }
-    }
+    public unsafe ref BmSDK.Engine.AnimNotify.FNotifierInfo FootStepNotifyStruct
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimNotify.FNotifierInfo>(Ptr + 9588);
 
     /// <summary>
     /// IntProperty: attacksSinceGlideKick
@@ -11623,11 +11583,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastCameraRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastCameraRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 9668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9668); }
-    }
+    public unsafe ref BmSDK.Rotator LastCameraRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 9668);
 
     /// <summary>
     /// StrProperty: RiddlerCharDataName
@@ -11659,11 +11616,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: GlideKickSmashScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GlideKickSmashScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 9708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9708); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct GlideKickSmashScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 9708);
 
     /// <summary>
     /// FloatProperty: GlideKickContinueCombatTimer
@@ -11677,20 +11631,14 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CornerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CornerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9868); }
-    }
+    public unsafe ref System.Numerics.Vector3 CornerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9868);
 
     /// <summary>
     /// StructProperty: CornerRotation
     /// </summary>
-    public unsafe BmSDK.Rotator CornerRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 9880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9880); }
-    }
+    public unsafe ref BmSDK.Rotator CornerRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 9880);
 
     /// <summary>
     /// FloatProperty: CornerLROffset
@@ -11758,11 +11706,8 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CustomChangeCameraAimPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 CustomChangeCameraAimPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9932); }
-    }
+    public unsafe ref System.Numerics.Vector3 CustomChangeCameraAimPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9932);
 
     /// <summary>
     /// FloatProperty: ShimmyMoveTimer
@@ -11794,38 +11739,26 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LeftHandShimmyOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LeftHandShimmyOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9956); }
-    }
+    public unsafe ref System.Numerics.Vector3 LeftHandShimmyOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9956);
 
     /// <summary>
     /// StructProperty: RightHandShimmyOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RightHandShimmyOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9968); }
-    }
+    public unsafe ref System.Numerics.Vector3 RightHandShimmyOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9968);
 
     /// <summary>
     /// StructProperty: CurrentLeftHandShimmyOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentLeftHandShimmyOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9980); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentLeftHandShimmyOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9980);
 
     /// <summary>
     /// StructProperty: CurrentRightHandShimmyOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentRightHandShimmyOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 9992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9992); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentRightHandShimmyOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 9992);
 
     /// <summary>
     /// FloatProperty: ShimmyHandInterpSpeed

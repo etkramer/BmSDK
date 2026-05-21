@@ -21,6 +21,11 @@ public partial class ParticleModuleBeamBase : BmSDK.Engine.ParticleModule, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleBeamBase.
+    /// </summary>
+    public static ParticleModuleBeamBase DefaultObject => (ParticleModuleBeamBase)StaticClass().DefaultObject;
+
     internal ParticleModuleBeamBase() { }
 
     /// <summary>
@@ -28,10 +33,50 @@ public partial class ParticleModuleBeamBase : BmSDK.Engine.ParticleModule, BmSDK
     /// </summary>
     protected ParticleModuleBeamBase(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamBase>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: Beam2SourceTargetTangentMethod
     /// </summary>
-    public enum Beam2SourceTargetTangentMethod
+    public enum Beam2SourceTargetTangentMethod : byte
     {
         PEB2STTM_Direct = 0,
         PEB2STTM_UserSet = 1,
@@ -43,7 +88,7 @@ public partial class ParticleModuleBeamBase : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// Enum: Beam2SourceTargetMethod
     /// </summary>
-    public enum Beam2SourceTargetMethod
+    public enum Beam2SourceTargetMethod : byte
     {
         PEB2STM_Default = 0,
         PEB2STM_UserSet = 1,

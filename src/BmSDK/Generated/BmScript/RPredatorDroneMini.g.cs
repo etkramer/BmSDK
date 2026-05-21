@@ -21,52 +21,62 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPredatorDroneMini.
+    /// </summary>
+    public static RPredatorDroneMini DefaultObject => (RPredatorDroneMini)StaticClass().DefaultObject;
+
     internal RPredatorDroneMini() { }
 
     /// <summary>
     /// Constructs a new RPredatorDroneMini
     /// </summary>
-    public RPredatorDroneMini(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPredatorDroneMini Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPredatorDroneMini(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPredatorDroneMini(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPredatorDroneMini>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: AlertToBatmansPosition
@@ -1640,29 +1650,20 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementMeanderSourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementMeanderSourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3340); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementMeanderSourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3340);
 
     /// <summary>
     /// StructProperty: m_vMovementMeanderOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementMeanderOffsetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3352); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementMeanderOffsetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3352);
 
     /// <summary>
     /// StructProperty: m_vMovementMeanderFacingDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementMeanderFacingDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3364); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementMeanderFacingDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3364);
 
     /// <summary>
     /// FloatProperty: m_fMovementMeanderFacingTime
@@ -1685,29 +1686,20 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementPursueVantagePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementPursueVantagePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3384); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementPursueVantagePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3384);
 
     /// <summary>
     /// StructProperty: m_vMovementPursueVantageTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementPursueVantageTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3396); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementPursueVantageTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3396);
 
     /// <summary>
     /// StructProperty: m_vMovementPursueFacingDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementPursueFacingDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3408); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementPursueFacingDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3408);
 
     /// <summary>
     /// FloatProperty: m_fMovementPursueRePathTime
@@ -1721,11 +1713,8 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementUncontrolledStrayDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementUncontrolledStrayDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3424); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementUncontrolledStrayDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3424);
 
     /// <summary>
     /// FloatProperty: m_fMovementUncontrolledStraySwagger
@@ -1775,20 +1764,14 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vMovementMalfunctionOriginPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementMalfunctionOriginPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3456); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementMalfunctionOriginPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3456);
 
     /// <summary>
     /// StructProperty: m_vMovementMalfunctionShiftPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vMovementMalfunctionShiftPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3468); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vMovementMalfunctionShiftPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3468);
 
     /// <summary>
     /// FloatProperty: m_fMovementMalfunctionShiftAmount
@@ -1883,29 +1866,20 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vSearchLightSourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vSearchLightSourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3532); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vSearchLightSourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3532);
 
     /// <summary>
     /// StructProperty: m_rSearchLightSourceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator m_rSearchLightSourceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3544); }
-    }
+    public unsafe ref BmSDK.Rotator m_rSearchLightSourceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3544);
 
     /// <summary>
     /// StructProperty: m_rSearchLightSourceDirection
     /// </summary>
-    public unsafe BmSDK.Rotator m_rSearchLightSourceDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3556); }
-    }
+    public unsafe ref BmSDK.Rotator m_rSearchLightSourceDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3556);
 
     /// <summary>
     /// FloatProperty: m_fSearchLightMoveInterpolationSpeed
@@ -2027,20 +2001,14 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// StructProperty: m_vTargetSourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_vTargetSourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3644); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_vTargetSourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3644);
 
     /// <summary>
     /// StructProperty: m_vTargetSourceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator m_vTargetSourceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3656); }
-    }
+    public unsafe ref BmSDK.Rotator m_vTargetSourceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3656);
 
     /// <summary>
     /// NameProperty: m_ExplosionTargetClass
@@ -2072,7 +2040,7 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// Enum: MalfunctionSource
     /// </summary>
-    public enum MalfunctionSource
+    public enum MalfunctionSource : byte
     {
         MALS_Generic = 0,
         MALS_ControllerDisrupted = 1,
@@ -2083,7 +2051,7 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// Enum: LightColorState
     /// </summary>
-    public enum LightColorState
+    public enum LightColorState : byte
     {
         LCS_Off = 0,
         LCS_Standard = 1,
@@ -2096,7 +2064,7 @@ public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate
     /// <summary>
     /// Enum: SearchLightTargetMode
     /// </summary>
-    public enum SearchLightTargetMode
+    public enum SearchLightTargetMode : byte
     {
         SLTM_Nothing = 0,
         SLTM_Standard = 1,

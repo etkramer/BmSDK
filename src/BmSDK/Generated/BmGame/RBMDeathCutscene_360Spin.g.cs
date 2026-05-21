@@ -21,6 +21,11 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMDeathCutscene_360Spin.
+    /// </summary>
+    public static RBMDeathCutscene_360Spin DefaultObject => (RBMDeathCutscene_360Spin)StaticClass().DefaultObject;
+
     internal RBMDeathCutscene_360Spin() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMDeathCutscene_360Spin(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMDeathCutscene_360Spin>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: MoveCam_Linear
@@ -91,11 +136,8 @@ public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_Sh
     /// <summary>
     /// StructProperty: HangTimeRotator
     /// </summary>
-    public unsafe BmSDK.Rotator HangTimeRotator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
-    }
+    public unsafe ref BmSDK.Rotator HangTimeRotator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 392);
 
     /// <summary>
     /// FloatProperty: HangTimeDist

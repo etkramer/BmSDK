@@ -21,52 +21,62 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Ledge.
+    /// </summary>
+    public static RAEC_Search_Sub_Ledge DefaultObject => (RAEC_Search_Sub_Ledge)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Ledge() { }
 
     /// <summary>
     /// Constructs a new RAEC_Search_Sub_Ledge
     /// </summary>
-    public RAEC_Search_Sub_Ledge(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Search_Sub_Ledge Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_Search_Sub_Ledge(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAEC_Search_Sub_Ledge(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Ledge>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetChosenPathLength
@@ -647,38 +657,26 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// StructProperty: rawStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 rawStartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
+    public unsafe ref System.Numerics.Vector3 rawStartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 700);
 
     /// <summary>
     /// StructProperty: rawEndLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 rawEndLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
-    }
+    public unsafe ref System.Numerics.Vector3 rawEndLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 712);
 
     /// <summary>
     /// StructProperty: rawStartLocProjected
     /// </summary>
-    public unsafe System.Numerics.Vector3 rawStartLocProjected
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public unsafe ref System.Numerics.Vector3 rawStartLocProjected
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 724);
 
     /// <summary>
     /// StructProperty: rawEndLocProjected
     /// </summary>
-    public unsafe System.Numerics.Vector3 rawEndLocProjected
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref System.Numerics.Vector3 rawEndLocProjected
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 736);
 
     /// <summary>
     /// ObjectProperty: LedgeInfo
@@ -735,6 +733,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: movementStanceNamesLeft
+    /// </summary>
+    public InlineArray<BmSDK.FName> movementStanceNamesLeft => new(2, Ptr + 792);
+
+    /// <summary>
     /// NameProperty: movementStanceNamesLeft
     /// </summary>
     public unsafe BmSDK.FName movementStanceNamesLeft_0
@@ -750,6 +753,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 800); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: movementStanceNamesRight
+    /// </summary>
+    public InlineArray<BmSDK.FName> movementStanceNamesRight => new(2, Ptr + 808);
 
     /// <summary>
     /// NameProperty: movementStanceNamesRight
@@ -769,6 +777,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: inAnimNamesLeft
+    /// </summary>
+    public InlineArray<BmSDK.FName> inAnimNamesLeft => new(2, Ptr + 824);
+
+    /// <summary>
     /// NameProperty: inAnimNamesLeft
     /// </summary>
     public unsafe BmSDK.FName inAnimNamesLeft_0
@@ -784,6 +797,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 832); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: inAnimNamesRight
+    /// </summary>
+    public InlineArray<BmSDK.FName> inAnimNamesRight => new(2, Ptr + 840);
 
     /// <summary>
     /// NameProperty: inAnimNamesRight
@@ -803,6 +821,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: outAnimNamesLeft
+    /// </summary>
+    public InlineArray<BmSDK.FName> outAnimNamesLeft => new(2, Ptr + 856);
+
+    /// <summary>
     /// NameProperty: outAnimNamesLeft
     /// </summary>
     public unsafe BmSDK.FName outAnimNamesLeft_0
@@ -820,6 +843,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: outAnimNamesRight
+    /// </summary>
+    public InlineArray<BmSDK.FName> outAnimNamesRight => new(2, Ptr + 872);
+
+    /// <summary>
     /// NameProperty: outAnimNamesRight
     /// </summary>
     public unsafe BmSDK.FName outAnimNamesRight_0
@@ -835,6 +863,11 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 880); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: refDistFromRailing
+    /// </summary>
+    public InlineArray<float> refDistFromRailing => new(2, Ptr + 888);
 
     /// <summary>
     /// FloatProperty: refDistFromRailing
@@ -883,29 +916,20 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// StructProperty: overallNormalAwayFromDrop
     /// </summary>
-    public unsafe System.Numerics.Vector3 overallNormalAwayFromDrop
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref System.Numerics.Vector3 overallNormalAwayFromDrop
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 920);
 
     /// <summary>
     /// StructProperty: InAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId InAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId InAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 932);
 
     /// <summary>
     /// StructProperty: OutAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OutAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OutAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 936);
 
     /// <summary>
     /// FloatProperty: ledgeLookEndTolerance
@@ -982,29 +1006,20 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// StructProperty: peekLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 peekLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref System.Numerics.Vector3 peekLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 968);
 
     /// <summary>
     /// StructProperty: peekDir
     /// </summary>
-    public unsafe BmSDK.Rotator peekDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref BmSDK.Rotator peekDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 980);
 
     /// <summary>
     /// StructProperty: retreatLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 retreatLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.Numerics.Vector3 retreatLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 992);
 
     /// <summary>
     /// FloatProperty: chosenPathLength

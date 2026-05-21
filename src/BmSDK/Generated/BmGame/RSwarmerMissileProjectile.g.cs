@@ -21,52 +21,62 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSwarmerMissileProjectile.
+    /// </summary>
+    public static RSwarmerMissileProjectile DefaultObject => (RSwarmerMissileProjectile)StaticClass().DefaultObject;
+
     internal RSwarmerMissileProjectile() { }
 
     /// <summary>
     /// Constructs a new RSwarmerMissileProjectile
     /// </summary>
-    public RSwarmerMissileProjectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSwarmerMissileProjectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSwarmerMissileProjectile(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSwarmerMissileProjectile(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSwarmerMissileProjectile>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Explode
@@ -123,11 +133,13 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// StructProperty: TargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 840);
+
+    /// <summary>
+    /// InlineArray{ComponentProperty}: Mesh
+    /// </summary>
+    public InlineArray<BmSDK.Engine.StaticMeshComponent> Mesh => new(8, Ptr + 852);
 
     /// <summary>
     /// ComponentProperty: Mesh
@@ -195,6 +207,11 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: Trail
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> Trail => new(8, Ptr + 916);
+
+    /// <summary>
     /// ComponentProperty: Trail
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent Trail_0
@@ -260,69 +277,55 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     }
 
     /// <summary>
-    /// StructProperty: MissileOffset
+    /// InlineArray{StructProperty}: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public InlineArray<System.Numerics.Vector3> MissileOffset => new(8, Ptr + 980);
+
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 980);
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 992);
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1004);
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1016);
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1028);
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1040);
     /// <summary>
     /// StructProperty: MissileOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileOffset_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileOffset_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1052);
+    /// <summary>
+    /// StructProperty: MissileOffset
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 MissileOffset_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1064);
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: MissileDelay
+    /// </summary>
+    public InlineArray<float> MissileDelay => new(8, Ptr + 1076);
 
     /// <summary>
     /// FloatProperty: MissileDelay
@@ -390,69 +393,55 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     }
 
     /// <summary>
-    /// StructProperty: MissileTarget
+    /// InlineArray{StructProperty}: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
-    }
+    public InlineArray<System.Numerics.Vector3> MissileTarget => new(8, Ptr + 1108);
+
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1108);
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1120);
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1132);
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1144);
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1156);
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1168);
     /// <summary>
     /// StructProperty: MissileTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 MissileTarget_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1192); }
-    }
+    public unsafe ref System.Numerics.Vector3 MissileTarget_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1180);
+    /// <summary>
+    /// StructProperty: MissileTarget
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 MissileTarget_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1192);
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: MissileExploded
+    /// </summary>
+    public InlineArray<byte> MissileExploded => new(8, Ptr + 1204);
 
     /// <summary>
     /// ByteProperty: MissileExploded
@@ -522,29 +511,20 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// StructProperty: SpreadHorizontalVsLifespan
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SpreadHorizontalVsLifespan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SpreadHorizontalVsLifespan
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1212);
 
     /// <summary>
     /// StructProperty: SpreadVerticalVsLifespan
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SpreadVerticalVsLifespan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SpreadVerticalVsLifespan
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1232);
 
     /// <summary>
     /// StructProperty: PositionVerticalVsLifespan
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat PositionVerticalVsLifespan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat PositionVerticalVsLifespan
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 1252);
 
     /// <summary>
     /// FloatProperty: MissileLifespan
@@ -612,18 +592,12 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// StructProperty: StartPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1316);
 
     /// <summary>
     /// StructProperty: InvActorRot
     /// </summary>
-    public unsafe BmSDK.Rotator InvActorRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
-    }
+    public unsafe ref BmSDK.Rotator InvActorRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1328);
 }

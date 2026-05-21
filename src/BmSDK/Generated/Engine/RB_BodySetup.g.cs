@@ -21,6 +21,11 @@ public partial class RB_BodySetup : BmSDK.Engine.KMeshProps, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_BodySetup.
+    /// </summary>
+    public static RB_BodySetup DefaultObject => (RB_BodySetup)StaticClass().DefaultObject;
+
     internal RB_BodySetup() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RB_BodySetup : BmSDK.Engine.KMeshProps, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RB_BodySetup(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_BodySetup>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: SleepFamily
@@ -261,25 +306,19 @@ public partial class RB_BodySetup : BmSDK.Engine.KMeshProps, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PreCachedPhysData
     /// </summary>
-    public unsafe BmSDK.Engine.BrushComponent.FKCachedConvexData PreCachedPhysData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BrushComponent.FKCachedConvexData>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref BmSDK.Engine.BrushComponent.FKCachedConvexData PreCachedPhysData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.BrushComponent.FKCachedConvexData>(Ptr + 252);
 
     /// <summary>
     /// StructProperty: PreCachedPhys3Data_ReflectedX
     /// </summary>
-    public unsafe BmSDK.Engine.BrushComponent.FKCachedConvexData PreCachedPhys3Data_ReflectedX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BrushComponent.FKCachedConvexData>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
-    }
+    public unsafe ref BmSDK.Engine.BrushComponent.FKCachedConvexData PreCachedPhys3Data_ReflectedX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.BrushComponent.FKCachedConvexData>(Ptr + 268);
 
     /// <summary>
     /// Enum: ESleepFamily
     /// </summary>
-    public enum ESleepFamily
+    public enum ESleepFamily : byte
     {
         SF_Normal = 0,
         SF_Sensitive = 1,

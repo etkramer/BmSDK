@@ -21,6 +21,11 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleBehaviour_HeavyTankSearch.
+    /// </summary>
+    public static RVehicleBehaviour_HeavyTankSearch DefaultObject => (RVehicleBehaviour_HeavyTankSearch)StaticClass().DefaultObject;
+
     internal RVehicleBehaviour_HeavyTankSearch() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleBehaviour_HeavyTankSearch(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleBehaviour_HeavyTankSearch>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: AmIOnTheWrongIsland
@@ -859,29 +904,20 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: LastKnownPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastKnownPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastKnownPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 668);
 
     /// <summary>
     /// StructProperty: SearchDirectionToAvoid
     /// </summary>
-    public unsafe System.Numerics.Vector3 SearchDirectionToAvoid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
-    }
+    public unsafe ref System.Numerics.Vector3 SearchDirectionToAvoid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 680);
 
     /// <summary>
     /// StructProperty: InitialLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 692); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 692);
 
     /// <summary>
     /// FloatProperty: FullThrottleRange
@@ -994,11 +1030,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: CurrentScanDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentScanDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentScanDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 752);
 
     /// <summary>
     /// FloatProperty: TimeSinceReport
@@ -1084,11 +1117,8 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: ChaseRestrictions
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction ChaseRestrictions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction ChaseRestrictions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 812);
 
     /// <summary>
     /// FloatProperty: ChasePlanPeriod
@@ -1102,25 +1132,19 @@ public partial class RVehicleBehaviour_HeavyTankSearch : BmSDK.BmGame.RVehicleBe
     /// <summary>
     /// StructProperty: LastSeenPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSeenPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSeenPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 984);
 
     /// <summary>
     /// StructProperty: LastSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 996);
 
     /// <summary>
     /// Enum: ETankSearchPhase
     /// </summary>
-    public enum ETankSearchPhase
+    public enum ETankSearchPhase : byte
     {
         ETSP_RandomSearch = 0,
         ETSP_360Scan = 1,

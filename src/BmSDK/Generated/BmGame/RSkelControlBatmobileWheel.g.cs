@@ -21,6 +21,11 @@ public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControlBatmobileWheel.
+    /// </summary>
+    public static RSkelControlBatmobileWheel DefaultObject => (RSkelControlBatmobileWheel)StaticClass().DefaultObject;
+
     internal RSkelControlBatmobileWheel() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSkelControlBatmobileWheel(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlBatmobileWheel>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// NameProperty: SuspensionBone
@@ -72,11 +117,8 @@ public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel,
     /// <summary>
     /// StructProperty: SuspensionRotAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 SuspensionRotAxis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
-    }
+    public unsafe ref System.Numerics.Vector3 SuspensionRotAxis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 312);
 
     /// <summary>
     /// FloatProperty: WheelSteeringVisualLimitDeg
@@ -99,11 +141,8 @@ public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel,
     /// <summary>
     /// StructProperty: SquashAxis
     /// </summary>
-    public unsafe System.Numerics.Vector3 SquashAxis
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
-    }
+    public unsafe ref System.Numerics.Vector3 SquashAxis
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 332);
 
     /// <summary>
     /// FloatProperty: SquashMaxDist

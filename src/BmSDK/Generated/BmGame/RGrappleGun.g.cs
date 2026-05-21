@@ -21,6 +21,11 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGrappleGun.
+    /// </summary>
+    public static RGrappleGun DefaultObject => (RGrappleGun)StaticClass().DefaultObject;
+
     internal RGrappleGun() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// </summary>
     protected RGrappleGun(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGrappleGun>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RGrappleGun>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ResetForChallenge
@@ -1291,7 +1301,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Enum: EGrappleFailReason
     /// </summary>
-    public enum EGrappleFailReason
+    public enum EGrappleFailReason : byte
     {
         GFR_Success = 0,
         GFR_CollisionFail = 1,
@@ -2371,11 +2381,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CurrentTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2588); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2588);
 
     /// <summary>
     /// FloatProperty: CurrentTargetRadius
@@ -2398,92 +2405,62 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CeilingTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2612); }
-    }
+    public unsafe ref System.Numerics.Vector3 CeilingTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2612);
 
     /// <summary>
     /// StructProperty: ActiveGrappleTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActiveGrappleTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2624); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActiveGrappleTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2624);
 
     /// <summary>
     /// StructProperty: ActiveOutwardNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 ActiveOutwardNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2636); }
-    }
+    public unsafe ref System.Numerics.Vector3 ActiveOutwardNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2636);
 
     /// <summary>
     /// StructProperty: ActiveGrapplePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo ActiveGrapplePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2648); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo ActiveGrapplePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2648);
 
     /// <summary>
     /// StructProperty: QueuedGrappleTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 QueuedGrappleTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2728); }
-    }
+    public unsafe ref System.Numerics.Vector3 QueuedGrappleTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2728);
 
     /// <summary>
     /// StructProperty: QueuedOutwardNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 QueuedOutwardNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2740); }
-    }
+    public unsafe ref System.Numerics.Vector3 QueuedOutwardNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2740);
 
     /// <summary>
     /// StructProperty: QueuedGrapplePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo QueuedGrapplePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2752); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo QueuedGrapplePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2752);
 
     /// <summary>
     /// StructProperty: CurrentTarget2
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentTarget2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2832); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentTarget2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2832);
 
     /// <summary>
     /// StructProperty: GrapplePoint2
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo GrapplePoint2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2844); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo GrapplePoint2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 2844);
 
     /// <summary>
     /// StructProperty: HideLinkSwingTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 HideLinkSwingTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2924); }
-    }
+    public unsafe ref System.Numerics.Vector3 HideLinkSwingTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2924);
 
     /// <summary>
     /// FloatProperty: GrappleLength
@@ -2605,20 +2582,14 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: AimedHidePoints
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints AimedHidePoints
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints>(Ptr + 3028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3028); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints AimedHidePoints
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints>(Ptr + 3028);
 
     /// <summary>
     /// StructProperty: EscapeHidePoints
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints EscapeHidePoints
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints>(Ptr + 3048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3048); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints EscapeHidePoints
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints>(Ptr + 3048);
 
     /// <summary>
     /// IntProperty: CurrentGrapplePointToCheck
@@ -2803,11 +2774,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: OffScreenArrowRot
     /// </summary>
-    public unsafe BmSDK.Rotator OffScreenArrowRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 3148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3148); }
-    }
+    public unsafe ref BmSDK.Rotator OffScreenArrowRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 3148);
 
     /// <summary>
     /// ByteProperty: GrapplePlayerId
@@ -2828,127 +2796,87 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     }
 
     /// <summary>
-    /// StructProperty: DebugDrawColor
+    /// InlineArray{StructProperty}: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3164); }
-    }
+    public InlineArray<BmSDK.GameObject.FColor> DebugDrawColor => new(13, Ptr + 3164);
+
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3168); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3164);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3172); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3168);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3176); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3172);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3180); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3176);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3184); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3180);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3188); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3184);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3192); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3188);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3196); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3192);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3200); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3196);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3204); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3200);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3208); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3204);
     /// <summary>
     /// StructProperty: DebugDrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DebugDrawColor_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 3212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3212); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3208);
+    /// <summary>
+    /// StructProperty: DebugDrawColor
+    /// </summary>
+    public unsafe ref BmSDK.GameObject.FColor DebugDrawColor_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 3212);
 
     /// <summary>
     /// StructProperty: DesiredGrappleIconPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 DesiredGrappleIconPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3216); }
-    }
+    public unsafe ref System.Numerics.Vector3 DesiredGrappleIconPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3216);
 
     /// <summary>
     /// StructProperty: GrappleIconOriginalPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleIconOriginalPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3228); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleIconOriginalPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3228);
 
     /// <summary>
     /// FloatProperty: GrappleIconTravelTime
@@ -2996,134 +2924,101 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     }
 
     /// <summary>
-    /// StructProperty: GrappleWayPoints
+    /// InlineArray{StructProperty}: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3260); }
-    }
+    public InlineArray<System.Numerics.Vector3> GrappleWayPoints => new(8, Ptr + 3260);
+
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3272); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3260);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3284); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3272);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3296); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3284);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3308); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3296);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3320); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3308);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3332); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3320);
     /// <summary>
     /// StructProperty: GrappleWayPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWayPoints_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3344); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3332);
+    /// <summary>
+    /// StructProperty: GrappleWayPoints
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 GrappleWayPoints_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3344);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: GrappleSafePoint
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> GrappleSafePoint => new(8, Ptr + 3356);
 
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3356); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3356);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3368); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3368);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3380); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3380);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3392); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3392);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3404); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3404);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3416); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3416);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3428); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3428);
     /// <summary>
     /// StructProperty: GrappleSafePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleSafePoint_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3440); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleSafePoint_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3440);
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: GrappleWayPointDistances
+    /// </summary>
+    public InlineArray<float> GrappleWayPointDistances => new(8, Ptr + 3452);
 
     /// <summary>
     /// FloatProperty: GrappleWayPointDistances
@@ -3202,20 +3097,14 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: LastClearGrapplePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastClearGrapplePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3488); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastClearGrapplePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3488);
 
     /// <summary>
     /// StructProperty: GrappleWaypointFallBack
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleWaypointFallBack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3500); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleWaypointFallBack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3500);
 
     /// <summary>
     /// IntProperty: NumGrapplePointsToCheckPerFrame
@@ -3238,11 +3127,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: LastGrapplePointTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastGrapplePointTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3524); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastGrapplePointTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3524);
 
     /// <summary>
     /// FloatProperty: LastGrapplePointTime
@@ -3373,11 +3259,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CurrentOutwardNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentOutwardNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3604); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentOutwardNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3604);
 
     /// <summary>
     /// FloatProperty: GlideStickForwardTilt
@@ -3418,11 +3301,8 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: PlayerPositionCheckOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerPositionCheckOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3632); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerPositionCheckOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3632);
 
     /// <summary>
     /// FloatProperty: fDelayedChuteTargetButtonHoldTime

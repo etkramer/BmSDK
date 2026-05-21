@@ -21,12 +21,57 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkWwise.
+    /// </summary>
+    public static AkWwise DefaultObject => (AkWwise)StaticClass().DefaultObject;
+
     internal AkWwise() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkWwise(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkWwise>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkWwise>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ResetMusicRandom
@@ -1128,7 +1173,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkWorldMaterial
     /// </summary>
-    public enum EAkWorldMaterial
+    public enum EAkWorldMaterial : byte
     {
         WM_BASE_None = 0,
         WM_BASE_Asphalt = 1,
@@ -1793,7 +1838,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkPhysicsNotifyType
     /// </summary>
-    public enum EAkPhysicsNotifyType
+    public enum EAkPhysicsNotifyType : byte
     {
         AK_PHYS_NOTIFY_IMPACT = 0,
         AK_PHYS_NOTIFY_DAMAGE = 1,
@@ -1863,7 +1908,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkIOStreamPriorities
     /// </summary>
-    public enum EAkIOStreamPriorities
+    public enum EAkIOStreamPriorities : byte
     {
         AKIO_PRIORITY_DEFAULT = 0,
         AKIO_PRIORITY_HIGH = 1,
@@ -1877,7 +1922,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGlobalAudioSourceID
     /// </summary>
-    public enum EGlobalAudioSourceID
+    public enum EGlobalAudioSourceID : byte
     {
         AK_INVALID_SOURCE_ID = 0,
         AK_RESERVED_SOURCE_ID = 1,
@@ -1917,7 +1962,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAkDynamicRange
     /// </summary>
-    public enum EAkDynamicRange
+    public enum EAkDynamicRange : byte
     {
         AK_DYNAMIC_RANGE_HOME_CINEMA = 0,
         AK_DYNAMIC_RANGE_HIFI = 1,
@@ -1930,13 +1975,13 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EListenerID
     /// </summary>
-    public enum EListenerID
+    public enum EListenerID : byte
     {
-        AK_LISTENER_PLAYER = 0,
-        AK_LISTENER_CAMERA = 1,
-        AK_LISTENER_COMPOSITE = 2,
+        AK_LISTENER_PLAYER_1 = 0,
+        AK_LISTENER_CAMERA_1 = 1,
+        AK_LISTENER_COMPOSITE_1 = 2,
         AK_LISTENER_MUSIC = 3,
-        AK_LISTENER_PAD = 4,
+        AK_LISTENER_PAD_1 = 4,
         AK_LISTENER_MAX = 5,
     }
 

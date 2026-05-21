@@ -21,52 +21,62 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBatmobileCannon.
+    /// </summary>
+    public static RBatmobileCannon DefaultObject => (RBatmobileCannon)StaticClass().DefaultObject;
+
     internal RBatmobileCannon() { }
 
     /// <summary>
     /// Constructs a new RBatmobileCannon
     /// </summary>
-    public RBatmobileCannon(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatmobileCannon Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RBatmobileCannon(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBatmobileCannon(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBatmobileCannon>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TryToShowInfeffectiveInstructions
@@ -583,7 +593,7 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// Enum: EBatmobileCannonMode
     /// </summary>
-    public enum EBatmobileCannonMode
+    public enum EBatmobileCannonMode : byte
     {
         EBCM_ChainGun = 0,
         EBCM_ComboChainGun = 1,
@@ -983,20 +993,14 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// StructProperty: TargetGunRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TargetGunRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2628); }
-    }
+    public unsafe ref BmSDK.Rotator TargetGunRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2628);
 
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2640); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2640);
 
     /// <summary>
     /// FloatProperty: AutoTargetRange
@@ -1100,20 +1104,14 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// StructProperty: HeatBarStart
     /// </summary>
-    public unsafe System.Numerics.Vector2 HeatBarStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 2696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2696); }
-    }
+    public unsafe ref System.Numerics.Vector2 HeatBarStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 2696);
 
     /// <summary>
     /// StructProperty: HeatBarSize
     /// </summary>
-    public unsafe System.Numerics.Vector2 HeatBarSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 2704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
-    }
+    public unsafe ref System.Numerics.Vector2 HeatBarSize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 2704);
 
     /// <summary>
     /// FloatProperty: ChainGunMaxSpinSpeed
@@ -1199,11 +1197,8 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// StructProperty: RiotSuppressorFireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct RiotSuppressorFireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2748); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct RiotSuppressorFireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2748);
 
     /// <summary>
     /// FloatProperty: ComboFiringInterval
@@ -1325,11 +1320,8 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// StructProperty: ChainGunScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ChainGunScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2980); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ChainGunScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2980);
 
     /// <summary>
     /// IntProperty: AmmoPerMagazine
@@ -1361,11 +1353,8 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// StructProperty: InaccuracyVsTime
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat InaccuracyVsTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 3148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3148); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat InaccuracyVsTime
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 3148);
 
     /// <summary>
     /// FloatProperty: InaccuracyDropMultiplier
@@ -1388,11 +1377,8 @@ public partial class RBatmobileCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGame
     /// <summary>
     /// StructProperty: InaccuracyVsTimeUpgrade
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat InaccuracyVsTimeUpgrade
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 3176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3176); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat InaccuracyVsTimeUpgrade
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 3176);
 
     /// <summary>
     /// FloatProperty: CurrentInaccuracyTime

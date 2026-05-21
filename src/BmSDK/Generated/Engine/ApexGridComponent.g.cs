@@ -21,6 +21,11 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexGridComponent.
+    /// </summary>
+    public static ApexGridComponent DefaultObject => (ApexGridComponent)StaticClass().DefaultObject;
+
     internal ApexGridComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ApexGridComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexGridComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: GridMinResolution
@@ -54,38 +99,26 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: GridXRange
     /// </summary>
-    public unsafe BmSDK.Engine.ApexGridComponent.FSGridIntRange GridXRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
-    }
+    public unsafe ref BmSDK.Engine.ApexGridComponent.FSGridIntRange GridXRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 608);
 
     /// <summary>
     /// StructProperty: GridYRange
     /// </summary>
-    public unsafe BmSDK.Engine.ApexGridComponent.FSGridIntRange GridYRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public unsafe ref BmSDK.Engine.ApexGridComponent.FSGridIntRange GridYRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 616);
 
     /// <summary>
     /// StructProperty: GridZRange
     /// </summary>
-    public unsafe BmSDK.Engine.ApexGridComponent.FSGridIntRange GridZRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref BmSDK.Engine.ApexGridComponent.FSGridIntRange GridZRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexGridComponent.FSGridIntRange>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: UpdatesPerFrameRange
     /// </summary>
-    public unsafe BmSDK.Engine.ApexGridComponent.FSGridFloatRange UpdatesPerFrameRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGridComponent.FSGridFloatRange>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
-    }
+    public unsafe ref BmSDK.Engine.ApexGridComponent.FSGridFloatRange UpdatesPerFrameRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexGridComponent.FSGridFloatRange>(Ptr + 632);
 
     /// <summary>
     /// FloatProperty: GridSize
@@ -99,11 +132,8 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: GridSize3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 GridSize3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref System.Numerics.Vector3 GridSize3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 644);
 
     /// <summary>
     /// FloatProperty: FluidVelocityMultiplier
@@ -198,11 +228,8 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: ExternalVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExternalVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExternalVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// FloatProperty: FieldVelocityMultiplier
@@ -261,11 +288,8 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// StructProperty: HeatForceDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 HeatForceDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref System.Numerics.Vector3 HeatForceDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 728);
 
     /// <summary>
     /// FloatProperty: AutoVelocityTeleportValue
@@ -396,16 +420,16 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// Enum: EGridResolution
     /// </summary>
-    public enum EGridResolution
+    public enum EGridResolution : byte
     {
-        EGR = 0,
-        EGR_2 = 1,
-        EGR_3 = 2,
-        EGR_4 = 3,
-        EGR_5 = 4,
-        EGR_6 = 5,
-        EGR_7 = 6,
-        EGR_8 = 7,
+        EGR_12 = 0,
+        EGR_16 = 1,
+        EGR_24 = 2,
+        EGR_32 = 3,
+        EGR_48 = 4,
+        EGR_64 = 5,
+        EGR_96 = 6,
+        EGR_128 = 7,
         EGR_MAX = 8,
     }
 

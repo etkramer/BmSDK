@@ -21,6 +21,11 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ROceanComponent.
+    /// </summary>
+    public static ROceanComponent DefaultObject => (ROceanComponent)StaticClass().DefaultObject;
+
     internal ROceanComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ROceanComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ROceanComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FRockOceanSettings
@@ -347,20 +392,14 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: refBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds refBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds refBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 644);
 
     /// <summary>
     /// StructProperty: refLevelOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 refLevelOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 refLevelOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// ArrayProperty: cachedPoissonDisc
@@ -374,20 +413,14 @@ public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// StructProperty: AsyncResults
     /// </summary>
-    public unsafe BmSDK.Engine.ROceanComponent.FRockOceanAsyncResults AsyncResults
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ROceanComponent.FRockOceanAsyncResults>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
+    public unsafe ref BmSDK.Engine.ROceanComponent.FRockOceanAsyncResults AsyncResults
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ROceanComponent.FRockOceanAsyncResults>(Ptr + 700);
 
     /// <summary>
     /// StructProperty: OceanSettings
     /// </summary>
-    public unsafe BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
-    }
+    public unsafe ref BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ROceanComponent.FRockOceanSettings>(Ptr + 744);
 
     /// <summary>
     /// StructProperty: WaveHeightTexRef

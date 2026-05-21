@@ -21,6 +21,11 @@ public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleT
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RParticleModuleTypeDataDecal.
+    /// </summary>
+    public static RParticleModuleTypeDataDecal DefaultObject => (RParticleModuleTypeDataDecal)StaticClass().DefaultObject;
+
     internal RParticleModuleTypeDataDecal() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleT
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RParticleModuleTypeDataDecal(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RParticleModuleTypeDataDecal>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FParticleDecalData
@@ -106,47 +151,32 @@ public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleT
     /// <summary>
     /// StructProperty: InitialRotation
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector InitialRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector InitialRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: InitialPerInstanceRandomOverride
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat InitialPerInstanceRandomOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat InitialPerInstanceRandomOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: UpdatingPerInstanceRandomOverride
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat UpdatingPerInstanceRandomOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat UpdatingPerInstanceRandomOverride
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: UVTopLeft
     /// </summary>
-    public unsafe System.Numerics.Vector2 UVTopLeft
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref System.Numerics.Vector2 UVTopLeft
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: UVBottomRight
     /// </summary>
-    public unsafe System.Numerics.Vector2 UVBottomRight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector2 UVBottomRight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 248);
 
     /// <summary>
     /// IntProperty: Priority

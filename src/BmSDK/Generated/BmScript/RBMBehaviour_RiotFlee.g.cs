@@ -21,6 +21,11 @@ public partial class RBMBehaviour_RiotFlee : BmSDK.BmGame.RBMBehaviour_GangMovem
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_RiotFlee.
+    /// </summary>
+    public static RBMBehaviour_RiotFlee DefaultObject => (RBMBehaviour_RiotFlee)StaticClass().DefaultObject;
+
     internal RBMBehaviour_RiotFlee() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_RiotFlee : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_RiotFlee(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_RiotFlee>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RiotHandleSpookedBy
@@ -147,11 +192,8 @@ public partial class RBMBehaviour_RiotFlee : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// StructProperty: GoalPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoalPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 796);
 
     /// <summary>
     /// FloatProperty: SavedThreatDistance
@@ -165,11 +207,8 @@ public partial class RBMBehaviour_RiotFlee : BmSDK.BmGame.RBMBehaviour_GangMovem
     /// <summary>
     /// StructProperty: PressPointLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 PressPointLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref System.Numerics.Vector3 PressPointLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 812);
 
     /// <summary>
     /// IntProperty: PressPointAnimationIndex

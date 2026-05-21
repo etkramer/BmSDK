@@ -21,6 +21,11 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_VehicleEnemySpawner.
+    /// </summary>
+    public static RSeqAct_VehicleEnemySpawner DefaultObject => (RSeqAct_VehicleEnemySpawner)StaticClass().DefaultObject;
+
     internal RSeqAct_VehicleEnemySpawner() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_VehicleEnemySpawner(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_VehicleEnemySpawner>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetClosestVehicle
@@ -850,11 +895,8 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// StructProperty: MovementRestrictions
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction MovementRestrictions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction MovementRestrictions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 640);
 
     /// <summary>
     /// ArrayProperty: PreSpawnedVehicles
@@ -940,11 +982,8 @@ public partial class RSeqAct_VehicleEnemySpawner : BmSDK.BmGame.RSeqAct_SpawnVeh
     /// <summary>
     /// StructProperty: LastGroupSearchCentrePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastGroupSearchCentrePos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastGroupSearchCentrePos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 880);
 
     /// <summary>
     /// FloatProperty: LastGroupSearch

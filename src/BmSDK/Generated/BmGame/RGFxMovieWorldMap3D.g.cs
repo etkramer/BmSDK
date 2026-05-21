@@ -21,6 +21,11 @@ public partial class RGFxMovieWorldMap3D : BmSDK.BmGame.RGFxMovieWorldBase, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieWorldMap3D.
+    /// </summary>
+    public static RGFxMovieWorldMap3D DefaultObject => (RGFxMovieWorldMap3D)StaticClass().DefaultObject;
+
     internal RGFxMovieWorldMap3D() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieWorldMap3D : BmSDK.BmGame.RGFxMovieWorldBase, BmSD
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieWorldMap3D(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieWorldMap3D>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: XI_GetMedalCount
@@ -495,20 +540,14 @@ public partial class RGFxMovieWorldMap3D : BmSDK.BmGame.RGFxMovieWorldBase, BmSD
     /// <summary>
     /// StructProperty: BaseLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BaseLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 BaseLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe System.Numerics.Vector3 Offset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref System.Numerics.Vector3 Offset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 708);
 
     /// <summary>
     /// ObjectProperty: RGI
@@ -747,20 +786,14 @@ public partial class RGFxMovieWorldMap3D : BmSDK.BmGame.RGFxMovieWorldBase, BmSD
     /// <summary>
     /// StructProperty: StatNavStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 StatNavStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
-    }
+    public unsafe ref System.Numerics.Vector3 StatNavStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1068);
 
     /// <summary>
     /// StructProperty: StatNavEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 StatNavEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
-    }
+    public unsafe ref System.Numerics.Vector3 StatNavEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1080);
 
     /// <summary>
     /// ArrayProperty: SatNavRoute

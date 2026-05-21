@@ -21,52 +21,62 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHidePoint.
+    /// </summary>
+    public static RHidePoint DefaultObject => (RHidePoint)StaticClass().DefaultObject;
+
     internal RHidePoint() { }
 
     /// <summary>
     /// Constructs a new RHidePoint
     /// </summary>
-    public RHidePoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RHidePoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RHidePoint(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RHidePoint(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHidePoint>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHidePoint>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHidePoint>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHidePoint>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHidePoint>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHidePoint>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RHidePoint>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RHidePoint>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TriedToGrappleToUnusableHidePoint
@@ -936,7 +946,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EForceVantageCameraSide
     /// </summary>
-    public enum EForceVantageCameraSide
+    public enum EForceVantageCameraSide : byte
     {
         EFCS_Either = 0,
         EFCS_Left = 1,
@@ -947,7 +957,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVantageWallInfo
     /// </summary>
-    public enum EVantageWallInfo
+    public enum EVantageWallInfo : byte
     {
         VWI_Default = 0,
         VWI_TwoWallCorner = 1,
@@ -1332,20 +1342,14 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: HangOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 HangOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref System.Numerics.Vector3 HangOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 728);
 
     /// <summary>
     /// StructProperty: GrappleIconOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleIconOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleIconOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 740);
 
     /// <summary>
     /// FloatProperty: VantagePointRange
@@ -1519,6 +1523,11 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: LinkedHidePointsSameLevel
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RHidePoint> LinkedHidePointsSameLevel => new(8, Ptr + 900);
+
+    /// <summary>
     /// ObjectProperty: LinkedHidePointsSameLevel
     /// </summary>
     public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_0
@@ -1658,11 +1667,8 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RopeAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1028);
 
     /// <summary>
     /// FloatProperty: StoredRopeLengthForFear
@@ -1690,6 +1696,11 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHidePoint.FHideLink>>(Ptr + 1048); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1048); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: HidePointCrossLevel
+    /// </summary>
+    public InlineArray<byte> HidePointCrossLevel => new(8, Ptr + 1064);
 
     /// <summary>
     /// ByteProperty: HidePointCrossLevel
@@ -1849,29 +1860,20 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OctTreeObject
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject OctTreeObject
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject>(Ptr + 1144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject OctTreeObject
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointOctreeObject>(Ptr + 1144);
 
     /// <summary>
     /// StructProperty: RegisteredWithPolyPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 RegisteredWithPolyPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1212); }
-    }
+    public unsafe ref System.Numerics.Vector3 RegisteredWithPolyPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1212);
 
     /// <summary>
     /// StructProperty: CatwomanPerchOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CatwomanPerchOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
-    }
+    public unsafe ref System.Numerics.Vector3 CatwomanPerchOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1224);
 
     /// <summary>
     /// ArrayProperty: BlockedHidePoints
@@ -1903,11 +1905,8 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ExtraSpaceCheckOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExtraSpaceCheckOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExtraSpaceCheckOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1272);
 
     /// <summary>
     /// FloatProperty: GrappleScoreMod

@@ -21,6 +21,11 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVoiceSynthesiser.
+    /// </summary>
+    public static RVoiceSynthesiser DefaultObject => (RVoiceSynthesiser)StaticClass().DefaultObject;
+
     internal RVoiceSynthesiser() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// </summary>
     protected RVoiceSynthesiser(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVoiceSynthesiser>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DontDisplayFailIcon
@@ -898,7 +908,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// Enum: EVoiceSynthesiserScreenState
     /// </summary>
-    public enum EVoiceSynthesiserScreenState
+    public enum EVoiceSynthesiserScreenState : byte
     {
         VSSS_None = 0,
         VSSS_Idle = 1,
@@ -1170,6 +1180,11 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: ThugsAreWaryOfTargetThought
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AkDialogueSpeech> ThugsAreWaryOfTargetThought => new(6, Ptr + 2308);
+
+    /// <summary>
     /// ObjectProperty: ThugsAreWaryOfTargetThought
     /// </summary>
     public unsafe BmSDK.Engine.AkDialogueSpeech ThugsAreWaryOfTargetThought_0
@@ -1392,11 +1407,8 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// StructProperty: vSuccessfulOrderTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vSuccessfulOrderTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
-    }
+    public unsafe ref System.Numerics.Vector3 vSuccessfulOrderTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2516);
 
     /// <summary>
     /// BoolProperty: bPlacedFakeTarget
@@ -1482,38 +1494,26 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// StructProperty: FakeTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FakeTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2532); }
-    }
+    public unsafe ref System.Numerics.Vector3 FakeTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2532);
 
     /// <summary>
     /// StructProperty: GroundLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GroundLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2544); }
-    }
+    public unsafe ref System.Numerics.Vector3 GroundLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2544);
 
     /// <summary>
     /// StructProperty: GroundNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 GroundNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2556); }
-    }
+    public unsafe ref System.Numerics.Vector3 GroundNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2556);
 
     /// <summary>
     /// StructProperty: vInteractiveTargetThugInvestigateLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vInteractiveTargetThugInvestigateLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2568); }
-    }
+    public unsafe ref System.Numerics.Vector3 vInteractiveTargetThugInvestigateLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2568);
 
     /// <summary>
     /// FloatProperty: fMaximumVoiceLockInteractionDistanceSquared

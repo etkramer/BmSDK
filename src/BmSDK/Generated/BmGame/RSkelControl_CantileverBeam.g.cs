@@ -21,6 +21,11 @@ public partial class RSkelControl_CantileverBeam : BmSDK.Engine.SkelControlLookA
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControl_CantileverBeam.
+    /// </summary>
+    public static RSkelControl_CantileverBeam DefaultObject => (RSkelControl_CantileverBeam)StaticClass().DefaultObject;
+
     internal RSkelControl_CantileverBeam() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSkelControl_CantileverBeam : BmSDK.Engine.SkelControlLookA
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSkelControl_CantileverBeam(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControl_CantileverBeam>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: EntireBeamVelocity
@@ -47,29 +92,20 @@ public partial class RSkelControl_CantileverBeam : BmSDK.Engine.SkelControlLookA
     /// <summary>
     /// StructProperty: WorldSpaceGoal
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldSpaceGoal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref System.Numerics.Vector3 WorldSpaceGoal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 404);
 
     /// <summary>
     /// StructProperty: InitialWorldSpaceGoalOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialWorldSpaceGoalOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialWorldSpaceGoalOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: Velocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 Velocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.Numerics.Vector3 Velocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 428);
 
     /// <summary>
     /// FloatProperty: SpringStiffness

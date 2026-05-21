@@ -21,6 +21,11 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionBlurSceneTexture.
+    /// </summary>
+    public static MaterialExpressionBlurSceneTexture DefaultObject => (MaterialExpressionBlurSceneTexture)StaticClass().DefaultObject;
+
     internal MaterialExpressionBlurSceneTexture() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
     /// </summary>
     protected MaterialExpressionBlurSceneTexture(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionBlurSceneTexture>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: ESampleBlurSceneType
     /// </summary>
-    public enum ESampleBlurSceneType
+    public enum ESampleBlurSceneType : byte
     {
         SampleBlurScene_PoissonDisc = 0,
         SampleBlurScene_MAX = 1,
@@ -45,7 +90,7 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
     /// <summary>
     /// Enum: EBlurSceneTextureType
     /// </summary>
-    public enum EBlurSceneTextureType
+    public enum EBlurSceneTextureType : byte
     {
         BlurSceneTex_Lighting = 0,
         BlurSceneTex_MAX = 1,
@@ -54,20 +99,14 @@ public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 172);
 
     /// <summary>
     /// StructProperty: SampleRadius
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 224);
 
     /// <summary>
     /// ByteProperty: BlurSceneTextureType

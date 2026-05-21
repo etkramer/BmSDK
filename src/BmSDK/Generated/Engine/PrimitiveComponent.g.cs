@@ -21,12 +21,57 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PrimitiveComponent.
+    /// </summary>
+    public static PrimitiveComponent DefaultObject => (PrimitiveComponent)StaticClass().DefaultObject;
+
     internal PrimitiveComponent() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected PrimitiveComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PrimitiveComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ClosestPointOnComponentToComponent
@@ -1501,7 +1546,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: ERadialImpulseFalloff
     /// </summary>
-    public enum ERadialImpulseFalloff
+    public enum ERadialImpulseFalloff : byte
     {
         RIF_Constant = 0,
         RIF_Linear = 1,
@@ -1511,7 +1556,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: EPhysXShapeFilterFlags
     /// </summary>
-    public enum EPhysXShapeFilterFlags
+    public enum EPhysXShapeFilterFlags : byte
     {
         EPSF_NotifyOnCollision = 0,
         EPSF_DisableCollisionResponse = 1,
@@ -1626,7 +1671,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: ERadialImpulseType
     /// </summary>
-    public enum ERadialImpulseType
+    public enum ERadialImpulseType : byte
     {
         ERIT_Impulse = 0,
         ERIT_VelocityChange = 1,
@@ -1637,7 +1682,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: ERBCollisionChannel
     /// </summary>
-    public enum ERBCollisionChannel
+    public enum ERBCollisionChannel : byte
     {
         RBCC_Default = 0,
         RBCC_Nothing = 1,
@@ -1972,7 +2017,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: GJKResult
     /// </summary>
-    public enum GJKResult
+    public enum GJKResult : byte
     {
         GJK_Intersect = 0,
         GJK_NoIntersection = 1,
@@ -1983,7 +2028,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Enum: EHeightmapOverrideFilter
     /// </summary>
-    public enum EHeightmapOverrideFilter
+    public enum EHeightmapOverrideFilter : byte
     {
         HMO_FearGasLayer = 0,
         HMO_PollenLayer = 1,
@@ -2002,11 +2047,8 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Bounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds Bounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds Bounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 128);
 
     /// <summary>
     /// StructProperty: SceneInfo
@@ -2020,20 +2062,14 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: CachedParentToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix CachedParentToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix CachedParentToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 240);
 
     /// <summary>
     /// IntProperty: DetachFence
@@ -2209,20 +2245,14 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref System.Numerics.Vector3 Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 400);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 412);
 
     /// <summary>
     /// FloatProperty: Scale
@@ -2236,20 +2266,14 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: Scale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 Scale3D
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.Numerics.Vector3 Scale3D
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: ReflectionShadowPlane
     /// </summary>
-    public unsafe BmSDK.GameObject.FPlane ReflectionShadowPlane
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref BmSDK.GameObject.FPlane ReflectionShadowPlane
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FPlane>(Ptr + 448);
 
     /// <summary>
     /// FloatProperty: LastRenderTime
@@ -3325,29 +3349,20 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 512);
 
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 516);
 
     /// <summary>
     /// StructProperty: PhysXShapeFilterFlags
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FPhysXShapeFilterFlagsContainer PhysXShapeFilterFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FPhysXShapeFilterFlagsContainer>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FPhysXShapeFilterFlagsContainer PhysXShapeFilterFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FPhysXShapeFilterFlagsContainer>(Ptr + 520);
 
     /// <summary>
     /// ByteProperty: RBChannel

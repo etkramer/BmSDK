@@ -21,52 +21,62 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PlayerController.
+    /// </summary>
+    public static PlayerController DefaultObject => (PlayerController)StaticClass().DefaultObject;
+
     internal PlayerController() { }
 
     /// <summary>
     /// Constructs a new PlayerController
     /// </summary>
-    public PlayerController(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, PlayerController Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public PlayerController(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected PlayerController(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<PlayerController>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<PlayerController>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<PlayerController>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<PlayerController>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<PlayerController>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PlayerController>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<PlayerController>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<PlayerController>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetMatineeConstantCameraAnim
@@ -3812,14 +3822,14 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Function: ReceiveLocalizedMessage
     /// </summary>
-    public unsafe virtual void ReceiveLocalizedMessage(BmSDK.Class Message, int Switch = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1 = default, BmSDK.GameObject OptionalObject = default)
+    public unsafe virtual void ReceiveLocalizedMessage(BmSDK.Class Message, int Switch = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1 = default, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_2 = default, BmSDK.GameObject OptionalObject = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PlayerController.ReceiveLocalizedMessage", true);
         byte* paramsPtr = stackalloc byte[36];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Message, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Switch, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_1, paramsPtr + 20);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_1, paramsPtr + 12);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_2, paramsPtr + 20);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(OptionalObject, paramsPtr + 28);
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
@@ -4962,7 +4972,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Enum: EProgressMessageType
     /// </summary>
-    public enum EProgressMessageType
+    public enum EProgressMessageType : byte
     {
         PMT_Clear = 0,
         PMT_Information = 1,
@@ -5206,7 +5216,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInputMatchAction
     /// </summary>
-    public enum EInputMatchAction
+    public enum EInputMatchAction : byte
     {
         IMA_GreaterThan = 0,
         IMA_LessThan = 1,
@@ -5216,7 +5226,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// Enum: EInputTypes
     /// </summary>
-    public enum EInputTypes
+    public enum EInputTypes : byte
     {
         IT_XAxis = 0,
         IT_YAxis = 1,
@@ -5987,11 +5997,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: TargetViewRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TargetViewRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1368); }
-    }
+    public unsafe ref BmSDK.Rotator TargetViewRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1368);
 
     /// <summary>
     /// FloatProperty: TargetEyeHeight
@@ -6005,20 +6012,14 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: BlendedTargetViewRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BlendedTargetViewRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1384); }
-    }
+    public unsafe ref BmSDK.Rotator BlendedTargetViewRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1384);
 
     /// <summary>
     /// StructProperty: LastAckedAccel
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastAckedAccel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1396); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastAckedAccel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1396);
 
     /// <summary>
     /// FloatProperty: CurrentTimeStamp
@@ -6122,11 +6123,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PendingAdjustment
     /// </summary>
-    public unsafe BmSDK.Engine.PlayerController.FClientAdjustment PendingAdjustment
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController.FClientAdjustment>(Ptr + 1452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1452); }
-    }
+    public unsafe ref BmSDK.Engine.PlayerController.FClientAdjustment PendingAdjustment
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PlayerController.FClientAdjustment>(Ptr + 1452);
 
     /// <summary>
     /// IntProperty: GroundPitch
@@ -6140,11 +6138,8 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: FailedPathStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 FailedPathStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1512); }
-    }
+    public unsafe ref System.Numerics.Vector3 FailedPathStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1512);
 
     /// <summary>
     /// StrProperty: ForceFeedbackManagerClassName
@@ -6253,6 +6248,11 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1680); }
     }
+
+    /// <summary>
+    /// InlineArray{StrProperty}: LastBroadcastString
+    /// </summary>
+    public InlineArray<BmSDK.FString> LastBroadcastString => new(4, Ptr + 1684);
 
     /// <summary>
     /// StrProperty: LastBroadcastString

@@ -21,12 +21,57 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LightComponent.
+    /// </summary>
+    public static LightComponent DefaultObject => (LightComponent)StaticClass().DefaultObject;
+
     internal LightComponent() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected LightComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LightComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LightComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnUpdatePropertyLightColor
@@ -217,7 +262,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: EShadowFilterQuality
     /// </summary>
-    public enum EShadowFilterQuality
+    public enum EShadowFilterQuality : byte
     {
         SFQ_Low = 0,
         SFQ_Medium = 1,
@@ -228,7 +273,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: EShadowProjectionTechnique
     /// </summary>
-    public enum EShadowProjectionTechnique
+    public enum EShadowProjectionTechnique : byte
     {
         ShadowProjTech_Default = 0,
         ShadowProjTech_PCF = 1,
@@ -242,7 +287,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: ELightAffectsClassification
     /// </summary>
-    public enum ELightAffectsClassification
+    public enum ELightAffectsClassification : byte
     {
         LAC_USER_SELECTED = 0,
         LAC_DYNAMIC_AFFECTING = 1,
@@ -255,21 +300,20 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     }
 
     /// <summary>
-    /// StructProperty: GelLayer
+    /// InlineArray{StructProperty}: GelLayer
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FFGelLayer GelLayer_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FFGelLayer>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public InlineArray<BmSDK.Engine.LightComponent.FFGelLayer> GelLayer => new(2, Ptr + 124);
+
     /// <summary>
     /// StructProperty: GelLayer
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FFGelLayer GelLayer_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FFGelLayer>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FFGelLayer GelLayer_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FFGelLayer>(Ptr + 124);
+    /// <summary>
+    /// StructProperty: GelLayer
+    /// </summary>
+    public unsafe ref BmSDK.Engine.LightComponent.FFGelLayer GelLayer_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FFGelLayer>(Ptr + 188);
 
     /// <summary>
     /// ObjectProperty: CubeTexture
@@ -319,20 +363,14 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: WorldToLight
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix WorldToLight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 288); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix WorldToLight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 288);
 
     /// <summary>
     /// StructProperty: LightToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LightToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LightToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 352);
 
     /// <summary>
     /// ArrayProperty: Signals
@@ -373,38 +411,26 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: EffectorColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor EffectorColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor EffectorColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: OctreeId
     /// </summary>
-    public unsafe BmSDK.GameObject.FOctreeElementId OctreeId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FOctreeElementId>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
-    }
+    public unsafe ref BmSDK.GameObject.FOctreeElementId OctreeId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FOctreeElementId>(Ptr + 448);
 
     /// <summary>
     /// StructProperty: LightGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 460);
 
     /// <summary>
     /// StructProperty: LightmapGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightmapGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightmapGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 476);
 
     /// <summary>
     /// FloatProperty: LightBulbRadius
@@ -454,11 +480,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LightColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LightColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor LightColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 512);
 
     /// <summary>
     /// FloatProperty: CullAreaMultiplier
@@ -796,11 +819,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer LightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 548);
 
     /// <summary>
     /// ByteProperty: LightAffectsClassification
@@ -904,11 +924,8 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: BloomTint
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor BloomTint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor BloomTint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 588);
 
     /// <summary>
     /// FloatProperty: RadialBlurPercent
@@ -1037,7 +1054,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: EGelCells
     /// </summary>
-    public enum EGelCells
+    public enum EGelCells : byte
     {
         GelCells_1x1 = 0,
         GelCells_2x2 = 1,
@@ -1142,135 +1159,135 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         }
 
         /// <summary>
-        /// BoolProperty: Unnamed
+        /// BoolProperty: Unnamed_1
         /// </summary>
-        public unsafe bool Unnamed
+        public unsafe bool Unnamed_1
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 64) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Unnamed
+        /// BoolProperty: Unnamed_2
         /// </summary>
-        public unsafe bool Unnamed_1
+        public unsafe bool Unnamed_2
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 128) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Unnamed
+        /// BoolProperty: Unnamed_4
         /// </summary>
-        public unsafe bool Unnamed_2
+        public unsafe bool Unnamed_4
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 256) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_1
         /// </summary>
-        public unsafe bool Cinematic
+        public unsafe bool Cinematic_1
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 512) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_2
         /// </summary>
-        public unsafe bool Cinematic_1
+        public unsafe bool Cinematic_2
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1024) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_3
         /// </summary>
-        public unsafe bool Cinematic_2
+        public unsafe bool Cinematic_3
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 2048) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_4
         /// </summary>
-        public unsafe bool Cinematic_3
+        public unsafe bool Cinematic_4
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 4096) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 4096) : (currentMask & ~4096); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_5
         /// </summary>
-        public unsafe bool Cinematic_4
+        public unsafe bool Cinematic_5
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 8192) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 8192) : (currentMask & ~8192); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_6
         /// </summary>
-        public unsafe bool Cinematic_5
+        public unsafe bool Cinematic_6
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 16384) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 16384) : (currentMask & ~16384); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_7
         /// </summary>
-        public unsafe bool Cinematic_6
+        public unsafe bool Cinematic_7
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 32768) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 32768) : (currentMask & ~32768); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_8
         /// </summary>
-        public unsafe bool Cinematic_7
+        public unsafe bool Cinematic_8
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 65536) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 65536) : (currentMask & ~65536); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_9
         /// </summary>
-        public unsafe bool Cinematic_8
+        public unsafe bool Cinematic_9
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 131072) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 131072) : (currentMask & ~131072); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Cinematic
+        /// BoolProperty: Cinematic_10
         /// </summary>
-        public unsafe bool Cinematic_9
+        public unsafe bool Cinematic_10
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 262144) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 262144) : (currentMask & ~262144); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Gameplay
+        /// BoolProperty: Gameplay_1
         /// </summary>
-        public unsafe bool Gameplay
+        public unsafe bool Gameplay_1
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 524288) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 524288) : (currentMask & ~524288); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: Gameplay
+        /// BoolProperty: Gameplay_2
         /// </summary>
-        public unsafe bool Gameplay_1
+        public unsafe bool Gameplay_2
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1048576) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1048576) : (currentMask & ~1048576); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
@@ -1331,18 +1348,18 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         }
 
         /// <summary>
-        /// BoolProperty: CinematicExclusive
+        /// BoolProperty: CinematicExclusive_1
         /// </summary>
-        public unsafe bool CinematicExclusive
+        public unsafe bool CinematicExclusive_1
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 134217728) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 134217728) : (currentMask & ~134217728); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: CinematicExclusive
+        /// BoolProperty: CinematicExclusive_2
         /// </summary>
-        public unsafe bool CinematicExclusive_1
+        public unsafe bool CinematicExclusive_2
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 268435456) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 268435456) : (currentMask & ~268435456); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }

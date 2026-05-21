@@ -21,6 +21,11 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleTrailSource.
+    /// </summary>
+    public static ParticleModuleTrailSource DefaultObject => (ParticleModuleTrailSource)StaticClass().DefaultObject;
+
     internal ParticleModuleTrailSource() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleTrailSource(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleTrailSource>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: SourceMethod
@@ -63,11 +108,8 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
     /// <summary>
     /// StructProperty: SourceStrength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SourceStrength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SourceStrength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 108);
 
     /// <summary>
     /// BoolProperty: bLockSourceStength
@@ -108,7 +150,7 @@ public partial class ParticleModuleTrailSource : BmSDK.Engine.ParticleModuleTrai
     /// <summary>
     /// Enum: ETrail2SourceMethod
     /// </summary>
-    public enum ETrail2SourceMethod
+    public enum ETrail2SourceMethod : byte
     {
         PET2SRCM_Default = 0,
         PET2SRCM_Particle = 1,

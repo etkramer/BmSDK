@@ -21,6 +21,11 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieUI_OptionsControlsKeyboard.
+    /// </summary>
+    public static RGFxMovieUI_OptionsControlsKeyboard DefaultObject => (RGFxMovieUI_OptionsControlsKeyboard)StaticClass().DefaultObject;
+
     internal RGFxMovieUI_OptionsControlsKeyboard() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieUI_OptionsControlsKeyboard(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieUI_OptionsControlsKeyboard>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: XI_GetIsLeftCtrlPressed
@@ -311,7 +356,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     /// <summary>
     /// Enum: KeyMap
     /// </summary>
-    public enum KeyMap
+    public enum KeyMap : byte
     {
         KeyMap_Primary = 0,
         KeyMap_Secondary = 1,
@@ -321,7 +366,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     /// <summary>
     /// Enum: KeyBindSourceId
     /// </summary>
-    public enum KeyBindSourceId
+    public enum KeyBindSourceId : byte
     {
         KeyBindSourceId_Default = 0,
         KeyBindSourceId_Current = 1,
@@ -331,7 +376,7 @@ public partial class RGFxMovieUI_OptionsControlsKeyboard : BmSDK.BmGame.RGFxMovi
     /// <summary>
     /// Enum: KeyboardBindTypeId
     /// </summary>
-    public enum KeyboardBindTypeId
+    public enum KeyboardBindTypeId : byte
     {
         KeyboardBindTypeId_Batman = 0,
         KeyboardBindTypeId_Pursuit = 1,

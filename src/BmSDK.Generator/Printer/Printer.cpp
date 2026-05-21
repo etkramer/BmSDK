@@ -154,6 +154,20 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
         out << endl;
 
+        // Print strongly-typed CDO getter.
+        if (_class->GetNameManaged() != "Class")
+        {
+            Printer::Indent(out) << "/// <summary>" << endl;
+            Printer::Indent(out) << "/// Gets the class default object as "
+                                 << _class->GetNameManaged() << "." << endl;
+            Printer::Indent(out) << "/// </summary>" << endl;
+            Printer::Indent(out) << "public static " << _class->GetNameManaged()
+                                 << " DefaultObject => (" << _class->GetNameManaged()
+                                 << ")StaticClass().DefaultObject;" << endl;
+
+            out << endl;
+        }
+
         // Print internal ctor
         Printer::Indent(out) << "internal " << _class->GetNameManaged() << "() { }" << endl << endl;
 
@@ -161,18 +175,49 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract))
         // if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract) && _class->GetName() != "Object")
         {
+            // Walk SuperStruct chain to detect Actor-derived classes, which need
+            // to be spawned via UWorld::SpawnActor instead of StaticConstructObject.
+            bool isActor = false;
+            for (UStruct* super = _class->SuperStruct; super; super = super->SuperStruct)
+            {
+                if (super->GetPathName() == "Engine.Actor")
+                {
+                    isActor = true;
+                    break;
+                }
+            }
+
             Printer::Indent(out) << "/// <summary>" << endl;
             Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;
             Printer::Indent(out) << "/// </summary>" << endl;
-            Printer::Indent(out)
-                << "public " << _class->GetNameManaged()
-                << "(BmSDK.GameObject Outer, string Name = null, "
-                "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
-                << _class->GetNameManaged()
-                << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
-                "Outer, Name, SetFlags, Template)) { }"
-                << endl
-                << endl;
+
+            if (isActor)
+            {
+                Printer::Indent(out)
+                    << "public " << _class->GetNameManaged()
+                    << "(System.Numerics.Vector3 Location = default, "
+                    "BmSDK.Rotator Rotation = default, "
+                    "BmSDK.Engine.Actor Template = null, "
+                    "BmSDK.GameObject Owner = null, "
+                    "BmSDK.GameObject Instigator = null, "
+                    "BmSDK.Engine.Level Level = null) "
+                    ": base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), "
+                    "default, Location, Rotation, Template, Owner, Instigator, Level)) { }"
+                    << endl
+                    << endl;
+            }
+            else
+            {
+                Printer::Indent(out)
+                    << "public " << _class->GetNameManaged()
+                    << "(BmSDK.GameObject Outer, string Name = null, "
+                    "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
+                    << _class->GetNameManaged()
+                    << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
+                    "Outer, Name, SetFlags, Template)) { }"
+                    << endl
+                    << endl;
+            }
         }
 
         // Print pointer ctor
@@ -191,14 +236,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         }
         out << endl;
 
-        for (UStruct* super = _class; super; super = super->SuperStruct)
-        {
-            if (super->GetPathName() == "Engine.Actor")
-            {
-                Printer::PrintScHelpers(_class, out);
-                break;
-            }
-        }
+        // Print strongly-typed ScriptComponent helpers
+        Printer::PrintScHelpers(_class, out);
 
         // Print fields
         UField* fieldLink = _class->Children;
@@ -261,31 +300,42 @@ void Printer::PrintScHelpers(class UClass* _class, ostream& out)
     Printer::PrintScHelper("bool", "HasScriptComponent", false, false, false, type, out);
     Printer::PrintScHelper("bool", "HasScriptComponent", true, false, false, type, out);
     Printer::PrintScHelper("TComponent", "GetScriptComponent", true, false, true, type, out);
+
+    // Print GetScriptComponents (list)
+    Printer::Indent(out) << "/// <inheritdoc cref=\"GameObject.GetScriptComponents(Type)\"/>" << endl;
+    Printer::Indent(out) << "public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()" << endl;
+    Printer::PushIndent();
+    Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
+    Printer::Indent(out) << "=> ((GameObject)this).GetScriptComponents(typeof(TComponent))"
+        << ".Cast<TComponent>().ToList();" << endl;
+    Printer::PopIndent();
+    out << endl;
+
     Printer::PrintScHelper("void", "DetachScriptComponent", false, false, false, type, out);
-    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, false, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponents", true, false, false, type, out);
 }
 
 void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out)
 {
     if (generic)
     {
-        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Type)\"/>" << endl;
+        Printer::Indent(out) << "/// <inheritdoc cref=\"GameObject." << helper << "(Type)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>()" << endl;
         Printer::PushIndent();
         Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">"
             << (ctor ? ", new()" : "") << endl;
         Printer::Indent(out) << "=> " << (cast ? "(TComponent)" : "")
-            << "((Engine.Actor)this)." << helper << "(typeof(TComponent));" << endl;
+            << "((GameObject)this)." << helper << "(typeof(TComponent));" << endl;
         Printer::PopIndent();
         out << endl;
     }
     else
     {
-        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Framework.IScriptComponent)\"/>" << endl;
+        Printer::Indent(out) << "/// <inheritdoc cref=\"GameObject." << helper << "(Framework.IScriptComponent)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>(TComponent component)" << endl;
         Printer::PushIndent();
         Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
-        Printer::Indent(out) << "=> ((Engine.Actor)this)." << helper << "((Framework.IScriptComponent)component);" << endl;
+        Printer::Indent(out) << "=> ((GameObject)this)." << helper << "((Framework.IScriptComponent)component);" << endl;
         Printer::PopIndent();
         out << endl;
     }
@@ -358,7 +408,7 @@ void Printer::PrintEnum(UEnum* _enum, ostream& out)
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print prop declaration
-    Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << endl;
+    Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << " : byte" << endl;
 
     // Print prop body
     Printer::Indent(out) << "{" << endl;
@@ -375,99 +425,122 @@ void Printer::PrintEnum(UEnum* _enum, ostream& out)
 
 void Printer::PrintProperty(UProperty* prop, ostream& out)
 {
+    bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
+    if (!isInStruct && prop->ArrayDim > 1)
+    {
+        Printer::Indent(out) << "/// <summary>" << endl;
+        Printer::Indent(out) << "/// InlineArray{" << prop->Class->GetName() << "}: " << prop->GetName() << endl;
+        Printer::Indent(out) << "/// </summary>" << endl;
+
+        Printer::Indent(out) << "public InlineArray<" << prop->GetInnerTypeNameManaged() << "> "
+            << prop->GetNameManaged() << " => new(" << prop->ArrayDim
+            << ", Ptr + " << prop->Offset << ");" << endl << endl;
+    }
+
     for (auto i = 0; i < prop->ArrayDim; i++)
     {
         auto propOffset = prop->Offset + (i * prop->ElementSize);
+        auto propNameManaged = prop->GetNameManaged();
 
         // Print prop comment
         Printer::Indent(out) << "/// <summary>" << endl;
         Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
 
-        string propNameManaged = prop->GetNameManaged();
         if (prop->ArrayDim > 1)
         {
             propNameManaged += "_";
             propNameManaged += to_string(i);
         }
 
-        // Print prop declaration
-        Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
-            << propNameManaged << endl;
+        bool shouldReturnByRef = prop->ShouldReturnByRef() && !isInStruct;
 
-        // Print prop body
-        Printer::Indent(out) << "{" << endl;
-        Printer::PushIndent();
+        if (shouldReturnByRef)
         {
-            // Print prop getter (single line)
-            Printer::Indent(out) << "get { ";
-            {
-                bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
+            Printer::Indent(out) << "public unsafe ref " << prop->GetInnerTypeNameManaged() << " "
+                << propNameManaged << endl;
 
-                // Make Ptr available locally so we can reuse the same getter code
-                if (isInStruct)
-                {
-                    out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
-                }
-
-                // Booleans (stored as bitmasks) need special handling
-                if (prop->IsA(UBoolProperty::StaticClass()))
-                {
-                    UBoolProperty* boolProp = (UBoolProperty*)prop;
-                    out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
-                        << ") & " << boolProp->BitMask << ") != 0;";
-                }
-                else
-                {
-                    out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                        << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");";
-                }
-
-                if (isInStruct)
-                {
-                    out << " };";
-                }
-            }
-            out << " }" << endl;
-
-            // Print prop setter (single line)
-            Printer::Indent(out) << "set { ";
-            {
-                bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
-
-                // Make Ptr available locally so we can reuse the same setter code
-                if (isInStruct)
-                {
-                    out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
-                }
-
-                // Booleans (stored as bitmasks) need special handling
-                if (prop->IsA(UBoolProperty::StaticClass()))
-                {
-                    UBoolProperty* boolProp = (UBoolProperty*)prop;
-                    out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
-                        << propOffset << ");";
-                    out << " var newMask = value ? (currentMask | " << boolProp->BitMask
-                        << ") : (currentMask & ~" << boolProp->BitMask << ");";
-
-                    out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
-                        << propOffset << ");";
-                }
-                else
-                {
-                    out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << propOffset
-                        << ");";
-                }
-
-                if (isInStruct)
-                {
-                    out << " };";
-                }
-            }
-            out << " }" << endl;
+            Printer::PushIndent();
+            Printer::Indent(out) << "=> ref BmSDK.Framework.MarshalUtil.AsRef<"
+                << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");" << endl;
+            Printer::PopIndent();
         }
-        Printer::PopIndent();
-        Printer::Indent(out) << "}" << endl;
+        else
+        {
+            // Print prop declaration
+            Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
+                << propNameManaged << endl;
+
+            // Print prop body
+            Printer::Indent(out) << "{" << endl;
+            Printer::PushIndent();
+            {
+                // Print prop getter (single line)
+                Printer::Indent(out) << "get { ";
+                {
+                    // Make Ptr available locally so we can reuse the same getter code
+                    if (isInStruct)
+                    {
+                        out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+                    }
+
+                    // Booleans (stored as bitmasks) need special handling
+                    if (prop->IsA(UBoolProperty::StaticClass()))
+                    {
+                        UBoolProperty* boolProp = (UBoolProperty*)prop;
+                        out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
+                            << ") & " << boolProp->BitMask << ") != 0;";
+                    }
+                    else
+                    {
+                        out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
+                            << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");";
+                    }
+
+                    if (isInStruct)
+                    {
+                        out << " };";
+                    }
+                }
+                out << " }" << endl;
+
+                // Print prop setter (single line)
+                Printer::Indent(out) << "set { ";
+                {
+                    // Make Ptr available locally so we can reuse the same setter code
+                    if (isInStruct)
+                    {
+                        out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+                    }
+
+                    // Booleans (stored as bitmasks) need special handling
+                    if (prop->IsA(UBoolProperty::StaticClass()))
+                    {
+                        UBoolProperty* boolProp = (UBoolProperty*)prop;
+                        out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
+                            << propOffset << ");";
+                        out << " var newMask = value ? (currentMask | " << boolProp->BitMask
+                            << ") : (currentMask & ~" << boolProp->BitMask << ");";
+
+                        out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
+                            << propOffset << ");";
+                    }
+                    else
+                    {
+                        out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << propOffset
+                            << ");";
+                    }
+
+                    if (isInStruct)
+                    {
+                        out << " };";
+                    }
+                }
+                out << " }" << endl;
+            }
+            Printer::PopIndent();
+            Printer::Indent(out) << "}" << endl;
+        }
     }
 }
 
@@ -675,14 +748,14 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
     out << endl;
 
     // Print class declaration
-    Printer::Indent(out) << "static partial class StaticInit" << endl;
+    Printer::Indent(out) << "internal static partial class StaticInit" << endl;
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
         // Print props
-        Printer::Indent(out) << "static Dictionary<string, Type> _classPathToManagedTypeMap = [];"
+        Printer::Indent(out) << "private static Dictionary<string, Type> _classPathToManagedTypeMap = [];"
             << endl;
-        Printer::Indent(out) << "static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
+        Printer::Indent(out) << "private static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
             << endl;
         out << endl;
 

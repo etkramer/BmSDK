@@ -21,6 +21,11 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameViewportClient.
+    /// </summary>
+    public static GameViewportClient DefaultObject => (GameViewportClient)StaticClass().DefaultObject;
+
     internal GameViewportClient() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected GameViewportClient(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameViewportClient>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetHardwareMouseCursorVisibility
@@ -1052,7 +1097,7 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// <summary>
     /// Enum: ESetMode
     /// </summary>
-    public enum ESetMode
+    public enum ESetMode : byte
     {
         SetMode_Toggle = 0,
         SetMode_Enable = 1,
@@ -1063,7 +1108,7 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// <summary>
     /// Enum: ESafeZoneType
     /// </summary>
-    public enum ESafeZoneType
+    public enum ESafeZoneType : byte
     {
         eSZ_TOP = 0,
         eSZ_BOTTOM = 1,
@@ -1075,7 +1120,7 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// <summary>
     /// Enum: ESplitScreenType
     /// </summary>
-    public enum ESplitScreenType
+    public enum ESplitScreenType : byte
     {
         eSST_NONE = 0,
         eSST_2P_HORIZONTAL = 1,
@@ -1255,11 +1300,8 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// <summary>
     /// StructProperty: ShowFlags
     /// </summary>
-    public unsafe BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror ShowFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror ShowFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror>(Ptr + 164);
 
     /// <summary>
     /// StructProperty: RockShowFlags
@@ -1435,11 +1477,8 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// <summary>
     /// StructProperty: TitleSafeZone
     /// </summary>
-    public unsafe BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea TitleSafeZone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea TitleSafeZone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameViewportClient.FTitleSafeZoneArea>(Ptr + 280);
 
     /// <summary>
     /// IntProperty: ReflectionVolumeMode
@@ -1453,11 +1492,8 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
     /// <summary>
     /// StructProperty: CollisionLightSavedShowFlags
     /// </summary>
-    public unsafe BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror CollisionLightSavedShowFlags
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror>(Ptr + 308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
-    }
+    public unsafe ref BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror CollisionLightSavedShowFlags
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameViewportClient.FExportShowFlags_Mirror>(Ptr + 308);
 
     /// <summary>
     /// ArrayProperty: SplitscreenInfo
@@ -1467,6 +1503,11 @@ public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmS
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.GameViewportClient.FSplitscreenData>>(Ptr + 324); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
+
+    /// <summary>
+    /// InlineArray{StrProperty}: ProgressMessage
+    /// </summary>
+    public InlineArray<BmSDK.FString> ProgressMessage => new(2, Ptr + 340);
 
     /// <summary>
     /// StrProperty: ProgressMessage

@@ -21,52 +21,62 @@ public partial class RPawnBossJokerNukeGun : BmSDK.BmGame.RPawnVillainThug, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossJokerNukeGun.
+    /// </summary>
+    public static RPawnBossJokerNukeGun DefaultObject => (RPawnBossJokerNukeGun)StaticClass().DefaultObject;
+
     internal RPawnBossJokerNukeGun() { }
 
     /// <summary>
     /// Constructs a new RPawnBossJokerNukeGun
     /// </summary>
-    public RPawnBossJokerNukeGun(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnBossJokerNukeGun Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPawnBossJokerNukeGun(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPawnBossJokerNukeGun(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossJokerNukeGun>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CustomCombatAnimsets
@@ -691,20 +701,14 @@ public partial class RPawnBossJokerNukeGun : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// StructProperty: BatarangThrowPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatarangThrowPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6800); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatarangThrowPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6800);
 
     /// <summary>
     /// StructProperty: StartPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 StartPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6812); }
-    }
+    public unsafe ref System.Numerics.Vector3 StartPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6812);
 
     /// <summary>
     /// IntProperty: NumBeatDownPunches
@@ -727,11 +731,8 @@ public partial class RPawnBossJokerNukeGun : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// StructProperty: CachedKnockBackDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 CachedKnockBackDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6832); }
-    }
+    public unsafe ref System.Numerics.Vector3 CachedKnockBackDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6832);
 
     /// <summary>
     /// FloatProperty: CellTimeOut

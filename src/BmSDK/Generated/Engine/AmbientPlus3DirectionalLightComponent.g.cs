@@ -21,6 +21,11 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AmbientPlus3DirectionalLightComponent.
+    /// </summary>
+    public static AmbientPlus3DirectionalLightComponent DefaultObject => (AmbientPlus3DirectionalLightComponent)StaticClass().DefaultObject;
+
     internal AmbientPlus3DirectionalLightComponent() { }
 
     /// <summary>
@@ -33,6 +38,46 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     /// </summary>
     protected AmbientPlus3DirectionalLightComponent(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AmbientPlus3DirectionalLightComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// BoolProperty: bRenderBeforeModShadows
     /// </summary>
@@ -43,61 +88,50 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     }
 
     /// <summary>
-    /// StructProperty: LightDirections
+    /// InlineArray{StructProperty}: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
-    }
+    public InlineArray<System.Numerics.Vector3> LightDirections => new(3, Ptr + 616);
+
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightDirections_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 616);
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightDirections_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 628);
+    /// <summary>
+    /// StructProperty: LightDirections
+    /// </summary>
+    public unsafe ref System.Numerics.Vector3 LightDirections_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 640);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: LightColours
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> LightColours => new(3, Ptr + 652);
 
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightColours_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 652);
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightColours_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 664);
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref System.Numerics.Vector3 LightColours_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: Ambient
     /// </summary>
-    public unsafe System.Numerics.Vector3 Ambient
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 Ambient
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 }

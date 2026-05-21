@@ -21,52 +21,62 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RMagneticMatineeObject.
+    /// </summary>
+    public static RMagneticMatineeObject DefaultObject => (RMagneticMatineeObject)StaticClass().DefaultObject;
+
     internal RMagneticMatineeObject() { }
 
     /// <summary>
     /// Constructs a new RMagneticMatineeObject
     /// </summary>
-    public RMagneticMatineeObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RMagneticMatineeObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RMagneticMatineeObject(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RMagneticMatineeObject(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RMagneticMatineeObject>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetMagTargetTangent
@@ -347,7 +357,7 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// Enum: EMatineeMoveState
     /// </summary>
-    public enum EMatineeMoveState
+    public enum EMatineeMoveState : byte
     {
         MMS_NotMoving = 0,
         MMS_MovedByMotor = 1,
@@ -435,7 +445,7 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// Enum: MagAudioDirection
     /// </summary>
-    public enum MagAudioDirection
+    public enum MagAudioDirection : byte
     {
         MagE_Rising = 0,
         MagE_Falling = 1,
@@ -445,7 +455,7 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// Enum: MagMatObjEmitType
     /// </summary>
-    public enum MagMatObjEmitType
+    public enum MagMatObjEmitType : byte
     {
         MMOET_ForwardsOnly = 0,
         MMOET_BackwardsOnly = 1,
@@ -598,20 +608,14 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// StructProperty: Gravity
     /// </summary>
-    public unsafe System.Numerics.Vector3 Gravity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
+    public unsafe ref System.Numerics.Vector3 Gravity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 964);
 
     /// <summary>
     /// StructProperty: SpringPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SpringPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
+    public unsafe ref System.Numerics.Vector3 SpringPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 976);
 
     /// <summary>
     /// FloatProperty: SpringLength
@@ -661,20 +665,14 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// StructProperty: ForwardMovementProperties
     /// </summary>
-    public unsafe BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties ForwardMovementProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties ForwardMovementProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 1008);
 
     /// <summary>
     /// StructProperty: BackwardMovementProperties
     /// </summary>
-    public unsafe BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties BackwardMovementProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties BackwardMovementProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RMagneticMatineeObject.FMagneticMatineeMovementProperties>(Ptr + 1020);
 
     /// <summary>
     /// NameProperty: InitialPositionMatineeEventName
@@ -778,11 +776,8 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// StructProperty: CurrentMagForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrentMagForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1124); }
-    }
+    public unsafe ref System.Numerics.Vector3 CurrentMagForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1124);
 
     /// <summary>
     /// FloatProperty: InitialMatineePosition
@@ -832,20 +827,14 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// StructProperty: LastSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSpeed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSpeed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1180);
 
     /// <summary>
     /// StructProperty: Speed
     /// </summary>
-    public unsafe System.Numerics.Vector3 Speed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1192); }
-    }
+    public unsafe ref System.Numerics.Vector3 Speed
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1192);
 
     /// <summary>
     /// FloatProperty: NormalisedSpeed
@@ -868,11 +857,8 @@ public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IG
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe System.Numerics.Vector3 Direction
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
-    }
+    public unsafe ref System.Numerics.Vector3 Direction
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1224);
 
     /// <summary>
     /// FloatProperty: MaxPosSpeed

@@ -21,12 +21,57 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as EngineTypes.
+    /// </summary>
+    public static EngineTypes DefaultObject => (EngineTypes)StaticClass().DefaultObject;
+
     internal EngineTypes() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected EngineTypes(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<EngineTypes>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FVelocityObstacleStat
@@ -601,7 +646,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELightingBuildQuality
     /// </summary>
-    public enum ELightingBuildQuality
+    public enum ELightingBuildQuality : byte
     {
         Quality_Preview = 0,
         Quality_Medium = 1,
@@ -630,7 +675,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileAmbientOcclusionSource
     /// </summary>
-    public enum EMobileAmbientOcclusionSource
+    public enum EMobileAmbientOcclusionSource : byte
     {
         MAOS_Disabled = 0,
         MAOS_VertexColorRed = 1,
@@ -643,7 +688,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileSpecularMask
     /// </summary>
-    public enum EMobileSpecularMask
+    public enum EMobileSpecularMask : byte
     {
         MSM_Constant = 0,
         MSM_Luminance = 1,
@@ -662,7 +707,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileEnvironmentBlendMode
     /// </summary>
-    public enum EMobileEnvironmentBlendMode
+    public enum EMobileEnvironmentBlendMode : byte
     {
         MEBM_Add = 0,
         MEBM_Lerp = 1,
@@ -672,7 +717,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileEmissiveColorSource
     /// </summary>
-    public enum EMobileEmissiveColorSource
+    public enum EMobileEmissiveColorSource : byte
     {
         MECS_EmissiveTexture = 0,
         MECS_BaseTexture = 1,
@@ -683,7 +728,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileColorMultiplySource
     /// </summary>
-    public enum EMobileColorMultiplySource
+    public enum EMobileColorMultiplySource : byte
     {
         MCMS_None = 0,
         MCMS_BaseTextureRed = 1,
@@ -700,7 +745,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileAlphaValueSource
     /// </summary>
-    public enum EMobileAlphaValueSource
+    public enum EMobileAlphaValueSource : byte
     {
         MAVS_DiffuseTextureAlpha = 0,
         MAVS_MaskTextureRed = 1,
@@ -712,7 +757,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileTexCoordsSource
     /// </summary>
-    public enum EMobileTexCoordsSource
+    public enum EMobileTexCoordsSource : byte
     {
         MTCS_TexCoords0 = 0,
         MTCS_TexCoords1 = 1,
@@ -724,7 +769,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileTextureBlendFactorSource
     /// </summary>
-    public enum EMobileTextureBlendFactorSource
+    public enum EMobileTextureBlendFactorSource : byte
     {
         MTBFS_VertexColor = 0,
         MTBFS_MaskTexture = 1,
@@ -734,7 +779,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMobileValueSource
     /// </summary>
-    public enum EMobileValueSource
+    public enum EMobileValueSource : byte
     {
         MVS_Constant = 0,
         MVS_VertexColorRed = 1,
@@ -760,7 +805,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMaterialTessellationMode
     /// </summary>
-    public enum EMaterialTessellationMode
+    public enum EMaterialTessellationMode : byte
     {
         MTM_NoTessellation = 0,
         MTM_FlatTessellation = 1,
@@ -772,7 +817,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMaterialLightingModel
     /// </summary>
-    public enum EMaterialLightingModel
+    public enum EMaterialLightingModel : byte
     {
         MLM_Phong = 0,
         MLM_NonDirectional = 1,
@@ -787,7 +832,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBlendMode
     /// </summary>
-    public enum EBlendMode
+    public enum EBlendMode : byte
     {
         BLEND_Opaque = 0,
         BLEND_Masked = 1,
@@ -882,7 +927,7 @@ public partial class EngineTypes : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPathFindingError
     /// </summary>
-    public enum EPathFindingError
+    public enum EPathFindingError : byte
     {
         PATHERROR_None = 0,
         PATHERROR_STARTPOLYNOTFOUND = 1,

@@ -21,6 +21,11 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnVillainCombatExpertBase.
+    /// </summary>
+    public static RPawnVillainCombatExpertBase DefaultObject => (RPawnVillainCombatExpertBase)StaticClass().DefaultObject;
+
     internal RPawnVillainCombatExpertBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     /// </summary>
     protected RPawnVillainCombatExpertBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnVillainCombatExpertBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: IncNumTimesHitWhileVulnerable
@@ -209,7 +219,7 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     /// <summary>
     /// Enum: EAllyType
     /// </summary>
-    public enum EAllyType
+    public enum EAllyType : byte
     {
         EAT_CombatExpert = 0,
         EAT_UnarmedThug = 1,
@@ -235,6 +245,11 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: InteractionAnimset
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AnimSet> InteractionAnimset => new(2, Ptr + 6740);
+
+    /// <summary>
     /// ObjectProperty: InteractionAnimset
     /// </summary>
     public unsafe BmSDK.Engine.AnimSet InteractionAnimset_0
@@ -250,6 +265,11 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6748); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6748); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: AllyInteractionAnimset
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AnimSet> AllyInteractionAnimset => new(2, Ptr + 6756);
 
     /// <summary>
     /// ObjectProperty: AllyInteractionAnimset

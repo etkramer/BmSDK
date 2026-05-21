@@ -21,6 +21,11 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameStatsAggregator.
+    /// </summary>
+    public static GameStatsAggregator DefaultObject => (GameStatsAggregator)StaticClass().DefaultObject;
+
     internal GameStatsAggregator() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected GameStatsAggregator(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameStatsAggregator>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetAggregateMappingIDs
@@ -374,11 +419,8 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// StructProperty: AggregateEventsMapping
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror AggregateEventsMapping
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror AggregateEventsMapping
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 148);
 
     /// <summary>
     /// ArrayProperty: AggregateEvents
@@ -401,11 +443,8 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// StructProperty: AllGameEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.FGameEvents AllGameEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
+    public unsafe ref BmSDK.Engine.GameStatsAggregator.FGameEvents AllGameEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FGameEvents>(Ptr + 252);
 
     /// <summary>
     /// ArrayProperty: AllTeamEvents
@@ -428,37 +467,25 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// <summary>
     /// StructProperty: AllWeaponEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.FWeaponEvents AllWeaponEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
+    public unsafe ref BmSDK.Engine.GameStatsAggregator.FWeaponEvents AllWeaponEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FWeaponEvents>(Ptr + 356);
 
     /// <summary>
     /// StructProperty: AllProjectileEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.FProjectileEvents AllProjectileEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.Engine.GameStatsAggregator.FProjectileEvents AllProjectileEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FProjectileEvents>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: AllPawnEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.FPawnEvents AllPawnEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FPawnEvents>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.Engine.GameStatsAggregator.FPawnEvents AllPawnEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FPawnEvents>(Ptr + 532);
 
     /// <summary>
     /// StructProperty: AllDamageEvents
     /// </summary>
-    public unsafe BmSDK.Engine.GameStatsAggregator.FDamageEvents AllDamageEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref BmSDK.Engine.GameStatsAggregator.FDamageEvents AllDamageEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 620);
 
 }

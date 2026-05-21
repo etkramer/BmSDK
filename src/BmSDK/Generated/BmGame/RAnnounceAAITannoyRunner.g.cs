@@ -21,6 +21,11 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnnounceAAITannoyRunner.
+    /// </summary>
+    public static RAnnounceAAITannoyRunner DefaultObject => (RAnnounceAAITannoyRunner)StaticClass().DefaultObject;
+
     internal RAnnounceAAITannoyRunner() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnnounceAAITannoyRunner(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnnounceAAITannoyRunner>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: FlushQueue
@@ -104,7 +149,7 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Enum: AAIResponseType
     /// </summary>
-    public enum AAIResponseType
+    public enum AAIResponseType : byte
     {
         AAIRT_Silent = 0,
         AAIRT_Ledge = 1,
@@ -151,11 +196,8 @@ public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: CurrentAnnouncement
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnnounceAAITannoyRunner.FAnnouncementInfo CurrentAnnouncement
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnnounceAAITannoyRunner.FAnnouncementInfo>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnnounceAAITannoyRunner.FAnnouncementInfo CurrentAnnouncement
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnnounceAAITannoyRunner.FAnnouncementInfo>(Ptr + 116);
 
     /// <summary>
     /// ArrayProperty: QueuedResponseList

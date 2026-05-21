@@ -21,6 +21,11 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as GameEngine.
+    /// </summary>
+    public static GameEngine DefaultObject => (GameEngine)StaticClass().DefaultObject;
+
     internal GameEngine() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected GameEngine(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameEngine>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<GameEngine>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetLocHelperSystem
@@ -257,7 +302,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFullyLoadPackageType
     /// </summary>
-    public enum EFullyLoadPackageType
+    public enum EFullyLoadPackageType : byte
     {
         FULLYLOAD_Map = 0,
         FULLYLOAD_Game_PreLoadClass = 1,
@@ -358,20 +403,14 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastURL
     /// </summary>
-    public unsafe BmSDK.Engine.GameEngine.FURL LastURL
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameEngine.FURL>(Ptr + 2704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
-    }
+    public unsafe ref BmSDK.Engine.GameEngine.FURL LastURL
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameEngine.FURL>(Ptr + 2704);
 
     /// <summary>
     /// StructProperty: LastRemoteURL
     /// </summary>
-    public unsafe BmSDK.Engine.GameEngine.FURL LastRemoteURL
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameEngine.FURL>(Ptr + 2792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2792); }
-    }
+    public unsafe ref BmSDK.Engine.GameEngine.FURL LastRemoteURL
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameEngine.FURL>(Ptr + 2792);
 
     /// <summary>
     /// ArrayProperty: ServerActors

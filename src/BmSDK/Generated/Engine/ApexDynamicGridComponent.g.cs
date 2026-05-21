@@ -21,6 +21,11 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexDynamicGridComponent.
+    /// </summary>
+    public static ApexDynamicGridComponent DefaultObject => (ApexDynamicGridComponent)StaticClass().DefaultObject;
+
     internal ApexDynamicGridComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ApexDynamicGridComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDynamicGridComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FSCSelfShadowingSpotlightParams
@@ -628,11 +673,8 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// StructProperty: blockSizeWorld
     /// </summary>
-    public unsafe System.Numerics.Vector3 blockSizeWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 blockSizeWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// BoolProperty: trackCameraPosition
@@ -682,29 +724,20 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// StructProperty: particleToGridCoupling
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCParticleToGridCouplingParams particleToGridCoupling
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCParticleToGridCouplingParams>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCParticleToGridCouplingParams particleToGridCoupling
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCParticleToGridCouplingParams>(Ptr + 644);
 
     /// <summary>
     /// StructProperty: gridToParticleCoupling
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCGridToParticleCouplingParams gridToParticleCoupling
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCGridToParticleCouplingParams>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCGridToParticleCouplingParams gridToParticleCoupling
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCGridToParticleCouplingParams>(Ptr + 656);
 
     /// <summary>
     /// StructProperty: particleDensity
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCDensityParams particleDensity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCDensityParams>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCDensityParams particleDensity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCDensityParams>(Ptr + 668);
 
     /// <summary>
     /// IntProperty: pressureSolverIterations
@@ -718,47 +751,32 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// StructProperty: pressureMultigrid
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCMultigridParams pressureMultigrid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCMultigridParams>(Ptr + 752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCMultigridParams pressureMultigrid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCMultigridParams>(Ptr + 752);
 
     /// <summary>
     /// StructProperty: stochasticParticleAdvection
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCStochasticParticleAdvectionParams stochasticParticleAdvection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCStochasticParticleAdvectionParams>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCStochasticParticleAdvectionParams stochasticParticleAdvection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCStochasticParticleAdvectionParams>(Ptr + 768);
 
     /// <summary>
     /// StructProperty: MacCormackAdvection
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCMacCormackAdvectionParams MacCormackAdvection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCMacCormackAdvectionParams>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCMacCormackAdvectionParams MacCormackAdvection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCMacCormackAdvectionParams>(Ptr + 780);
 
     /// <summary>
     /// StructProperty: selfShadowing
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingParams selfShadowing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingParams>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingParams selfShadowing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingParams>(Ptr + 788);
 
     /// <summary>
     /// StructProperty: selfShadowingSpotlight
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingSpotlightParams selfShadowingSpotlight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingSpotlightParams>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingSpotlightParams selfShadowingSpotlight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDynamicGridComponent.FSCSelfShadowingSpotlightParams>(Ptr + 812);
 
     /// <summary>
     /// ComponentProperty: DrawComponent2
@@ -772,47 +790,47 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Enum: EDynamicGridCells
     /// </summary>
-    public enum EDynamicGridCells
+    public enum EDynamicGridCells : byte
     {
-        CELLS = 0,
-        CELLS_2 = 1,
-        CELLS_3 = 2,
-        CELLS_4 = 3,
+        CELLS_64 = 0,
+        CELLS_128 = 1,
+        CELLS_256 = 2,
+        CELLS_512 = 3,
         CELLS_MAX = 4,
     }
 
     /// <summary>
     /// Enum: EDynamicGridVirtualColumns
     /// </summary>
-    public enum EDynamicGridVirtualColumns
+    public enum EDynamicGridVirtualColumns : byte
     {
-        VCOLUMNS = 0,
-        VCOLUMNS_2 = 1,
-        VCOLUMNS_3 = 2,
-        VCOLUMNS_4 = 3,
-        VCOLUMNS_5 = 4,
+        VCOLUMNS_4096 = 0,
+        VCOLUMNS_16384 = 1,
+        VCOLUMNS_65536 = 2,
+        VCOLUMNS_262144 = 3,
+        VCOLUMNS_1048576 = 4,
         VCOLUMNS_MAX = 5,
     }
 
     /// <summary>
     /// Enum: EDynamicGridRealColumns
     /// </summary>
-    public enum EDynamicGridRealColumns
+    public enum EDynamicGridRealColumns : byte
     {
-        RCOLUMNS = 0,
-        RCOLUMNS_2 = 1,
-        RCOLUMNS_3 = 2,
-        RCOLUMNS_4 = 3,
-        RCOLUMNS_5 = 4,
-        RCOLUMNS_6 = 5,
-        RCOLUMNS_7 = 6,
+        RCOLUMNS_64 = 0,
+        RCOLUMNS_128 = 1,
+        RCOLUMNS_256 = 2,
+        RCOLUMNS_512 = 3,
+        RCOLUMNS_1024 = 4,
+        RCOLUMNS_2048 = 5,
+        RCOLUMNS_4096 = 6,
         RCOLUMNS_MAX = 7,
     }
 
     /// <summary>
     /// Enum: EDynamicGridDirection
     /// </summary>
-    public enum EDynamicGridDirection
+    public enum EDynamicGridDirection : byte
     {
         DG_AXIS_X_UP = 0,
         DG_AXIS_X_DOWN = 1,
@@ -826,26 +844,26 @@ public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerCom
     /// <summary>
     /// Enum: EDynamicGridBoundingGridDim
     /// </summary>
-    public enum EDynamicGridBoundingGridDim
+    public enum EDynamicGridBoundingGridDim : byte
     {
-        DG_VBLOCKS = 0,
-        DG_VBLOCKS_2 = 1,
-        DG_VBLOCKS_3 = 2,
-        DG_VBLOCKS_4 = 3,
-        DG_VBLOCKS_5 = 4,
+        DG_VBLOCKS_16 = 0,
+        DG_VBLOCKS_32 = 1,
+        DG_VBLOCKS_64 = 2,
+        DG_VBLOCKS_128 = 3,
+        DG_VBLOCKS_256 = 4,
         DG_VBLOCKS_MAX = 5,
     }
 
     /// <summary>
     /// Enum: EDynamicGridPoolDim
     /// </summary>
-    public enum EDynamicGridPoolDim
+    public enum EDynamicGridPoolDim : byte
     {
-        DG_BLOCKS = 0,
-        DG_BLOCKS_2 = 1,
-        DG_BLOCKS_3 = 2,
-        DG_BLOCKS_4 = 3,
-        DG_BLOCKS_5 = 4,
+        DG_BLOCKS_4 = 0,
+        DG_BLOCKS_8 = 1,
+        DG_BLOCKS_16 = 2,
+        DG_BLOCKS_32 = 3,
+        DG_BLOCKS_64 = 4,
         DG_BLOCKS_MAX = 5,
     }
 }

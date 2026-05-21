@@ -21,52 +21,62 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as HUD.
+    /// </summary>
+    public static HUD DefaultObject => (HUD)StaticClass().DefaultObject;
+
     internal HUD() { }
 
     /// <summary>
     /// Constructs a new HUD
     /// </summary>
-    public HUD(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, HUD Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public HUD(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected HUD(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<HUD>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<HUD>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<HUD>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<HUD>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<HUD>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<HUD>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<HUD>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<HUD>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnLostFocusPause
@@ -221,13 +231,13 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LocalizedMessage
     /// </summary>
-    public unsafe virtual void LocalizedMessage(BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo RelatedPRI, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, BmSDK.GameObject OptionalObject = default)
+    public unsafe virtual void LocalizedMessage(BmSDK.Class InMessageClass, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_1, BmSDK.Engine.PlayerReplicationInfo RelatedPRI_2, BmSDK.FString CriticalString, int Switch, float Position, float Lifetime, int FontSize, BmSDK.GameObject.FColor DrawColor, BmSDK.GameObject OptionalObject = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.HUD.LocalizedMessage", true);
         byte* paramsPtr = stackalloc byte[80];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(InMessageClass, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_1, paramsPtr + 16);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_1, paramsPtr + 8);
+        BmSDK.Framework.MarshalUtil.ToUnmanaged(RelatedPRI_2, paramsPtr + 16);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(CriticalString, paramsPtr + 24);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Switch, paramsPtr + 40);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 44);
@@ -811,29 +821,20 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WhiteColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WhiteColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WhiteColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 668);
 
     /// <summary>
     /// StructProperty: GreenColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor GreenColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor GreenColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 672);
 
     /// <summary>
     /// StructProperty: RedColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor RedColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor RedColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 676);
 
     /// <summary>
     /// ObjectProperty: PlayerOwner
@@ -964,11 +965,8 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ConsoleColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ConsoleColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor ConsoleColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 736);
 
     /// <summary>
     /// IntProperty: ConsoleMessageCount
@@ -1007,69 +1005,50 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: LocalMessages
+    /// InlineArray{StructProperty}: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
+    public InlineArray<BmSDK.Engine.HUD.FHudLocalizedMessage> LocalMessages => new(8, Ptr + 756);
+
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 756);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 836);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 916);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 996);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1076);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1236); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1156);
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
-    }
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1236);
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe ref BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 1316);
 
     /// <summary>
     /// FloatProperty: ConsoleMessagePosX

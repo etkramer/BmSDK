@@ -21,6 +21,11 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LandscapeComponent.
+    /// </summary>
+    public static LandscapeComponent DefaultObject => (LandscapeComponent)StaticClass().DefaultObject;
+
     internal LandscapeComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected LandscapeComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FWeightmapLayerAllocationInfo
@@ -160,11 +205,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: WeightmapScaleBias
     /// </summary>
-    public unsafe System.Numerics.Vector4 WeightmapScaleBias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector4 WeightmapScaleBias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 624);
 
     /// <summary>
     /// FloatProperty: WeightmapSubsectionOffset
@@ -178,38 +220,26 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: HeightmapScaleBias
     /// </summary>
-    public unsafe System.Numerics.Vector4 HeightmapScaleBias
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
-    }
+    public unsafe ref System.Numerics.Vector4 HeightmapScaleBias
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 656);
 
     /// <summary>
     /// StructProperty: CachedBoxSphereBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 672);
 
     /// <summary>
     /// StructProperty: CachedLocalBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox CachedLocalBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox CachedLocalBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 700);
 
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 728);
 
     /// <summary>
     /// ArrayProperty: ShadowMaps
@@ -232,11 +262,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 776);
 
     /// <summary>
     /// StructProperty: EditToolRenderData
@@ -291,6 +318,11 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 812); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: NeighborLOD
+    /// </summary>
+    public InlineArray<byte> NeighborLOD => new(8, Ptr + 816);
 
     /// <summary>
     /// ByteProperty: NeighborLOD
@@ -356,6 +388,11 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 823); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 823); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: NeighborLODBias
+    /// </summary>
+    public InlineArray<byte> NeighborLODBias => new(8, Ptr + 824);
 
     /// <summary>
     /// ByteProperty: NeighborLODBias

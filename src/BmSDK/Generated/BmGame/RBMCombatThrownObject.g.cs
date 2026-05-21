@@ -21,6 +21,11 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMCombatThrownObject.
+    /// </summary>
+    public static RBMCombatThrownObject DefaultObject => (RBMCombatThrownObject)StaticClass().DefaultObject;
+
     internal RBMCombatThrownObject() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// </summary>
     protected RBMCombatThrownObject(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ShowWeaponPickupHelp
@@ -1484,20 +1494,14 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: HeldByPlayer_Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 HeldByPlayer_Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 HeldByPlayer_Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// StructProperty: HeldByPlayer_Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator HeldByPlayer_Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
-    }
+    public unsafe ref BmSDK.Rotator HeldByPlayer_Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 916);
 
     /// <summary>
     /// IntProperty: PickupOnFails
@@ -1547,11 +1551,8 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: MagneticForceLastFrame
     /// </summary>
-    public unsafe System.Numerics.Vector3 MagneticForceLastFrame
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
+    public unsafe ref System.Numerics.Vector3 MagneticForceLastFrame
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 948);
 
     /// <summary>
     /// ArrayProperty: SegmentMeshs
@@ -1574,20 +1575,14 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ThrowCollisionExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowCollisionExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowCollisionExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 984);
 
     /// <summary>
     /// StructProperty: ThrowCollisionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowCollisionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowCollisionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 996);
 
     /// <summary>
     /// FloatProperty: IgnoreCollisionTimer
@@ -1601,38 +1596,26 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: BasePickupLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BasePickupLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1012); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1012); }
-    }
+    public unsafe ref System.Numerics.Vector3 BasePickupLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1012);
 
     /// <summary>
     /// StructProperty: PickupLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PickupLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref System.Numerics.Vector3 PickupLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1024);
 
     /// <summary>
     /// StructProperty: PrevLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 
     /// <summary>
     /// StructProperty: PrevRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PrevRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1048); }
-    }
+    public unsafe ref BmSDK.Rotator PrevRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1048);
 
     /// <summary>
     /// FloatProperty: DropVelMultiplier
@@ -1772,7 +1755,7 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     /// <summary>
     /// Enum: EThrownWeaonCounterType
     /// </summary>
-    public enum EThrownWeaonCounterType
+    public enum EThrownWeaonCounterType : byte
     {
         TOCT_None = 0,
         TOCT_Catch = 1,

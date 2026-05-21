@@ -12,7 +12,7 @@ public struct FName
     /// <summary>
     /// Creates a new FName with the given index.
     /// </summary>
-    public unsafe FName(int index)
+    public FName(int index)
     {
         Index = index;
         Number = 0;
@@ -74,15 +74,17 @@ public struct FName
             }
         }
 
-        if (!shortInline)
+        string str;
+        if (!shortInline && (nameEntry->AnsiNamePtr > 0x10000) && ((nameEntry->AnsiNamePtr >> 48) == 0))
         {
-            if ((nameEntry->AnsiNamePtr > 0x10000) && ((nameEntry->AnsiNamePtr >> 48) == 0))
-            {
-                return Guard.NotNull(Marshal.PtrToStringAnsi(nameEntry->AnsiNamePtr));
-            }
+            str = Guard.NotNull(Marshal.PtrToStringAnsi(nameEntry->AnsiNamePtr));
+        }
+        else
+        {
+            str = Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)nameEntry->AnsiName));
         }
 
-        return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)nameEntry->AnsiName));
+        return Number == 0 ? str : $"{str}_{Number - 1}";
     }
 
 #pragma warning disable CS0649

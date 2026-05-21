@@ -21,6 +21,11 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPersistentShared.
+    /// </summary>
+    public static RPersistentShared DefaultObject => (RPersistentShared)StaticClass().DefaultObject;
+
     internal RPersistentShared() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPersistentShared(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentShared>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpgradesPurchasedAdjust
@@ -716,7 +761,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SkillPointCategories
     /// </summary>
-    public enum SkillPointCategories
+    public enum SkillPointCategories : byte
     {
         SPC_None = 0,
         SPC_Combat_NumberOfCombatants = 1,
@@ -1565,7 +1610,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPercentData
     /// </summary>
-    public enum EPercentData
+    public enum EPercentData : byte
     {
         EPercentData_Grand = 0,
         EPercentData_Story = 1,
@@ -1624,7 +1669,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EGameplayStats
     /// </summary>
-    public enum EGameplayStats
+    public enum EGameplayStats : byte
     {
         EGameplayStats_DistanceFlown = 0,
         EGameplayStats_MAX = 1,
@@ -1633,7 +1678,7 @@ public partial class RPersistentShared : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: PSharedVersion
     /// </summary>
-    public enum PSharedVersion
+    public enum PSharedVersion : byte
     {
         PSharedVer_Initial = 0,
         PSharedVer_AddedNEWs = 1,

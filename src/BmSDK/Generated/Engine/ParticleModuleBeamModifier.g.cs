@@ -21,6 +21,11 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleBeamModifier.
+    /// </summary>
+    public static ParticleModuleBeamModifier DefaultObject => (ParticleModuleBeamModifier)StaticClass().DefaultObject;
+
     internal ParticleModuleBeamModifier() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleBeamModifier(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleBeamModifier>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FBeamModifierOptions
@@ -79,38 +124,26 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
     /// <summary>
     /// StructProperty: PositionOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions PositionOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions PositionOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 100);
 
     /// <summary>
     /// StructProperty: Position
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Position
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Position
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: TangentOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions TangentOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions TangentOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: Tangent
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Tangent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector Tangent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 172);
 
     /// <summary>
     /// BoolProperty: bAbsoluteTangent
@@ -124,25 +157,19 @@ public partial class ParticleModuleBeamModifier : BmSDK.Engine.ParticleModuleBea
     /// <summary>
     /// StructProperty: StrengthOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions StrengthOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions StrengthOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleBeamModifier.FBeamModifierOptions>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Strength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 244);
 
     /// <summary>
     /// Enum: BeamModifierType
     /// </summary>
-    public enum BeamModifierType
+    public enum BeamModifierType : byte
     {
         PEB2MT_Source = 0,
         PEB2MT_Target = 1,

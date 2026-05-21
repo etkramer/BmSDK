@@ -21,52 +21,62 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_SwingToVantagePoint.
+    /// </summary>
+    public static RSpecialMoveInstance_SwingToVantagePoint DefaultObject => (RSpecialMoveInstance_SwingToVantagePoint)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_SwingToVantagePoint() { }
 
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_SwingToVantagePoint
     /// </summary>
-    public RSpecialMoveInstance_SwingToVantagePoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_SwingToVantagePoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_SwingToVantagePoint(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSpecialMoveInstance_SwingToVantagePoint(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_SwingToVantagePoint>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanCancelSwing
@@ -368,11 +378,8 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: NextHidePointSwingPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NextHidePointSwingPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
+    public unsafe ref System.Numerics.Vector3 NextHidePointSwingPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 892);
 
     /// <summary>
     /// FloatProperty: TrajectoryDuration
@@ -395,38 +402,26 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: TrajectoryOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrajectoryOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrajectoryOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 912);
 
     /// <summary>
     /// StructProperty: TrajectoryDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrajectoryDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrajectoryDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 924);
 
     /// <summary>
     /// StructProperty: TrajectoryUp
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrajectoryUp
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrajectoryUp
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 936);
 
     /// <summary>
     /// StructProperty: FireGrappleTo
     /// </summary>
-    public unsafe System.Numerics.Vector3 FireGrappleTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
+    public unsafe ref System.Numerics.Vector3 FireGrappleTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 948);
 
     /// <summary>
     /// FloatProperty: TrajectoryStart
@@ -449,11 +444,8 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: SwingEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 968);
 
     /// <summary>
     /// FloatProperty: CurrentTrajectoryPosition
@@ -503,29 +495,20 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: LandTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LandTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId LandTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 988);
 
     /// <summary>
     /// StructProperty: StoredVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 992);
 
     /// <summary>
     /// StructProperty: OutVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 OutVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref System.Numerics.Vector3 OutVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1004);
 
     /// <summary>
     /// FloatProperty: TimeScale
@@ -539,11 +522,8 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: GrappleFireLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GrappleFireLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref System.Numerics.Vector3 GrappleFireLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1020);
 
     /// <summary>
     /// IntProperty: JumpLandAnimYawOffset
@@ -575,9 +555,6 @@ public partial class RSpecialMoveInstance_SwingToVantagePoint : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: AudioSwingOneShot
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle AudioSwingOneShot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1048); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle AudioSwingOneShot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1048);
 }

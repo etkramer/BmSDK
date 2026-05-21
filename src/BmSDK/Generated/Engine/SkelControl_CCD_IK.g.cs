@@ -21,6 +21,11 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkelControl_CCD_IK.
+    /// </summary>
+    public static SkelControl_CCD_IK DefaultObject => (SkelControl_CCD_IK)StaticClass().DefaultObject;
+
     internal SkelControl_CCD_IK() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// </summary>
     protected SkelControl_CCD_IK(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkelControl_CCD_IK>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: EffectorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EffectorLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector3 EffectorLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 248);
 
     /// <summary>
     /// ByteProperty: EffectorLocationSpace
@@ -63,11 +105,8 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: EffectorTranslationFromBone
     /// </summary>
-    public unsafe System.Numerics.Vector3 EffectorTranslationFromBone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref System.Numerics.Vector3 EffectorTranslationFromBone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 272);
 
     /// <summary>
     /// IntProperty: NumBones
@@ -162,9 +201,6 @@ public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IG
     /// <summary>
     /// StructProperty: ComponentOffset
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom ComponentOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom ComponentOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 336);
 }

@@ -21,6 +21,11 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PhysXParticleSystem.
+    /// </summary>
+    public static PhysXParticleSystem DefaultObject => (PhysXParticleSystem)StaticClass().DefaultObject;
+
     internal PhysXParticleSystem() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected PhysXParticleSystem(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PhysXParticleSystem>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// IntProperty: MaxParticles
@@ -81,11 +126,8 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer RBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 96);
 
     /// <summary>
     /// FloatProperty: CollisionDistance
@@ -234,11 +276,8 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ExternalAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 ExternalAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref System.Numerics.Vector3 ExternalAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 140);
 
     /// <summary>
     /// FloatProperty: RestParticleDistance
@@ -324,21 +363,21 @@ public partial class PhysXParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPacketSizeMultiplier
     /// </summary>
-    public enum EPacketSizeMultiplier
+    public enum EPacketSizeMultiplier : byte
     {
-        EPSM = 0,
-        EPSM_2 = 1,
-        EPSM_3 = 2,
-        EPSM_4 = 3,
-        EPSM_5 = 4,
-        EPSM_6 = 5,
+        EPSM_4 = 0,
+        EPSM_8 = 1,
+        EPSM_16 = 2,
+        EPSM_32 = 3,
+        EPSM_64 = 4,
+        EPSM_128 = 5,
         EPSM_MAX = 6,
     }
 
     /// <summary>
     /// Enum: ESimulationMethod
     /// </summary>
-    public enum ESimulationMethod
+    public enum ESimulationMethod : byte
     {
         ESM_SPH = 0,
         ESM_NO_PARTICLE_INTERACTION = 1,

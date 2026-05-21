@@ -21,52 +21,62 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSpecialMoveInstance_Interrogation.
+    /// </summary>
+    public static RSpecialMoveInstance_Interrogation DefaultObject => (RSpecialMoveInstance_Interrogation)StaticClass().DefaultObject;
+
     internal RSpecialMoveInstance_Interrogation() { }
 
     /// <summary>
     /// Constructs a new RSpecialMoveInstance_Interrogation
     /// </summary>
-    public RSpecialMoveInstance_Interrogation(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_Interrogation Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RSpecialMoveInstance_Interrogation(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSpecialMoveInstance_Interrogation(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RSpecialMoveInstance_Interrogation>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DisableMinesDisabledByVictim
@@ -652,7 +662,7 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// Enum: InterrogationThugReaction
     /// </summary>
-    public enum InterrogationThugReaction
+    public enum InterrogationThugReaction : byte
     {
         ITR_None = 0,
         ITR_Yes = 1,
@@ -933,38 +943,26 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: ReferenceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReferenceLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReferenceLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 936);
 
     /// <summary>
     /// StructProperty: ReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
+    public unsafe ref BmSDK.Rotator ReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 948);
 
     /// <summary>
     /// StructProperty: Transition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 960);
 
     /// <summary>
     /// StructProperty: VictimTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VictimTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId VictimTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 964);
 
     /// <summary>
     /// StrProperty: LoadingPackageName
@@ -987,29 +985,20 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: InitialLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator InitialLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator InitialLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1000);
 
     /// <summary>
     /// StructProperty: AnimatedCameraCollisionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnimatedCameraCollisionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnimatedCameraCollisionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1132);
 
     /// <summary>
     /// StructProperty: CatwomanCameraCollisionOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CatwomanCameraCollisionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
-    }
+    public unsafe ref System.Numerics.Vector3 CatwomanCameraCollisionOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1144);
 
     /// <summary>
     /// IntProperty: IntimidateAnimIndex
@@ -1095,20 +1084,14 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: RopeAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1228); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1228);
 
     /// <summary>
     /// StructProperty: RopeRenderAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeRenderAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1240); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeRenderAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1240);
 
     /// <summary>
     /// FloatProperty: RopeLength
@@ -1140,11 +1123,8 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: RopePelvisAttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopePelvisAttachPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1268); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopePelvisAttachPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1268);
 
     /// <summary>
     /// ArrayProperty: RopeExtraAttachConnections
@@ -1158,20 +1138,14 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: RopeRenderStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeRenderStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeRenderStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1296);
 
     /// <summary>
     /// StructProperty: RopePhysStartOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopePhysStartOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopePhysStartOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1308);
 
     /// <summary>
     /// IntProperty: RandomCameraIndex
@@ -1221,11 +1195,8 @@ public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialM
     /// <summary>
     /// StructProperty: LastLocatorFallbackPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastLocatorFallbackPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastLocatorFallbackPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1356);
 
     /// <summary>
     /// FloatProperty: ChanceOfAttack

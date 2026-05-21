@@ -21,6 +21,11 @@ public partial class RSeqEvent_MinidroneAndThugInteractions : BmSDK.Engine.Seque
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_MinidroneAndThugInteractions.
+    /// </summary>
+    public static RSeqEvent_MinidroneAndThugInteractions DefaultObject => (RSeqEvent_MinidroneAndThugInteractions)StaticClass().DefaultObject;
+
     internal RSeqEvent_MinidroneAndThugInteractions() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class RSeqEvent_MinidroneAndThugInteractions : BmSDK.Engine.Seque
     /// </summary>
     protected RSeqEvent_MinidroneAndThugInteractions(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_MinidroneAndThugInteractions>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: SACBCB_OUT_Links
     /// </summary>
-    public enum SACBCB_OUT_Links
+    public enum SACBCB_OUT_Links : byte
     {
         SEMDATI_OUT_CodesDownloaded = 0,
         SEMDATI_OUT_TargettedByMinidrone = 1,

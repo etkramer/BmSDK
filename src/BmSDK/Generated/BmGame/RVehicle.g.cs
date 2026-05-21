@@ -21,6 +21,11 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicle.
+    /// </summary>
+    public static RVehicle DefaultObject => (RVehicle)StaticClass().DefaultObject;
+
     internal RVehicle() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// </summary>
     protected RVehicle(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicle>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicle>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicle>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicle>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicle>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicle>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RVehicleNoSpeedKill
@@ -2949,7 +2959,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: VehicleLightMaterialType
     /// </summary>
-    public enum VehicleLightMaterialType
+    public enum VehicleLightMaterialType : byte
     {
         VEHLTMAT_None = 0,
         VEHLTMAT_HeadLightLeft = 1,
@@ -2966,7 +2976,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: VehicleLightType
     /// </summary>
-    public enum VehicleLightType
+    public enum VehicleLightType : byte
     {
         VEHLT_Other = 0,
         VEHLT_Hacked = 1,
@@ -3178,7 +3188,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELocalRadarTargetType
     /// </summary>
-    public enum ELocalRadarTargetType
+    public enum ELocalRadarTargetType : byte
     {
         LRT_NONE = 0,
         LRT_HeavyTank = 1,
@@ -3195,7 +3205,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: ESelfDriveMode
     /// </summary>
-    public enum ESelfDriveMode
+    public enum ESelfDriveMode : byte
     {
         SELFDRIVE_None = 0,
         SELFDRIVE_Stop = 1,
@@ -3208,7 +3218,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWanderAudioState
     /// </summary>
-    public enum EWanderAudioState
+    public enum EWanderAudioState : byte
     {
         WANDERAUDIO_None = 0,
         WANDERAUDIO_RunAccelerate = 1,
@@ -3922,6 +3932,11 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: DestructibleDustTrails
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> DestructibleDustTrails => new(2, Ptr + 2292);
+
+    /// <summary>
     /// ComponentProperty: DestructibleDustTrails
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent DestructibleDustTrails_0
@@ -4013,20 +4028,14 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SelfDriveForwardTargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveForwardTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2392); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveForwardTargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2392);
 
     /// <summary>
     /// StructProperty: SelfDriveForwardRoadDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveForwardRoadDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2404); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveForwardRoadDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2404);
 
     /// <summary>
     /// FloatProperty: SelfDriveThrottleScale
@@ -4139,29 +4148,20 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SelfDriveStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2464);
 
     /// <summary>
     /// StructProperty: SelfDriveTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2476); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2476);
 
     /// <summary>
     /// StructProperty: SelfDriveTightAreaDest
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveTightAreaDest
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2488); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveTightAreaDest
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2488);
 
     /// <summary>
     /// ArrayProperty: SelfDriveTightAreaRoute
@@ -4175,38 +4175,26 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SelfDriveTightArea
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadNetwork.FRoadNetworkTightArea SelfDriveTightArea
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadNetwork.FRoadNetworkTightArea>(Ptr + 2516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadNetwork.FRoadNetworkTightArea SelfDriveTightArea
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadNetwork.FRoadNetworkTightArea>(Ptr + 2516);
 
     /// <summary>
     /// StructProperty: RoadObstacleType
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FRoadObstacleTypes RoadObstacleType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FRoadObstacleTypes>(Ptr + 2540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2540); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FRoadObstacleTypes RoadObstacleType
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FRoadObstacleTypes>(Ptr + 2540);
 
     /// <summary>
     /// StructProperty: RoadObstacleAvoidTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FRoadObstacleTypes RoadObstacleAvoidTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FRoadObstacleTypes>(Ptr + 2544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2544); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FRoadObstacleTypes RoadObstacleAvoidTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FRoadObstacleTypes>(Ptr + 2544);
 
     /// <summary>
     /// StructProperty: RoadObstacleStopForTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FRoadObstacleTypes RoadObstacleStopForTypes
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FRoadObstacleTypes>(Ptr + 2548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2548); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FRoadObstacleTypes RoadObstacleStopForTypes
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FRoadObstacleTypes>(Ptr + 2548);
 
     /// <summary>
     /// IntProperty: RoadObstacleAvoidBits
@@ -4238,11 +4226,8 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RoadObstacleExtraBounds
     /// </summary>
-    public unsafe System.Numerics.Vector3 RoadObstacleExtraBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2564); }
-    }
+    public unsafe ref System.Numerics.Vector3 RoadObstacleExtraBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2564);
 
     /// <summary>
     /// FloatProperty: RoadLevelSearchBias
@@ -4310,11 +4295,8 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FakeRoadNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 FakeRoadNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2616); }
-    }
+    public unsafe ref System.Numerics.Vector3 FakeRoadNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2616);
 
     /// <summary>
     /// FloatProperty: FakeRoadStickyTime
@@ -4355,11 +4337,8 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PreviousObstacleLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PreviousObstacleLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2656); }
-    }
+    public unsafe ref System.Numerics.Vector3 PreviousObstacleLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2656);
 
     /// <summary>
     /// FloatProperty: PawnCollision_SideCheckDist_Min
@@ -4454,11 +4433,8 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: JumpOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 JumpOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2720); }
-    }
+    public unsafe ref System.Numerics.Vector3 JumpOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2720);
 
     /// <summary>
     /// IntProperty: JumpYaw
@@ -4472,11 +4448,8 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WinchAttachLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 WinchAttachLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2736); }
-    }
+    public unsafe ref System.Numerics.Vector3 WinchAttachLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2736);
 
     /// <summary>
     /// FloatProperty: DriftSteeringAssist
@@ -4517,245 +4490,160 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedLightMat1234
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor CachedLightMat1234
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2764); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor CachedLightMat1234
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2764);
 
     /// <summary>
     /// StructProperty: CachedLightMat5678
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor CachedLightMat5678
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2780); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor CachedLightMat5678
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2780);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: VehicleLights
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RVehicle.FVehicleLight> VehicleLights => new(28, Ptr + 2796);
 
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2796); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2796);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2844); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2844);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2892); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2892);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2940); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2940);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2988); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2988); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 2988);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3036); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3036);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3084); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3084);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3132); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3132);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3180); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3180);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3228); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3228);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3276); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3276);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3324); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3324);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3372); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3372);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_13
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3420); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_13
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3420);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_14
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3468); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_14
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3468);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_15
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3516); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_15
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3516);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_16
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_16
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3564);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_17
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3612); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_17
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3612);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_18
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3660); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_18
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3660);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_19
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3708); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_19
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3708);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_20
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3756); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_20
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3756);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_21
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3804); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3804); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_21
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3804);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_22
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3852); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3852); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_22
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3852);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_23
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3900); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_23
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3900);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_24
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3948); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_24
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3948);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_25
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3996); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_25
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 3996);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_26
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 4044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4044); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_26
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 4044);
     /// <summary>
     /// StructProperty: VehicleLights
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_27
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 4092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4092); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicle.FVehicleLight VehicleLights_27
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicle.FVehicleLight>(Ptr + 4092);
 
     /// <summary>
     /// ArrayProperty: LightsMaterialInst
@@ -4850,74 +4738,50 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: MatineePrevLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 MatineePrevLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4192); }
-    }
+    public unsafe ref System.Numerics.Vector3 MatineePrevLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4192);
 
     /// <summary>
     /// StructProperty: MatineePrevRot
     /// </summary>
-    public unsafe BmSDK.Rotator MatineePrevRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4204); }
-    }
+    public unsafe ref BmSDK.Rotator MatineePrevRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 4204);
 
     /// <summary>
     /// StructProperty: MatineeBindLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 MatineeBindLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4216); }
-    }
+    public unsafe ref System.Numerics.Vector3 MatineeBindLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4216);
 
     /// <summary>
     /// StructProperty: MatineeBindRot
     /// </summary>
-    public unsafe BmSDK.Rotator MatineeBindRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4228); }
-    }
+    public unsafe ref BmSDK.Rotator MatineeBindRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 4228);
 
     /// <summary>
     /// StructProperty: MatineeAnimLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 MatineeAnimLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4240); }
-    }
+    public unsafe ref System.Numerics.Vector3 MatineeAnimLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4240);
 
     /// <summary>
     /// StructProperty: MatineeAnimRot
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat MatineeAnimRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 4256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4256); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat MatineeAnimRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 4256);
 
     /// <summary>
     /// StructProperty: MatineeInitialLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 MatineeInitialLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4272); }
-    }
+    public unsafe ref System.Numerics.Vector3 MatineeInitialLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4272);
 
     /// <summary>
     /// StructProperty: MatineeInitialRot
     /// </summary>
-    public unsafe BmSDK.Rotator MatineeInitialRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 4284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4284); }
-    }
+    public unsafe ref BmSDK.Rotator MatineeInitialRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 4284);
 
     /// <summary>
     /// FloatProperty: MatineeBlendDuration
@@ -4985,38 +4849,26 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastRainParam
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LastRainParam
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 4340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4340); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LastRainParam
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 4340);
 
     /// <summary>
     /// StructProperty: TorqueToApply
     /// </summary>
-    public unsafe System.Numerics.Vector3 TorqueToApply
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4356); }
-    }
+    public unsafe ref System.Numerics.Vector3 TorqueToApply
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4356);
 
     /// <summary>
     /// StructProperty: ForceToApply
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForceToApply
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4368); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForceToApply
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4368);
 
     /// <summary>
     /// StructProperty: ForceToApplyPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForceToApplyPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4380); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForceToApplyPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4380);
 
     /// <summary>
     /// FloatProperty: KeepyUpVelocityFactor
@@ -5138,20 +4990,14 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: NPCCheckExtents
     /// </summary>
-    public unsafe System.Numerics.Vector3 NPCCheckExtents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4504); }
-    }
+    public unsafe ref System.Numerics.Vector3 NPCCheckExtents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4504);
 
     /// <summary>
     /// StructProperty: NPCCheckOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 NPCCheckOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 4516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4516); }
-    }
+    public unsafe ref System.Numerics.Vector3 NPCCheckOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 4516);
 
     /// <summary>
     /// FloatProperty: RoundRobinAccumulationTime

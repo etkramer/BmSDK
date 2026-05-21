@@ -21,6 +21,11 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MWBIDOverlayManager.
+    /// </summary>
+    public static MWBIDOverlayManager DefaultObject => (MWBIDOverlayManager)StaticClass().DefaultObject;
+
     internal MWBIDOverlayManager() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MWBIDOverlayManager(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MWBIDOverlayManager>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OverlayScreenDataCallback
@@ -525,29 +570,20 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GenericOverlayData
     /// </summary>
-    public unsafe BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data GenericOverlayData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data GenericOverlayData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.MWBIDOverlayManager.FGenericOverlay_Data>(Ptr + 136);
 
     /// <summary>
     /// StructProperty: EmailFormPreData
     /// </summary>
-    public unsafe BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData EmailFormPreData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData EmailFormPreData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.MWBIDOverlayManager.FEmailForm_PreData>(Ptr + 220);
 
     /// <summary>
     /// StructProperty: NetworkStatusData
     /// </summary>
-    public unsafe BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data NetworkStatusData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
+    public unsafe ref BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data NetworkStatusData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.MWBIDOverlayManager.FNetworkStatus_Data>(Ptr + 256);
 
     /// <summary>
     /// ByteProperty: QueuedScreen
@@ -579,7 +615,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: NetworkDebugColourCode
     /// </summary>
-    public enum NetworkDebugColourCode
+    public enum NetworkDebugColourCode : byte
     {
         NDCC_None = 0,
         NDCC_Red = 1,
@@ -590,7 +626,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: WBIDStatus
     /// </summary>
-    public enum WBIDStatus
+    public enum WBIDStatus : byte
     {
         WBIDStatus_Initializing = 0,
         WBIDStatus_DisabledNotConnected = 1,
@@ -610,7 +646,7 @@ public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: E_WBID_Screen_Type
     /// </summary>
-    public enum E_WBID_Screen_Type
+    public enum E_WBID_Screen_Type : byte
     {
         EWSI_Main = 0,
         EWSI_Attract = 1,

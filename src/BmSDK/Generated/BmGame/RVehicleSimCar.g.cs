@@ -21,6 +21,11 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleSimCar.
+    /// </summary>
+    public static RVehicleSimCar DefaultObject => (RVehicleSimCar)StaticClass().DefaultObject;
+
     internal RVehicleSimCar() { }
 
     /// <summary>
@@ -33,23 +38,57 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// </summary>
     protected RVehicleSimCar(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleSimCar>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: TorqueVSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat TorqueVSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat TorqueVSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: EngineRPMCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat EngineRPMCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat EngineRPMCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 280);
 
     /// <summary>
     /// FloatProperty: LSDFactor
@@ -324,20 +363,14 @@ public partial class RVehicleSimCar : BmSDK.Engine.SVehicleSimCar, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SteerSpeedVsSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat SteerSpeedVsSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat SteerSpeedVsSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 404);
 
     /// <summary>
     /// StructProperty: DriftSteerSpeedVsSpeedCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveFloat DriftSteerSpeedVsSpeedCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveFloat DriftSteerSpeedVsSpeedCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveFloat>(Ptr + 424);
 
     /// <summary>
     /// FloatProperty: SteeringSpeedChangeDirectionMod

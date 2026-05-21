@@ -21,6 +21,11 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimSequence.
+    /// </summary>
+    public static AnimSequence DefaultObject => (AnimSequence)StaticClass().DefaultObject;
+
     internal AnimSequence() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AnimSequence(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimSequence>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetFirstNotifyRealTime
@@ -345,7 +390,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AnimationKeyFormat
     /// </summary>
-    public enum AnimationKeyFormat
+    public enum AnimationKeyFormat : byte
     {
         AKF_ConstantKeyLerp = 0,
         AKF_VariableKeyLerp = 1,
@@ -607,7 +652,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimBlockActors
     /// </summary>
-    public enum EAnimBlockActors
+    public enum EAnimBlockActors : byte
     {
         ANIMBLOCKACTORS_Automatic = 0,
         ANIMBLOCKACTORS_Yes = 1,
@@ -618,7 +663,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootMotionTranslationOption
     /// </summary>
-    public enum ERootMotionTranslationOption
+    public enum ERootMotionTranslationOption : byte
     {
         RMTO_On = 0,
         RMTO_NoExtraction = 1,
@@ -629,7 +674,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootMotionRotationOption
     /// </summary>
-    public enum ERootMotionRotationOption
+    public enum ERootMotionRotationOption : byte
     {
         RMRO_On = 0,
         RMRO_NoExtraction = 1,
@@ -640,7 +685,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimPhysics
     /// </summary>
-    public enum EAnimPhysics
+    public enum EAnimPhysics : byte
     {
         APHYS_Walking = 0,
         APHYS_Flying = 1,
@@ -980,7 +1025,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimCopyTime
     /// </summary>
-    public enum EAnimCopyTime
+    public enum EAnimCopyTime : byte
     {
         ANIMCOPYTIME_Start = 0,
         ANIMCOPYTIME_End = 1,
@@ -1024,7 +1069,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EForwardYawDirection
     /// </summary>
-    public enum EForwardYawDirection
+    public enum EForwardYawDirection : byte
     {
         FYD_Clockwise = 0,
         FYD_AntiClockwise = 1,
@@ -1109,7 +1154,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: AnimationCompressionFormat
     /// </summary>
-    public enum AnimationCompressionFormat
+    public enum AnimationCompressionFormat : byte
     {
         ACF_None = 0,
         ACF_Float96NoW = 1,
@@ -1199,7 +1244,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimAudioStatus
     /// </summary>
-    public enum EAnimAudioStatus
+    public enum EAnimAudioStatus : byte
     {
         ASAS_InProgress = 0,
         ASAS_Completed = 1,
@@ -1279,11 +1324,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 ReferencePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref System.Numerics.Vector3 ReferencePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 108);
 
     /// <summary>
     /// FloatProperty: ReferencePointYaw
@@ -1297,11 +1339,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferencePointRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ReferencePointRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.Rotator ReferencePointRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 124);
 
     /// <summary>
     /// NameProperty: PreviewReferencePointMeshName
@@ -1873,38 +1912,26 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ReferenceOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimReferencePeriods ReferenceOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimReferencePeriods ReferenceOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 484);
 
     /// <summary>
     /// StructProperty: MotionOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimReferencePeriods MotionOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimReferencePeriods MotionOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimReferencePeriods>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: CollisionOptions
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimCollisionPeriods CollisionOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimCollisionPeriods>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimCollisionPeriods CollisionOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimCollisionPeriods>(Ptr + 764);
 
     /// <summary>
     /// StructProperty: CollisionOptions2
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimCollisionOptions CollisionOptions2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimCollisionOptions>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimCollisionOptions CollisionOptions2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimCollisionOptions>(Ptr + 780);
 
     /// <summary>
     /// FloatProperty: BlendInDuration
@@ -1972,11 +1999,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AutoTriggeredDialogue
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAutoTriggeredDialogueStruct AutoTriggeredDialogue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAutoTriggeredDialogueStruct>(Ptr + 860); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAutoTriggeredDialogueStruct AutoTriggeredDialogue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAutoTriggeredDialogueStruct>(Ptr + 860);
 
     /// <summary>
     /// FloatProperty: BlendInPoint
@@ -2089,11 +2113,8 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AnimZip_LinearMotion
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence.FAnimLinearMotion AnimZip_LinearMotion
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence.FAnimLinearMotion>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref BmSDK.Engine.AnimSequence.FAnimLinearMotion AnimZip_LinearMotion
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AnimSequence.FAnimLinearMotion>(Ptr + 992);
 
     /// <summary>
     /// ArrayProperty: AnimZip_Errors

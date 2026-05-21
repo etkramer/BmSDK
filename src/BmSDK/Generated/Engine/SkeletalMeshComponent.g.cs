@@ -21,6 +21,11 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SkeletalMeshComponent.
+    /// </summary>
+    public static SkeletalMeshComponent DefaultObject => (SkeletalMeshComponent)StaticClass().DefaultObject;
+
     internal SkeletalMeshComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SkeletalMeshComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SkeletalMeshComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: AddRandomTorqueImpulseToBodies
@@ -2821,7 +2866,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EApexClothSkinningTickGroup
     /// </summary>
-    public enum EApexClothSkinningTickGroup
+    public enum EApexClothSkinningTickGroup : byte
     {
         ApexClothSkinningTickGroup_PreAsync = 0,
         ApexClothSkinningTickGroup_Async = 1,
@@ -2832,7 +2877,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EPhysBodyOp
     /// </summary>
-    public enum EPhysBodyOp
+    public enum EPhysBodyOp : byte
     {
         PBO_None = 0,
         PBO_Term = 1,
@@ -2940,7 +2985,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EDepthBiasApplicationType
     /// </summary>
-    public enum EDepthBiasApplicationType
+    public enum EDepthBiasApplicationType : byte
     {
         DEPTHBIASAPPLICATIONTYPE_World = 0,
         DEPTHBIASAPPLICATIONTYPE_Screen = 1,
@@ -2951,7 +2996,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EDepthBiasCalculationType
     /// </summary>
-    public enum EDepthBiasCalculationType
+    public enum EDepthBiasCalculationType : byte
     {
         DEPTHBIASCALCULATIONTYPE_Constant = 0,
         DEPTHBIASCALCULATIONTYPE_DirectionVariable = 1,
@@ -2961,7 +3006,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EBoneVisibilityStatus
     /// </summary>
-    public enum EBoneVisibilityStatus
+    public enum EBoneVisibilityStatus : byte
     {
         BVS_HiddenByParent = 0,
         BVS_Visible = 1,
@@ -2972,7 +3017,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EFaceFXRegOp
     /// </summary>
-    public enum EFaceFXRegOp
+    public enum EFaceFXRegOp : byte
     {
         FXRO_Add = 0,
         FXRO_Multiply = 1,
@@ -2983,7 +3028,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EFaceFXBlendMode
     /// </summary>
-    public enum EFaceFXBlendMode
+    public enum EFaceFXBlendMode : byte
     {
         FXBM_Overwrite = 0,
         FXBM_Additive = 1,
@@ -2993,7 +3038,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EAnimRotationOnly
     /// </summary>
-    public enum EAnimRotationOnly
+    public enum EAnimRotationOnly : byte
     {
         EARO_AnimSet = 0,
         EARO_ForceEnabled = 1,
@@ -3004,7 +3049,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: ERootMotionRotationMode
     /// </summary>
-    public enum ERootMotionRotationMode
+    public enum ERootMotionRotationMode : byte
     {
         RMRM_Ignore = 0,
         RMRM_RotateActor = 1,
@@ -3054,7 +3099,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EInstanceWeightUsage
     /// </summary>
-    public enum EInstanceWeightUsage
+    public enum EInstanceWeightUsage : byte
     {
         IWU_PartialSwap = 0,
         IWU_FullSwap = 1,
@@ -3141,7 +3186,7 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// Enum: EApexClothMaxDistanceScaleMode
     /// </summary>
-    public enum EApexClothMaxDistanceScaleMode
+    public enum EApexClothMaxDistanceScaleMode : byte
     {
         ApexClothMaxDistanceScaleMode_LODBlend = 0,
         ApexClothMaxDistanceScaleMode_Overridden = 1,
@@ -3394,20 +3439,14 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: FixedBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds FixedBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds FixedBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 904);
 
     /// <summary>
     /// StructProperty: OriginalBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds OriginalBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds OriginalBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 932);
 
     /// <summary>
     /// ArrayProperty: ExtraBounds
@@ -3457,11 +3496,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 1008);
 
     /// <summary>
     /// ArrayProperty: SpaceBases
@@ -3628,11 +3664,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: Stretches
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances Stretches
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances Stretches
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchInstances>(Ptr + 1316);
 
     /// <summary>
     /// IntProperty: ForcedLodModel
@@ -4276,11 +4309,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LineCheckBoundsScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 LineCheckBoundsScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1464); }
-    }
+    public unsafe ref System.Numerics.Vector3 LineCheckBoundsScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1464);
 
     /// <summary>
     /// BoolProperty: bAllowPermanentFixOnSleep
@@ -4627,11 +4657,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: CachedLocalNavMeshBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox CachedLocalNavMeshBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 1504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1504); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox CachedLocalNavMeshBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 1504);
 
     /// <summary>
     /// ArrayProperty: LODInfo
@@ -4645,47 +4672,32 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: FrozenLocalToWorldPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 FrozenLocalToWorldPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1548); }
-    }
+    public unsafe ref System.Numerics.Vector3 FrozenLocalToWorldPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1548);
 
     /// <summary>
     /// StructProperty: FrozenLocalToWorldRot
     /// </summary>
-    public unsafe BmSDK.Rotator FrozenLocalToWorldRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1560); }
-    }
+    public unsafe ref BmSDK.Rotator FrozenLocalToWorldRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1560);
 
     /// <summary>
     /// StructProperty: ClothExternalForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClothExternalForce
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1572); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClothExternalForce
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1572);
 
     /// <summary>
     /// StructProperty: ClothWind
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClothWind
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1584); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClothWind
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1584);
 
     /// <summary>
     /// StructProperty: ClothBaseVelClampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 ClothBaseVelClampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1596); }
-    }
+    public unsafe ref System.Numerics.Vector3 ClothBaseVelClampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1596);
 
     /// <summary>
     /// FloatProperty: ClothBlendWeight
@@ -4726,38 +4738,26 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: MinPosDampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinPosDampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1624); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinPosDampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1624);
 
     /// <summary>
     /// StructProperty: MaxPosDampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxPosDampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1636); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxPosDampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1636);
 
     /// <summary>
     /// StructProperty: MinPosDampScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 MinPosDampScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1648); }
-    }
+    public unsafe ref System.Numerics.Vector3 MinPosDampScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1648);
 
     /// <summary>
     /// StructProperty: MaxPosDampScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 MaxPosDampScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1660); }
-    }
+    public unsafe ref System.Numerics.Vector3 MaxPosDampScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1660);
 
     /// <summary>
     /// StructProperty: ClothSim
@@ -4888,11 +4888,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ClothRBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothRBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1816); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ClothRBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1816);
 
     /// <summary>
     /// FloatProperty: ClothForceScale
@@ -4942,11 +4939,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LastClothLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastClothLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1840); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastClothLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1840);
 
     /// <summary>
     /// ByteProperty: ApexClothingRBChannel
@@ -4960,11 +4954,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ApexClothingRBCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ApexClothingRBCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1856); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer ApexClothingRBCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 1856);
 
     /// <summary>
     /// ByteProperty: ApexClothingCollisionRBChannel
@@ -5005,20 +4996,14 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: ApexClothingBaseVelClampRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 ApexClothingBaseVelClampRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1868); }
-    }
+    public unsafe ref System.Numerics.Vector3 ApexClothingBaseVelClampRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1868);
 
     /// <summary>
     /// StructProperty: WindVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 WindVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1880); }
-    }
+    public unsafe ref System.Numerics.Vector3 WindVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1880);
 
     /// <summary>
     /// FloatProperty: WindVelocityBlendTime
@@ -5059,20 +5044,14 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: AudioBonesToTrack
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FAudioBoneTracking AudioBonesToTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FAudioBoneTracking>(Ptr + 1912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1912); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FAudioBoneTracking AudioBonesToTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FAudioBoneTracking>(Ptr + 1912);
 
     /// <summary>
     /// StructProperty: PersistentSoundNotifies
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FPersistentSoundData PersistentSoundNotifies
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FPersistentSoundData>(Ptr + 1928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1928); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FPersistentSoundData PersistentSoundNotifies
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FPersistentSoundData>(Ptr + 1928);
 
     /// <summary>
     /// ObjectProperty: LimitMaterial
@@ -5086,29 +5065,20 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: RootMotionDelta
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom RootMotionDelta
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 1968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1968); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom RootMotionDelta
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 1968);
 
     /// <summary>
     /// StructProperty: RootMotionVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2000); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2000);
 
     /// <summary>
     /// StructProperty: RootMotionAccelScale
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionAccelScale
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2012); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2012); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionAccelScale
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2012);
 
     /// <summary>
     /// ByteProperty: RootMotionMode
@@ -5302,11 +5272,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: MatineeLookAt
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FFaceFXMatineeLookAt MatineeLookAt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FFaceFXMatineeLookAt>(Ptr + 2184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2184); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FFaceFXMatineeLookAt MatineeLookAt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FFaceFXMatineeLookAt>(Ptr + 2184);
 
     /// <summary>
     /// ObjectProperty: DrivenMaterialParameterInstance
@@ -5329,11 +5296,8 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: AnimatedMaterialParameters
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FAnimatedMaterialParameters AnimatedMaterialParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FAnimatedMaterialParameters>(Ptr + 2256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2256); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FAnimatedMaterialParameters AnimatedMaterialParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FAnimatedMaterialParameters>(Ptr + 2256);
 
     /// <summary>
     /// ArrayProperty: BoneVisibilityStates
@@ -5356,29 +5320,20 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LocalToWorldBoneAtom
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom LocalToWorldBoneAtom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 2320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2320); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom LocalToWorldBoneAtom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 2320);
 
     /// <summary>
     /// StructProperty: DiscardedRootMotion
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom DiscardedRootMotion
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 2352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2352); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom DiscardedRootMotion
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 2352);
 
     /// <summary>
     /// StructProperty: CurrDepthBiasData
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData CurrDepthBiasData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData>(Ptr + 2384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2384); }
-    }
+    public unsafe ref BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData CurrDepthBiasData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SkeletalMeshComponent.FDepthBiasData>(Ptr + 2384);
 
     /// <summary>
     /// BoolProperty: bDisableColourWrites
@@ -5563,20 +5518,14 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
     /// <summary>
     /// StructProperty: Fixers
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FFixers Fixers
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FFixers>(Ptr + 2508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2508); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FFixers Fixers
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FFixers>(Ptr + 2508);
 
     /// <summary>
     /// StructProperty: BreathingFixer
     /// </summary>
-    public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer BreathingFixer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer>(Ptr + 2568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2568); }
-    }
+    public unsafe ref BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer BreathingFixer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RSkeletalMeshComponent_Export.FBreathingFixer>(Ptr + 2568);
 
     /// <summary>
     /// ArrayProperty: ExtraSocketMeshes

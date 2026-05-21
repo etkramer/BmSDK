@@ -21,6 +21,11 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2SimplePhysicsUpdater.
+    /// </summary>
+    public static RRope2SimplePhysicsUpdater DefaultObject => (RRope2SimplePhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2SimplePhysicsUpdater() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRope2SimplePhysicsUpdater(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2SimplePhysicsUpdater>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PutToSleep
@@ -227,11 +272,8 @@ public partial class RRope2SimplePhysicsUpdater : BmSDK.BmGame.RRope2BasePhysics
     /// <summary>
     /// StructProperty: InitData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData InitData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData InitData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2SimplePhysicsUpdater.FRRope2SimplePhysicsUpdaterInitData>(Ptr + 240);
 
     /// <summary>
     /// FloatProperty: DesiredNodeLength

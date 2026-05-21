@@ -21,52 +21,62 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerTransitionCameraActor.
+    /// </summary>
+    public static RPlayerTransitionCameraActor DefaultObject => (RPlayerTransitionCameraActor)StaticClass().DefaultObject;
+
     internal RPlayerTransitionCameraActor() { }
 
     /// <summary>
     /// Constructs a new RPlayerTransitionCameraActor
     /// </summary>
-    public RPlayerTransitionCameraActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPlayerTransitionCameraActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPlayerTransitionCameraActor(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPlayerTransitionCameraActor(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerTransitionCameraActor>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UpdateFollowCamPos
@@ -286,7 +296,7 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// Enum: ECameraRouteType
     /// </summary>
-    public enum ECameraRouteType
+    public enum ECameraRouteType : byte
     {
         ECRT_NoRoute = 0,
         ECRT_DirectRoute = 1,
@@ -531,20 +541,14 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// StructProperty: FollowOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 FollowOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
-    }
+    public unsafe ref System.Numerics.Vector3 FollowOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1332);
 
     /// <summary>
     /// StructProperty: FollowOffsetMin
     /// </summary>
-    public unsafe System.Numerics.Vector3 FollowOffsetMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
-    }
+    public unsafe ref System.Numerics.Vector3 FollowOffsetMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1344);
 
     /// <summary>
     /// FloatProperty: FollowCorrectionSpeed
@@ -558,20 +562,14 @@ public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, B
     /// <summary>
     /// StructProperty: ForceEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 ForceEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
-    }
+    public unsafe ref System.Numerics.Vector3 ForceEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1360);
 
     /// <summary>
     /// StructProperty: ForceEndRotation
     /// </summary>
-    public unsafe BmSDK.Rotator ForceEndRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1372); }
-    }
+    public unsafe ref BmSDK.Rotator ForceEndRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1372);
 
     /// <summary>
     /// FloatProperty: BlendToFinalCamTime

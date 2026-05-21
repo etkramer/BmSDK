@@ -21,6 +21,11 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSmashablePropConfig.
+    /// </summary>
+    public static RSmashablePropConfig DefaultObject => (RSmashablePropConfig)StaticClass().DefaultObject;
+
     internal RSmashablePropConfig() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// </summary>
     protected RSmashablePropConfig(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSmashablePropConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: PropKOType
     /// </summary>
-    public enum PropKOType
+    public enum PropKOType : byte
     {
         KO_None = 0,
         KO_Window = 1,
@@ -236,11 +281,8 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: PropStartImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 PropStartImpulse
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref System.Numerics.Vector3 PropStartImpulse
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 132);
 
     /// <summary>
     /// ArrayProperty: BrokenProps
@@ -315,7 +357,7 @@ public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObj
     /// <summary>
     /// Enum: EBreakableType
     /// </summary>
-    public enum EBreakableType
+    public enum EBreakableType : byte
     {
         BREAKABLETYPE_ForceBreakable = 0,
         BREAKABLETYPE_PawnForceBreakable = 1,

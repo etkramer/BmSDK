@@ -21,6 +21,11 @@ public partial class RFreezeGrenadeCommonProjectile : BmSDK.BmGame.RGadgetProjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFreezeGrenadeCommonProjectile.
+    /// </summary>
+    public static RFreezeGrenadeCommonProjectile DefaultObject => (RFreezeGrenadeCommonProjectile)StaticClass().DefaultObject;
+
     internal RFreezeGrenadeCommonProjectile() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RFreezeGrenadeCommonProjectile : BmSDK.BmGame.RGadgetProjec
     /// </summary>
     protected RFreezeGrenadeCommonProjectile(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RFreezeGrenadeCommonProjectile>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DestroyProjectile
@@ -202,20 +212,14 @@ public partial class RFreezeGrenadeCommonProjectile : BmSDK.BmGame.RGadgetProjec
     /// <summary>
     /// StructProperty: TargetHitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetHitNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetHitNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 928);
 
     /// <summary>
     /// StructProperty: TargetHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 940);
 
     /// <summary>
     /// ObjectProperty: IceRaftSpawnParticles
@@ -310,20 +314,14 @@ public partial class RFreezeGrenadeCommonProjectile : BmSDK.BmGame.RGadgetProjec
     /// <summary>
     /// StructProperty: RaftSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RaftSpawnLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref System.Numerics.Vector3 RaftSpawnLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1032);
 
     /// <summary>
     /// StructProperty: RaftSpawnCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 RaftSpawnCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref System.Numerics.Vector3 RaftSpawnCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1044);
 
     /// <summary>
     /// BoolProperty: bSpawnUnderwater

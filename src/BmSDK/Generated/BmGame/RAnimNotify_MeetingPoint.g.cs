@@ -21,6 +21,11 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNotify_MeetingPoint.
+    /// </summary>
+    public static RAnimNotify_MeetingPoint DefaultObject => (RAnimNotify_MeetingPoint)StaticClass().DefaultObject;
+
     internal RAnimNotify_MeetingPoint() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_MeetingPoint(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNotify_MeetingPoint>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FMeetingPointTranslationComponents
@@ -131,25 +176,19 @@ public partial class RAnimNotify_MeetingPoint : BmSDK.Engine.AnimNotify, BmSDK.I
     /// <summary>
     /// StructProperty: RotationComponents
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents RotationComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents RotationComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointRotationComponents>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: TranslationComponents
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents TranslationComponents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents TranslationComponents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNotify_MeetingPoint.FMeetingPointTranslationComponents>(Ptr + 96);
 
     /// <summary>
     /// Enum: EMeetingPointType
     /// </summary>
-    public enum EMeetingPointType
+    public enum EMeetingPointType : byte
     {
         MPT_End = 0,
         MPT_Begin = 1,

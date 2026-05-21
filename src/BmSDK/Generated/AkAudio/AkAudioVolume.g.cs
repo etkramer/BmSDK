@@ -21,52 +21,62 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkAudioVolume.
+    /// </summary>
+    public static AkAudioVolume DefaultObject => (AkAudioVolume)StaticClass().DefaultObject;
+
     internal AkAudioVolume() { }
 
     /// <summary>
     /// Constructs a new AkAudioVolume
     /// </summary>
-    public AkAudioVolume(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkAudioVolume Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public AkAudioVolume(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkAudioVolume(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<AkAudioVolume>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: HandleUnlink
@@ -290,7 +300,7 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Enum: OverlapSetting
     /// </summary>
-    public enum OverlapSetting
+    public enum OverlapSetting : byte
     {
         OverlapNotEnabled = 0,
         NormalOverlap = 1,
@@ -509,29 +519,20 @@ public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ParameterX
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 812);
 
     /// <summary>
     /// StructProperty: ParameterY
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 828);
 
     /// <summary>
     /// StructProperty: ParameterZ
     /// </summary>
-    public unsafe BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter ParameterZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.AkAudio.AkAudioVolume.FAkAxisParameter>(Ptr + 844);
 
     /// <summary>
     /// ArrayProperty: ParameterModifiers

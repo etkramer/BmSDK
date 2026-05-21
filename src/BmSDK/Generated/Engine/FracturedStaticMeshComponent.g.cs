@@ -21,6 +21,11 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FracturedStaticMeshComponent.
+    /// </summary>
+    public static FracturedStaticMeshComponent DefaultObject => (FracturedStaticMeshComponent)StaticClass().DefaultObject;
+
     internal FracturedStaticMeshComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected FracturedStaticMeshComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetFracturedMeshPhysMaterial
@@ -277,11 +322,8 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
     /// <summary>
     /// StructProperty: VisibleBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox VisibleBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox VisibleBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 808);
 
     /// <summary>
     /// BoolProperty: bUseSkinnedRendering
@@ -354,6 +396,11 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 844); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: OldMaterial
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 852);
 
     /// <summary>
     /// ObjectProperty: OldMaterial

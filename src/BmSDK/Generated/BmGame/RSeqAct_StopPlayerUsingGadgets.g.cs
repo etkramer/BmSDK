@@ -21,6 +21,11 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_StopPlayerUsingGadgets.
+    /// </summary>
+    public static RSeqAct_StopPlayerUsingGadgets DefaultObject => (RSeqAct_StopPlayerUsingGadgets)StaticClass().DefaultObject;
+
     internal RSeqAct_StopPlayerUsingGadgets() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_StopPlayerUsingGadgets(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_StopPlayerUsingGadgets>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -70,7 +115,7 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Enum: EStopPlayerDoingStuff
     /// </summary>
-    public enum EStopPlayerDoingStuff
+    public enum EStopPlayerDoingStuff : byte
     {
         ESPDS_bGadgets = 0,
         ESPDS_bDiveThroughWindow = 1,

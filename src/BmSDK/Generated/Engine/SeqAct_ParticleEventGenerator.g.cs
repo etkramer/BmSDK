@@ -21,6 +21,11 @@ public partial class SeqAct_ParticleEventGenerator : BmSDK.Engine.SequenceAction
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SeqAct_ParticleEventGenerator.
+    /// </summary>
+    public static SeqAct_ParticleEventGenerator DefaultObject => (SeqAct_ParticleEventGenerator)StaticClass().DefaultObject;
+
     internal SeqAct_ParticleEventGenerator() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SeqAct_ParticleEventGenerator : BmSDK.Engine.SequenceAction
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SeqAct_ParticleEventGenerator(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SeqAct_ParticleEventGenerator>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -92,36 +137,24 @@ public partial class SeqAct_ParticleEventGenerator : BmSDK.Engine.SequenceAction
     /// <summary>
     /// StructProperty: EventLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 384);
 
     /// <summary>
     /// StructProperty: EventDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 396);
 
     /// <summary>
     /// StructProperty: EventVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 408);
 
     /// <summary>
     /// StructProperty: EventNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref System.Numerics.Vector3 EventNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 420);
 }

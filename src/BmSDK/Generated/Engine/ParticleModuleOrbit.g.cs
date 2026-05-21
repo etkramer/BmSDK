@@ -21,6 +21,11 @@ public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleOrbit.
+    /// </summary>
+    public static ParticleModuleOrbit DefaultObject => (ParticleModuleOrbit)StaticClass().DefaultObject;
+
     internal ParticleModuleOrbit() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleOrbit(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleOrbit>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FOrbitOptions
@@ -79,61 +124,43 @@ public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase,
     /// <summary>
     /// StructProperty: OffsetAmount
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector OffsetAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector OffsetAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: OffsetOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions OffsetOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions OffsetOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: RotationAmount
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector RotationAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector RotationAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 172);
 
     /// <summary>
     /// StructProperty: RotationOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: RotationRateAmount
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector RotationRateAmount
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.DistributionVector.FRawDistributionVector RotationRateAmount
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: RotationRateOptions
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationRateOptions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
-    }
+    public unsafe ref BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions RotationRateOptions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ParticleModuleOrbit.FOrbitOptions>(Ptr + 304);
 
     /// <summary>
     /// Enum: EOrbitChainMode
     /// </summary>
-    public enum EOrbitChainMode
+    public enum EOrbitChainMode : byte
     {
         EOChainMode_Add = 0,
         EOChainMode_Scale = 1,

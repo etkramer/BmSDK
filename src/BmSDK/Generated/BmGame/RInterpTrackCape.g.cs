@@ -21,6 +21,11 @@ public partial class RInterpTrackCape : BmSDK.Engine.InterpTrack, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RInterpTrackCape.
+    /// </summary>
+    public static RInterpTrackCape DefaultObject => (RInterpTrackCape)StaticClass().DefaultObject;
+
     internal RInterpTrackCape() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RInterpTrackCape : BmSDK.Engine.InterpTrack, BmSDK.IGameObj
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RInterpTrackCape(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RInterpTrackCape>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ArrayProperty: Keys
@@ -72,11 +117,8 @@ public partial class RInterpTrackCape : BmSDK.Engine.InterpTrack, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: KeyProperties
     /// </summary>
-    public unsafe BmSDK.BmGame.RInterpTrackCape.FCapeTrackKey KeyProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInterpTrackCape.FCapeTrackKey>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.BmGame.RInterpTrackCape.FCapeTrackKey KeyProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInterpTrackCape.FCapeTrackKey>(Ptr + 216);
 
     /// <summary>
     /// Struct: FCapeTrackKey

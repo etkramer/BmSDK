@@ -21,6 +21,11 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeSequenceBlendByAim.
+    /// </summary>
+    public static AnimNodeSequenceBlendByAim DefaultObject => (AnimNodeSequenceBlendByAim)StaticClass().DefaultObject;
+
     internal AnimNodeSequenceBlendByAim() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AnimNodeSequenceBlendByAim(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequenceBlendByAim>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CheckAnimsUpToDate
@@ -54,47 +99,32 @@ public partial class AnimNodeSequenceBlendByAim : BmSDK.Engine.AnimNodeSequenceB
     /// <summary>
     /// StructProperty: Aim
     /// </summary>
-    public unsafe System.Numerics.Vector2 Aim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref System.Numerics.Vector2 Aim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 404);
 
     /// <summary>
     /// StructProperty: PreviousAim
     /// </summary>
-    public unsafe System.Numerics.Vector2 PreviousAim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
-    }
+    public unsafe ref System.Numerics.Vector2 PreviousAim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 412);
 
     /// <summary>
     /// StructProperty: HorizontalRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 HorizontalRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref System.Numerics.Vector2 HorizontalRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 420);
 
     /// <summary>
     /// StructProperty: VerticalRange
     /// </summary>
-    public unsafe System.Numerics.Vector2 VerticalRange
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref System.Numerics.Vector2 VerticalRange
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: AngleOffset
     /// </summary>
-    public unsafe System.Numerics.Vector2 AngleOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
+    public unsafe ref System.Numerics.Vector2 AngleOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 436);
 
     /// <summary>
     /// NameProperty: AnimName_LU

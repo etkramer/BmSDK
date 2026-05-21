@@ -21,6 +21,11 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FontImportOptions.
+    /// </summary>
+    public static FontImportOptions DefaultObject => (FontImportOptions)StaticClass().DefaultObject;
+
     internal FontImportOptions() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     protected FontImportOptions(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FontImportOptions>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: Data
     /// </summary>
-    public unsafe BmSDK.Engine.FontImportOptions.FFontImportOptionsData Data
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.Engine.FontImportOptions.FFontImportOptionsData Data
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.FontImportOptions.FFontImportOptionsData>(Ptr + 84);
 
     /// <summary>
     /// Struct: FFontImportOptionsData
@@ -313,7 +355,7 @@ public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFontImportCharacterSet
     /// </summary>
-    public enum EFontImportCharacterSet
+    public enum EFontImportCharacterSet : byte
     {
         FontICS_Default = 0,
         FontICS_Ansi = 1,

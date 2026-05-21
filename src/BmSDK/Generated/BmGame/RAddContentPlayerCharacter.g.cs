@@ -21,6 +21,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAddContentPlayerCharacter.
+    /// </summary>
+    public static RAddContentPlayerCharacter DefaultObject => (RAddContentPlayerCharacter)StaticClass().DefaultObject;
+
     internal RAddContentPlayerCharacter() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAddContentPlayerCharacter(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAddContentPlayerCharacter>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ObjectProperty: HUD
@@ -59,6 +104,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 104); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: GadgetWheelSelectionSounds
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AkEvent> GadgetWheelSelectionSounds => new(12, Ptr + 112);
 
     /// <summary>
     /// ObjectProperty: GadgetWheelSelectionSounds
@@ -210,6 +260,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: AudioContactEvent
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AkEvent> AudioContactEvent => new(24, Ptr + 256);
 
     /// <summary>
     /// ObjectProperty: AudioContactEvent
@@ -495,6 +550,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: GadgetsConsoleInner
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 528);
+
+    /// <summary>
     /// NameProperty: GadgetsConsoleInner
     /// </summary>
     public unsafe BmSDK.FName GadgetsConsoleInner_0
@@ -560,6 +620,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: GadgetsConsoleOuter
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 592);
+
+    /// <summary>
     /// NameProperty: GadgetsConsoleOuter
     /// </summary>
     public unsafe BmSDK.FName GadgetsConsoleOuter_0
@@ -623,6 +688,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: GadgetsPC
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 656);
 
     /// <summary>
     /// NameProperty: GadgetsPC
@@ -720,6 +790,11 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: GadgetsForGadgetWheel
+    /// </summary>
+    public InlineArray<BmSDK.FName> GadgetsForGadgetWheel => new(12, Ptr + 752);
 
     /// <summary>
     /// NameProperty: GadgetsForGadgetWheel

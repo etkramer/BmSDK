@@ -21,6 +21,11 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnCharacter.
+    /// </summary>
+    public static RPawnCharacter DefaultObject => (RPawnCharacter)StaticClass().DefaultObject;
+
     internal RPawnCharacter() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// </summary>
     protected RPawnCharacter(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCharacter>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ReAddShadowReflectionPlane
@@ -3679,7 +3689,7 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERagdollVsNavMesh
     /// </summary>
-    public enum ERagdollVsNavMesh
+    public enum ERagdollVsNavMesh : byte
     {
         RAGvsNAV_Constrain = 0,
         RAGvsNAV_ConstrainWhenNotDead = 1,
@@ -4162,20 +4172,14 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PreviousPose
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription PreviousPose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription>(Ptr + 1952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1952); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription PreviousPose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription>(Ptr + 1952);
 
     /// <summary>
     /// StructProperty: Pose
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FPoseDescription Pose
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FPoseDescription>(Ptr + 2056); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2056); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FPoseDescription Pose
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FPoseDescription>(Ptr + 2056);
 
     /// <summary>
     /// NameProperty: GetUpTargetMovementStance
@@ -4198,20 +4202,14 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GetUpTransitionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetUpTransitionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetUpTransitionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2432);
 
     /// <summary>
     /// StructProperty: GetUpMasterAnimID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetUpMasterAnimID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId GetUpMasterAnimID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2436);
 
     /// <summary>
     /// NameProperty: GetUpAnimName
@@ -4252,20 +4250,14 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PrevSafePelvisLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevSafePelvisLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2460); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevSafePelvisLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2460);
 
     /// <summary>
     /// StructProperty: LastSafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2472); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2472);
 
     /// <summary>
     /// IntProperty: NavMeshConstrainFrames
@@ -4297,11 +4289,8 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OldShadowReflectionPlane
     /// </summary>
-    public unsafe BmSDK.GameObject.FPlane OldShadowReflectionPlane
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FPlane>(Ptr + 2512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2512); }
-    }
+    public unsafe ref BmSDK.GameObject.FPlane OldShadowReflectionPlane
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FPlane>(Ptr + 2512);
 
     /// <summary>
     /// FloatProperty: ShadowReflectionRagdollCache
@@ -4315,11 +4304,8 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Tweak_LocationNudge
     /// </summary>
-    public unsafe System.Numerics.Vector3 Tweak_LocationNudge
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2532); }
-    }
+    public unsafe ref System.Numerics.Vector3 Tweak_LocationNudge
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2532);
 
     /// <summary>
     /// ArrayProperty: Tweak_FaceFXRegisters
@@ -4405,11 +4391,8 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PreviousRainDirectionColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor PreviousRainDirectionColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2612); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor PreviousRainDirectionColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2612);
 
     /// <summary>
     /// FloatProperty: LastRainMaterialUpdateTime
@@ -4432,11 +4415,8 @@ public partial class RPawnCharacter : BmSDK.BmGame.RPawn, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BeginGetUp_TransitionId
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BeginGetUp_TransitionId
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2640); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId BeginGetUp_TransitionId
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2640);
 
     /// <summary>
     /// DelegateProperty: __OnPlayedQueuedTransition__Delegate

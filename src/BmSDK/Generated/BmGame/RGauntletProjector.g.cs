@@ -21,6 +21,11 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGauntletProjector.
+    /// </summary>
+    public static RGauntletProjector DefaultObject => (RGauntletProjector)StaticClass().DefaultObject;
+
     internal RGauntletProjector() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGauntletProjector(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGauntletProjector>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PlayerTick
@@ -200,7 +245,7 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: transitionState
     /// </summary>
-    public enum transitionState
+    public enum transitionState : byte
     {
         eTransIn = 0,
         eTransNone = 1,
@@ -535,47 +580,32 @@ public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LeftCornerScreenOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LeftCornerScreenOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
+    public unsafe ref System.Numerics.Vector3 LeftCornerScreenOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 324);
 
     /// <summary>
     /// StructProperty: LeftCornerScreenRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator LeftCornerScreenRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.Rotator LeftCornerScreenRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 336);
 
     /// <summary>
     /// StructProperty: ScreenToMeshOffset_Bone
     /// </summary>
-    public unsafe System.Numerics.Vector3 ScreenToMeshOffset_Bone
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.Numerics.Vector3 ScreenToMeshOffset_Bone
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 348);
 
     /// <summary>
     /// StructProperty: BatmanToMeshOffset_Batmobile
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanToMeshOffset_Batmobile
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanToMeshOffset_Batmobile
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 360);
 
     /// <summary>
     /// StructProperty: BatmanToMeshRotation_Batmobile
     /// </summary>
-    public unsafe BmSDK.Rotator BatmanToMeshRotation_Batmobile
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
+    public unsafe ref BmSDK.Rotator BatmanToMeshRotation_Batmobile
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 372);
 
     /// <summary>
     /// StrProperty: lastPlayedVideoResource

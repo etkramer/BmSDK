@@ -21,6 +21,11 @@ public partial class RHudModuleTargets : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHudModuleTargets.
+    /// </summary>
+    public static RHudModuleTargets DefaultObject => (RHudModuleTargets)StaticClass().DefaultObject;
+
     internal RHudModuleTargets() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RHudModuleTargets : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RHudModuleTargets(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHudModuleTargets>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetSuperEjectLevel
@@ -1267,7 +1312,7 @@ public partial class RHudModuleTargets : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Enum: CompassArrayIndices
     /// </summary>
-    public enum CompassArrayIndices
+    public enum CompassArrayIndices : byte
     {
         CAI_Compass_Angle = 0,
         CAI_Compass_Alpha = 1,
@@ -1278,7 +1323,7 @@ public partial class RHudModuleTargets : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Enum: TargetsArrayIndices
     /// </summary>
-    public enum TargetsArrayIndices
+    public enum TargetsArrayIndices : byte
     {
         TAI_Cursor_X = 0,
         TAI_Cursor_Y = 1,
@@ -1293,7 +1338,7 @@ public partial class RHudModuleTargets : BmSDK.BmGame.RHudModule, BmSDK.IGameObj
     /// <summary>
     /// Enum: HeaderArrayIndices
     /// </summary>
-    public enum HeaderArrayIndices
+    public enum HeaderArrayIndices : byte
     {
         HAI_Header_ScreenGrappleDirty = 0,
         HAI_Header_ScreenGrappleVisible = 1,

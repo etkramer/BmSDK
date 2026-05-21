@@ -21,6 +21,11 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Pawn.
+    /// </summary>
+    public static Pawn DefaultObject => (Pawn)StaticClass().DefaultObject;
+
     internal Pawn() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     protected Pawn(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Pawn>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Pawn>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Pawn>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Pawn>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Pawn>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Pawn>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<Pawn>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<Pawn>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetVoiceForEmote
@@ -3253,7 +3263,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: PawnHistoryType
     /// </summary>
-    public enum PawnHistoryType
+    public enum PawnHistoryType : byte
     {
         PHT_General = 0,
         PHT_Behaviour = 1,
@@ -3308,7 +3318,7 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPathSearchType
     /// </summary>
-    public enum EPathSearchType
+    public enum EPathSearchType : byte
     {
         PST_Default = 0,
         PST_Breadth = 1,
@@ -3365,11 +3375,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PartialLedgeMoveDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 PartialLedgeMoveDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
-    }
+    public unsafe ref System.Numerics.Vector3 PartialLedgeMoveDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 688);
 
     /// <summary>
     /// ObjectProperty: Controller
@@ -3911,14 +3918,14 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
     }
 
-    // /// <summary>
-    // /// BoolProperty: bRootMotionOverridesFallingXY
-    // /// </summary>
-    // public unsafe bool bRootMotionOverridesFallingXY
-    // {
-    //     get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 1073741824) != 0; }
-    //     set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
-    // }
+    /// <summary>
+    /// BoolProperty: bRootMotionOverridesFallingXY_2
+    /// </summary>
+    public unsafe bool bRootMotionOverridesFallingXY_2
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 1073741824) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
+    }
 
     /// <summary>
     /// BoolProperty: bCanMantle
@@ -4562,11 +4569,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SerpentineDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 SerpentineDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
-    }
+    public unsafe ref System.Numerics.Vector3 SerpentineDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1036);
 
     /// <summary>
     /// FloatProperty: SerpentineDist
@@ -4751,11 +4755,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Floor
     /// </summary>
-    public unsafe System.Numerics.Vector3 Floor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
-    }
+    public unsafe ref System.Numerics.Vector3 Floor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1128);
 
     /// <summary>
     /// FloatProperty: SplashTime
@@ -4823,20 +4824,14 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RMVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 RMVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
-    }
+    public unsafe ref System.Numerics.Vector3 RMVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1168);
 
     /// <summary>
     /// StructProperty: noise1spot
     /// </summary>
-    public unsafe System.Numerics.Vector3 noise1spot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
-    }
+    public unsafe ref System.Numerics.Vector3 noise1spot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1180);
 
     /// <summary>
     /// FloatProperty: noise1time
@@ -4859,11 +4854,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: noise2spot
     /// </summary>
-    public unsafe System.Numerics.Vector3 noise2spot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
-    }
+    public unsafe ref System.Numerics.Vector3 noise2spot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1200);
 
     /// <summary>
     /// FloatProperty: noise2time
@@ -4940,20 +4932,14 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TakeHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TakeHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
-    }
+    public unsafe ref System.Numerics.Vector3 TakeHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1264);
 
     /// <summary>
     /// StructProperty: TearOffMomentum
     /// </summary>
-    public unsafe System.Numerics.Vector3 TearOffMomentum
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1276); }
-    }
+    public unsafe ref System.Numerics.Vector3 TearOffMomentum
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1276);
 
     /// <summary>
     /// FloatProperty: RBPushRadius
@@ -5021,29 +5007,20 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DesiredRotation
     /// </summary>
-    public unsafe BmSDK.Rotator DesiredRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
-    }
+    public unsafe ref BmSDK.Rotator DesiredRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1316);
 
     /// <summary>
     /// StructProperty: FlashLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlashLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1328); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlashLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1328);
 
     /// <summary>
     /// StructProperty: LastFiringFlashLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastFiringFlashLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastFiringFlashLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1340);
 
     /// <summary>
     /// IntProperty: ShotCount
@@ -5066,11 +5043,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: walkFailPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 walkFailPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
-    }
+    public unsafe ref System.Numerics.Vector3 walkFailPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1360);
 
     /// <summary>
     /// ArrayProperty: SlotNodes
@@ -5102,11 +5076,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RootMotionInterpCurve
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FRootMotionCurve RootMotionInterpCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FRootMotionCurve>(Ptr + 1420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1420); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FRootMotionCurve RootMotionInterpCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FRootMotionCurve>(Ptr + 1420);
 
     /// <summary>
     /// FloatProperty: RootMotionInterpRate
@@ -5129,11 +5100,8 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RootMotionInterpCurveLastValue
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootMotionInterpCurveLastValue
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1460); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootMotionInterpCurveLastValue
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1460);
 
     /// <summary>
     /// NameProperty: SurveillanceEffectSocket

@@ -98,7 +98,7 @@ public partial interface RInteractInterface : BmSDK.Interface
     /// <summary>
     /// Enum: EInteractableItemFaceButton
     /// </summary>
-    public enum EInteractableItemFaceButton
+    public enum EInteractableItemFaceButton : byte
     {
         EIIFB_Interact = 0,
         EIIFB_Strike = 1,

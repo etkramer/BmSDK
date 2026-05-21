@@ -21,12 +21,57 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Texture.
+    /// </summary>
+    public static Texture DefaultObject => (Texture)StaticClass().DefaultObject;
+
     internal Texture() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Texture(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// BoolProperty: SRGB
@@ -227,6 +272,11 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{FloatProperty}: UnpackMin
+    /// </summary>
+    public InlineArray<float> UnpackMin => new(4, Ptr + 88);
+
+    /// <summary>
     /// FloatProperty: UnpackMin
     /// </summary>
     public unsafe float UnpackMin_0
@@ -258,6 +308,11 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: UnpackMax
+    /// </summary>
+    public InlineArray<float> UnpackMax => new(4, Ptr + 104);
 
     /// <summary>
     /// FloatProperty: UnpackMax
@@ -295,11 +350,8 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SourceArt
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror SourceArt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror SourceArt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 120);
 
     /// <summary>
     /// ByteProperty: CompressionSettings
@@ -412,11 +464,8 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid LightingGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 260);
 
     /// <summary>
     /// FloatProperty: AdjustBrightness
@@ -493,7 +542,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETextureMipCount
     /// </summary>
-    public enum ETextureMipCount
+    public enum ETextureMipCount : byte
     {
         TMC_ResidentMips = 0,
         TMC_AllMips = 1,
@@ -504,7 +553,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureMipGenSettings
     /// </summary>
-    public enum TextureMipGenSettings
+    public enum TextureMipGenSettings : byte
     {
         TMGS_FromTextureGroup = 0,
         TMGS_SimpleAverage = 1,
@@ -827,7 +876,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureGroup
     /// </summary>
-    public enum TextureGroup
+    public enum TextureGroup : byte
     {
         TEXTUREGROUP_World = 0,
         TEXTUREGROUP_WorldNormalMap = 1,
@@ -877,7 +926,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureAddress
     /// </summary>
-    public enum TextureAddress
+    public enum TextureAddress : byte
     {
         TA_Wrap = 0,
         TA_Clamp = 1,
@@ -888,7 +937,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureFilter
     /// </summary>
-    public enum TextureFilter
+    public enum TextureFilter : byte
     {
         TF_LodGroup = 0,
         TF_Nearest = 1,
@@ -900,7 +949,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPixelFormat
     /// </summary>
-    public enum EPixelFormat
+    public enum EPixelFormat : byte
     {
         PF_Unknown = 0,
         PF_A32B32G32R32F = 1,
@@ -942,7 +991,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// Enum: TextureCompressionSettings
     /// </summary>
-    public enum TextureCompressionSettings
+    public enum TextureCompressionSettings : byte
     {
         TC_Default = 0,
         TC_Normalmap = 1,

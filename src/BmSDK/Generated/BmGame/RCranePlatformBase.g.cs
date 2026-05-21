@@ -21,85 +21,93 @@ public partial class RCranePlatformBase : BmSDK.Engine.KActorSpawnable, BmSDK.IG
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCranePlatformBase.
+    /// </summary>
+    public static RCranePlatformBase DefaultObject => (RCranePlatformBase)StaticClass().DefaultObject;
+
     internal RCranePlatformBase() { }
 
     /// <summary>
     /// Constructs a new RCranePlatformBase
     /// </summary>
-    public RCranePlatformBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCranePlatformBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RCranePlatformBase(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCranePlatformBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCranePlatformBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
+    /// <summary>
+    /// InlineArray{StructProperty}: AttachPoint
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> AttachPoint => new(4, Ptr + 996);
 
     /// <summary>
     /// StructProperty: AttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPoint_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPoint_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 996);
     /// <summary>
     /// StructProperty: AttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPoint_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPoint_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1008);
     /// <summary>
     /// StructProperty: AttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPoint_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPoint_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1020);
     /// <summary>
     /// StructProperty: AttachPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPoint_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1032); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachPoint_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1032);
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: AttachPointLength
+    /// </summary>
+    public InlineArray<float> AttachPointLength => new(4, Ptr + 1044);
 
     /// <summary>
     /// FloatProperty: AttachPointLength
@@ -146,46 +154,36 @@ public partial class RCranePlatformBase : BmSDK.Engine.KActorSpawnable, BmSDK.IG
     /// <summary>
     /// StructProperty: LaunchPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 LaunchPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref System.Numerics.Vector3 LaunchPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1064);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: FloorTestPoints
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> FloorTestPoints => new(2, Ptr + 1076);
 
     /// <summary>
     /// StructProperty: FloorTestPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorTestPoints_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1076); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorTestPoints_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1076);
     /// <summary>
     /// StructProperty: FloorTestPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorTestPoints_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorTestPoints_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1088);
 
     /// <summary>
     /// StructProperty: FloorOffsetCheck
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloorOffsetCheck
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
-    }
+    public unsafe ref System.Numerics.Vector3 FloorOffsetCheck
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1100);
 
     /// <summary>
     /// StructProperty: LastTouchNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastTouchNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastTouchNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1112);
 
     /// <summary>
     /// FloatProperty: LastTouchTime

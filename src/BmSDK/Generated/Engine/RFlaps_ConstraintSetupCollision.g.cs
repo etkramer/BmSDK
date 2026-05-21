@@ -21,6 +21,11 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RFlaps_ConstraintSetupCollision.
+    /// </summary>
+    public static RFlaps_ConstraintSetupCollision DefaultObject => (RFlaps_ConstraintSetupCollision)StaticClass().DefaultObject;
+
     internal RFlaps_ConstraintSetupCollision() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
     /// </summary>
     protected RFlaps_ConstraintSetupCollision(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RFlaps_ConstraintSetupCollision>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: ConstrainedParticle
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 112);
 
     /// <summary>
     /// FloatProperty: Friction
@@ -59,6 +101,11 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: BoneNames
+    /// </summary>
+    public InlineArray<BmSDK.FName> BoneNames => new(8, Ptr + 136);
 
     /// <summary>
     /// NameProperty: BoneNames

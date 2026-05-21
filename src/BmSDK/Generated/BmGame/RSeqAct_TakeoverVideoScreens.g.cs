@@ -21,6 +21,11 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_TakeoverVideoScreens.
+    /// </summary>
+    public static RSeqAct_TakeoverVideoScreens DefaultObject => (RSeqAct_TakeoverVideoScreens)StaticClass().DefaultObject;
+
     internal RSeqAct_TakeoverVideoScreens() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_TakeoverVideoScreens(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_TakeoverVideoScreens>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -116,7 +161,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Enum: eVideoTakoverTransitionType
     /// </summary>
-    public enum eVideoTakoverTransitionType
+    public enum eVideoTakoverTransitionType : byte
     {
         eVTTT_None = 0,
         eVTTT_TransIn = 1,
@@ -127,7 +172,7 @@ public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Enum: eVideoTakeoverOriginator
     /// </summary>
-    public enum eVideoTakeoverOriginator
+    public enum eVideoTakeoverOriginator : byte
     {
         eVTO_Riddler = 0,
         eVTO_Scarecrow = 1,

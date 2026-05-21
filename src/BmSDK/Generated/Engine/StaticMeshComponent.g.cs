@@ -21,6 +21,11 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as StaticMeshComponent.
+    /// </summary>
+    public static StaticMeshComponent DefaultObject => (StaticMeshComponent)StaticClass().DefaultObject;
+
     internal StaticMeshComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected StaticMeshComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<StaticMeshComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanBecomeDynamic
@@ -348,11 +393,8 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: WireframeColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor WireframeColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor WireframeColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 652);
 
     /// <summary>
     /// IntProperty: OverriddenLightMapRes
@@ -456,11 +498,8 @@ public partial class StaticMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.IGa
     /// <summary>
     /// StructProperty: LODData
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo LODData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo LODData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.StaticMeshComponent.FStaticMeshComponentLODInfo>(Ptr + 696);
 
     /// <summary>
     /// ArrayProperty: Attachments

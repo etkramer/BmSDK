@@ -21,6 +21,11 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RHUDPrompt.
+    /// </summary>
+    public static RHUDPrompt DefaultObject => (RHUDPrompt)StaticClass().DefaultObject;
+
     internal RHUDPrompt() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RHUDPrompt(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RHUDPrompt>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetHighPriorityInstructions
@@ -270,29 +315,20 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OverridePrompt
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine OverridePrompt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine OverridePrompt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: MainLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine MainLine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 132);
 
     /// <summary>
     /// StructProperty: MainLineLast
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLineLast
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref BmSDK.BmGame.RHUDPrompt.FHelpLine MainLineLast
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 160);
 
     /// <summary>
     /// ArrayProperty: Lines
@@ -385,7 +421,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EControlIcon
     /// </summary>
-    public enum EControlIcon
+    public enum EControlIcon : byte
     {
         CI_None = 0,
         CI_UI_Start = 1,
@@ -593,7 +629,7 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: JustifyText
     /// </summary>
-    public enum JustifyText
+    public enum JustifyText : byte
     {
         JT_Left = 0,
         JT_Center = 1,

@@ -21,6 +21,11 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as PlayerInput.
+    /// </summary>
+    public static PlayerInput DefaultObject => (PlayerInput)StaticClass().DefaultObject;
+
     internal PlayerInput() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected PlayerInput(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<PlayerInput>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PreClientTravel
@@ -598,120 +643,88 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: aTilt
     /// </summary>
-    public unsafe System.Numerics.Vector3 aTilt
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
-    }
+    public unsafe ref System.Numerics.Vector3 aTilt
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 468);
 
     /// <summary>
     /// StructProperty: aRotationRate
     /// </summary>
-    public unsafe System.Numerics.Vector3 aRotationRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector3 aRotationRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 480);
 
     /// <summary>
     /// StructProperty: aGravity
     /// </summary>
-    public unsafe System.Numerics.Vector3 aGravity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
+    public unsafe ref System.Numerics.Vector3 aGravity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 492);
 
     /// <summary>
     /// StructProperty: aAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 aAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
-    }
+    public unsafe ref System.Numerics.Vector3 aAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 504);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: aTouch
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> aTouch => new(5, Ptr + 516);
 
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aTouch_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 aTouch_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aTouch_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref System.Numerics.Vector3 aTouch_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 528);
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aTouch_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref System.Numerics.Vector3 aTouch_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 540);
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aTouch_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
+    public unsafe ref System.Numerics.Vector3 aTouch_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 552);
     /// <summary>
     /// StructProperty: aTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aTouch_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
-    }
+    public unsafe ref System.Numerics.Vector3 aTouch_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 564);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: aBackTouch
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> aBackTouch => new(5, Ptr + 576);
 
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aBackTouch_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref System.Numerics.Vector3 aBackTouch_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 576);
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aBackTouch_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 aBackTouch_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aBackTouch_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 aBackTouch_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aBackTouch_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 aBackTouch_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
     /// <summary>
     /// StructProperty: aBackTouch
     /// </summary>
-    public unsafe System.Numerics.Vector3 aBackTouch_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector3 aBackTouch_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 624);
 
     /// <summary>
     /// FloatProperty: RawJoyUp
@@ -813,6 +826,11 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{FloatProperty}: ZeroTime
+    /// </summary>
+    public InlineArray<float> ZeroTime => new(2, Ptr + 672);
+
+    /// <summary>
     /// FloatProperty: ZeroTime
     /// </summary>
     public unsafe float ZeroTime_0
@@ -828,6 +846,11 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
+
+    /// <summary>
+    /// InlineArray{FloatProperty}: SmoothedMouse
+    /// </summary>
+    public InlineArray<float> SmoothedMouse => new(2, Ptr + 680);
 
     /// <summary>
     /// FloatProperty: SmoothedMouse

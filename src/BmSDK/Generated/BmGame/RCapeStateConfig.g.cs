@@ -21,6 +21,11 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCapeStateConfig.
+    /// </summary>
+    public static RCapeStateConfig DefaultObject => (RCapeStateConfig)StaticClass().DefaultObject;
+
     internal RCapeStateConfig() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RCapeStateConfig(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCapeStateConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// NameProperty: CapeStateName
@@ -477,11 +522,8 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WindDirectionOverrideInLocalSpace
     /// </summary>
-    public unsafe System.Numerics.Vector3 WindDirectionOverrideInLocalSpace
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref System.Numerics.Vector3 WindDirectionOverrideInLocalSpace
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 240);
 
     /// <summary>
     /// FloatProperty: SpringWeightBlendSpeed
@@ -576,7 +618,7 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: OverstretchHandlingMethod
     /// </summary>
-    public enum OverstretchHandlingMethod
+    public enum OverstretchHandlingMethod : byte
     {
         OVERSTRETCHHANDLINGMETHOD_Default = 0,
         OVERSTRETCHHANDLINGMETHOD_Simple = 1,
@@ -621,7 +663,7 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAutoForwardType
     /// </summary>
-    public enum EAutoForwardType
+    public enum EAutoForwardType : byte
     {
         AUTOFORWARDTYPE_None = 0,
         AUTOFORWARDTYPE_AtEndOfAnim = 1,

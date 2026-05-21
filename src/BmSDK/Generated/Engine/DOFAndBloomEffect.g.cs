@@ -21,6 +21,11 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DOFAndBloomEffect.
+    /// </summary>
+    public static DOFAndBloomEffect DefaultObject => (DOFAndBloomEffect)StaticClass().DefaultObject;
+
     internal DOFAndBloomEffect() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     /// </summary>
     protected DOFAndBloomEffect(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DOFAndBloomEffect>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EDOFQuality
     /// </summary>
-    public enum EDOFQuality
+    public enum EDOFQuality : byte
     {
         DOFQuality_Low = 0,
         DOFQuality_Medium = 1,
@@ -47,7 +92,7 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     /// <summary>
     /// Enum: EDOFType
     /// </summary>
-    public enum EDOFType
+    public enum EDOFType : byte
     {
         DOFType_SimpleDOF = 0,
         DOFType_ReferenceDOF = 1,

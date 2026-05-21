@@ -21,12 +21,57 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FracturedBaseComponent.
+    /// </summary>
+    public static FracturedBaseComponent DefaultObject => (FracturedBaseComponent)StaticClass().DefaultObject;
+
     internal FracturedBaseComponent() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected FracturedBaseComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedBaseComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetNumVisibleFragments
@@ -160,7 +205,7 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// <summary>
     /// Enum: ESimpleCollisionUsageType
     /// </summary>
-    public enum ESimpleCollisionUsageType
+    public enum ESimpleCollisionUsageType : byte
     {
         SCUT_Inherit = 0,
         SCUT_Simple = 1,
@@ -180,11 +225,8 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     /// <summary>
     /// StructProperty: ReleaseResourcesFence
     /// </summary>
-    public unsafe BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
+    public unsafe ref BmSDK.GameObject.FRenderCommandFence_Mirror ReleaseResourcesFence
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FRenderCommandFence_Mirror>(Ptr + 756);
 
     /// <summary>
     /// ArrayProperty: VisibleFragments

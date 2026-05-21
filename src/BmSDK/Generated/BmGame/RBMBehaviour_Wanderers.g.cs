@@ -21,6 +21,11 @@ public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMove
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_Wanderers.
+    /// </summary>
+    public static RBMBehaviour_Wanderers DefaultObject => (RBMBehaviour_Wanderers)StaticClass().DefaultObject;
+
     internal RBMBehaviour_Wanderers() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMove
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_Wanderers(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_Wanderers>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnBeginInterrupt
@@ -436,20 +481,14 @@ public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMove
     /// <summary>
     /// StructProperty: GoalPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 816); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoalPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 816);
 
     /// <summary>
     /// StructProperty: SavedDestinationPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SavedDestinationPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref System.Numerics.Vector3 SavedDestinationPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 828);
 
     /// <summary>
     /// FloatProperty: RetryPathTime
@@ -733,20 +772,14 @@ public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMove
     /// <summary>
     /// StructProperty: GoalOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GoalOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 952); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
-    }
+    public unsafe ref System.Numerics.Vector3 GoalOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 952);
 
     /// <summary>
     /// StructProperty: SideOfRoadPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SideOfRoadPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 964); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
-    }
+    public unsafe ref System.Numerics.Vector3 SideOfRoadPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 964);
 
     /// <summary>
     /// ArrayProperty: WanderWalkOverlays
@@ -796,20 +829,14 @@ public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMove
     /// <summary>
     /// StructProperty: CommanderStopOverlays
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays CommanderStopOverlays
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays CommanderStopOverlays
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays>(Ptr + 1008);
 
     /// <summary>
     /// StructProperty: FollowerStopOverlays
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays FollowerStopOverlays
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays>(Ptr + 1024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays FollowerStopOverlays
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMBehaviour_Wanderers.FWanderOverlays>(Ptr + 1024);
 
     /// <summary>
     /// IntProperty: FindNavMeshState
@@ -823,11 +850,8 @@ public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMove
     /// <summary>
     /// StructProperty: RoadObstacleExtraBounds
     /// </summary>
-    public unsafe System.Numerics.Vector3 RoadObstacleExtraBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref System.Numerics.Vector3 RoadObstacleExtraBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1044);
 
     /// <summary>
     /// ArrayProperty: WeaponData

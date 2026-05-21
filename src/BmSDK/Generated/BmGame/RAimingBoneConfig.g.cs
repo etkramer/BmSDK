@@ -21,6 +21,11 @@ public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAimingBoneConfig.
+    /// </summary>
+    public static RAimingBoneConfig DefaultObject => (RAimingBoneConfig)StaticClass().DefaultObject;
+
     internal RAimingBoneConfig() { }
 
     /// <summary>
@@ -33,95 +38,105 @@ public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// </summary>
     protected RAimingBoneConfig(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAimingBoneConfig>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: Spine
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: Spine1
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: Spine2
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 164);
 
     /// <summary>
     /// StructProperty: Spine3
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Spine3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: Neck
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Neck
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Neck
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 244);
 
     /// <summary>
     /// StructProperty: Head
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Head
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues Head
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 284);
 
     /// <summary>
     /// StructProperty: LeftClavicle
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftClavicle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftClavicle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 324);
 
     /// <summary>
     /// StructProperty: LeftUpperArm
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftUpperArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues LeftUpperArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 364);
 
     /// <summary>
     /// StructProperty: RightClavicle
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightClavicle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightClavicle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 404);
 
     /// <summary>
     /// StructProperty: RightUpperArm
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightUpperArm
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues RightUpperArm
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAimingBoneConfig.FAimingBoneValues>(Ptr + 444);
 
     /// <summary>
     /// Struct: FAimingBoneValues

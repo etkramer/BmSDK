@@ -21,6 +21,11 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as InterpTrackMoveAxis.
+    /// </summary>
+    public static InterpTrackMoveAxis DefaultObject => (InterpTrackMoveAxis)StaticClass().DefaultObject;
+
     internal InterpTrackMoveAxis() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected InterpTrackMoveAxis(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<InterpTrackMoveAxis>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ByteProperty: MoveAxis
@@ -45,16 +90,13 @@ public partial class InterpTrackMoveAxis : BmSDK.Engine.InterpTrackFloatBase, Bm
     /// <summary>
     /// StructProperty: LookupTrack
     /// </summary>
-    public unsafe BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref BmSDK.Engine.InterpTrackMove.FInterpLookupTrack LookupTrack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.InterpTrackMove.FInterpLookupTrack>(Ptr + 260);
 
     /// <summary>
     /// Enum: EInterpMoveAxis
     /// </summary>
-    public enum EInterpMoveAxis
+    public enum EInterpMoveAxis : byte
     {
         AXIS_TranslationX = 0,
         AXIS_TranslationY = 1,

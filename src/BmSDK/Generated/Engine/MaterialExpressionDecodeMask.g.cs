@@ -21,6 +21,11 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionDecodeMask.
+    /// </summary>
+    public static MaterialExpressionDecodeMask DefaultObject => (MaterialExpressionDecodeMask)StaticClass().DefaultObject;
+
     internal MaterialExpressionDecodeMask() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     /// </summary>
     protected MaterialExpressionDecodeMask(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionDecodeMask>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EDecodeBlendType
     /// </summary>
-    public enum EDecodeBlendType
+    public enum EDecodeBlendType : byte
     {
         DECODE_Replace = 0,
         DECODE_Add = 1,
@@ -89,29 +134,20 @@ public partial class MaterialExpressionDecodeMask : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// StructProperty: Mask
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Mask
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Mask
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 192);
 
     /// <summary>
     /// StructProperty: BlendFrom
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput BlendFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput BlendFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 244);
 
     /// <summary>
     /// StructProperty: BlendTo
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput BlendTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput BlendTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 296);
 
     /// <summary>
     /// ByteProperty: DecodeBlendType

@@ -21,52 +21,62 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPlayerControllerCombat.
+    /// </summary>
+    public static RPlayerControllerCombat DefaultObject => (RPlayerControllerCombat)StaticClass().DefaultObject;
+
     internal RPlayerControllerCombat() { }
 
     /// <summary>
     /// Constructs a new RPlayerControllerCombat
     /// </summary>
-    public RPlayerControllerCombat(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPlayerControllerCombat Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPlayerControllerCombat(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPlayerControllerCombat(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPlayerControllerCombat>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PreRestart
@@ -4401,11 +4411,8 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     /// <summary>
     /// StructProperty: LastStrikeDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastStrikeDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7604); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastStrikeDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7604);
 
     /// <summary>
     /// FloatProperty: FinishedCombatSpecialMoveTimeout
@@ -4536,11 +4543,8 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     /// <summary>
     /// StructProperty: StoredCombatXPInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FCombatXPInfo StoredCombatXPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FCombatXPInfo>(Ptr + 7676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7676); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FCombatXPInfo StoredCombatXPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FCombatXPInfo>(Ptr + 7676);
 
     /// <summary>
     /// IntProperty: StoredComboBonus
@@ -4743,11 +4747,8 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     /// <summary>
     /// StructProperty: StoredPredatorXPInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FPredatorXPInfo StoredPredatorXPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FPredatorXPInfo>(Ptr + 7864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7864); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FPredatorXPInfo StoredPredatorXPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FPredatorXPInfo>(Ptr + 7864);
 
     /// <summary>
     /// IntProperty: HitsSinceCounter
@@ -4905,11 +4906,8 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     /// <summary>
     /// StructProperty: LastAttacked
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo LastAttacked
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo>(Ptr + 8028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8028); }
-    }
+    public unsafe ref BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo LastAttacked
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPlayerControllerCombat.FStruckInfo>(Ptr + 8028);
 
     /// <summary>
     /// ArrayProperty: ComboMoves
@@ -4919,6 +4917,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPlayerControllerCombat.FComboMoveInfo>>(Ptr + 8040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8040); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: MoveTypeCount
+    /// </summary>
+    public InlineArray<int> MoveTypeCount => new(71, Ptr + 8056);
 
     /// <summary>
     /// IntProperty: MoveTypeCount
@@ -5490,6 +5493,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
     }
 
     /// <summary>
+    /// InlineArray{IntProperty}: ComboMoveType
+    /// </summary>
+    public InlineArray<int> ComboMoveType => new(71, Ptr + 8340);
+
+    /// <summary>
     /// IntProperty: ComboMoveType
     /// </summary>
     public unsafe int ComboMoveType_0
@@ -6057,6 +6065,11 @@ public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, B
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8620); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: GadgetMoveType
+    /// </summary>
+    public InlineArray<int> GadgetMoveType => new(71, Ptr + 8624);
 
     /// <summary>
     /// IntProperty: GadgetMoveType

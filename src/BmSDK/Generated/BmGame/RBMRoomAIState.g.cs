@@ -21,6 +21,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMRoomAIState.
+    /// </summary>
+    public static RBMRoomAIState DefaultObject => (RBMRoomAIState)StaticClass().DefaultObject;
+
     internal RBMRoomAIState() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMRoomAIState(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMRoomAIState>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PreSeedVoiceAssignments
@@ -2304,7 +2349,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: LocationToAvoidMiningType
     /// </summary>
-    public enum LocationToAvoidMiningType
+    public enum LocationToAvoidMiningType : byte
     {
         LTAMT_Unset = 0,
         LTAMT_ActiveMine = 1,
@@ -2317,7 +2362,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: VoiceSynthesiserLethalTrap
     /// </summary>
-    public enum VoiceSynthesiserLethalTrap
+    public enum VoiceSynthesiserLethalTrap : byte
     {
         VSLT_None = 0,
         VSLT_GunCrate = 1,
@@ -2372,7 +2417,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: VillainFearLevel
     /// </summary>
-    public enum VillainFearLevel
+    public enum VillainFearLevel : byte
     {
         VFL_Cocky = 0,
         VFL_Nervous = 1,
@@ -2426,7 +2471,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// Enum: CommanderVoiceForVoiceSynthesiser
     /// </summary>
-    public enum CommanderVoiceForVoiceSynthesiser
+    public enum CommanderVoiceForVoiceSynthesiser : byte
     {
         CVFVS_ArkhamKnight = 0,
         CVFVS_HarleyQuinn = 1,
@@ -3132,11 +3177,8 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: XPInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FPredatorXPInfo XPInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FPredatorXPInfo>(Ptr + 372); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FPredatorXPInfo XPInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FPredatorXPInfo>(Ptr + 372);
 
     /// <summary>
     /// FloatProperty: MissingCheckinDialogueDelay
@@ -3222,11 +3264,8 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: TargetGargRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetGargRefPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetGargRefPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 516);
 
     /// <summary>
     /// ArrayProperty: IntactGratesUsedForTakedowns
@@ -3553,6 +3592,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{IntProperty}: takedownResponseAnnouncementTally
+    /// </summary>
+    public InlineArray<int> takedownResponseAnnouncementTally => new(12, Ptr + 936);
+
+    /// <summary>
     /// IntProperty: takedownResponseAnnouncementTally
     /// </summary>
     public unsafe int takedownResponseAnnouncementTally_0
@@ -3648,6 +3692,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 980); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: takedownResponseBarkFlags_Initial
+    /// </summary>
+    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_Initial => new(12, Ptr + 984);
 
     /// <summary>
     /// NameProperty: takedownResponseBarkFlags_Initial
@@ -3747,6 +3796,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{NameProperty}: takedownResponseBarkFlags_Repeat
+    /// </summary>
+    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_Repeat => new(12, Ptr + 1080);
+
+    /// <summary>
     /// NameProperty: takedownResponseBarkFlags_Repeat
     /// </summary>
     public unsafe BmSDK.FName takedownResponseBarkFlags_Repeat_0
@@ -3842,6 +3896,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 1168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: takedownResponseBarkFlags_ThugRecover
+    /// </summary>
+    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_ThugRecover => new(12, Ptr + 1176);
 
     /// <summary>
     /// NameProperty: takedownResponseBarkFlags_ThugRecover
@@ -4033,20 +4092,14 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: DMDLatchPlayerLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 DMDLatchPlayerLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1324); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1324); }
-    }
+    public unsafe ref System.Numerics.Vector3 DMDLatchPlayerLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1324);
 
     /// <summary>
     /// StructProperty: lastDMDAlertLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 lastDMDAlertLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1336); }
-    }
+    public unsafe ref System.Numerics.Vector3 lastDMDAlertLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1336);
 
     /// <summary>
     /// IntProperty: maxLevelScriptingInstances
@@ -4184,6 +4237,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     }
 
     /// <summary>
+    /// InlineArray{IntProperty}: UsedVoiceSynthesiserLethalTraps
+    /// </summary>
+    public InlineArray<int> UsedVoiceSynthesiserLethalTraps => new(6, Ptr + 1456);
+
+    /// <summary>
     /// IntProperty: UsedVoiceSynthesiserLethalTraps
     /// </summary>
     public unsafe int UsedVoiceSynthesiserLethalTraps_0
@@ -4231,6 +4289,11 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: ThugHasRefusedToUseVoiceSynthesiserLethalTraps
+    /// </summary>
+    public InlineArray<int> ThugHasRefusedToUseVoiceSynthesiserLethalTraps => new(6, Ptr + 1480);
 
     /// <summary>
     /// IntProperty: ThugHasRefusedToUseVoiceSynthesiserLethalTraps

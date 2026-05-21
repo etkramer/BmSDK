@@ -21,79 +21,80 @@ public partial class RStaticMeshActorDecorated : BmSDK.Engine.StaticMeshActor, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStaticMeshActorDecorated.
+    /// </summary>
+    public static RStaticMeshActorDecorated DefaultObject => (RStaticMeshActorDecorated)StaticClass().DefaultObject;
+
     internal RStaticMeshActorDecorated() { }
 
     /// <summary>
     /// Constructs a new RStaticMeshActorDecorated
     /// </summary>
-    public RStaticMeshActorDecorated(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStaticMeshActorDecorated Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RStaticMeshActorDecorated(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RStaticMeshActorDecorated(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStaticMeshActorDecorated>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// StructProperty: AdditionalLightComponent
     /// </summary>
-    public unsafe BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_LightAndSocketName AdditionalLightComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_LightAndSocketName>(Ptr + 708); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
-    }
+    public unsafe ref BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_LightAndSocketName AdditionalLightComponent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_LightAndSocketName>(Ptr + 708);
 
     /// <summary>
     /// StructProperty: AdditionalParticleComponent
     /// </summary>
-    public unsafe BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_ParticleSystemAndSocketName AdditionalParticleComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_ParticleSystemAndSocketName>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_ParticleSystemAndSocketName AdditionalParticleComponent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_ParticleSystemAndSocketName>(Ptr + 748);
 
     /// <summary>
     /// StructProperty: AdditionalAkComponent
     /// </summary>
-    public unsafe BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_AkAndSocketName AdditionalAkComponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_AkAndSocketName>(Ptr + 764); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
-    }
+    public unsafe ref BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_AkAndSocketName AdditionalAkComponent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RStaticMeshActorDecorated.FRSMAD_AkAndSocketName>(Ptr + 764);
 
     /// <summary>
     /// ArrayProperty: CachedSocketedComponents

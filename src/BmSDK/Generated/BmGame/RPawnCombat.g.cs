@@ -21,6 +21,11 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnCombat.
+    /// </summary>
+    public static RPawnCombat DefaultObject => (RPawnCombat)StaticClass().DefaultObject;
+
     internal RPawnCombat() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// </summary>
     protected RPawnCombat(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnCombat>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnCombat>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanBeRedirected
@@ -2617,7 +2627,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: SimultaneousCounterBehaviourType
     /// </summary>
-    public enum SimultaneousCounterBehaviourType
+    public enum SimultaneousCounterBehaviourType : byte
     {
         SCBT_None = 0,
         SCBT_Thug = 1,
@@ -2638,7 +2648,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: SimultaneousCounterAnimType
     /// </summary>
-    public enum SimultaneousCounterAnimType
+    public enum SimultaneousCounterAnimType : byte
     {
         SCAT_None = 0,
         SCAT_2ThugAngled = 1,
@@ -2652,7 +2662,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: SimultaneousCounterFormation
     /// </summary>
-    public enum SimultaneousCounterFormation
+    public enum SimultaneousCounterFormation : byte
     {
         SCF_None = 0,
         SCF_FrontRight = 1,
@@ -2673,7 +2683,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: AdditionalRagdollForce
     /// </summary>
-    public enum AdditionalRagdollForce
+    public enum AdditionalRagdollForce : byte
     {
         ARF_None = 0,
         ARF_SpinLeft = 1,
@@ -2686,7 +2696,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: TargetStrikeResponse
     /// </summary>
-    public enum TargetStrikeResponse
+    public enum TargetStrikeResponse : byte
     {
         TSR_None = 0,
         TSR_Block = 1,
@@ -2698,7 +2708,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: DamageResult
     /// </summary>
-    public enum DamageResult
+    public enum DamageResult : byte
     {
         DMG_None = 0,
         DMG_Hit = 1,
@@ -2711,7 +2721,7 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// Enum: ECombatPawnType
     /// </summary>
-    public enum ECombatPawnType
+    public enum ECombatPawnType : byte
     {
         ECPT_None = 0,
         ECPT_Player = 1,
@@ -2740,11 +2750,8 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DebugOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2660); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2660);
 
     /// <summary>
     /// ObjectProperty: CombatManager
@@ -3307,20 +3314,14 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: MovementDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 MovementDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2932); }
-    }
+    public unsafe ref System.Numerics.Vector3 MovementDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2932);
 
     /// <summary>
     /// StructProperty: OverridableTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OverridableTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2944); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId OverridableTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 2944);
 
     /// <summary>
     /// FloatProperty: SpecialMoveLeftFootCycleStartTime
@@ -3343,11 +3344,8 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: StandingOffEdgeDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandingOffEdgeDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2956); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandingOffEdgeDir
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2956);
 
     /// <summary>
     /// IntProperty: MaxHealth

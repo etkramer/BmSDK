@@ -21,6 +21,11 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_AnimAccumulatorAsyncData.
+    /// </summary>
+    public static RAnimUtil_AnimAccumulatorAsyncData DefaultObject => (RAnimUtil_AnimAccumulatorAsyncData)StaticClass().DefaultObject;
+
     internal RAnimUtil_AnimAccumulatorAsyncData() { }
 
     /// <summary>
@@ -33,32 +38,63 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// </summary>
     protected RAnimUtil_AnimAccumulatorAsyncData(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_AnimAccumulatorAsyncData>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorInput Input
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorInput>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorInput Input
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorInput>(Ptr + 84);
 
     /// <summary>
     /// StructProperty: Intermediate
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorIntermediate Intermediate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorIntermediate>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorIntermediate Intermediate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorIntermediate>(Ptr + 240);
 
     /// <summary>
     /// StructProperty: Motion
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorMotion Motion
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorMotion>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorMotion Motion
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorMotion>(Ptr + 292);
 
     /// <summary>
     /// ArrayProperty: StackedPoseWeights
@@ -90,20 +126,14 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// StructProperty: LocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoneAtom LocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoneAtom>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoneAtom LocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoneAtom>(Ptr + 336);
 
     /// <summary>
     /// StructProperty: OwnerVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 OwnerVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref System.Numerics.Vector3 OwnerVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 368);
 
     /// <summary>
     /// FloatProperty: DeltaSeconds
@@ -117,38 +147,26 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// StructProperty: Skeleton
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeleton Skeleton
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeleton>(Ptr + 384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeleton Skeleton
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeleton>(Ptr + 384);
 
     /// <summary>
     /// StructProperty: SkeletonConstants
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeletonConstants SkeletonConstants
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeletonConstants>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeletonConstants SkeletonConstants
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorSkeletonConstants>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: Aiming
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAimingOutput Aiming
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAimingOutput>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAimingOutput Aiming
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAimingOutput>(Ptr + 540);
 
     /// <summary>
     /// StructProperty: Output
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorOutput Output
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorOutput>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorOutput Output
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulatorAsyncData.FAnimAccumulatorOutput>(Ptr + 672);
 
     /// <summary>
     /// Struct: FAnimAccumulatorCachedOutput
@@ -377,7 +395,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Enum: EAnimAccumulatorSpecialBones
     /// </summary>
-    public enum EAnimAccumulatorSpecialBones
+    public enum EAnimAccumulatorSpecialBones : byte
     {
         SPECIALBONE_HeadWithoutAiming = 0,
         SPECIALBONE_MAX = 1,
@@ -952,7 +970,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Enum: EAnimAccumulatorPartialAnimType
     /// </summary>
-    public enum EAnimAccumulatorPartialAnimType
+    public enum EAnimAccumulatorPartialAnimType : byte
     {
         AAPAT_LeftGundummy = 0,
         AAPAT_RightGundummy = 1,
@@ -1238,7 +1256,7 @@ public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSD
     /// <summary>
     /// Enum: EAnimAccumulatorPoseLayer
     /// </summary>
-    public enum EAnimAccumulatorPoseLayer
+    public enum EAnimAccumulatorPoseLayer : byte
     {
         POSELAYER_ExplicitAdditive = 0,
         POSELAYER_AdditiveRandomOverlay = 1,

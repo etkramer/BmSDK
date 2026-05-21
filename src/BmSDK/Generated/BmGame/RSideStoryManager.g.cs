@@ -21,6 +21,11 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSideStoryManager.
+    /// </summary>
+    public static RSideStoryManager DefaultObject => (RSideStoryManager)StaticClass().DefaultObject;
+
     internal RSideStoryManager() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSideStoryManager(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSideStoryManager>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetLocalisedRiddleFromRefName
@@ -998,7 +1043,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ActiveSideStoryEnum
     /// </summary>
-    public enum ActiveSideStoryEnum
+    public enum ActiveSideStoryEnum : byte
     {
         ASSE_None = 0,
         ASSE_Unknown = 1,
@@ -1027,7 +1072,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: IntelEnabledSideStories
     /// </summary>
-    public enum IntelEnabledSideStories
+    public enum IntelEnabledSideStories : byte
     {
         IESS_Firecrew = 0,
         IESS_Pyg = 1,
@@ -1038,7 +1083,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SideStoryDiscoveryState
     /// </summary>
-    public enum SideStoryDiscoveryState
+    public enum SideStoryDiscoveryState : byte
     {
         SSDS_Unavailable = 0,
         SSDS_Discoverable = 1,
@@ -1165,7 +1210,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: KnightfallState
     /// </summary>
-    public enum KnightfallState
+    public enum KnightfallState : byte
     {
         KFS_None = 0,
         KFS_Begin = 1,
@@ -1181,7 +1226,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: MissionDialogueType
     /// </summary>
-    public enum MissionDialogueType
+    public enum MissionDialogueType : byte
     {
         MDT_InsideWheel = 0,
         MDT_OutsideWheel = 1,
@@ -1191,7 +1236,7 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: MissionDialogueState
     /// </summary>
-    public enum MissionDialogueState
+    public enum MissionDialogueState : byte
     {
         MDS_Initial = 0,
         MDS_Loading = 1,
@@ -1453,20 +1498,14 @@ public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 160);
 
     /// <summary>
     /// StructProperty: CameraDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 CameraDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
-    }
+    public unsafe ref System.Numerics.Vector3 CameraDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 172);
 
     /// <summary>
     /// IntProperty: BestGroupIndex

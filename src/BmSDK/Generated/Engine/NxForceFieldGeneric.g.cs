@@ -21,52 +21,62 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as NxForceFieldGeneric.
+    /// </summary>
+    public static NxForceFieldGeneric DefaultObject => (NxForceFieldGeneric)StaticClass().DefaultObject;
+
     internal NxForceFieldGeneric() { }
 
     /// <summary>
     /// Constructs a new NxForceFieldGeneric
     /// </summary>
-    public NxForceFieldGeneric(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NxForceFieldGeneric Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public NxForceFieldGeneric(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected NxForceFieldGeneric(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<NxForceFieldGeneric>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DoInitRBPhys
@@ -89,7 +99,7 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// Enum: FFG_ForceFieldCoordinates
     /// </summary>
-    public enum FFG_ForceFieldCoordinates
+    public enum FFG_ForceFieldCoordinates : byte
     {
         FFG_CARTESIAN = 0,
         FFG_SPHERICAL = 1,
@@ -155,110 +165,74 @@ public partial class NxForceFieldGeneric : BmSDK.Engine.NxForceField, BmSDK.IGam
     /// <summary>
     /// StructProperty: Constant
     /// </summary>
-    public unsafe System.Numerics.Vector3 Constant
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
-    }
+    public unsafe ref System.Numerics.Vector3 Constant
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 784);
 
     /// <summary>
     /// StructProperty: PositionMultiplierX
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionMultiplierX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionMultiplierX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 796);
 
     /// <summary>
     /// StructProperty: PositionMultiplierY
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionMultiplierY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionMultiplierY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 808);
 
     /// <summary>
     /// StructProperty: PositionMultiplierZ
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionMultiplierZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 820); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionMultiplierZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 820);
 
     /// <summary>
     /// StructProperty: PositionTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 PositionTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 832); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
-    }
+    public unsafe ref System.Numerics.Vector3 PositionTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 832);
 
     /// <summary>
     /// StructProperty: VelocityMultiplierX
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityMultiplierX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 844); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityMultiplierX
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 844);
 
     /// <summary>
     /// StructProperty: VelocityMultiplierY
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityMultiplierY
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityMultiplierY
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 856);
 
     /// <summary>
     /// StructProperty: VelocityMultiplierZ
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityMultiplierZ
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityMultiplierZ
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 868);
 
     /// <summary>
     /// StructProperty: VelocityTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 VelocityTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
-    }
+    public unsafe ref System.Numerics.Vector3 VelocityTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 880);
 
     /// <summary>
     /// StructProperty: Noise
     /// </summary>
-    public unsafe System.Numerics.Vector3 Noise
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 892); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
-    }
+    public unsafe ref System.Numerics.Vector3 Noise
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 892);
 
     /// <summary>
     /// StructProperty: FalloffLinear
     /// </summary>
-    public unsafe System.Numerics.Vector3 FalloffLinear
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
-    }
+    public unsafe ref System.Numerics.Vector3 FalloffLinear
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 904);
 
     /// <summary>
     /// StructProperty: FalloffQuadratic
     /// </summary>
-    public unsafe System.Numerics.Vector3 FalloffQuadratic
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 916); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 916); }
-    }
+    public unsafe ref System.Numerics.Vector3 FalloffQuadratic
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 916);
 
     /// <summary>
     /// FloatProperty: TorusRadius

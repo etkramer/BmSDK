@@ -21,12 +21,57 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil.
+    /// </summary>
+    public static RAnimUtil DefaultObject => (RAnimUtil)StaticClass().DefaultObject;
+
     internal RAnimUtil() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimUtil(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetMeetingPoints
@@ -139,7 +184,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERelativeTargetAnimSource
     /// </summary>
-    public enum ERelativeTargetAnimSource
+    public enum ERelativeTargetAnimSource : byte
     {
         RTAS_ReferencePoint = 0,
         RTAS_AnimOrigin = 1,
@@ -395,7 +440,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAnimTargetCharacterHeadPolicy
     /// </summary>
-    public enum EAnimTargetCharacterHeadPolicy
+    public enum EAnimTargetCharacterHeadPolicy : byte
     {
         ATCHP_NoHead = 0,
         ATCHP_HeadWithoutAiming = 1,
@@ -474,7 +519,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFuzziness
     /// </summary>
-    public enum EFuzziness
+    public enum EFuzziness : byte
     {
         FUZZ_Exact = 0,
         FUZZ_Fuzzy = 1,
@@ -520,7 +565,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EMirrorChoice
     /// </summary>
-    public enum EMirrorChoice
+    public enum EMirrorChoice : byte
     {
         MC_Automatic = 0,
         MC_Yes = 1,
@@ -531,7 +576,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootBoneSubtractionMode
     /// </summary>
-    public enum ERootBoneSubtractionMode
+    public enum ERootBoneSubtractionMode : byte
     {
         RBSM_None = 0,
         RBSM_SubtractFirstFrame = 1,
@@ -752,7 +797,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBodyPart
     /// </summary>
-    public enum EBodyPart
+    public enum EBodyPart : byte
     {
         BP_UpperBody = 0,
         BP_LowerBody = 1,
@@ -762,7 +807,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EAbsoluteOrRelative
     /// </summary>
-    public enum EAbsoluteOrRelative
+    public enum EAbsoluteOrRelative : byte
     {
         AOR_Absolute = 0,
         AOR_Relative = 1,
@@ -806,7 +851,7 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERagdollSoundType
     /// </summary>
-    public enum ERagdollSoundType
+    public enum ERagdollSoundType : byte
     {
         RST_Unknown = 0,
         RST_Generic = 1,

@@ -21,6 +21,11 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ActorFactoryApexDynamicGrid.
+    /// </summary>
+    public static ActorFactoryApexDynamicGrid DefaultObject => (ActorFactoryApexDynamicGrid)StaticClass().DefaultObject;
+
     internal ActorFactoryApexDynamicGrid() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ActorFactoryApexDynamicGrid(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ActorFactoryApexDynamicGrid>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FSFSelfShadowingSpotlightParams
@@ -637,11 +682,8 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// StructProperty: blockSizeWorld
     /// </summary>
-    public unsafe System.Numerics.Vector3 blockSizeWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
+    public unsafe ref System.Numerics.Vector3 blockSizeWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 152);
 
     /// <summary>
     /// BoolProperty: trackCameraPosition
@@ -691,29 +733,20 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// StructProperty: particleToGridCoupling
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFParticleToGridCouplingParams particleToGridCoupling
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFParticleToGridCouplingParams>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFParticleToGridCouplingParams particleToGridCoupling
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFParticleToGridCouplingParams>(Ptr + 184);
 
     /// <summary>
     /// StructProperty: gridToParticleCoupling
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFGridToParticleCouplingParams gridToParticleCoupling
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFGridToParticleCouplingParams>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFGridToParticleCouplingParams gridToParticleCoupling
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFGridToParticleCouplingParams>(Ptr + 196);
 
     /// <summary>
     /// StructProperty: particleDensity
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFDensityParams particleDensity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFDensityParams>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFDensityParams particleDensity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFDensityParams>(Ptr + 208);
 
     /// <summary>
     /// IntProperty: pressureSolverIterations
@@ -727,54 +760,36 @@ public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, Bm
     /// <summary>
     /// StructProperty: pressureMultigrid
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMultigridParams pressureMultigrid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMultigridParams>(Ptr + 292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMultigridParams pressureMultigrid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMultigridParams>(Ptr + 292);
 
     /// <summary>
     /// StructProperty: stochasticParticleAdvection
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFStochasticParticleAdvectionParams stochasticParticleAdvection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFStochasticParticleAdvectionParams>(Ptr + 308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFStochasticParticleAdvectionParams stochasticParticleAdvection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFStochasticParticleAdvectionParams>(Ptr + 308);
 
     /// <summary>
     /// StructProperty: MacCormackAdvection
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMacCormackAdvectionParams MacCormackAdvection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMacCormackAdvectionParams>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMacCormackAdvectionParams MacCormackAdvection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFMacCormackAdvectionParams>(Ptr + 320);
 
     /// <summary>
     /// StructProperty: selfShadowing
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingParams selfShadowing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingParams>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingParams selfShadowing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingParams>(Ptr + 328);
 
     /// <summary>
     /// StructProperty: selfShadowingSpotlight
     /// </summary>
-    public unsafe BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingSpotlightParams selfShadowingSpotlight
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingSpotlightParams>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public unsafe ref BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingSpotlightParams selfShadowingSpotlight
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ActorFactoryApexDynamicGrid.FSFSelfShadowingSpotlightParams>(Ptr + 352);
 
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 408);
 }

@@ -21,6 +21,11 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_Pose.
+    /// </summary>
+    public static RAnimNode_Pose DefaultObject => (RAnimNode_Pose)StaticClass().DefaultObject;
+
     internal RAnimNode_Pose() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNode_Pose(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_Pose>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ShutdownForPooling
@@ -3706,20 +3751,14 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Editor
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense Editor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense Editor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense>(Ptr + 284);
 
     /// <summary>
     /// StructProperty: PreviousEditor
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense PreviousEditor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense PreviousEditor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FEditorNonsense>(Ptr + 404);
 
     /// <summary>
     /// ObjectProperty: EditorMasterNode
@@ -3823,92 +3862,62 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CurrCurveFloatState
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FCurveFloatState CurrCurveFloatState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FCurveFloatState>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FCurveFloatState CurrCurveFloatState
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FCurveFloatState>(Ptr + 612);
 
     /// <summary>
     /// StructProperty: PosePlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FPosePlayer PosePlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FPosePlayer>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FPosePlayer PosePlayer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FPosePlayer>(Ptr + 628);
 
     /// <summary>
     /// StructProperty: PendingQueuedTransitionCallback
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FPendingQueuedTransitionCallback PendingQueuedTransitionCallback
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FPendingQueuedTransitionCallback>(Ptr + 1044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FPendingQueuedTransitionCallback PendingQueuedTransitionCallback
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FPendingQueuedTransitionCallback>(Ptr + 1044);
 
     /// <summary>
     /// StructProperty: MovementPlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_MovementPlayer.FMovementPlayer MovementPlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_MovementPlayer.FMovementPlayer>(Ptr + 1072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_MovementPlayer.FMovementPlayer MovementPlayer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_MovementPlayer.FMovementPlayer>(Ptr + 1072);
 
     /// <summary>
     /// StructProperty: MovementOutput
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_MovementOutput.FMovementOutput MovementOutput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_MovementOutput.FMovementOutput>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_MovementOutput.FMovementOutput MovementOutput
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_MovementOutput.FMovementOutput>(Ptr + 1184);
 
     /// <summary>
     /// StructProperty: WeaponOverlays
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer WeaponOverlays
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer>(Ptr + 1312); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1312); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer WeaponOverlays
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer>(Ptr + 1312);
 
     /// <summary>
     /// StructProperty: IdleOverlays
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer IdleOverlays
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer>(Ptr + 1340); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer IdleOverlays
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayPlayer>(Ptr + 1340);
 
     /// <summary>
     /// StructProperty: AdditiveOverlays
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FAdditiveOverlayPlayer AdditiveOverlays
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FAdditiveOverlayPlayer>(Ptr + 1368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1368); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FAdditiveOverlayPlayer AdditiveOverlays
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FAdditiveOverlayPlayer>(Ptr + 1368);
 
     /// <summary>
     /// StructProperty: GlobalAdditiveOverlays
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FGlobalAdditiveOverlayPlayer GlobalAdditiveOverlays
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FGlobalAdditiveOverlayPlayer>(Ptr + 1392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1392); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FGlobalAdditiveOverlayPlayer GlobalAdditiveOverlays
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FGlobalAdditiveOverlayPlayer>(Ptr + 1392);
 
     /// <summary>
     /// StructProperty: AnimAccumulator
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FAnimAccumulator AnimAccumulator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FAnimAccumulator>(Ptr + 1424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_AnimAccumulator.FAnimAccumulator AnimAccumulator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FAnimAccumulator>(Ptr + 1424);
 
     /// <summary>
     /// ArrayProperty: TransientNotifyThoughts
@@ -3922,11 +3931,8 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Breathing
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FBreathingState Breathing
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FBreathingState>(Ptr + 1536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1536); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FBreathingState Breathing
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FBreathingState>(Ptr + 1536);
 
     /// <summary>
     /// FloatProperty: GlobalTimeScale
@@ -3940,11 +3946,8 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: NotifyAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.FNotifyAnim NotifyAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FNotifyAnim>(Ptr + 1552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1552); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil.FNotifyAnim NotifyAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil.FNotifyAnim>(Ptr + 1552);
 
     /// <summary>
     /// ArrayProperty: GlobalAdditiveAnims
@@ -3958,11 +3961,8 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: GlobalGundummyAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNode_Pose.FGlobalGundummyAnimState GlobalGundummyAnim
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNode_Pose.FGlobalGundummyAnimState>(Ptr + 1596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1596); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimNode_Pose.FGlobalGundummyAnimState GlobalGundummyAnim
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimNode_Pose.FGlobalGundummyAnimState>(Ptr + 1596);
 
     /// <summary>
     /// FloatProperty: LocalRotZ

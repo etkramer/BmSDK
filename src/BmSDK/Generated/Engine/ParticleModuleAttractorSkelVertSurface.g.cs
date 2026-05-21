@@ -21,6 +21,11 @@ public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.Parti
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleAttractorSkelVertSurface.
+    /// </summary>
+    public static ParticleModuleAttractorSkelVertSurface DefaultObject => (ParticleModuleAttractorSkelVertSurface)StaticClass().DefaultObject;
+
     internal ParticleModuleAttractorSkelVertSurface() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.Parti
     /// </summary>
     protected ParticleModuleAttractorSkelVertSurface(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleAttractorSkelVertSurface>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EAttractorSkelVertSurfaceDestination
     /// </summary>
-    public enum EAttractorSkelVertSurfaceDestination
+    public enum EAttractorSkelVertSurfaceDestination : byte
     {
         VERTSURFACEDEST_Vert = 0,
         VERTSURFACEDEST_Surface = 1,
@@ -82,65 +127,44 @@ public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.Parti
     /// <summary>
     /// StructProperty: FalloffExponent
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat FalloffExponent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat FalloffExponent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 104);
 
     /// <summary>
     /// StructProperty: Range
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Range
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Range
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 140);
 
     /// <summary>
     /// StructProperty: Strength
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat Strength
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat Strength
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: CollisionRadius
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat CollisionRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat CollisionRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 212);
 
     /// <summary>
     /// StructProperty: DragCoefficient
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat DragCoefficient
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat DragCoefficient
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 248);
 
     /// <summary>
     /// StructProperty: DragRadius
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat DragRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat DragRadius
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 284);
 
     /// <summary>
     /// StructProperty: UniversalOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 UniversalOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref System.Numerics.Vector3 UniversalOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 320);
 
     /// <summary>
     /// NameProperty: SkelMeshActorParamName
@@ -172,11 +196,8 @@ public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.Parti
     /// <summary>
     /// StructProperty: NormalToCompare
     /// </summary>
-    public unsafe System.Numerics.Vector3 NormalToCompare
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
-    }
+    public unsafe ref System.Numerics.Vector3 NormalToCompare
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 364);
 
     /// <summary>
     /// FloatProperty: NormalCheckToleranceDegrees
@@ -208,7 +229,7 @@ public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.Parti
     /// <summary>
     /// Enum: EVertSurfaceAttractorFalloffType
     /// </summary>
-    public enum EVertSurfaceAttractorFalloffType
+    public enum EVertSurfaceAttractorFalloffType : byte
     {
         VSFOFF_Constant = 0,
         VSFOFF_Linear = 1,

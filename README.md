@@ -9,7 +9,7 @@ BmSDK is a scripting platform for Batman: Arkham City, allowing you to extend th
 It provides a full game-mapped API _(RPlayerController, WorldInfo, RGameRI, etc.)_ along with utilities for interacting with the game world. It also provides **lifecycle and input events** (script start, enter menu/game, tick, button press, etc.). Check out the [wiki](../../wiki) for more info!
 
 ## 🚀 Getting started
-If you just want to run script mods (not create them), getting started is simple:
+If you want to play script mods, getting started is simple:
 1. Download and install the [.NET 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.3-windows-x86-installer) if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
 2. Download the latest release from [releases](../../releases/latest) and open the .zip file.
 3. Inside you'll see two folders: `Binaries` and `BmGame`. Copy both to your game folder (likely `C:\Program Files\Epic Games\BatmanArkhamCity`). There should already be 2 folders in there with the same names.
@@ -33,5 +33,5 @@ Follow these steps to set up your environment for building, running, and debuggi
 ## 🛠️ Contributing
 To get started contributing to BmSDK, see the wiki for instructions: [Building BmSDK](../../wiki/Building-BmSDK)
 
-## 📋 Licence
+## 📋 License
 BmSDK is licenced under the [MIT licence](LICENSE.md).

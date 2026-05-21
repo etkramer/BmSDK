@@ -21,6 +21,11 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimUtil_PhysicsOutput.
+    /// </summary>
+    public static RAnimUtil_PhysicsOutput DefaultObject => (RAnimUtil_PhysicsOutput)StaticClass().DefaultObject;
+
     internal RAnimUtil_PhysicsOutput() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimUtil_PhysicsOutput(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimUtil_PhysicsOutput>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: DisableInheritVelocityForNFrames
@@ -55,11 +100,8 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Constants
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollConstants Constants
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollConstants>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollConstants Constants
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollConstants>(Ptr + 84);
 
     /// <summary>
     /// BoolProperty: AllowRFlaps
@@ -163,11 +205,8 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: Stack
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack Stack
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack Stack
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollStack>(Ptr + 520);
 
     /// <summary>
     /// ArrayProperty: PreviousLocalAtoms
@@ -181,11 +220,8 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PreviousLocalToWorld
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix PreviousLocalToWorld
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix PreviousLocalToWorld
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 672);
 
     /// <summary>
     /// FloatProperty: PreviousDeltaSeconds
@@ -199,11 +235,8 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: CachedChannelsAndCallbacks
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollCachedChannelsAndCallbacks CachedChannelsAndCallbacks
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollCachedChannelsAndCallbacks>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollCachedChannelsAndCallbacks CachedChannelsAndCallbacks
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PhysicsOutput.FRagdollCachedChannelsAndCallbacks>(Ptr + 740);
 
     /// <summary>
     /// IntProperty: DisableInheritVelocityFrames
@@ -587,7 +620,7 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Enum: ERagdollTransitionInstigator
     /// </summary>
-    public enum ERagdollTransitionInstigator
+    public enum ERagdollTransitionInstigator : byte
     {
         RTI_Stack = 0,
         RTI_Notify = 1,
@@ -710,7 +743,7 @@ public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Enum: ERagdollForceType
     /// </summary>
-    public enum ERagdollForceType
+    public enum ERagdollForceType : byte
     {
         FORCETYPE_Force = 0,
         FORCETYPE_Impulse = 1,

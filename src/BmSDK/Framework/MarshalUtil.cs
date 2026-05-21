@@ -1,9 +1,12 @@
 using System.Reflection;
-using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
-internal static unsafe class MarshalUtil
+/// <summary>
+/// Provides utility methods for converting data between unmanaged and managed
+/// representations.
+/// </summary>
+public static unsafe class MarshalUtil
 {
     [StructLayout(LayoutKind.Sequential)]
     private struct FScriptInterface
@@ -14,25 +17,9 @@ internal static unsafe class MarshalUtil
 
     private static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
-    // Temp-ish hack. Let's see about refactoring this later.
-    public static object? ToManaged(IntPtr data, Type managedType)
-    {
-        var method = Guard.NotNull(
-            typeof(MarshalUtil).GetMethod(
-                nameof(ToManaged),
-                BindingFlags.Public | BindingFlags.Static,
-                [typeof(IntPtr)]
-            )
-        );
-
-        var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
-        return genericMethod.Invoke(null, [data]);
-    }
-
-    public static TManaged ToManaged<TManaged>(IntPtr data) =>
-        ToManaged<TManaged>(data.ToPointer());
-
-    // Marshals unmanaged data to managed, then returns it.
+    /// <summary>
+    /// Marshals unmanaged data to managed, then returns it.
+    /// </summary>
     public static TManaged ToManaged<TManaged>(void* data)
     {
         // Try to copy memory directly (for struct, primitive types)
@@ -81,24 +68,27 @@ internal static unsafe class MarshalUtil
         );
     }
 
+    public static TManaged ToManaged<TManaged>(IntPtr data) =>
+        ToManaged<TManaged>(data.ToPointer());
+
     // Temp-ish hack. Let's see about refactoring this later.
-    public static void ToUnmanaged(object? value, IntPtr data, Type managedType)
+    public static object? ToManaged(IntPtr data, Type managedType)
     {
         var method = Guard.NotNull(
-            typeof(MarshalUtil)
-                .GetMethods(BindingFlags.Public | BindingFlags.Static)
-                .Where(m => m.Name == nameof(ToUnmanaged) && m.IsGenericMethodDefinition)
-                .FirstOrDefault(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
+            typeof(MarshalUtil).GetMethod(
+                nameof(ToManaged),
+                BindingFlags.Public | BindingFlags.Static,
+                [typeof(IntPtr)]
+            )
         );
 
         var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
-        genericMethod.Invoke(null, [value, data]);
+        return genericMethod.Invoke(null, [data]);
     }
 
-    public static void ToUnmanaged<TManaged>(TManaged value, IntPtr data) =>
-        ToUnmanaged(value, data.ToPointer());
-
-    // Marshals a managed object to native, then copies it into an existing buffer.
+    /// <summary>
+    /// Marshals a managed object to native, then copies it into an existing buffer.
+    /// </summary>
     public static void ToUnmanaged<TManaged>(TManaged value, void* data)
     {
         // Try to copy memory directly (for struct, primitive types)
@@ -113,7 +103,7 @@ internal static unsafe class MarshalUtil
         )
         {
             var dataSize = sizeof(TArray<TManaged>.NativeData);
-            
+
             if (value is null || data == null)
             {
                 // Clear native struct memory
@@ -145,43 +135,33 @@ internal static unsafe class MarshalUtil
         );
     }
 
-    public static int GetSizeUnmanaged<TManaged>()
-    {
-        // Try to use managed size directly (for struct, primitive types)
-        if (typeof(TManaged).IsValueType)
-        {
-            return Marshal.SizeOf<TManaged>();
-        }
-        // Return UE3 internal interface wrapper size
-        else if (typeof(TManaged).IsInterface)
-        {
-            return sizeof(FScriptInterface);
-        }
-        // Return size of UObject pointer
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
-        {
-            return sizeof(IntPtr);
-        }
+    public static void ToUnmanaged<TManaged>(TManaged value, IntPtr data) =>
+        ToUnmanaged(value, data.ToPointer());
 
-        throw new NotImplementedException(
-            $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
+    // Temp-ish hack. Let's see about refactoring this later.
+    public static void ToUnmanaged(object? value, IntPtr data, Type managedType)
+    {
+        var method = Guard.NotNull(
+            typeof(MarshalUtil)
+                .GetMethods(BindingFlags.Public | BindingFlags.Static)
+                .Where(m => m.Name == nameof(ToUnmanaged) && m.IsGenericMethodDefinition)
+                .FirstOrDefault(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
         );
+
+        var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
+        genericMethod.Invoke(null, [value, data]);
     }
 
-    public static string GetClassPath(IntPtr classPtr)
-    {
-        // Fetch class name.
-        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
-
-        // Fetch outer name.
-        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
-        var classOuterName = *(FName*)
-            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
-
-        return $"{classOuterName}.{className}";
-    }
-
-    public static GameObject GetOrCreateWrapper(IntPtr objPtr)
+    /// <summary>
+    /// Gets the managed wrapper instance corresponding to the given unmanaged pointer.
+    /// </summary>
+    /// <remarks>
+    /// This function is useful when working with native redirects. It allows one to
+    /// easily convert this-pointers to the actual instances in BmSDK.
+    /// </remarks>
+    /// <param name="objPtr">Pointer to unmanaged object</param>
+    /// <returns>Managed wrapper of unmanaged pointer</returns>
+    internal static GameObject GetOrCreateWrapper(IntPtr objPtr)
     {
         // Get cached object wrapepr
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
@@ -221,17 +201,62 @@ internal static unsafe class MarshalUtil
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
+        FindObjectsCache.Register(newObj);
         return newObj;
     }
 
-    public static void DestroyManagedWrapper(IntPtr objPtr)
+    private static string GetClassPath(IntPtr classPtr)
+    {
+        // Fetch class name.
+        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        // Fetch outer name.
+        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
+        var classOuterName = *(FName*)
+            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        return $"{classOuterName}.{className}";
+    }
+
+    /// <summary>
+    /// Returns a ref to unmanaged data at the specified address.
+    /// </summary>
+    internal static ref T AsRef<T>(IntPtr data)
+        where T : unmanaged => ref *(T*)data.ToPointer();
+
+    internal static int GetSizeUnmanaged<TManaged>()
+    {
+        // Try to use managed size directly (for struct, primitive types)
+        if (typeof(TManaged).IsValueType)
+        {
+            return Marshal.SizeOf<TManaged>();
+        }
+        // Return UE3 internal interface wrapper size
+        else if (typeof(TManaged).IsInterface)
+        {
+            return sizeof(FScriptInterface);
+        }
+        // Return size of UObject pointer
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        {
+            return sizeof(IntPtr);
+        }
+
+        throw new NotImplementedException(
+            $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
+        );
+    }
+
+    internal static void DestroyManagedWrapper(IntPtr objPtr)
     {
         if (s_managedObjects.TryGetValue(objPtr, out var obj))
         {
+            FindObjectsCache.Unregister(obj);
+
             // Detach all script components
-            if (obj is Actor actor && actor.ScriptComponents.Count > 0)
+            if (obj.ScriptComponents.Count > 0)
             {
-                actor.DetachAllScriptComponents();
+                obj.DetachAllScriptComponents();
             }
 
             // Mark managed wrapper as invalid

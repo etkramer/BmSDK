@@ -21,52 +21,62 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPhotoScanner.
+    /// </summary>
+    public static RPhotoScanner DefaultObject => (RPhotoScanner)StaticClass().DefaultObject;
+
     internal RPhotoScanner() { }
 
     /// <summary>
     /// Constructs a new RPhotoScanner
     /// </summary>
-    public RPhotoScanner(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPhotoScanner Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RPhotoScanner(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPhotoScanner(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPhotoScanner>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetScannerPower
@@ -528,7 +538,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: PhotoScannerStates
     /// </summary>
-    public enum PhotoScannerStates
+    public enum PhotoScannerStates : byte
     {
         PSS_LookAround = 0,
         PSS_Scanning = 1,
@@ -540,7 +550,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ScanningState
     /// </summary>
-    public enum ScanningState
+    public enum ScanningState : byte
     {
         SCAN_Ready = 0,
         SCAN_SimpleScan = 1,
@@ -768,11 +778,8 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OldRotation
     /// </summary>
-    public unsafe BmSDK.Rotator OldRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
-    }
+    public unsafe ref BmSDK.Rotator OldRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 716);
 
     /// <summary>
     /// ArrayProperty: CrimeSceneEvidenceArray
@@ -795,20 +802,14 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CursorMin
     /// </summary>
-    public unsafe System.Numerics.Vector2 CursorMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref System.Numerics.Vector2 CursorMin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 748);
 
     /// <summary>
     /// StructProperty: CursorMax
     /// </summary>
-    public unsafe System.Numerics.Vector2 CursorMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
-    }
+    public unsafe ref System.Numerics.Vector2 CursorMax
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 756);
 
     /// <summary>
     /// FloatProperty: ZoomTimer
@@ -831,20 +832,14 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: OriginalView
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalView
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalView
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 772);
 
     /// <summary>
     /// StructProperty: OriginalViewRPC
     /// </summary>
-    public unsafe System.Numerics.Vector3 OriginalViewRPC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
-    }
+    public unsafe ref System.Numerics.Vector3 OriginalViewRPC
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 784);
 
     /// <summary>
     /// FloatProperty: RecoverZoom

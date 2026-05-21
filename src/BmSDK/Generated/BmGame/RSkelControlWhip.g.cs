@@ -21,6 +21,11 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSkelControlWhip.
+    /// </summary>
+    public static RSkelControlWhip DefaultObject => (RSkelControlWhip)StaticClass().DefaultObject;
+
     internal RSkelControlWhip() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSkelControlWhip(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSkelControlWhip>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetWhipExtent
@@ -109,29 +154,20 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: WhipHipPhysData
     /// </summary>
-    public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData WhipHipPhysData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData>(Ptr + 320); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
-    }
+    public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData WhipHipPhysData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipHipPhysicsData>(Ptr + 320);
 
     /// <summary>
     /// StructProperty: WhipTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 WhipTargetPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 WhipTargetPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: WhipTargetRot
     /// </summary>
-    public unsafe BmSDK.Rotator WhipTargetRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref BmSDK.Rotator WhipTargetRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 452);
 
     /// <summary>
     /// BoolProperty: bDisableHandReparenting
@@ -190,11 +226,8 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// StructProperty: CachedWhipTargetingData
     /// </summary>
-    public unsafe BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData CachedWhipTargetingData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
+    public unsafe ref BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData CachedWhipTargetingData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSkelControlWhip.FWhipTargetingData>(Ptr + 496);
 
     /// <summary>
     /// ObjectProperty: CachedWhipTargetingDataValidAnimSequence

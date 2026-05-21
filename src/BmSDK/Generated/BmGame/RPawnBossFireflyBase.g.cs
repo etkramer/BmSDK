@@ -21,6 +21,11 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPawnBossFireflyBase.
+    /// </summary>
+    public static RPawnBossFireflyBase DefaultObject => (RPawnBossFireflyBase)StaticClass().DefaultObject;
+
     internal RPawnBossFireflyBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// </summary>
     protected RPawnBossFireflyBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RPawnBossFireflyBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: TriggerFFBark
@@ -773,6 +783,11 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     }
 
     /// <summary>
+    /// InlineArray{ComponentProperty}: smokePFX
+    /// </summary>
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> smokePFX => new(2, Ptr + 6760);
+
+    /// <summary>
     /// ComponentProperty: smokePFX
     /// </summary>
     public unsafe BmSDK.Engine.ParticleSystemComponent smokePFX_0
@@ -860,6 +875,11 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
         get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6776) & 128) != 0; }
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6776); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6776); }
     }
+
+    /// <summary>
+    /// InlineArray{StrProperty}: encounterCompleteFlagNames
+    /// </summary>
+    public InlineArray<BmSDK.FString> encounterCompleteFlagNames => new(3, Ptr + 6780);
 
     /// <summary>
     /// StrProperty: encounterCompleteFlagNames
@@ -952,20 +972,14 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: DirectionalAnimNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 DirectionalAnimNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6856); }
-    }
+    public unsafe ref System.Numerics.Vector3 DirectionalAnimNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6856);
 
     /// <summary>
     /// StructProperty: TiltVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 TiltVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6868); }
-    }
+    public unsafe ref System.Numerics.Vector3 TiltVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6868);
 
     /// <summary>
     /// FloatProperty: HorizontalRubberbandingPeriod
@@ -1006,20 +1020,14 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: currentAcceleration
     /// </summary>
-    public unsafe System.Numerics.Vector3 currentAcceleration
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6896); }
-    }
+    public unsafe ref System.Numerics.Vector3 currentAcceleration
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6896);
 
     /// <summary>
     /// StructProperty: currentFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 currentFlightVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6908); }
-    }
+    public unsafe ref System.Numerics.Vector3 currentFlightVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6908);
 
     /// <summary>
     /// FloatProperty: timeWhenEnergyRanOut
@@ -1177,11 +1185,8 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// StructProperty: prevLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 prevLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7000); }
-    }
+    public unsafe ref System.Numerics.Vector3 prevLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7000);
 
     /// <summary>
     /// FloatProperty: minSmokeSpawnRate

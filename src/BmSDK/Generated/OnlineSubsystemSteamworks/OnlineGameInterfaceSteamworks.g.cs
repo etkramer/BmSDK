@@ -21,6 +21,11 @@ public partial class OnlineGameInterfaceSteamworks : BmSDK.IpDrv.OnlineGameInter
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineGameInterfaceSteamworks.
+    /// </summary>
+    public static OnlineGameInterfaceSteamworks DefaultObject => (OnlineGameInterfaceSteamworks)StaticClass().DefaultObject;
+
     internal OnlineGameInterfaceSteamworks() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class OnlineGameInterfaceSteamworks : BmSDK.IpDrv.OnlineGameInter
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected OnlineGameInterfaceSteamworks(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineGameInterfaceSteamworks>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: QueryNonAdvertisedData
@@ -306,20 +351,14 @@ public partial class OnlineGameInterfaceSteamworks : BmSDK.IpDrv.OnlineGameInter
     /// <summary>
     /// StructProperty: ServerBrowserSearchQuery
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState ServerBrowserSearchQuery
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState ServerBrowserSearchQuery
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: InviteSearchQuery
     /// </summary>
-    public unsafe BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState InviteSearchQuery
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
-    }
+    public unsafe ref BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState InviteSearchQuery
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.OnlineSubsystemSteamworks.OnlineGameInterfaceSteamworks.FMatchmakingQueryState>(Ptr + 704);
 
     /// <summary>
     /// FloatProperty: ServerBrowserTimeout
@@ -342,11 +381,8 @@ public partial class OnlineGameInterfaceSteamworks : BmSDK.IpDrv.OnlineGameInter
     /// <summary>
     /// StructProperty: InviteServerUID
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId InviteServerUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref BmSDK.Engine.OnlineSubsystem.FUniqueNetId InviteServerUID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(Ptr + 828);
 
     /// <summary>
     /// ArrayProperty: GameInviteAcceptedDelegates
@@ -563,7 +599,7 @@ public partial class OnlineGameInterfaceSteamworks : BmSDK.IpDrv.OnlineGameInter
     /// <summary>
     /// Enum: ESteamMatchmakingType
     /// </summary>
-    public enum ESteamMatchmakingType
+    public enum ESteamMatchmakingType : byte
     {
         SMT_Invalid = 0,
         SMT_LAN = 1,

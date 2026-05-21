@@ -21,12 +21,57 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LevelStreaming.
+    /// </summary>
+    public static LevelStreaming DefaultObject => (LevelStreaming)StaticClass().DefaultObject;
+
     internal LevelStreaming() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected LevelStreaming(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LevelStreaming>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: RequestUnloadAndRemoval
@@ -49,10 +94,10 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EReflectionGroup
     /// </summary>
-    public enum EReflectionGroup
+    public enum EReflectionGroup : byte
     {
         ReflectionGroup_All = 0,
-        ReflectionGroup = 1,
+        ReflectionGroup_1 = 1,
         ReflectionGroup_1a = 2,
         ReflectionGroup_1b = 3,
         ReflectionGroup_1c = 4,
@@ -88,17 +133,17 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         ReflectionGroup_9a = 34,
         ReflectionGroup_9b = 35,
         ReflectionGroup_9c = 36,
-        ReflectionGroup_10 = 37,
+        ReflectionGroup_0 = 37,
         ReflectionGroup_MAX = 38,
     }
 
     /// <summary>
     /// Enum: ENavMeshGroup
     /// </summary>
-    public enum ENavMeshGroup
+    public enum ENavMeshGroup : byte
     {
         NavMeshGroup_All = 0,
-        NavMeshGroup = 1,
+        NavMeshGroup_1 = 1,
         NavMeshGroup_1a = 2,
         NavMeshGroup_1b = 3,
         NavMeshGroup_1c = 4,
@@ -134,7 +179,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         NavMeshGroup_9a = 34,
         NavMeshGroup_9b = 35,
         NavMeshGroup_9c = 36,
-        NavMeshGroup_10 = 37,
+        NavMeshGroup_0 = 37,
         NavMeshGroup_MAX = 38,
     }
 
@@ -177,29 +222,20 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe System.Numerics.Vector3 Offset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
-    }
+    public unsafe ref System.Numerics.Vector3 Offset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 124);
 
     /// <summary>
     /// StructProperty: LevelTransform
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LevelTransform
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref BmSDK.GameObject.FMatrix LevelTransform
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMatrix>(Ptr + 144);
 
     /// <summary>
     /// StructProperty: OldOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 OldOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref System.Numerics.Vector3 OldOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 208);
 
     /// <summary>
     /// BoolProperty: bIsVisible
@@ -429,11 +465,8 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DrawColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor DrawColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor DrawColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 224);
 
     /// <summary>
     /// ArrayProperty: EditorStreamingVolumes
@@ -497,6 +530,11 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: GridPosition
+    /// </summary>
+    public InlineArray<int> GridPosition => new(3, Ptr + 272);
 
     /// <summary>
     /// IntProperty: GridPosition

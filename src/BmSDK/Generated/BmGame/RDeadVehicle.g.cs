@@ -21,52 +21,62 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDeadVehicle.
+    /// </summary>
+    public static RDeadVehicle DefaultObject => (RDeadVehicle)StaticClass().DefaultObject;
+
     internal RDeadVehicle() { }
 
     /// <summary>
     /// Constructs a new RDeadVehicle
     /// </summary>
-    public RDeadVehicle(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDeadVehicle Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RDeadVehicle(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RDeadVehicle(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDeadVehicle>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObstacleActor
@@ -458,11 +468,8 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: InitialLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 840); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 840);
 
     /// <summary>
     /// IntProperty: AllowDeform
@@ -580,6 +587,11 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: ObstacleBodies
+    /// </summary>
+    public InlineArray<byte> ObstacleBodies => new(32, Ptr + 925);
 
     /// <summary>
     /// ByteProperty: ObstacleBodies
@@ -837,6 +849,11 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 956); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: ObstacleBodyIslands
+    /// </summary>
+    public InlineArray<byte> ObstacleBodyIslands => new(32, Ptr + 957);
 
     /// <summary>
     /// ByteProperty: ObstacleBodyIslands
@@ -1161,11 +1178,8 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// StructProperty: FlipTorque
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlipTorque
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlipTorque
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1020);
 
     /// <summary>
     /// FloatProperty: HowFarCanItFall

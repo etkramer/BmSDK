@@ -21,6 +21,11 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as OnlineProfileSettings.
+    /// </summary>
+    public static OnlineProfileSettings DefaultObject => (OnlineProfileSettings)StaticClass().DefaultObject;
+
     internal OnlineProfileSettings() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected OnlineProfileSettings(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<OnlineProfileSettings>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: ModifyAvailableProfileSettings
@@ -144,7 +189,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileVoiceThruSpeakersOptions
     /// </summary>
-    public enum EProfileVoiceThruSpeakersOptions
+    public enum EProfileVoiceThruSpeakersOptions : byte
     {
         PVTSO_Off = 0,
         PVTSO_On = 1,
@@ -155,7 +200,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileControllerVibrationToggleOptions
     /// </summary>
-    public enum EProfileControllerVibrationToggleOptions
+    public enum EProfileControllerVibrationToggleOptions : byte
     {
         PCVTO_Off = 0,
         PCVTO_IgnoreThis = 1,
@@ -167,7 +212,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileOmniDirEvadeOptions
     /// </summary>
-    public enum EProfileOmniDirEvadeOptions
+    public enum EProfileOmniDirEvadeOptions : byte
     {
         PODI_Off = 0,
         PODI_On = 1,
@@ -177,7 +222,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileXInversionOptions
     /// </summary>
-    public enum EProfileXInversionOptions
+    public enum EProfileXInversionOptions : byte
     {
         PXIO_Off = 0,
         PXIO_On = 1,
@@ -187,7 +232,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileYInversionOptions
     /// </summary>
-    public enum EProfileYInversionOptions
+    public enum EProfileYInversionOptions : byte
     {
         PYIO_Off = 0,
         PYIO_On = 1,
@@ -197,7 +242,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileRaceAcceleratorControlOptions
     /// </summary>
-    public enum EProfileRaceAcceleratorControlOptions
+    public enum EProfileRaceAcceleratorControlOptions : byte
     {
         PRACO_Trigger = 0,
         PRACO_Button = 1,
@@ -207,7 +252,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileRaceBrakeControlOptions
     /// </summary>
-    public enum EProfileRaceBrakeControlOptions
+    public enum EProfileRaceBrakeControlOptions : byte
     {
         PRBCO_Trigger = 0,
         PRBCO_Button = 1,
@@ -217,7 +262,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileRaceCameraLocationOptions
     /// </summary>
-    public enum EProfileRaceCameraLocationOptions
+    public enum EProfileRaceCameraLocationOptions : byte
     {
         PRCLO_Behind = 0,
         PRCLO_Front = 1,
@@ -228,7 +273,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileRaceTransmissionOptions
     /// </summary>
-    public enum EProfileRaceTransmissionOptions
+    public enum EProfileRaceTransmissionOptions : byte
     {
         PRTO_Auto = 0,
         PRTO_Manual = 1,
@@ -238,7 +283,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileMovementControlOptions
     /// </summary>
-    public enum EProfileMovementControlOptions
+    public enum EProfileMovementControlOptions : byte
     {
         PMCO_L_Thumbstick = 0,
         PMCO_R_Thumbstick = 1,
@@ -248,7 +293,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileAutoCenterOptions
     /// </summary>
-    public enum EProfileAutoCenterOptions
+    public enum EProfileAutoCenterOptions : byte
     {
         PACO_Off = 0,
         PACO_On = 1,
@@ -258,7 +303,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileAutoAimOptions
     /// </summary>
-    public enum EProfileAutoAimOptions
+    public enum EProfileAutoAimOptions : byte
     {
         PAAO_Off = 0,
         PAAO_On = 1,
@@ -268,7 +313,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfilePreferredColorOptions
     /// </summary>
-    public enum EProfilePreferredColorOptions
+    public enum EProfilePreferredColorOptions : byte
     {
         PPCO_None = 0,
         PPCO_Black = 1,
@@ -288,7 +333,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileControllerSensitivityOptions
     /// </summary>
-    public enum EProfileControllerSensitivityOptions
+    public enum EProfileControllerSensitivityOptions : byte
     {
         PCSO_Medium = 0,
         PCSO_Low = 1,
@@ -299,7 +344,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileDifficultyOptions
     /// </summary>
-    public enum EProfileDifficultyOptions
+    public enum EProfileDifficultyOptions : byte
     {
         PDO_Normal = 0,
         PDO_Easy = 1,
@@ -337,7 +382,7 @@ public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, B
     /// <summary>
     /// Enum: EProfileSettingID
     /// </summary>
-    public enum EProfileSettingID
+    public enum EProfileSettingID : byte
     {
         PSI_Unknown = 0,
         PSI_ControllerVibration = 1,

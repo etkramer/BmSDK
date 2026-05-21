@@ -21,12 +21,57 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as _Engine.
+    /// </summary>
+    public static _Engine DefaultObject => (_Engine)StaticClass().DefaultObject;
+
     internal _Engine() { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected _Engine(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_Engine>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<_Engine>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: LaunchURL
@@ -786,7 +831,7 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: EPhysXLevelFeatureType
     /// </summary>
-    public enum EPhysXLevelFeatureType
+    public enum EPhysXLevelFeatureType : byte
     {
         PLF_None = 0,
         PLF_Turbulence = 1,
@@ -799,7 +844,7 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETransitionType
     /// </summary>
-    public enum ETransitionType
+    public enum ETransitionType : byte
     {
         TT_None = 0,
         TT_Paused = 1,
@@ -2456,11 +2501,8 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightingOnlyBrightness
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightingOnlyBrightness
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1476); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightingOnlyBrightness
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1476);
 
     /// <summary>
     /// ArrayProperty: LightComplexityColors
@@ -2564,20 +2606,14 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LightMapDensityVertexMappedColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightMapDensityVertexMappedColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1560); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightMapDensityVertexMappedColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1560);
 
     /// <summary>
     /// StructProperty: LightMapDensitySelectedColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightMapDensitySelectedColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1576); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor LightMapDensitySelectedColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1576);
 
     /// <summary>
     /// ArrayProperty: StatColorMappings
@@ -3005,119 +3041,80 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: C_WorldBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_WorldBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2196); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_WorldBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2196);
 
     /// <summary>
     /// StructProperty: C_BrushWire
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_BrushWire
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_BrushWire
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2200);
 
     /// <summary>
     /// StructProperty: C_AddWire
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_AddWire
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_AddWire
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2204);
 
     /// <summary>
     /// StructProperty: C_SubtractWire
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_SubtractWire
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_SubtractWire
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2208);
 
     /// <summary>
     /// StructProperty: C_SemiSolidWire
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_SemiSolidWire
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2212); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_SemiSolidWire
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2212);
 
     /// <summary>
     /// StructProperty: C_NonSolidWire
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_NonSolidWire
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2216); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_NonSolidWire
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2216);
 
     /// <summary>
     /// StructProperty: C_WireBackground
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_WireBackground
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_WireBackground
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2220);
 
     /// <summary>
     /// StructProperty: C_ScaleBoxHi
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_ScaleBoxHi
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2224); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_ScaleBoxHi
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2224);
 
     /// <summary>
     /// StructProperty: C_VolumeCollision
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_VolumeCollision
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2228); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_VolumeCollision
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2228);
 
     /// <summary>
     /// StructProperty: C_BSPCollision
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_BSPCollision
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2232); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_BSPCollision
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2232);
 
     /// <summary>
     /// StructProperty: C_OrthoBackground
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_OrthoBackground
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_OrthoBackground
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2236);
 
     /// <summary>
     /// StructProperty: C_Volume
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_Volume
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2240); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_Volume
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2240);
 
     /// <summary>
     /// StructProperty: C_BrushShape
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor C_BrushShape
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 2244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2244); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor C_BrushShape
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 2244);
 
     /// <summary>
     /// FloatProperty: StreamingDistanceFactor
@@ -3374,38 +3371,26 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultSelectedMaterialColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor DefaultSelectedMaterialColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor DefaultSelectedMaterialColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2432);
 
     /// <summary>
     /// StructProperty: DefaultHoveredMaterialColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor DefaultHoveredMaterialColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2448); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor DefaultHoveredMaterialColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2448);
 
     /// <summary>
     /// StructProperty: SelectedMaterialColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor SelectedMaterialColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2464); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor SelectedMaterialColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2464);
 
     /// <summary>
     /// StructProperty: UnselectedMaterialColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor UnselectedMaterialColor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 2480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2480); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor UnselectedMaterialColor
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 2480);
 
     /// <summary>
     /// ArrayProperty: IgnoreSimulatedFuncWarnings

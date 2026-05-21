@@ -21,6 +21,11 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as UberPostProcessEffect.
+    /// </summary>
+    public static UberPostProcessEffect DefaultObject => (UberPostProcessEffect)StaticClass().DefaultObject;
+
     internal UberPostProcessEffect() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
     /// </summary>
     protected UberPostProcessEffect(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<UberPostProcessEffect>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: ETonemapperType
     /// </summary>
-    public enum ETonemapperType
+    public enum ETonemapperType : byte
     {
         Tonemapper_Off = 0,
         Tonemapper_Filmic = 1,
@@ -47,29 +92,20 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
     /// <summary>
     /// StructProperty: SceneShadows
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneShadows
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneShadows
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: SceneHighLights
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneHighLights
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneHighLights
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 188);
 
     /// <summary>
     /// StructProperty: SceneMidTones
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneMidTones
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneMidTones
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 200);
 
     /// <summary>
     /// FloatProperty: SceneDesaturation
@@ -83,11 +119,8 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
     /// <summary>
     /// StructProperty: SceneColorize
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneColorize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref System.Numerics.Vector3 SceneColorize
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 216);
 
     /// <summary>
     /// ByteProperty: TonemapperType
@@ -227,11 +260,8 @@ public partial class UberPostProcessEffect : BmSDK.Engine.DOFBloomMotionBlurEffe
     /// <summary>
     /// StructProperty: PreviousLUTBlender
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FLUTBlender PreviousLUTBlender
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FLUTBlender>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FLUTBlender PreviousLUTBlender
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FLUTBlender>(Ptr + 280);
 
     /// <summary>
     /// FloatProperty: SceneHDRTonemapperScale

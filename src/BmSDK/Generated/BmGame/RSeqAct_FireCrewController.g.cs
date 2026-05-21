@@ -21,6 +21,11 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_FireCrewController.
+    /// </summary>
+    public static RSeqAct_FireCrewController DefaultObject => (RSeqAct_FireCrewController)StaticClass().DefaultObject;
+
     internal RSeqAct_FireCrewController() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_FireCrewController(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_FireCrewController>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -235,7 +280,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Enum: FireCrewEncounterState
     /// </summary>
-    public enum FireCrewEncounterState
+    public enum FireCrewEncounterState : byte
     {
         eFCES_unavailable = 0,
         eFCES_available_unseen = 1,
@@ -246,21 +291,25 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     }
 
     /// <summary>
-    /// StructProperty: allTiers
+    /// InlineArray{StructProperty}: allTiers
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier allTiers_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
+    public InlineArray<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier> allTiers => new(2, Ptr + 352);
+
     /// <summary>
     /// StructProperty: allTiers
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier allTiers_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier allTiers_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier>(Ptr + 352);
+    /// <summary>
+    /// StructProperty: allTiers
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier allTiers_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier>(Ptr + 368);
+
+    /// <summary>
+    /// InlineArray{StrProperty}: flagSuffixes
+    /// </summary>
+    public InlineArray<BmSDK.FString> flagSuffixes => new(5, Ptr + 384);
 
     /// <summary>
     /// StrProperty: flagSuffixes

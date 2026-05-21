@@ -21,6 +21,11 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as Texture2D.
+    /// </summary>
+    public static Texture2D DefaultObject => (Texture2D)StaticClass().DefaultObject;
+
     internal Texture2D() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Texture2D(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture2D>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<Texture2D>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Create
@@ -133,11 +178,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Mips
     /// </summary>
-    public unsafe BmSDK.GameObject.FIndirectArray_Mirror Mips
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 308); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
-    }
+    public unsafe ref BmSDK.GameObject.FIndirectArray_Mirror Mips
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FIndirectArray_Mirror>(Ptr + 308);
 
     /// <summary>
     /// IntProperty: SizeX
@@ -349,11 +391,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CustomDxtWeights
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor CustomDxtWeights
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor CustomDxtWeights
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 356);
 
     /// <summary>
     /// FloatProperty: PrestreamMipLevelsTimestamp
@@ -394,11 +433,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TextureFileCacheGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid TextureFileCacheGuid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 392); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid TextureFileCacheGuid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 392);
 
     /// <summary>
     /// IntProperty: RequestedMips
@@ -430,11 +466,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PendingMipChangeRequestStatus
     /// </summary>
-    public unsafe BmSDK.GameObject.FThreadSafeCounter PendingMipChangeRequestStatus
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FThreadSafeCounter>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
-    }
+    public unsafe ref BmSDK.GameObject.FThreadSafeCounter PendingMipChangeRequestStatus
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FThreadSafeCounter>(Ptr + 420);
 
     /// <summary>
     /// ArrayProperty: SystemMemoryData
@@ -448,11 +481,8 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StreamableTexturesLink
     /// </summary>
-    public unsafe BmSDK.Engine.Texture2D.FTextureLinkedListMirror StreamableTexturesLink
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D.FTextureLinkedListMirror>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref BmSDK.Engine.Texture2D.FTextureLinkedListMirror StreamableTexturesLink
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Texture2D.FTextureLinkedListMirror>(Ptr + 440);
 
     /// <summary>
     /// IntProperty: StreamingIndex

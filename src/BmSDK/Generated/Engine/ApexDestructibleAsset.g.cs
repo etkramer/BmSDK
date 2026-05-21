@@ -21,6 +21,11 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ApexDestructibleAsset.
+    /// </summary>
+    public static ApexDestructibleAsset DefaultObject => (ApexDestructibleAsset)StaticClass().DefaultObject;
+
     internal ApexDestructibleAsset() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// </summary>
     protected ApexDestructibleAsset(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ApexDestructibleAsset>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: ENavMeshObstacleOverride
     /// </summary>
-    public enum ENavMeshObstacleOverride
+    public enum ENavMeshObstacleOverride : byte
     {
         ENAVMESHOVERRIDE_None = 0,
         ENAVMESHOVERRIDE_On = 1,
@@ -723,16 +768,16 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_0
         /// </summary>
-        public unsafe bool USER_FLAG
+        public unsafe bool USER_FLAG_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 16) != 0; }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_1
         /// </summary>
         public unsafe bool USER_FLAG_1
         {
@@ -741,7 +786,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_2
         /// </summary>
         public unsafe bool USER_FLAG_2
         {
@@ -750,7 +795,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
         }
 
         /// <summary>
-        /// BoolProperty: USER_FLAG
+        /// BoolProperty: USER_FLAG_3
         /// </summary>
         public unsafe bool USER_FLAG_3
         {
@@ -1075,11 +1120,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// StructProperty: BaseCollisionGeom
     /// </summary>
-    public unsafe BmSDK.Engine.KMeshProps.FKAggregateGeom BaseCollisionGeom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
-    }
+    public unsafe ref BmSDK.Engine.KMeshProps.FKAggregateGeom BaseCollisionGeom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.KMeshProps.FKAggregateGeom>(Ptr + 336);
 
     /// <summary>
     /// FloatProperty: MinPlayerNavigationGeometryChunkDimension
@@ -1111,11 +1153,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// StructProperty: CookedBounds
     /// </summary>
-    public unsafe System.Numerics.Vector4 CookedBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
+    public unsafe ref System.Numerics.Vector4 CookedBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector4>(Ptr + 480);
 
     /// <summary>
     /// StrProperty: CrumbleEmitterName
@@ -1138,11 +1177,8 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// StructProperty: DestructibleParameters
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters DestructibleParameters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
+    public unsafe ref BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters DestructibleParameters
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.ApexDestructibleAsset.FNxDestructibleParameters>(Ptr + 528);
 
     /// <summary>
     /// FloatProperty: RemoveChunksBelowHeight
@@ -1192,7 +1228,7 @@ public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGame
     /// <summary>
     /// Enum: EImpactDamageOverride
     /// </summary>
-    public enum EImpactDamageOverride
+    public enum EImpactDamageOverride : byte
     {
         IDO_None = 0,
         IDO_On = 1,

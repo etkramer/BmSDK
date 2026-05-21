@@ -21,6 +21,11 @@ public partial class RDmgType_ControllableBatarang : BmSDK.BmGame.RDmgType_Batar
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDmgType_ControllableBatarang.
+    /// </summary>
+    public static RDmgType_ControllableBatarang DefaultObject => (RDmgType_ControllableBatarang)StaticClass().DefaultObject;
+
     internal RDmgType_ControllableBatarang() { }
 
     /// <summary>
@@ -32,5 +37,45 @@ public partial class RDmgType_ControllableBatarang : BmSDK.BmGame.RDmgType_Batar
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RDmgType_ControllableBatarang(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDmgType_ControllableBatarang>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
 }

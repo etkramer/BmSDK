@@ -18,7 +18,7 @@ public partial interface Interface_NavMeshPathObstacle : BmSDK.Interface
     /// <summary>
     /// Enum: EEdgeHandlingStatus
     /// </summary>
-    public enum EEdgeHandlingStatus
+    public enum EEdgeHandlingStatus : byte
     {
         EHS_AddedBothDirs = 0,
         EHS_Added0to1 = 1,

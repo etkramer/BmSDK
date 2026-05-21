@@ -21,6 +21,11 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RCwGrappleGunBase.
+    /// </summary>
+    public static RCwGrappleGunBase DefaultObject => (RCwGrappleGunBase)StaticClass().DefaultObject;
+
     internal RCwGrappleGunBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// </summary>
     protected RCwGrappleGunBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RCwGrappleGunBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetLastGrapplePointFromClimbInfo
@@ -1610,7 +1620,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: EClawClimbStartMode
     /// </summary>
-    public enum EClawClimbStartMode
+    public enum EClawClimbStartMode : byte
     {
         CCSM_FromGround = 0,
         CCSM_FromWallStick = 1,
@@ -2410,7 +2420,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: ClimbPathFailReason
     /// </summary>
-    public enum ClimbPathFailReason
+    public enum ClimbPathFailReason : byte
     {
         CPFR_None = 0,
         CPFR_NoStartPoint = 1,
@@ -2796,7 +2806,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: EStartPoints
     /// </summary>
-    public enum EStartPoints
+    public enum EStartPoints : byte
     {
         START_NextToPlayer = 0,
         START_BelowTarget = 1,
@@ -2815,7 +2825,7 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// Enum: EClawClimbDirection
     /// </summary>
-    public enum EClawClimbDirection
+    public enum EClawClimbDirection : byte
     {
         CCD_Random = 0,
         CCD_Left = 1,
@@ -3764,20 +3774,14 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CurrentClimbInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo CurrentClimbInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo>(Ptr + 4036); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4036); }
-    }
+    public unsafe ref BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo CurrentClimbInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo>(Ptr + 4036);
 
     /// <summary>
     /// StructProperty: LastClimbInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo LastClimbInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo>(Ptr + 5132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5132); }
-    }
+    public unsafe ref BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo LastClimbInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RCwGrappleGunBase.FWallClimbInfo>(Ptr + 5132);
 
     /// <summary>
     /// FloatProperty: LastClimbInfoTime
@@ -3809,20 +3813,14 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastClimbLandLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator LastClimbLandLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 6252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6252); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator LastClimbLandLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 6252);
 
     /// <summary>
     /// StructProperty: LastWallLandLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastWallLandLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6384); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6384); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastWallLandLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6384);
 
     /// <summary>
     /// FloatProperty: MaxDistanceToWall
@@ -4034,128 +4032,86 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LockedEdgeSwingGrapplePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo LockedEdgeSwingGrapplePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 6492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6492); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo LockedEdgeSwingGrapplePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 6492);
 
     /// <summary>
     /// StructProperty: LockedEdgeSwingGrappleTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LockedEdgeSwingGrappleTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6572); }
-    }
+    public unsafe ref System.Numerics.Vector3 LockedEdgeSwingGrappleTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6572);
 
     /// <summary>
     /// StructProperty: EdgeSwingLaunchLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingLaunchLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6584); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingLaunchLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6584);
 
     /// <summary>
     /// StructProperty: EdgeSwingStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingStartLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6596); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingStartLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6596);
 
     /// <summary>
     /// StructProperty: EdgeSwingEndLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingEndLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6608); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingEndLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6608);
 
     /// <summary>
     /// StructProperty: EdgeSwingWallLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingWallLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6620); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingWallLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6620);
 
     /// <summary>
     /// StructProperty: EdgeSwingWallNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingWallNormal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6632); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingWallNormal
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6632);
 
     /// <summary>
     /// StructProperty: EdgeSwingGrapplePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo EdgeSwingGrapplePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 6644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6644); }
-    }
+    public unsafe ref BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo EdgeSwingGrapplePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGrapplePoint.FGrapplePointInfo>(Ptr + 6644);
 
     /// <summary>
     /// StructProperty: EdgeSwingGrappleTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingGrappleTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6724); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingGrappleTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6724);
 
     /// <summary>
     /// StructProperty: SwingLaunchVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingLaunchVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6736); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingLaunchVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6736);
 
     /// <summary>
     /// StructProperty: SwingLaunchShortVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingLaunchShortVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6748); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingLaunchShortVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6748);
 
     /// <summary>
     /// StructProperty: SwingLaunchOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingLaunchOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6760); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingLaunchOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6760);
 
     /// <summary>
     /// StructProperty: SwingLaunchShortOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 SwingLaunchShortOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6772); }
-    }
+    public unsafe ref System.Numerics.Vector3 SwingLaunchShortOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6772);
 
     /// <summary>
     /// StructProperty: EdgeSwingLaunchCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 EdgeSwingLaunchCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6784); }
-    }
+    public unsafe ref System.Numerics.Vector3 EdgeSwingLaunchCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6784);
 
     /// <summary>
     /// FloatProperty: EdgeSwingLaunchCheckShift
@@ -4358,20 +4314,14 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: SecondLastPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SecondLastPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6884); }
-    }
+    public unsafe ref System.Numerics.Vector3 SecondLastPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6884);
 
     /// <summary>
     /// StructProperty: LastPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6896); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6896);
 
     /// <summary>
     /// FloatProperty: WallCheckOut
@@ -4412,47 +4362,32 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: PlayerCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6924); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6924);
 
     /// <summary>
     /// StructProperty: WallCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6936); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6936);
 
     /// <summary>
     /// StructProperty: WallCheckShift
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallCheckShift
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6948); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallCheckShift
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6948);
 
     /// <summary>
     /// StructProperty: WallFootCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallFootCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6960); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallFootCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6960);
 
     /// <summary>
     /// StructProperty: WallFootCheckShift
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallFootCheckShift
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6972); }
-    }
+    public unsafe ref System.Numerics.Vector3 WallFootCheckShift
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 6972);
 
     /// <summary>
     /// FloatProperty: WallHandToFootCheckZDiff
@@ -4538,11 +4473,8 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: PounceToGrappleCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 PounceToGrappleCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7020); }
-    }
+    public unsafe ref System.Numerics.Vector3 PounceToGrappleCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7020);
 
     /// <summary>
     /// FloatProperty: MaxWallStickHidePointInDiff
@@ -4637,11 +4569,8 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: CeilingSpaceCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingSpaceCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7072); }
-    }
+    public unsafe ref System.Numerics.Vector3 CeilingSpaceCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7072);
 
     /// <summary>
     /// FloatProperty: CeilingTraceHeight
@@ -5033,20 +4962,14 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: LastCeilingCheckLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastCeilingCheckLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7256); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastCeilingCheckLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7256);
 
     /// <summary>
     /// StructProperty: LastCeilingCheckTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastCeilingCheckTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7268); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastCeilingCheckTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7268);
 
     /// <summary>
     /// FloatProperty: LastCeilingCheckFrame
@@ -5060,11 +4983,8 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: InitialPounceToWallCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialPounceToWallCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7284); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialPounceToWallCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7284);
 
     /// <summary>
     /// IntProperty: NumPounceItersPerUpdate
@@ -5258,20 +5178,14 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: GASSPLastPlayerLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GASSPLastPlayerLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7388); }
-    }
+    public unsafe ref System.Numerics.Vector3 GASSPLastPlayerLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7388);
 
     /// <summary>
     /// StructProperty: GASSPLastPlayerVel
     /// </summary>
-    public unsafe System.Numerics.Vector3 GASSPLastPlayerVel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7400); }
-    }
+    public unsafe ref System.Numerics.Vector3 GASSPLastPlayerVel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7400);
 
     /// <summary>
     /// FloatProperty: GASSPLastSwingStartTime
@@ -5285,18 +5199,12 @@ public partial class RCwGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameOb
     /// <summary>
     /// StructProperty: GASSPLastOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GASSPLastOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7416); }
-    }
+    public unsafe ref System.Numerics.Vector3 GASSPLastOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7416);
 
     /// <summary>
     /// StructProperty: GASSPLastStartVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GASSPLastStartVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7428); }
-    }
+    public unsafe ref System.Numerics.Vector3 GASSPLastStartVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7428);
 }

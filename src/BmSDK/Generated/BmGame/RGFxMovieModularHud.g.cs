@@ -21,6 +21,11 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieModularHud.
+    /// </summary>
+    public static RGFxMovieModularHud DefaultObject => (RGFxMovieModularHud)StaticClass().DefaultObject;
+
     internal RGFxMovieModularHud() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieModularHud(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieModularHud>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: NotifyFriendBeatYou
@@ -1110,7 +1155,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Enum: EDetectiveModeDetectorStates
     /// </summary>
-    public enum EDetectiveModeDetectorStates
+    public enum EDetectiveModeDetectorStates : byte
     {
         EDMD_Filling = 0,
         EDMD_Emptying = 1,
@@ -1122,7 +1167,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Enum: ENpcHeartBeatType
     /// </summary>
-    public enum ENpcHeartBeatType
+    public enum ENpcHeartBeatType : byte
     {
         ENpcHeartBeatType_Fine = 0,
         ENpcHeartBeatType_Nervous = 1,
@@ -1142,7 +1187,7 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// Enum: ObjIcon
     /// </summary>
-    public enum ObjIcon
+    public enum ObjIcon : byte
     {
         OI_Arrow = 0,
         OI_Ticked = 1,
@@ -1540,11 +1585,8 @@ public partial class RGFxMovieModularHud : BmSDK.BmGame.RGFxMovieModularHudBase,
     /// <summary>
     /// StructProperty: BatmanLastPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanLastPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1012); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1012); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanLastPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1012);
 
     /// <summary>
     /// IntProperty: ViewUpgradePromptDuration

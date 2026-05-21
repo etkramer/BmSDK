@@ -21,6 +21,11 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_AvoidanceRunAway.
+    /// </summary>
+    public static RBMBehaviour_AvoidanceRunAway DefaultObject => (RBMBehaviour_AvoidanceRunAway)StaticClass().DefaultObject;
+
     internal RBMBehaviour_AvoidanceRunAway() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_AvoidanceRunAway(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_AvoidanceRunAway>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: UnAwareOfPlayer
@@ -746,7 +791,7 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// Enum: EAvoidType
     /// </summary>
-    public enum EAvoidType
+    public enum EAvoidType : byte
     {
         AVOID_Player = 0,
         AVOID_ClosestThug = 1,
@@ -766,11 +811,8 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// StructProperty: OverrideAvoidLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 OverrideAvoidLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
-    }
+    public unsafe ref System.Numerics.Vector3 OverrideAvoidLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 788);
 
     /// <summary>
     /// FloatProperty: MinWallDist
@@ -856,11 +898,8 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// StructProperty: FleeReactionID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FleeReactionID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 836); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId FleeReactionID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 836);
 
     /// <summary>
     /// ObjectProperty: RoadNetwork
@@ -946,38 +985,26 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// StructProperty: AnchorVertPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 AnchorVertPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 888); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
-    }
+    public unsafe ref System.Numerics.Vector3 AnchorVertPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 888);
 
     /// <summary>
     /// StructProperty: NextVertPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NextVertPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
+    public unsafe ref System.Numerics.Vector3 NextVertPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 900);
 
     /// <summary>
     /// StructProperty: NextUltimateVertPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 NextUltimateVertPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
-    }
+    public unsafe ref System.Numerics.Vector3 NextUltimateVertPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 912);
 
     /// <summary>
     /// StructProperty: PrevAvoidDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 PrevAvoidDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref System.Numerics.Vector3 PrevAvoidDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 924);
 
     /// <summary>
     /// FloatProperty: KeepPrevDestPointCos
@@ -1117,20 +1144,14 @@ public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_G
     /// <summary>
     /// StructProperty: InitialCowerPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialCowerPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialCowerPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 996);
 
     /// <summary>
     /// StructProperty: InitialCowerAvoidActorOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialCowerAvoidActorOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialCowerAvoidActorOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1008);
 
     /// <summary>
     /// FloatProperty: RepathCowerMoveStartTime

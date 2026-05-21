@@ -21,6 +21,11 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RBMBehaviour_BagCarrier.
+    /// </summary>
+    public static RBMBehaviour_BagCarrier DefaultObject => (RBMBehaviour_BagCarrier)StaticClass().DefaultObject;
+
     internal RBMBehaviour_BagCarrier() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RBMBehaviour_BagCarrier(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBMBehaviour_BagCarrier>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -1112,7 +1157,7 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// Enum: eLootPointInteractDirection
     /// </summary>
-    public enum eLootPointInteractDirection
+    public enum eLootPointInteractDirection : byte
     {
         eLPIDNotSet = 0,
         eLPIDStraight = 1,
@@ -1448,11 +1493,8 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// StructProperty: transID
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId transID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId transID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 792);
 
     /// <summary>
     /// FloatProperty: timeSinceRepathCheck
@@ -1529,11 +1571,8 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// StructProperty: cachedDropoffDestination
     /// </summary>
-    public unsafe System.Numerics.Vector3 cachedDropoffDestination
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 828); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
-    }
+    public unsafe ref System.Numerics.Vector3 cachedDropoffDestination
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 828);
 
     /// <summary>
     /// IntProperty: nextWaypointIndex
@@ -1556,11 +1595,8 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// StructProperty: pickupFromFloorAnimStartLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 pickupFromFloorAnimStartLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
-    }
+    public unsafe ref System.Numerics.Vector3 pickupFromFloorAnimStartLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 848);
 
     /// <summary>
     /// FloatProperty: PostCheatChaseStartTime
@@ -1592,9 +1628,6 @@ public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarr
     /// <summary>
     /// StructProperty: FuturePathAimPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 FuturePathAimPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref System.Numerics.Vector3 FuturePathAimPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 868);
 }

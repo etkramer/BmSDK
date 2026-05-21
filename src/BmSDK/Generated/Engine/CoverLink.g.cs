@@ -21,52 +21,62 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as CoverLink.
+    /// </summary>
+    public static CoverLink DefaultObject => (CoverLink)StaticClass().DefaultObject;
+
     internal CoverLink() { }
 
     /// <summary>
     /// Constructs a new CoverLink
     /// </summary>
-    public CoverLink(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, CoverLink Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public CoverLink(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected CoverLink(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<CoverLink>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<CoverLink>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<CoverLink>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<CoverLink>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<CoverLink>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<CoverLink>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<CoverLink>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<CoverLink>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetDebugAbbrev
@@ -1007,7 +1017,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: EFireLinkID
     /// </summary>
-    public enum EFireLinkID
+    public enum EFireLinkID : byte
     {
         FLI_FireLink = 0,
         FLI_RejectedFireLink = 1,
@@ -1017,7 +1027,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverLocationDescription
     /// </summary>
-    public enum ECoverLocationDescription
+    public enum ECoverLocationDescription : byte
     {
         CoverDesc_None = 0,
         CoverDesc_InWindow = 1,
@@ -1037,7 +1047,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverType
     /// </summary>
-    public enum ECoverType
+    public enum ECoverType : byte
     {
         CT_None = 0,
         CT_Standing = 1,
@@ -1048,7 +1058,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverDirection
     /// </summary>
-    public enum ECoverDirection
+    public enum ECoverDirection : byte
     {
         CD_Default = 0,
         CD_Left = 1,
@@ -1060,7 +1070,7 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECoverAction
     /// </summary>
-    public enum ECoverAction
+    public enum ECoverAction : byte
     {
         CA_Default = 0,
         CA_BlindLeft = 1,
@@ -1369,11 +1379,8 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CircularOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 CircularOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1008); }
-    }
+    public unsafe ref System.Numerics.Vector3 CircularOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1008);
 
     /// <summary>
     /// FloatProperty: CircularRadius
@@ -1423,29 +1430,20 @@ public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: StandingLeanOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandingLeanOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1040); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandingLeanOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1040);
 
     /// <summary>
     /// StructProperty: CrouchLeanOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrouchLeanOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1052); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrouchLeanOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1052);
 
     /// <summary>
     /// StructProperty: PopupOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PopupOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
-    }
+    public unsafe ref System.Numerics.Vector3 PopupOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1064);
 
     /// <summary>
     /// FloatProperty: SlipDist

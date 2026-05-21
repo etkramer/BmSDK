@@ -21,6 +21,11 @@ public partial class RVehicleWeapon : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleWeapon.
+    /// </summary>
+    public static RVehicleWeapon DefaultObject => (RVehicleWeapon)StaticClass().DefaultObject;
+
     internal RVehicleWeapon() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RVehicleWeapon : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// </summary>
     protected RVehicleWeapon(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleWeapon>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: BattleModeExitted
@@ -585,7 +595,7 @@ public partial class RVehicleWeapon : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// Enum: EHudDisplayLevel
     /// </summary>
-    public enum EHudDisplayLevel
+    public enum EHudDisplayLevel : byte
     {
         EHDL_Unavailable = 0,
         EHDL_Available = 1,
@@ -597,7 +607,7 @@ public partial class RVehicleWeapon : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// Enum: ELockOnBeepStage
     /// </summary>
-    public enum ELockOnBeepStage
+    public enum ELockOnBeepStage : byte
     {
         ELBS_None = 0,
         ELBS_LockingOn = 1,
@@ -734,29 +744,20 @@ public partial class RVehicleWeapon : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// StructProperty: AimPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2100);
 
     /// <summary>
     /// StructProperty: AimVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 AimVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
-    }
+    public unsafe ref System.Numerics.Vector3 AimVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2112);
 
     /// <summary>
     /// StructProperty: WorldAimPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldAimPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2124); }
-    }
+    public unsafe ref System.Numerics.Vector3 WorldAimPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2124);
 
     /// <summary>
     /// FloatProperty: CursorSpeed
@@ -977,11 +978,8 @@ public partial class RVehicleWeapon : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     /// <summary>
     /// StructProperty: CrosshairOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector2 CrosshairOrigin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 2292); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2292); }
-    }
+    public unsafe ref System.Numerics.Vector2 CrosshairOrigin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector2>(Ptr + 2292);
 
     /// <summary>
     /// FloatProperty: LethalRadius

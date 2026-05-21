@@ -21,6 +21,11 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleCombatManager.
+    /// </summary>
+    public static RVehicleCombatManager DefaultObject => (RVehicleCombatManager)StaticClass().DefaultObject;
+
     internal RVehicleCombatManager() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleCombatManager(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleCombatManager>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: AddVehicleToEncounter
@@ -1619,7 +1664,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECriticalRunStage
     /// </summary>
-    public enum ECriticalRunStage
+    public enum ECriticalRunStage : byte
     {
         ECR_NotStarted = 0,
         ECR_InProgress = 1,
@@ -1630,7 +1675,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVehicleKillType
     /// </summary>
-    public enum EVehicleKillType
+    public enum EVehicleKillType : byte
     {
         EVKT_BodyShot = 0,
         EVKT_TurretShot = 1,
@@ -1759,7 +1804,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EChaseDifficulty
     /// </summary>
-    public enum EChaseDifficulty
+    public enum EChaseDifficulty : byte
     {
         EChaseDiff_IntroEasy = 0,
         EChaseDiff_Easy = 1,
@@ -3230,6 +3275,11 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RVehicleCombatManager.FDroneBarkTimer>>(Ptr + 524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
     }
+
+    /// <summary>
+    /// InlineArray{IntProperty}: BaseChallengeScorePerType
+    /// </summary>
+    public InlineArray<int> BaseChallengeScorePerType => new(17, Ptr + 540);
 
     /// <summary>
     /// IntProperty: BaseChallengeScorePerType

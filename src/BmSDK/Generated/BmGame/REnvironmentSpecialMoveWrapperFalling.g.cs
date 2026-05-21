@@ -21,6 +21,11 @@ public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvir
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as REnvironmentSpecialMoveWrapperFalling.
+    /// </summary>
+    public static REnvironmentSpecialMoveWrapperFalling DefaultObject => (REnvironmentSpecialMoveWrapperFalling)StaticClass().DefaultObject;
+
     internal REnvironmentSpecialMoveWrapperFalling() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvir
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected REnvironmentSpecialMoveWrapperFalling(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<REnvironmentSpecialMoveWrapperFalling>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// FloatProperty: MinFallSpeed

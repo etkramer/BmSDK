@@ -21,6 +21,11 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleNPC.
+    /// </summary>
+    public static RVehicleNPC DefaultObject => (RVehicleNPC)StaticClass().DefaultObject;
+
     internal RVehicleNPC() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// </summary>
     protected RVehicleNPC(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleNPC>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: FreezeAttackDestroyTarget
@@ -3285,7 +3295,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVehicleGroupType
     /// </summary>
-    public enum EVehicleGroupType
+    public enum EVehicleGroupType : byte
     {
         EVGT_City = 0,
         EVGT_Checkpoint = 1,
@@ -3468,7 +3478,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWalkerWeaponTypes
     /// </summary>
-    public enum EWalkerWeaponTypes
+    public enum EWalkerWeaponTypes : byte
     {
         EWWT_Rockets = 0,
         EWWT_Missiles = 1,
@@ -3481,7 +3491,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVehicleSpawnType
     /// </summary>
-    public enum EVehicleSpawnType
+    public enum EVehicleSpawnType : byte
     {
         EVST_Unknown = 0,
         EVST_RiotZone = 1,
@@ -3802,7 +3812,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: VehiclePassengerIdleType
     /// </summary>
-    public enum VehiclePassengerIdleType
+    public enum VehiclePassengerIdleType : byte
     {
         VPIT_None = 0,
         VPIT_Custom = 1,
@@ -3814,7 +3824,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECanAttackTargetResult
     /// </summary>
-    public enum ECanAttackTargetResult
+    public enum ECanAttackTargetResult : byte
     {
         CATR_NoSee = 0,
         CATR_CanSeeButNotAttack = 1,
@@ -3825,7 +3835,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVehicleCombatEncounterType
     /// </summary>
-    public enum EVehicleCombatEncounterType
+    public enum EVehicleCombatEncounterType : byte
     {
         EVCE_NoEncounter = 0,
         EVCE_ChaseEncounter = 1,
@@ -4313,6 +4323,11 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: PassengersEntering
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RBMPawnAI> PassengersEntering => new(4, Ptr + 4984);
+
+    /// <summary>
     /// ObjectProperty: PassengersEntering
     /// </summary>
     public unsafe BmSDK.BmGame.RBMPawnAI PassengersEntering_0
@@ -4346,6 +4361,11 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: PassengerDefaultWeaponArchetypes
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RVehicleNPCWeapon> PassengerDefaultWeaponArchetypes => new(4, Ptr + 5016);
+
+    /// <summary>
     /// ObjectProperty: PassengerDefaultWeaponArchetypes
     /// </summary>
     public unsafe BmSDK.BmGame.RVehicleNPCWeapon PassengerDefaultWeaponArchetypes_0
@@ -4377,6 +4397,11 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPCWeapon>(Ptr + 5040); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5040); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: LastPassengerInSlot
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RBMPawnAI> LastPassengerInSlot => new(4, Ptr + 5048);
 
     /// <summary>
     /// ObjectProperty: LastPassengerInSlot
@@ -5881,20 +5906,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SelfDriveTrappedRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveTrappedRefPoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5480); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveTrappedRefPoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5480);
 
     /// <summary>
     /// StructProperty: SelfDriveTargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 SelfDriveTargetLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5492); }
-    }
+    public unsafe ref System.Numerics.Vector3 SelfDriveTargetLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5492);
 
     /// <summary>
     /// FloatProperty: TrappedEventDelay
@@ -6124,20 +6143,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TurretReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 TurretReferencePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5672); }
-    }
+    public unsafe ref System.Numerics.Vector3 TurretReferencePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5672);
 
     /// <summary>
     /// StructProperty: MachineGunReferencePoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 MachineGunReferencePoint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5684); }
-    }
+    public unsafe ref System.Numerics.Vector3 MachineGunReferencePoint
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5684);
 
     /// <summary>
     /// FloatProperty: TurretYaw
@@ -6178,11 +6191,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TurretLockedRotation
     /// </summary>
-    public unsafe BmSDK.Rotator TurretLockedRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 5712); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5712); }
-    }
+    public unsafe ref BmSDK.Rotator TurretLockedRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 5712);
 
     /// <summary>
     /// FloatProperty: ShootInitialDelay
@@ -6241,11 +6251,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ProjectileLaunchOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 ProjectileLaunchOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5752); }
-    }
+    public unsafe ref System.Numerics.Vector3 ProjectileLaunchOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5752);
 
     /// <summary>
     /// NameProperty: Projectile2LaunchSocket
@@ -6295,11 +6302,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AttackLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttackLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5788); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5788); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttackLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5788);
 
     /// <summary>
     /// NameProperty: DroneCombatEvTag
@@ -6430,11 +6434,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: FlipDeadTorque
     /// </summary>
-    public unsafe System.Numerics.Vector3 FlipDeadTorque
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5868); }
-    }
+    public unsafe ref System.Numerics.Vector3 FlipDeadTorque
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5868);
 
     /// <summary>
     /// FloatProperty: FlipDeadDuration
@@ -6475,11 +6476,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DeathParticleSystemVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 DeathParticleSystemVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5900); }
-    }
+    public unsafe ref System.Numerics.Vector3 DeathParticleSystemVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5900);
 
     /// <summary>
     /// FloatProperty: DeathParticleSystemVelocityTime
@@ -6511,20 +6509,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CrushPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrushPos
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5924); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrushPos
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5924);
 
     /// <summary>
     /// StructProperty: CrushNeg
     /// </summary>
-    public unsafe System.Numerics.Vector3 CrushNeg
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5936); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5936); }
-    }
+    public unsafe ref System.Numerics.Vector3 CrushNeg
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5936);
 
     /// <summary>
     /// FloatProperty: FatalDamageImpulseMin
@@ -6574,20 +6566,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DirWhenAttackStarted
     /// </summary>
-    public unsafe System.Numerics.Vector3 DirWhenAttackStarted
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5980); }
-    }
+    public unsafe ref System.Numerics.Vector3 DirWhenAttackStarted
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5980);
 
     /// <summary>
     /// StructProperty: LOSCheckOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 LOSCheckOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 5992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5992); }
-    }
+    public unsafe ref System.Numerics.Vector3 LOSCheckOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 5992);
 
     /// <summary>
     /// FloatProperty: InterrogationAuraAlpha
@@ -6671,37 +6657,30 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: Passengers
+    /// InlineArray{StructProperty}: Passengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6040); }
-    }
+    public InlineArray<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger> Passengers => new(4, Ptr + 6040);
+
     /// <summary>
     /// StructProperty: Passengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6252); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6040);
     /// <summary>
     /// StructProperty: Passengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6464); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6252);
     /// <summary>
     /// StructProperty: Passengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6676); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6464);
+    /// <summary>
+    /// StructProperty: Passengers
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehiclePassenger Passengers_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger>(Ptr + 6676);
 
     /// <summary>
     /// ArrayProperty: UnconsciousPassengers
@@ -6715,29 +6694,20 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CombatMovementRestrictions
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction CombatMovementRestrictions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 6904); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6904); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction CombatMovementRestrictions
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadNetwork.FRoadRouteRestriction>(Ptr + 6904);
 
     /// <summary>
     /// StructProperty: IndoorVisionCones
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet IndoorVisionCones
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet>(Ptr + 7072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7072); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet IndoorVisionCones
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet>(Ptr + 7072);
 
     /// <summary>
     /// StructProperty: OutdoorVisionCones
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet OutdoorVisionCones
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet>(Ptr + 7120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7120); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet OutdoorVisionCones
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet>(Ptr + 7120);
 
     /// <summary>
     /// FloatProperty: LOSShootCheckZOffset
@@ -6751,20 +6721,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VisionCones
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet VisionCones
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet>(Ptr + 7172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7172); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet VisionCones
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleNPC.FVehicleVisionSet>(Ptr + 7172);
 
     /// <summary>
     /// StructProperty: ExplosionScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ExplosionScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 7220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7220); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ExplosionScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 7220);
 
     /// <summary>
     /// FloatProperty: TimeSinceLastDriverBark
@@ -6868,11 +6832,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: DefaultWaveSpawnerProperties
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleEnemyDesc DefaultWaveSpawnerProperties
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleEnemyDesc>(Ptr + 7428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7428); }
-    }
+    public unsafe ref BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleEnemyDesc DefaultWaveSpawnerProperties
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RSeqAct_VehicleEnemySpawner.FSpawnedVehicleEnemyDesc>(Ptr + 7428);
 
     /// <summary>
     /// IntProperty: MassResetTimer
@@ -6886,20 +6847,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: TrailLastPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 TrailLastPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7520); }
-    }
+    public unsafe ref System.Numerics.Vector3 TrailLastPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7520);
 
     /// <summary>
     /// StructProperty: FireRotationOffset
     /// </summary>
-    public unsafe BmSDK.Rotator FireRotationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 7532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7532); }
-    }
+    public unsafe ref BmSDK.Rotator FireRotationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 7532);
 
     /// <summary>
     /// FloatProperty: MissileLockOnDuration
@@ -6931,11 +6886,8 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmanTakedownLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmanTakedownLocationOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7568); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmanTakedownLocationOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7568);
 
     /// <summary>
     /// FloatProperty: AwareOfPlayerTime
@@ -6967,20 +6919,14 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastSafeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSafeLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 7592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7592); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSafeLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 7592);
 
     /// <summary>
     /// StructProperty: LastSafeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastSafeRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 7604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7604); }
-    }
+    public unsafe ref BmSDK.Rotator LastSafeRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 7604);
 
     /// <summary>
     /// FloatProperty: FallingTime

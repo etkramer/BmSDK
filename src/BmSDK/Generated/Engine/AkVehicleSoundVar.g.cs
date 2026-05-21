@@ -21,6 +21,11 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkVehicleSoundVar.
+    /// </summary>
+    public static AkVehicleSoundVar DefaultObject => (AkVehicleSoundVar)StaticClass().DefaultObject;
+
     internal AkVehicleSoundVar() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkVehicleSoundVar(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundVar>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: FireEMP
@@ -902,11 +947,8 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: m_CurrentEngine
     /// </summary>
-    public unsafe BmSDK.Engine.AkVehicleSoundVar.FEngineParameters m_CurrentEngine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundVar.FEngineParameters>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref BmSDK.Engine.AkVehicleSoundVar.FEngineParameters m_CurrentEngine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkVehicleSoundVar.FEngineParameters>(Ptr + 132);
 
     /// <summary>
     /// StructProperty: m_LastUpdateTime
@@ -1577,11 +1619,8 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: m_MEFootModel
     /// </summary>
-    public unsafe BmSDK.Engine.AkVehicleSoundVar.FRightFootModel m_MEFootModel
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundVar.FRightFootModel>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
+    public unsafe ref BmSDK.Engine.AkVehicleSoundVar.FRightFootModel m_MEFootModel
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkVehicleSoundVar.FRightFootModel>(Ptr + 532);
 
     /// <summary>
     /// ArrayProperty: m_EngineThoughts
@@ -1613,20 +1652,14 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: m_RPMCurve
     /// </summary>
-    public unsafe BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve m_RPMCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
-    }
+    public unsafe ref BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve m_RPMCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve>(Ptr + 576);
 
     /// <summary>
     /// StructProperty: m_LoadCurve
     /// </summary>
-    public unsafe BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve m_LoadCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve>(Ptr + 596); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
-    }
+    public unsafe ref BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve m_LoadCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkVehicleSoundVar.FVehicleCurve>(Ptr + 596);
 
     /// <summary>
     /// FloatProperty: m_LastTimeOfRPMDominance
@@ -1703,20 +1736,14 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: dbgLookaheadRaycastStart
     /// </summary>
-    public unsafe System.Numerics.Vector3 dbgLookaheadRaycastStart
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 664); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
-    }
+    public unsafe ref System.Numerics.Vector3 dbgLookaheadRaycastStart
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 664);
 
     /// <summary>
     /// StructProperty: dbgLookaheadRaycastEnd
     /// </summary>
-    public unsafe System.Numerics.Vector3 dbgLookaheadRaycastEnd
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
-    }
+    public unsafe ref System.Numerics.Vector3 dbgLookaheadRaycastEnd
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 676);
 
     /// <summary>
     /// StructProperty: m_LookAheadHitTime
@@ -1730,11 +1757,8 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: m_LookAheadHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle m_LookAheadHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle m_LookAheadHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 696);
 
     /// <summary>
     /// StructProperty: m_EnableLookAheadTime
@@ -1748,11 +1772,8 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: m_PreviousAltRPMVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 m_PreviousAltRPMVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
-    }
+    public unsafe ref System.Numerics.Vector3 m_PreviousAltRPMVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 720);
 
     /// <summary>
     /// StructProperty: m_LastJumpTime
@@ -1856,20 +1877,14 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: dbgAltVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 dbgAltVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 800); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
-    }
+    public unsafe ref System.Numerics.Vector3 dbgAltVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 800);
 
     /// <summary>
     /// StructProperty: dbgAltDifVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 dbgAltDifVector
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref System.Numerics.Vector3 dbgAltDifVector
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 812);
 
     /// <summary>
     /// FloatProperty: dbgOverallSqueal
@@ -2257,7 +2272,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DrivingFootMode
     /// </summary>
-    public enum DrivingFootMode
+    public enum DrivingFootMode : byte
     {
         EDFM_Accelerating = 0,
         EDFM_Coasting = 1,
@@ -2670,7 +2685,7 @@ public partial class AkVehicleSoundVar : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EVehicleEngineModel
     /// </summary>
-    public enum EVehicleEngineModel
+    public enum EVehicleEngineModel : byte
     {
         EVehicleEngineModel_NONE = 0,
         EVehicleEngineModel_DIRECT = 1,

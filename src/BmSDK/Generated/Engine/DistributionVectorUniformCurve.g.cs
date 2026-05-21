@@ -21,6 +21,11 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as DistributionVectorUniformCurve.
+    /// </summary>
+    public static DistributionVectorUniformCurve DefaultObject => (DistributionVectorUniformCurve)StaticClass().DefaultObject;
+
     internal DistributionVectorUniformCurve() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     /// </summary>
     protected DistributionVectorUniformCurve(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<DistributionVectorUniformCurve>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: ConstantCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveTwoVectors ConstantCurve
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveTwoVectors>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
-    }
+    public unsafe ref BmSDK.GameObject.FInterpCurveTwoVectors ConstantCurve
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FInterpCurveTwoVectors>(Ptr + 112);
 
     /// <summary>
     /// BoolProperty: bLockAxes1
@@ -70,6 +112,11 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: LockedAxes
+    /// </summary>
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorLockFlags> LockedAxes => new(2, Ptr + 136);
+
+    /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
     public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes_0
@@ -85,6 +132,11 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 137); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 137); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: MirrorFlags
+    /// </summary>
+    public InlineArray<BmSDK.DistributionVector.EDistributionVectorMirrorFlags> MirrorFlags => new(3, Ptr + 138);
 
     /// <summary>
     /// ByteProperty: MirrorFlags

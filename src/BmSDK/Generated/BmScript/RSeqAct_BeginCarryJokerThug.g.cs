@@ -21,6 +21,11 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqAct_BeginCarryJokerThug.
+    /// </summary>
+    public static RSeqAct_BeginCarryJokerThug DefaultObject => (RSeqAct_BeginCarryJokerThug)StaticClass().DefaultObject;
+
     internal RSeqAct_BeginCarryJokerThug() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_BeginCarryJokerThug(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqAct_BeginCarryJokerThug>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetObjClassVersion
@@ -151,7 +196,7 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// Enum: JokerTypes
     /// </summary>
-    public enum JokerTypes
+    public enum JokerTypes : byte
     {
         JT_None = 0,
         JT_Cop = 1,
@@ -281,20 +326,14 @@ public partial class RSeqAct_BeginCarryJokerThug : BmSDK.BmGame.RSeqAct_BeginCar
     /// <summary>
     /// StructProperty: AttachOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttachOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 444);
 
     /// <summary>
     /// StructProperty: AttachRot
     /// </summary>
-    public unsafe BmSDK.Rotator AttachRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
-    }
+    public unsafe ref BmSDK.Rotator AttachRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 456);
 
     /// <summary>
     /// ArrayProperty: HarleyAdditives

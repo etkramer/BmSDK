@@ -21,6 +21,11 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRopeComponent.
+    /// </summary>
+    public static RRopeComponent DefaultObject => (RRopeComponent)StaticClass().DefaultObject;
+
     internal RRopeComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRopeComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRopeComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: GetIsOverstretched
@@ -190,20 +235,14 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: RopeAttachRenderOffset1
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeAttachRenderOffset1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeAttachRenderOffset1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 748);
 
     /// <summary>
     /// StructProperty: RopeAttachRenderOffset2
     /// </summary>
-    public unsafe System.Numerics.Vector3 RopeAttachRenderOffset2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref System.Numerics.Vector3 RopeAttachRenderOffset2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 760);
 
     /// <summary>
     /// FloatProperty: RopeDensity
@@ -431,7 +470,7 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
     /// <summary>
     /// Enum: ELoDUpdateMode
     /// </summary>
-    public enum ELoDUpdateMode
+    public enum ELoDUpdateMode : byte
     {
         LODUPDATEMODE_Normal = 0,
         LODUPDATEMODE_FixedLeafLength = 1,

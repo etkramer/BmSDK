@@ -21,6 +21,11 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RProjectileGadgetBase.
+    /// </summary>
+    public static RProjectileGadgetBase DefaultObject => (RProjectileGadgetBase)StaticClass().DefaultObject;
+
     internal RProjectileGadgetBase() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
     /// </summary>
     protected RProjectileGadgetBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RProjectileGadgetBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnRoomChange
@@ -785,118 +795,81 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
     }
 
     /// <summary>
-    /// StructProperty: ThrowDirectionTypes
+    /// InlineArray{StructProperty}: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2172); }
-    }
+    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2172);
+
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2188); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2172);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2204); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2188);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2220); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2204);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2220);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2252); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2236);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2268); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2252);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2284); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2268);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2300); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2284);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2316); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2300);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2332); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2316);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2348); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2332);
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2364); }
-    }
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2348);
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer ThrowDirectionTypes_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer>(Ptr + 2364);
 
     /// <summary>
     /// StructProperty: InitialVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 InitialVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2380); }
-    }
+    public unsafe ref System.Numerics.Vector3 InitialVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2380);
 
     /// <summary>
     /// ByteProperty: LastMirrorChoice
@@ -919,125 +892,85 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
     /// <summary>
     /// StructProperty: TargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2396); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
-    }
+    public unsafe ref System.Numerics.Vector3 TargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2396);
 
     /// <summary>
     /// StructProperty: RenderTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RenderTargetLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2408); }
-    }
+    public unsafe ref System.Numerics.Vector3 RenderTargetLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2408);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: ThrowOffsetPosition
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> ThrowOffsetPosition => new(13, Ptr + 2420);
 
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2420); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2420);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2432);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2444); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2444);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2456); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2456);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2468); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2468);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2480); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2480);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2492); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2492);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2504); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2504);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2516); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2516);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2528); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2528);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2540); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2540);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2552); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2552);
     /// <summary>
     /// StructProperty: ThrowOffsetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 ThrowOffsetPosition_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2564); }
-    }
+    public unsafe ref System.Numerics.Vector3 ThrowOffsetPosition_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2564);
 
     /// <summary>
     /// FloatProperty: AOERadius

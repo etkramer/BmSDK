@@ -21,6 +21,11 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AnimNodeSequence.
+    /// </summary>
+    public static AnimNodeSequence DefaultObject => (AnimNodeSequence)StaticClass().DefaultObject;
+
     internal AnimNodeSequence() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AnimNodeSequence(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AnimNodeSequence>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetRootBoneRotationOption
@@ -302,7 +347,7 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootRotationOption
     /// </summary>
-    public enum ERootRotationOption
+    public enum ERootRotationOption : byte
     {
         RRO_Default = 0,
         RRO_Discard = 1,
@@ -313,7 +358,7 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Enum: ERootBoneAxis
     /// </summary>
-    public enum ERootBoneAxis
+    public enum ERootBoneAxis : byte
     {
         RBA_Default = 0,
         RBA_Discard = 1,
@@ -637,6 +682,11 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: RootBoneOption
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis> RootBoneOption => new(3, Ptr + 364);
+
+    /// <summary>
     /// ByteProperty: RootBoneOption
     /// </summary>
     public unsafe BmSDK.Engine.AnimNodeSequence.ERootBoneAxis RootBoneOption_0
@@ -660,6 +710,11 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis>(Ptr + 366); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 366); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: RootRotationOption
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AnimNodeSequence.ERootRotationOption> RootRotationOption => new(3, Ptr + 367);
 
     /// <summary>
     /// ByteProperty: RootRotationOption

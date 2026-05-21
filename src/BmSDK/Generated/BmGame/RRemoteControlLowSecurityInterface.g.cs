@@ -108,7 +108,7 @@ public partial interface RRemoteControlLowSecurityInterface : BmSDK.Interface
     /// <summary>
     /// Enum: EOmnitronInteractionType
     /// </summary>
-    public enum EOmnitronInteractionType
+    public enum EOmnitronInteractionType : byte
     {
         OIT_Trigger = 0,
         OIT_TriggerPlusSecondary = 1,

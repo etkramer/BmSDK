@@ -21,6 +21,11 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as SpeechRecognition.
+    /// </summary>
+    public static SpeechRecognition DefaultObject => (SpeechRecognition)StaticClass().DefaultObject;
+
     internal SpeechRecognition() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SpeechRecognition(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<SpeechRecognition>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// StrProperty: Language
@@ -88,37 +133,30 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: InstanceData
+    /// InlineArray{StructProperty}: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public InlineArray<BmSDK.Engine.SpeechRecognition.FRecogUserData> InstanceData => new(4, Ptr + 168);
+
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 168);
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 188);
     /// <summary>
     /// StructProperty: InstanceData
     /// </summary>
-    public unsafe BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 208);
+    /// <summary>
+    /// StructProperty: InstanceData
+    /// </summary>
+    public unsafe ref BmSDK.Engine.SpeechRecognition.FRecogUserData InstanceData_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.SpeechRecognition.FRecogUserData>(Ptr + 228);
 
     /// <summary>
     /// BoolProperty: bDirty

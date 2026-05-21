@@ -21,6 +21,11 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LensFlare.
+    /// </summary>
+    public static LensFlare DefaultObject => (LensFlare)StaticClass().DefaultObject;
+
     internal LensFlare() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     protected LensFlare(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LensFlare>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LensFlare>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: SourceElement
     /// </summary>
-    public unsafe BmSDK.Engine.LensFlare.FLensFlareElement SourceElement
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LensFlare.FLensFlareElement>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
-    }
+    public unsafe ref BmSDK.Engine.LensFlare.FLensFlareElement SourceElement
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LensFlare.FLensFlareElement>(Ptr + 84);
 
     /// <summary>
     /// ObjectProperty: SourceMesh
@@ -180,20 +222,14 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ScreenPercentageMap
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat ScreenPercentageMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat ScreenPercentageMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 700);
 
     /// <summary>
     /// StructProperty: FixedRelativeBoundingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox FixedRelativeBoundingBox
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref BmSDK.GameObject.FBox FixedRelativeBoundingBox
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 736);
 
     /// <summary>
     /// IntProperty: ReflectionCount
@@ -207,11 +243,8 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ThumbnailAngle
     /// </summary>
-    public unsafe BmSDK.Rotator ThumbnailAngle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref BmSDK.Rotator ThumbnailAngle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 768);
 
     /// <summary>
     /// FloatProperty: ThumbnailDistance

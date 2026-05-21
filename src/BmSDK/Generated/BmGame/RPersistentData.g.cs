@@ -21,6 +21,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RPersistentData.
+    /// </summary>
+    public static RPersistentData DefaultObject => (RPersistentData)StaticClass().DefaultObject;
+
     internal RPersistentData() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RPersistentData(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RPersistentData>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: LoadDialogue
@@ -1405,7 +1450,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: BluntTraumaTakedowns
     /// </summary>
-    public enum BluntTraumaTakedowns
+    public enum BluntTraumaTakedowns : byte
     {
         BluntTrauma_Standing = 0,
         BluntTrauma_TunnelGrate = 1,
@@ -2092,7 +2137,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DynamicPopulation_SideStories
     /// </summary>
-    public enum DynamicPopulation_SideStories
+    public enum DynamicPopulation_SideStories : byte
     {
         DynamicPopulation_SideStory_Penguin = 0,
         DynamicPopulation_SideStory_APCChase = 1,
@@ -2102,7 +2147,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DynamicPopulation_PopulationDefines_Version
     /// </summary>
-    public enum DynamicPopulation_PopulationDefines_Version
+    public enum DynamicPopulation_PopulationDefines_Version : byte
     {
         DynamicPopulation_PopulationDefines_Initial = 0,
         DynamicPopulation_PopulationDefines_SideStories = 1,
@@ -2287,7 +2332,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: DynamicPopulation_APCSideStory_Version
     /// </summary>
-    public enum DynamicPopulation_APCSideStory_Version
+    public enum DynamicPopulation_APCSideStory_Version : byte
     {
         DynamicPopulation_APCSideStory_Initial = 0,
         DynamicPopulation_APCSideStory_WheelTimer = 1,
@@ -2331,7 +2376,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: OverrideThreatLevel
     /// </summary>
-    public enum OverrideThreatLevel
+    public enum OverrideThreatLevel : byte
     {
         OverrideThreatLevel_Initial = 0,
         OverrideThreatLevel_MAX = 1,
@@ -2392,7 +2437,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: SideStoryMapIcon_Data_Version
     /// </summary>
-    public enum SideStoryMapIcon_Data_Version
+    public enum SideStoryMapIcon_Data_Version : byte
     {
         SideStoryMapIcon_Data_Version_Initial = 0,
         SideStoryMapIcon_Data_Version_MAX = 1,
@@ -2606,11 +2651,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: MostWanted_Data_Version
     /// </summary>
-    public enum MostWanted_Data_Version
+    public enum MostWanted_Data_Version : byte
     {
         MostWanted_Data_Version_Initial = 0,
         MostWanted_Data_Version_LastUpdateTime = 1,
-        MostWanted_Data_Version_GCPDBoard = 2,
+        MostWanted_Data_Version_GCPDBoard_1 = 2,
         MostWanted_Data_Version_JokerVideoName = 3,
         MostWanted_Data_Version_PointOfInterestProgressThought = 4,
         MostWanted_Data_Version_NewFlag = 5,
@@ -2721,7 +2766,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: MostWanted_IconData_Version
     /// </summary>
-    public enum MostWanted_IconData_Version
+    public enum MostWanted_IconData_Version : byte
     {
         MostWanted_IconData_Version_Initial = 0,
         MostWanted_IconData_Version_MAX = 1,
@@ -2773,7 +2818,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: TrailItems_Version
     /// </summary>
-    public enum TrailItems_Version
+    public enum TrailItems_Version : byte
     {
         EvidenceTrail_Version_Initial = 0,
         EvidenceTrail_Version_MAX = 1,
@@ -2782,7 +2827,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: JokerSickStages
     /// </summary>
-    public enum JokerSickStages
+    public enum JokerSickStages : byte
     {
         JokerSick_StageSick = 0,
         JokerSick_Stage2 = 1,
@@ -2971,7 +3016,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ETutorialType
     /// </summary>
-    public enum ETutorialType
+    public enum ETutorialType : byte
     {
         TUT_None = 0,
         TUT_Combat_Strike = 1,
@@ -3079,7 +3124,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBatmobileDriveTutorialStage
     /// </summary>
-    public enum EBatmobileDriveTutorialStage
+    public enum EBatmobileDriveTutorialStage : byte
     {
         EBDTS_None = 0,
         EBDTS_Accelerate = 1,
@@ -3118,20 +3163,14 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: PlayerLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 92);
 
     /// <summary>
     /// StructProperty: PlayerRotation
     /// </summary>
-    public unsafe BmSDK.Rotator PlayerRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
+    public unsafe ref BmSDK.Rotator PlayerRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 104);
 
     /// <summary>
     /// ByteProperty: StartInBatmobile
@@ -3330,6 +3369,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 137); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 137); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: CurrentSideChapter
+    /// </summary>
+    public InlineArray<byte> CurrentSideChapter => new(52, Ptr + 138);
 
     /// <summary>
     /// ByteProperty: CurrentSideChapter
@@ -3747,6 +3791,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 189); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 189); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: CurrentSideSubChapter
+    /// </summary>
+    public InlineArray<byte> CurrentSideSubChapter => new(52, Ptr + 190);
 
     /// <summary>
     /// ByteProperty: CurrentSideSubChapter
@@ -4202,6 +4251,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: PrepareSideChapter
+    /// </summary>
+    public InlineArray<byte> PrepareSideChapter => new(26, Ptr + 246);
+
+    /// <summary>
     /// ByteProperty: PrepareSideChapter
     /// </summary>
     public unsafe byte PrepareSideChapter_0
@@ -4409,6 +4463,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 271); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 271); }
     }
+
+    /// <summary>
+    /// InlineArray{ByteProperty}: PrepareSideSubChapter
+    /// </summary>
+    public InlineArray<byte> PrepareSideSubChapter => new(26, Ptr + 272);
 
     /// <summary>
     /// ByteProperty: PrepareSideSubChapter
@@ -4908,6 +4967,11 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
+    /// InlineArray{ByteProperty}: BluntTraumaTakedownsPerformed
+    /// </summary>
+    public InlineArray<byte> BluntTraumaTakedownsPerformed => new(15, Ptr + 330);
+
+    /// <summary>
     /// ByteProperty: BluntTraumaTakedownsPerformed
     /// </summary>
     public unsafe byte BluntTraumaTakedownsPerformed_0
@@ -5040,11 +5104,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastDoorData
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastDoorData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastDoorData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 348);
 
     /// <summary>
     /// IntProperty: LastDoorRotation
@@ -5283,11 +5344,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastScannedLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastScannedLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 696); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastScannedLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 696);
 
     /// <summary>
     /// StrProperty: LastAmbientSoundCue
@@ -5605,109 +5663,80 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: HelpPrompt_BatmobileDriveTutorial
+    /// InlineArray{StructProperty}: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 872); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
-    }
+    public InlineArray<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection> HelpPrompt_BatmobileDriveTutorial => new(13, Ptr + 872);
+
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 884); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 872);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 884);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 908); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 908); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 896);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 908);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 932); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 920);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_6
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 932);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_7
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 956); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_6
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 944);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_8
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_7
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 956);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_9
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_8
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 968);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_10
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 992); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_9
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 980);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_11
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 1004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1004); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_10
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 992);
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_12
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 1016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_11
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 1004);
+    /// <summary>
+    /// StructProperty: HelpPrompt_BatmobileDriveTutorial
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection HelpPrompt_BatmobileDriveTutorial_12
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection>(Ptr + 1016);
+
+    /// <summary>
+    /// InlineArray{StrProperty}: BatmobileTutorialFlagToSetWhenComplete
+    /// </summary>
+    public InlineArray<BmSDK.FString> BatmobileTutorialFlagToSetWhenComplete => new(13, Ptr + 1028);
 
     /// <summary>
     /// StrProperty: BatmobileTutorialFlagToSetWhenComplete
@@ -6033,11 +6062,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: vObjectiveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vObjectiveLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1400); }
-    }
+    public unsafe ref System.Numerics.Vector3 vObjectiveLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1400);
 
     /// <summary>
     /// ArrayProperty: CustomWaypoint
@@ -6546,20 +6572,14 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BatmobileSafePointLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BatmobileSafePointLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2100); }
-    }
+    public unsafe ref System.Numerics.Vector3 BatmobileSafePointLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2100);
 
     /// <summary>
     /// StructProperty: BatmobileSafePointRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BatmobileSafePointRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 2112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
-    }
+    public unsafe ref BmSDK.Rotator BatmobileSafePointRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 2112);
 
     /// <summary>
     /// StrProperty: BatmobileSafePointLevel
@@ -6598,37 +6618,30 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: BatmobilePassengers
+    /// InlineArray{StructProperty}: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2176); }
-    }
+    public InlineArray<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave> BatmobilePassengers => new(4, Ptr + 2176);
+
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2260); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2176);
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2344); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2260);
     /// <summary>
     /// StructProperty: BatmobilePassengers
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2344);
+    /// <summary>
+    /// StructProperty: BatmobilePassengers
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave BatmobilePassengers_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave>(Ptr + 2428);
 
     /// <summary>
     /// IntProperty: JokerRooftopChapterDialogueIndex
@@ -6795,38 +6808,26 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: UsedOnceOnlyLine
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror UsedOnceOnlyLine
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 2704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror UsedOnceOnlyLine
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 2704);
 
     /// <summary>
     /// StructProperty: DialogueOnceOnlyEvents
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror DialogueOnceOnlyEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 2776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2776); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror DialogueOnceOnlyEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 2776);
 
     /// <summary>
     /// StructProperty: SavedDialoguePlayCounts
     /// </summary>
-    public unsafe BmSDK.GameObject.FMap_Mirror SavedDialoguePlayCounts
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMap_Mirror>(Ptr + 2848); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2848); }
-    }
+    public unsafe ref BmSDK.GameObject.FMap_Mirror SavedDialoguePlayCounts
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FMap_Mirror>(Ptr + 2848);
 
     /// <summary>
     /// StructProperty: SavedDialogueOnceEverEvents
     /// </summary>
-    public unsafe BmSDK.GameObject.FSet_Mirror SavedDialogueOnceEverEvents
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FSet_Mirror>(Ptr + 2920); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2920); }
-    }
+    public unsafe ref BmSDK.GameObject.FSet_Mirror SavedDialogueOnceEverEvents
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FSet_Mirror>(Ptr + 2920);
 
     /// <summary>
     /// IntProperty: NumVehicleTakedowns
@@ -6840,11 +6841,8 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: APCInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.FAPCSideStoryInfo APCInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.FAPCSideStoryInfo>(Ptr + 2996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2996); }
-    }
+    public unsafe ref BmSDK.BmGame.RPersistentData.FAPCSideStoryInfo APCInfo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RPersistentData.FAPCSideStoryInfo>(Ptr + 2996);
 
     /// <summary>
     /// ArrayProperty: DistrictRandomPopulation
@@ -6894,20 +6892,14 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: RasTrailMobileWaypointLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 RasTrailMobileWaypointLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3164); }
-    }
+    public unsafe ref System.Numerics.Vector3 RasTrailMobileWaypointLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3164);
 
     /// <summary>
     /// StructProperty: RasTrailMobileWaypointLastBreadrumbLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 RasTrailMobileWaypointLastBreadrumbLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 3176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3176); }
-    }
+    public unsafe ref System.Numerics.Vector3 RasTrailMobileWaypointLastBreadrumbLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 3176);
 
     /// <summary>
     /// ArrayProperty: PersistentLevelNames
@@ -6930,10 +6922,10 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EBatmanChallenge
     /// </summary>
-    public enum EBatmanChallenge
+    public enum EBatmanChallenge : byte
     {
         EBatChal_None = 0,
-        EBatChal = 1,
+        EBatChal_1 = 1,
         EBatChal_2 = 2,
         EBatChal_3 = 3,
         EBatChal_4 = 4,
@@ -6984,7 +6976,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EProgressLocations
     /// </summary>
-    public enum EProgressLocations
+    public enum EProgressLocations : byte
     {
         EPL_Unknown = 0,
         EPL_GCPD = 1,
@@ -7013,7 +7005,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECustomWayPointType
     /// </summary>
-    public enum ECustomWayPointType
+    public enum ECustomWayPointType : byte
     {
         CustomWayType_Proximity = 0,
         CustomWayType_MapObj = 1,
@@ -7026,7 +7018,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EShowcaseVehicle
     /// </summary>
-    public enum EShowcaseVehicle
+    public enum EShowcaseVehicle : byte
     {
         ShowcaseVehicle_None = 0,
         Showcase_Batwing = 1,
@@ -7073,7 +7065,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EShowcaseCharacter
     /// </summary>
-    public enum EShowcaseCharacter
+    public enum EShowcaseCharacter : byte
     {
         ShowcaseCharacter_None = 0,
         Showcase_AaronCash = 1,
@@ -7162,7 +7154,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EConceptArt
     /// </summary>
-    public enum EConceptArt
+    public enum EConceptArt : byte
     {
         ConceptArt_None = 0,
         ConceptArt_Ace01 = 1,
@@ -7235,7 +7227,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ECM_MedalType
     /// </summary>
-    public enum ECM_MedalType
+    public enum ECM_MedalType : byte
     {
         ECM_Medal_None = 0,
         ECM_Medal_Bronze = 1,
@@ -7247,7 +7239,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: PDVersion
     /// </summary>
-    public enum PDVersion
+    public enum PDVersion : byte
     {
         PDVer_Initial = 0,
         PDVer_XPLevel = 1,

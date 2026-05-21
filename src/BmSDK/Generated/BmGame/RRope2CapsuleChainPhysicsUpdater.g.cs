@@ -21,6 +21,11 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRope2CapsuleChainPhysicsUpdater.
+    /// </summary>
+    public static RRope2CapsuleChainPhysicsUpdater DefaultObject => (RRope2CapsuleChainPhysicsUpdater)StaticClass().DefaultObject;
+
     internal RRope2CapsuleChainPhysicsUpdater() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRope2CapsuleChainPhysicsUpdater(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRope2CapsuleChainPhysicsUpdater>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// FloatProperty: RopeSwingLimitPerMetre
@@ -144,11 +189,8 @@ public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BaseP
     /// <summary>
     /// StructProperty: CapsuleChainInitData
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData CapsuleChainInitData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData>(Ptr + 284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
-    }
+    public unsafe ref BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData CapsuleChainInitData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRope2CapsuleChainPhysicsUpdater.FRope2CapsuleChainPhysicsUpdaterInitData>(Ptr + 284);
 
     /// <summary>
     /// StructProperty: RopeCapsuleChainPhysics

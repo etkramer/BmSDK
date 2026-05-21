@@ -21,6 +21,11 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkVehicleSoundInfo.
+    /// </summary>
+    public static AkVehicleSoundInfo DefaultObject => (AkVehicleSoundInfo)StaticClass().DefaultObject;
+
     internal AkVehicleSoundInfo() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkVehicleSoundInfo(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkVehicleSoundInfo>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// ObjectProperty: ParameterSetup
@@ -1557,20 +1602,14 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: EnvPawnInVehicleCabin
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkEnvironmentSettings EnvPawnInVehicleCabin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkEnvironmentSettings>(Ptr + 1432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1432); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkEnvironmentSettings EnvPawnInVehicleCabin
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkEnvironmentSettings>(Ptr + 1432);
 
     /// <summary>
     /// StructProperty: EnvPawnInVehicleBoot
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkEnvironmentSettings EnvPawnInVehicleBoot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkEnvironmentSettings>(Ptr + 1448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1448); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkEnvironmentSettings EnvPawnInVehicleBoot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkEnvironmentSettings>(Ptr + 1448);
 
     /// <summary>
     /// Struct: FInheritSetParam
@@ -1935,7 +1974,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EDrivingModes
     /// </summary>
-    public enum EDrivingModes
+    public enum EDrivingModes : byte
     {
         EDM_AccelerateFast = 0,
         EDM_AccelerateMedium = 1,
@@ -1952,7 +1991,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: EWheelTrigType
     /// </summary>
-    public enum EWheelTrigType
+    public enum EWheelTrigType : byte
     {
         EWT_Highest = 0,
         EWT_Average = 1,

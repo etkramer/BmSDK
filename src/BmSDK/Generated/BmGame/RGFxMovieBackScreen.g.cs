@@ -21,6 +21,11 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RGFxMovieBackScreen.
+    /// </summary>
+    public static RGFxMovieBackScreen DefaultObject => (RGFxMovieBackScreen)StaticClass().DefaultObject;
+
     internal RGFxMovieBackScreen() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RGFxMovieBackScreen(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RGFxMovieBackScreen>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetMapPostProcessValues
@@ -432,11 +477,8 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// StructProperty: RiddlerHandle
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle RiddlerHandle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkSoundHandle RiddlerHandle
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 1128);
 
     /// <summary>
     /// ObjectProperty: RGI
@@ -486,11 +528,8 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// StructProperty: WorldPPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
-    }
+    public unsafe ref BmSDK.Engine.PostProcessVolume.FPostProcessSettings WorldPPSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 1184);
 
     /// <summary>
     /// FloatProperty: MapMode3D_Alpha
@@ -504,7 +543,7 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Enum: RiddleLoadingStatus
     /// </summary>
-    public enum RiddleLoadingStatus
+    public enum RiddleLoadingStatus : byte
     {
         RLS_None = 0,
         RLS_Package = 1,
@@ -515,7 +554,7 @@ public partial class RGFxMovieBackScreen : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGame
     /// <summary>
     /// Enum: UpgradeItemType
     /// </summary>
-    public enum UpgradeItemType
+    public enum UpgradeItemType : byte
     {
         UIT_Batsuit = 0,
         UIT_Gadgets = 1,

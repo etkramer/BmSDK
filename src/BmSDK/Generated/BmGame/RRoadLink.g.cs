@@ -21,52 +21,62 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RRoadLink.
+    /// </summary>
+    public static RRoadLink DefaultObject => (RRoadLink)StaticClass().DefaultObject;
+
     internal RRoadLink() { }
 
     /// <summary>
     /// Constructs a new RRoadLink
     /// </summary>
-    public RRoadLink(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRoadLink Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RRoadLink(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RRoadLink(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRoadLink>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRoadLink>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRoadLink>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRoadLink>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRoadLink>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RRoadLink>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RRoadLink>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RRoadLink>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: OnToggle
@@ -102,13 +112,18 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Enum: ELaneKey
     /// </summary>
-    public enum ELaneKey
+    public enum ELaneKey : byte
     {
         Green_Lane = 0,
         Orange_Lane = 1,
         Num_Lanes = 2,
         ELaneKey_MAX = 3,
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: Points
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RRoadPoint> Points => new(2, Ptr + 668);
 
     /// <summary>
     /// ObjectProperty: Points
@@ -173,38 +188,36 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     /// <summary>
-    /// StructProperty: Lanes
+    /// InlineArray{StructProperty}: Lanes
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadLink.FLane Lanes_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public InlineArray<BmSDK.BmGame.RRoadLink.FLane> Lanes => new(2, Ptr + 724);
+
     /// <summary>
     /// StructProperty: Lanes
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadLink.FLane Lanes_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadLink.FLane Lanes_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 724);
+    /// <summary>
+    /// StructProperty: Lanes
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RRoadLink.FLane Lanes_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 768);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: AltLanes
+    /// </summary>
+    public InlineArray<BmSDK.BmGame.RRoadLink.FLane> AltLanes => new(2, Ptr + 812);
 
     /// <summary>
     /// StructProperty: AltLanes
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadLink.FLane AltLanes_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 812); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadLink.FLane AltLanes_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 812);
     /// <summary>
     /// StructProperty: AltLanes
     /// </summary>
-    public unsafe BmSDK.BmGame.RRoadLink.FLane AltLanes_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 856); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
-    }
+    public unsafe ref BmSDK.BmGame.RRoadLink.FLane AltLanes_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RRoadLink.FLane>(Ptr + 856);
 
     /// <summary>
     /// FloatProperty: Camber

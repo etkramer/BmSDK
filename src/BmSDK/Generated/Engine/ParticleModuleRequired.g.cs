@@ -21,6 +21,11 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as ParticleModuleRequired.
+    /// </summary>
+    public static ParticleModuleRequired DefaultObject => (ParticleModuleRequired)StaticClass().DefaultObject;
+
     internal ParticleModuleRequired() { }
 
     /// <summary>
@@ -33,10 +38,50 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// </summary>
     protected ParticleModuleRequired(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<ParticleModuleRequired>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// Enum: EEmitterNormalsMode
     /// </summary>
-    public enum EEmitterNormalsMode
+    public enum EEmitterNormalsMode : byte
     {
         ENM_CameraFacing = 0,
         ENM_Spherical = 1,
@@ -47,7 +92,7 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// Enum: EParticleSortMode
     /// </summary>
-    public enum EParticleSortMode
+    public enum EParticleSortMode : byte
     {
         PSORTMODE_None = 0,
         PSORTMODE_ViewProjDepth = 1,
@@ -321,11 +366,8 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// StructProperty: SpawnRate
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat SpawnRate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
+    public unsafe ref BmSDK.DistributionFloat.FRawDistributionFloat SpawnRate
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 136);
 
     /// <summary>
     /// ArrayProperty: BurstList
@@ -393,11 +435,8 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// StructProperty: MacroUVPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 MacroUVPosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
-    }
+    public unsafe ref System.Numerics.Vector3 MacroUVPosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 212);
 
     /// <summary>
     /// FloatProperty: MacroUVRadius
@@ -429,36 +468,24 @@ public partial class ParticleModuleRequired : BmSDK.Engine.ParticleModule, BmSDK
     /// <summary>
     /// StructProperty: NormalsSphereCenter
     /// </summary>
-    public unsafe System.Numerics.Vector3 NormalsSphereCenter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref System.Numerics.Vector3 NormalsSphereCenter
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: NormalsCylinderDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 NormalsCylinderDirection
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref System.Numerics.Vector3 NormalsCylinderDirection
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 248);
 
     /// <summary>
     /// StructProperty: Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Translation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
+    public unsafe ref System.Numerics.Vector3 Translation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 260);
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
-    }
+    public unsafe ref BmSDK.Rotator Rotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 272);
 }

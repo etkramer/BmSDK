@@ -21,6 +21,11 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as AkComponent.
+    /// </summary>
+    public static AkComponent DefaultObject => (AkComponent)StaticClass().DefaultObject;
+
     internal AkComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<AkComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: IsDefault
@@ -1884,47 +1929,32 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: SourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref System.Numerics.Vector3 SourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: SourceOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator SourceOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
+    public unsafe ref BmSDK.Rotator SourceOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 428);
 
     /// <summary>
     /// StructProperty: LastDialogueSourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastDialogueSourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastDialogueSourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 440);
 
     /// <summary>
     /// StructProperty: LastDialogueSourceOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator LastDialogueSourceOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref BmSDK.Rotator LastDialogueSourceOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 452);
 
     /// <summary>
     /// StructProperty: LastSourceVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSourceVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastSourceVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 464);
 
     /// <summary>
     /// FloatProperty: LastSourceVisibility
@@ -2037,74 +2067,50 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// StructProperty: DebugLastOcclusionPrimaryFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionPrimaryFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionPrimaryFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 588);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionPrimaryTo
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionPrimaryTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionPrimaryTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 600);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryAFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryAFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryAFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 612);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryAMid
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryAMid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryAMid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 624);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryATo
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryATo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryATo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 636);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryBFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryBFrom
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryBFrom
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 648);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryBMid
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryBMid
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryBMid
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 660);
 
     /// <summary>
     /// StructProperty: DebugLastOcclusionSecondaryBTo
     /// </summary>
-    public unsafe System.Numerics.Vector3 DebugLastOcclusionSecondaryBTo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
-    }
+    public unsafe ref System.Numerics.Vector3 DebugLastOcclusionSecondaryBTo
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 672);
 
     /// <summary>
     /// StructProperty: DebugLastFailedSourceCreateTime
@@ -2154,7 +2160,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EAkComponentSourceCreateFailReason
     /// </summary>
-    public enum EAkComponentSourceCreateFailReason
+    public enum EAkComponentSourceCreateFailReason : byte
     {
         AK_COMPONENT_SOURCE_CREATE_FAIL_REASON_NONE = 0,
         AK_COMPONENT_SOURCE_CREATE_FAIL_REASON_DISTANT = 1,
@@ -2167,7 +2173,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Enum: EAkComponentUpdate
     /// </summary>
-    public enum EAkComponentUpdate
+    public enum EAkComponentUpdate : byte
     {
         AK_COMPONENT_UPDATE_SINGLE_AUTO = 0,
         AK_COMPONENT_UPDATE_SINGLE_NO_AUTO = 1,

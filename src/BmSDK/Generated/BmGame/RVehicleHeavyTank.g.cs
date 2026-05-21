@@ -21,52 +21,62 @@ public partial class RVehicleHeavyTank : BmSDK.BmGame.RVehicleTank, BmSDK.IGameO
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RVehicleHeavyTank.
+    /// </summary>
+    public static RVehicleHeavyTank DefaultObject => (RVehicleHeavyTank)StaticClass().DefaultObject;
+
     internal RVehicleHeavyTank() { }
 
     /// <summary>
     /// Constructs a new RVehicleHeavyTank
     /// </summary>
-    public RVehicleHeavyTank(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVehicleHeavyTank Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RVehicleHeavyTank(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RVehicleHeavyTank(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RVehicleHeavyTank>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: NoReplanBackToIsland
@@ -832,7 +842,7 @@ public partial class RVehicleHeavyTank : BmSDK.BmGame.RVehicleTank, BmSDK.IGameO
     /// <summary>
     /// Enum: ECommandTankStageBasedDialogue
     /// </summary>
-    public enum ECommandTankStageBasedDialogue
+    public enum ECommandTankStageBasedDialogue : byte
     {
         ESBD_WeakPointHit = 0,
         ESBD_BatmanSpotted = 1,
@@ -1103,29 +1113,20 @@ public partial class RVehicleHeavyTank : BmSDK.BmGame.RVehicleTank, BmSDK.IGameO
     /// <summary>
     /// StructProperty: SearchLightColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor SearchLightColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 8136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8136); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor SearchLightColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 8136);
 
     /// <summary>
     /// StructProperty: Sweep360LightColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor Sweep360LightColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 8140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8140); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor Sweep360LightColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 8140);
 
     /// <summary>
     /// StructProperty: AttackLightColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor AttackLightColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 8144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8144); }
-    }
+    public unsafe ref BmSDK.GameObject.FColor AttackLightColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FColor>(Ptr + 8144);
 
     /// <summary>
     /// ObjectProperty: ScanLaser
@@ -1641,53 +1642,40 @@ public partial class RVehicleHeavyTank : BmSDK.BmGame.RVehicleTank, BmSDK.IGameO
     }
 
     /// <summary>
-    /// StructProperty: StageBasedDialogue
+    /// InlineArray{StructProperty}: StageBasedDialogue
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8588); }
-    }
+    public InlineArray<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont> StageBasedDialogue => new(6, Ptr + 8588);
+
     /// <summary>
     /// StructProperty: StageBasedDialogue
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8604); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8588);
     /// <summary>
     /// StructProperty: StageBasedDialogue
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8620); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8604);
     /// <summary>
     /// StructProperty: StageBasedDialogue
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8636); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8620);
     /// <summary>
     /// StructProperty: StageBasedDialogue
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8652); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8636);
     /// <summary>
     /// StructProperty: StageBasedDialogue
     /// </summary>
-    public unsafe BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8668); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8668); }
-    }
+    public unsafe ref BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8652);
+    /// <summary>
+    /// StructProperty: StageBasedDialogue
+    /// </summary>
+    public unsafe ref BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont StageBasedDialogue_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont>(Ptr + 8668);
 
     /// <summary>
     /// ArrayProperty: CloudburstDamageTemplate

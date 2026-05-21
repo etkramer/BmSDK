@@ -21,6 +21,11 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as MaterialExpressionTerrainLayerWeight.
+    /// </summary>
+    public static MaterialExpressionTerrainLayerWeight DefaultObject => (MaterialExpressionTerrainLayerWeight)StaticClass().DefaultObject;
+
     internal MaterialExpressionTerrainLayerWeight() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MaterialExpressionTerrainLayerWeight(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<MaterialExpressionTerrainLayerWeight>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// StructProperty: InstanceOverride
@@ -45,20 +90,14 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: Base
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Base
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Base
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: Layer
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Layer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
+    public unsafe ref BmSDK.Engine.MaterialExpression.FExpressionInput Layer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 232);
 
     /// <summary>
     /// NameProperty: ParameterName
@@ -81,9 +120,6 @@ public partial class MaterialExpressionTerrainLayerWeight : BmSDK.Engine.Materia
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
-    }
+    public unsafe ref BmSDK.GameObject.FGuid ExpressionGUID
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FGuid>(Ptr + 296);
 }

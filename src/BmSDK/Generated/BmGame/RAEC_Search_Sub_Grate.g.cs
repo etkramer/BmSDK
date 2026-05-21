@@ -21,52 +21,62 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAEC_Search_Sub_Grate.
+    /// </summary>
+    public static RAEC_Search_Sub_Grate DefaultObject => (RAEC_Search_Sub_Grate)StaticClass().DefaultObject;
+
     internal RAEC_Search_Sub_Grate() { }
 
     /// <summary>
     /// Constructs a new RAEC_Search_Sub_Grate
     /// </summary>
-    public RAEC_Search_Sub_Grate(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Search_Sub_Grate Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RAEC_Search_Sub_Grate(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAEC_Search_Sub_Grate(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RAEC_Search_Sub_Grate>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetStance
@@ -257,7 +267,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// Enum: eLookInGrateType
     /// </summary>
-    public enum eLookInGrateType
+    public enum eLookInGrateType : byte
     {
         eLIGT_Look = 0,
         eLIGT_ShootRifle = 1,
@@ -361,69 +371,55 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// StructProperty: lookRefLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 lookRefLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
-    }
+    public unsafe ref System.Numerics.Vector3 lookRefLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 724);
 
     /// <summary>
     /// StructProperty: lookRefRot
     /// </summary>
-    public unsafe BmSDK.Rotator lookRefRot
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
-    }
+    public unsafe ref BmSDK.Rotator lookRefRot
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 736);
+
+    /// <summary>
+    /// InlineArray{StructProperty}: vilGrateLookRefPoints
+    /// </summary>
+    public InlineArray<System.Numerics.Vector3> vilGrateLookRefPoints => new(6, Ptr + 748);
 
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 vilGrateLookRefPoints_0
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
-    }
+    public unsafe ref System.Numerics.Vector3 vilGrateLookRefPoints_0
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 748);
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 vilGrateLookRefPoints_1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref System.Numerics.Vector3 vilGrateLookRefPoints_1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 760);
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 vilGrateLookRefPoints_2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
+    public unsafe ref System.Numerics.Vector3 vilGrateLookRefPoints_2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 772);
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 vilGrateLookRefPoints_3
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 784); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
-    }
+    public unsafe ref System.Numerics.Vector3 vilGrateLookRefPoints_3
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 784);
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 vilGrateLookRefPoints_4
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
+    public unsafe ref System.Numerics.Vector3 vilGrateLookRefPoints_4
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 796);
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
     /// </summary>
-    public unsafe System.Numerics.Vector3 vilGrateLookRefPoints_5
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 808); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
-    }
+    public unsafe ref System.Numerics.Vector3 vilGrateLookRefPoints_5
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 808);
+
+    /// <summary>
+    /// InlineArray{NameProperty}: AnimNames
+    /// </summary>
+    public InlineArray<BmSDK.FName> AnimNames => new(6, Ptr + 820);
 
     /// <summary>
     /// NameProperty: AnimNames
@@ -473,6 +469,11 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 860); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 860); }
     }
+
+    /// <summary>
+    /// InlineArray{NameProperty}: OutAnimNames
+    /// </summary>
+    public InlineArray<BmSDK.FName> OutAnimNames => new(6, Ptr + 868);
 
     /// <summary>
     /// NameProperty: OutAnimNames
@@ -562,11 +563,8 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// StructProperty: StandAtEndLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 StandAtEndLoc
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 944); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
-    }
+    public unsafe ref System.Numerics.Vector3 StandAtEndLoc
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 944);
 
     /// <summary>
     /// FloatProperty: distToEnterGrateMoveStance

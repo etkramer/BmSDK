@@ -21,6 +21,11 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RDisruptorSniper.
+    /// </summary>
+    public static RDisruptorSniper DefaultObject => (RDisruptorSniper)StaticClass().DefaultObject;
+
     internal RDisruptorSniper() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// </summary>
     protected RDisruptorSniper(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RDisruptorSniper>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: CanPlayerForgetTrackedTarget
@@ -814,7 +824,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// Enum: EHighlightedMaterialType
     /// </summary>
-    public enum EHighlightedMaterialType
+    public enum EHighlightedMaterialType : byte
     {
         HMT_Threat = 0,
         HMT_Tracker = 1,
@@ -830,11 +840,8 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: FireOverlayAnimation
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId FireOverlayAnimation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 2068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId FireOverlayAnimation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId>(Ptr + 2068);
 
     /// <summary>
     /// BoolProperty: bBatmanHasFinishedEquippingGadget
@@ -1010,20 +1017,14 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: NormalFireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct NormalFireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2080); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2080); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct NormalFireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2080);
 
     /// <summary>
     /// StructProperty: ZoomedFireScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ZoomedFireScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2236); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ZoomedFireScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 2236);
 
     /// <summary>
     /// FloatProperty: ReplenishTime
@@ -1082,38 +1083,26 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// StructProperty: CrosshairTarget
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CrosshairTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>(Ptr + 2424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
-    }
+    public unsafe ref BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CrosshairTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>(Ptr + 2424);
 
     /// <summary>
     /// StructProperty: CrosshairNearestTarget
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CrosshairNearestTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>(Ptr + 2512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2512); }
-    }
+    public unsafe ref BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CrosshairNearestTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>(Ptr + 2512);
 
     /// <summary>
     /// StructProperty: CrosshairTrackingTarget
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CrosshairTrackingTarget
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>(Ptr + 2600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2600); }
-    }
+    public unsafe ref BmSDK.BmGame.RInventoryGadget.FHighlightedMesh CrosshairTrackingTarget
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RInventoryGadget.FHighlightedMesh>(Ptr + 2600);
 
     /// <summary>
     /// StructProperty: vCrosshairTargetHitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 vCrosshairTargetHitLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 2688); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2688); }
-    }
+    public unsafe ref System.Numerics.Vector3 vCrosshairTargetHitLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 2688);
 
     /// <summary>
     /// ObjectProperty: RestrictedTargetsSequenceAction
@@ -1123,6 +1112,11 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_RestrictDisruptorTargets>(Ptr + 2700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2700); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: NormalDisruptorModeMaterials
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> NormalDisruptorModeMaterials => new(8, Ptr + 2708);
 
     /// <summary>
     /// ObjectProperty: NormalDisruptorModeMaterials
@@ -1190,6 +1184,11 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     }
 
     /// <summary>
+    /// InlineArray{ObjectProperty}: CurrentTargetDisruptorModeMaterials
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> CurrentTargetDisruptorModeMaterials => new(8, Ptr + 2772);
+
+    /// <summary>
     /// ObjectProperty: CurrentTargetDisruptorModeMaterials
     /// </summary>
     public unsafe BmSDK.Engine.MaterialInterface CurrentTargetDisruptorModeMaterials_0
@@ -1253,6 +1252,11 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 2828); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2828); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: DisruptorModeMaterialsForCamouflageThug
+    /// </summary>
+    public InlineArray<BmSDK.Engine.MaterialInterface> DisruptorModeMaterialsForCamouflageThug => new(8, Ptr + 2836);
 
     /// <summary>
     /// ObjectProperty: DisruptorModeMaterialsForCamouflageThug
@@ -1327,6 +1331,11 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 2900); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2900); }
     }
+
+    /// <summary>
+    /// InlineArray{ObjectProperty}: FireSound
+    /// </summary>
+    public InlineArray<BmSDK.Engine.AkEvent> FireSound => new(8, Ptr + 2908);
 
     /// <summary>
     /// ObjectProperty: FireSound

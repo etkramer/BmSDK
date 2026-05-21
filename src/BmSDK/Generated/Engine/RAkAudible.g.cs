@@ -21,6 +21,11 @@ public partial class RAkAudible : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAkAudible.
+    /// </summary>
+    public static RAkAudible DefaultObject => (RAkAudible)StaticClass().DefaultObject;
+
     internal RAkAudible() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAkAudible : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAkAudible(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAkAudible>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: SetSuppressLoops
@@ -884,29 +929,20 @@ public partial class RAkAudible : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: SourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 SourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
-    }
+    public unsafe ref System.Numerics.Vector3 SourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 164);
 
     /// <summary>
     /// StructProperty: SourceOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator SourceOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
-    }
+    public unsafe ref BmSDK.Rotator SourceOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 176);
 
     /// <summary>
     /// StructProperty: SourceVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 SourceVelocity
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
-    }
+    public unsafe ref System.Numerics.Vector3 SourceVelocity
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 188);
 
     /// <summary>
     /// FloatProperty: SourceVisibilityCache
@@ -920,20 +956,14 @@ public partial class RAkAudible : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LastDialogueSourcePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastDialogueSourcePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastDialogueSourcePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 204);
 
     /// <summary>
     /// StructProperty: LastDialogueSourceOrientation
     /// </summary>
-    public unsafe BmSDK.Rotator LastDialogueSourceOrientation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
-    }
+    public unsafe ref BmSDK.Rotator LastDialogueSourceOrientation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 216);
 
     /// <summary>
     /// FloatProperty: ObsOccMultiplier
@@ -956,20 +986,14 @@ public partial class RAkAudible : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ObstructionBuffer
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkInterpolationBuffer ObstructionBuffer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkInterpolationBuffer>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkInterpolationBuffer ObstructionBuffer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkInterpolationBuffer>(Ptr + 236);
 
     /// <summary>
     /// StructProperty: OcclusionBuffer
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkInterpolationBuffer OcclusionBuffer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkInterpolationBuffer>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
+    public unsafe ref BmSDK.Engine.AkWwise.FAkInterpolationBuffer OcclusionBuffer
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.AkWwise.FAkInterpolationBuffer>(Ptr + 248);
 
     /// <summary>
     /// StructProperty: PropagationInfo

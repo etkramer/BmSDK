@@ -21,6 +21,11 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RStealthTakeDownStage.
+    /// </summary>
+    public static RStealthTakeDownStage DefaultObject => (RStealthTakeDownStage)StaticClass().DefaultObject;
+
     internal RStealthTakeDownStage() { }
 
     /// <summary>
@@ -28,40 +33,45 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// </summary>
     protected RStealthTakeDownStage(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RStealthTakeDownStage>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: BlockPlayerFromForceCrouching
@@ -1168,7 +1178,7 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Enum: EEscapeTakedownType
     /// </summary>
-    public enum EEscapeTakedownType
+    public enum EEscapeTakedownType : byte
     {
         EFT_KOSmash = 0,
         EFT_Grate = 1,
@@ -1817,38 +1827,26 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: AttackLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttackLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 760); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
-    }
+    public unsafe ref System.Numerics.Vector3 AttackLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 760);
 
     /// <summary>
     /// StructProperty: ImpactScreenShake
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 772); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
-    }
+    public unsafe ref BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct ImpactScreenShake
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 772);
 
     /// <summary>
     /// StructProperty: CameraDOFSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.FDofStruct CameraDOFSettings
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.FDofStruct>(Ptr + 928); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
-    }
+    public unsafe ref BmSDK.BmGame.RGameInfo.FDofStruct CameraDOFSettings
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RGameInfo.FDofStruct>(Ptr + 928);
 
     /// <summary>
     /// StructProperty: StageAnims
     /// </summary>
-    public unsafe BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet StageAnims
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 948); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
-    }
+    public unsafe ref BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet StageAnims
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RStealthTakeDownStage.FTakeDownStageAnimSet>(Ptr + 948);
 
     /// <summary>
     /// IntProperty: StageAnimId
@@ -1871,11 +1869,8 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: TakeDownTransition
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakeDownTransition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
-    }
+    public unsafe ref BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId TakeDownTransition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId>(Ptr + 1264);
 
     /// <summary>
     /// ArrayProperty: VictimTransitions
@@ -1889,11 +1884,8 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: CustomLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator CustomLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1284); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator CustomLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1284);
 
     /// <summary>
     /// IntProperty: MinVictims
@@ -1916,38 +1908,26 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: LastReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1424); }
-    }
+    public unsafe ref System.Numerics.Vector3 LastReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1424);
 
     /// <summary>
     /// StructProperty: LastReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator LastReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1436); }
-    }
+    public unsafe ref BmSDK.Rotator LastReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1436);
 
     /// <summary>
     /// StructProperty: VictimReferencePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 VictimReferencePosition
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1448); }
-    }
+    public unsafe ref System.Numerics.Vector3 VictimReferencePosition
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 1448);
 
     /// <summary>
     /// StructProperty: VictimReferenceRotation
     /// </summary>
-    public unsafe BmSDK.Rotator VictimReferenceRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 1460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1460); }
-    }
+    public unsafe ref BmSDK.Rotator VictimReferenceRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 1460);
 
     /// <summary>
     /// IntProperty: ChosenAnim
@@ -1997,11 +1977,8 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: EscapeLocator
     /// </summary>
-    public unsafe BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLocator
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1516); }
-    }
+    public unsafe ref BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator EscapeLocator
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.BmGame.REnvironmentCheckTicker.FEnvironmentSpecialMoveLocator>(Ptr + 1516);
 
     /// <summary>
     /// IntProperty: iFearTakedownEnergyCost
@@ -2042,7 +2019,7 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Enum: AttackApproachDirection
     /// </summary>
-    public enum AttackApproachDirection
+    public enum AttackApproachDirection : byte
     {
         AAP_Back = 0,
         AAP_Front = 1,

@@ -21,52 +21,62 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.RStaticClimbableAct
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as FracturedStaticMeshActor.
+    /// </summary>
+    public static FracturedStaticMeshActor DefaultObject => (FracturedStaticMeshActor)StaticClass().DefaultObject;
+
     internal FracturedStaticMeshActor() { }
 
     /// <summary>
     /// Constructs a new FracturedStaticMeshActor
     /// </summary>
-    public FracturedStaticMeshActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, FracturedStaticMeshActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public FracturedStaticMeshActor(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected FracturedStaticMeshActor(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<FracturedStaticMeshActor>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: NotifyHitByExplosion
@@ -804,7 +814,7 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.RStaticClimbableAct
     /// <summary>
     /// Enum: EFractureMeshExplosionBlastType
     /// </summary>
-    public enum EFractureMeshExplosionBlastType
+    public enum EFractureMeshExplosionBlastType : byte
     {
         FMEBT_Constant = 0,
         FMEBT_Radial = 1,
@@ -815,7 +825,7 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.RStaticClimbableAct
     /// <summary>
     /// Enum: EFractureMeshExplosionType
     /// </summary>
-    public enum EFractureMeshExplosionType
+    public enum EFractureMeshExplosionType : byte
     {
         FMET_SinglePart = 0,
         FMET_PartsInRadius = 1,
@@ -1067,11 +1077,8 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.RStaticClimbableAct
     /// <summary>
     /// StructProperty: FracturePartRBPartCollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer FracturePartRBPartCollideWithChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 776); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
-    }
+    public unsafe ref BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer FracturePartRBPartCollideWithChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 776);
 
     /// <summary>
     /// ArrayProperty: DeferredPartsToSpawn
@@ -1085,11 +1092,8 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.RStaticClimbableAct
     /// <summary>
     /// StructProperty: PartImpactEffect
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FPhysEffectInfo PartImpactEffect
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 796); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
-    }
+    public unsafe ref BmSDK.Engine.Actor.FPhysEffectInfo PartImpactEffect
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.Actor.FPhysEffectInfo>(Ptr + 796);
 
     /// <summary>
     /// ObjectProperty: ExplosionFractureSound
@@ -1148,9 +1152,6 @@ public partial class FracturedStaticMeshActor : BmSDK.Engine.RStaticClimbableAct
     /// <summary>
     /// StructProperty: FracturePartLightingChannels
     /// </summary>
-    public unsafe BmSDK.Engine.LightComponent.FLightingChannelContainer FracturePartLightingChannels
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 868); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
-    }
+    public unsafe ref BmSDK.Engine.LightComponent.FLightingChannelContainer FracturePartLightingChannels
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.LightComponent.FLightingChannelContainer>(Ptr + 868);
 }

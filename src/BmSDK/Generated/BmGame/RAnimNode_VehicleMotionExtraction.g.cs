@@ -21,6 +21,11 @@ public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSe
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RAnimNode_VehicleMotionExtraction.
+    /// </summary>
+    public static RAnimNode_VehicleMotionExtraction DefaultObject => (RAnimNode_VehicleMotionExtraction)StaticClass().DefaultObject;
+
     internal RAnimNode_VehicleMotionExtraction() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSe
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNode_VehicleMotionExtraction(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RAnimNode_VehicleMotionExtraction>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: PlayAnim
@@ -57,38 +102,26 @@ public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSe
     /// <summary>
     /// StructProperty: BindTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 BindTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 388); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
-    }
+    public unsafe ref System.Numerics.Vector3 BindTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 388);
 
     /// <summary>
     /// StructProperty: BindRotation
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat BindRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 400); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat BindRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 400);
 
     /// <summary>
     /// StructProperty: FirstFrameTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 FirstFrameTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
-    }
+    public unsafe ref System.Numerics.Vector3 FirstFrameTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 416);
 
     /// <summary>
     /// StructProperty: FirstFrameRotation
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat FirstFrameRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FQuat>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
+    public unsafe ref BmSDK.GameObject.FQuat FirstFrameRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FQuat>(Ptr + 432);
 
     /// <summary>
     /// BoolProperty: bTestTranslation
@@ -129,9 +162,6 @@ public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSe
     /// <summary>
     /// StructProperty: RootFrameTranslation
     /// </summary>
-    public unsafe System.Numerics.Vector3 RootFrameTranslation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
-    }
+    public unsafe ref System.Numerics.Vector3 RootFrameTranslation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 452);
 }

@@ -21,52 +21,62 @@ public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObje
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RTunnelGrateBase.
+    /// </summary>
+    public static RTunnelGrateBase DefaultObject => (RTunnelGrateBase)StaticClass().DefaultObject;
+
     internal RTunnelGrateBase() { }
 
     /// <summary>
     /// Constructs a new RTunnelGrateBase
     /// </summary>
-    public RTunnelGrateBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTunnelGrateBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+    public RTunnelGrateBase(System.Numerics.Vector3 Location = default, BmSDK.Rotator Rotation = default, BmSDK.Engine.Actor Template = null, BmSDK.GameObject Owner = null, BmSDK.GameObject Instigator = null, BmSDK.Engine.Level Level = null) : base(BmSDK.Framework.Game.SpawnActorInternal(StaticClass(), default, Location, Rotation, Template, Owner, Instigator, Level)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RTunnelGrateBase(nint ptr) : base(ptr) { }
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
     public void AttachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
-        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
     public TComponent AttachScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>, new()
-        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
     public bool HasScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
-        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
     public bool HasScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
-        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
     public TComponent GetScriptComponent<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
-        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
     public void DetachScriptComponent<TComponent>(TComponent component)
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
-        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
 
-    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
-    public void DetachScriptComponent<TComponent>()
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
         where TComponent : class, Framework.IScriptComponent<RTunnelGrateBase>
-        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: IsCatwomanFlipGrate
@@ -1299,29 +1309,20 @@ public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: PlayerCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 PlayerCheckExtent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 900); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
-    }
+    public unsafe ref System.Numerics.Vector3 PlayerCheckExtent
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 900);
 
     /// <summary>
     /// StructProperty: CheckDownOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CheckDownOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 912); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
-    }
+    public unsafe ref System.Numerics.Vector3 CheckDownOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 912);
 
     /// <summary>
     /// StructProperty: CheckUpOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 CheckUpOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 924); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
-    }
+    public unsafe ref System.Numerics.Vector3 CheckUpOffset
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 924);
 
     /// <summary>
     /// ByteProperty: TunnelGroupID
@@ -1335,11 +1336,8 @@ public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: AnimationRotation
     /// </summary>
-    public unsafe BmSDK.Rotator AnimationRotation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 940); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
-    }
+    public unsafe ref BmSDK.Rotator AnimationRotation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Rotator>(Ptr + 940);
 
     /// <summary>
     /// FloatProperty: lastOpenedByThugTime
@@ -1371,11 +1369,8 @@ public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: StoredNavMeshLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StoredNavMeshLocation
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
-    }
+    public unsafe ref System.Numerics.Vector3 StoredNavMeshLocation
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 976);
 
     /// <summary>
     /// FloatProperty: smokeAmount
@@ -1407,11 +1402,8 @@ public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// StructProperty: InRangeHighlightColour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor InRangeHighlightColour
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 1012); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1012); }
-    }
+    public unsafe ref BmSDK.GameObject.FLinearColor InRangeHighlightColour
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FLinearColor>(Ptr + 1012);
 
     /// <summary>
     /// FloatProperty: thugVisionHighlightAlpha

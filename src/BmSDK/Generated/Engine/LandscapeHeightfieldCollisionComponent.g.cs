@@ -21,6 +21,11 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as LandscapeHeightfieldCollisionComponent.
+    /// </summary>
+    public static LandscapeHeightfieldCollisionComponent DefaultObject => (LandscapeHeightfieldCollisionComponent)StaticClass().DefaultObject;
+
     internal LandscapeHeightfieldCollisionComponent() { }
 
     /// <summary>
@@ -33,14 +38,51 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
     /// </summary>
     protected LandscapeHeightfieldCollisionComponent(nint ptr) : base(ptr) { }
 
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<LandscapeHeightfieldCollisionComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
+
     /// <summary>
     /// StructProperty: CollisionHeightData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CollisionHeightData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror CollisionHeightData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 540);
 
     /// <summary>
     /// ArrayProperty: ComponentLayers
@@ -54,11 +96,8 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
     /// <summary>
     /// StructProperty: DominantLayerData
     /// </summary>
-    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror DominantLayerData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
-    }
+    public unsafe ref BmSDK.GameObject.FUntypedBulkData_Mirror DominantLayerData
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 620);
 
     /// <summary>
     /// IntProperty: SectionBaseX
@@ -126,11 +165,8 @@ public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.Primi
     /// <summary>
     /// StructProperty: CachedBoxSphereBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
-    }
+    public unsafe ref BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 740);
 
     /// <summary>
     /// BoolProperty: bIncludeHoles

@@ -20,6 +20,7 @@ internal static class GameInfo
         public const IntPtr StaticFindObject = 0xF3B7F0;
         public const IntPtr StaticConstructObject = 0xF470B0;
         public const IntPtr LoadPackage = 0xF46DA0;
+        public const IntPtr CollectGarbage = 0xF2C280;
 
         // UObject (local)
         public const IntPtr ProcessEvent = 0xF90CD0;

@@ -21,6 +21,11 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RB_ConstraintSetup.
+    /// </summary>
+    public static RB_ConstraintSetup DefaultObject => (RB_ConstraintSetup)StaticClass().DefaultObject;
+
     internal RB_ConstraintSetup() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RB_ConstraintSetup(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RB_ConstraintSetup>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FLinearDOFSetup
@@ -61,7 +106,7 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Enum: ConstraintProjectionMode
     /// </summary>
-    public enum ConstraintProjectionMode
+    public enum ConstraintProjectionMode : byte
     {
         ECPM_Linear = 0,
         ECPM_LinearAndAngular = 1,
@@ -98,74 +143,50 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Pos1
     /// </summary>
-    public unsafe System.Numerics.Vector3 Pos1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
+    public unsafe ref System.Numerics.Vector3 Pos1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 108);
 
     /// <summary>
     /// StructProperty: PriAxis1
     /// </summary>
-    public unsafe System.Numerics.Vector3 PriAxis1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
-    }
+    public unsafe ref System.Numerics.Vector3 PriAxis1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 120);
 
     /// <summary>
     /// StructProperty: SecAxis1
     /// </summary>
-    public unsafe System.Numerics.Vector3 SecAxis1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
-    }
+    public unsafe ref System.Numerics.Vector3 SecAxis1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 132);
 
     /// <summary>
     /// StructProperty: Pos2
     /// </summary>
-    public unsafe System.Numerics.Vector3 Pos2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
-    }
+    public unsafe ref System.Numerics.Vector3 Pos2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 144);
 
     /// <summary>
     /// StructProperty: PriAxis2
     /// </summary>
-    public unsafe System.Numerics.Vector3 PriAxis2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
-    }
+    public unsafe ref System.Numerics.Vector3 PriAxis2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 156);
 
     /// <summary>
     /// StructProperty: SecAxis2
     /// </summary>
-    public unsafe System.Numerics.Vector3 SecAxis2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
-    }
+    public unsafe ref System.Numerics.Vector3 SecAxis2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 168);
 
     /// <summary>
     /// StructProperty: PulleyPivot1
     /// </summary>
-    public unsafe System.Numerics.Vector3 PulleyPivot1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
-    }
+    public unsafe ref System.Numerics.Vector3 PulleyPivot1
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 180);
 
     /// <summary>
     /// StructProperty: PulleyPivot2
     /// </summary>
-    public unsafe System.Numerics.Vector3 PulleyPivot2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
-    }
+    public unsafe ref System.Numerics.Vector3 PulleyPivot2
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 192);
 
     /// <summary>
     /// BoolProperty: bEnableProjection
@@ -314,29 +335,20 @@ public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LinearXSetup
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearXSetup
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
+    public unsafe ref BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearXSetup
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 220);
 
     /// <summary>
     /// StructProperty: LinearYSetup
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearYSetup
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
+    public unsafe ref BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearYSetup
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 228);
 
     /// <summary>
     /// StructProperty: LinearZSetup
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearZSetup
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
+    public unsafe ref BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup LinearZSetup
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.RB_ConstraintSetup.FLinearDOFSetup>(Ptr + 236);
 
     /// <summary>
     /// FloatProperty: LinearLimitStiffness

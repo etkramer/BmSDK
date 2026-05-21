@@ -21,6 +21,11 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as TerrainComponent.
+    /// </summary>
+    public static TerrainComponent DefaultObject => (TerrainComponent)StaticClass().DefaultObject;
+
     internal TerrainComponent() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected TerrainComponent(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<TerrainComponent>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Struct: FTerrainBVTree
@@ -192,11 +237,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
-    }
+    public unsafe ref BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 604);
 
     /// <summary>
     /// ArrayProperty: PatchBounds
@@ -228,11 +270,8 @@ public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.I
     /// <summary>
     /// StructProperty: BVTree
     /// </summary>
-    public unsafe BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
-    }
+    public unsafe ref BmSDK.Engine.TerrainComponent.FTerrainBVTree BVTree
+        => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.TerrainComponent.FTerrainBVTree>(Ptr + 648);
 
     /// <summary>
     /// ArrayProperty: CollisionVertices

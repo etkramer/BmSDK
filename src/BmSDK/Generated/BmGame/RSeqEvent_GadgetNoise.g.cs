@@ -21,6 +21,11 @@ public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.I
         return s_staticClass;
     }
 
+    /// <summary>
+    /// Gets the class default object as RSeqEvent_GadgetNoise.
+    /// </summary>
+    public static RSeqEvent_GadgetNoise DefaultObject => (RSeqEvent_GadgetNoise)StaticClass().DefaultObject;
+
     internal RSeqEvent_GadgetNoise() { }
 
     /// <summary>
@@ -32,6 +37,46 @@ public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.I
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqEvent_GadgetNoise(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => ((GameObject)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>, new()
+        => (TComponent)((GameObject)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => ((GameObject)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => ((GameObject)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => (TComponent)((GameObject)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="GameObject.GetScriptComponents(Type)"/>
+    public System.Collections.Generic.IReadOnlyList<TComponent> GetScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => ((GameObject)this).GetScriptComponents(typeof(TComponent)).Cast<TComponent>().ToList();
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => ((GameObject)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="GameObject.DetachScriptComponents(Type)"/>
+    public void DetachScriptComponents<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RSeqEvent_GadgetNoise>
+        => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
     /// <summary>
     /// Function: Activated
@@ -47,11 +92,8 @@ public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.I
     /// <summary>
     /// StructProperty: LocationOfNoise
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocationOfNoise
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 380); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
-    }
+    public unsafe ref System.Numerics.Vector3 LocationOfNoise
+        => ref BmSDK.Framework.MarshalUtil.AsRef<System.Numerics.Vector3>(Ptr + 380);
 
     /// <summary>
     /// ClassProperty: OptionalSpecificWeapon
