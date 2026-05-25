@@ -85,9 +85,14 @@ public class InlineArray<T> : IReadOnlyList<T>
 
     public static bool operator ==(InlineArray<T>? left, InlineArray<T>? right)
     {
+        if (left is null && right is null)
+        {
+            return true;
+        }
+
         if (left is null || right is null)
         {
-            return Equals(left, right);
+            return false;
         }
 
         return left.Equals(right);
