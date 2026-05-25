@@ -3,6 +3,11 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
+/// <summary>
+/// Wrapper for unmanaged inline arrays.
+/// These are of fixed size and cannot be created.
+/// </summary>
+/// <typeparam name="T">Stored data type of the inline array</typeparam>
 public class InlineArray<T> : IReadOnlyList<T>
 {
     public int Count { get; }
