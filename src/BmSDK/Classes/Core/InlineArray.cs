@@ -47,4 +47,17 @@ public class InlineArray<T> : IReadOnlyList<T>
     }
 
     public override int GetHashCode() => HashCode.Combine(Ptr);
+
+    public static bool operator ==(InlineArray<T>? left, InlineArray<T>? right)
+    {
+        if (left is null || right is null)
+        {
+            return Equals(left, right);
+        }
+
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(InlineArray<T>? left, InlineArray<T>? right) =>
+        !(left == right);
 }
