@@ -24,6 +24,30 @@ public class InlineArray<T> : IReadOnlyList<T>
     }
 
     /// <summary>
+    /// Copies elements from a collection into this inline array.
+    /// Underflows are ignored and copying stops before an overflow.
+    /// </summary>
+    /// <param name="source">Enumerable to copy elements from</param>
+    /// <param name="index">Index of this array to start at</param>
+    public void CopyFrom(IEnumerable<T> source, int index = 0)
+    {
+        Guard.Require(
+            index >= 0 && index <= Count,
+            $"Start index {index} is outside of inline array bounds (0-{Count})"
+        );
+
+        foreach (var element in source)
+        {
+            if (index >= Count)
+            {
+                break;
+            }
+
+            this[index++] = element;
+        }
+    }
+
+    /// <summary>
     /// Zeroes out the entire array.
     /// </summary>
     public void Clear()
