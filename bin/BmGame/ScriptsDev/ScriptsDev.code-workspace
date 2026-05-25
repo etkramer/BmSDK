@@ -8,6 +8,10 @@
 			"name": "Scripts",
 			"path": "./../Scripts",
 		},
+		{
+			"name": "Mods",
+			"path": "./../Mods",
+		},
 	],
 	"settings": {
 		"dotnet.defaultSolution": "./ScriptsDev.slnx",
