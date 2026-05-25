@@ -23,6 +23,17 @@ public class InlineArray<T> : IReadOnlyList<T>
         set => MarshalUtil.ToUnmanaged(value, Ptr + index * _stride);
     }
 
+    /// <summary>
+    /// Zeroes out the entire array.
+    /// </summary>
+    public void Clear()
+    {
+        for (var i = 0; i < Count; ++i)
+        {
+            this[i] = default!;
+        }
+    }
+
     public IEnumerator<T> GetEnumerator()
     {
         for (var i = 0; i < Count; i++)
