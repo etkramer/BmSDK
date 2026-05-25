@@ -24,8 +24,8 @@ public class InlineArray<T> : IReadOnlyList<T>
 
     public T this[int index]
     {
-        get => MarshalUtil.ToManaged<T>(Ptr + index * _stride);
-        set => MarshalUtil.ToUnmanaged(value, Ptr + index * _stride);
+        get => MarshalUtil.ToManaged<T>(Ptr + Guard.Bounds(index, Count) * _stride);
+        set => MarshalUtil.ToUnmanaged(value, Ptr + Guard.Bounds(index, Count) * _stride);
     }
 
     /// <summary>
@@ -103,6 +103,5 @@ public class InlineArray<T> : IReadOnlyList<T>
         return left.Equals(right);
     }
 
-    public static bool operator !=(InlineArray<T>? left, InlineArray<T>? right) =>
-        !(left == right);
+    public static bool operator !=(InlineArray<T>? left, InlineArray<T>? right) => !(left == right);
 }

@@ -20,6 +20,19 @@ public static class Guard
     }
 
     [DebuggerHidden]
+    public static int Bounds(int index, int count, string? message = null)
+    {
+        if (count < 0 || index >= count)
+        {
+            throw new IndexOutOfRangeException(
+                message ?? $"Index {index} is outside of the collections bounds (0-{count - 1})"
+            );
+        }
+
+        return index;
+    }
+
+    [DebuggerHidden]
     public static T NotNull<T>([NotNull] T? obj, string? message = null)
         where T : class
     {
