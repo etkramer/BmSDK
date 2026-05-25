@@ -179,7 +179,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: crowMeshes
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> crowMeshes => new(3, Ptr + 432);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> crowMeshes => new(3, Ptr + 432, 4);
 
     /// <summary>
     /// ComponentProperty: crowMeshes
@@ -263,7 +263,7 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: editorLines
     /// </summary>
-    public InlineArray<BmSDK.Engine.DrawConeComponent> editorLines => new(2, Ptr + 468);
+    public InlineArray<BmSDK.Engine.DrawConeComponent> editorLines => new(2, Ptr + 468, 4);
 
     /// <summary>
     /// ComponentProperty: editorLines

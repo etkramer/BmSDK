@@ -432,7 +432,7 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 
         Printer::Indent(out) << "public InlineArray<" << prop->GetInnerTypeNameManaged() << "> "
             << prop->GetNameManaged() << " => new(" << prop->ArrayDim
-            << ", Ptr + " << prop->Offset << ");" << endl << endl;
+            << ", Ptr + " << prop->Offset << ", " << prop->ElementSize << ");" << endl << endl;
     }
 
     for (auto i = 0; i < prop->ArrayDim; i++)

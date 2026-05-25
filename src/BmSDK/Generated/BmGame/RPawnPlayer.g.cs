@@ -6014,7 +6014,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ByteProperty}: UpAllowSubClasses
     /// </summary>
-    public InlineArray<byte> UpAllowSubClasses => new(8, Ptr + 2540);
+    public InlineArray<byte> UpAllowSubClasses => new(8, Ptr + 2540, 1);
 
     /// <summary>
     /// ByteProperty: UpAllowSubClasses
@@ -6084,7 +6084,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ByteProperty}: DownAllowSubClasses
     /// </summary>
-    public InlineArray<byte> DownAllowSubClasses => new(5, Ptr + 2548);
+    public InlineArray<byte> DownAllowSubClasses => new(5, Ptr + 2548, 1);
 
     /// <summary>
     /// ByteProperty: DownAllowSubClasses
@@ -6640,7 +6640,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ObjectProperty}: LandMoves
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RSpecialMoveConfig> LandMoves => new(6, Ptr + 3456);
+    public InlineArray<BmSDK.BmGame.RSpecialMoveConfig> LandMoves => new(6, Ptr + 3456, 4);
 
     /// <summary>
     /// ObjectProperty: LandMoves
@@ -7081,7 +7081,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{StructProperty}: ControllerHistory
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnPlayer.FMovementControllerHistory> ControllerHistory => new(10, Ptr + 3820);
+    public InlineArray<BmSDK.BmGame.RPawnPlayer.FMovementControllerHistory> ControllerHistory => new(10, Ptr + 3820, 20);
 
     /// <summary>
     /// StructProperty: ControllerHistory
@@ -7362,7 +7362,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ClassProperty}: TakeDowns
     /// </summary>
-    public InlineArray<BmSDK.Class> TakeDowns => new(34, Ptr + 4188);
+    public InlineArray<BmSDK.Class> TakeDowns => new(34, Ptr + 4188, 4);
 
     /// <summary>
     /// ClassProperty: TakeDowns
@@ -7748,7 +7748,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ObjectProperty}: SpawnedProjectiles
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RProjectile> SpawnedProjectiles => new(6, Ptr + 4372);
+    public InlineArray<BmSDK.BmGame.RProjectile> SpawnedProjectiles => new(6, Ptr + 4372, 4);
 
     /// <summary>
     /// ObjectProperty: SpawnedProjectiles
@@ -7877,7 +7877,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{NameProperty}: UpGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> UpGadgets => new(8, Ptr + 4452);
+    public InlineArray<BmSDK.FName> UpGadgets => new(8, Ptr + 4452, 8);
 
     /// <summary>
     /// NameProperty: UpGadgets
@@ -7947,7 +7947,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{NameProperty}: DoubleUpGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> DoubleUpGadgets => new(8, Ptr + 4516);
+    public InlineArray<BmSDK.FName> DoubleUpGadgets => new(8, Ptr + 4516, 8);
 
     /// <summary>
     /// NameProperty: DoubleUpGadgets
@@ -8017,7 +8017,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{NameProperty}: DownGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> DownGadgets => new(5, Ptr + 4580);
+    public InlineArray<BmSDK.FName> DownGadgets => new(5, Ptr + 4580, 8);
 
     /// <summary>
     /// NameProperty: DownGadgets
@@ -8063,7 +8063,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{StructProperty}: ExtraCollision
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnPlayer.FFakeWall> ExtraCollision => new(3, Ptr + 4620);
+    public InlineArray<BmSDK.BmGame.RPawnPlayer.FFakeWall> ExtraCollision => new(3, Ptr + 4620, 16);
 
     /// <summary>
     /// StructProperty: ExtraCollision
@@ -8093,7 +8093,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ObjectProperty}: OverheadRopeControlPoint
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRope2SimplePhysicsControlPoint> OverheadRopeControlPoint => new(5, Ptr + 4672);
+    public InlineArray<BmSDK.BmGame.RRope2SimplePhysicsControlPoint> OverheadRopeControlPoint => new(5, Ptr + 4672, 4);
 
     /// <summary>
     /// ObjectProperty: OverheadRopeControlPoint
@@ -8139,7 +8139,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{FloatProperty}: OverheadRopeControlPointRopePosition
     /// </summary>
-    public InlineArray<float> OverheadRopeControlPointRopePosition => new(5, Ptr + 4692);
+    public InlineArray<float> OverheadRopeControlPointRopePosition => new(5, Ptr + 4692, 4);
 
     /// <summary>
     /// FloatProperty: OverheadRopeControlPointRopePosition
@@ -8185,7 +8185,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{NameProperty}: OverheadRopeControlPointSocketNames
     /// </summary>
-    public InlineArray<BmSDK.FName> OverheadRopeControlPointSocketNames => new(5, Ptr + 4712);
+    public InlineArray<BmSDK.FName> OverheadRopeControlPointSocketNames => new(5, Ptr + 4712, 8);
 
     /// <summary>
     /// NameProperty: OverheadRopeControlPointSocketNames
@@ -8297,7 +8297,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{ObjectProperty}: GadgetList
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RInventoryGadget> GadgetList => new(32, Ptr + 5000);
+    public InlineArray<BmSDK.BmGame.RInventoryGadget> GadgetList => new(32, Ptr + 5000, 4);
 
     /// <summary>
     /// ObjectProperty: GadgetList
@@ -9183,7 +9183,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.BmGame.
     /// <summary>
     /// InlineArray{IntProperty}: QuickGadgets
     /// </summary>
-    public InlineArray<int> QuickGadgets => new(5, Ptr + 5640);
+    public InlineArray<int> QuickGadgets => new(5, Ptr + 5640, 4);
 
     /// <summary>
     /// IntProperty: QuickGadgets

@@ -256,7 +256,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: UnpackMin
     /// </summary>
-    public InlineArray<float> UnpackMin => new(4, Ptr + 48);
+    public InlineArray<float> UnpackMin => new(4, Ptr + 48, 4);
 
     /// <summary>
     /// FloatProperty: UnpackMin
@@ -294,7 +294,7 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: UnpackMax
     /// </summary>
-    public InlineArray<float> UnpackMax => new(4, Ptr + 64);
+    public InlineArray<float> UnpackMax => new(4, Ptr + 64, 4);
 
     /// <summary>
     /// FloatProperty: UnpackMax

@@ -109,7 +109,7 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
     /// <summary>
     /// InlineArray{ByteProperty}: ParamModes
     /// </summary>
-    public InlineArray<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode> ParamModes => new(3, Ptr + 140);
+    public InlineArray<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode> ParamModes => new(3, Ptr + 140, 1);
 
     /// <summary>
     /// ByteProperty: ParamModes

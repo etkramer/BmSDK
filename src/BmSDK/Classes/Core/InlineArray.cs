@@ -10,11 +10,11 @@ public class InlineArray<T> : IReadOnlyList<T>
 
     private readonly int _stride;
 
-    internal InlineArray(int count, IntPtr ptr)
+    internal InlineArray(int count, IntPtr ptr, int stride)
     {
         Count = count;
         Ptr = ptr;
-        _stride = MarshalUtil.GetSizeUnmanaged<T>();
+        _stride = stride;
     }
 
     public T this[int index]

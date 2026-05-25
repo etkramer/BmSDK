@@ -1112,7 +1112,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: ProgressMessage
     /// </summary>
-    public InlineArray<BmSDK.FString> ProgressMessage => new(2, Ptr + 196);
+    public InlineArray<BmSDK.FString> ProgressMessage => new(2, Ptr + 196, 12);
 
     /// <summary>
     /// StrProperty: ProgressMessage

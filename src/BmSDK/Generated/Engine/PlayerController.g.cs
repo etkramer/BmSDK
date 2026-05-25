@@ -5299,7 +5299,7 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{StrProperty}: LastBroadcastString
     /// </summary>
-    public InlineArray<BmSDK.FString> LastBroadcastString => new(4, Ptr + 1248);
+    public InlineArray<BmSDK.FString> LastBroadcastString => new(4, Ptr + 1248, 12);
 
     /// <summary>
     /// StrProperty: LastBroadcastString

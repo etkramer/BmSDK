@@ -361,7 +361,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: ACDisplayText
     /// </summary>
-    public InlineArray<BmSDK.FString> ACDisplayText => new(3, Ptr + 564);
+    public InlineArray<BmSDK.FString> ACDisplayText => new(3, Ptr + 564, 12);
 
     /// <summary>
     /// StrProperty: ACDisplayText
@@ -391,7 +391,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: ACDescText
     /// </summary>
-    public InlineArray<BmSDK.FString> ACDescText => new(3, Ptr + 600);
+    public InlineArray<BmSDK.FString> ACDescText => new(3, Ptr + 600, 12);
 
     /// <summary>
     /// StrProperty: ACDescText
