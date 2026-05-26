@@ -11,15 +11,15 @@ namespace BmSDK;
 public class InlineArray<T> : IEnumerable<T>
 {
     public int Count { get; }
-    public IntPtr Ptr { get; }
 
+    private readonly IntPtr _ptr;
     private readonly int _stride;
     private readonly GameObject _owner;
 
     internal InlineArray(int count, IntPtr ptr, int stride, GameObject owner)
     {
         Count = count;
-        Ptr = ptr;
+        _ptr = ptr;
         _stride = stride;
         _owner = owner;
     }
@@ -31,12 +31,12 @@ public class InlineArray<T> : IEnumerable<T>
         get
         {
             Guard.Require(IsValid, "Tried accessing an invalid InlineArray");
-            return MarshalUtil.ToManaged<T>(Ptr + Guard.Bounds(index, Count) * _stride);
+            return MarshalUtil.ToManaged<T>(_ptr + Guard.Bounds(index, Count) * _stride);
         }
         set
         {
             Guard.Require(IsValid, "Tried accessing an invalid InlineArray");
-            MarshalUtil.ToUnmanaged(value, Ptr + Guard.Bounds(index, Count) * _stride);
+            MarshalUtil.ToUnmanaged(value, _ptr + Guard.Bounds(index, Count) * _stride);
         }
     }
 
@@ -95,10 +95,10 @@ public class InlineArray<T> : IEnumerable<T>
             return false;
         }
 
-        return Ptr == array.Ptr;
+        return _ptr == array._ptr;
     }
 
-    public override int GetHashCode() => HashCode.Combine(Ptr);
+    public override int GetHashCode() => HashCode.Combine(_ptr);
 
     public static bool operator ==(InlineArray<T>? left, InlineArray<T>? right)
     {
