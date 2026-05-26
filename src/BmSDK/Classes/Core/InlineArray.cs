@@ -29,8 +29,8 @@ public class InlineArray<T> : IReadOnlyList<T>
     }
 
     /// <summary>
-    /// Copies elements from a collection into this inline array.
-    /// Underflows are ignored and copying stops before an overflow.
+    /// Copies elements from a collection into the inline array.
+    /// Copying stops when the array capacity is reached.
     /// </summary>
     /// <param name="source">Enumerable to copy elements from</param>
     /// <param name="index">Index of this array to start at</param>
