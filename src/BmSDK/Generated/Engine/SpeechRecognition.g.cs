@@ -135,7 +135,7 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: InstanceData
     /// </summary>
-    public InlineArray<BmSDK.Engine.SpeechRecognition.FRecogUserData> InstanceData => new(4, Ptr + 108, 16);
+    public InlineArray<BmSDK.Engine.SpeechRecognition.FRecogUserData> InstanceData => new(4, Ptr + 108, 16, this);
 
     /// <summary>
     /// StructProperty: InstanceData

@@ -807,7 +807,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// InlineArray{ByteProperty}: LanNonce
     /// </summary>
-    public InlineArray<byte> LanNonce => new(8, Ptr + 58, 1);
+    public InlineArray<byte> LanNonce => new(8, Ptr + 58, 1, this);
 
     /// <summary>
     /// ByteProperty: LanNonce

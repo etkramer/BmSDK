@@ -81,7 +81,7 @@ public partial class RDirectionalAnimConfig : BmSDK.BmGame.RConfig, BmSDK.IGameO
     /// <summary>
     /// InlineArray{NameProperty}: Directions
     /// </summary>
-    public InlineArray<BmSDK.FName> Directions => new(12, Ptr + 44, 8);
+    public InlineArray<BmSDK.FName> Directions => new(12, Ptr + 44, 8, this);
 
     /// <summary>
     /// NameProperty: Directions

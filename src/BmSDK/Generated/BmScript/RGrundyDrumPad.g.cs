@@ -385,7 +385,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{StructProperty}: LightColours
     /// </summary>
-    public InlineArray<BmSDK.GameObject.FLinearColor> LightColours => new(4, Ptr + 544, 16);
+    public InlineArray<BmSDK.GameObject.FLinearColor> LightColours => new(4, Ptr + 544, 16, this);
 
     /// <summary>
     /// StructProperty: LightColours
@@ -417,7 +417,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{FloatProperty}: ballGlowValues
     /// </summary>
-    public InlineArray<float> ballGlowValues => new(4, Ptr + 624, 4);
+    public InlineArray<float> ballGlowValues => new(4, Ptr + 624, 4, this);
 
     /// <summary>
     /// FloatProperty: ballGlowValues
@@ -473,7 +473,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: damageStateMeshes
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> damageStateMeshes => new(3, Ptr + 648, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> damageStateMeshes => new(3, Ptr + 648, 4, this);
 
     /// <summary>
     /// ComponentProperty: damageStateMeshes
@@ -503,7 +503,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: damageStateUnderMeshes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RStaticMeshToggleable> damageStateUnderMeshes => new(2, Ptr + 660, 4);
+    public InlineArray<BmSDK.BmGame.RStaticMeshToggleable> damageStateUnderMeshes => new(2, Ptr + 660, 4, this);
 
     /// <summary>
     /// ObjectProperty: damageStateUnderMeshes
@@ -525,7 +525,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{StructProperty}: damageStateAnimNames
     /// </summary>
-    public InlineArray<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet> damageStateAnimNames => new(3, Ptr + 668, 12);
+    public InlineArray<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet> damageStateAnimNames => new(3, Ptr + 668, 12, this);
 
     /// <summary>
     /// StructProperty: damageStateAnimNames
@@ -564,7 +564,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: SmokeFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmokeFX => new(3, Ptr + 712, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmokeFX => new(3, Ptr + 712, 4, this);
 
     /// <summary>
     /// ComponentProperty: SmokeFX
@@ -639,7 +639,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: ballMaterials
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInstanceConstant> ballMaterials => new(2, Ptr + 740, 4);
+    public InlineArray<BmSDK.Engine.MaterialInstanceConstant> ballMaterials => new(2, Ptr + 740, 4, this);
 
     /// <summary>
     /// ObjectProperty: ballMaterials

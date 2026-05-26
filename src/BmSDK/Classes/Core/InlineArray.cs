@@ -14,13 +14,17 @@ public class InlineArray<T> : IEnumerable<T>
     public IntPtr Ptr { get; }
 
     private readonly int _stride;
+    private readonly GameObject _owner;
 
-    internal InlineArray(int count, IntPtr ptr, int stride)
+    internal InlineArray(int count, IntPtr ptr, int stride, GameObject owner)
     {
         Count = count;
         Ptr = ptr;
         _stride = stride;
+        _owner = owner;
     }
+
+    public bool IsValid => _owner.IsValid;
 
     public T this[int index]
     {

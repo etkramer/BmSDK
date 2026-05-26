@@ -297,7 +297,7 @@ public partial class RPawnPlayerConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: SpecialMoveAnimsets
     /// </summary>
-    public InlineArray<BmSDK.Engine.AnimSet> SpecialMoveAnimsets => new(8, Ptr + 168, 4);
+    public InlineArray<BmSDK.Engine.AnimSet> SpecialMoveAnimsets => new(8, Ptr + 168, 4, this);
 
     /// <summary>
     /// ObjectProperty: SpecialMoveAnimsets

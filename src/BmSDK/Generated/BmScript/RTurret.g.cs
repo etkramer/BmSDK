@@ -628,7 +628,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: MuzzleFlashFx
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 704, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 704, 4, this);
 
     /// <summary>
     /// ComponentProperty: MuzzleFlashFx
@@ -658,7 +658,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: BulletTrailFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 716, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 716, 4, this);
 
     /// <summary>
     /// ComponentProperty: BulletTrailFX
@@ -688,7 +688,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: ImpactFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 728, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 728, 4, this);
 
     /// <summary>
     /// ComponentProperty: ImpactFX
@@ -829,7 +829,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: XrayMats
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> XrayMats => new(3, Ptr + 808, 4);
+    public InlineArray<BmSDK.Engine.MaterialInterface> XrayMats => new(3, Ptr + 808, 4, this);
 
     /// <summary>
     /// ObjectProperty: XrayMats
@@ -859,7 +859,7 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: allMeshes
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> allMeshes => new(3, Ptr + 820, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> allMeshes => new(3, Ptr + 820, 4, this);
 
     /// <summary>
     /// ComponentProperty: allMeshes

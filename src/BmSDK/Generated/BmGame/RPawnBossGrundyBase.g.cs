@@ -3159,7 +3159,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: DoubleSwingData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters> DoubleSwingData => new(3, Ptr + 3704, 16);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FDoubleSwingParameters> DoubleSwingData => new(3, Ptr + 3704, 16, this);
 
     /// <summary>
     /// StructProperty: DoubleSwingData
@@ -3180,7 +3180,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: SwingAttackData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters> SwingAttackData => new(3, Ptr + 3752, 156);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSwingAttackParameters> SwingAttackData => new(3, Ptr + 3752, 156, this);
 
     /// <summary>
     /// StructProperty: SwingAttackData
@@ -3201,7 +3201,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: SmashAttackData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters> SmashAttackData => new(3, Ptr + 4220, 40);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSmashAttackParameters> SmashAttackData => new(3, Ptr + 4220, 40, this);
 
     /// <summary>
     /// StructProperty: SmashAttackData
@@ -3228,7 +3228,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: StompAttackData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters> StompAttackData => new(3, Ptr + 4440, 24);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FStompAttackParameters> StompAttackData => new(3, Ptr + 4440, 24, this);
 
     /// <summary>
     /// StructProperty: StompAttackData
@@ -3249,7 +3249,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: DecayingDeathData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters> DecayingDeathData => new(3, Ptr + 4512, 100);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FDecayingDeathAttackParameters> DecayingDeathData => new(3, Ptr + 4512, 100, this);
 
     /// <summary>
     /// StructProperty: DecayingDeathData
@@ -3270,7 +3270,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: MeleeAttackData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters> MeleeAttackData => new(3, Ptr + 4812, 36);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FMeleeAttackParameters> MeleeAttackData => new(3, Ptr + 4812, 36, this);
 
     /// <summary>
     /// StructProperty: MeleeAttackData
@@ -3297,7 +3297,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: HealthReductionData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters> HealthReductionData => new(3, Ptr + 5020, 48);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FHealthReductionParameters> HealthReductionData => new(3, Ptr + 5020, 48, this);
 
     /// <summary>
     /// StructProperty: HealthReductionData
@@ -3381,7 +3381,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: TimeBetweenMajorAttacks
     /// </summary>
-    public InlineArray<float> TimeBetweenMajorAttacks => new(3, Ptr + 5616, 4);
+    public InlineArray<float> TimeBetweenMajorAttacks => new(3, Ptr + 5616, 4, this);
 
     /// <summary>
     /// FloatProperty: TimeBetweenMajorAttacks
@@ -3411,7 +3411,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: TimeBetweenMajorAttacksElectrified
     /// </summary>
-    public InlineArray<float> TimeBetweenMajorAttacksElectrified => new(3, Ptr + 5628, 4);
+    public InlineArray<float> TimeBetweenMajorAttacksElectrified => new(3, Ptr + 5628, 4, this);
 
     /// <summary>
     /// FloatProperty: TimeBetweenMajorAttacksElectrified
@@ -3594,7 +3594,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: FloorSparkData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark> FloorSparkData => new(12, Ptr + 5716, 52);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FFloorSpark> FloorSparkData => new(12, Ptr + 5716, 52, this);
 
     /// <summary>
     /// StructProperty: FloorSparkData
@@ -3660,7 +3660,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{ComponentProperty}: FloorSparks
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> FloorSparks => new(12, Ptr + 6340, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> FloorSparks => new(12, Ptr + 6340, 4, this);
 
     /// <summary>
     /// ComponentProperty: FloorSparks
@@ -3771,7 +3771,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: SmashFireData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire> SmashFireData => new(3, Ptr + 6392, 28);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FSmashFire> SmashFireData => new(3, Ptr + 6392, 28, this);
 
     /// <summary>
     /// StructProperty: SmashFireData
@@ -3792,7 +3792,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{ComponentProperty}: SmashFires
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmashFires => new(3, Ptr + 6476, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> SmashFires => new(3, Ptr + 6476, 4, this);
 
     /// <summary>
     /// ComponentProperty: SmashFires
@@ -3984,7 +3984,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{ComponentProperty}: ArmWeights
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ArmWeights => new(2, Ptr + 6584, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ArmWeights => new(2, Ptr + 6584, 4, this);
 
     /// <summary>
     /// ComponentProperty: ArmWeights
@@ -4006,7 +4006,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{ComponentProperty}: ArmWeightRopes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRope2Component> ArmWeightRopes => new(2, Ptr + 6592, 4);
+    public InlineArray<BmSDK.BmGame.RRope2Component> ArmWeightRopes => new(2, Ptr + 6592, 4, this);
 
     /// <summary>
     /// ComponentProperty: ArmWeightRopes
@@ -4028,7 +4028,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{NameProperty}: ArmWeightAttachDummys
     /// </summary>
-    public InlineArray<BmSDK.FName> ArmWeightAttachDummys => new(2, Ptr + 6600, 8);
+    public InlineArray<BmSDK.FName> ArmWeightAttachDummys => new(2, Ptr + 6600, 8, this);
 
     /// <summary>
     /// NameProperty: ArmWeightAttachDummys
@@ -4050,7 +4050,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{NameProperty}: HandBoneNames
     /// </summary>
-    public InlineArray<BmSDK.FName> HandBoneNames => new(2, Ptr + 6616, 8);
+    public InlineArray<BmSDK.FName> HandBoneNames => new(2, Ptr + 6616, 8, this);
 
     /// <summary>
     /// NameProperty: HandBoneNames
@@ -4072,7 +4072,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: CurrentChainLengths
     /// </summary>
-    public InlineArray<float> CurrentChainLengths => new(2, Ptr + 6632, 4);
+    public InlineArray<float> CurrentChainLengths => new(2, Ptr + 6632, 4, this);
 
     /// <summary>
     /// FloatProperty: CurrentChainLengths
@@ -4094,7 +4094,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{StructProperty}: CurrentWeightsData
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData> CurrentWeightsData => new(2, Ptr + 6640, 76);
+    public InlineArray<BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlData> CurrentWeightsData => new(2, Ptr + 6640, 76, this);
 
     /// <summary>
     /// StructProperty: CurrentWeightsData
@@ -4110,7 +4110,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: ExtendChainTime
     /// </summary>
-    public InlineArray<float> ExtendChainTime => new(2, Ptr + 6792, 4);
+    public InlineArray<float> ExtendChainTime => new(2, Ptr + 6792, 4, this);
 
     /// <summary>
     /// FloatProperty: ExtendChainTime
@@ -4132,7 +4132,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: RetractChainTime
     /// </summary>
-    public InlineArray<float> RetractChainTime => new(2, Ptr + 6800, 4);
+    public InlineArray<float> RetractChainTime => new(2, Ptr + 6800, 4, this);
 
     /// <summary>
     /// FloatProperty: RetractChainTime
@@ -4205,7 +4205,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: ChainLengthAtSlowDownChange
     /// </summary>
-    public InlineArray<float> ChainLengthAtSlowDownChange => new(2, Ptr + 6840, 4);
+    public InlineArray<float> ChainLengthAtSlowDownChange => new(2, Ptr + 6840, 4, this);
 
     /// <summary>
     /// FloatProperty: ChainLengthAtSlowDownChange
@@ -4263,7 +4263,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: WeightHeightAtSlow
     /// </summary>
-    public InlineArray<float> WeightHeightAtSlow => new(2, Ptr + 6864, 4);
+    public InlineArray<float> WeightHeightAtSlow => new(2, Ptr + 6864, 4, this);
 
     /// <summary>
     /// FloatProperty: WeightHeightAtSlow
@@ -4285,7 +4285,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{FloatProperty}: WeightDistAtSlow
     /// </summary>
-    public InlineArray<float> WeightDistAtSlow => new(2, Ptr + 6872, 4);
+    public InlineArray<float> WeightDistAtSlow => new(2, Ptr + 6872, 4, this);
 
     /// <summary>
     /// FloatProperty: WeightDistAtSlow
@@ -4493,7 +4493,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{ObjectProperty}: roomCogsMatinee
     /// </summary>
-    public InlineArray<BmSDK.Engine.SeqAct_Interp> roomCogsMatinee => new(3, Ptr + 7012, 4);
+    public InlineArray<BmSDK.Engine.SeqAct_Interp> roomCogsMatinee => new(3, Ptr + 7012, 4, this);
 
     /// <summary>
     /// ObjectProperty: roomCogsMatinee
@@ -4523,7 +4523,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{ObjectProperty}: padCogsMatinee
     /// </summary>
-    public InlineArray<BmSDK.Engine.SeqAct_Interp> padCogsMatinee => new(3, Ptr + 7024, 4);
+    public InlineArray<BmSDK.Engine.SeqAct_Interp> padCogsMatinee => new(3, Ptr + 7024, 4, this);
 
     /// <summary>
     /// ObjectProperty: padCogsMatinee
@@ -4601,7 +4601,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// InlineArray{IntProperty}: bWeightsWantToBlockActors
     /// </summary>
-    public InlineArray<int> bWeightsWantToBlockActors => new(2, Ptr + 7108, 4);
+    public InlineArray<int> bWeightsWantToBlockActors => new(2, Ptr + 7108, 4, this);
 
     /// <summary>
     /// IntProperty: bWeightsWantToBlockActors

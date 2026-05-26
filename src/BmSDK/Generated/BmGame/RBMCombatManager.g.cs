@@ -2760,7 +2760,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: WeaponConfigs
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef> WeaponConfigs => new(21, Ptr + 636, 8);
+    public InlineArray<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef> WeaponConfigs => new(21, Ptr + 636, 8, this);
 
     /// <summary>
     /// StructProperty: WeaponConfigs
@@ -3219,7 +3219,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ClassProperty}: VenomAttackHistory
     /// </summary>
-    public InlineArray<BmSDK.Class> VenomAttackHistory => new(2, Ptr + 1024, 4);
+    public InlineArray<BmSDK.Class> VenomAttackHistory => new(2, Ptr + 1024, 4, this);
 
     /// <summary>
     /// ClassProperty: VenomAttackHistory

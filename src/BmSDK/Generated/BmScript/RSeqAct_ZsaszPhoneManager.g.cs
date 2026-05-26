@@ -780,7 +780,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// InlineArray{StructProperty}: phoneRaces
     /// </summary>
-    public InlineArray<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace> phoneRaces => new(8, Ptr + 224, 24);
+    public InlineArray<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace> phoneRaces => new(8, Ptr + 224, 24, this);
 
     /// <summary>
     /// StructProperty: phoneRaces
@@ -1204,7 +1204,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// InlineArray{FloatProperty}: difficultyTimeModifiers_Normal
     /// </summary>
-    public InlineArray<float> difficultyTimeModifiers_Normal => new(8, Ptr + 536, 4);
+    public InlineArray<float> difficultyTimeModifiers_Normal => new(8, Ptr + 536, 4, this);
 
     /// <summary>
     /// FloatProperty: difficultyTimeModifiers_Normal

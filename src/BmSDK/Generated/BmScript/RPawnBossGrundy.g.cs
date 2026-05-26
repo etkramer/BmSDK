@@ -2645,7 +2645,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: GrundyMesh
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> GrundyMesh => new(2, Ptr + 7124, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> GrundyMesh => new(2, Ptr + 7124, 4, this);
 
     /// <summary>
     /// ComponentProperty: GrundyMesh
@@ -2685,7 +2685,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: ChestMesh
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ChestMesh => new(2, Ptr + 7140, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> ChestMesh => new(2, Ptr + 7140, 4, this);
 
     /// <summary>
     /// ComponentProperty: ChestMesh
@@ -2707,7 +2707,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: HeartMesh
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> HeartMesh => new(2, Ptr + 7148, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> HeartMesh => new(2, Ptr + 7148, 4, this);
 
     /// <summary>
     /// ComponentProperty: HeartMesh
@@ -2729,7 +2729,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: HeartDettachedMesh
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> HeartDettachedMesh => new(2, Ptr + 7156, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> HeartDettachedMesh => new(2, Ptr + 7156, 4, this);
 
     /// <summary>
     /// ComponentProperty: HeartDettachedMesh
@@ -2751,7 +2751,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: RibsMeshes
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> RibsMeshes => new(4, Ptr + 7164, 4);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> RibsMeshes => new(4, Ptr + 7164, 4, this);
 
     /// <summary>
     /// ComponentProperty: RibsMeshes
@@ -2912,7 +2912,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: chainExtraLength
     /// </summary>
-    public InlineArray<float> chainExtraLength => new(2, Ptr + 7240, 4);
+    public InlineArray<float> chainExtraLength => new(2, Ptr + 7240, 4, this);
 
     /// <summary>
     /// FloatProperty: chainExtraLength
@@ -3438,7 +3438,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ObjectProperty}: TetherPoints
     /// </summary>
-    public InlineArray<BmSDK.Engine.Actor> TetherPoints => new(2, Ptr + 7300, 4);
+    public InlineArray<BmSDK.Engine.Actor> TetherPoints => new(2, Ptr + 7300, 4, this);
 
     /// <summary>
     /// ObjectProperty: TetherPoints
@@ -3550,7 +3550,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: FireOnBallsPFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> FireOnBallsPFX => new(2, Ptr + 7356, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> FireOnBallsPFX => new(2, Ptr + 7356, 4, this);
 
     /// <summary>
     /// ComponentProperty: FireOnBallsPFX
@@ -3572,7 +3572,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: ElectricityOnBallsPFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ElectricityOnBallsPFX => new(2, Ptr + 7364, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ElectricityOnBallsPFX => new(2, Ptr + 7364, 4, this);
 
     /// <summary>
     /// ComponentProperty: ElectricityOnBallsPFX
@@ -3615,7 +3615,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{NameProperty}: ChainWrapBoneNames
     /// </summary>
-    public InlineArray<BmSDK.FName> ChainWrapBoneNames => new(2, Ptr + 7532, 8);
+    public InlineArray<BmSDK.FName> ChainWrapBoneNames => new(2, Ptr + 7532, 8, this);
 
     /// <summary>
     /// NameProperty: ChainWrapBoneNames
@@ -3646,7 +3646,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{NameProperty}: GeneratorHitReacts
     /// </summary>
-    public InlineArray<BmSDK.FName> GeneratorHitReacts => new(2, Ptr + 7552, 8);
+    public InlineArray<BmSDK.FName> GeneratorHitReacts => new(2, Ptr + 7552, 8, this);
 
     /// <summary>
     /// NameProperty: GeneratorHitReacts
@@ -3719,7 +3719,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: floorRingSpeed
     /// </summary>
-    public InlineArray<float> floorRingSpeed => new(3, Ptr + 7592, 4);
+    public InlineArray<float> floorRingSpeed => new(3, Ptr + 7592, 4, this);
 
     /// <summary>
     /// FloatProperty: floorRingSpeed
@@ -3911,7 +3911,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ComponentProperty}: FloorRingPFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> FloorRingPFX => new(8, Ptr + 7676, 4);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> FloorRingPFX => new(8, Ptr + 7676, 4, this);
 
     /// <summary>
     /// ComponentProperty: FloorRingPFX
@@ -4059,7 +4059,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: crushDPS
     /// </summary>
-    public InlineArray<float> crushDPS => new(3, Ptr + 7760, 4);
+    public InlineArray<float> crushDPS => new(3, Ptr + 7760, 4, this);
 
     /// <summary>
     /// FloatProperty: crushDPS
@@ -4419,7 +4419,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: swingSpeedPadModifier
     /// </summary>
-    public InlineArray<float> swingSpeedPadModifier => new(3, Ptr + 7936, 4);
+    public InlineArray<float> swingSpeedPadModifier => new(3, Ptr + 7936, 4, this);
 
     /// <summary>
     /// FloatProperty: swingSpeedPadModifier
@@ -4512,7 +4512,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{StructProperty}: electricPillars
     /// </summary>
-    public InlineArray<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX> electricPillars => new(3, Ptr + 7976, 52);
+    public InlineArray<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX> electricPillars => new(3, Ptr + 7976, 52, this);
 
     /// <summary>
     /// StructProperty: electricPillars
@@ -4659,7 +4659,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: conductorCurrentRotationRate
     /// </summary>
-    public InlineArray<float> conductorCurrentRotationRate => new(3, Ptr + 8196, 4);
+    public InlineArray<float> conductorCurrentRotationRate => new(3, Ptr + 8196, 4, this);
 
     /// <summary>
     /// FloatProperty: conductorCurrentRotationRate
@@ -4752,7 +4752,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: stage3PillarOffTime
     /// </summary>
-    public InlineArray<float> stage3PillarOffTime => new(3, Ptr + 8236, 4);
+    public InlineArray<float> stage3PillarOffTime => new(3, Ptr + 8236, 4, this);
 
     /// <summary>
     /// FloatProperty: stage3PillarOffTime
@@ -4836,7 +4836,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{IntProperty}: bPadCogsOn
     /// </summary>
-    public InlineArray<int> bPadCogsOn => new(3, Ptr + 8280, 4);
+    public InlineArray<int> bPadCogsOn => new(3, Ptr + 8280, 4, this);
 
     /// <summary>
     /// IntProperty: bPadCogsOn
@@ -4974,7 +4974,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{ObjectProperty}: OverloadExplodeFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.Emitter> OverloadExplodeFX => new(3, Ptr + 8340, 4);
+    public InlineArray<BmSDK.Engine.Emitter> OverloadExplodeFX => new(3, Ptr + 8340, 4, this);
 
     /// <summary>
     /// ObjectProperty: OverloadExplodeFX
@@ -5310,7 +5310,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{StructProperty}: deathVolOffsets
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> deathVolOffsets => new(4, Ptr + 8512, 12);
+    public InlineArray<System.Numerics.Vector3> deathVolOffsets => new(4, Ptr + 8512, 12, this);
 
     /// <summary>
     /// StructProperty: deathVolOffsets
@@ -5336,7 +5336,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{StructProperty}: deathVolOffsetRots
     /// </summary>
-    public InlineArray<BmSDK.Rotator> deathVolOffsetRots => new(4, Ptr + 8560, 12);
+    public InlineArray<BmSDK.Rotator> deathVolOffsetRots => new(4, Ptr + 8560, 12, this);
 
     /// <summary>
     /// StructProperty: deathVolOffsetRots
@@ -5545,7 +5545,7 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// InlineArray{StructProperty}: hardCodedSmashReturnOffsets
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> hardCodedSmashReturnOffsets => new(2, Ptr + 8708, 12);
+    public InlineArray<System.Numerics.Vector3> hardCodedSmashReturnOffsets => new(2, Ptr + 8708, 12, this);
 
     /// <summary>
     /// StructProperty: hardCodedSmashReturnOffsets

@@ -501,7 +501,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// InlineArray{FloatProperty}: BreakoutTimesLeft
     /// </summary>
-    public InlineArray<float> BreakoutTimesLeft => new(4, Ptr + 276, 4);
+    public InlineArray<float> BreakoutTimesLeft => new(4, Ptr + 276, 4, this);
 
     /// <summary>
     /// FloatProperty: BreakoutTimesLeft
@@ -539,7 +539,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// InlineArray{FloatProperty}: BreakoutTimesRight
     /// </summary>
-    public InlineArray<float> BreakoutTimesRight => new(5, Ptr + 292, 4);
+    public InlineArray<float> BreakoutTimesRight => new(5, Ptr + 292, 4, this);
 
     /// <summary>
     /// FloatProperty: BreakoutTimesRight
@@ -585,7 +585,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// InlineArray{FloatProperty}: BreakoutValuesLeft
     /// </summary>
-    public InlineArray<float> BreakoutValuesLeft => new(4, Ptr + 312, 4);
+    public InlineArray<float> BreakoutValuesLeft => new(4, Ptr + 312, 4, this);
 
     /// <summary>
     /// FloatProperty: BreakoutValuesLeft
@@ -623,7 +623,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// InlineArray{FloatProperty}: BreakoutValuesRight
     /// </summary>
-    public InlineArray<float> BreakoutValuesRight => new(5, Ptr + 328, 4);
+    public InlineArray<float> BreakoutValuesRight => new(5, Ptr + 328, 4, this);
 
     /// <summary>
     /// FloatProperty: BreakoutValuesRight

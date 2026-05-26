@@ -153,7 +153,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsConsoleInner
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 80, 8);
+    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 80, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsConsoleInner
@@ -223,7 +223,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsConsoleOuter
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 144, 8);
+    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 144, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsConsoleOuter
@@ -293,7 +293,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsPC
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 208, 8);
+    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 208, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsPC

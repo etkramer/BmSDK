@@ -259,7 +259,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: AnimNodes
     /// </summary>
-    public InlineArray<BmSDK.Engine.AnimNodeSequence> AnimNodes => new(3, Ptr + 480, 4);
+    public InlineArray<BmSDK.Engine.AnimNodeSequence> AnimNodes => new(3, Ptr + 480, 4, this);
 
     /// <summary>
     /// ObjectProperty: AnimNodes
@@ -289,7 +289,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: startingLoc
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> startingLoc => new(3, Ptr + 492, 12);
+    public InlineArray<System.Numerics.Vector3> startingLoc => new(3, Ptr + 492, 12, this);
 
     /// <summary>
     /// StructProperty: startingLoc
@@ -310,7 +310,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: startingRot
     /// </summary>
-    public InlineArray<BmSDK.Rotator> startingRot => new(3, Ptr + 528, 12);
+    public InlineArray<BmSDK.Rotator> startingRot => new(3, Ptr + 528, 12, this);
 
     /// <summary>
     /// StructProperty: startingRot
@@ -331,7 +331,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: bReadyForTakeoff
     /// </summary>
-    public InlineArray<int> bReadyForTakeoff => new(3, Ptr + 564, 4);
+    public InlineArray<int> bReadyForTakeoff => new(3, Ptr + 564, 4, this);
 
     /// <summary>
     /// IntProperty: bReadyForTakeoff
@@ -361,7 +361,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: bFinishedTakeOff
     /// </summary>
-    public InlineArray<int> bFinishedTakeOff => new(3, Ptr + 576, 4);
+    public InlineArray<int> bFinishedTakeOff => new(3, Ptr + 576, 4, this);
 
     /// <summary>
     /// IntProperty: bFinishedTakeOff
@@ -412,7 +412,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: trueFlightVelocity
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> trueFlightVelocity => new(3, Ptr + 616, 12);
+    public InlineArray<System.Numerics.Vector3> trueFlightVelocity => new(3, Ptr + 616, 12, this);
 
     /// <summary>
     /// StructProperty: trueFlightVelocity
@@ -439,7 +439,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: MaterialConstants
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInstanceConstant> MaterialConstants => new(3, Ptr + 664, 4);
+    public InlineArray<BmSDK.Engine.MaterialInstanceConstant> MaterialConstants => new(3, Ptr + 664, 4, this);
 
     /// <summary>
     /// ObjectProperty: MaterialConstants
