@@ -8,7 +8,7 @@ namespace BmSDK;
 /// These are of fixed size and cannot be created.
 /// </summary>
 /// <typeparam name="T">Stored data type of the inline array</typeparam>
-public class InlineArray<T> : IReadOnlyList<T>
+public class InlineArray<T> : IEnumerable<T>
 {
     public int Count { get; }
     public IntPtr Ptr { get; }
