@@ -4978,7 +4978,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: CameraSmoothingBuffer
     /// </summary>
-    public InlineArray<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime> CameraSmoothingBuffer => new(10, Ptr + 12300);
+    public InlineArray<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime> CameraSmoothingBuffer => new(10, Ptr + 12300, 16, this);
 
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
@@ -5145,7 +5145,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ZoomPoints
     /// </summary>
-    public InlineArray<float> ZoomPoints => new(9, Ptr + 12528);
+    public InlineArray<float> ZoomPoints => new(9, Ptr + 12528, 4, this);
 
     /// <summary>
     /// FloatProperty: ZoomPoints
@@ -5223,7 +5223,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: ZoomPointDir
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> ZoomPointDir => new(9, Ptr + 12564);
+    public InlineArray<System.Numerics.Vector3> ZoomPointDir => new(9, Ptr + 12564, 12, this);
 
     /// <summary>
     /// StructProperty: ZoomPointDir
@@ -5274,7 +5274,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: TightZoomPointDir
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> TightZoomPointDir => new(9, Ptr + 12672);
+    public InlineArray<System.Numerics.Vector3> TightZoomPointDir => new(9, Ptr + 12672, 12, this);
 
     /// <summary>
     /// StructProperty: TightZoomPointDir

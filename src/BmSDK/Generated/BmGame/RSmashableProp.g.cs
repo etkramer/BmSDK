@@ -652,7 +652,7 @@ public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.BmGam
     /// <summary>
     /// InlineArray{ObjectProperty}: OldMaterial
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 800);
+    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 800, 4, this);
 
     /// <summary>
     /// ObjectProperty: OldMaterial

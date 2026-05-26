@@ -310,7 +310,7 @@ public partial class RGadgetSelectBM2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameO
     /// <summary>
     /// InlineArray{NameProperty}: CurrentGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> CurrentGadgets => new(8, Ptr + 84);
+    public InlineArray<BmSDK.FName> CurrentGadgets => new(8, Ptr + 84, 8, this);
 
     /// <summary>
     /// NameProperty: CurrentGadgets

@@ -90,7 +90,7 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     /// <summary>
     /// InlineArray{StructProperty}: LightDirections
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> LightDirections => new(3, Ptr + 412);
+    public InlineArray<System.Numerics.Vector3> LightDirections => new(3, Ptr + 412, 12, this);
 
     /// <summary>
     /// StructProperty: LightDirections
@@ -111,7 +111,7 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     /// <summary>
     /// InlineArray{StructProperty}: LightColours
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> LightColours => new(3, Ptr + 448);
+    public InlineArray<System.Numerics.Vector3> LightColours => new(3, Ptr + 448, 12, this);
 
     /// <summary>
     /// StructProperty: LightColours

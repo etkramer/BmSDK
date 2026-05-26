@@ -446,7 +446,7 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ShotDamage
     /// </summary>
-    public InlineArray<float> ShotDamage => new(3, Ptr + 964);
+    public InlineArray<float> ShotDamage => new(3, Ptr + 964, 4, this);
 
     /// <summary>
     /// FloatProperty: ShotDamage

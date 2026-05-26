@@ -699,7 +699,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ZeroTime
     /// </summary>
-    public InlineArray<float> ZeroTime => new(2, Ptr + 328);
+    public InlineArray<float> ZeroTime => new(2, Ptr + 328, 4, this);
 
     /// <summary>
     /// FloatProperty: ZeroTime
@@ -721,7 +721,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: SmoothedMouse
     /// </summary>
-    public InlineArray<float> SmoothedMouse => new(2, Ptr + 336);
+    public InlineArray<float> SmoothedMouse => new(2, Ptr + 336, 4, this);
 
     /// <summary>
     /// FloatProperty: SmoothedMouse

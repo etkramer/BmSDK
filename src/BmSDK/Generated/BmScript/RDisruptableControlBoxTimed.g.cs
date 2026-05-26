@@ -240,7 +240,7 @@ public partial class RDisruptableControlBoxTimed : BmSDK.BmGame.RDisruptableObje
     /// <summary>
     /// InlineArray{ObjectProperty}: ScreenMats
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> ScreenMats => new(4, Ptr + 572);
+    public InlineArray<BmSDK.Engine.MaterialInterface> ScreenMats => new(4, Ptr + 572, 4, this);
 
     /// <summary>
     /// ObjectProperty: ScreenMats
@@ -278,7 +278,7 @@ public partial class RDisruptableControlBoxTimed : BmSDK.BmGame.RDisruptableObje
     /// <summary>
     /// InlineArray{ObjectProperty}: BoxMats
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> BoxMats => new(4, Ptr + 588);
+    public InlineArray<BmSDK.Engine.MaterialInterface> BoxMats => new(4, Ptr + 588, 4, this);
 
     /// <summary>
     /// ObjectProperty: BoxMats
@@ -316,7 +316,7 @@ public partial class RDisruptableControlBoxTimed : BmSDK.BmGame.RDisruptableObje
     /// <summary>
     /// InlineArray{ObjectProperty}: BoxMesh
     /// </summary>
-    public InlineArray<BmSDK.Engine.StaticMesh> BoxMesh => new(4, Ptr + 604);
+    public InlineArray<BmSDK.Engine.StaticMesh> BoxMesh => new(4, Ptr + 604, 4, this);
 
     /// <summary>
     /// ObjectProperty: BoxMesh

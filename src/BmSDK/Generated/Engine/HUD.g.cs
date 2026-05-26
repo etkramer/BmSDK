@@ -887,7 +887,7 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: LocalMessages
     /// </summary>
-    public InlineArray<BmSDK.Engine.HUD.FHudLocalizedMessage> LocalMessages => new(8, Ptr + 496);
+    public InlineArray<BmSDK.Engine.HUD.FHudLocalizedMessage> LocalMessages => new(8, Ptr + 496, 64, this);
 
     /// <summary>
     /// StructProperty: LocalMessages

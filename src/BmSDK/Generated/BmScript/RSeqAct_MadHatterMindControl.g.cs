@@ -980,7 +980,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// InlineArray{FloatProperty}: scoreThresholds
     /// </summary>
-    public InlineArray<float> scoreThresholds => new(4, Ptr + 468);
+    public InlineArray<float> scoreThresholds => new(4, Ptr + 468, 4, this);
 
     /// <summary>
     /// FloatProperty: scoreThresholds

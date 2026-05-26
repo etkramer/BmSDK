@@ -81,7 +81,7 @@ public partial class RFlaps_ConstraintSetupCone : BmSDK.Engine.RFlaps_Constraint
     /// <summary>
     /// InlineArray{StructProperty}: ConstrainedParticles
     /// </summary>
-    public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference> ConstrainedParticles => new(5, Ptr + 64);
+    public InlineArray<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference> ConstrainedParticles => new(5, Ptr + 64, 16, this);
 
     /// <summary>
     /// StructProperty: ConstrainedParticles

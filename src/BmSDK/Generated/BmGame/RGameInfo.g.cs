@@ -3075,7 +3075,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: FloorTakedownChallengeAction
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> FloorTakedownChallengeAction => new(28, Ptr + 960);
+    public InlineArray<BmSDK.BmGame.RGameInfo.EGameAction> FloorTakedownChallengeAction => new(28, Ptr + 960, 1, this);
 
     /// <summary>
     /// ByteProperty: FloorTakedownChallengeAction

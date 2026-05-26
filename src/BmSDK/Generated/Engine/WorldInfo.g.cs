@@ -2206,7 +2206,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: BookMarks
     /// </summary>
-    public InlineArray<BmSDK.Engine.BookMark> BookMarks => new(10, Ptr + 924);
+    public InlineArray<BmSDK.Engine.BookMark> BookMarks => new(10, Ptr + 924, 4, this);
 
     /// <summary>
     /// ObjectProperty: BookMarks
@@ -2292,7 +2292,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: KismetBookMarks
     /// </summary>
-    public InlineArray<BmSDK.Engine.KismetBookMark> KismetBookMarks => new(10, Ptr + 964);
+    public InlineArray<BmSDK.Engine.KismetBookMark> KismetBookMarks => new(10, Ptr + 964, 4, this);
 
     /// <summary>
     /// ObjectProperty: KismetBookMarks
