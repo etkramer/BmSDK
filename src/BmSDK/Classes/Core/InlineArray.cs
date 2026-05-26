@@ -28,8 +28,16 @@ public class InlineArray<T> : IEnumerable<T>
 
     public T this[int index]
     {
-        get => MarshalUtil.ToManaged<T>(Ptr + Guard.Bounds(index, Count) * _stride);
-        set => MarshalUtil.ToUnmanaged(value, Ptr + Guard.Bounds(index, Count) * _stride);
+        get
+        {
+            Guard.Require(IsValid, "Tried accessing an invalid InlineArray");
+            return MarshalUtil.ToManaged<T>(Ptr + Guard.Bounds(index, Count) * _stride);
+        }
+        set
+        {
+            Guard.Require(IsValid, "Tried accessing an invalid InlineArray");
+            MarshalUtil.ToUnmanaged(value, Ptr + Guard.Bounds(index, Count) * _stride);
+        }
     }
 
     /// <summary>
