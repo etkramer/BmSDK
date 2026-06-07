@@ -22,10 +22,10 @@ public static class Guard
     [DebuggerHidden]
     public static int Bounds(int index, int count, string? message = null)
     {
-        if (count < 0 || index >= count)
+        if (index < 0 || index >= count)
         {
             throw new IndexOutOfRangeException(
-                message ?? $"Index {index} is outside of the collections bounds (0-{count - 1})"
+                message ?? $"Index {index} is outside of the collections bounds (0 to {count - 1})"
             );
         }
 
