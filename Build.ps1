@@ -100,8 +100,8 @@ function Invoke-MSBuild {
 }
 
 function Invoke-Clean {
-    $PluginsDir = "bin\Binaries\Win32\plugins"
-    $SdkDir = "bin\Binaries\Win32\sdk"
+    $PluginsDir = "bin\Binaries\Win64\plugins"
+    $SdkDir = "bin\Binaries\Win64\sdk"
     
     Write-Host "Cleaning binaries..."
     
@@ -136,7 +136,7 @@ function Invoke-Publish {
 
     # Publish BmSDK to populate publish directory
     Write-Host "Publishing BmSDK project..." -ForegroundColor Yellow
-    $PublishPath = Join-Path (Get-Location) "publish\Binaries\Win32\sdk"
+    $PublishPath = Join-Path (Get-Location) "publish\Binaries\Win64\sdk"
     $PublishOutput = & dotnet publish "src/BmSDK/BmSDK.csproj" --configuration Release --output $PublishPath --verbosity minimal 2>&1
     $ExitCode = $LASTEXITCODE
     
@@ -151,20 +151,15 @@ function Invoke-Publish {
     # Define required files
     $RequiredFiles = @{
         "README.md"                                         = "README.md"
-        "bin/Binaries/Win32/dinput8.dll"                    = "Binaries/Win32/dinput8.dll"
-        "publish/Binaries/Win32/plugins"                    = "Binaries/Win32/plugins"
-        "publish/Binaries/Win32/sdk"                        = "Binaries/Win32/sdk"
+        "bin/Binaries/Win64/dinput8.dll"                    = "Binaries/Win64/dinput8.dll"
+        "publish/Binaries/Win64/plugins"                    = "Binaries/Win64/plugins"
+        "publish/Binaries/Win64/sdk"                        = "Binaries/Win64/sdk"
         "bin/BmGame/Scripts/MinimalScript.cs"               = "BmGame/Scripts/MinimalScript.cs"
         "bin/BmGame/ScriptsDev/ScriptsDev.csproj"           = "BmGame/ScriptsDev/ScriptsDev.csproj"
         "bin/BmGame/ScriptsDev/ScriptsDev.slnx"             = "BmGame/ScriptsDev/ScriptsDev.slnx"
         "bin/BmGame/ScriptsDev/ScriptsDev.code-workspace"   = "BmGame/ScriptsDev/ScriptsDev.code-workspace"
         "bin/BmGame/ScriptsDev/Properties"                  = "BmGame/ScriptsDev/Properties"
         "bin/BmGame/Mods/ModTemplate"                       = "BmGame/Mods/ModTemplate"
-    }
-
-    # Define Steam-specific files (includes BatmanAC.exe)
-    $SteamFiles = @{
-        "bin/Binaries/Win32/BatmanAC.exe" = "Binaries/Win32/BatmanAC.exe"
     }
 
     # Validate all required files exist
@@ -201,8 +196,6 @@ function Invoke-Publish {
     # Create output directory
     $TempDir = "releases/BmSDK-$GitTag"
     $ZipPath = "releases/BmSDK-$GitTag.zip"
-    $TempDirSteam = "releases/CompatibilityPatch-$GitTag"
-    $ZipPathSteam = "releases/CompatibilityPatch-$GitTag.zip"
 
     if (Test-Path $TempDir) {
         Remove-Item $TempDir -Recurse -Force
@@ -241,56 +234,17 @@ function Invoke-Publish {
     Write-Host "Creating release archive..." -ForegroundColor Yellow
     Compress-Archive -Path "$TempDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
 
-    # Create Steam patch archive with only BatmanAC.exe
-    if (Test-Path $TempDirSteam) {
-        Remove-Item $TempDirSteam -Recurse -Force
-    }
-
-    if (Test-Path $ZipPathSteam) {
-        Remove-Item $ZipPathSteam -Force
-    }
-
-    Write-Host "Creating Steam patch..." -ForegroundColor Yellow
-    
-    New-Item -ItemType Directory -Path $TempDirSteam -Force | Out-Null
-
-    # Copy only Steam-specific files (BatmanAC.exe)
-    foreach ($Source in $SteamFiles.Keys) {
-        $Destination = Join-Path $TempDirSteam $SteamFiles[$Source]
-        $DestinationDir = Split-Path $Destination -Parent
-        
-        if (-not (Test-Path $DestinationDir)) {
-            New-Item -ItemType Directory -Path $DestinationDir -Force | Out-Null
-        }
-        
-        Copy-Item $Source $Destination -Force
-        Write-Host "  ✓ $Source -> $($SteamFiles[$Source])" -ForegroundColor Gray
-    }
-
-    # Create the Steam patch zip archive
-    Compress-Archive -Path "$TempDirSteam/*" -DestinationPath $ZipPathSteam -CompressionLevel Optimal
-
-    # Clean up Steam patch temporary directory
-    Remove-Item $TempDirSteam -Recurse -Force
-
-    $SteamPatchZipSize = (Get-Item $ZipPathSteam).Length / 1MB
-    Write-Host "Steam patch package created: $ZipPathSteam ($([Math]::Round($SteamPatchZipSize, 2)) MB)" -ForegroundColor Green
-
     # Clean up main temporary directory
     Remove-Item $TempDir -Recurse -Force
 
     # Output success message
     $ZipSize = (Get-Item $ZipPath).Length / 1MB
-    $ZipSizeSteam = (Get-Item $ZipPathSteam).Length / 1MB
     Write-Host "" -ForegroundColor Green
-    Write-Host "Release package(s) created successfully!" -ForegroundColor Green
+    Write-Host "Release package created successfully!" -ForegroundColor Green
     Write-Host "   📦 $ZipPath ($([Math]::Round($ZipSize, 2)) MB)" -ForegroundColor White
-    if (Test-Path $ZipPathSteam) {
-        Write-Host "   📦 $ZipPathSteam ($([Math]::Round($ZipSizeSteam, 2)) MB)" -ForegroundColor White
-    }
     Write-Host "" -ForegroundColor Green
     Write-Host "Ready for distribution! 🚀" -ForegroundColor Green
-    
+
     return $true
 }
 

@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "BatmanAC": {
+    "BatmanAK": {
       "commandName": "Executable",
-      "executablePath": "$(SolutionDir)\\..\\..\\Binaries\\Win32\\BatmanAC.exe",
+      "executablePath": "$(SolutionDir)\\..\\..\\Binaries\\Win64\\BatmanAK.exe",
       "commandLineArgs": "-nosplash",
-      "workingDirectory": "$(SolutionDir)\\..\\..\\Binaries\\Win32",
+      "workingDirectory": "$(SolutionDir)\\..\\..\\Binaries\\Win64",
       "nativeDebugging": false
     }
   }

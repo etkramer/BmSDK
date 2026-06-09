@@ -111,7 +111,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetExt>.asi</TargetExt>
-    <OutDir>$(SolutionDir)bin\Binaries\Win64\plugins\</OutDir>
+    <OutDir>$(SolutionDir)publish\Binaries\Win64\plugins\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <OutDir>$(SolutionDir)bin\Binaries\Win64\plugins\</OutDir>
