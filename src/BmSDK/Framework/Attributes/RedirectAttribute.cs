@@ -8,7 +8,9 @@ namespace BmSDK.Framework;
 /// <remarks>The method being marked must be static. If the target UFunction is not static
 /// the detour must take an artificial self parameter  of the <see cref="TargetType"/> as the first argument.
 /// The return type and the parameter types that follow (the function signature) must match the actual method exactly
-/// (both types and order). Names and the method's access modifier are irrelevant.</remarks>
+/// (both types and order). Names and the method's access modifier are irrelevant.
+/// Multiple RedirectAttributes are allowed on the same function as long as the target type and/or (less commonly)
+/// target UFunction is altered. In that case, multiple, independent redirects will be registered.</remarks>
 /// <example>
 /// [Redirect(typeof(RPawnPlayer), nameof(RPawnPlayer.ExperienceAwarded))]
 /// private static void ExperienceAwardedRedirect(RPawnPlayer self, int xp, int teethXp)
