@@ -44,12 +44,22 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         var declaringFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
         // Store the redirect for later use.
-        var redirInfo = new GlobalRedirectorInfo(targetType, redirAttr.AllowSubtypes, redirectMi, redirectMi.DeclaringType!.Assembly);
+        var redirInfo = new GlobalRedirectorInfo(
+            targetType,
+            redirAttr.AllowSubtypes,
+            redirectMi,
+            redirectMi.DeclaringType!.Assembly
+        );
 
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
         {
-            if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod && r.TargetType == redirInfo.TargetType))
+            if (
+                redirects.Any(r =>
+                    r.RedirectMethod == redirInfo.RedirectMethod
+                    && r.TargetType == redirInfo.TargetType
+                )
+            )
             {
                 throw new InvalidOperationException(
                     $"{redirInfo} has already been registered once on {declaringFuncPath}!"
