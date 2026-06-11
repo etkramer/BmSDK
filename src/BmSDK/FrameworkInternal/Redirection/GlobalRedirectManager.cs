@@ -75,13 +75,10 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         {
             foreach (var func in type.GetMethods(_globalRedirSearchFlags))
             {
-                var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
-                if (redirAttr == null)
+                foreach (var redirAttr in func.GetCustomAttributes<RedirectAttribute>())
                 {
-                    continue;
+                    RegisterRedirector(redirAttr, func);
                 }
-
-                RegisterRedirector(redirAttr, func);
             }
         }
     }

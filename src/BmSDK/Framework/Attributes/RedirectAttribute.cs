@@ -21,7 +21,7 @@ namespace BmSDK.Framework;
 /// Use <see langword="typeof"/> to get it safely.</param>
 /// <param name="targetMethod">The name of the method on the target type to which calls are redirected.
 /// Use <see langword="nameof"/> to get it safely.</param>
-[AttributeUsage(AttributeTargets.Method, Inherited = false)]
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = false)]
 public sealed class RedirectAttribute(Type targetType, string targetMethod) : Attribute
 {
     public Type TargetType { get; } = targetType;
