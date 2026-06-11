@@ -49,10 +49,10 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
         {
-            if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
+            if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod && r.TargetType == redirInfo.TargetType))
             {
                 throw new InvalidOperationException(
-                    $"{redirInfo} has already been registered once" + $"on {declaringFuncPath}!"
+                    $"{redirInfo} has already been registered once on {declaringFuncPath}!"
                 );
             }
         }
