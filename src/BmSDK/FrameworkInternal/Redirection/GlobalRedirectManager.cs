@@ -19,6 +19,23 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
     private readonly Dictionary<string, List<GlobalRedirectorInfo>> _globalRedirsDict = [];
 
     /// <summary>
+    /// Registers all functions marked with a <see cref="RedirectAttribute"/> in a given assembly.
+    /// </summary>
+    public void RegisterRedirectors(Assembly asm)
+    {
+        foreach (var type in asm.GetTypes())
+        {
+            foreach (var func in type.GetMethods(_globalRedirSearchFlags))
+            {
+                foreach (var redirAttr in func.GetCustomAttributes<RedirectAttribute>())
+                {
+                    RegisterRedirector(redirAttr, func);
+                }
+            }
+        }
+    }
+
+    /// <summary>
     /// Registers a delegate as a redirector for the given in-game function.
     /// </summary>
     /// <param name="redirAttr">Attribute containing metadata for registration</param>
@@ -44,15 +61,27 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         var declaringFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
         // Store the redirect for later use.
-        var redirInfo = new GlobalRedirectorInfo(targetType, redirAttr.AllowSubtypes, redirectMi, redirectMi.DeclaringType!.Assembly);
+        var redirInfo = new GlobalRedirectorInfo(
+            targetType,
+            redirAttr.AllowSubtypes,
+            redirectMi,
+            redirectMi.DeclaringType!.Assembly
+        );
 
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
         {
-            if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
+            // Prevent the same managed function from being used on the same target type
+            // as that would likely be a bug
+            if (
+                redirects.Any(r =>
+                    r.RedirectMethod == redirInfo.RedirectMethod
+                    && r.TargetType == redirInfo.TargetType
+                )
+            )
             {
                 throw new InvalidOperationException(
-                    $"{redirInfo} has already been registered once" + $"on {declaringFuncPath}!"
+                    $"{redirInfo} has already been registered once on {declaringFuncPath}!"
                 );
             }
         }
@@ -64,26 +93,6 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
 
         RedirectManager.QueueConfigureFunction(declaringFuncPath);
         redirects.Add(redirInfo);
-    }
-
-    /// <summary>
-    /// Registers all functions marked with a <see cref="RedirectAttribute"/> in a given assembly.
-    /// </summary>
-    public void RegisterRedirectors(Assembly asm)
-    {
-        foreach (var type in asm.GetTypes())
-        {
-            foreach (var func in type.GetMethods(_globalRedirSearchFlags))
-            {
-                var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
-                if (redirAttr == null)
-                {
-                    continue;
-                }
-
-                RegisterRedirector(redirAttr, func);
-            }
-        }
     }
 
     /// <summary>
@@ -106,8 +115,10 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
             {
                 return objType.IsAssignableTo(info.TargetType);
             }
-
-            return objType == info.TargetType;
+            else
+            {
+                return objType == info.TargetType;
+            }
         });
     }
 
