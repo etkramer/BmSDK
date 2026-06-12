@@ -19,6 +19,23 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
     private readonly Dictionary<string, List<GlobalRedirectorInfo>> _globalRedirsDict = [];
 
     /// <summary>
+    /// Registers all functions marked with a <see cref="RedirectAttribute"/> in a given assembly.
+    /// </summary>
+    public void RegisterRedirectors(Assembly asm)
+    {
+        foreach (var type in asm.GetTypes())
+        {
+            foreach (var func in type.GetMethods(_globalRedirSearchFlags))
+            {
+                foreach (var redirAttr in func.GetCustomAttributes<RedirectAttribute>())
+                {
+                    RegisterRedirector(redirAttr, func);
+                }
+            }
+        }
+    }
+
+    /// <summary>
     /// Registers a delegate as a redirector for the given in-game function.
     /// </summary>
     /// <param name="redirAttr">Attribute containing metadata for registration</param>
@@ -54,6 +71,8 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
         {
+            // Prevent the same managed function from being used on the same target type
+            // as that would likely be a bug
             if (
                 redirects.Any(r =>
                     r.RedirectMethod == redirInfo.RedirectMethod
@@ -77,23 +96,6 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
     }
 
     /// <summary>
-    /// Registers all functions marked with a <see cref="RedirectAttribute"/> in a given assembly.
-    /// </summary>
-    public void RegisterRedirectors(Assembly asm)
-    {
-        foreach (var type in asm.GetTypes())
-        {
-            foreach (var func in type.GetMethods(_globalRedirSearchFlags))
-            {
-                foreach (var redirAttr in func.GetCustomAttributes<RedirectAttribute>())
-                {
-                    RegisterRedirector(redirAttr, func);
-                }
-            }
-        }
-    }
-
-    /// <summary>
     /// Gets any redirections for the given function path if it applies to the given GameObject.
     /// </summary>
     /// <returns>Objects representing the registered global redirects.
@@ -113,8 +115,10 @@ internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags
             {
                 return objType.IsAssignableTo(info.TargetType);
             }
-
-            return objType == info.TargetType;
+            else
+            {
+                return objType == info.TargetType;
+            }
         });
     }
 
