@@ -8,7 +8,7 @@ static int __fastcall EngineLoopPreInitDetour(void* a1, void* a2, void* Source) 
     // Init .NET and BmSDK.dll if not yet done
     static bool isRuntimeReady = false;
     if (!isRuntimeReady) {
-        runtime::load_dll();
+        Runtime::LoadDll();
         isRuntimeReady = true;
     }
 
@@ -16,10 +16,17 @@ static int __fastcall EngineLoopPreInitDetour(void* a1, void* a2, void* Source) 
     return EngineLoopPreInit(a1, a2, Source);
 }
 
-void DetourManager::RegisterEngineLoopPreInitDetour() {
+void DetourManager::RegisterDetours() {
+    DetourRestoreAfterWith();
+    DetourTransactionBegin();
+    DetourUpdateThread(GetCurrentThread());
+
+    // Hook into FEngineLoop::PreInit for BmSDK entry point
     Attach(
-        offsets::BaseAddress + offsets::EngineLoopPreInit,
+        Offsets::EngineLoopPreInit,
         &EngineLoopPreInit,
         &EngineLoopPreInitDetour
     );
+
+    DetourTransactionCommit();
 }

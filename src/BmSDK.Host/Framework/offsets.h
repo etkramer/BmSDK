@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace offsets {
+namespace Offsets {
     inline uintptr_t BaseAddress = 0;
 #if BATMAN2
     inline constexpr uintptr_t EngineLoopPreInit = 0x7DB210;
