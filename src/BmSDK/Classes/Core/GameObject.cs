@@ -96,7 +96,7 @@ public partial class GameObject
     /// </summary>
     public void AddToRoot()
     {
-        ObjectFlags |= EObjectFlags.RF_RootSet;
+        GameFunctions.AddToRoot(Ptr);
     }
 
     /// <summary>
@@ -104,7 +104,7 @@ public partial class GameObject
     /// </summary>
     public void RemoveFromRoot()
     {
-        ObjectFlags &= ~EObjectFlags.RF_RootSet;
+        GameFunctions.RemoveFromRoot(Ptr);
     }
 
     /// <inheritdoc/>

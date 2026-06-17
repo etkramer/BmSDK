@@ -114,6 +114,14 @@ internal static class GameFunctions
     // UObject::ConditionalPostLoad()
     public delegate void ConditionalPostLoadDelegate(IntPtr self);
 
+    // UObject::AddToRoot()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate IntPtr AddToRootDelegate(IntPtr self);
+
+    // UObject::RemoveFromRoot()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate IntPtr RemoveFromRootDelegate(IntPtr self);
+
     private static StaticConstructObjectDelegate? _StaticConstructObject = null;
     private static StaticFindObjectDelegate? _StaticFindObject = null;
     private static LoadPackageDelegate? _LoadPackage = null;
@@ -131,6 +139,8 @@ internal static class GameFunctions
     private static AppReallocDelegate? _AppRealloc = null;
     private static AppFreeDelegate? _AppFree = null;
     private static EngineTickDelegate? _EngineTick = null;
+    private static AddToRootDelegate? _AddToRoot = null;
+    private static RemoveFromRootDelegate? _RemoveFromRoot = null;
 
     public static StaticConstructObjectDelegate StaticConstructObject =>
         _StaticConstructObject ??=
@@ -216,5 +226,15 @@ internal static class GameFunctions
     public static EngineTickDelegate EngineTick =>
         _EngineTick ??= Marshal.GetDelegateForFunctionPointer<EngineTickDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.EngineTick)
+        );
+
+    public static AddToRootDelegate AddToRoot =>
+        _AddToRoot ??= Marshal.GetDelegateForFunctionPointer<AddToRootDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.AddToRoot)
+        );
+
+    public static RemoveFromRootDelegate RemoveFromRoot =>
+        _RemoveFromRoot ??= Marshal.GetDelegateForFunctionPointer<RemoveFromRootDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.RemoveFromRoot)
         );
 }

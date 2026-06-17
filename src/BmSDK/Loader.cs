@@ -104,7 +104,7 @@ internal static class Loader
                 dlcManager.RefreshDLC();
 
                 // Preload packages and root keep-alive objects before any world loads
-                // PreloadManager.Run();
+                PreloadManager.Run();
 
                 ScriptManager.Scripts.ForEach(script =>
                     Debug.RunWithSender(script.Name, script.Main)
