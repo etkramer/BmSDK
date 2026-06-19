@@ -94,9 +94,11 @@ void Runtime::LoadClassesIntoMemory() {
     LoadPackage(0, L"Clocktower_C1_ChA5_Anim", 0);
     LoadPackage(0, L"CityZ__Ch6", 0);
     LoadPackage(0, L"Stagg_B1", 0);
+    LoadPackage(0, L"Stagg_B3_Ch45a", 0);
     LoadPackage(0, L"Film", 0);
     LoadPackage(0, L"WayneTower_B1", 0);
     LoadPackage(0, L"Ace_A1_Ch2", 0);
+    LoadPackage(0, L"Pyg_B1", 0);
 
     // const wregex packageFilter(
     //     L"(?:"
