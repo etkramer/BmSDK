@@ -13,6 +13,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>$(DefineConstants);BATMAN2</DefineConstants>
   </PropertyGroup>
   <!-- Dependencies -->
   <ItemGroup>
