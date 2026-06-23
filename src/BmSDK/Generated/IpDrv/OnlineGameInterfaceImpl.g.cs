@@ -1219,7 +1219,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{ByteProperty}: LanNonce
     /// </summary>
-    public InlineArray<byte> LanNonce => new(8, Ptr + 285);
+    public InlineArray<byte> LanNonce => new(8, Ptr + 285, 1, this);
 
     /// <summary>
     /// ByteProperty: LanNonce

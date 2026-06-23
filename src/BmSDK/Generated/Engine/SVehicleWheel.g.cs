@@ -289,7 +289,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: WheelParticleSystem
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystem> WheelParticleSystem => new(6, Ptr + 140);
+    public InlineArray<BmSDK.Engine.ParticleSystem> WheelParticleSystem => new(6, Ptr + 140, 8, this);
 
     /// <summary>
     /// ObjectProperty: WheelParticleSystem
@@ -343,7 +343,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: WheelSpinParticleSystem
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystem> WheelSpinParticleSystem => new(6, Ptr + 188);
+    public InlineArray<BmSDK.Engine.ParticleSystem> WheelSpinParticleSystem => new(6, Ptr + 188, 8, this);
 
     /// <summary>
     /// ObjectProperty: WheelSpinParticleSystem
@@ -397,7 +397,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: WheelSkidMarkSystem
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystem> WheelSkidMarkSystem => new(6, Ptr + 236);
+    public InlineArray<BmSDK.Engine.ParticleSystem> WheelSkidMarkSystem => new(6, Ptr + 236, 8, this);
 
     /// <summary>
     /// ObjectProperty: WheelSkidMarkSystem
@@ -469,7 +469,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: WetnessParticleSystem
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystem> WetnessParticleSystem => new(6, Ptr + 300);
+    public InlineArray<BmSDK.Engine.ParticleSystem> WetnessParticleSystem => new(6, Ptr + 300, 8, this);
 
     /// <summary>
     /// ObjectProperty: WetnessParticleSystem
@@ -523,7 +523,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: WetnessParticleComp
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WetnessParticleComp => new(6, Ptr + 348);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WetnessParticleComp => new(6, Ptr + 348, 8, this);
 
     /// <summary>
     /// ComponentProperty: WetnessParticleComp
@@ -577,7 +577,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: WheelSkidMarkComp
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelSkidMarkComp => new(6, Ptr + 396);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelSkidMarkComp => new(6, Ptr + 396, 8, this);
 
     /// <summary>
     /// ComponentProperty: WheelSkidMarkComp
@@ -631,7 +631,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: WheelSpinParticleComp
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelSpinParticleComp => new(6, Ptr + 444);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelSpinParticleComp => new(6, Ptr + 444, 8, this);
 
     /// <summary>
     /// ComponentProperty: WheelSpinParticleComp
@@ -685,7 +685,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: WheelParticleComp
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelParticleComp => new(6, Ptr + 492);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WheelParticleComp => new(6, Ptr + 492, 8, this);
 
     /// <summary>
     /// ComponentProperty: WheelParticleComp
@@ -889,7 +889,7 @@ public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: WetnessParticleBattleModeOnly
     /// </summary>
-    public InlineArray<byte> WetnessParticleBattleModeOnly => new(6, Ptr + 600);
+    public InlineArray<byte> WetnessParticleBattleModeOnly => new(6, Ptr + 600, 1, this);
 
     /// <summary>
     /// ByteProperty: WetnessParticleBattleModeOnly

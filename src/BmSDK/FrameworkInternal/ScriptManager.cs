@@ -20,8 +20,9 @@ namespace BmSDK.Framework;
 internal static class ScriptManager
 {
     public const LanguageVersion LangVer = LanguageVersion.CSharp14;
-    public static readonly CSharpParseOptions ParseOptions =
-        CSharpParseOptions.Default.WithLanguageVersion(LangVer);
+    public static readonly CSharpParseOptions ParseOptions = CSharpParseOptions
+        .Default.WithLanguageVersion(LangVer)
+        .WithPreprocessorSymbols("BATMAN4");
     public static readonly ImmutableArray<PortableExecutableReference> DotNetAssemblies =
         ReferenceAssemblies.Net100.References.All;
     public static readonly ImmutableList<MetadataReference> MetadataReferences =

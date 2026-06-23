@@ -155,7 +155,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: ThreatMI
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInstanceConstant> ThreatMI => new(3, Ptr + 692);
+    public InlineArray<BmSDK.Engine.MaterialInstanceConstant> ThreatMI => new(3, Ptr + 692, 8, this);
 
     /// <summary>
     /// ObjectProperty: ThreatMI
@@ -185,7 +185,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ThreatValue
     /// </summary>
-    public InlineArray<float> ThreatValue => new(3, Ptr + 716);
+    public InlineArray<float> ThreatValue => new(3, Ptr + 716, 4, this);
 
     /// <summary>
     /// FloatProperty: ThreatValue
@@ -215,7 +215,7 @@ public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ThreatTargetValue
     /// </summary>
-    public InlineArray<float> ThreatTargetValue => new(3, Ptr + 728);
+    public InlineArray<float> ThreatTargetValue => new(3, Ptr + 728, 4, this);
 
     /// <summary>
     /// FloatProperty: ThreatTargetValue

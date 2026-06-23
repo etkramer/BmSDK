@@ -216,7 +216,7 @@ public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_Play
     /// <summary>
     /// InlineArray{ObjectProperty}: outroConversations
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkDialogueSpeech> outroConversations => new(4, Ptr + 1028);
+    public InlineArray<BmSDK.Engine.AkDialogueSpeech> outroConversations => new(4, Ptr + 1028, 8, this);
 
     /// <summary>
     /// ObjectProperty: outroConversations

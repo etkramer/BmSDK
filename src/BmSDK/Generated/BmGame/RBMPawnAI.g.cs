@@ -4437,7 +4437,7 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: BodyDirtStates
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMPawnAI.FBodyDirtState> BodyDirtStates => new(4, Ptr + 3348);
+    public InlineArray<BmSDK.BmGame.RBMPawnAI.FBodyDirtState> BodyDirtStates => new(4, Ptr + 3348, 28, this);
 
     /// <summary>
     /// StructProperty: BodyDirtStates

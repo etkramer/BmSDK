@@ -619,7 +619,7 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{NameProperty}: AttackAnimList
     /// </summary>
-    public InlineArray<BmSDK.FName> AttackAnimList => new(4, Ptr + 784);
+    public InlineArray<BmSDK.FName> AttackAnimList => new(4, Ptr + 784, 8, this);
 
     /// <summary>
     /// NameProperty: AttackAnimList

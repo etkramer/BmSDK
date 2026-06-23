@@ -624,7 +624,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// InlineArray{StructProperty}: ImpactInfo
     /// </summary>
-    public InlineArray<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo> ImpactInfo => new(7, Ptr + 152);
+    public InlineArray<BmSDK.Engine.RPhysicalMaterialProperty.FImpactEffectInfo> ImpactInfo => new(7, Ptr + 152, 44, this);
 
     /// <summary>
     /// StructProperty: ImpactInfo

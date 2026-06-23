@@ -247,7 +247,7 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     /// <summary>
     /// InlineArray{ObjectProperty}: InteractionAnimset
     /// </summary>
-    public InlineArray<BmSDK.Engine.AnimSet> InteractionAnimset => new(2, Ptr + 6740);
+    public InlineArray<BmSDK.Engine.AnimSet> InteractionAnimset => new(2, Ptr + 6740, 8, this);
 
     /// <summary>
     /// ObjectProperty: InteractionAnimset
@@ -269,7 +269,7 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     /// <summary>
     /// InlineArray{ObjectProperty}: AllyInteractionAnimset
     /// </summary>
-    public InlineArray<BmSDK.Engine.AnimSet> AllyInteractionAnimset => new(2, Ptr + 6756);
+    public InlineArray<BmSDK.Engine.AnimSet> AllyInteractionAnimset => new(2, Ptr + 6756, 8, this);
 
     /// <summary>
     /// ObjectProperty: AllyInteractionAnimset

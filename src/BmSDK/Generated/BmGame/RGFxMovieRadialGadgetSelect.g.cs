@@ -848,7 +848,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// InlineArray{NameProperty}: CurrentlyLoadedGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> CurrentlyLoadedGadgets => new(12, Ptr + 1256);
+    public InlineArray<BmSDK.FName> CurrentlyLoadedGadgets => new(12, Ptr + 1256, 8, this);
 
     /// <summary>
     /// NameProperty: CurrentlyLoadedGadgets
@@ -1058,7 +1058,7 @@ public partial class RGFxMovieRadialGadgetSelect : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// InlineArray{IntProperty}: CycleGadgetsIndexOrder
     /// </summary>
-    public InlineArray<int> CycleGadgetsIndexOrder => new(12, Ptr + 1440);
+    public InlineArray<int> CycleGadgetsIndexOrder => new(12, Ptr + 1440, 4, this);
 
     /// <summary>
     /// IntProperty: CycleGadgetsIndexOrder

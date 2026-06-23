@@ -2147,7 +2147,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{NameProperty}: ThrowEquipBoneNameOverride
     /// </summary>
-    public InlineArray<BmSDK.FName> ThrowEquipBoneNameOverride => new(13, Ptr + 904);
+    public InlineArray<BmSDK.FName> ThrowEquipBoneNameOverride => new(13, Ptr + 904, 8, this);
 
     /// <summary>
     /// NameProperty: ThrowEquipBoneNameOverride
@@ -2257,7 +2257,7 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{NameProperty}: ThrowEquipBoneName2Override
     /// </summary>
-    public InlineArray<BmSDK.FName> ThrowEquipBoneName2Override => new(13, Ptr + 1008);
+    public InlineArray<BmSDK.FName> ThrowEquipBoneName2Override => new(13, Ptr + 1008, 8, this);
 
     /// <summary>
     /// NameProperty: ThrowEquipBoneName2Override

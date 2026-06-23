@@ -2010,7 +2010,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// InlineArray{ComponentProperty}: BMBLImpactFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BMBLImpactFX => new(3, Ptr + 988);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BMBLImpactFX => new(3, Ptr + 988, 8, this);
 
     /// <summary>
     /// ComponentProperty: BMBLImpactFX
@@ -2040,7 +2040,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// InlineArray{ComponentProperty}: ImpactFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 1012);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> ImpactFX => new(3, Ptr + 1012, 8, this);
 
     /// <summary>
     /// ComponentProperty: ImpactFX
@@ -2070,7 +2070,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// InlineArray{ComponentProperty}: BulletTrailFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 1036);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> BulletTrailFX => new(3, Ptr + 1036, 8, this);
 
     /// <summary>
     /// ComponentProperty: BulletTrailFX
@@ -2100,7 +2100,7 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     /// <summary>
     /// InlineArray{ComponentProperty}: MuzzleFlashFx
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 1060);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> MuzzleFlashFx => new(3, Ptr + 1060, 8, this);
 
     /// <summary>
     /// ComponentProperty: MuzzleFlashFx

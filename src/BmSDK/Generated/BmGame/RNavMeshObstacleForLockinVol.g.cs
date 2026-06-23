@@ -145,7 +145,7 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// InlineArray{StructProperty}: planeOrigins
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> planeOrigins => new(4, Ptr + 716);
+    public InlineArray<System.Numerics.Vector3> planeOrigins => new(4, Ptr + 716, 12, this);
 
     /// <summary>
     /// StructProperty: planeOrigins
@@ -171,7 +171,7 @@ public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle
     /// <summary>
     /// InlineArray{StructProperty}: planeNormals
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> planeNormals => new(4, Ptr + 764);
+    public InlineArray<System.Numerics.Vector3> planeNormals => new(4, Ptr + 764, 12, this);
 
     /// <summary>
     /// StructProperty: planeNormals

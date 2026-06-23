@@ -676,7 +676,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: SubroutinesTypeDisabled
     /// </summary>
-    public InlineArray<byte> SubroutinesTypeDisabled => new(8, Ptr + 821);
+    public InlineArray<byte> SubroutinesTypeDisabled => new(8, Ptr + 821, 1, this);
 
     /// <summary>
     /// ByteProperty: SubroutinesTypeDisabled
@@ -782,7 +782,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: SubroutinesNameModifiedByKismet
     /// </summary>
-    public InlineArray<BmSDK.FString> SubroutinesNameModifiedByKismet => new(8, Ptr + 840);
+    public InlineArray<BmSDK.FString> SubroutinesNameModifiedByKismet => new(8, Ptr + 840, 16, this);
 
     /// <summary>
     /// StrProperty: SubroutinesNameModifiedByKismet
@@ -852,7 +852,7 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: SubroutinesDescriptionModifiedByKismet
     /// </summary>
-    public InlineArray<BmSDK.FString> SubroutinesDescriptionModifiedByKismet => new(8, Ptr + 968);
+    public InlineArray<BmSDK.FString> SubroutinesDescriptionModifiedByKismet => new(8, Ptr + 968, 16, this);
 
     /// <summary>
     /// StrProperty: SubroutinesDescriptionModifiedByKismet

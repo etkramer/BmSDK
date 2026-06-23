@@ -718,7 +718,7 @@ public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.I
     /// <summary>
     /// InlineArray{FloatProperty}: BoostCooldown
     /// </summary>
-    public InlineArray<float> BoostCooldown => new(3, Ptr + 668);
+    public InlineArray<float> BoostCooldown => new(3, Ptr + 668, 4, this);
 
     /// <summary>
     /// FloatProperty: BoostCooldown

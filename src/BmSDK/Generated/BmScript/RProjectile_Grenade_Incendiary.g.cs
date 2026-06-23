@@ -356,7 +356,7 @@ public partial class RProjectile_Grenade_Incendiary : BmSDK.BmScript.RProjectile
     /// <summary>
     /// InlineArray{StructProperty}: chargeInfoList
     /// </summary>
-    public InlineArray<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo> chargeInfoList => new(64, Ptr + 1060);
+    public InlineArray<BmSDK.BmScript.RProjectile_Grenade_Incendiary.FchargeInfo> chargeInfoList => new(64, Ptr + 1060, 96, this);
 
     /// <summary>
     /// StructProperty: chargeInfoList

@@ -213,7 +213,7 @@ public partial class LandscapeGizmoActiveActor : BmSDK.Engine.LandscapeGizmoActo
     /// <summary>
     /// InlineArray{StructProperty}: FrustumVerts
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> FrustumVerts => new(8, Ptr + 876);
+    public InlineArray<System.Numerics.Vector3> FrustumVerts => new(8, Ptr + 876, 12, this);
 
     /// <summary>
     /// StructProperty: FrustumVerts

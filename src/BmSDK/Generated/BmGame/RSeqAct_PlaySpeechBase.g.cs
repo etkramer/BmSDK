@@ -805,7 +805,7 @@ public partial class RSeqAct_PlaySpeechBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// InlineArray{StrProperty}: SpeechCleanupReasonStrings
     /// </summary>
-    public InlineArray<BmSDK.FString> SpeechCleanupReasonStrings => new(6, Ptr + 384);
+    public InlineArray<BmSDK.FString> SpeechCleanupReasonStrings => new(6, Ptr + 384, 16, this);
 
     /// <summary>
     /// StrProperty: SpeechCleanupReasonStrings

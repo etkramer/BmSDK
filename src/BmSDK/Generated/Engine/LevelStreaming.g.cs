@@ -534,7 +534,7 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: GridPosition
     /// </summary>
-    public InlineArray<int> GridPosition => new(3, Ptr + 272);
+    public InlineArray<int> GridPosition => new(3, Ptr + 272, 4, this);
 
     /// <summary>
     /// IntProperty: GridPosition

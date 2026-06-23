@@ -139,7 +139,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// InlineArray{ComponentProperty}: Mesh
     /// </summary>
-    public InlineArray<BmSDK.Engine.StaticMeshComponent> Mesh => new(8, Ptr + 852);
+    public InlineArray<BmSDK.Engine.StaticMeshComponent> Mesh => new(8, Ptr + 852, 8, this);
 
     /// <summary>
     /// ComponentProperty: Mesh
@@ -209,7 +209,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// InlineArray{ComponentProperty}: Trail
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> Trail => new(8, Ptr + 916);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> Trail => new(8, Ptr + 916, 8, this);
 
     /// <summary>
     /// ComponentProperty: Trail
@@ -279,7 +279,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// InlineArray{StructProperty}: MissileOffset
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> MissileOffset => new(8, Ptr + 980);
+    public InlineArray<System.Numerics.Vector3> MissileOffset => new(8, Ptr + 980, 12, this);
 
     /// <summary>
     /// StructProperty: MissileOffset
@@ -325,7 +325,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// InlineArray{FloatProperty}: MissileDelay
     /// </summary>
-    public InlineArray<float> MissileDelay => new(8, Ptr + 1076);
+    public InlineArray<float> MissileDelay => new(8, Ptr + 1076, 4, this);
 
     /// <summary>
     /// FloatProperty: MissileDelay
@@ -395,7 +395,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// InlineArray{StructProperty}: MissileTarget
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> MissileTarget => new(8, Ptr + 1108);
+    public InlineArray<System.Numerics.Vector3> MissileTarget => new(8, Ptr + 1108, 12, this);
 
     /// <summary>
     /// StructProperty: MissileTarget
@@ -441,7 +441,7 @@ public partial class RSwarmerMissileProjectile : BmSDK.BmGame.RProjectile, BmSDK
     /// <summary>
     /// InlineArray{ByteProperty}: MissileExploded
     /// </summary>
-    public InlineArray<byte> MissileExploded => new(8, Ptr + 1204);
+    public InlineArray<byte> MissileExploded => new(8, Ptr + 1204, 1, this);
 
     /// <summary>
     /// ByteProperty: MissileExploded

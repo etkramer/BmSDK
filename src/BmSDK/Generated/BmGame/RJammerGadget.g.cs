@@ -656,7 +656,7 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StructProperty}: ThrowDirectionTypes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2088);
+    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2088, 16, this);
 
     /// <summary>
     /// StructProperty: ThrowDirectionTypes

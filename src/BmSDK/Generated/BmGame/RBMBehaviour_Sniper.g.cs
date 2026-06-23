@@ -941,7 +941,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// InlineArray{FloatProperty}: BetweenShotTime
     /// </summary>
-    public InlineArray<float> BetweenShotTime => new(3, Ptr + 764);
+    public InlineArray<float> BetweenShotTime => new(3, Ptr + 764, 4, this);
 
     /// <summary>
     /// FloatProperty: BetweenShotTime

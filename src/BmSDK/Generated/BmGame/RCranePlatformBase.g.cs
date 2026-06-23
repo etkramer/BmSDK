@@ -81,7 +81,7 @@ public partial class RCranePlatformBase : BmSDK.Engine.KActorSpawnable, BmSDK.IG
     /// <summary>
     /// InlineArray{StructProperty}: AttachPoint
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> AttachPoint => new(4, Ptr + 996);
+    public InlineArray<System.Numerics.Vector3> AttachPoint => new(4, Ptr + 996, 12, this);
 
     /// <summary>
     /// StructProperty: AttachPoint
@@ -107,7 +107,7 @@ public partial class RCranePlatformBase : BmSDK.Engine.KActorSpawnable, BmSDK.IG
     /// <summary>
     /// InlineArray{FloatProperty}: AttachPointLength
     /// </summary>
-    public InlineArray<float> AttachPointLength => new(4, Ptr + 1044);
+    public InlineArray<float> AttachPointLength => new(4, Ptr + 1044, 4, this);
 
     /// <summary>
     /// FloatProperty: AttachPointLength
@@ -160,7 +160,7 @@ public partial class RCranePlatformBase : BmSDK.Engine.KActorSpawnable, BmSDK.IG
     /// <summary>
     /// InlineArray{StructProperty}: FloorTestPoints
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> FloorTestPoints => new(2, Ptr + 1076);
+    public InlineArray<System.Numerics.Vector3> FloorTestPoints => new(2, Ptr + 1076, 12, this);
 
     /// <summary>
     /// StructProperty: FloorTestPoints

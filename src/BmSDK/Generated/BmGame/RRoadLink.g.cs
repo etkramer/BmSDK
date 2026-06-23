@@ -123,7 +123,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: Points
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRoadPoint> Points => new(2, Ptr + 668);
+    public InlineArray<BmSDK.BmGame.RRoadPoint> Points => new(2, Ptr + 668, 8, this);
 
     /// <summary>
     /// ObjectProperty: Points
@@ -190,7 +190,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Lanes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRoadLink.FLane> Lanes => new(2, Ptr + 724);
+    public InlineArray<BmSDK.BmGame.RRoadLink.FLane> Lanes => new(2, Ptr + 724, 44, this);
 
     /// <summary>
     /// StructProperty: Lanes
@@ -206,7 +206,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: AltLanes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRoadLink.FLane> AltLanes => new(2, Ptr + 812);
+    public InlineArray<BmSDK.BmGame.RRoadLink.FLane> AltLanes => new(2, Ptr + 812, 44, this);
 
     /// <summary>
     /// StructProperty: AltLanes

@@ -105,7 +105,7 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
     /// <summary>
     /// InlineArray{NameProperty}: BoneNames
     /// </summary>
-    public InlineArray<BmSDK.FName> BoneNames => new(8, Ptr + 136);
+    public InlineArray<BmSDK.FName> BoneNames => new(8, Ptr + 136, 8, this);
 
     /// <summary>
     /// NameProperty: BoneNames

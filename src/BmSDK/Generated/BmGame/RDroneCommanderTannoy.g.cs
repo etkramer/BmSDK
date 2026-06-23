@@ -312,7 +312,7 @@ public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{StructProperty}: QueuedBark
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RDroneCommanderTannoy.FQueuedBarkInfo> QueuedBark => new(2, Ptr + 716);
+    public InlineArray<BmSDK.BmGame.RDroneCommanderTannoy.FQueuedBarkInfo> QueuedBark => new(2, Ptr + 716, 56, this);
 
     /// <summary>
     /// StructProperty: QueuedBark

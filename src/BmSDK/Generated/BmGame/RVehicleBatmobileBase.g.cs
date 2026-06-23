@@ -5612,7 +5612,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: VehicleWeapons
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleWeapon> VehicleWeapons => new(10, Ptr + 4916);
+    public InlineArray<BmSDK.BmGame.RVehicleWeapon> VehicleWeapons => new(10, Ptr + 4916, 8, this);
 
     /// <summary>
     /// ObjectProperty: VehicleWeapons
@@ -5698,7 +5698,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: PursuitModeWeapons
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleWeapon> PursuitModeWeapons => new(10, Ptr + 4996);
+    public InlineArray<BmSDK.BmGame.RVehicleWeapon> PursuitModeWeapons => new(10, Ptr + 4996, 8, this);
 
     /// <summary>
     /// ObjectProperty: PursuitModeWeapons
@@ -5784,7 +5784,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: ActualWeapons
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleWeapon> ActualWeapons => new(10, Ptr + 5076);
+    public InlineArray<BmSDK.BmGame.RVehicleWeapon> ActualWeapons => new(10, Ptr + 5076, 8, this);
 
     /// <summary>
     /// ObjectProperty: ActualWeapons
@@ -5870,7 +5870,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: ActualPMWeapons
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleWeapon> ActualPMWeapons => new(10, Ptr + 5156);
+    public InlineArray<BmSDK.BmGame.RVehicleWeapon> ActualPMWeapons => new(10, Ptr + 5156, 8, this);
 
     /// <summary>
     /// ObjectProperty: ActualPMWeapons
@@ -6127,7 +6127,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: WarningParticleSystemTemplate
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystem> WarningParticleSystemTemplate => new(5, Ptr + 5388);
+    public InlineArray<BmSDK.Engine.ParticleSystem> WarningParticleSystemTemplate => new(5, Ptr + 5388, 8, this);
 
     /// <summary>
     /// ObjectProperty: WarningParticleSystemTemplate
@@ -6173,7 +6173,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: WarningOnAudioEvent
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkEvent> WarningOnAudioEvent => new(5, Ptr + 5428);
+    public InlineArray<BmSDK.Engine.AkEvent> WarningOnAudioEvent => new(5, Ptr + 5428, 8, this);
 
     /// <summary>
     /// ObjectProperty: WarningOnAudioEvent
@@ -6525,7 +6525,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ComponentProperty}: WarningPSCache
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WarningPSCache => new(8, Ptr + 5740);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> WarningPSCache => new(8, Ptr + 5740, 8, this);
 
     /// <summary>
     /// ComponentProperty: WarningPSCache
@@ -7063,7 +7063,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StrProperty}: VehicleWeaponFlags
     /// </summary>
-    public InlineArray<BmSDK.FString> VehicleWeaponFlags => new(10, Ptr + 6080);
+    public InlineArray<BmSDK.FString> VehicleWeaponFlags => new(10, Ptr + 6080, 16, this);
 
     /// <summary>
     /// StrProperty: VehicleWeaponFlags
@@ -7149,7 +7149,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StrProperty}: PursuitModeWeaponFlags
     /// </summary>
-    public InlineArray<BmSDK.FString> PursuitModeWeaponFlags => new(10, Ptr + 6240);
+    public InlineArray<BmSDK.FString> PursuitModeWeaponFlags => new(10, Ptr + 6240, 16, this);
 
     /// <summary>
     /// StrProperty: PursuitModeWeaponFlags
@@ -7586,7 +7586,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{NameProperty}: MissileBoneNames
     /// </summary>
-    public InlineArray<BmSDK.FName> MissileBoneNames => new(8, Ptr + 6764);
+    public InlineArray<BmSDK.FName> MissileBoneNames => new(8, Ptr + 6764, 8, this);
 
     /// <summary>
     /// NameProperty: MissileBoneNames
@@ -7788,7 +7788,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StructProperty}: QueuedVehDamage
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleBatmobileBase.FQueuedVehicleImpactDamage> QueuedVehDamage => new(8, Ptr + 6900);
+    public InlineArray<BmSDK.BmGame.RVehicleBatmobileBase.FQueuedVehicleImpactDamage> QueuedVehDamage => new(8, Ptr + 6900, 24, this);
 
     /// <summary>
     /// StructProperty: QueuedVehDamage
@@ -8224,7 +8224,7 @@ public partial class RVehicleBatmobileBase : BmSDK.BmGame.RVehicle, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StructProperty}: Passengers
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleBatmobileBase.FBatmobilePassenger> Passengers => new(4, Ptr + 7528);
+    public InlineArray<BmSDK.BmGame.RVehicleBatmobileBase.FBatmobilePassenger> Passengers => new(4, Ptr + 7528, 60, this);
 
     /// <summary>
     /// StructProperty: Passengers

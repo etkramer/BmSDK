@@ -81,7 +81,7 @@ public partial class RResolvedDirectionalAnimConfig : BmSDK.GameObject, BmSDK.IG
     /// <summary>
     /// InlineArray{ObjectProperty}: Directions
     /// </summary>
-    public InlineArray<BmSDK.Engine.AnimSequence> Directions => new(12, Ptr + 84);
+    public InlineArray<BmSDK.Engine.AnimSequence> Directions => new(12, Ptr + 84, 8, this);
 
     /// <summary>
     /// ObjectProperty: Directions

@@ -101,16 +101,16 @@ public partial class GameObject
     /// <summary>
     /// Gets the first attached script component of the given type.
     /// </summary>
-    /// <exception cref="KeyNotFoundException">Thrown if the component type
-    /// has not been attached</exception>
-    internal IScriptComponent GetScriptComponent(Type type)
+    /// <returns>The first script component of the given type
+    /// or null if none are attached.</returns>
+    internal IScriptComponent? GetScriptComponent(Type type)
     {
         if (_scriptComponents.TryGetValue(type, out var list) && list.Count > 0)
         {
             return list[0];
         }
 
-        throw new KeyNotFoundException($"No script component of {type} is attached to this object");
+        return null;
     }
 
     /// <summary>

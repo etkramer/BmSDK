@@ -1644,7 +1644,7 @@ public partial class RVehicleHeavyTank : BmSDK.BmGame.RVehicleTank, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StructProperty}: StageBasedDialogue
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont> StageBasedDialogue => new(6, Ptr + 8588);
+    public InlineArray<BmSDK.BmGame.RVehicleHeavyTank.FCommandTankDialogueCont> StageBasedDialogue => new(6, Ptr + 8588, 16, this);
 
     /// <summary>
     /// StructProperty: StageBasedDialogue

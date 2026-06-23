@@ -6139,7 +6139,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ObjectProperty}: LandMoves
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RSpecialMoveConfig> LandMoves => new(6, Ptr + 4668);
+    public InlineArray<BmSDK.BmGame.RSpecialMoveConfig> LandMoves => new(6, Ptr + 4668, 8, this);
 
     /// <summary>
     /// ObjectProperty: LandMoves
@@ -6400,7 +6400,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ObjectProperty}: SpawnedProjectiles
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RProjectile> SpawnedProjectiles => new(6, Ptr + 4900);
+    public InlineArray<BmSDK.BmGame.RProjectile> SpawnedProjectiles => new(6, Ptr + 4900, 8, this);
 
     /// <summary>
     /// ObjectProperty: SpawnedProjectiles
@@ -6490,7 +6490,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ObjectProperty}: OverheadRopeControlPoint
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRope2SimplePhysicsControlPoint> OverheadRopeControlPoint => new(5, Ptr + 4980);
+    public InlineArray<BmSDK.BmGame.RRope2SimplePhysicsControlPoint> OverheadRopeControlPoint => new(5, Ptr + 4980, 8, this);
 
     /// <summary>
     /// ObjectProperty: OverheadRopeControlPoint
@@ -6581,7 +6581,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ObjectProperty}: GadgetList
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RInventoryGadget> GadgetList => new(32, Ptr + 5060);
+    public InlineArray<BmSDK.BmGame.RInventoryGadget> GadgetList => new(32, Ptr + 5060, 8, this);
 
     /// <summary>
     /// ObjectProperty: GadgetList
@@ -7590,7 +7590,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ObjectProperty}: DualPlayPredatorLine
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkDialogueLine> DualPlayPredatorLine => new(9, Ptr + 5980);
+    public InlineArray<BmSDK.Engine.AkDialogueLine> DualPlayPredatorLine => new(9, Ptr + 5980, 8, this);
 
     /// <summary>
     /// ObjectProperty: DualPlayPredatorLine
@@ -7785,7 +7785,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ClassProperty}: FearTakedowns
     /// </summary>
-    public InlineArray<BmSDK.Class> FearTakedowns => new(68, Ptr + 6156);
+    public InlineArray<BmSDK.Class> FearTakedowns => new(68, Ptr + 6156, 8, this);
 
     /// <summary>
     /// ClassProperty: FearTakedowns
@@ -8335,7 +8335,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ClassProperty}: TakeDowns
     /// </summary>
-    public InlineArray<BmSDK.Class> TakeDowns => new(68, Ptr + 6700);
+    public InlineArray<BmSDK.Class> TakeDowns => new(68, Ptr + 6700, 8, this);
 
     /// <summary>
     /// ClassProperty: TakeDowns
@@ -10235,7 +10235,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ByteProperty}: UpAllowSubClasses
     /// </summary>
-    public InlineArray<byte> UpAllowSubClasses => new(8, Ptr + 7782);
+    public InlineArray<byte> UpAllowSubClasses => new(8, Ptr + 7782, 1, this);
 
     /// <summary>
     /// ByteProperty: UpAllowSubClasses
@@ -10305,7 +10305,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{ByteProperty}: DownAllowSubClasses
     /// </summary>
-    public InlineArray<byte> DownAllowSubClasses => new(5, Ptr + 7790);
+    public InlineArray<byte> DownAllowSubClasses => new(5, Ptr + 7790, 1, this);
 
     /// <summary>
     /// ByteProperty: DownAllowSubClasses
@@ -10477,7 +10477,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{StructProperty}: ControllerHistory
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGameInfo.FMovementControllerHistory> ControllerHistory => new(10, Ptr + 7936);
+    public InlineArray<BmSDK.BmGame.RGameInfo.FMovementControllerHistory> ControllerHistory => new(10, Ptr + 7936, 20, this);
 
     /// <summary>
     /// StructProperty: ControllerHistory
@@ -10872,7 +10872,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: UpGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> UpGadgets => new(8, Ptr + 8404);
+    public InlineArray<BmSDK.FName> UpGadgets => new(8, Ptr + 8404, 8, this);
 
     /// <summary>
     /// NameProperty: UpGadgets
@@ -10942,7 +10942,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: DoubleUpGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> DoubleUpGadgets => new(8, Ptr + 8468);
+    public InlineArray<BmSDK.FName> DoubleUpGadgets => new(8, Ptr + 8468, 8, this);
 
     /// <summary>
     /// NameProperty: DoubleUpGadgets
@@ -11012,7 +11012,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: DownGadgets
     /// </summary>
-    public InlineArray<BmSDK.FName> DownGadgets => new(5, Ptr + 8532);
+    public InlineArray<BmSDK.FName> DownGadgets => new(5, Ptr + 8532, 8, this);
 
     /// <summary>
     /// NameProperty: DownGadgets
@@ -11058,7 +11058,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{StructProperty}: ExtraCollision
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnPlayer.FFakeWall> ExtraCollision => new(3, Ptr + 8572);
+    public InlineArray<BmSDK.BmGame.RPawnPlayer.FFakeWall> ExtraCollision => new(3, Ptr + 8572, 16, this);
 
     /// <summary>
     /// StructProperty: ExtraCollision
@@ -11088,7 +11088,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{FloatProperty}: OverheadRopeControlPointRopePosition
     /// </summary>
-    public InlineArray<float> OverheadRopeControlPointRopePosition => new(5, Ptr + 8636);
+    public InlineArray<float> OverheadRopeControlPointRopePosition => new(5, Ptr + 8636, 4, this);
 
     /// <summary>
     /// FloatProperty: OverheadRopeControlPointRopePosition
@@ -11134,7 +11134,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: OverheadRopeControlPointSocketNames
     /// </summary>
-    public InlineArray<BmSDK.FName> OverheadRopeControlPointSocketNames => new(5, Ptr + 8656);
+    public InlineArray<BmSDK.FName> OverheadRopeControlPointSocketNames => new(5, Ptr + 8656, 8, this);
 
     /// <summary>
     /// NameProperty: OverheadRopeControlPointSocketNames
@@ -11297,7 +11297,7 @@ public partial class RPawnPlayer : BmSDK.BmGame.RPawnPlayerSpeech, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{IntProperty}: QuickGadgets
     /// </summary>
-    public InlineArray<int> QuickGadgets => new(5, Ptr + 9272);
+    public InlineArray<int> QuickGadgets => new(5, Ptr + 9272, 4, this);
 
     /// <summary>
     /// IntProperty: QuickGadgets

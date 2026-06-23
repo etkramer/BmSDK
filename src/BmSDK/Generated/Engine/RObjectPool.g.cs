@@ -4533,7 +4533,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: DamageInstances
     /// </summary>
-    public InlineArray<BmSDK.Engine.RObjectPool.FRAdvancedDamageInstance> DamageInstances => new(64, Ptr + 6588);
+    public InlineArray<BmSDK.Engine.RObjectPool.FRAdvancedDamageInstance> DamageInstances => new(64, Ptr + 6588, 44, this);
 
     /// <summary>
     /// StructProperty: DamageInstances

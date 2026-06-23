@@ -322,7 +322,7 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// InlineArray{ByteProperty}: NeighborLOD
     /// </summary>
-    public InlineArray<byte> NeighborLOD => new(8, Ptr + 816);
+    public InlineArray<byte> NeighborLOD => new(8, Ptr + 816, 1, this);
 
     /// <summary>
     /// ByteProperty: NeighborLOD
@@ -392,7 +392,7 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// InlineArray{ByteProperty}: NeighborLODBias
     /// </summary>
-    public InlineArray<byte> NeighborLODBias => new(8, Ptr + 824);
+    public InlineArray<byte> NeighborLODBias => new(8, Ptr + 824, 1, this);
 
     /// <summary>
     /// ByteProperty: NeighborLODBias

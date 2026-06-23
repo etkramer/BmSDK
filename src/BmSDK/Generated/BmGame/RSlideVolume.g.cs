@@ -116,7 +116,7 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: SlideDirection
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RDummyTarget> SlideDirection => new(2, Ptr + 760);
+    public InlineArray<BmSDK.BmGame.RDummyTarget> SlideDirection => new(2, Ptr + 760, 8, this);
 
     /// <summary>
     /// ObjectProperty: SlideDirection

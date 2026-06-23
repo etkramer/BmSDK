@@ -293,7 +293,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// InlineArray{StructProperty}: allTiers
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier> allTiers => new(2, Ptr + 352);
+    public InlineArray<BmSDK.BmGame.RSeqAct_FireCrewController.FsingleTier> allTiers => new(2, Ptr + 352, 16, this);
 
     /// <summary>
     /// StructProperty: allTiers
@@ -309,7 +309,7 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// InlineArray{StrProperty}: flagSuffixes
     /// </summary>
-    public InlineArray<BmSDK.FString> flagSuffixes => new(5, Ptr + 384);
+    public InlineArray<BmSDK.FString> flagSuffixes => new(5, Ptr + 384, 16, this);
 
     /// <summary>
     /// StrProperty: flagSuffixes

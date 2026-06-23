@@ -192,7 +192,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// InlineArray{NameProperty}: StandardGrenadeAnimNames
     /// </summary>
-    public InlineArray<BmSDK.FName> StandardGrenadeAnimNames => new(3, Ptr + 744);
+    public InlineArray<BmSDK.FName> StandardGrenadeAnimNames => new(3, Ptr + 744, 8, this);
 
     /// <summary>
     /// NameProperty: StandardGrenadeAnimNames
@@ -222,7 +222,7 @@ public partial class RAEC_Search_Sub_DestroyGrate : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// InlineArray{NameProperty}: IncendiaryGrenadeAnimNames
     /// </summary>
-    public InlineArray<BmSDK.FName> IncendiaryGrenadeAnimNames => new(3, Ptr + 768);
+    public InlineArray<BmSDK.FName> IncendiaryGrenadeAnimNames => new(3, Ptr + 768, 8, this);
 
     /// <summary>
     /// NameProperty: IncendiaryGrenadeAnimNames

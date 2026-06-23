@@ -349,7 +349,7 @@ public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// InlineArray{StructProperty}: ThrowDirectionTypes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2124);
+    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2124, 16, this);
 
     /// <summary>
     /// StructProperty: ThrowDirectionTypes

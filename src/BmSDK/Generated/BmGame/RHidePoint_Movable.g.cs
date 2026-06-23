@@ -175,7 +175,7 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// <summary>
     /// InlineArray{ObjectProperty}: AxisMatinee
     /// </summary>
-    public InlineArray<BmSDK.Engine.SeqAct_Interp> AxisMatinee => new(2, Ptr + 1368);
+    public InlineArray<BmSDK.Engine.SeqAct_Interp> AxisMatinee => new(2, Ptr + 1368, 8, this);
 
     /// <summary>
     /// ObjectProperty: AxisMatinee
@@ -233,7 +233,7 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// <summary>
     /// InlineArray{FloatProperty}: CurrentSpeed
     /// </summary>
-    public InlineArray<float> CurrentSpeed => new(2, Ptr + 1416);
+    public InlineArray<float> CurrentSpeed => new(2, Ptr + 1416, 4, this);
 
     /// <summary>
     /// FloatProperty: CurrentSpeed
@@ -255,7 +255,7 @@ public partial class RHidePoint_Movable : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IG
     /// <summary>
     /// InlineArray{FloatProperty}: DesiredAnimSpeed
     /// </summary>
-    public InlineArray<float> DesiredAnimSpeed => new(2, Ptr + 1424);
+    public InlineArray<float> DesiredAnimSpeed => new(2, Ptr + 1424, 4, this);
 
     /// <summary>
     /// FloatProperty: DesiredAnimSpeed

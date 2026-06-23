@@ -490,7 +490,7 @@ public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// InlineArray{ObjectProperty}: Filter
     /// </summary>
-    public InlineArray<BmSDK.Engine.Texture2D> Filter => new(11, Ptr + 1944);
+    public InlineArray<BmSDK.Engine.Texture2D> Filter => new(11, Ptr + 1944, 8, this);
 
     /// <summary>
     /// ObjectProperty: Filter

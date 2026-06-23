@@ -1182,7 +1182,7 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     /// <summary>
     /// InlineArray{ObjectProperty}: ThugsAreWaryOfTargetThought
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkDialogueSpeech> ThugsAreWaryOfTargetThought => new(6, Ptr + 2308);
+    public InlineArray<BmSDK.Engine.AkDialogueSpeech> ThugsAreWaryOfTargetThought => new(6, Ptr + 2308, 8, this);
 
     /// <summary>
     /// ObjectProperty: ThugsAreWaryOfTargetThought

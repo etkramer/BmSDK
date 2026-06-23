@@ -135,7 +135,7 @@ public partial class FracturedSkinnedMeshComponent : BmSDK.Engine.FracturedBaseC
     /// <summary>
     /// InlineArray{ObjectProperty}: OldMaterial
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 836);
+    public InlineArray<BmSDK.Engine.MaterialInterface> OldMaterial => new(10, Ptr + 836, 8, this);
 
     /// <summary>
     /// ObjectProperty: OldMaterial

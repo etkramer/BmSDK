@@ -364,7 +364,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// InlineArray{ObjectProperty}: WheelControls
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkelControlWheel> WheelControls => new(4, Ptr + 848);
+    public InlineArray<BmSDK.Engine.SkelControlWheel> WheelControls => new(4, Ptr + 848, 8, this);
 
     /// <summary>
     /// ObjectProperty: WheelControls
@@ -420,7 +420,7 @@ public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// InlineArray{StructProperty}: WheelPositions
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> WheelPositions => new(4, Ptr + 900);
+    public InlineArray<System.Numerics.Vector3> WheelPositions => new(4, Ptr + 900, 12, this);
 
     /// <summary>
     /// StructProperty: WheelPositions

@@ -679,7 +679,7 @@ public partial class RJokerGunGadget : BmSDK.BmGame.RJokerGunGadgetBase, BmSDK.I
     /// <summary>
     /// InlineArray{StructProperty}: AutoAimFireDirections
     /// </summary>
-    public InlineArray<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection> AutoAimFireDirections => new(3, Ptr + 2204);
+    public InlineArray<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirection> AutoAimFireDirections => new(3, Ptr + 2204, 44, this);
 
     /// <summary>
     /// StructProperty: AutoAimFireDirections

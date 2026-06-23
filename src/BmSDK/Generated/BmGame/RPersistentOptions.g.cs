@@ -3101,7 +3101,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: BatmanKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BatmanKeyBinds => new(41, Ptr + 520);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BatmanKeyBinds => new(41, Ptr + 520, 40, this);
 
     /// <summary>
     /// StructProperty: BatmanKeyBinds
@@ -3312,7 +3312,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: PursuitKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> PursuitKeyBinds => new(13, Ptr + 2160);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> PursuitKeyBinds => new(13, Ptr + 2160, 40, this);
 
     /// <summary>
     /// StructProperty: PursuitKeyBinds
@@ -3383,7 +3383,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: BattleKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BattleKeyBinds => new(15, Ptr + 2680);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BattleKeyBinds => new(15, Ptr + 2680, 40, this);
 
     /// <summary>
     /// StructProperty: BattleKeyBinds
@@ -3464,7 +3464,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: BatgirlKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BatgirlKeyBinds => new(29, Ptr + 3280);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> BatgirlKeyBinds => new(29, Ptr + 3280, 40, this);
 
     /// <summary>
     /// StructProperty: BatgirlKeyBinds
@@ -3615,7 +3615,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: RedHoodKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> RedHoodKeyBinds => new(29, Ptr + 4440);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> RedHoodKeyBinds => new(29, Ptr + 4440, 40, this);
 
     /// <summary>
     /// StructProperty: RedHoodKeyBinds
@@ -3766,7 +3766,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: HarleyKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> HarleyKeyBinds => new(28, Ptr + 5600);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> HarleyKeyBinds => new(28, Ptr + 5600, 40, this);
 
     /// <summary>
     /// StructProperty: HarleyKeyBinds
@@ -3912,7 +3912,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Tmp_BatmanKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BatmanKeyBinds => new(41, Ptr + 6720);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BatmanKeyBinds => new(41, Ptr + 6720, 40, this);
 
     /// <summary>
     /// StructProperty: Tmp_BatmanKeyBinds
@@ -4123,7 +4123,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Tmp_PursuitKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_PursuitKeyBinds => new(13, Ptr + 8360);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_PursuitKeyBinds => new(13, Ptr + 8360, 40, this);
 
     /// <summary>
     /// StructProperty: Tmp_PursuitKeyBinds
@@ -4194,7 +4194,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Tmp_BattleKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BattleKeyBinds => new(15, Ptr + 8880);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BattleKeyBinds => new(15, Ptr + 8880, 40, this);
 
     /// <summary>
     /// StructProperty: Tmp_BattleKeyBinds
@@ -4275,7 +4275,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Tmp_BatgirlKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BatgirlKeyBinds => new(29, Ptr + 9480);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_BatgirlKeyBinds => new(29, Ptr + 9480, 40, this);
 
     /// <summary>
     /// StructProperty: Tmp_BatgirlKeyBinds
@@ -4426,7 +4426,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Tmp_RedHoodKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_RedHoodKeyBinds => new(29, Ptr + 10640);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_RedHoodKeyBinds => new(29, Ptr + 10640, 40, this);
 
     /// <summary>
     /// StructProperty: Tmp_RedHoodKeyBinds
@@ -4577,7 +4577,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Tmp_HarleyKeyBinds
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_HarleyKeyBinds => new(28, Ptr + 11800);
+    public InlineArray<BmSDK.BmGame.RPersistentOptions.FStoredKeyMap> Tmp_HarleyKeyBinds => new(28, Ptr + 11800, 40, this);
 
     /// <summary>
     /// StructProperty: Tmp_HarleyKeyBinds
@@ -4813,7 +4813,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: BluntTraumaTakedownsPerformed
     /// </summary>
-    public InlineArray<byte> BluntTraumaTakedownsPerformed => new(15, Ptr + 12960);
+    public InlineArray<byte> BluntTraumaTakedownsPerformed => new(15, Ptr + 12960, 1, this);
 
     /// <summary>
     /// ByteProperty: BluntTraumaTakedownsPerformed

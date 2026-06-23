@@ -3934,7 +3934,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: DestructibleDustTrails
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> DestructibleDustTrails => new(2, Ptr + 2292);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> DestructibleDustTrails => new(2, Ptr + 2292, 8, this);
 
     /// <summary>
     /// ComponentProperty: DestructibleDustTrails
@@ -4502,7 +4502,7 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: VehicleLights
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicle.FVehicleLight> VehicleLights => new(28, Ptr + 2796);
+    public InlineArray<BmSDK.BmGame.RVehicle.FVehicleLight> VehicleLights => new(28, Ptr + 2796, 48, this);
 
     /// <summary>
     /// StructProperty: VehicleLights

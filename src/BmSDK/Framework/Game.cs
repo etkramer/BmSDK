@@ -1,7 +1,6 @@
 using System.Numerics;
 using BmSDK.BmGame;
 using BmSDK.Engine;
-using BmSDK.Framework.Redirection;
 
 namespace BmSDK.Framework;
 
@@ -23,11 +22,12 @@ public static partial class Game
 
     /// <summary>
     /// Gets the pawn currently possessed by the local player controller (returned by <see cref="GetPlayerController"/>).
+    /// May be null if the game is currently in the main menu for example.
     /// </summary>
-    public static RPawnPlayer GetPlayerPawn(int controllerId = 0)
+    public static RPawnPlayer? GetPlayerPawn(int controllerId = 0)
     {
         var playerController = GetPlayerController(controllerId);
-        return Guard.NotNull(playerController.CombatPawn, "Controller is not possessing a pawn.");
+        return playerController.CombatPawn;
     }
 
     /// <summary>

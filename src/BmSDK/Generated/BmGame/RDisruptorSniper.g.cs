@@ -1116,7 +1116,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: NormalDisruptorModeMaterials
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> NormalDisruptorModeMaterials => new(8, Ptr + 2708);
+    public InlineArray<BmSDK.Engine.MaterialInterface> NormalDisruptorModeMaterials => new(8, Ptr + 2708, 8, this);
 
     /// <summary>
     /// ObjectProperty: NormalDisruptorModeMaterials
@@ -1186,7 +1186,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: CurrentTargetDisruptorModeMaterials
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> CurrentTargetDisruptorModeMaterials => new(8, Ptr + 2772);
+    public InlineArray<BmSDK.Engine.MaterialInterface> CurrentTargetDisruptorModeMaterials => new(8, Ptr + 2772, 8, this);
 
     /// <summary>
     /// ObjectProperty: CurrentTargetDisruptorModeMaterials
@@ -1256,7 +1256,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: DisruptorModeMaterialsForCamouflageThug
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> DisruptorModeMaterialsForCamouflageThug => new(8, Ptr + 2836);
+    public InlineArray<BmSDK.Engine.MaterialInterface> DisruptorModeMaterialsForCamouflageThug => new(8, Ptr + 2836, 8, this);
 
     /// <summary>
     /// ObjectProperty: DisruptorModeMaterialsForCamouflageThug
@@ -1335,7 +1335,7 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     /// <summary>
     /// InlineArray{ObjectProperty}: FireSound
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkEvent> FireSound => new(8, Ptr + 2908);
+    public InlineArray<BmSDK.Engine.AkEvent> FireSound => new(8, Ptr + 2908, 8, this);
 
     /// <summary>
     /// ObjectProperty: FireSound

@@ -1547,7 +1547,7 @@ public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.
     /// <summary>
     /// InlineArray{StructProperty}: VehicleLights
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicle.FVehicleLight> VehicleLights => new(18, Ptr + 1048);
+    public InlineArray<BmSDK.BmGame.RVehicle.FVehicleLight> VehicleLights => new(18, Ptr + 1048, 48, this);
 
     /// <summary>
     /// StructProperty: VehicleLights

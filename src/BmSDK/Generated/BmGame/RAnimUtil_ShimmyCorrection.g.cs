@@ -265,7 +265,7 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// InlineArray{StructProperty}: Arms
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm> Arms => new(2, Ptr + 88);
+    public InlineArray<BmSDK.BmGame.RAnimUtil_ShimmyCorrection.FShimmyArm> Arms => new(2, Ptr + 88, 16, this);
 
     /// <summary>
     /// StructProperty: Arms

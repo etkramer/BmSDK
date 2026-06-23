@@ -304,7 +304,7 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGunPr
     /// <summary>
     /// InlineArray{ComponentProperty}: MineMeshComps
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> MineMeshComps => new(3, Ptr + 6856);
+    public InlineArray<BmSDK.Engine.SkeletalMeshComponent> MineMeshComps => new(3, Ptr + 6856, 8, this);
 
     /// <summary>
     /// ComponentProperty: MineMeshComps

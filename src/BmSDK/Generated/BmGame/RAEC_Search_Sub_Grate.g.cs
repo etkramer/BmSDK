@@ -383,7 +383,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{StructProperty}: vilGrateLookRefPoints
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> vilGrateLookRefPoints => new(6, Ptr + 748);
+    public InlineArray<System.Numerics.Vector3> vilGrateLookRefPoints => new(6, Ptr + 748, 12, this);
 
     /// <summary>
     /// StructProperty: vilGrateLookRefPoints
@@ -419,7 +419,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: AnimNames
     /// </summary>
-    public InlineArray<BmSDK.FName> AnimNames => new(6, Ptr + 820);
+    public InlineArray<BmSDK.FName> AnimNames => new(6, Ptr + 820, 8, this);
 
     /// <summary>
     /// NameProperty: AnimNames
@@ -473,7 +473,7 @@ public partial class RAEC_Search_Sub_Grate : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: OutAnimNames
     /// </summary>
-    public InlineArray<BmSDK.FName> OutAnimNames => new(6, Ptr + 868);
+    public InlineArray<BmSDK.FName> OutAnimNames => new(6, Ptr + 868, 8, this);
 
     /// <summary>
     /// NameProperty: OutAnimNames

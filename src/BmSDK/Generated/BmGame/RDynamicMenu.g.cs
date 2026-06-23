@@ -1422,7 +1422,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: NumberItemShortcut
     /// </summary>
-    public InlineArray<int> NumberItemShortcut => new(10, Ptr + 844);
+    public InlineArray<int> NumberItemShortcut => new(10, Ptr + 844, 4, this);
 
     /// <summary>
     /// IntProperty: NumberItemShortcut
@@ -1508,7 +1508,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: NumberPageShortcut
     /// </summary>
-    public InlineArray<int> NumberPageShortcut => new(10, Ptr + 884);
+    public InlineArray<int> NumberPageShortcut => new(10, Ptr + 884, 4, this);
 
     /// <summary>
     /// IntProperty: NumberPageShortcut

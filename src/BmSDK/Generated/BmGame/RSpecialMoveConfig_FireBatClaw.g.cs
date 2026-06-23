@@ -81,7 +81,7 @@ public partial class RSpecialMoveConfig_FireBatClaw : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// InlineArray{NameProperty}: FireAnim
     /// </summary>
-    public InlineArray<BmSDK.FName> FireAnim => new(4, Ptr + 400);
+    public InlineArray<BmSDK.FName> FireAnim => new(4, Ptr + 400, 8, this);
 
     /// <summary>
     /// NameProperty: FireAnim
@@ -119,7 +119,7 @@ public partial class RSpecialMoveConfig_FireBatClaw : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// InlineArray{NameProperty}: FireIdle
     /// </summary>
-    public InlineArray<BmSDK.FName> FireIdle => new(4, Ptr + 432);
+    public InlineArray<BmSDK.FName> FireIdle => new(4, Ptr + 432, 8, this);
 
     /// <summary>
     /// NameProperty: FireIdle

@@ -257,7 +257,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// InlineArray{ComponentProperty}: DropOffLocationSpriteComps
     /// </summary>
-    public InlineArray<BmSDK.Engine.SpriteComponent> DropOffLocationSpriteComps => new(4, Ptr + 736);
+    public InlineArray<BmSDK.Engine.SpriteComponent> DropOffLocationSpriteComps => new(4, Ptr + 736, 8, this);
 
     /// <summary>
     /// ComponentProperty: DropOffLocationSpriteComps
@@ -358,7 +358,7 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
     /// <summary>
     /// InlineArray{ObjectProperty}: lockingPawn
     /// </summary>
-    public InlineArray<BmSDK.Engine.Pawn> lockingPawn => new(4, Ptr + 792);
+    public InlineArray<BmSDK.Engine.Pawn> lockingPawn => new(4, Ptr + 792, 8, this);
 
     /// <summary>
     /// ObjectProperty: lockingPawn

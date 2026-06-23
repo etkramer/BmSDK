@@ -347,7 +347,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{StructProperty}: MICList
     /// </summary>
-    public InlineArray<BmSDK.BmScript.RPresurePad.FPressurePadMICList> MICList => new(9, Ptr + 840);
+    public InlineArray<BmSDK.BmScript.RPresurePad.FPressurePadMICList> MICList => new(9, Ptr + 840, 16, this);
 
     /// <summary>
     /// StructProperty: MICList

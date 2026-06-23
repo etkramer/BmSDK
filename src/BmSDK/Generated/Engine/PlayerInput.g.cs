@@ -667,7 +667,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: aTouch
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> aTouch => new(5, Ptr + 516);
+    public InlineArray<System.Numerics.Vector3> aTouch => new(5, Ptr + 516, 12, this);
 
     /// <summary>
     /// StructProperty: aTouch
@@ -698,7 +698,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: aBackTouch
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> aBackTouch => new(5, Ptr + 576);
+    public InlineArray<System.Numerics.Vector3> aBackTouch => new(5, Ptr + 576, 12, this);
 
     /// <summary>
     /// StructProperty: aBackTouch
@@ -828,7 +828,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ZeroTime
     /// </summary>
-    public InlineArray<float> ZeroTime => new(2, Ptr + 672);
+    public InlineArray<float> ZeroTime => new(2, Ptr + 672, 4, this);
 
     /// <summary>
     /// FloatProperty: ZeroTime
@@ -850,7 +850,7 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: SmoothedMouse
     /// </summary>
-    public InlineArray<float> SmoothedMouse => new(2, Ptr + 680);
+    public InlineArray<float> SmoothedMouse => new(2, Ptr + 680, 4, this);
 
     /// <summary>
     /// FloatProperty: SmoothedMouse

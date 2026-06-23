@@ -761,7 +761,7 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: AnimInstPool
     /// </summary>
-    public InlineArray<BmSDK.Engine.CameraAnimInst> AnimInstPool => new(8, Ptr + 684);
+    public InlineArray<BmSDK.Engine.CameraAnimInst> AnimInstPool => new(8, Ptr + 684, 8, this);
 
     /// <summary>
     /// ObjectProperty: AnimInstPool

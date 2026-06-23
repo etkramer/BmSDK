@@ -420,7 +420,7 @@ public partial class RBMAIAction_SniperSearch : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// InlineArray{FloatProperty}: BetweenShotTime
     /// </summary>
-    public InlineArray<float> BetweenShotTime => new(3, Ptr + 940);
+    public InlineArray<float> BetweenShotTime => new(3, Ptr + 940, 4, this);
 
     /// <summary>
     /// FloatProperty: BetweenShotTime

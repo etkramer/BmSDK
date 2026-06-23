@@ -385,7 +385,7 @@ public partial class RBatmobileScrewBase : BmSDK.Engine.InterpActor, BmSDK.IGame
     /// <summary>
     /// InlineArray{FloatProperty}: StopTimes
     /// </summary>
-    public InlineArray<float> StopTimes => new(3, Ptr + 1076);
+    public InlineArray<float> StopTimes => new(3, Ptr + 1076, 4, this);
 
     /// <summary>
     /// FloatProperty: StopTimes

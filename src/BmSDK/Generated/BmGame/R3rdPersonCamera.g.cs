@@ -6782,7 +6782,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: CameraSmoothingBuffer
     /// </summary>
-    public InlineArray<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime> CameraSmoothingBuffer => new(10, Ptr + 21008);
+    public InlineArray<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime> CameraSmoothingBuffer => new(10, Ptr + 21008, 16, this);
 
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
@@ -6949,7 +6949,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: ZoomPoints
     /// </summary>
-    public InlineArray<float> ZoomPoints => new(9, Ptr + 21236);
+    public InlineArray<float> ZoomPoints => new(9, Ptr + 21236, 4, this);
 
     /// <summary>
     /// FloatProperty: ZoomPoints
@@ -7027,7 +7027,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: ZoomPointDir
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> ZoomPointDir => new(9, Ptr + 21272);
+    public InlineArray<System.Numerics.Vector3> ZoomPointDir => new(9, Ptr + 21272, 12, this);
 
     /// <summary>
     /// StructProperty: ZoomPointDir
@@ -7078,7 +7078,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: TightZoomPointDir
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> TightZoomPointDir => new(9, Ptr + 21380);
+    public InlineArray<System.Numerics.Vector3> TightZoomPointDir => new(9, Ptr + 21380, 12, this);
 
     /// <summary>
     /// StructProperty: TightZoomPointDir
@@ -7147,7 +7147,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: FancySniperZoomPointValues
     /// </summary>
-    public InlineArray<float> FancySniperZoomPointValues => new(9, Ptr + 21496);
+    public InlineArray<float> FancySniperZoomPointValues => new(9, Ptr + 21496, 4, this);
 
     /// <summary>
     /// FloatProperty: FancySniperZoomPointValues

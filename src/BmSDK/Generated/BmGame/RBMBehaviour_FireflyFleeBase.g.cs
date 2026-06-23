@@ -303,7 +303,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// InlineArray{FloatProperty}: ffCruisingSpeedSettings
     /// </summary>
-    public InlineArray<float> ffCruisingSpeedSettings => new(3, Ptr + 672);
+    public InlineArray<float> ffCruisingSpeedSettings => new(3, Ptr + 672, 4, this);
 
     /// <summary>
     /// FloatProperty: ffCruisingSpeedSettings
@@ -378,7 +378,7 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// InlineArray{FloatProperty}: allowSideRoadsChanceSettings
     /// </summary>
-    public InlineArray<float> allowSideRoadsChanceSettings => new(3, Ptr + 704);
+    public InlineArray<float> allowSideRoadsChanceSettings => new(3, Ptr + 704, 4, this);
 
     /// <summary>
     /// FloatProperty: allowSideRoadsChanceSettings

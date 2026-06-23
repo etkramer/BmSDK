@@ -12,7 +12,7 @@ internal interface IArray
 }
 
 /// <summary>
-/// A resizable array of objects. Similar to <see cref="List{T}"/>, but can be used directly by the game. 
+/// A resizable array of objects. Similar to <see cref="List{T}"/>, but can be used directly by the game.
 /// </summary>
 /// <typeparam name="TManaged">The type of elements in the array.
 /// Should be either a managed primitive or a managed type.</typeparam>
@@ -67,8 +67,15 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 
     public TManaged this[int idx]
     {
-        get => MarshalUtil.ToManaged<TManaged>(Data.AllocatorInstance + (idx * Stride));
-        set => MarshalUtil.ToUnmanaged(value, Data.AllocatorInstance + (idx * Stride));
+        get =>
+            MarshalUtil.ToManaged<TManaged>(
+                Data.AllocatorInstance + (Guard.Bounds(idx, Count) * Stride)
+            );
+        set =>
+            MarshalUtil.ToUnmanaged(
+                value,
+                Data.AllocatorInstance + (Guard.Bounds(idx, Count) * Stride)
+            );
     }
 
     /// <summary>

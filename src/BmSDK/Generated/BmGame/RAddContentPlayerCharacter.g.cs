@@ -108,7 +108,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{ObjectProperty}: GadgetWheelSelectionSounds
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkEvent> GadgetWheelSelectionSounds => new(12, Ptr + 112);
+    public InlineArray<BmSDK.Engine.AkEvent> GadgetWheelSelectionSounds => new(12, Ptr + 112, 8, this);
 
     /// <summary>
     /// ObjectProperty: GadgetWheelSelectionSounds
@@ -264,7 +264,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{ObjectProperty}: AudioContactEvent
     /// </summary>
-    public InlineArray<BmSDK.Engine.AkEvent> AudioContactEvent => new(24, Ptr + 256);
+    public InlineArray<BmSDK.Engine.AkEvent> AudioContactEvent => new(24, Ptr + 256, 8, this);
 
     /// <summary>
     /// ObjectProperty: AudioContactEvent
@@ -552,7 +552,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsConsoleInner
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 528);
+    public InlineArray<BmSDK.FName> GadgetsConsoleInner => new(8, Ptr + 528, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsConsoleInner
@@ -622,7 +622,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsConsoleOuter
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 592);
+    public InlineArray<BmSDK.FName> GadgetsConsoleOuter => new(8, Ptr + 592, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsConsoleOuter
@@ -692,7 +692,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsPC
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 656);
+    public InlineArray<BmSDK.FName> GadgetsPC => new(12, Ptr + 656, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsPC
@@ -794,7 +794,7 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// InlineArray{NameProperty}: GadgetsForGadgetWheel
     /// </summary>
-    public InlineArray<BmSDK.FName> GadgetsForGadgetWheel => new(12, Ptr + 752);
+    public InlineArray<BmSDK.FName> GadgetsForGadgetWheel => new(12, Ptr + 752, 8, this);
 
     /// <summary>
     /// NameProperty: GadgetsForGadgetWheel

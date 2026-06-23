@@ -194,7 +194,7 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// InlineArray{FloatProperty}: MinDist
     /// </summary>
-    public InlineArray<float> MinDist => new(3, Ptr + 920);
+    public InlineArray<float> MinDist => new(3, Ptr + 920, 4, this);
 
     /// <summary>
     /// FloatProperty: MinDist

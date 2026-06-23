@@ -3373,7 +3373,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: CurrentSideChapter
     /// </summary>
-    public InlineArray<byte> CurrentSideChapter => new(52, Ptr + 138);
+    public InlineArray<byte> CurrentSideChapter => new(52, Ptr + 138, 1, this);
 
     /// <summary>
     /// ByteProperty: CurrentSideChapter
@@ -3795,7 +3795,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: CurrentSideSubChapter
     /// </summary>
-    public InlineArray<byte> CurrentSideSubChapter => new(52, Ptr + 190);
+    public InlineArray<byte> CurrentSideSubChapter => new(52, Ptr + 190, 1, this);
 
     /// <summary>
     /// ByteProperty: CurrentSideSubChapter
@@ -4253,7 +4253,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: PrepareSideChapter
     /// </summary>
-    public InlineArray<byte> PrepareSideChapter => new(26, Ptr + 246);
+    public InlineArray<byte> PrepareSideChapter => new(26, Ptr + 246, 1, this);
 
     /// <summary>
     /// ByteProperty: PrepareSideChapter
@@ -4467,7 +4467,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: PrepareSideSubChapter
     /// </summary>
-    public InlineArray<byte> PrepareSideSubChapter => new(26, Ptr + 272);
+    public InlineArray<byte> PrepareSideSubChapter => new(26, Ptr + 272, 1, this);
 
     /// <summary>
     /// ByteProperty: PrepareSideSubChapter
@@ -4969,7 +4969,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: BluntTraumaTakedownsPerformed
     /// </summary>
-    public InlineArray<byte> BluntTraumaTakedownsPerformed => new(15, Ptr + 330);
+    public InlineArray<byte> BluntTraumaTakedownsPerformed => new(15, Ptr + 330, 1, this);
 
     /// <summary>
     /// ByteProperty: BluntTraumaTakedownsPerformed
@@ -5665,7 +5665,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: HelpPrompt_BatmobileDriveTutorial
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection> HelpPrompt_BatmobileDriveTutorial => new(13, Ptr + 872);
+    public InlineArray<BmSDK.BmGame.RPersistentData.FBatmobileDriveTutorialSection> HelpPrompt_BatmobileDriveTutorial => new(13, Ptr + 872, 12, this);
 
     /// <summary>
     /// StructProperty: HelpPrompt_BatmobileDriveTutorial
@@ -5736,7 +5736,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: BatmobileTutorialFlagToSetWhenComplete
     /// </summary>
-    public InlineArray<BmSDK.FString> BatmobileTutorialFlagToSetWhenComplete => new(13, Ptr + 1028);
+    public InlineArray<BmSDK.FString> BatmobileTutorialFlagToSetWhenComplete => new(13, Ptr + 1028, 16, this);
 
     /// <summary>
     /// StrProperty: BatmobileTutorialFlagToSetWhenComplete
@@ -6620,7 +6620,7 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: BatmobilePassengers
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave> BatmobilePassengers => new(4, Ptr + 2176);
+    public InlineArray<BmSDK.BmGame.RPersistentData.FBatmobilePassengerSave> BatmobilePassengers => new(4, Ptr + 2176, 84, this);
 
     /// <summary>
     /// StructProperty: BatmobilePassengers

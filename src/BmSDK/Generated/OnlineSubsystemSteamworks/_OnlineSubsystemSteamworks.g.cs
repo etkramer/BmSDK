@@ -7568,7 +7568,7 @@ public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCom
     /// <summary>
     /// InlineArray{StructProperty}: ControllerStates
     /// </summary>
-    public InlineArray<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState> ControllerStates => new(4, Ptr + 1256);
+    public InlineArray<BmSDK.OnlineSubsystemSteamworks._OnlineSubsystemSteamworks.FControllerConnectionState> ControllerStates => new(4, Ptr + 1256, 8, this);
 
     /// <summary>
     /// StructProperty: ControllerStates

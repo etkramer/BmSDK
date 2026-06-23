@@ -533,7 +533,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// InlineArray{NameProperty}: ThugInWayAnims_Medic
     /// </summary>
-    public InlineArray<BmSDK.FName> ThugInWayAnims_Medic => new(7, Ptr + 1212);
+    public InlineArray<BmSDK.FName> ThugInWayAnims_Medic => new(7, Ptr + 1212, 8, this);
 
     /// <summary>
     /// NameProperty: ThugInWayAnims_Medic
@@ -595,7 +595,7 @@ public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// InlineArray{NameProperty}: ThugInWayAnims_Thug
     /// </summary>
-    public InlineArray<BmSDK.FName> ThugInWayAnims_Thug => new(7, Ptr + 1268);
+    public InlineArray<BmSDK.FName> ThugInWayAnims_Thug => new(7, Ptr + 1268, 8, this);
 
     /// <summary>
     /// NameProperty: ThugInWayAnims_Thug

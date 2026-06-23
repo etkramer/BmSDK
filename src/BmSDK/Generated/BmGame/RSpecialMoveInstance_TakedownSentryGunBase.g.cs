@@ -81,7 +81,7 @@ public partial class RSpecialMoveInstance_TakedownSentryGunBase : BmSDK.BmGame.R
     /// <summary>
     /// InlineArray{NameProperty}: AnimNames
     /// </summary>
-    public InlineArray<BmSDK.FName> AnimNames => new(3, Ptr + 876);
+    public InlineArray<BmSDK.FName> AnimNames => new(3, Ptr + 876, 8, this);
 
     /// <summary>
     /// NameProperty: AnimNames

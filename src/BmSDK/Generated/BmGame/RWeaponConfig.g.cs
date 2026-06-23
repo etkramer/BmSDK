@@ -162,7 +162,7 @@ public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: PreviewExtraSkelMeshes
     /// </summary>
-    public InlineArray<BmSDK.Engine.SkeletalMesh> PreviewExtraSkelMeshes => new(3, Ptr + 156);
+    public InlineArray<BmSDK.Engine.SkeletalMesh> PreviewExtraSkelMeshes => new(3, Ptr + 156, 8, this);
 
     /// <summary>
     /// ObjectProperty: PreviewExtraSkelMeshes

@@ -865,7 +865,7 @@ public partial class RSpecialMoveInstance_LineLauncher : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// InlineArray{ComponentProperty}: FakeRopeComp
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RSimpleRopeComponent> FakeRopeComp => new(2, Ptr + 1028);
+    public InlineArray<BmSDK.BmGame.RSimpleRopeComponent> FakeRopeComp => new(2, Ptr + 1028, 8, this);
 
     /// <summary>
     /// ComponentProperty: FakeRopeComp

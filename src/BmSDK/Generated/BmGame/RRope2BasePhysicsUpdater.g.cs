@@ -205,7 +205,7 @@ public partial class RRope2BasePhysicsUpdater : BmSDK.BmGame.RRope2PhysicsUpdate
     /// <summary>
     /// InlineArray{StructProperty}: EndInitDatas
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData> EndInitDatas => new(2, Ptr + 136);
+    public InlineArray<BmSDK.BmGame.RRope2BasePhysicsUpdater.FEndInitData> EndInitDatas => new(2, Ptr + 136, 52, this);
 
     /// <summary>
     /// StructProperty: EndInitDatas

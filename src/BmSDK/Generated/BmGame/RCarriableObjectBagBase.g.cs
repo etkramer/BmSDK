@@ -521,7 +521,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// InlineArray{NameProperty}: DoorWaitIdleAnimName_Cocky
     /// </summary>
-    public InlineArray<BmSDK.FName> DoorWaitIdleAnimName_Cocky => new(2, Ptr + 876);
+    public InlineArray<BmSDK.FName> DoorWaitIdleAnimName_Cocky => new(2, Ptr + 876, 8, this);
 
     /// <summary>
     /// NameProperty: DoorWaitIdleAnimName_Cocky
@@ -552,7 +552,7 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     /// <summary>
     /// InlineArray{NameProperty}: DoorWaitIdleAnimName_Nervous
     /// </summary>
-    public InlineArray<BmSDK.FName> DoorWaitIdleAnimName_Nervous => new(2, Ptr + 900);
+    public InlineArray<BmSDK.FName> DoorWaitIdleAnimName_Nervous => new(2, Ptr + 900, 8, this);
 
     /// <summary>
     /// NameProperty: DoorWaitIdleAnimName_Nervous

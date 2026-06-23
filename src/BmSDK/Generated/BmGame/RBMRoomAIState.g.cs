@@ -3594,7 +3594,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{IntProperty}: takedownResponseAnnouncementTally
     /// </summary>
-    public InlineArray<int> takedownResponseAnnouncementTally => new(12, Ptr + 936);
+    public InlineArray<int> takedownResponseAnnouncementTally => new(12, Ptr + 936, 4, this);
 
     /// <summary>
     /// IntProperty: takedownResponseAnnouncementTally
@@ -3696,7 +3696,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: takedownResponseBarkFlags_Initial
     /// </summary>
-    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_Initial => new(12, Ptr + 984);
+    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_Initial => new(12, Ptr + 984, 8, this);
 
     /// <summary>
     /// NameProperty: takedownResponseBarkFlags_Initial
@@ -3798,7 +3798,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: takedownResponseBarkFlags_Repeat
     /// </summary>
-    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_Repeat => new(12, Ptr + 1080);
+    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_Repeat => new(12, Ptr + 1080, 8, this);
 
     /// <summary>
     /// NameProperty: takedownResponseBarkFlags_Repeat
@@ -3900,7 +3900,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{NameProperty}: takedownResponseBarkFlags_ThugRecover
     /// </summary>
-    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_ThugRecover => new(12, Ptr + 1176);
+    public InlineArray<BmSDK.FName> takedownResponseBarkFlags_ThugRecover => new(12, Ptr + 1176, 8, this);
 
     /// <summary>
     /// NameProperty: takedownResponseBarkFlags_ThugRecover
@@ -4239,7 +4239,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{IntProperty}: UsedVoiceSynthesiserLethalTraps
     /// </summary>
-    public InlineArray<int> UsedVoiceSynthesiserLethalTraps => new(6, Ptr + 1456);
+    public InlineArray<int> UsedVoiceSynthesiserLethalTraps => new(6, Ptr + 1456, 4, this);
 
     /// <summary>
     /// IntProperty: UsedVoiceSynthesiserLethalTraps
@@ -4293,7 +4293,7 @@ public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{IntProperty}: ThugHasRefusedToUseVoiceSynthesiserLethalTraps
     /// </summary>
-    public InlineArray<int> ThugHasRefusedToUseVoiceSynthesiserLethalTraps => new(6, Ptr + 1480);
+    public InlineArray<int> ThugHasRefusedToUseVoiceSynthesiserLethalTraps => new(6, Ptr + 1480, 4, this);
 
     /// <summary>
     /// IntProperty: ThugHasRefusedToUseVoiceSynthesiserLethalTraps

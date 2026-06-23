@@ -185,7 +185,7 @@ public partial class RJokerSwapMesh : BmSDK.BmGame.RJokerSwappableBase, BmSDK.IG
     /// <summary>
     /// InlineArray{ObjectProperty}: jokerMeshOverrideMaterials
     /// </summary>
-    public InlineArray<BmSDK.Engine.MaterialInterface> jokerMeshOverrideMaterials => new(4, Ptr + 764);
+    public InlineArray<BmSDK.Engine.MaterialInterface> jokerMeshOverrideMaterials => new(4, Ptr + 764, 8, this);
 
     /// <summary>
     /// ObjectProperty: jokerMeshOverrideMaterials

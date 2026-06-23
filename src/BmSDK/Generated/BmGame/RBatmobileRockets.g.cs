@@ -139,7 +139,7 @@ public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGam
     /// <summary>
     /// InlineArray{NameProperty}: RocketLaunchSlot
     /// </summary>
-    public InlineArray<BmSDK.FName> RocketLaunchSlot => new(2, Ptr + 2396);
+    public InlineArray<BmSDK.FName> RocketLaunchSlot => new(2, Ptr + 2396, 8, this);
 
     /// <summary>
     /// NameProperty: RocketLaunchSlot

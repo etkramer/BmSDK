@@ -189,7 +189,7 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// InlineArray{StrProperty}: flagSuffixes
     /// </summary>
-    public InlineArray<BmSDK.FString> flagSuffixes => new(3, Ptr + 352);
+    public InlineArray<BmSDK.FString> flagSuffixes => new(3, Ptr + 352, 16, this);
 
     /// <summary>
     /// StrProperty: flagSuffixes

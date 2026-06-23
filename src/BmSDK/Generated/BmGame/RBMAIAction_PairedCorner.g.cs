@@ -375,7 +375,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// InlineArray{StructProperty}: InNamesSideOn
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> InNamesSideOn => new(3, Ptr + 940);
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> InNamesSideOn => new(3, Ptr + 940, 32, this);
 
     /// <summary>
     /// StructProperty: InNamesSideOn
@@ -396,7 +396,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// InlineArray{StructProperty}: InNamesHeadOn
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> InNamesHeadOn => new(3, Ptr + 1036);
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> InNamesHeadOn => new(3, Ptr + 1036, 32, this);
 
     /// <summary>
     /// StructProperty: InNamesHeadOn
@@ -417,7 +417,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// InlineArray{StructProperty}: IdleNames
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> IdleNames => new(3, Ptr + 1132);
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> IdleNames => new(3, Ptr + 1132, 32, this);
 
     /// <summary>
     /// StructProperty: IdleNames
@@ -438,7 +438,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// InlineArray{StructProperty}: OutNames
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> OutNames => new(3, Ptr + 1228);
+    public InlineArray<BmSDK.BmGame.RBMAIAction_PairedCorner.FcornerAnimNames> OutNames => new(3, Ptr + 1228, 32, this);
 
     /// <summary>
     /// StructProperty: OutNames
@@ -459,7 +459,7 @@ public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// InlineArray{IntProperty}: variantSwapsRoles
     /// </summary>
-    public InlineArray<int> variantSwapsRoles => new(3, Ptr + 1324);
+    public InlineArray<int> variantSwapsRoles => new(3, Ptr + 1324, 4, this);
 
     /// <summary>
     /// IntProperty: variantSwapsRoles

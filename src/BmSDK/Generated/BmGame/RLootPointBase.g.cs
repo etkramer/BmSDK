@@ -377,7 +377,7 @@ public partial class RLootPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ComponentProperty}: waypointDbgLines
     /// </summary>
-    public InlineArray<BmSDK.Engine.ArrowComponent> waypointDbgLines => new(8, Ptr + 792);
+    public InlineArray<BmSDK.Engine.ArrowComponent> waypointDbgLines => new(8, Ptr + 792, 8, this);
 
     /// <summary>
     /// ComponentProperty: waypointDbgLines

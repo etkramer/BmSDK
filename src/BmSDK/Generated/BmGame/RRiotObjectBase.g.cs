@@ -288,7 +288,7 @@ public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: LastPositions
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> LastPositions => new(2, Ptr + 724);
+    public InlineArray<System.Numerics.Vector3> LastPositions => new(2, Ptr + 724, 12, this);
 
     /// <summary>
     /// StructProperty: LastPositions

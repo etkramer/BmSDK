@@ -225,7 +225,7 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: SiblingExists
     /// </summary>
-    public InlineArray<byte> SiblingExists => new(3, Ptr + 940);
+    public InlineArray<byte> SiblingExists => new(3, Ptr + 940, 1, this);
 
     /// <summary>
     /// ByteProperty: SiblingExists

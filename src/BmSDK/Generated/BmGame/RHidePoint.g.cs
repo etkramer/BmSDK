@@ -1525,7 +1525,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: LinkedHidePointsSameLevel
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RHidePoint> LinkedHidePointsSameLevel => new(8, Ptr + 900);
+    public InlineArray<BmSDK.BmGame.RHidePoint> LinkedHidePointsSameLevel => new(8, Ptr + 900, 8, this);
 
     /// <summary>
     /// ObjectProperty: LinkedHidePointsSameLevel
@@ -1700,7 +1700,7 @@ public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ByteProperty}: HidePointCrossLevel
     /// </summary>
-    public InlineArray<byte> HidePointCrossLevel => new(8, Ptr + 1064);
+    public InlineArray<byte> HidePointCrossLevel => new(8, Ptr + 1064, 1, this);
 
     /// <summary>
     /// ByteProperty: HidePointCrossLevel

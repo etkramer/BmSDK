@@ -1336,7 +1336,7 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Breadcrumbs
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> Breadcrumbs => new(10, Ptr + 316);
+    public InlineArray<System.Numerics.Vector3> Breadcrumbs => new(10, Ptr + 316, 12, this);
 
     /// <summary>
     /// StructProperty: Breadcrumbs

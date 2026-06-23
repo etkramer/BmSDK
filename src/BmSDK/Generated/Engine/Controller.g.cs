@@ -1955,7 +1955,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: GoalList
     /// </summary>
-    public InlineArray<BmSDK.Engine.Actor> GoalList => new(4, Ptr + 708);
+    public InlineArray<BmSDK.Engine.Actor> GoalList => new(4, Ptr + 708, 8, this);
 
     /// <summary>
     /// ObjectProperty: GoalList

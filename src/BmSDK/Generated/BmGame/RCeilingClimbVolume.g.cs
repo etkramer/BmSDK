@@ -279,7 +279,7 @@ public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{ObjectProperty}: Points
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGrapplePoint> Points => new(10, Ptr + 820);
+    public InlineArray<BmSDK.BmGame.RGrapplePoint> Points => new(10, Ptr + 820, 8, this);
 
     /// <summary>
     /// ObjectProperty: Points
@@ -374,7 +374,7 @@ public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{ByteProperty}: PointsCrossLevel
     /// </summary>
-    public InlineArray<byte> PointsCrossLevel => new(10, Ptr + 908);
+    public InlineArray<byte> PointsCrossLevel => new(10, Ptr + 908, 1, this);
 
     /// <summary>
     /// ByteProperty: PointsCrossLevel

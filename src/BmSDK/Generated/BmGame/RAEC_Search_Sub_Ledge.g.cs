@@ -735,7 +735,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: movementStanceNamesLeft
     /// </summary>
-    public InlineArray<BmSDK.FName> movementStanceNamesLeft => new(2, Ptr + 792);
+    public InlineArray<BmSDK.FName> movementStanceNamesLeft => new(2, Ptr + 792, 8, this);
 
     /// <summary>
     /// NameProperty: movementStanceNamesLeft
@@ -757,7 +757,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: movementStanceNamesRight
     /// </summary>
-    public InlineArray<BmSDK.FName> movementStanceNamesRight => new(2, Ptr + 808);
+    public InlineArray<BmSDK.FName> movementStanceNamesRight => new(2, Ptr + 808, 8, this);
 
     /// <summary>
     /// NameProperty: movementStanceNamesRight
@@ -779,7 +779,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: inAnimNamesLeft
     /// </summary>
-    public InlineArray<BmSDK.FName> inAnimNamesLeft => new(2, Ptr + 824);
+    public InlineArray<BmSDK.FName> inAnimNamesLeft => new(2, Ptr + 824, 8, this);
 
     /// <summary>
     /// NameProperty: inAnimNamesLeft
@@ -801,7 +801,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: inAnimNamesRight
     /// </summary>
-    public InlineArray<BmSDK.FName> inAnimNamesRight => new(2, Ptr + 840);
+    public InlineArray<BmSDK.FName> inAnimNamesRight => new(2, Ptr + 840, 8, this);
 
     /// <summary>
     /// NameProperty: inAnimNamesRight
@@ -823,7 +823,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: outAnimNamesLeft
     /// </summary>
-    public InlineArray<BmSDK.FName> outAnimNamesLeft => new(2, Ptr + 856);
+    public InlineArray<BmSDK.FName> outAnimNamesLeft => new(2, Ptr + 856, 8, this);
 
     /// <summary>
     /// NameProperty: outAnimNamesLeft
@@ -845,7 +845,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{NameProperty}: outAnimNamesRight
     /// </summary>
-    public InlineArray<BmSDK.FName> outAnimNamesRight => new(2, Ptr + 872);
+    public InlineArray<BmSDK.FName> outAnimNamesRight => new(2, Ptr + 872, 8, this);
 
     /// <summary>
     /// NameProperty: outAnimNamesRight
@@ -867,7 +867,7 @@ public partial class RAEC_Search_Sub_Ledge : BmSDK.BmGame.RAEC_Search_Sub_Format
     /// <summary>
     /// InlineArray{FloatProperty}: refDistFromRailing
     /// </summary>
-    public InlineArray<float> refDistFromRailing => new(2, Ptr + 888);
+    public InlineArray<float> refDistFromRailing => new(2, Ptr + 888, 4, this);
 
     /// <summary>
     /// FloatProperty: refDistFromRailing

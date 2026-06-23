@@ -496,7 +496,7 @@ public partial class RVehicleBehaviour_RunAway : BmSDK.BmGame.RVehicleBehaviour,
     /// <summary>
     /// InlineArray{StructProperty}: CheatVsDistCurveNoEscorts
     /// </summary>
-    public InlineArray<BmSDK.GameObject.FInterpCurveFloat> CheatVsDistCurveNoEscorts => new(6, Ptr + 616);
+    public InlineArray<BmSDK.GameObject.FInterpCurveFloat> CheatVsDistCurveNoEscorts => new(6, Ptr + 616, 20, this);
 
     /// <summary>
     /// StructProperty: CheatVsDistCurveNoEscorts

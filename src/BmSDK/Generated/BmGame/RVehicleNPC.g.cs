@@ -4325,7 +4325,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: PassengersEntering
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMPawnAI> PassengersEntering => new(4, Ptr + 4984);
+    public InlineArray<BmSDK.BmGame.RBMPawnAI> PassengersEntering => new(4, Ptr + 4984, 8, this);
 
     /// <summary>
     /// ObjectProperty: PassengersEntering
@@ -4363,7 +4363,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: PassengerDefaultWeaponArchetypes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleNPCWeapon> PassengerDefaultWeaponArchetypes => new(4, Ptr + 5016);
+    public InlineArray<BmSDK.BmGame.RVehicleNPCWeapon> PassengerDefaultWeaponArchetypes => new(4, Ptr + 5016, 8, this);
 
     /// <summary>
     /// ObjectProperty: PassengerDefaultWeaponArchetypes
@@ -4401,7 +4401,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: LastPassengerInSlot
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMPawnAI> LastPassengerInSlot => new(4, Ptr + 5048);
+    public InlineArray<BmSDK.BmGame.RBMPawnAI> LastPassengerInSlot => new(4, Ptr + 5048, 8, this);
 
     /// <summary>
     /// ObjectProperty: LastPassengerInSlot
@@ -6659,7 +6659,7 @@ public partial class RVehicleNPC : BmSDK.BmGame.RVehicle, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: Passengers
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger> Passengers => new(4, Ptr + 6040);
+    public InlineArray<BmSDK.BmGame.RVehicleNPC.FVehiclePassenger> Passengers => new(4, Ptr + 6040, 212, this);
 
     /// <summary>
     /// StructProperty: Passengers

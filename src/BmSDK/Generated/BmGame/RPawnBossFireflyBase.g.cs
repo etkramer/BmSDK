@@ -785,7 +785,7 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// InlineArray{ComponentProperty}: smokePFX
     /// </summary>
-    public InlineArray<BmSDK.Engine.ParticleSystemComponent> smokePFX => new(2, Ptr + 6760);
+    public InlineArray<BmSDK.Engine.ParticleSystemComponent> smokePFX => new(2, Ptr + 6760, 8, this);
 
     /// <summary>
     /// ComponentProperty: smokePFX
@@ -879,7 +879,7 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// InlineArray{StrProperty}: encounterCompleteFlagNames
     /// </summary>
-    public InlineArray<BmSDK.FString> encounterCompleteFlagNames => new(3, Ptr + 6780);
+    public InlineArray<BmSDK.FString> encounterCompleteFlagNames => new(3, Ptr + 6780, 16, this);
 
     /// <summary>
     /// StrProperty: encounterCompleteFlagNames

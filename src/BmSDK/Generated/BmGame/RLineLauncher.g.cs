@@ -760,7 +760,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ObjectProperty}: Projectile
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RProjectileWithRope> Projectile => new(2, Ptr + 2136);
+    public InlineArray<BmSDK.BmGame.RProjectileWithRope> Projectile => new(2, Ptr + 2136, 8, this);
 
     /// <summary>
     /// ObjectProperty: Projectile
@@ -890,7 +890,7 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ComponentProperty}: ProjectileRope
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RSimpleRopeComponent> ProjectileRope => new(2, Ptr + 2248);
+    public InlineArray<BmSDK.BmGame.RSimpleRopeComponent> ProjectileRope => new(2, Ptr + 2248, 8, this);
 
     /// <summary>
     /// ComponentProperty: ProjectileRope

@@ -302,7 +302,7 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     /// <summary>
     /// InlineArray{StructProperty}: GelLayer
     /// </summary>
-    public InlineArray<BmSDK.Engine.LightComponent.FFGelLayer> GelLayer => new(2, Ptr + 124);
+    public InlineArray<BmSDK.Engine.LightComponent.FFGelLayer> GelLayer => new(2, Ptr + 124, 64, this);
 
     /// <summary>
     /// StructProperty: GelLayer

@@ -591,7 +591,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// InlineArray{ByteProperty}: ObstacleBodies
     /// </summary>
-    public InlineArray<byte> ObstacleBodies => new(32, Ptr + 925);
+    public InlineArray<byte> ObstacleBodies => new(32, Ptr + 925, 1, this);
 
     /// <summary>
     /// ByteProperty: ObstacleBodies
@@ -853,7 +853,7 @@ public partial class RDeadVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGame
     /// <summary>
     /// InlineArray{ByteProperty}: ObstacleBodyIslands
     /// </summary>
-    public InlineArray<byte> ObstacleBodyIslands => new(32, Ptr + 957);
+    public InlineArray<byte> ObstacleBodyIslands => new(32, Ptr + 957, 1, this);
 
     /// <summary>
     /// ByteProperty: ObstacleBodyIslands

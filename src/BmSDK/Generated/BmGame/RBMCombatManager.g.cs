@@ -4954,7 +4954,7 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StructProperty}: WeaponConfigs
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef> WeaponConfigs => new(23, Ptr + 1272);
+    public InlineArray<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef> WeaponConfigs => new(23, Ptr + 1272, 12, this);
 
     /// <summary>
     /// StructProperty: WeaponConfigs

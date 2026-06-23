@@ -200,7 +200,7 @@ public partial class RVehicleExclusionVolume : BmSDK.Engine.Volume, BmSDK.IGameO
     /// <summary>
     /// InlineArray{ByteProperty}: LinkedDistricts
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGameInfo.EDistrict> LinkedDistricts => new(2, Ptr + 744);
+    public InlineArray<BmSDK.BmGame.RGameInfo.EDistrict> LinkedDistricts => new(2, Ptr + 744, 1, this);
 
     /// <summary>
     /// ByteProperty: LinkedDistricts

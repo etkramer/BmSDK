@@ -3279,7 +3279,7 @@ public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: BaseChallengeScorePerType
     /// </summary>
-    public InlineArray<int> BaseChallengeScorePerType => new(17, Ptr + 540);
+    public InlineArray<int> BaseChallengeScorePerType => new(17, Ptr + 540, 4, this);
 
     /// <summary>
     /// IntProperty: BaseChallengeScorePerType

@@ -9567,7 +9567,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: acquiredBMBLUpgradeFlagNames
     /// </summary>
-    public InlineArray<BmSDK.FString> acquiredBMBLUpgradeFlagNames => new(4, Ptr + 2592);
+    public InlineArray<BmSDK.FString> acquiredBMBLUpgradeFlagNames => new(4, Ptr + 2592, 16, this);
 
     /// <summary>
     /// StrProperty: acquiredBMBLUpgradeFlagNames
@@ -9605,7 +9605,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: unavailableBMBLUpgradeFlagNames
     /// </summary>
-    public InlineArray<BmSDK.FString> unavailableBMBLUpgradeFlagNames => new(4, Ptr + 2656);
+    public InlineArray<BmSDK.FString> unavailableBMBLUpgradeFlagNames => new(4, Ptr + 2656, 16, this);
 
     /// <summary>
     /// StrProperty: unavailableBMBLUpgradeFlagNames
@@ -9643,7 +9643,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{StrProperty}: nextBMBLUpgradeFlagNames
     /// </summary>
-    public InlineArray<BmSDK.FString> nextBMBLUpgradeFlagNames => new(4, Ptr + 2720);
+    public InlineArray<BmSDK.FString> nextBMBLUpgradeFlagNames => new(4, Ptr + 2720, 16, this);
 
     /// <summary>
     /// StrProperty: nextBMBLUpgradeFlagNames
@@ -10428,7 +10428,7 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: sideStoryCooldownTimers
     /// </summary>
-    public InlineArray<float> sideStoryCooldownTimers => new(3, Ptr + 3148);
+    public InlineArray<float> sideStoryCooldownTimers => new(3, Ptr + 3148, 4, this);
 
     /// <summary>
     /// FloatProperty: sideStoryCooldownTimers

@@ -796,7 +796,7 @@ public partial class RBatarang : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{ObjectProperty}: NoisyTargets
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RPawnVillain> NoisyTargets => new(8, Ptr + 2128);
+    public InlineArray<BmSDK.BmGame.RPawnVillain> NoisyTargets => new(8, Ptr + 2128, 8, this);
 
     /// <summary>
     /// ObjectProperty: NoisyTargets
@@ -1451,7 +1451,7 @@ public partial class RBatarang : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     /// <summary>
     /// InlineArray{StructProperty}: ThrowDirectionTypes
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2420);
+    public InlineArray<BmSDK.BmGame.RBatarang.FBatarangThrowDirectionsContainer> ThrowDirectionTypes => new(13, Ptr + 2420, 16, this);
 
     /// <summary>
     /// StructProperty: ThrowDirectionTypes

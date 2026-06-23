@@ -2798,7 +2798,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// InlineArray{StructProperty}: DebugDrawColor
     /// </summary>
-    public InlineArray<BmSDK.GameObject.FColor> DebugDrawColor => new(13, Ptr + 3164);
+    public InlineArray<BmSDK.GameObject.FColor> DebugDrawColor => new(13, Ptr + 3164, 4, this);
 
     /// <summary>
     /// StructProperty: DebugDrawColor
@@ -2926,7 +2926,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// InlineArray{StructProperty}: GrappleWayPoints
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> GrappleWayPoints => new(8, Ptr + 3260);
+    public InlineArray<System.Numerics.Vector3> GrappleWayPoints => new(8, Ptr + 3260, 12, this);
 
     /// <summary>
     /// StructProperty: GrappleWayPoints
@@ -2972,7 +2972,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// InlineArray{StructProperty}: GrappleSafePoint
     /// </summary>
-    public InlineArray<System.Numerics.Vector3> GrappleSafePoint => new(8, Ptr + 3356);
+    public InlineArray<System.Numerics.Vector3> GrappleSafePoint => new(8, Ptr + 3356, 12, this);
 
     /// <summary>
     /// StructProperty: GrappleSafePoint
@@ -3018,7 +3018,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// InlineArray{FloatProperty}: GrappleWayPointDistances
     /// </summary>
-    public InlineArray<float> GrappleWayPointDistances => new(8, Ptr + 3452);
+    public InlineArray<float> GrappleWayPointDistances => new(8, Ptr + 3452, 4, this);
 
     /// <summary>
     /// FloatProperty: GrappleWayPointDistances

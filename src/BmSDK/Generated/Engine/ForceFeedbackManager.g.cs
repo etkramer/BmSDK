@@ -174,7 +174,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: Haptic_FFWaveform
     /// </summary>
-    public InlineArray<BmSDK.Engine.ForceFeedbackWaveform> Haptic_FFWaveform => new(2, Ptr + 104);
+    public InlineArray<BmSDK.Engine.ForceFeedbackWaveform> Haptic_FFWaveform => new(2, Ptr + 104, 8, this);
 
     /// <summary>
     /// ObjectProperty: Haptic_FFWaveform
@@ -196,7 +196,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{ObjectProperty}: Haptic_WaveformInstigator
     /// </summary>
-    public InlineArray<BmSDK.Engine.Actor> Haptic_WaveformInstigator => new(2, Ptr + 120);
+    public InlineArray<BmSDK.Engine.Actor> Haptic_WaveformInstigator => new(2, Ptr + 120, 8, this);
 
     /// <summary>
     /// ObjectProperty: Haptic_WaveformInstigator
@@ -254,7 +254,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{IntProperty}: Haptic_CurrentSample
     /// </summary>
-    public InlineArray<int> Haptic_CurrentSample => new(2, Ptr + 152);
+    public InlineArray<int> Haptic_CurrentSample => new(2, Ptr + 152, 4, this);
 
     /// <summary>
     /// IntProperty: Haptic_CurrentSample
@@ -276,7 +276,7 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// InlineArray{FloatProperty}: Haptic_ElapsedTime
     /// </summary>
-    public InlineArray<float> Haptic_ElapsedTime => new(2, Ptr + 160);
+    public InlineArray<float> Haptic_ElapsedTime => new(2, Ptr + 160, 4, this);
 
     /// <summary>
     /// FloatProperty: Haptic_ElapsedTime

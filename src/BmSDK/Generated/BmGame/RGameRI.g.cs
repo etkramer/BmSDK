@@ -3416,7 +3416,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{ByteProperty}: ActiveModifiers
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGameInfo.EChallengeModifierType> ActiveModifiers => new(8, Ptr + 795);
+    public InlineArray<BmSDK.BmGame.RGameInfo.EChallengeModifierType> ActiveModifiers => new(8, Ptr + 795, 1, this);
 
     /// <summary>
     /// ByteProperty: ActiveModifiers
@@ -4359,7 +4359,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{StructProperty}: PlayerCharacters
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter> PlayerCharacters => new(8, Ptr + 1736);
+    public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter> PlayerCharacters => new(8, Ptr + 1736, 84, this);
 
     /// <summary>
     /// StructProperty: PlayerCharacters
@@ -4414,7 +4414,7 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// InlineArray{StructProperty}: PlayerBatmobiles
     /// </summary>
-    public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile> PlayerBatmobiles => new(8, Ptr + 2424);
+    public InlineArray<BmSDK.BmGame.RGameRI.FLoadedPlayerBatmobile> PlayerBatmobiles => new(8, Ptr + 2424, 100, this);
 
     /// <summary>
     /// StructProperty: PlayerBatmobiles
