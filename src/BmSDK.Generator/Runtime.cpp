@@ -98,7 +98,9 @@ void Runtime::LoadClassesIntoMemory() {
     LoadPackage(0, L"Film", 0);
     LoadPackage(0, L"WayneTower_B1", 0);
     LoadPackage(0, L"Ace_A1_Ch2", 0);
+    LoadPackage(0, L"Pyg", 0);
     LoadPackage(0, L"Pyg_B1", 0);
+    LoadPackage(0, L"DLCHarleyPolice_S1_Design", 0);
 
     // const wregex packageFilter(
     //     L"(?:"
