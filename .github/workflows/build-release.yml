@@ -1,0 +1,147 @@
+name: "Create release build"
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      tag_name:
+        description: "Tag to checkout"
+        type: string
+        required: true
+    outputs:
+      artifact-id:
+        description: "Artifact ID of final binary"
+        value: ${{ jobs.create-package.outputs.artifact-id }}
+
+env:
+  TARGET_REF: ${{ inputs.tag_name || github.sha }}
+  STAGING_DIR: '${{ github.workspace }}/publish/'
+
+jobs:
+  build-sdk:
+    name: "Build BmSDK.csproj"
+    runs-on: windows-latest
+    env:
+      PROJ_PATH: '${{ github.workspace }}/src/BmSDK/BmSDK.csproj'
+    steps:
+    - name: "Checkout target commit"
+      uses: actions/checkout@v7
+      with:
+        ref: ${{ env.TARGET_REF }}
+
+    - name: "Set up .NET SDK"
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: "10.0.x"
+        cache: true
+        cache-dependency-path: '**/packages.lock.json'
+
+    - name: "Restore NuGet packages"
+      run: |
+        dotnet restore '${{ env.PROJ_PATH }}' --locked-mode
+
+    - name: "Build BmSDK in Release mode"
+      run: >
+        dotnet publish '${{ env.PROJ_PATH }}' -c Release
+        -o '${{ env.STAGING_DIR }}/Binaries/Win32/sdk/'
+        --no-restore --nologo
+
+    - name: "Upload binaries for later processing"
+      uses: actions/upload-artifact@v7
+      with:
+        name: "SDK"
+        path: ${{ env.STAGING_DIR }}
+        if-no-files-found: error
+
+  build-host:
+    name: "Build BmSDK.Host.vcxproj"
+    runs-on: windows-latest
+    steps:
+    - name: "Checkout target commit"
+      uses: actions/checkout@v7
+      with:
+        ref: ${{ env.TARGET_REF }}
+
+    - name: "Set up MSBuild"
+      uses: microsoft/setup-msbuild@v3
+
+    - name: "Install VCPKG"
+      uses: lukka/run-vcpkg@v11
+      with:
+        vcpkgConfigurationJsonGlob: '**/src/BmSDK.Host/vcpkg-configuration.json'
+
+    - name: "Build BmSDK.Host in Release mode"
+      run: |
+        # Set up dependency resolution
+        vcpkg integrate install
+
+        # Build BmSDK.Host
+        MSBuild `
+          '${{ github.workspace }}/src/BmSDK.Host/BmSDK.Host.vcxproj' `
+          -p:Configuration=Release -p:Platform=x86 `
+          -p:OutDir='${{ env.STAGING_DIR }}/Binaries/Win32/plugins/' `
+          -v:m -nologo
+
+    - name: "Upload binaries for later processing"
+      uses: actions/upload-artifact@v7
+      with:
+        name: "Host"
+        path: ${{ env.STAGING_DIR }}
+        if-no-files-found: error
+
+  create-package:
+    name: "Create a complete ZIP"
+    needs: [build-sdk, build-host]
+    outputs:
+      artifact-id: ${{ steps.upload-artifact.outputs.artifact-id }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Checkout target commit"
+      uses: actions/checkout@v7
+      with:
+        ref: ${{ env.TARGET_REF }}
+
+    - name: "Merge build artifacts into one directory"
+      uses: actions/download-artifact@v8
+      with:
+        path: ${{ env.STAGING_DIR }}
+        merge-multiple: true
+
+    - name: "Retrieve latest Ultimate ASI Loader DLL"
+      run: |
+        curl -L -o './dinput8-Win32.zip' \
+          'https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/Win32-latest/dinput8-Win32.zip'
+        unzip -d './dinput8-Win32/' './dinput8-Win32.zip'
+        mv './dinput8-Win32/dinput8.dll' '${{ env.STAGING_DIR }}/Binaries/Win32/'
+
+    - name: "Copy over ScriptsDev and example scripts"
+      run: |
+        # Maps source paths relative to the repo root to
+        # destination paths relative to the export directory
+        declare -A requiredFiles=(
+          ['README.md']='README.md'
+          ['LICENSE.md']='LICENSE.md'
+          ['bin/BmGame/Scripts/MinimalScript.cs']='BmGame/Scripts/MinimalScript.cs'
+          ['bin/BmGame/ScriptsDev/ScriptsDev.csproj']='BmGame/ScriptsDev/ScriptsDev.csproj'
+          ['bin/BmGame/ScriptsDev/ScriptsDev.slnx']='BmGame/ScriptsDev/ScriptsDev.slnx'
+          ['bin/BmGame/ScriptsDev/ScriptsDev.code-workspace']='BmGame/ScriptsDev/ScriptsDev.code-workspace'
+          ['bin/BmGame/ScriptsDev/Properties/']='BmGame/ScriptsDev/Properties/'
+          ['bin/BmGame/Mods/ModTemplate/']='BmGame/Mods/ModTemplate/'
+        )
+
+        # Copy over files to export directory
+        for srcKey in "${!requiredFiles[@]}"; do
+          srcPath="${{ github.workspace }}/${srcKey}"
+          dstPath="${{ env.STAGING_DIR }}/${requiredFiles[$srcKey]}"
+          mkdir -p "$(dirname "$dstPath")"
+          cp -r "$srcPath" "$dstPath"
+        done
+
+    - name: "Uploading complete build"
+      id: upload-artifact
+      uses: actions/upload-artifact@v7
+      with:
+        name: "BmSDK-${{ inputs.tag_name || github.sha }}"
+        path: ${{ env.STAGING_DIR }}
+        if-no-files-found: error
+        compression-level: 9
