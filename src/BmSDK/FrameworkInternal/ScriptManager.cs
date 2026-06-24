@@ -179,7 +179,11 @@ internal static class ScriptManager
                 {
                     RedirectManager.ConfigureAllRedirectedFunctions();
                     ScriptComponentManager.AutoAttachTypesToExistingObjs();
-                    scripts.ForEach(script => script.OnLoad());
+
+                    foreach (var script in scripts)
+                    {
+                        script.OnLoad();
+                    }
                 }
             },
             state: null
@@ -196,7 +200,10 @@ internal static class ScriptManager
         var asm = loaded.Alc.Assemblies.FirstOrDefault();
 
         // Call OnUnload on this mod's scripts
-        loaded.Scripts.ForEach(script => script.OnUnload());
+        foreach (var script in loaded.Scripts)
+        {
+            script.OnUnload();
+        }
 
         if (asm != null)
         {
