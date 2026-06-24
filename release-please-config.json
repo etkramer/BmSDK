@@ -1,0 +1,23 @@
+{
+  "bootstrap-sha": "2ebcc0d562112eef1de5492b066e482da136e2f8",
+  "release-as": "0.16.0",
+  "plugins": ["sentence-case"],
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": false,
+      "extra-files": [
+        "src/BmSDK/BmSDK.csproj"
+      ],
+
+      "changelog-path": "CHANGELOG.md",
+      "include-commit-authors": true,
+
+      "draft": true,
+      "force-tag-creation": true,
+      "prerelease": false
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
