@@ -1,6 +1,4 @@
 {
-  "bootstrap-sha": "2ebcc0d562112eef1de5492b066e482da136e2f8",
-  "release-as": "0.16.0",
   "plugins": ["sentence-case"],
   "packages": {
     ".": {
