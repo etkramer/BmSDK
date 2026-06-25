@@ -95,5 +95,4 @@ public partial class RFreezeClusterTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGam
         funcManaged.FunctionFlags = oldFlags;
         return;
     }
-
 }

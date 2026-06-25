@@ -3,6 +3,7 @@
 #include "Engine\UClass.h"
 #include "Engine\UProperty.h"
 #include "Engine\GameOffsets.h"
+#include "Framework\ClassInfo.h"
 #include "Printer\Printer.h"
 
 #include <cstdint>
@@ -130,16 +131,27 @@ void Runtime::GenerateSDK()
     // Clear output directory
     // TODO: Un-hardcode this
     TRACE("Found {} classes, preparing to print", classObjects.size());
+    vector<ClassInfo> classes;
+    classes.reserve(classObjects.size());
+    for (auto classObj : classObjects)
+    {
+        classes.emplace_back(classObj);
+    }
+    for (auto& classObj : classes)
+    {
+        classObj.ResolveSuper(classes);
+    }
+
     fs::path outDir = "..\\..\\..\\src\\BmSDK\\Generated\\";
     fs::remove_all(outDir);
     fs::create_directory(outDir);
 
     // Print some classes
-    for (auto i = 0u; i < classObjects.size(); i++)
+    for (auto i = 0u; i < classes.size(); i++)
     {
-        auto classObj = classObjects.at(i);
+        auto& classObj = classes.at(i);
         auto classFilePath =
-            outDir / classObj->GetPackageName() / (classObj->GetNameManaged() + ".g.cs");
+            outDir / classObj.PackageName / (classObj.ManagedName + ".g.cs");
 
         if (!fs::exists(classFilePath.parent_path()) &&
             fs::exists(classFilePath.parent_path().parent_path()))
@@ -160,7 +172,7 @@ void Runtime::GenerateSDK()
 
     // Print StaticInit file
     ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc | ios::binary);
-    Printer::PrintStaticInit(classObjects, staticInitFileStream);
+    Printer::PrintStaticInit(classes, staticInitFileStream);
 
     TRACE("Done writing {} classes to disk", classObjects.size());
 

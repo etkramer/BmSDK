@@ -545,8 +545,6 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         return;
     }
 
-
-
     /// <summary>
     /// Function: NavigationPointCheck
     /// </summary>
@@ -568,8 +566,6 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         Specs = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ReachSpec>>(paramsPtr + 36);
         return;
     }
-
-
 
     /// <summary>
     /// Function: Reset

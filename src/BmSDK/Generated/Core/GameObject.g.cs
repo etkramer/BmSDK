@@ -941,8 +941,6 @@ public partial class GameObject : BmSDK.IGameObject
         return;
     }
 
-
-
     /// <summary>
     /// Function: MakeLinearColor
     /// </summary>
@@ -972,10 +970,6 @@ public partial class GameObject : BmSDK.IGameObject
         BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(paramsPtr + 4);
     }
-
-
-
-
 
     /// <summary>
     /// Function: EvalInterpCurveVector2D
@@ -1057,16 +1051,6 @@ public partial class GameObject : BmSDK.IGameObject
         funcManaged.FunctionFlags = oldFlags;
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 20);
     }
-
-
-
-
-
-
-
-
-
-
 
     /// <summary>
     /// Function: QuatSlerp
@@ -1424,9 +1408,6 @@ public partial class GameObject : BmSDK.IGameObject
         return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 76);
     }
 
-
-
-
     /// <summary>
     /// Function: IsA
     /// </summary>
@@ -1465,10 +1446,6 @@ public partial class GameObject : BmSDK.IGameObject
         funcManaged.FunctionFlags = oldFlags;
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
     }
-
-
-
-
 
     /// <summary>
     /// Function: PathName
@@ -1745,18 +1722,6 @@ public partial class GameObject : BmSDK.IGameObject
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 12);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
     /// <summary>
     /// Function: RSize
     /// </summary>
@@ -2024,18 +1989,6 @@ public partial class GameObject : BmSDK.IGameObject
         Z = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 36);
         return;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     /// <summary>
     /// Function: NoZDot
@@ -2385,24 +2338,6 @@ public partial class GameObject : BmSDK.IGameObject
         funcManaged.FunctionFlags = oldFlags;
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 12);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /// <summary>
     /// Function: FInterpConstantTo
@@ -2956,24 +2891,6 @@ public partial class GameObject : BmSDK.IGameObject
         return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /// <summary>
     /// Function: ToHex
     /// </summary>
@@ -3072,48 +2989,6 @@ public partial class GameObject : BmSDK.IGameObject
         funcManaged.FunctionFlags = oldFlags;
         return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /// <summary>
     /// Enum: EDebugBreakType

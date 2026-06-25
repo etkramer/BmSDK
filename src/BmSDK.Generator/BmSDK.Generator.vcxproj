@@ -8,9 +8,11 @@
     <ClCompile Include="Printer\Printer.cpp" />
     <ClCompile Include="Framework\Debug.cpp" />
     <ClCompile Include="Framework\FieldInfo.cpp" />
+    <ClCompile Include="Framework\ClassInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Detours.h" />
+    <ClInclude Include="Framework\ClassInfo.h" />
     <ClInclude Include="Engine\FName.h" />
     <ClInclude Include="Engine\UClass.h" />
     <ClInclude Include="Engine\UField.h" />

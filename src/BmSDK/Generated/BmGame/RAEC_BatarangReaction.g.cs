@@ -532,5 +532,4 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RAEC_Search_Sub_Guard>>(Ptr + 540); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
-
 }

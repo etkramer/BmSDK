@@ -170,5 +170,4 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 584); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
     }
-
 }

@@ -271,5 +271,4 @@ public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
-
 }

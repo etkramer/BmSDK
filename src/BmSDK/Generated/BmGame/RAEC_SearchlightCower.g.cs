@@ -101,5 +101,4 @@ public partial class RAEC_SearchlightCower : BmSDK.BmGame.RAlertEventCoordinator
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
-
 }

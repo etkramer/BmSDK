@@ -408,5 +408,4 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }; }
         }
     }
-
 }

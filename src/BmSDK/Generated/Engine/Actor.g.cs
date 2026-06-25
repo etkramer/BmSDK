@@ -2123,19 +2123,6 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController>(paramsPtr + 0);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     /// <summary>
     /// Function: GetURLMap
     /// </summary>
