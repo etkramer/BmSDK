@@ -9,11 +9,7 @@ constexpr INT NAME_INDEX_SHIFT = 1;
 // complete FNameEntry instances, basing the actual size on the name length.
 class FNameEntry
 {
-#if BATMAN2
     QWORD Flags;
-#elif BATMAN3
-    DWORD Flags;
-#endif
     INT Index;
     FNameEntry* HashNext;
 
