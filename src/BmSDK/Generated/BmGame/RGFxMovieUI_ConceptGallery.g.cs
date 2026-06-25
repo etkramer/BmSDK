@@ -491,5 +491,4 @@ public partial class RGFxMovieUI_ConceptGallery : BmSDK.BmGame.RGFxMovieUI, BmSD
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
-
 }

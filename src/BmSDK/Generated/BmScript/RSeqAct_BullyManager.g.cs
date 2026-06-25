@@ -210,5 +210,4 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData>(Ptr + 220); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
-
 }

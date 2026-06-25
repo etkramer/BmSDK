@@ -175,5 +175,4 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CylinderComponent>(Ptr + 504); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
     }
-
 }

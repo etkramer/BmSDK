@@ -1,15 +1,10 @@
 #include "pch.h"
 #include "Printer.h"
-#include "Engine/UClass.h"
-#include "Engine/UProperty.h"
-#include "Engine/UEnum.h"
-#include "Engine/UFunction.h"
-
-#include <map>
+#include "Framework/ClassInfo.h"
 
 int Printer::IndentLevel = 0;
 
-void Printer::PrintFile(UClass* _class, ostream& out)
+void Printer::PrintFile(const ClassInfo& _class, ostream& out)
 {
     // Print preprocessor directives
     Printer::Indent(out) << "#pragma warning disable CS0108" << endl;
@@ -17,11 +12,11 @@ void Printer::PrintFile(UClass* _class, ostream& out)
     out << endl;
 
     // Print namespace declaration
-    Printer::Indent(out) << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
+    Printer::Indent(out) << "namespace " << _class.PackageNameManaged << ";" << endl;
     out << endl;
 
     // Print type
-    if (((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Interface) != 0)
+    if (_class.IsInterface)
     {
         // Print interface declaration
         Printer::PrintInterface(_class, out);
@@ -33,22 +28,22 @@ void Printer::PrintFile(UClass* _class, ostream& out)
     }
 }
 
-void Printer::PrintInterface(class UClass* _class, ostream& out)
+void Printer::PrintInterface(const ClassInfo& _class, ostream& out)
 {
     // Print interface comment
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Interface: " << _class->GetNameManaged() << "<br/>" << endl;
-    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
-    Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
+    Printer::Indent(out) << "/// Interface: " << _class.ManagedName << "<br/>" << endl;
+    Printer::Indent(out) << "/// (size = " << _class.PropertiesSize << ")" << endl;
+    Printer::Indent(out) << "/// (flags = " << _class.Flags << ")" << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print interface declaration
-    Printer::Indent(out) << "public partial interface " << _class->GetNameManaged();
+    Printer::Indent(out) << "public partial interface " << _class.ManagedName;
 
     // Workaround to prevent Core.Interface from trying to inherit GameObject
-    if (_class->GetPathName() != "Core.Interface" && _class->SuperStruct)
+    if (_class.PathName != "Core.Interface" && _class.Super)
     {
-        out << " : " << _class->SuperStruct->GetPathNameManaged();
+        out << " : " << _class.Super->PackageNameManaged << "." << _class.Super->ManagedName;
     }
     out << endl;
 
@@ -56,33 +51,14 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        // Print fields
-        UField* fieldLink = _class->Children;
-        for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
+        for (auto i = 0u; i < _class.Members.size(); i++)
         {
-            if (fieldLink->IsA(UEnum::StaticClass()))
+            auto member = _class.Members[i];
+            if (!dynamic_cast<PropertyInfo*>(member))
             {
-                Printer::PrintEnum((UEnum*)fieldLink, out);
+                Printer::PrintMember(member, true, out);
 
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UScriptStruct::StaticClass()))
-            {
-                Printer::PrintStruct((UScriptStruct*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UFunction::StaticClass()))
-            {
-                Printer::PrintFunction((UFunction*)fieldLink, true, out);
-
-                if (fieldLink->Next)
+                if (i < _class.Members.size() - 1)
                 {
                     out << endl;
                 }
@@ -93,33 +69,33 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintClass(UClass* _class, ostream& out)
+void Printer::PrintClass(const ClassInfo& _class, ostream& out)
 {
     // Print class comment
     Printer::Indent(out) << "/// <summary>" << endl;
     Printer::Indent(out) << "/// ";
-    if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract)
+    if (_class.IsAbstract)
     {
         out << "ABSTRACT ";
     }
-    Printer::Indent(out) << "Class: " << _class->GetNameManaged() << "<br/>" << endl;
-    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
-    Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
+    Printer::Indent(out) << "Class: " << _class.ManagedName << "<br/>" << endl;
+    Printer::Indent(out) << "/// (size = " << _class.PropertiesSize << ")" << endl;
+    Printer::Indent(out) << "/// (flags = " << _class.Flags << ")" << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print class declaration
-    Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
+    Printer::Indent(out) << "public partial class " << _class.ManagedName << " : ";
     // Print base class
-    if (_class->SuperStruct)
+    if (_class.Super)
     {
-        out << _class->SuperStruct->GetPathNameManaged() << ", ";
+        out << _class.Super->PackageNameManaged << "." << _class.Super->ManagedName << ", ";
     }
     // Print implemented interfaces
-    if (_class->Interfaces.Num > 0)
+    if (!_class.Interfaces.empty())
     {
-        for (int i = 0; i < _class->Interfaces.Num; i++)
+        for (auto& interfaceName : _class.Interfaces)
         {
-            out << _class->Interfaces.ElementAt(i).Class->GetPathNameManaged() << ", ";
+            out << interfaceName << ", ";
         }
     }
     out << "BmSDK.IGameObject" << endl;
@@ -140,7 +116,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             {
                 Printer::Indent(out)
                     << "s_staticClass = StaticFindObjectChecked<Class>(null, null, \""
-                    << _class->GetPathName() << "\", false);" << endl;
+                    << _class.PathName << "\", false);" << endl;
                 Printer::Indent(out) << "s_staticClass.AddToRoot();" << endl;
             }
             Printer::PopIndent();
@@ -154,45 +130,33 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         out << endl;
 
         // Print strongly-typed CDO getter.
-        if (_class->GetNameManaged() != "Class")
+        if (_class.ManagedName != "Class")
         {
             Printer::Indent(out) << "/// <summary>" << endl;
             Printer::Indent(out) << "/// Gets the class default object as "
-                                 << _class->GetNameManaged() << "." << endl;
+                << _class.ManagedName << "." << endl;
             Printer::Indent(out) << "/// </summary>" << endl;
-            Printer::Indent(out) << "public static " << _class->GetNameManaged()
-                                 << " DefaultObject => (" << _class->GetNameManaged()
-                                 << ")StaticClass().DefaultObject;" << endl;
+            Printer::Indent(out) << "public static " << _class.ManagedName
+                << " DefaultObject => (" << _class.ManagedName
+                << ")StaticClass().DefaultObject;" << endl;
 
             out << endl;
         }
 
         // Print internal ctor
-        Printer::Indent(out) << "internal " << _class->GetNameManaged() << "() { }" << endl << endl;
+        Printer::Indent(out) << "internal " << _class.ManagedName << "() { }" << endl << endl;
 
         // Print main ctor (unless abstract)
-        if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract))
+        if (!_class.IsAbstract)
         {
-            // Walk SuperStruct chain to detect Actor-derived classes, which need
-            // to be spawned via UWorld::SpawnActor instead of StaticConstructObject.
-            bool isActor = false;
-            for (UStruct* super = _class->SuperStruct; super; super = super->SuperStruct)
-            {
-                if (super->GetPathName() == "Engine.Actor")
-                {
-                    isActor = true;
-                    break;
-                }
-            }
-
             Printer::Indent(out) << "/// <summary>" << endl;
-            Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;
+            Printer::Indent(out) << "/// Constructs a new " << _class.ManagedName << endl;
             Printer::Indent(out) << "/// </summary>" << endl;
 
-            if (isActor)
+            if (_class.IsActor)
             {
                 Printer::Indent(out)
-                    << "public " << _class->GetNameManaged()
+                    << "public " << _class.ManagedName
                     << "(System.Numerics.Vector3 Location = default, "
                     "BmSDK.Rotator Rotation = default, "
                     "BmSDK.Engine.Actor Template = null, "
@@ -207,10 +171,10 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             else
             {
                 Printer::Indent(out)
-                    << "public " << _class->GetNameManaged()
+                    << "public " << _class.ManagedName
                     << "(BmSDK.GameObject Outer, string Name = null, "
                     "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
-                    << _class->GetNameManaged()
+                    << _class.ManagedName
                     << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
                     "Outer, Name, SetFlags, Template)) { }"
                     << endl
@@ -223,8 +187,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         Printer::Indent(out)
             << "/// Constructs a new wrapper instance from the given object pointer." << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
-        Printer::Indent(out) << "protected " << _class->GetNameManaged() << "(nint ptr)";
-        if (_class->GetName() == "Object")
+        Printer::Indent(out) << "protected " << _class.ManagedName << "(nint ptr)";
+        if (_class.Name == "Object")
         {
             out << " { Ptr = ptr; }" << endl;
         }
@@ -238,51 +202,20 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         Printer::PrintScHelpers(_class, out);
 
         // Print fields
-        UField* fieldLink = _class->Children;
-        for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
+        for (auto i = 0u; i < _class.Members.size(); i++)
         {
             // Don't print any members for intrinsic classes - they occasionally exist
             // at runtime, but we just want their declaration so we can reference them.
-            if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Intrinsic)
+            if (_class.IsIntrinsic)
             {
                 break;
             }
 
-            if (fieldLink->IsA(UProperty::StaticClass()))
-            {
-                Printer::PrintProperty((UProperty*)fieldLink, out);
+            Printer::PrintMember(_class.Members[i], false, out);
 
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UEnum::StaticClass()))
+            if (i < _class.Members.size() - 1)
             {
-                Printer::PrintEnum((UEnum*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UScriptStruct::StaticClass()))
-            {
-                Printer::PrintStruct((UScriptStruct*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UFunction::StaticClass()))
-            {
-                Printer::PrintFunction((UFunction*)fieldLink, false, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
+                out << endl;
             }
         }
     }
@@ -290,9 +223,9 @@ void Printer::PrintClass(UClass* _class, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintScHelpers(class UClass* _class, ostream& out)
+void Printer::PrintScHelpers(const ClassInfo& _class, ostream& out)
 {
-    auto type = _class->GetNameManaged();
+    auto type = _class.ManagedName;
     Printer::PrintScHelper("void", "AttachScriptComponent", false, false, false, type, out);
     Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, true, type, out);
     Printer::PrintScHelper("bool", "HasScriptComponent", false, false, false, type, out);
@@ -340,134 +273,103 @@ void Printer::PrintScHelper(string returnType, string helper, bool generic, bool
 
 }
 
-void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
+void Printer::PrintStruct(const StructInfo& _struct, ostream& out)
 {
     // Print struct comment
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << endl;
+    Printer::Indent(out) << "/// Struct: " << _struct.ManagedName << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print struct declaration
-    Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct->PropertiesSize
+    Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct.PropertiesSize
         << ")]" << endl;
-    Printer::Indent(out) << "public partial record struct " << _struct->GetNameManaged() << endl;
+    Printer::Indent(out) << "public partial record struct " << _struct.ManagedName << endl;
 
     // Print struct body
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        UField* fieldLink = _struct->Children;
-        while (fieldLink)
+        for (auto i = 0u; i < _struct.Members.size(); i++)
         {
-            if (fieldLink->IsA(UProperty::StaticClass()))
+            Printer::PrintMember(_struct.Members[i], false, out);
+
+            if (i < _struct.Members.size() - 1)
             {
-                Printer::PrintProperty((UProperty*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
+                out << endl;
             }
-
-            fieldLink = fieldLink->Next;
         }
     }
     Printer::PopIndent();
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintEnum(UEnum* _enum, ostream& out)
+void Printer::PrintEnum(const EnumInfo& _enum, ostream& out)
 {
-    // De-duplicate enum names
-    map<string, int> enumNameFreqs;
-    vector<string> enumNames;
-    for (auto i = 0; i < _enum->Names.Num; i++)
-    {
-        auto nameStr = _enum->Names.ElementAt(i).ToString();
-        if (enumNameFreqs.find(nameStr) == enumNameFreqs.end())
-        {
-            enumNameFreqs[nameStr] = 1;
-            enumNames.push_back(nameStr);
-        }
-        else
-        {
-            enumNameFreqs[nameStr]++;
-        }
-
-        if (enumNameFreqs[nameStr] > 1)
-        {
-            enumNames.push_back(nameStr + "_" + to_string(enumNameFreqs[nameStr]));
-        }
-    }
-
     // Print prop comment
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Enum: " << _enum->GetName() << endl;
+    Printer::Indent(out) << "/// Enum: " << _enum.Name << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print prop declaration
-    Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << " : byte" << endl;
+    Printer::Indent(out) << "public enum " << _enum.ManagedName << " : byte" << endl;
 
     // Print prop body
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        for (auto i = 0u; i < enumNames.size(); i++)
+        for (auto i = 0u; i < _enum.Names.size(); i++)
         {
-            Printer::Indent(out) << enumNames.at(i) << " = " << i << "," << endl;
+            Printer::Indent(out) << _enum.Names.at(i) << " = " << i << "," << endl;
         }
     }
     Printer::PopIndent();
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintProperty(UProperty* prop, ostream& out)
+void Printer::PrintProperty(const PropertyInfo& prop, ostream& out)
 {
-    bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
-    if (!isInStruct && prop->ArrayDim > 1)
+    if (!prop.IsInStruct && prop.ArrayDim > 1)
     {
         Printer::Indent(out) << "/// <summary>" << endl;
-        Printer::Indent(out) << "/// InlineArray{" << prop->Class->GetName() << "}: " << prop->GetName() << endl;
+        Printer::Indent(out) << "/// InlineArray{" << prop.ClassName << "}: " << prop.Name << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
 
-        Printer::Indent(out) << "public InlineArray<" << prop->GetInnerTypeNameManaged() << "> "
-            << prop->GetNameManaged() << " => new(" << prop->ArrayDim
-            << ", Ptr + " << prop->Offset << ", " << prop->ElementSize << ", this);"
+        Printer::Indent(out) << "public InlineArray<" << prop.TypeName << "> "
+            << prop.ManagedName << " => new(" << prop.ArrayDim
+            << ", Ptr + " << prop.Offset << ", " << prop.ElementSize << ", this);"
             << endl << endl;
     }
 
-    for (auto i = 0; i < prop->ArrayDim; i++)
+    for (auto i = 0; i < prop.ArrayDim; i++)
     {
-        auto propOffset = prop->Offset + (i * prop->ElementSize);
-        auto propNameManaged = prop->GetNameManaged();
+        auto propOffset = prop.Offset + (i * prop.ElementSize);
+        auto propNameManaged = prop.ManagedName;
 
         // Print prop comment
         Printer::Indent(out) << "/// <summary>" << endl;
-        Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
+        Printer::Indent(out) << "/// " << prop.ClassName << ": " << prop.Name << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
 
-        if (prop->ArrayDim > 1)
+        if (prop.ArrayDim > 1)
         {
             propNameManaged += "_";
             propNameManaged += to_string(i);
         }
 
-        bool shouldReturnByRef = prop->ShouldReturnByRef() && !isInStruct;
-
-        if (shouldReturnByRef)
+        if (prop.ShouldReturnByRef)
         {
-            Printer::Indent(out) << "public unsafe ref " << prop->GetInnerTypeNameManaged() << " "
+            Printer::Indent(out) << "public unsafe ref " << prop.TypeName << " "
                 << propNameManaged << endl;
 
             Printer::PushIndent();
             Printer::Indent(out) << "=> ref BmSDK.Framework.MarshalUtil.AsRef<"
-                << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");" << endl;
+                << prop.TypeName << ">(Ptr + " << propOffset << ");" << endl;
             Printer::PopIndent();
         }
         else
         {
             // Print prop declaration
-            Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
+            Printer::Indent(out) << "public unsafe " << prop.TypeName << " "
                 << propNameManaged << endl;
 
             // Print prop body
@@ -478,25 +380,24 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
                 Printer::Indent(out) << "get { ";
                 {
                     // Make Ptr available locally so we can reuse the same getter code
-                    if (isInStruct)
+                    if (prop.IsInStruct)
                     {
                         out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
                     }
 
                     // Booleans (stored as bitmasks) need special handling
-                    if (prop->IsA(UBoolProperty::StaticClass()))
+                    if (prop.IsBool)
                     {
-                        UBoolProperty* boolProp = (UBoolProperty*)prop;
                         out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
-                            << ") & " << boolProp->BitMask << ") != 0;";
+                            << ") & " << prop.BitMask << ") != 0;";
                     }
                     else
                     {
                         out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                            << prop->GetInnerTypeNameManaged() << ">(Ptr + " << propOffset << ");";
+                            << prop.TypeName << ">(Ptr + " << propOffset << ");";
                     }
 
-                    if (isInStruct)
+                    if (prop.IsInStruct)
                     {
                         out << " };";
                     }
@@ -507,19 +408,18 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
                 Printer::Indent(out) << "set { ";
                 {
                     // Make Ptr available locally so we can reuse the same setter code
-                    if (isInStruct)
+                    if (prop.IsInStruct)
                     {
                         out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
                     }
 
                     // Booleans (stored as bitmasks) need special handling
-                    if (prop->IsA(UBoolProperty::StaticClass()))
+                    if (prop.IsBool)
                     {
-                        UBoolProperty* boolProp = (UBoolProperty*)prop;
                         out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
                             << propOffset << ");";
-                        out << " var newMask = value ? (currentMask | " << boolProp->BitMask
-                            << ") : (currentMask & ~" << boolProp->BitMask << ");";
+                        out << " var newMask = value ? (currentMask | " << prop.BitMask
+                            << ") : (currentMask & ~" << prop.BitMask << ");";
 
                         out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
                             << propOffset << ");";
@@ -530,7 +430,7 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
                             << ");";
                     }
 
-                    if (isInStruct)
+                    if (prop.IsInStruct)
                     {
                         out << " };";
                     }
@@ -543,76 +443,24 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     }
 }
 
-void Printer::PrintFunction(class UFunction* func, bool isInInterface, ostream& out)
+void Printer::PrintFunction(const FunctionInfo& func, bool isInInterface, ostream& out)
 {
-    vector<UProperty*> params = {};
-    UProperty* returnParam = nullptr;
-
-    // Skip operator and iterator functions
-    if (((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Operator) ||
-        ((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Iterator))
-    {
-        return;
-    }
-
-    // Gather func info
-    bool funcIsStatic = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Static;
-    bool funcIsNative = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Native;
-    bool funcIsEvent = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Event;
-    bool funcIsPrivate = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Private;
-
-    // Gather func params
-    UField* fieldLink = func->Children;
-    while (fieldLink)
-    {
-        if (fieldLink->IsA(UProperty::StaticClass()))
-        {
-            auto prop = (UProperty*)fieldLink;
-            if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_ReturnParm)
-            {
-                returnParam = prop;
-            }
-            else if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_Parm)
-            {
-                params.push_back(prop);
-            }
-        }
-
-        fieldLink = fieldLink->Next;
-    }
-
-    bool shouldSuppressOptional = false;
-    for (auto i = 0u; i < params.size(); i++)
-    {
-        auto prop = params[i];
-
-        // C# doesn't support optional out params. To avoid reordering and to avoid making
-        // any functional changes, let's just force everything to be non-optional when we encounter
-        // one.
-        if (((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm) &&
-            ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm))
-        {
-            shouldSuppressOptional = true;
-            break;
-        }
-    }
-
     // Print func comment
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Function: " << func->GetName() << endl;
+    Printer::Indent(out) << "/// Function: " << func.Name << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print func declaration
     Printer::Indent(out) << "public unsafe ";
-    if (funcIsStatic)
+    if (func.IsStatic)
     {
         out << "static ";
     }
     else
     {
-        if (!funcIsPrivate && !isInInterface)
+        if (!func.IsPrivate && !isInInterface)
         {
-            if (func->SuperStruct && func->SuperStruct->IsA(UFunction::StaticClass()))
+            if (func.IsOverride)
             {
                 out << "override ";
             }
@@ -622,27 +470,26 @@ void Printer::PrintFunction(class UFunction* func, bool isInInterface, ostream& 
             }
         }
     }
-    out << (returnParam ? returnParam->GetInnerTypeNameManaged() : "void") << " ";
-    out << func->GetNameManaged() << "(";
-    for (auto i = 0u; i < params.size(); i++)
+    out << (func.HasReturnParam ? func.ReturnParam.TypeName : "void") << " ";
+    out << func.ManagedName << "(";
+    for (auto i = 0u; i < func.Params.size(); i++)
     {
-        auto prop = params[i];
+        auto& prop = func.Params[i];
 
         // "out" keyword for out params
-        if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+        if (prop.IsOutParam)
         {
             out << "out ";
         }
 
         // Print param declaration
-        out << prop->GetInnerTypeNameManaged() << " " << prop->GetNameManaged();
-        if (((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm) &&
-            !shouldSuppressOptional)
+        out << prop.TypeName << " " << prop.ManagedName;
+        if (prop.IsOptionalParam && !func.ShouldSuppressOptional)
         {
             out << " = default";
         }
 
-        if (i < params.size() - 1)
+        if (i < func.Params.size() - 1)
         {
             out << ", ";
         }
@@ -661,32 +508,32 @@ void Printer::PrintFunction(class UFunction* func, bool isInInterface, ostream& 
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        string ptrText = funcIsStatic ? "StaticClass().DefaultObject.Ptr" : "Ptr";
+        string ptrText = func.IsStatic ? "StaticClass().DefaultObject.Ptr" : "Ptr";
 
         Printer::Indent(out) << "var funcManaged = "
             "BmSDK.GameObject.StaticFindObjectChecked<BmSDK."
             "Function>(BmSDK.Function.StaticClass(), null, \""
-            << func->GetPathName() << "\", true);" << endl;
+            << func.PathName << "\", true);" << endl;
 
-        Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
+        Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func.PropertiesSize << "];"
             << endl;
-        for (auto i = 0u; i < params.size(); i++)
+        for (auto i = 0u; i < func.Params.size(); i++)
         {
-            auto param = params[i];
+            auto& param = func.Params[i];
 
             // Don't marshal in 'out' params
-            if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+            if (param.IsOutParam)
             {
                 continue;
             }
 
             // Print
             Printer::Indent(out) << "BmSDK.Framework.MarshalUtil.ToUnmanaged("
-                << param->GetNameManaged() << ", paramsPtr + " << param->Offset
+                << param.ManagedName << ", paramsPtr + " << param.Offset
                 << ");" << endl;
         }
 
-        if (funcIsNative)
+        if (func.IsNative)
         {
             Printer::Indent(out) << "var oldFlags = funcManaged.FunctionFlags;" << endl;
             Printer::Indent(out) << "var oldNative = funcManaged.iNative;" << endl;
@@ -702,32 +549,32 @@ void Printer::PrintFunction(class UFunction* func, bool isInInterface, ostream& 
         Printer::Indent(out) << "BmSDK.Framework.GameFunctions.ProcessEvent(" << ptrText
             << ", funcManaged.Ptr, (nint)paramsPtr, 0);" << endl;
 
-        if (funcIsNative)
+        if (func.IsNative)
         {
             Printer::Indent(out) << "funcManaged.iNative = oldNative;" << endl;
             Printer::Indent(out) << "funcManaged.FunctionFlags = oldFlags;" << endl;
         }
 
         // Marshal/assign out params
-        for (auto i = 0u; i < params.size(); i++)
+        for (auto i = 0u; i < func.Params.size(); i++)
         {
-            auto param = params[i];
+            auto& param = func.Params[i];
 
-            if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+            if (param.IsOutParam)
             {
                 Printer::Indent(out)
-                    << param->GetNameManaged() << " = BmSDK.Framework.MarshalUtil.ToManaged<"
-                    << param->GetInnerTypeNameManaged() << ">(paramsPtr + " << param->Offset << ");"
+                    << param.ManagedName << " = BmSDK.Framework.MarshalUtil.ToManaged<"
+                    << param.TypeName << ">(paramsPtr + " << param.Offset << ");"
                     << endl;
             }
         }
 
-        if (returnParam != nullptr)
+        if (func.HasReturnParam)
         {
             // Print return param declaration
             Printer::Indent(out) << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                << returnParam->GetInnerTypeNameManaged() << ">(paramsPtr + "
-                << returnParam->Offset << ");" << endl;
+                << func.ReturnParam.TypeName << ">(paramsPtr + "
+                << func.ReturnParam.Offset << ");" << endl;
         }
         else
         {
@@ -738,7 +585,27 @@ void Printer::PrintFunction(class UFunction* func, bool isInInterface, ostream& 
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
+void Printer::PrintMember(const MemberInfo* member, bool isInInterface, ostream& out)
+{
+    if (auto prop = dynamic_cast<const PropertyInfo*>(member))
+    {
+        Printer::PrintProperty(*prop, out);
+    }
+    else if (auto _struct = dynamic_cast<const StructInfo*>(member))
+    {
+        Printer::PrintStruct(*_struct, out);
+    }
+    else if (auto _enum = dynamic_cast<const EnumInfo*>(member))
+    {
+        Printer::PrintEnum(*_enum, out);
+    }
+    else if (auto func = dynamic_cast<const FunctionInfo*>(member))
+    {
+        Printer::PrintFunction(*func, isInInterface, out);
+    }
+}
+
+void Printer::PrintStaticInit(const vector<ClassInfo>& classes, ostream& out)
 {
     // Print usings
     Printer::Indent(out) << "using System.Collections.Generic;" << endl;
@@ -763,15 +630,15 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
         Printer::Indent(out) << "{" << endl;
         Printer::PushIndent();
         {
-            for (auto _class : classes)
+            for (auto& _class : classes)
             {
-                auto classPath = _class->GetPathName();
-                auto managedPath = _class->GetPathNameManaged();
-                Printer::Indent(out) << "_classPathToManagedTypeMap[\"" << classPath
-                    << "\"] = typeof(" << managedPath << ");" << endl;
+                Printer::Indent(out) << "_classPathToManagedTypeMap[\"" << _class.PathName
+                    << "\"] = typeof(" << _class.PackageNameManaged << "."
+                    << _class.ManagedName << ");" << endl;
 
-                Printer::Indent(out) << "_managedTypeToClassPathMap[typeof(" << managedPath
-                    << ")] = \"" << classPath << "\";" << endl;
+                Printer::Indent(out) << "_managedTypeToClassPathMap[typeof("
+                    << _class.PackageNameManaged << "." << _class.ManagedName
+                    << ")] = \"" << _class.PathName << "\";" << endl;
             }
         }
         Printer::PopIndent();

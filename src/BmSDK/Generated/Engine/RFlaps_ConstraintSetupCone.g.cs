@@ -162,5 +162,4 @@ public partial class RFlaps_ConstraintSetupCone : BmSDK.Engine.RFlaps_Constraint
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
-
 }

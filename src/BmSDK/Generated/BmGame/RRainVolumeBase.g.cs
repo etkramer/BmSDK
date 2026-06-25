@@ -280,5 +280,4 @@ public partial class RRainVolumeBase : BmSDK.BmGame.REffectVolume, BmSDK.IGameOb
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 700); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
-
 }

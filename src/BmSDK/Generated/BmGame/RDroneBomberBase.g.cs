@@ -206,5 +206,4 @@ public partial class RDroneBomberBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
-
 }

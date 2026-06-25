@@ -279,5 +279,4 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
-
 }

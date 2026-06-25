@@ -371,7 +371,6 @@ public partial class InventoryManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         return;
     }
 
-
     /// <summary>
     /// Function: IsPendingFire
     /// </summary>

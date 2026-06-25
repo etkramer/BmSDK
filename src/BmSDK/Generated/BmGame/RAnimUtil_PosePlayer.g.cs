@@ -2718,5 +2718,4 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         TRANSITION_Slaved = 5,
         TRANSITION_MAX = 6,
     }
-
 }

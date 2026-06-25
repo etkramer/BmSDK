@@ -172,5 +172,4 @@ public partial class RAEC_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinat
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStartlePoint>(Ptr + 456); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
-
 }

@@ -132,5 +132,4 @@ public partial class RAEC_GelMineExplosion : BmSDK.BmGame.RAlertEventCoordinator
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_GroupPauseAndLook>(Ptr + 452); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
     }
-
 }

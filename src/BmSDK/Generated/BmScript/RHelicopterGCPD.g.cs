@@ -123,5 +123,4 @@ public partial class RHelicopterGCPD : BmSDK.BmScript.RHelicopter, BmSDK.IGameOb
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
-
 }

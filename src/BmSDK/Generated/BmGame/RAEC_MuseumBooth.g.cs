@@ -149,5 +149,4 @@ public partial class RAEC_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorBase,
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
-
 }

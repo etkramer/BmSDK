@@ -503,5 +503,4 @@ public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, B
     /// </summary>
     public unsafe ref BmSDK.Engine.GameStatsAggregator.FDamageEvents AllDamageEvents
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.Engine.GameStatsAggregator.FDamageEvents>(Ptr + 460);
-
 }

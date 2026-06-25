@@ -910,5 +910,4 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
         }
     }
-
 }

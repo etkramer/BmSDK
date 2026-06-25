@@ -4,18 +4,19 @@ private:
 	Printer() = delete;
 
 public:
-	static void PrintFile(class UClass* _class, ostream& out);
-	static void PrintStaticInit(vector<UClass*>& classes, ostream& out);
+	static void PrintFile(const struct ClassInfo& _class, ostream& out);
+	static void PrintStaticInit(const vector<struct ClassInfo>& classes, ostream& out);
 
 private:
-	static void PrintInterface(class UClass* _class, ostream& out);
-	static void PrintClass(class UClass* _class, ostream& out);
-	static void PrintScHelpers(class UClass* _class, ostream& out);
+	static void PrintInterface(const struct ClassInfo& _class, ostream& out);
+	static void PrintClass(const struct ClassInfo& _class, ostream& out);
+	static void PrintScHelpers(const struct ClassInfo& _class, ostream& out);
 	static void PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out);
-	static void PrintStruct(class UScriptStruct* _struct, ostream& out);
-	static void PrintEnum(class UEnum* _enum, ostream& out);
-	static void PrintProperty(class UProperty* prop, ostream& out);
-	static void PrintFunction(class UFunction* func, bool isInInterface, ostream& out);
+	static void PrintStruct(const struct StructInfo& _struct, ostream& out);
+	static void PrintEnum(const struct EnumInfo& _enum, ostream& out);
+	static void PrintProperty(const struct PropertyInfo& prop, ostream& out);
+	static void PrintFunction(const struct FunctionInfo& func, bool isInInterface, ostream& out);
+	static void PrintMember(const struct MemberInfo* member, bool isInInterface, ostream& out);
 
 	static void PushIndent() { IndentLevel++; };
 	static void PopIndent() { IndentLevel--; };

@@ -1342,5 +1342,4 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
-
 }

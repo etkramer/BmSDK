@@ -156,5 +156,4 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 464); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
-
 }

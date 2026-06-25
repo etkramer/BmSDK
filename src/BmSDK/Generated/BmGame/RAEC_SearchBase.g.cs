@@ -166,5 +166,4 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
-
 }

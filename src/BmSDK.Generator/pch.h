@@ -36,7 +36,7 @@ private:
     static class UClass* StaticClass()                                                             \
     {                                                                                              \
         static UClass* classObj = nullptr;                                                         \
-        return classObj ? classObj : classObj = UObject::FindClass("Class "##PATH);                \
+        return classObj ? classObj : classObj = UObject::FindClass(PATH);                          \
     }
 
 // Framework

@@ -105,5 +105,4 @@ public partial class ROnlineStatsWrite : BmSDK.Engine.OnlineStatsWrite, BmSDK.IG
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
     }
-
 }

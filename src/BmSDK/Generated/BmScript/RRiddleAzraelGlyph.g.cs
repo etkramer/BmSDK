@@ -206,5 +206,4 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 472); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
-
 }
