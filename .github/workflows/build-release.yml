@@ -2,19 +2,34 @@ name: "Create release build"
 
 on:
   workflow_dispatch:
+    inputs:
+      tag_name:
+        description: "Release tag name used in the package name"
+        type: string
+        required: false
+      target_ref:
+        description: "Ref to checkout and build"
+        type: string
+        required: false
+        default: "main-bm4"
   workflow_call:
     inputs:
       tag_name:
-        description: "Tag to checkout"
+        description: "Release tag name used in the package name"
         type: string
         required: true
+      target_ref:
+        description: "Ref to checkout and build"
+        type: string
+        required: false
+        default: "main-bm4"
     outputs:
       artifact-id:
         description: "Artifact ID of final binary"
         value: ${{ jobs.create-package.outputs.artifact-id }}
 
 env:
-  TARGET_REF: ${{ inputs.tag_name || github.sha }}
+  TARGET_REF: ${{ inputs.target_ref || 'main-bm4' }}
   STAGING_DIR: '${{ github.workspace }}/publish/'
 
 jobs:
@@ -141,7 +156,7 @@ jobs:
       id: upload-artifact
       uses: actions/upload-artifact@v7
       with:
-        name: "BmSDK-${{ inputs.tag_name || github.sha }}"
+        name: "BmSDK-AK-${{ inputs.tag_name || inputs.target_ref || github.sha }}"
         path: ${{ env.STAGING_DIR }}
         if-no-files-found: error
         compression-level: 9
