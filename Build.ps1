@@ -1,6 +1,6 @@
 param(
     [Parameter(Position = 0)]
-    [ValidateSet("Prebuild", "Build", "Clean", "Publish")]
+    [ValidateSet("Prebuild", "Build", "Clean")]
     [string]$Task,
     
     [Parameter(Position = 1)]
@@ -15,7 +15,6 @@ function Show-Help {
     Write-Host "  Prebuild"
     Write-Host "  Build"
     Write-Host "  Clean"
-    Write-Host "  Publish"
     Write-Host ""
     Write-Host "Configurations:"
     Write-Host "  Debug (default)"
