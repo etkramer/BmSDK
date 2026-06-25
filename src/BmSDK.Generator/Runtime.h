@@ -3,6 +3,7 @@
 #include "Engine\TArray.h"
 
 using LoadPackageFn = void* (__cdecl*)(void* InOuter, const wchar_t* Filename, int LoadFlags);
+using CollectGarbageFn = void (__cdecl*)(QWORD KeepFlags, int bPerformFullPurge);
 
 class UObject;
 class FNameEntry;
@@ -27,4 +28,5 @@ public:
     static TArray<UObject*>* GObjects;
     static TArray<FNameEntry*>* GNames;
     static LoadPackageFn LoadPackage;
+    static CollectGarbageFn CollectGarbage;
 };

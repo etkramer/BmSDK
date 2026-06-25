@@ -18,6 +18,7 @@ DWORD Runtime::MainThreadId = 0;
 TArray<UObject*>* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
 LoadPackageFn Runtime::LoadPackage = 0;
+CollectGarbageFn Runtime::CollectGarbage = 0;
 
 void Runtime::OnAttach()
 {
@@ -34,6 +35,8 @@ void Runtime::OnAttach()
     Runtime::GObjects = (TArray<UObject*>*) (Runtime::BaseAddress + GameOffsets::GObjects);
     Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
     Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
+    Runtime::CollectGarbage =
+        (CollectGarbageFn)(Runtime::BaseAddress + GameOffsets::CollectGarbage);
 
     // Wait for keypress in another thread
     std::thread(
@@ -129,7 +132,6 @@ void Runtime::GenerateSDK()
     }
 
     // Clear output directory
-    // TODO: Un-hardcode this
     TRACE("Found {} classes, preparing to print", classObjects.size());
     vector<ClassInfo> classes;
     classes.reserve(classObjects.size());
@@ -142,6 +144,7 @@ void Runtime::GenerateSDK()
         classObj.ResolveSuper(classes);
     }
 
+    // TODO: Un-hardcode this
     fs::path outDir = "..\\..\\..\\src\\BmSDK\\Generated\\";
     fs::remove_all(outDir);
     fs::create_directory(outDir);
