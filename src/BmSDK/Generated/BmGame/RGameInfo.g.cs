@@ -11504,5 +11504,4 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 4528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4528); }
     }
-
 }

@@ -249,5 +249,4 @@ public partial class RBMBehaviour_Follow : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Follow.MoveSpeed>(Ptr + 620); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
     }
-
 }

@@ -97,9 +97,6 @@ public partial class RInteractionClass : BmSDK.GameObject, BmSDK.IGameObject
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
     }
 
-
-
-
     /// <summary>
     /// ArrayProperty: ActorList
     /// </summary>

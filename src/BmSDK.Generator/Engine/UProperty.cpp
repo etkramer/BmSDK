@@ -2,6 +2,7 @@
 #include "UProperty.h"
 #include "UClass.h"
 #include "UEnum.h"
+#include "Framework/ClassInfo.h"
 
 string UProperty::GetInnerTypeNameManaged() const
 {
@@ -19,7 +20,7 @@ string UProperty::GetInnerTypeNameManaged() const
         auto byteProp = (UByteProperty*)this;
         if (byteProp->Enum)
         {
-            return byteProp->Enum->GetPathNameManaged();
+            return GetFieldPathNameManaged(byteProp->Enum);
         }
 
         return "byte";
@@ -76,7 +77,7 @@ string UProperty::GetInnerTypeNameManaged() const
             return "BmSDK.Rotator";
         }
 
-        return _struct->GetPathNameManaged();
+        return GetFieldPathNameManaged(_struct);
     }
     else if (Class->GetPathName() == "Core.ObjectProperty" ||
         Class->GetPathName() == "Core.ComponentProperty" ||
@@ -91,7 +92,7 @@ string UProperty::GetInnerTypeNameManaged() const
             return "BmSDK.GameObject";
         }
 
-        return objectProp->PropertyClass->GetPathNameManaged();
+        return GetFieldPathNameManaged(objectProp->PropertyClass);
     }
     else if (Class->GetPathName() == "Core.ArrayProperty")
     {

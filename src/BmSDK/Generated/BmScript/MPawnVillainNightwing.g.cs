@@ -706,5 +706,4 @@ public partial class MPawnVillainNightwing : BmSDK.BmGame.MPawnVillainNightwingB
         get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6836) & 4) != 0; }
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6836); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6836); }
     }
-
 }

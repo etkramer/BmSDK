@@ -683,5 +683,4 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
         GSG_Aggregate = 9,
         GSG_MAX = 10,
     }
-
 }

@@ -194,5 +194,4 @@ public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// </summary>
     public unsafe ref BmSDK.GameObject.FBox Bounds
         => ref BmSDK.Framework.MarshalUtil.AsRef<BmSDK.GameObject.FBox>(Ptr + 772);
-
 }

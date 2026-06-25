@@ -248,5 +248,4 @@ public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoor
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
-
 }

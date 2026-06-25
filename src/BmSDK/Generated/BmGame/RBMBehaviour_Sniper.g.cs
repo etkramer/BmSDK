@@ -1330,5 +1330,4 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMBehaviour_Sniper.FireState>(Ptr + 928); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
     }
-
 }

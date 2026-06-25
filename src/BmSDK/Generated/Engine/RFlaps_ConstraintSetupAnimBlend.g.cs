@@ -148,5 +148,4 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
-
 }

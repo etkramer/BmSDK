@@ -3640,5 +3640,4 @@ public partial class RGFxMovieUI : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GFxUI.SwfMovie>>(Ptr + 1056); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }
     }
-
 }

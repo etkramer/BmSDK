@@ -110,5 +110,4 @@ public partial class RSpecialMoveInstance_SwingToGlide : BmSDK.BmGame.RSpecialMo
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
-
 }

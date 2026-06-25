@@ -403,5 +403,4 @@ public partial class RSeqAct_FireCrewController : BmSDK.Engine.SequenceAction, B
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
-
 }

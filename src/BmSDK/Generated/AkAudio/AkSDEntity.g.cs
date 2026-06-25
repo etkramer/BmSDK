@@ -108,5 +108,4 @@ public partial class AkSDEntity : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
-
 }

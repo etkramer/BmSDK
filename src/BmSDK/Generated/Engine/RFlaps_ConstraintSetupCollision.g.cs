@@ -171,5 +171,4 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
-
 }

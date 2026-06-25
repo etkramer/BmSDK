@@ -656,5 +656,4 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
         StorySlot_DLC_TwoFace = 8,
         StorySlot_MAX = 9,
     }
-
 }

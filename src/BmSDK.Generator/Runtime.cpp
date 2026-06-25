@@ -3,6 +3,8 @@
 #include "Engine\UClass.h"
 #include "Engine\UProperty.h"
 #include "Engine\GameOffsets.h"
+#include "Engine\GameFunctions.h"
+#include "Framework\ClassInfo.h"
 #include "Printer\Printer.h"
 
 #include <cstdint>
@@ -16,7 +18,7 @@ DWORD Runtime::MainThreadId = 0;
 
 GObjectsArray* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
-LoadPackageFn Runtime::LoadPackage = 0;
+vector<ClassInfo> Runtime::Classes = {};
 
 void Runtime::OnAttach()
 {
@@ -32,7 +34,7 @@ void Runtime::OnAttach()
     // Set global pointers
     Runtime::GObjects = (GObjectsArray*) (Runtime::BaseAddress + GameOffsets::GObjects);
     Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
-    Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
+    GameFunctions::Init(Runtime::BaseAddress);
 
     // Wait for keypress in another thread
     std::thread(
@@ -73,34 +75,34 @@ void Runtime::LoadClassesIntoMemory() {
     // BM4: Might need a smarter approach given large package sizes.
     TRACE("Loading UPKs into memory");
 
-    LoadPackage(0, L"Playable_Azrael_SF", 0);
-    LoadPackage(0, L"Playable_Batmobile_SF", 0);
-    LoadPackage(0, L"Playable_BatmobileFunhouse_SF", 0);
-    LoadPackage(0, L"Playable_BatmobileJoker_SF", 0);
-    LoadPackage(0, L"Playable_BatmobileMK2_SF", 0);
-    LoadPackage(0, L"Playable_BruceWayne_SF", 0);
-    LoadPackage(0, L"Playable_Catwoman_SF", 0);
-    LoadPackage(0, L"Playable_Catwoman0_SF", 0);
-    LoadPackage(0, L"Playable_Cop_SF", 0);
-    LoadPackage(0, L"Playable_Gordon_SF", 0);
-    LoadPackage(0, L"Playable_Joker_SF", 0);
-    LoadPackage(0, L"Playable_JokerCh5_SF", 0);
-    LoadPackage(0, L"Playable_JokerFPS_SF", 0);
-    LoadPackage(0, L"Playable_Nightwing_SF", 0);
-    LoadPackage(0, L"Playable_Nightwing0_SF", 0);
-    LoadPackage(0, L"Playable_Robin_SF", 0);
-    LoadPackage(0, L"Playable_Robin0_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Azrael_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Batmobile_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_BatmobileFunhouse_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_BatmobileJoker_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_BatmobileMK2_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_BruceWayne_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Catwoman_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Catwoman0_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Cop_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Gordon_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Joker_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_JokerCh5_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_JokerFPS_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Nightwing_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Nightwing0_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Robin_SF", 0);
+    GameFunctions::LoadPackage(0, L"Playable_Robin0_SF", 0);
 
-    LoadPackage(0, L"Clocktower_C1_ChA5_Anim", 0);
-    LoadPackage(0, L"CityZ__Ch6", 0);
-    LoadPackage(0, L"Stagg_B1", 0);
-    LoadPackage(0, L"Stagg_B3_Ch45a", 0);
-    LoadPackage(0, L"Film", 0);
-    LoadPackage(0, L"WayneTower_B1", 0);
-    LoadPackage(0, L"Ace_A1_Ch2", 0);
-    LoadPackage(0, L"Pyg", 0);
-    LoadPackage(0, L"Pyg_B1", 0);
-    LoadPackage(0, L"DLCHarleyPolice_S1_Design", 0);
+    GameFunctions::LoadPackage(0, L"Clocktower_C1_ChA5_Anim", 0);
+    GameFunctions::LoadPackage(0, L"CityZ__Ch6", 0);
+    GameFunctions::LoadPackage(0, L"Stagg_B1", 0);
+    GameFunctions::LoadPackage(0, L"Stagg_B3_Ch45a", 0);
+    GameFunctions::LoadPackage(0, L"Film", 0);
+    GameFunctions::LoadPackage(0, L"WayneTower_B1", 0);
+    GameFunctions::LoadPackage(0, L"Ace_A1_Ch2", 0);
+    GameFunctions::LoadPackage(0, L"Pyg", 0);
+    GameFunctions::LoadPackage(0, L"Pyg_B1", 0);
+    GameFunctions::LoadPackage(0, L"DLCHarleyPolice_S1_Design", 0);
 
     // const wregex packageFilter(
     //     L"(?:"
@@ -124,7 +126,7 @@ void Runtime::LoadClassesIntoMemory() {
     //     // Filter packages that are only for assets
     //     if (regex_search(name, packageFilter)) continue;
 
-    //     LoadPackage(0, name.c_str(), 0);
+    //     GameFunctions::LoadPackage(0, name.c_str(), 0);
     // }
     // TRACE("Done loading packages");
 }
@@ -137,8 +139,7 @@ void Runtime::GenerateSDK()
 
     TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
 
-    // Enumerate objects
-    vector<UClass*> classObjects;
+    Runtime::Classes.clear();
     for (INT i = 0; i < Runtime::GObjects->Num; i++)
     {
         auto obj = Runtime::GObjects->ElementAt(i);
@@ -146,30 +147,35 @@ void Runtime::GenerateSDK()
         bool isValid = obj != nullptr && (Runtime::GObjects->ElementAt(obj->Index) == obj);
         if (!isValid)
         {
-            TRACE("Skipping invalid object {}", obj->Index);
             continue;
         }
 
         // Collect class objects (but not the CDO)
-        if (obj->IsA(UClass::StaticClass()) && obj->GetName() != "Default__Class")
+        if (obj->Class == UClass::StaticClass() &&
+            !(obj->ObjectFlags & (QWORD)EObjectFlags::RF_ClassDefaultObject))
         {
-            classObjects.push_back((UClass*)obj);
+            Runtime::Classes.emplace_back((UClass*)obj);
         }
     }
 
     // Clear output directory
+    TRACE("Found {} classes, preparing to print", Classes.size());
+    for (auto& classObj : Classes)
+    {
+        classObj.ResolveSuper(Classes);
+    }
+
     // TODO: Un-hardcode this
-    TRACE("Found {} classes, preparing to print", classObjects.size());
     fs::path outDir = "..\\..\\..\\src\\BmSDK\\Generated\\";
     fs::remove_all(outDir);
     fs::create_directory(outDir);
 
     // Print some classes
-    for (auto i = 0u; i < classObjects.size(); i++)
+    for (auto i = 0u; i < Classes.size(); i++)
     {
-        auto classObj = classObjects.at(i);
+        auto& classObj = Classes.at(i);
         auto classFilePath =
-            outDir / classObj->GetPackageName() / (classObj->GetNameManaged() + ".g.cs");
+            outDir / classObj.PackageName / (classObj.ManagedName + ".g.cs");
 
         if (!fs::exists(classFilePath.parent_path()) &&
             fs::exists(classFilePath.parent_path().parent_path()))
@@ -190,9 +196,9 @@ void Runtime::GenerateSDK()
 
     // Print StaticInit file
     ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc | ios::binary);
-    Printer::PrintStaticInit(classObjects, staticInitFileStream);
+    Printer::PrintStaticInit(Classes, staticInitFileStream);
 
-    TRACE("Done writing {} classes to disk", classObjects.size());
+    TRACE("Done writing {} classes to disk", Classes.size());
 
     // Exit game early
     exit(0);

@@ -482,5 +482,4 @@ public partial class GameplayEventsWriterBase : BmSDK.Engine.GameplayEvents, BmS
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.GameInfo>(Ptr + 436); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
-
 }

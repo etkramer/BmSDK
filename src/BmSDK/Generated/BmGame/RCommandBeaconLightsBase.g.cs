@@ -186,5 +186,4 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
     }
-
 }

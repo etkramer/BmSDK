@@ -183,10 +183,6 @@ public partial class OnlineAuthInterfaceImpl : BmSDK.GameObject, BmSDK.IGameObje
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
     }
 
-
-
-
-
     /// <summary>
     /// Function: EndAllRemoteServerAuthSessions
     /// </summary>

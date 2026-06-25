@@ -1609,7 +1609,6 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlBase>(paramsPtr + 8);
     }
 
-
     /// <summary>
     /// Function: FindAnimNode
     /// </summary>
@@ -2679,7 +2678,6 @@ public partial class SkeletalMeshComponent : BmSDK.Engine.MeshComponent, BmSDK.I
         funcManaged.FunctionFlags = oldFlags;
         return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(paramsPtr + 0);
     }
-
 
     /// <summary>
     /// Function: IsComponentAttached

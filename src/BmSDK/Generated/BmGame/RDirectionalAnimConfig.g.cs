@@ -179,5 +179,4 @@ public partial class RDirectionalAnimConfig : BmSDK.BmGame.RConfig, BmSDK.IGameO
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
-
 }

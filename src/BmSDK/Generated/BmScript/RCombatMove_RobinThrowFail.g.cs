@@ -99,5 +99,4 @@ public partial class RCombatMove_RobinThrowFail : BmSDK.BmGame.RCombatMove_Batma
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
-
 }

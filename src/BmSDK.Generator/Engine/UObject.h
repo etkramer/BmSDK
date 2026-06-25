@@ -6,10 +6,15 @@
 #define PROPERTY_ALIGNMENT 4
 #pragma pack(push, PROPERTY_ALIGNMENT)
 
+enum class EObjectFlags : INT
+{
+    RF_ClassDefaultObject = 0x80
+};
+
 CLASS(UObject, 84)
 class UObject
 {
-	INT ObjectFlags;
+	FIELD(INT, ObjectFlags)
 	INT EditorObjectFlags;
 	INT HashIndexPrev;
 	INT HashIndexNext;
@@ -39,6 +44,7 @@ public:
 
 	bool IsA(class UClass* classObj) const;
 
+    static UObject* FindObject(class UClass* classObj, UObject* outer, const string& pathName, bool exactClass);
 	static class UClass* FindClass(const string& classPath);
 
 public:

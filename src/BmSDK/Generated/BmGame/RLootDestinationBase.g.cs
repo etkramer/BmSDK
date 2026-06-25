@@ -419,5 +419,4 @@ public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSD
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 836); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
     }
-
 }

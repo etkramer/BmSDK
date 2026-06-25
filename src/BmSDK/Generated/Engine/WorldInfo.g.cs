@@ -599,9 +599,6 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         return;
     }
 
-
-
-
     /// <summary>
     /// Function: NavigationPointCheck
     /// </summary>
@@ -623,8 +620,6 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         Specs = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ReachSpec>>(paramsPtr + 40);
         return;
     }
-
-
 
     /// <summary>
     /// Function: Reset
@@ -3867,5 +3862,4 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject.FColor>>(Ptr + 2944); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2944); }
     }
-
 }

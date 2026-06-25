@@ -40,10 +40,6 @@ public partial interface OnlineAuthInterface : BmSDK.Interface
     /// </summary>
     public unsafe bool FindClientAuthSession(BmSDK.Engine.Player ClientConnection, out BmSDK.Engine.OnlineAuthInterface.FAuthSession OutSessionInfo);
 
-
-
-
-
     /// <summary>
     /// Function: EndAllRemoteServerAuthSessions
     /// </summary>

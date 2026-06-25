@@ -224,5 +224,4 @@ public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, 
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
-
 }

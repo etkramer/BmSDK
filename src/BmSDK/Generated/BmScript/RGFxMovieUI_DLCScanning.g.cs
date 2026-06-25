@@ -213,5 +213,4 @@ public partial class RGFxMovieUI_DLCScanning : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
     }
-
 }

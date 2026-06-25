@@ -274,7 +274,6 @@ public partial class SequenceOp : BmSDK.Engine.SequenceObject, BmSDK.IGameObject
         return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
     }
 
-
     /// <summary>
     /// Function: GetFloatVars
     /// </summary>

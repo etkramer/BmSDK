@@ -112,5 +112,4 @@ public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehavio
         BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
         return;
     }
-
 }

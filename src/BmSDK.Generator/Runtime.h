@@ -1,8 +1,7 @@
 #pragma once
 
 #include "Engine\TArray.h"
-
-using LoadPackageFn = void* (__cdecl*)(void* InOuter, const wchar_t* Filename, int LoadFlags);
+#include "Framework\ClassInfo.h"
 
 class UObject;
 class FNameEntry;
@@ -26,5 +25,5 @@ public:
 
     static GObjectsArray* GObjects;
     static TArray<FNameEntry*>* GNames;
-    static LoadPackageFn LoadPackage;
+    static vector<ClassInfo> Classes;
 };

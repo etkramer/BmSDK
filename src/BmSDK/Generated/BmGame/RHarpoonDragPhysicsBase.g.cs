@@ -458,5 +458,4 @@ public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSD
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
     }
-
 }

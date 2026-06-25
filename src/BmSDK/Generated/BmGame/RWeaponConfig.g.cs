@@ -209,5 +209,4 @@ public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 204); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
-
 }
