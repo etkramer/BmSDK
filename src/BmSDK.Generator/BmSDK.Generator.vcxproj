@@ -2,18 +2,18 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Runtime.cpp" />
-    <ClCompile Include="Engine\UField.cpp" />
     <ClCompile Include="Engine\UObject.cpp" />
     <ClCompile Include="Engine\UProperty.cpp" />
+    <ClCompile Include="Engine\GameFunctions.cpp" />
     <ClCompile Include="Printer\Printer.cpp" />
     <ClCompile Include="Framework\Debug.cpp" />
-    <ClCompile Include="Framework\FieldInfo.cpp" />
     <ClCompile Include="Framework\ClassInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Detours.h" />
     <ClInclude Include="Framework\ClassInfo.h" />
     <ClInclude Include="Engine\FName.h" />
+    <ClInclude Include="Engine\GameFunctions.h" />
     <ClInclude Include="Engine\UClass.h" />
     <ClInclude Include="Engine\UField.h" />
     <ClInclude Include="Engine\UObject.h" />
@@ -96,6 +96,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;BATMAN2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -121,6 +126,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>

@@ -7,10 +7,90 @@
 
 #include <map>
 
+string GetFieldNameManaged(UField* field)
+{
+    // Manually rename some classes to avoid conflicts with the System namespace
+    if (field->GetPathName() == "Core.Object")
+    {
+        return "GameObject";
+    }
+    else if (field->GetPathName() == "Core.System")
+    {
+        return "_System";
+    }
+    else if (field->GetPathName() == "Engine.Console")
+    {
+        return "_Console";
+    }
+
+    if (field->IsA(UScriptStruct::StaticClass()))
+    {
+        return "F" + field->GetName();
+    }
+
+    // Workaround fields with same name as their outer
+    if (field->Outer && field->GetName() == field->Outer->GetName())
+    {
+        return "_" + field->GetName();
+    }
+
+    // Ensure that every function override will have the same name
+    if (field->IsA(UFunction::StaticClass()))
+    {
+        auto func = (UFunction*)field;
+        if (func->SuperStruct)
+        {
+            return GetFieldNameManaged((UField*)func->SuperStruct);
+        }
+    }
+
+    // De-duplicate prop names for structs and functions
+    if (field->Outer && field->IsA(UProperty::StaticClass()) &&
+        (field->Outer->IsA(UFunction::StaticClass()) ||
+            field->Outer->IsA(UScriptStruct::StaticClass())))
+    {
+        int numDuplicates = 0;
+        auto propLink = ((UStruct*)field->Outer)->Children;
+        while (propLink && propLink != field)
+        {
+            if (propLink->GetName() == field->GetName())
+            {
+                numDuplicates++;
+            }
+
+            propLink = propLink->Next;
+        }
+
+        if (numDuplicates > 0)
+        {
+            return field->GetName() + "_" + to_string(numDuplicates);
+        }
+    }
+
+    return field->GetName();
+}
+
+string GetFieldPathNameManaged(UField* field)
+{
+    auto managedName = GetFieldNameManaged(field);
+
+    if (field->IsA(UClass::StaticClass()))
+    {
+        return field->GetPackageNameManaged() + "." + managedName;
+    }
+
+    if (field->Outer && field->Outer->IsA(UField::StaticClass()))
+    {
+        return GetFieldPathNameManaged((UField*)field->Outer) + "." + managedName;
+    }
+
+    return managedName;
+}
+
 PropertyInfo::PropertyInfo(UProperty* prop, bool isInStruct)
 {
     Name = prop->GetName();
-    ManagedName = prop->GetNameManaged();
+    ManagedName = GetFieldNameManaged(prop);
     TypeName = prop->GetInnerTypeNameManaged();
     ClassName = prop->Class->GetName();
     ArrayDim = prop->ArrayDim;
@@ -33,7 +113,7 @@ PropertyInfo::PropertyInfo(UProperty* prop, bool isInStruct)
 
 StructInfo::StructInfo(UStruct* _struct)
 {
-    ManagedName = _struct->GetNameManaged();
+    ManagedName = GetFieldNameManaged(_struct);
     PropertiesSize = _struct->PropertiesSize;
 }
 
@@ -51,7 +131,7 @@ StructInfo::StructInfo(UScriptStruct* _struct) : StructInfo((UStruct*)_struct)
 EnumInfo::EnumInfo(UEnum* _enum)
 {
     Name = _enum->GetName();
-    ManagedName = _enum->GetNameManaged();
+    ManagedName = GetFieldNameManaged(_enum);
 
     map<string, int> enumNameFreqs;
     for (auto i = 0; i < _enum->Names.Num; i++)
@@ -73,7 +153,7 @@ EnumInfo::EnumInfo(UEnum* _enum)
 FunctionInfo::FunctionInfo(UFunction* func)
 {
     Name = func->GetName();
-    ManagedName = func->GetNameManaged();
+    ManagedName = GetFieldNameManaged(func);
     PathName = func->GetPathName();
     PropertiesSize = func->PropertiesSize;
     Flags = (uint32_t)func->FunctionFlags;
@@ -115,6 +195,7 @@ FunctionInfo::FunctionInfo(UFunction* func)
 ClassInfo::ClassInfo(UClass* _class) : StructInfo((UStruct*)_class)
 {
     Class = _class;
+    SuperClass = (UClass*)_class->SuperStruct;
     Name = _class->GetName();
     PathName = _class->GetPathName();
     PackageName = _class->GetPackageName();
@@ -135,7 +216,7 @@ ClassInfo::ClassInfo(UClass* _class) : StructInfo((UStruct*)_class)
 
     for (int i = 0; i < _class->Interfaces.Num; i++)
     {
-        Interfaces.push_back(_class->Interfaces.ElementAt(i).Class->GetPathNameManaged());
+        Interfaces.push_back(GetFieldPathNameManaged(_class->Interfaces.ElementAt(i).Class));
     }
 
     for (auto field = _class->Children; field; field = field->Next)
@@ -168,14 +249,14 @@ ClassInfo::ClassInfo(UClass* _class) : StructInfo((UStruct*)_class)
 
 void ClassInfo::ResolveSuper(vector<ClassInfo>& classes)
 {
-    if (!Class->SuperStruct)
+    if (!SuperClass)
     {
         return;
     }
 
     for (auto& _class : classes)
     {
-        if (_class.Class == Class->SuperStruct)
+        if (_class.Class == SuperClass)
         {
             Super = &_class;
             return;

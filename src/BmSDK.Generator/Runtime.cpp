@@ -3,6 +3,7 @@
 #include "Engine\UClass.h"
 #include "Engine\UProperty.h"
 #include "Engine\GameOffsets.h"
+#include "Engine\GameFunctions.h"
 #include "Framework\ClassInfo.h"
 #include "Printer\Printer.h"
 
@@ -17,8 +18,7 @@ DWORD Runtime::MainThreadId = 0;
 
 TArray<UObject*>* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
-LoadPackageFn Runtime::LoadPackage = 0;
-CollectGarbageFn Runtime::CollectGarbage = 0;
+vector<ClassInfo> Runtime::Classes = {};
 
 void Runtime::OnAttach()
 {
@@ -34,9 +34,7 @@ void Runtime::OnAttach()
     // Set global pointers
     Runtime::GObjects = (TArray<UObject*>*) (Runtime::BaseAddress + GameOffsets::GObjects);
     Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
-    Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
-    Runtime::CollectGarbage =
-        (CollectGarbageFn)(Runtime::BaseAddress + GameOffsets::CollectGarbage);
+    GameFunctions::Init(Runtime::BaseAddress);
 
     // Wait for keypress in another thread
     std::thread(
@@ -98,7 +96,7 @@ void Runtime::LoadClassesIntoMemory() {
         // Filter packages that are only for assets
         if (regex_search(name, packageFilter)) continue;
 
-        LoadPackage(0, name.c_str(), 0);
+        GameFunctions::LoadPackage(0, name.c_str(), 0);
     }
     TRACE("Done loading packages");
 }
@@ -111,8 +109,7 @@ void Runtime::GenerateSDK()
 
     TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
 
-    // Enumerate objects
-    vector<UClass*> classObjects;
+    Runtime::Classes.clear();
     for (INT i = 0; i < Runtime::GObjects->Num; i++)
     {
         auto obj = Runtime::GObjects->ElementAt(i);
@@ -120,28 +117,22 @@ void Runtime::GenerateSDK()
         bool isValid = obj != nullptr && (Runtime::GObjects->ElementAt(obj->Index) == obj);
         if (!isValid)
         {
-            TRACE("Skipping invalid object {}", obj->Index);
             continue;
         }
 
         // Collect class objects (but not the CDO)
-        if (obj->IsA(UClass::StaticClass()) && obj->GetName() != "Default__Class")
+        if (obj->Class == UClass::StaticClass() &&
+            !(obj->ObjectFlags & (QWORD)EObjectFlags::RF_ClassDefaultObject))
         {
-            classObjects.push_back((UClass*)obj);
+            Runtime::Classes.emplace_back((UClass*)obj);
         }
     }
 
     // Clear output directory
-    TRACE("Found {} classes, preparing to print", classObjects.size());
-    vector<ClassInfo> classes;
-    classes.reserve(classObjects.size());
-    for (auto classObj : classObjects)
+    TRACE("Found {} classes, preparing to print", Classes.size());
+    for (auto& classObj : Classes)
     {
-        classes.emplace_back(classObj);
-    }
-    for (auto& classObj : classes)
-    {
-        classObj.ResolveSuper(classes);
+        classObj.ResolveSuper(Classes);
     }
 
     // TODO: Un-hardcode this
@@ -150,9 +141,9 @@ void Runtime::GenerateSDK()
     fs::create_directory(outDir);
 
     // Print some classes
-    for (auto i = 0u; i < classes.size(); i++)
+    for (auto i = 0u; i < Classes.size(); i++)
     {
-        auto& classObj = classes.at(i);
+        auto& classObj = Classes.at(i);
         auto classFilePath =
             outDir / classObj.PackageName / (classObj.ManagedName + ".g.cs");
 
@@ -175,9 +166,9 @@ void Runtime::GenerateSDK()
 
     // Print StaticInit file
     ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc | ios::binary);
-    Printer::PrintStaticInit(classes, staticInitFileStream);
+    Printer::PrintStaticInit(Classes, staticInitFileStream);
 
-    TRACE("Done writing {} classes to disk", classObjects.size());
+    TRACE("Done writing {} classes to disk", Classes.size());
 
     // Exit game early
     exit(0);

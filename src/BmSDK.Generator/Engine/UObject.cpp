@@ -1,9 +1,7 @@
 #include "pch.h"
 #include "UObject.h"
-#include "Runtime.h"
+#include "GameFunctions.h"
 #include "UClass.h"
-
-#include <map>
 
 string UObject::GetPathName() const
 {
@@ -57,31 +55,14 @@ bool UObject::IsA(class UClass* classObj) const
     return false;
 }
 
-class UClass* UObject::FindClass(const string& classFullName)
+UObject* UObject::FindObject(class UClass* classObj, UObject* outer, const string& pathName,
+    bool exactClass)
 {
-    static map<string, UClass*> classCache;
+    wstring pathNameW(pathName.begin(), pathName.end());
+    return GameFunctions::StaticFindObject(classObj, outer, pathNameW.c_str(), exactClass);
+}
 
-    if (classCache.empty())
-    {
-        for (INT i = 0; i < (Runtime::GObjects->Num); i++)
-        {
-            UObject* obj = Runtime::GObjects->ElementAt(i);
-
-            if (obj)
-            {
-                string objFullName = obj->GetFullName();
-                if (objFullName.find("Class") == 0)
-                {
-                    classCache[objFullName] = reinterpret_cast<UClass*>(obj);
-                }
-            }
-        }
-    }
-
-    if (classCache.contains(classFullName))
-    {
-        return classCache[classFullName];
-    }
-
-    return nullptr;
+class UClass* UObject::FindClass(const string& classPath)
+{
+    return (UClass*)FindObject(nullptr, (UObject*)-1, classPath, false);
 }

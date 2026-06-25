@@ -1,5 +1,8 @@
 #pragma once
 
+string GetFieldNameManaged(class UField* field);
+string GetFieldPathNameManaged(class UField* field);
+
 struct MemberInfo
 {
     virtual ~MemberInfo() = default;
@@ -80,6 +83,7 @@ struct ClassInfo : StructInfo
     string PackageName;
     string PackageNameManaged;
     class UClass* Class = nullptr;
+    class UClass* SuperClass = nullptr;
     ClassInfo* Super = nullptr;
     uint32_t Flags = 0;
     bool IsAbstract = false;
