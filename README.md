@@ -18,7 +18,7 @@ If you want to play script mods, getting started is simple:
 Keep in mind that script mods can potentially harm your computer. Make sure you only download and install scripts from trusted sources.
 
 ### ⚠️ Notice for Steam or GOG users:
-If you have a Steam or GOG copy of the game, you'll have to install a compatibility patch. You can find it next to the [latest release](../../releases/latest), just replace the `BatmanAC.exe` from your game folder (see below) with the one provided. It's a good idea to make a backup first.
+If you have a Steam or GOG copy of the game, you'll have to install a compatibility patch. You can download it [here](../../releases/download/v0.15.1/CompatibilityPatch.zip), just replace the `BatmanAC.exe` from your game folder (see below) with the one provided. It's a good idea to make a backup first.
 
 ## 🧩 Setting Up for Mod Development
 Follow these steps to set up your environment for building, running, and debugging script mods:
