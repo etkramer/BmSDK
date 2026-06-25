@@ -22,11 +22,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <!-- Constant definitions -->
-  <PropertyGroup>
-    <DefineConstants>$(DefineConstants);BATMAN2</DefineConstants>
-  </PropertyGroup>
-
   <!-- Output configuration -->
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

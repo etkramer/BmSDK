@@ -1,6 +1,6 @@
 param(
     [Parameter(Position = 0)]
-    [ValidateSet("Prebuild", "Build", "Clean", "Publish")]
+    [ValidateSet("Prebuild", "Build", "Clean")]
     [string]$Task,
     
     [Parameter(Position = 1)]
@@ -15,7 +15,6 @@ function Show-Help {
     Write-Host "  Prebuild"
     Write-Host "  Build"
     Write-Host "  Clean"
-    Write-Host "  Publish"
     Write-Host ""
     Write-Host "Configurations:"
     Write-Host "  Debug (default)"
@@ -118,136 +117,6 @@ function Invoke-Clean {
     Write-Host "Clean completed."
 }
 
-function Invoke-Publish {
-    Write-Host "Publishing BmSDK..." -ForegroundColor Green
-
-    # Set up Visual Studio environment
-    if (-not (Install-VSEnvironment "Release")) {
-        return $false
-    }
-
-    # Build BmSDK in Release mode
-    Write-Host "Building BmSDK, BmSDK.Host in Release mode..." -ForegroundColor Yellow
-    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") "Release"
-    if ($ExitCode -ne 0) {
-        Write-Error "Failed to build BmSDK"
-        return $false
-    }
-
-    # Publish BmSDK to populate publish directory
-    Write-Host "Publishing BmSDK project..." -ForegroundColor Yellow
-    $PublishPath = Join-Path (Get-Location) "publish\Binaries\Win64\sdk"
-    $PublishOutput = & dotnet publish "src/BmSDK/BmSDK.csproj" --configuration Release --output $PublishPath --verbosity minimal 2>&1
-    $ExitCode = $LASTEXITCODE
-    
-    # Display publish output
-    $PublishOutput | ForEach-Object { Write-Host $_ }
-    
-    if ($ExitCode -ne 0) {
-        Write-Error "Failed to publish BmSDK project"
-        return $false
-    }
-
-    # Define required files
-    $RequiredFiles = @{
-        "README.md"                                         = "README.md"
-        "bin/Binaries/Win64/dinput8.dll"                    = "Binaries/Win64/dinput8.dll"
-        "publish/Binaries/Win64/plugins"                    = "Binaries/Win64/plugins"
-        "publish/Binaries/Win64/sdk"                        = "Binaries/Win64/sdk"
-        "bin/BmGame/Scripts/MinimalScript.cs"               = "BmGame/Scripts/MinimalScript.cs"
-        "bin/BmGame/ScriptsDev/ScriptsDev.csproj"           = "BmGame/ScriptsDev/ScriptsDev.csproj"
-        "bin/BmGame/ScriptsDev/ScriptsDev.slnx"             = "BmGame/ScriptsDev/ScriptsDev.slnx"
-        "bin/BmGame/ScriptsDev/ScriptsDev.code-workspace"   = "BmGame/ScriptsDev/ScriptsDev.code-workspace"
-        "bin/BmGame/ScriptsDev/Properties"                  = "BmGame/ScriptsDev/Properties"
-        "bin/BmGame/Mods/ModTemplate"                       = "BmGame/Mods/ModTemplate"
-    }
-
-    # Validate all required files exist
-    Write-Host "Validating build artifacts..." -ForegroundColor Yellow
-    $MissingFiles = @()
-
-    foreach ($SourcePath in $RequiredFiles.Keys) {
-        if (-not (Test-Path $SourcePath)) {
-            $MissingFiles += $SourcePath
-        }
-    }
-
-    if ($MissingFiles.Count -gt 0) {
-        Write-Error "Missing required files:"
-        $MissingFiles | ForEach-Object { Write-Error "  - $_" }
-        Write-Error "Please ensure you have built all components and run BmSDK.Generator to generate bindings."
-        return $false
-    }
-
-    # Get latest git version tag
-    $GitTag = ""
-    try {
-        $GitTag = git describe --tags --abbrev=0 2>$null
-        if ($LASTEXITCODE -ne 0) {
-            Write-Error "Couldn't determine git tag name"
-            return $false
-        }
-    }
-    catch {
-        Write-Error "Couldn't determine git tag name"
-        return $false
-    }
-    
-    # Create output directory
-    $TempDir = "releases/BmSDK-AK-$GitTag"
-    $ZipPath = "releases/BmSDK-AK-$GitTag.zip"
-
-    if (Test-Path $TempDir) {
-        Remove-Item $TempDir -Recurse -Force
-    }
-
-    if (Test-Path $ZipPath) {
-        Remove-Item $ZipPath -Force
-    }
-
-    New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
-
-    # Copy files to release directory
-    Write-Host "Copying release files..." -ForegroundColor Yellow
-
-    foreach ($Source in $RequiredFiles.Keys) {
-        $Destination = Join-Path $TempDir $RequiredFiles[$Source]
-        $DestinationDir = Split-Path $Destination -Parent
-        
-        if (-not (Test-Path $DestinationDir)) {
-            New-Item -ItemType Directory -Path $DestinationDir -Force | Out-Null
-        }
-        
-        if (Test-Path $Source -PathType Container) {
-            # Copy directory recursively
-            Copy-Item $Source $DestinationDir -Recurse -Force
-        }
-        else {
-            # Copy file
-            Copy-Item $Source $Destination -Force
-        }
-        
-        Write-Host "  ✓ $Source -> $($RequiredFiles[$Source])" -ForegroundColor Gray
-    }
-
-    # Create the main release zip archive
-    Write-Host "Creating release archive..." -ForegroundColor Yellow
-    Compress-Archive -Path "$TempDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
-
-    # Clean up main temporary directory
-    Remove-Item $TempDir -Recurse -Force
-
-    # Output success message
-    $ZipSize = (Get-Item $ZipPath).Length / 1MB
-    Write-Host "" -ForegroundColor Green
-    Write-Host "Release package created successfully!" -ForegroundColor Green
-    Write-Host "   📦 $ZipPath ($([Math]::Round($ZipSize, 2)) MB)" -ForegroundColor White
-    Write-Host "" -ForegroundColor Green
-    Write-Host "Ready for distribution! 🚀" -ForegroundColor Green
-
-    return $true
-}
-
 # Main script logic
 $SolutionFile = "BmSDK.slnx"
 
@@ -273,11 +142,6 @@ switch ($Task) {
         
         $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") $Configuration
         exit $ExitCode
-    }
-    
-    "Publish" {
-        Invoke-Publish
-        exit 0
     }
     
     default {
