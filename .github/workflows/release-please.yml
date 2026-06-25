@@ -1,0 +1,52 @@
+name: "release-please"
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: release
+        uses: googleapis/release-please-action@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Note: Switch to PAT to trigger other workflows
+          config-file: 'release-please-config.json'
+          manifest-file: '.release-please-manifest.json'
+
+  build-release:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    uses: './.github/workflows/build-release.yml'
+    with:
+      tag_name: ${{ needs.release-please.outputs.tag_name }}
+
+  upload-binaries:
+    name: "Upload binaries and publish release"
+    needs: [release-please, build-release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Get final binary artifact"
+        id: download-build
+        uses: actions/download-artifact@v8
+        with:
+          artifact-ids: ${{ needs.build-release.outputs.artifact-id }}
+          path: '${{ github.workspace }}/publish/'
+          skip-decompress: true
+
+      - name: "Upload artifacts to release"
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ needs.release-please.outputs.tag_name }}
+          files: '${{ steps.download-build.outputs.download-path }}/*.zip'
+          draft: false
