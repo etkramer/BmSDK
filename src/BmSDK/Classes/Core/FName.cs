@@ -52,30 +52,9 @@ public struct FName
 
         // Mirrored in FName.h
 
-        // Sometimes this struct stores a pointer to a string, instead of having it inline.
-        // It's not clear how to check this properly yet, so we implement a heuristic
-        // to try and detect pointers.
-
-        // Short inline names (e.g. "HUD\0") can look like valid pointers when
-        // read as 8 bytes. Check for valid name chars followed by a null first.
-        var shortInline = false;
-        for (var i = 0; i < 8; i++)
-        {
-            var c = Convert.ToChar(nameEntry->AnsiName[i]);
-            if (c == '\0')
-            {
-                shortInline = i > 0;
-                break;
-            }
-
-            if (!char.IsAsciiLetterOrDigit(c) && c != '_')
-            {
-                break;
-            }
-        }
-
-        string str;
-        if (!shortInline && (nameEntry->AnsiNamePtr > 0x10000) && ((nameEntry->AnsiNamePtr >> 48) == 0))
+        // BM4: Names are sometimes stored as pointers instead of inline text.
+        string? str = null;
+        if ((nameEntry->Index & 0x2) != 0)
         {
             str = Guard.NotNull(Marshal.PtrToStringAnsi(nameEntry->AnsiNamePtr));
         }
