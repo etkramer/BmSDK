@@ -37,7 +37,7 @@
 				"request": "launch",
 				"program": "${workspaceFolder:ScriptsDev}/../../Binaries/Win64/BatmanAK.exe",
 				"cwd": "${workspaceFolder:ScriptsDev}/../../Binaries/Win64/",
-				"args": ["-nosplash"],
+				"args": ["-nosplash", "-nologo"],
 				"logging": {
 					"exceptions": false,
 					"moduleLoad": false,
