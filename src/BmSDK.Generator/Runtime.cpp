@@ -117,6 +117,8 @@ void Runtime::LoadClassesIntoMemory() {
         GameFunctions::LoadPackage(0, L"UnderAce", 0);
         GameFunctions::LoadPackage(0, L"UnderAce_A4_Ch23", 0);
         GameFunctions::LoadPackage(0, L"WayneTower_B1", 0);
+        GameFunctions::LoadPackage(0, L"JokerBoss", 0);
+        GameFunctions::LoadPackage(0, L"JokerBoss_C1", 0);
     }
     GameFunctions::EndLoad();
 
