@@ -32,11 +32,11 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"name": "Launch BatmanAC.exe",
+				"name": "Launch BatmanAK.exe",
 				"type": "cppvsdbg",
 				"request": "launch",
-				"program": "${workspaceFolder:ScriptsDev}/../../Binaries/Win32/BatmanAC.exe",
-				"cwd": "${workspaceFolder:ScriptsDev}/../../Binaries/Win32/",
+				"program": "${workspaceFolder:ScriptsDev}/../../Binaries/Win64/BatmanAK.exe",
+				"cwd": "${workspaceFolder:ScriptsDev}/../../Binaries/Win64/",
 				"args": ["-nosplash"],
 				"logging": {
 					"exceptions": false,
