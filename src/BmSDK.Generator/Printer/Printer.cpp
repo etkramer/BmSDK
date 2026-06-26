@@ -155,7 +155,7 @@ void Printer::PrintClass(const ClassInfo& _class, ostream& out)
 
             if (_class.IsActor)
             {
-                Printer::Indent(out)
+            Printer::Indent(out)
                     << "public " << _class.ManagedName
                     << "(System.Numerics.Vector3 Location = default, "
                     "BmSDK.Rotator Rotation = default, "
@@ -172,13 +172,13 @@ void Printer::PrintClass(const ClassInfo& _class, ostream& out)
             {
                 Printer::Indent(out)
                     << "public " << _class.ManagedName
-                    << "(BmSDK.GameObject Outer, string Name = null, "
-                    "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
+                << "(BmSDK.GameObject Outer, string Name = null, "
+                "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
                     << _class.ManagedName
-                    << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
-                    "Outer, Name, SetFlags, Template)) { }"
-                    << endl
-                    << endl;
+                << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
+                "Outer, Name, SetFlags, Template)) { }"
+                << endl
+                << endl;
             }
         }
 
@@ -199,7 +199,7 @@ void Printer::PrintClass(const ClassInfo& _class, ostream& out)
         out << endl;
 
         // Print strongly-typed ScriptComponent helpers
-        Printer::PrintScHelpers(_class, out);
+                Printer::PrintScHelpers(_class, out);
 
         // Print fields
         for (auto i = 0u; i < _class.Members.size(); i++)
@@ -214,8 +214,8 @@ void Printer::PrintClass(const ClassInfo& _class, ostream& out)
             Printer::PrintMember(_class.Members[i], false, out);
 
             if (i < _class.Members.size() - 1)
-            {
-                out << endl;
+                {
+                    out << endl;
             }
         }
     }
@@ -294,9 +294,9 @@ void Printer::PrintStruct(const StructInfo& _struct, ostream& out)
             Printer::PrintMember(_struct.Members[i], false, out);
 
             if (i < _struct.Members.size() - 1)
-            {
-                out << endl;
-            }
+                {
+                    out << endl;
+                }
         }
     }
     Printer::PopIndent();
@@ -368,83 +368,83 @@ void Printer::PrintProperty(const PropertyInfo& prop, ostream& out)
         }
         else
         {
-            // Print prop declaration
+        // Print prop declaration
             Printer::Indent(out) << "public unsafe " << prop.TypeName << " "
-                << propNameManaged << endl;
+            << propNameManaged << endl;
 
-            // Print prop body
-            Printer::Indent(out) << "{" << endl;
-            Printer::PushIndent();
+        // Print prop body
+        Printer::Indent(out) << "{" << endl;
+        Printer::PushIndent();
+        {
+            // Print prop getter (single line)
+            Printer::Indent(out) << "get { ";
             {
-                // Print prop getter (single line)
-                Printer::Indent(out) << "get { ";
+                // Make Ptr available locally so we can reuse the same getter code
+                    if (prop.IsInStruct)
                 {
-                    // Make Ptr available locally so we can reuse the same getter code
-                    if (prop.IsInStruct)
-                    {
-                        out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
-                    }
-
-                    // Booleans (stored as bitmasks) need special handling
-                    if (prop.IsBool)
-                    {
-                        out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
-                            << ") & " << prop.BitMask << ") != 0;";
-                    }
-                    else
-                    {
-                        out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                            << prop.TypeName << ">(Ptr + " << propOffset << ");";
-                    }
-
-                    if (prop.IsInStruct)
-                    {
-                        out << " };";
-                    }
+                    out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
                 }
-                out << " }" << endl;
 
-                // Print prop setter (single line)
-                Printer::Indent(out) << "set { ";
-                {
-                    // Make Ptr available locally so we can reuse the same setter code
-                    if (prop.IsInStruct)
-                    {
-                        out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
-                    }
-
-                    // Booleans (stored as bitmasks) need special handling
+                // Booleans (stored as bitmasks) need special handling
                     if (prop.IsBool)
-                    {
-                        out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
-                            << propOffset << ");";
+                {
+                    out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << propOffset
+                            << ") & " << prop.BitMask << ") != 0;";
+                }
+                else
+                {
+                    out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
+                            << prop.TypeName << ">(Ptr + " << propOffset << ");";
+                }
+
+                    if (prop.IsInStruct)
+                {
+                    out << " };";
+                }
+            }
+            out << " }" << endl;
+
+            // Print prop setter (single line)
+            Printer::Indent(out) << "set { ";
+            {
+                // Make Ptr available locally so we can reuse the same setter code
+                    if (prop.IsInStruct)
+                {
+                    out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+                }
+
+                // Booleans (stored as bitmasks) need special handling
+                    if (prop.IsBool)
+                {
+                    out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
+                        << propOffset << ");";
                         out << " var newMask = value ? (currentMask | " << prop.BitMask
                             << ") : (currentMask & ~" << prop.BitMask << ");";
 
-                        out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
-                            << propOffset << ");";
-                    }
-                    else
-                    {
-                        out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << propOffset
-                            << ");";
-                    }
+                    out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
+                        << propOffset << ");";
+                }
+                else
+                {
+                    out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << propOffset
+                        << ");";
+                }
 
                     if (prop.IsInStruct)
-                    {
-                        out << " };";
-                    }
+                {
+                    out << " };";
                 }
-                out << " }" << endl;
             }
-            Printer::PopIndent();
-            Printer::Indent(out) << "}" << endl;
+            out << " }" << endl;
         }
+        Printer::PopIndent();
+        Printer::Indent(out) << "}" << endl;
     }
 }
+    }
 
 void Printer::PrintFunction(const FunctionInfo& func, bool isInInterface, ostream& out)
-{
+    {
     // Print func comment
     Printer::Indent(out) << "/// <summary>" << endl;
     Printer::Indent(out) << "/// Function: " << func.Name << endl;

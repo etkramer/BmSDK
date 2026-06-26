@@ -17,11 +17,11 @@ public class DemoScript : Script
     public override void Main()
     {
         // Boost snow intensity on CDO (template object)
-        var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
+        var defaultRainComponent = RRainComponent.DefaultObject;
         defaultRainComponent?.ParticleCount *= 5;
 
         // Set max players (default and current/frontend)
-        foreach (var gameInfo in GameObject.FindObjectsSlow<RGameInfo>())
+        foreach (var gameInfo in Game.FindObjects<RGameInfo>())
         {
             gameInfo.MaxPlayers = 4;
         }
@@ -43,7 +43,7 @@ public class DemoScript : Script
     public override void OnEnterGame()
     {
         // Enable 1-hit counters
-        foreach (var counterMove in GameObject.FindObjectsSlow<RCombatMove_BatmanCounter>())
+        foreach (var counterMove in Game.FindObjects<RCombatMove_BatmanCounter>())
         {
             counterMove.bShouldKill = true;
         }
@@ -81,7 +81,11 @@ public class DemoScript : Script
         // Enter demo world
         var console = Game.GetConsole();
         console.ConsoleCommand(
-            "start batentry?Players=Playable_Batman?Area=CityZ_17,CityX_02,CityX_03,CityZ_13,CityZ_14,CityZ_16,CityZ_18,CityZ_T17?NoFadeOut?Flags=Batman_GlideBoost,Debug_Freeroam,Debug_Freeroam_Population,IsFreeRoam,Environmental_Analysis_Unlocked,OrganScannedInNormalGame,Map_WaypointEnabled,CityX_06_Penguin_Cache_Accessible?Chapters=0,1,F1,S0,K1,U1?Start=CityZ_Stage_1?PlayMusic"
+            "start batentry?Players=Playable_Batman?" +
+            "Area=CityZ_17,CityX_02,CityX_03,CityZ_13,CityZ_14,CityZ_16,CityZ_18,CityZ_T17?NoFadeOut?" +
+            "Flags=Batman_GlideBoost,Debug_Freeroam,Debug_Freeroam_Population,IsFreeRoam,Environmental_Analysis_Unlocked,OrganScannedInNormalGame,Map_WaypointEnabled,CityX_06_Penguin_Cache_Accessible?" +
+            "Chapters=0,1,F1,S0,K1,U1?" +
+            "Start=CityZ_Stage_1?PlayMusic"
         );
     }
 

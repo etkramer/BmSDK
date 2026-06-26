@@ -46,7 +46,7 @@ string UProperty::GetInnerTypeNameManaged() const
     {
         auto structProp = (UStructProperty*)this;
         auto _struct = structProp->Struct;
-        
+
         // Manually swap out some structs
         if (_struct->GetName() == "Pointer")
         {
@@ -97,7 +97,6 @@ string UProperty::GetInnerTypeNameManaged() const
     else if (Class->GetPathName() == "Core.ArrayProperty")
     {
         auto arrayProp = (UArrayProperty*)this;
-
         auto innerName = arrayProp->Inner->GetInnerTypeNameManaged();
 
         return "BmSDK.TArray<" + innerName + ">";

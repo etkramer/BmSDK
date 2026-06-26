@@ -15,7 +15,7 @@ enum class EFunctionFlags : DWORD
 CLASS(UFunction, 196)
 class UFunction : public UStruct
 {
-	FIELD(EFunctionFlags, FunctionFlags)
+    FIELD(EFunctionFlags, FunctionFlags)
     BYTE UNK1[28];
 
 public:

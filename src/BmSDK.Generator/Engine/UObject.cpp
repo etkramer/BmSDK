@@ -60,9 +60,9 @@ UObject* UObject::FindObject(class UClass* classObj, UObject* outer, const strin
 {
     wstring pathNameW(pathName.begin(), pathName.end());
     return GameFunctions::StaticFindObject(classObj, outer, pathNameW.c_str(), exactClass);
-}
+    }
 
 class UClass* UObject::FindClass(const string& classPath)
-{
+    {
     return (UClass*)FindObject(nullptr, (UObject*)-1, classPath, false);
-}
+    }
