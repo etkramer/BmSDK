@@ -75,34 +75,50 @@ void Runtime::LoadClassesIntoMemory() {
     // BM4: Might need a smarter approach given large package sizes.
     TRACE("Loading UPKs into memory");
 
-    GameFunctions::LoadPackage(0, L"Playable_Azrael_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Batmobile_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_BatmobileFunhouse_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_BatmobileJoker_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_BatmobileMK2_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_BruceWayne_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Catwoman_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Catwoman0_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Cop_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Gordon_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Joker_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_JokerCh5_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_JokerFPS_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Nightwing_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Nightwing0_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Robin_SF", 0);
-    GameFunctions::LoadPackage(0, L"Playable_Robin0_SF", 0);
+    // BM4: There's a GC call within LoadPackage itself in this game,
+    // so we can use BeginLoad()/EndLoad() to prevent it from firing early.
+    GameFunctions::BeginLoad();
+    {
+        GameFunctions::LoadPackage(0, L"Playable_Azrael_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Batmobile_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_BatmobileFunhouse_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_BatmobileJoker_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_BatmobileMK2_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_BruceWayne_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Catwoman_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Catwoman0_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Cop_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Gordon_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Joker_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_JokerCh5_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_JokerFPS_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Nightwing_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Nightwing0_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Robin_SF", 0);
+        GameFunctions::LoadPackage(0, L"Playable_Robin0_SF", 0);
 
-    GameFunctions::LoadPackage(0, L"Clocktower_C1_ChA5_Anim", 0);
-    GameFunctions::LoadPackage(0, L"CityZ__Ch6", 0);
-    GameFunctions::LoadPackage(0, L"Stagg_B1", 0);
-    GameFunctions::LoadPackage(0, L"Stagg_B3_Ch45a", 0);
-    GameFunctions::LoadPackage(0, L"Film", 0);
-    GameFunctions::LoadPackage(0, L"WayneTower_B1", 0);
-    GameFunctions::LoadPackage(0, L"Ace_A1_Ch2", 0);
-    GameFunctions::LoadPackage(0, L"Pyg", 0);
-    GameFunctions::LoadPackage(0, L"Pyg_B1", 0);
-    GameFunctions::LoadPackage(0, L"DLCHarleyPolice_S1_Design", 0);
+        // NOTE: BM4's cooker is modified a bit to allow sublevels to import from their bases.
+        // If you add a LoadPackage() call here and it results in a crash, try adding the base
+        // level too - i.e. some classes in "Lockup_C1" are dependant on base classes from "Lockup".
+
+        GameFunctions::LoadPackage(0, L"Ace_A1_Ch2", 0);
+        GameFunctions::LoadPackage(0, L"Ace_A1", 0);
+        GameFunctions::LoadPackage(0, L"CityZ__Ch6", 0);
+        GameFunctions::LoadPackage(0, L"Clocktower_C1_ChA5_Anim", 0);
+        GameFunctions::LoadPackage(0, L"DLCHarleyPolice_S1_Design", 0);
+        GameFunctions::LoadPackage(0, L"Film_A1_Ch6", 0);
+        GameFunctions::LoadPackage(0, L"Film", 0);
+        GameFunctions::LoadPackage(0, L"Lockup", 0);
+        GameFunctions::LoadPackage(0, L"Lockup_C1", 0);
+        GameFunctions::LoadPackage(0, L"Pyg_B1", 0);
+        GameFunctions::LoadPackage(0, L"Pyg", 0);
+        GameFunctions::LoadPackage(0, L"Stagg_B1", 0);
+        GameFunctions::LoadPackage(0, L"Stagg_B3_Ch45a", 0);
+        GameFunctions::LoadPackage(0, L"UnderAce", 0);
+        GameFunctions::LoadPackage(0, L"UnderAce_A4_Ch23", 0);
+        GameFunctions::LoadPackage(0, L"WayneTower_B1", 0);
+    }
+    GameFunctions::EndLoad();
 
     // const wregex packageFilter(
     //     L"(?:"
