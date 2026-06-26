@@ -6,14 +6,14 @@ internal static class GameInfo
     {
         public const IntPtr GNames = 0x3A208B8;
         public const IntPtr GObjObjects = 0x340CBE4;
-        public const IntPtr GError = 0x117BF48;
+        public const IntPtr GError = 0x3A20AA8;
     }
 
     public static class FuncOffsets
     {
         // app (global)
-        public const IntPtr AppRealloc = 0x1EC10;
-        public const IntPtr AppFree = 0x1EC30;
+        public const IntPtr AppRealloc = 0xFA2A60;
+        public const IntPtr AppFree = 0xFA2A80;
         public const IntPtr EngineTick = 0x5B1DA0;
 
         // UObject (static)
@@ -25,10 +25,10 @@ internal static class GameInfo
         // UObject (local)
         public const IntPtr ProcessEvent = 0xF90CD0;
         public const IntPtr ProcessInternal = 0xF90B30;
-        public const IntPtr CallFunction = 0x4F8A0;
-        public const IntPtr AddObject = 0x8E0A0;
+        public const IntPtr CallFunction = 0xF95AA0;
+        public const IntPtr AddObject = 0xF388F0;
         public const IntPtr ConditionalDestroy = 0xF38D80;
-        public const IntPtr FindFunction = 0x8A980;
+        public const IntPtr FindFunction = 0xF3DB80;
         public const IntPtr ConditionalPostLoad = 0xF430F0;
         public const IntPtr AddToRoot = 0xF2D440;
         public const IntPtr RemoveFromRoot = 0xF2D460;
