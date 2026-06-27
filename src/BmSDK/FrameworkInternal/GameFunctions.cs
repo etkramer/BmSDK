@@ -84,7 +84,8 @@ internal static class GameFunctions
         int bRemoteOwned,
         IntPtr Owner,
         IntPtr Instigator,
-        int bNoFail
+        int bNoFail,
+        IntPtr OverrideLevel
     );
 
     // FName::Init()

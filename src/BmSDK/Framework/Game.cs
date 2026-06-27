@@ -191,7 +191,7 @@ public static partial class Game
         Level? Level
     )
     {
-        var world = Level is null ? (World)GetWorldInfo().Outer.Outer : (World)Level.Outer;
+        var world = (World)GetWorldInfo().Outer.Outer;
         var resPtr = GameFunctions.SpawnActor(
             world.Ptr,
             Class.Ptr,
@@ -203,7 +203,8 @@ public static partial class Game
             0,
             Owner?.Ptr ?? 0,
             Instigator?.Ptr ?? 0,
-            1
+            1,
+            Level?.Ptr ?? 0
         );
 
         Guard.Require(resPtr != 0, "SpawnActor() returned null");
