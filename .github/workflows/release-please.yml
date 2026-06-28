@@ -31,16 +31,23 @@ jobs:
     with:
       tag_name: ${{ needs.release-please.outputs.tag_name }}
 
+  build-release-bm4:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    uses: etkramer/BmSDK/.github/workflows/build-release.yml@main-bm4
+    with:
+      tag_name: ${{ needs.release-please.outputs.tag_name }}
+
   upload-binaries:
     name: "Upload binaries and publish release"
-    needs: [release-please, build-release]
+    needs: [release-please, build-release, build-release-bm4]
     runs-on: ubuntu-latest
     steps:
       - name: "Get final binary artifact"
         id: download-build
         uses: actions/download-artifact@v8
         with:
-          artifact-ids: ${{ needs.build-release.outputs.artifact-id }}
+          artifact-ids: ${{ needs.build-release.outputs.artifact-id }},${{ needs.build-release-bm4.outputs.artifact-id }}
           path: '${{ github.workspace }}/publish/'
           skip-decompress: true
 
