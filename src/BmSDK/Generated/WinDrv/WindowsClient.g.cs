@@ -78,4 +78,21 @@ public partial class WindowsClient : BmSDK.Engine.Client, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<WindowsClient>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    /// <summary>
+    /// IntProperty: AllowJoystickInput
+    /// </summary>
+    public unsafe int AllowJoystickInput
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
+
+    /// <summary>
+    /// ClassProperty: AudioDeviceClass
+    /// </summary>
+    public unsafe BmSDK.Class AudioDeviceClass
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+    }
 }
