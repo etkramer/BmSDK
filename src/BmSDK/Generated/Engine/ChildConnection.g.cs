@@ -78,4 +78,12 @@ public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
         where TComponent : class, Framework.IScriptComponent<ChildConnection>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    /// <summary>
+    /// ObjectProperty: Parent
+    /// </summary>
+    public unsafe BmSDK.Engine.NetConnection Parent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NetConnection>(Ptr + 20052); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20052); }
+    }
 }

@@ -73,4 +73,66 @@ public partial class Client : BmSDK.GameObject, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<Client>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    /// <summary>
+    /// FloatProperty: ButtonRepeatDelay
+    /// </summary>
+    public unsafe float ButtonRepeatDelay
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
+
+    /// <summary>
+    /// FloatProperty: InitialButtonRepeatDelay
+    /// </summary>
+    public unsafe float InitialButtonRepeatDelay
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinDesiredFrameRate
+    /// </summary>
+    public unsafe float MinDesiredFrameRate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DisplayGammaReferenceBrightness
+    /// </summary>
+    public unsafe float DisplayGammaReferenceBrightness
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DisplayGammaMax
+    /// </summary>
+    public unsafe float DisplayGammaMax
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DisplayGammaMin
+    /// </summary>
+    public unsafe float DisplayGammaMin
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DisplayGamma
+    /// </summary>
+    public unsafe float DisplayGamma
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 }

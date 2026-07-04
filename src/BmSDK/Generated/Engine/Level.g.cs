@@ -78,4 +78,21 @@ public partial class Level : BmSDK.Engine.LevelBase, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<Level>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    /// <summary>
+    /// FloatProperty: ShadowmapTotalSize
+    /// </summary>
+    public unsafe float ShadowmapTotalSize
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LightmapTotalSize
+    /// </summary>
+    public unsafe float LightmapTotalSize
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
+    }
 }

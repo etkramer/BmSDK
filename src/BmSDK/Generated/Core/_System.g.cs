@@ -78,4 +78,174 @@ public partial class _System : BmSDK.Subsystem, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<_System>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
+    /// <summary>
+    /// ArrayProperty: SeekFreePCPaths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> SeekFreePCPaths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SeekFreePCExtensions
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> SeekFreePCExtensions
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: CutdownPaths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> CutdownPaths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: LocalizationPaths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> LocalizationPaths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+    }
+
+    /// <summary>
+    /// StrProperty: TextureFileCacheExtension
+    /// </summary>
+    public unsafe BmSDK.FString TextureFileCacheExtension
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: Extensions
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> Extensions
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: Suppress
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FName> Suppress
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: FRScriptPaths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> FRScriptPaths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ScriptPaths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> ScriptPaths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: Paths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> Paths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
+
+    /// <summary>
+    /// StrProperty: ScreenShotPath
+    /// </summary>
+    public unsafe BmSDK.FString ScreenShotPath
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
+
+    /// <summary>
+    /// StrProperty: CacheExt
+    /// </summary>
+    public unsafe BmSDK.FString CacheExt
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+
+    /// <summary>
+    /// StrProperty: CachePath
+    /// </summary>
+    public unsafe BmSDK.FString CachePath
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 80); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+    }
+
+    /// <summary>
+    /// StrProperty: SavePath
+    /// </summary>
+    public unsafe BmSDK.FString SavePath
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AsyncIOBandwidthLimit
+    /// </summary>
+    public unsafe float AsyncIOBandwidthLimit
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+
+    /// <summary>
+    /// IntProperty: PackageSizeSoftLimit
+    /// </summary>
+    public unsafe int PackageSizeSoftLimit
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// IntProperty: MaxOverallCacheSize
+    /// </summary>
+    public unsafe int MaxOverallCacheSize
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
+
+    /// <summary>
+    /// IntProperty: MaxStaleCacheSize
+    /// </summary>
+    public unsafe int MaxStaleCacheSize
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+
+    /// <summary>
+    /// IntProperty: StaleCacheDays
+    /// </summary>
+    public unsafe int StaleCacheDays
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 }

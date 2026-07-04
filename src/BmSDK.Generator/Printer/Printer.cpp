@@ -204,13 +204,6 @@ void Printer::PrintClass(const ClassInfo& _class, ostream& out)
         // Print fields
         for (auto i = 0u; i < _class.Members.size(); i++)
         {
-            // Don't print any members for intrinsic classes - they occasionally exist
-            // at runtime, but we just want their declaration so we can reference them.
-            if (_class.IsIntrinsic)
-            {
-                break;
-            }
-
             Printer::PrintMember(_class.Members[i], false, out);
 
             if (i < _class.Members.size() - 1)
