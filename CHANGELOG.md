@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/etkramer/BmSDK/compare/v0.16.0...v0.17.0) (2026-07-09)
+
+
+### Features
+
+* Allow intrinsic classes to contain properties ([#115](https://github.com/etkramer/BmSDK/issues/115)) ([1d7c52e](https://github.com/etkramer/BmSDK/commit/1d7c52e8076a96d3cba4a4431dda5f2c0a6efa3e))
+
 ## [0.16.0](https://github.com/etkramer/BmSDK/compare/v0.16.0...v0.16.0) (2026-06-24)
 
 
