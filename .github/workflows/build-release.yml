@@ -36,15 +36,11 @@ jobs:
         cache: true
         cache-dependency-path: '**/packages.lock.json'
 
-    - name: "Restore NuGet packages"
-      run: |
-        dotnet restore '${{ env.PROJ_PATH }}' --locked-mode
-
     - name: "Build BmSDK in Release mode"
       run: >
         dotnet publish '${{ env.PROJ_PATH }}' -c Release
         -o '${{ env.STAGING_DIR }}/Binaries/Win32/sdk/'
-        --no-restore --nologo
+        -p:RestoreLockedMode=true --nologo
 
     - name: "Upload binaries for later processing"
       uses: actions/upload-artifact@v7
