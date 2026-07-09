@@ -51,10 +51,14 @@ namespace runtime {
 
     // Using the nethost library, discover the location of hostfxr and get exports
     static bool load_hostfxr() {
+        // Point to local hostfxr.dll (or fall back to global .NET copy if not a publish build)
+        const wstring assemblyPath = get_game_dir().wstring() + L"\\sdk\\BmSDK.dll";
+        get_hostfxr_parameters params{ sizeof(get_hostfxr_parameters), assemblyPath.c_str(), nullptr };
+
         // Pre-allocate a large buffer for the path to hostfxr
         char_t buffer[MAX_PATH];
         size_t buffer_size = sizeof(buffer) / sizeof(char_t);
-        int rc = get_hostfxr_path(buffer, &buffer_size, nullptr);
+        int rc = get_hostfxr_path(buffer, &buffer_size, &params);
         if (rc != 0)
             return false;
 
