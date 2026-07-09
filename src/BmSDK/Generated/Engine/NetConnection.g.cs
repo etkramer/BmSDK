@@ -73,12 +73,4 @@ public partial class NetConnection : BmSDK.Engine.Player, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<NetConnection>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
-    /// <summary>
-    /// ArrayProperty: Children
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ChildConnection> Children
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ChildConnection>>(Ptr + 19996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 19996); }
-    }
 }

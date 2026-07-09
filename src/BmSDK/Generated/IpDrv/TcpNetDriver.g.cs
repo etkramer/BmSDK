@@ -78,21 +78,4 @@ public partial class TcpNetDriver : BmSDK.Engine.NetDriver, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<TcpNetDriver>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
-    /// <summary>
-    /// BoolProperty: LogPortUnreach
-    /// </summary>
-    public unsafe bool LogPortUnreach
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 392); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 392); }
-    }
-
-    /// <summary>
-    /// BoolProperty: AllowPlayerPortUnreach
-    /// </summary>
-    public unsafe bool AllowPlayerPortUnreach
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 388); }
-    }
 }

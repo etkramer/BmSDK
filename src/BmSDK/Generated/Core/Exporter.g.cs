@@ -73,21 +73,4 @@ public partial class Exporter : BmSDK.GameObject, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<Exporter>
         => ((GameObject)this).DetachScriptComponents(typeof(TComponent));
 
-    /// <summary>
-    /// ArrayProperty: FormatDescription
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FormatDescription
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: FormatExtension
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FormatExtension
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
 }
