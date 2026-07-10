@@ -48,6 +48,10 @@ internal static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ProcessInternalDelegate(IntPtr self, IntPtr Stack, IntPtr Result);
 
+    // FWindowsViewport::ProcessDeferredMessage()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate void ProcessDeferredMessageDelegate(IntPtr self, ref FDeferredMessage Message);
+
     // UObject::CallFunction()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void CallFunctionDelegate(
