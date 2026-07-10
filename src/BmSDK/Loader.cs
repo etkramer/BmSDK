@@ -17,6 +17,7 @@ internal static class Loader
 
     private static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     private static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
+    private static GameFunctions.ProcessDeferredMessageDelegate? _ProcessDeferredMessageDetourBase = null;
     private static GameFunctions.AddObjectDelegate? _AddObjectDelegateDetourBase = null;
     private static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
     private static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
@@ -55,6 +56,12 @@ internal static class Loader
             GameInfo.FuncOffsets.ProcessInternal,
             ProcessInternalDetour
         );
+
+        _ProcessDeferredMessageDetourBase =
+            DetourUtil.NewDetour<GameFunctions.ProcessDeferredMessageDelegate>(
+                GameInfo.FuncOffsets.ProcessDeferredMessage,
+                ProcessDeferredMessageDetour
+            );
 
         _AddObjectDelegateDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
             GameInfo.FuncOffsets.AddObject,
@@ -129,7 +136,6 @@ internal static class Loader
             {
                 // Tick framework stuff
                 InputManager.Tick();
-                GameWindow.Tick();
 
                 // Call OnTick() for scripts
                 ScriptManager.Scripts.ForEach(script =>
@@ -155,6 +161,31 @@ internal static class Loader
             // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
             _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
         });
+    }
+
+    // Detour for FWindowsViewport::ProcessDeferredMessage()
+    private static void ProcessDeferredMessageDetour(IntPtr self, ref FDeferredMessage message)
+    {
+        var key = (Keys)(uint)message.WParam;
+
+        switch (message.Message)
+        {
+            // WM_KEYDOWN
+            case 0x100:
+            // WM_SYSKEYDOWN
+            case 0x104:
+                InputManager.OnKeyDown(key);
+                break;
+            // WM_KEYUP
+            case 0x101:
+            // WM_SYSKEYUP
+            case 0x105:
+                InputManager.OnKeyUp(key);
+                break;
+        }
+
+        // Call base impl
+        _ProcessDeferredMessageDetourBase!.Invoke(self, ref message);
     }
 
     // Detour for UObject::AddObject()

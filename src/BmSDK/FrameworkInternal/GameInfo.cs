@@ -37,6 +37,9 @@ internal static class GameInfo
         // UWorld (local)
         public const IntPtr SpawnActor = 0x321A20;
 
+        // FWindowsViewport (local)
+        public const IntPtr ProcessDeferredMessage = 0x7A41F0;
+
         // FName (local)
         public const IntPtr NameInit = 0x7E990;
 
