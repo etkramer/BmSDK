@@ -6,7 +6,7 @@
 ## 📖 About
 BmSDK is a scripting platform for Batman: Arkham City and [Batman: Arkham Knight](https://github.com/etkramer/BmSDK-AK), allowing you to extend the game with C# code for custom gameplay and logic.
 
-It gives you access to a full SDK for working with the game and its world, based on the engine's own UnrealScript API - for example, a simple script to spawn Joker near the player:
+It gives you access to a full SDK for working with the game and its world, based on the engine's own UnrealScript API - for example, a short script to spawn in Joker near the player:
 ```cs
 using BmSDK;
 using BmSDK.BmGame;
@@ -15,26 +15,22 @@ using BmSDK.BmScript;
 [Script]
 public class DemoScript : Script
 {
-    /// <summary>
-    /// Called when a key is pressed during gameplay
-    /// (not in pause screen).
-    /// </summary>
     public override void OnKeyDown(Keys key)
     {
         if (key == Keys.J)
         {
             var playerPawn = Game.GetPlayerPawn();
 
-            // Load package with RCharacter_Joker
+            // Load .upk with RCharacter_Joker
             Game.LoadPackage("FunFair");
 
-            // Spawn in a pawn
+            // Spawn in Joker
             var newCharacter = new RPawnVillainThug(playerPawn.Location, playerPawn.Rotation);
             newCharacter.InitCharacter(RCharacter_Joker.StaticClass());
 
-            // Move new pawn in front of player
+            // Move Joker in front of the player
             var playerDir = playerPawn.Rotation.ToDirection() with { Z = 0 };
-            newCharacter?.Move(playerDir * 100);
+            newCharacter.Move(playerDir * 100);
         }
     }
 }
