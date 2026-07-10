@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.17.2](https://github.com/etkramer/BmSDK/compare/v0.17.1...v0.17.2) (2026-07-10)
+
+
+### Bug Fixes
+
+* Fix scripts not being loaded since host update ([#127](https://github.com/etkramer/BmSDK/issues/127)) ([5bb7ecb](https://github.com/etkramer/BmSDK/commit/5bb7ecbe68400c715bb5da0bbf9da6287b7f67ed))
+* **input:** Fix OnKeyDown not firing when run through Steam ([#125](https://github.com/etkramer/BmSDK/issues/125)) ([6f311a0](https://github.com/etkramer/BmSDK/commit/6f311a02ebcc405e4255bbfef9e40a24698eaf67))
+
 ## [0.17.1](https://github.com/etkramer/BmSDK/compare/v0.17.0...v0.17.1) (2026-07-10)
 
 
