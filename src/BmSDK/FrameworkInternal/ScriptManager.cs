@@ -61,6 +61,21 @@ internal static class ScriptManager
 
     private record LoadedMod(Mod Mod, AssemblyLoadContext Alc, List<Script> Scripts);
 
+    private sealed class ScriptLoadContext(string name)
+        : AssemblyLoadContext(name, isCollectible: true)
+    {
+        private static readonly AssemblyLoadContext s_hostAlc = GetLoadContext(
+            typeof(GameObject).Assembly
+        )!;
+
+        protected override Assembly? Load(AssemblyName assemblyName)
+        {
+            return s_hostAlc.Assemblies.FirstOrDefault(asm =>
+                asm.GetName().Name == assemblyName.Name
+            );
+        }
+    }
+
     private static readonly Dictionary<string, LoadedMod> s_loadedMods = [];
     private static readonly Dictionary<string, Timer> s_debounceTimers = [];
     private static readonly Lock s_lockObj = new();
@@ -156,7 +171,7 @@ internal static class ScriptManager
         }
 
         var targetName = $"{mod.Name}.dll";
-        var modAlc = new AssemblyLoadContext(targetName, isCollectible: true);
+        var modAlc = new ScriptLoadContext(targetName);
         var asm = modAlc.LoadFromStream(peStream, pdbStream);
 
         EngineSynchronizationContext.Instance.Post(
