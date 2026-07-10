@@ -15,7 +15,7 @@ using namespace std::filesystem;
 
 namespace runtime {
     // Func aliases for hostfxr
-    using HostInitFn = hostfxr_initialize_for_runtime_config_fn;
+    using HostInitFn = hostfxr_initialize_for_dotnet_command_line_fn;
     using HostGetDelegateFn = hostfxr_get_runtime_delegate_fn;
     using HostCloseFn = hostfxr_close_fn;
     using HostLoadAssemblyFn = load_assembly_and_get_function_pointer_fn;
@@ -64,7 +64,7 @@ namespace runtime {
 
         // Load hostfxr and get desired exports
         void* lib = load_library(buffer);
-        hostInitFn = (HostInitFn)get_export(lib, "hostfxr_initialize_for_runtime_config");
+        hostInitFn = (HostInitFn)get_export(lib, "hostfxr_initialize_for_dotnet_command_line");
         hostGetDelegateFn = (HostGetDelegateFn)get_export(lib, "hostfxr_get_runtime_delegate");
         hostCloseFn = (HostCloseFn)get_export(lib, "hostfxr_close");
 
@@ -72,11 +72,12 @@ namespace runtime {
     }
 
     // Load and initialize .NET Core and get desired function pointer for scenario
-    static HostLoadAssemblyFn get_dotnet_load_assembly(const char_t* config_path) {
+    static HostLoadAssemblyFn get_dotnet_load_assembly(const char_t* assembly_path) {
         // Load .NET Core
         void* hostLoadAssemblyFn = nullptr;
         hostfxr_handle cxt = nullptr;
-        int rc = hostInitFn(config_path, nullptr, &cxt);
+        const char_t* argv[] = { assembly_path };
+        int rc = hostInitFn(1, argv, nullptr, &cxt);
         if (rc != 0 || cxt == nullptr) {
             std::cerr << "Init failed: " << std::hex << std::showbase << rc << std::endl;
             hostCloseFn(cxt);
@@ -105,12 +106,11 @@ namespace runtime {
         // Initialize and start the .NET Core runtime
         const wstring basePath = get_game_dir();
         const wstring asmPath = L"\\sdk\\BmSDK";
-        const wstring configPath = basePath + asmPath + L".runtimeconfig.json";
-        hostLoadAssemblyFn = get_dotnet_load_assembly(configPath.c_str());
+        const wstring dotnetDllPath = basePath + L"\\sdk\\BmSDK.dll";
+        hostLoadAssemblyFn = get_dotnet_load_assembly(dotnetDllPath.c_str());
         assert(hostLoadAssemblyFn != nullptr && "Failure: get_dotnet_load_assembly()");
 
         // Load managed assembly and get function pointer to a managed method
-        const wstring dotnetDllPath = basePath + asmPath + L".dll";
         const wstring dotnetType = L"BmSDK.Framework.Loader, BmSDK";
         const wstring dotnetMethod = L"GuardedDllMain";
 
