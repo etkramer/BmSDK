@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.1](https://github.com/etkramer/BmSDK/compare/v0.17.0...v0.17.1) (2026-07-10)
+
+
+### Bug Fixes
+
+* **host:** Use hostfxr_initialize_for_dotnet_command_line for self-contained support ([#122](https://github.com/etkramer/BmSDK/issues/122)) ([fc369cb](https://github.com/etkramer/BmSDK/commit/fc369cb06cd624aab946565f83b8fa8e72a291a1))
+
 ## [0.17.0](https://github.com/etkramer/BmSDK/compare/v0.16.0...v0.17.0) (2026-07-09)
 
 
