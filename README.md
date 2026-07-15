@@ -1,10 +1,45 @@
-# BmSDK for Arkham City
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
+> **Important note**: This is the *BmSDK for Arkham City* repository.
+>
+> The scripthook is also available for [Batman: Arkham Knight](https://github.com/Team-BmSDK/BmSDK-AK).
 
-<img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
+<br />
 
-## 📖 About
-BmSDK is a scripting platform for Batman: Arkham City and [Batman: Arkham Knight](https://github.com/Team-BmSDK/BmSDK-AC-AK), allowing you to extend the game with C# code for custom gameplay and logic.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/ab0b54fe-b851-4021-aaf4-c8e0a834f051">
+    <img alt="BmSDK" width="600" src="https://github.com/user-attachments/assets/d5446cc2-16c8-4dd0-98fa-7248708d6c46">
+  </picture>
+</p>
+
+<br />
+
+<p align="center">
+A powerful, easy-to-use scripting platform for Batman: Arkham City that lets you integrate custom C# code for gameplay mods and more.
+</p>
+
+<br />
+
+<p align="center">
+  <a href="./LICENSE.md">
+    <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge" />
+  </a>
+  <a href="../../releases/latest">
+    <img alt="Latest release" src="https://img.shields.io/github/v/release/Team-BmSDK/BmSDK-AC?style=for-the-badge" />
+  </a>
+  <a href="../../releases/latest">
+    <img alt="Downloads" src="https://img.shields.io/github/downloads/Team-BmSDK/BmSDK-AC/total?style=for-the-badge" />
+  </a>
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">
+    <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10.0-512bd4?style=for-the-badge" />
+  </a>
+  <a href="https://discord.com/invite/arkhamworkshop">
+    <img alt="Community Discord" src="https://img.shields.io/discord/1218395254013558844?logo=discord&logoColor=E0E3FF&label=Community%20Discord&labelColor=5865F2&style=for-the-badge" />
+  </a>
+</p>
+
+<hr />
+
+<br />
 
 It gives you access to a full SDK for working with the game and its world, based on the engine's own UnrealScript API - for example, a short script to spawn in Joker near the player:
 ```cs
