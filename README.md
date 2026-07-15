@@ -41,7 +41,10 @@ A powerful, easy-to-use scripting platform for Batman: Arkham City that lets you
 
 <br />
 
-It gives you access to a full SDK for working with the game and its world, based on the engine's own UnrealScript API - for example, a short script to spawn in Joker near the player:
+The scripthook gives you access to a full SDK for working with the game, world and engine. The SDK exposes Unreal Engine 3's own UnrealScript API to C# scripts. Modders get to work with the same types, properties and functions as the original developers did. There are also many useful life-cycle events *(e.g. tick and game enter)* and helpers provided. Below is an example mod that shows off some of BmSDK's capabilities:
+<details> 
+<summary>Script to spawn in Joker near the player</summary>
+
 ```cs
 using BmSDK;
 using BmSDK.BmGame;
@@ -70,6 +73,7 @@ public class DemoScript : Script
     }
 }
 ```
+</details>
 
 Check out the [wiki](../../wiki) for more info!
 
