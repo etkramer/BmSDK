@@ -81,7 +81,7 @@ Check out the [wiki](../../wiki) for more info!
 If you want to play script mods, getting started is simple:
 1. Download the latest release from [releases](../../releases/latest) and open the ZIP file.
 2. Inside you'll see two folders: `Binaries` and `BmGame`. Copy both to your game folder (likely `C:\Program Files\Epic Games\BatmanArkhamCity`). There should already be 2 folders in there with the same names.
-3. BmSDK is now installed! To play script mods, simply drop any .cs files into your BmGame\Scripts folder and start the game.
+3. BmSDK is now installed! To play script mods, simply drop any .cs files into your `BmGame\Scripts` folder and start the game.
 
 Keep in mind that script mods can potentially harm your computer. Make sure you only download and install scripts from trusted sources.
 
