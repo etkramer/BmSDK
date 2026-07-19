@@ -101,5 +101,7 @@ Follow these steps to set up your environment for building, running, and debuggi
 ## 🛠️ Contributing
 To get started contributing to BmSDK, see the docs for instructions: [Building from source](https://bmsdk.dev/docs/contributing/building/)
 
-## 📋 License
-BmSDK is licenced under the [MIT licence](LICENSE.md).
+## 📋 Legal notice
+BmSDK is published under the [MIT licence](LICENSE.md).
+
+BmSDK is not associated with Warner Bros. Games or Rocksteady Studios. All product and company names are trademarks or registered trademarks of their respective holders. Use of these names does not imply any affiliation or endorsement by them.
